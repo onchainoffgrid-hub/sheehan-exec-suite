@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Programming · Sheehan Exec</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--bad:#ff5d6c;--violet:#a78bfa}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1280px;margin:0 auto;padding:22px}
+header{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:14px;flex-wrap:wrap}
+h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font-size:.88rem}
+.nav{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0 18px}
+.nav a{background:var(--card);border:1px solid var(--line);padding:6px 11px;border-radius:999px;font-size:.78rem;color:var(--text)}
+.nav a.active{border-color:var(--accent);background:#152238;color:#fff}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:11px;margin-bottom:16px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px;position:relative;overflow:hidden}
+.kpi::after{content:"";position:absolute;inset:auto 0 0 0;height:2px;background:linear-gradient(90deg,var(--accent),var(--violet));opacity:.55}
+.kpi .l{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.kpi .v{font-size:1.4rem;font-weight:700;margin-top:4px}
+.kpi .s{font-size:.72rem;color:var(--muted);margin-top:3px}
+.grid{display:grid;grid-template-columns:2fr 1fr;gap:14px}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+@media(max-width:980px){.grid,.grid3{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:14px}
+.card h2{font-size:.98rem;margin:0 0 10px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+table{width:100%;border-collapse:collapse;font-size:.8rem}
+th,td{padding:7px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{color:var(--muted);font-weight:600;position:sticky;top:0;background:var(--card);z-index:1}
+.tag{display:inline-block;padding:2px 8px;border-radius:999px;font-size:.68rem;border:1px solid var(--line);white-space:nowrap}
+.tag.now{background:#13281d;color:var(--good);border-color:#2a5}.tag.warm{background:#2a2416;color:var(--warn)}
+.tag.needs{background:#1a2030;color:#9ec1ff}.tag.later{color:var(--muted)}.tag.hold{background:#2a1619;color:var(--bad)}
+.tag.stub{background:#1a1f2e;color:var(--violet)}
+input,select,textarea{background:var(--panel);border:1px solid var(--line);color:var(--text);border-radius:8px;padding:8px 10px;width:100%;font:inherit}
+.filters{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin-bottom:10px}
+.bar{height:9px;background:var(--panel);border-radius:6px;overflow:hidden;margin-top:5px}
+.bar>i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--violet))}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:11px}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px;display:block;color:inherit;transition:border-color .15s}
+.tile:hover{border-color:var(--accent);text-decoration:none}
+.tile h3{margin:0 0 5px;font-size:.95rem}.tile p{margin:0;color:var(--muted);font-size:.82rem}
+.note{color:var(--muted);font-size:.78rem}.scroll{max-height:520px;overflow:auto;border:1px solid var(--line);border-radius:10px}
+.scroll table{font-size:.78rem}
+.tel{font-weight:600;letter-spacing:.02em;white-space:nowrap}
+.badge{font-size:.68rem;padding:2px 7px;border-radius:6px;background:#1a2440;color:var(--accent);border:1px solid var(--line)}
+.chart-box{position:relative;height:240px}
+.muted{color:var(--muted)}
+.progress{display:flex;align-items:center;gap:10px}.progress .track{flex:1;height:10px;background:var(--panel);border-radius:99px;overflow:hidden}
+.progress .track>i{display:block;height:100%;background:linear-gradient(90deg,var(--good),var(--accent))}
+.matrix{display:grid;grid-template-columns:140px repeat(4,1fr);gap:6px;font-size:.75rem}
+.matrix .h{color:var(--muted);font-weight:600}.matrix .cell{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px;text-align:center}
+.matrix .ok{color:var(--good)}.matrix .gap{color:var(--bad)}.matrix .partial{color:var(--warn)}
+.seat{border-left:3px solid var(--accent);padding-left:10px;margin:10px 0}
+.seat.live{border-color:var(--good)}.seat.next{border-color:var(--warn)}.seat.later{border-color:var(--violet)}
+</style></head>
+<body><div class="wrap">
+
+
+<!-- APP TOP LINKS (Michael) -->
+<div class="app-top" style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 10px;padding:10px 12px;border:1px solid #1e2a44;border-radius:14px;background:#0f1728">
+  <span style="font-size:.72rem;color:#93a0b8;text-transform:uppercase;letter-spacing:.06em;margin-right:4px">Apps</span>
+  <a href="https://onchainoffgrid-hub.github.io/critters-on-call/" target="_blank" rel="noopener" style="background:#121a2b;border:1px solid #3dd68c55;color:#e8eefc;padding:6px 10px;border-radius:999px;font-size:.78rem;text-decoration:none;font-weight:600">Critters <span style="color:#3dd68c;font-size:.65rem">LIVE</span></a>
+  <a href="https://onchainoffgrid-hub.github.io/critters-play/" target="_blank" rel="noopener" title="Play games LIVE (curtain-closed). Critter Coins economy = VISION" style="background:#121a2b;border:1px solid #a78bfa66;color:#e8eefc;padding:6px 10px;border-radius:999px;font-size:.78rem;text-decoration:none;font-weight:600">Play / Coins <span style="color:#3dd68c;font-size:.65rem">LIVE</span></a>
+  <a href="index.html" style="background:#121a2b;border:1px solid #5b8cff66;color:#e8eefc;padding:6px 10px;border-radius:999px;font-size:.78rem;text-decoration:none;font-weight:600">Dashboards</a>
+  <a href="link-tree.html" style="background:#121a2b;border:1px solid #1e2a44;color:#c5d0e6;padding:5px 9px;border-radius:999px;font-size:.72rem;text-decoration:none">All links</a>
+</div>
+<div class="apps-top" style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 12px;padding:10px 12px;background:#121a2b;border:1px solid #1e2a44;border-radius:12px">
+<span style="font-size:.72rem;color:#93a0b8;text-transform:uppercase;letter-spacing:.06em;margin-right:4px">Apps</span>
+<a href="https://onchainoffgrid-hub.github.io/critters-on-call/" target="_blank" rel="noopener" style="background:#152238;border:1px solid #5b8cff;padding:6px 12px;border-radius:999px;font-size:.78rem;color:#e8eefc;text-decoration:none;font-weight:600">Critters app</a>
+<a href="https://onchainoffgrid-hub.github.io/critters-play/" target="_blank" rel="noopener" style="background:#1a1628;border:1px solid #a78bfa;padding:6px 12px;border-radius:999px;font-size:.78rem;color:#e8eefc;text-decoration:none;font-weight:600">Play / Critter Coins</a>
+<a href="index.html" style="background:#13281d;border:1px solid #3dd68c;padding:6px 12px;border-radius:999px;font-size:.78rem;color:#e8eefc;text-decoration:none;font-weight:600">Dashboards</a>
+<a href="link-tree.html" style="border:1px solid #1e2a44;padding:6px 12px;border-radius:999px;font-size:.78rem;color:#93a0b8;text-decoration:none">All links</a>
+</div>
+
+<header><div><h1>Programming</h1><div class="sub">Sheehan Homestead · Michael Sheehan · dark ops BI · no Power BI</div></div>
+<div class="sub">North star: <b>bookings</b> · goal <b>$250k</b> by 2026-12-23</div></header>
+<div class="nav"><a href="index.html">Hub</a><a href="bookings-dates.html">Bookings</a><a href="money-cfo.html">Money</a><a href="bdr-pipeline.html">BDR</a><a href="revops-tam.html">RevOps</a><a href="social-reach.html">Social</a><a href="investor-capital.html">Investor</a><a href="programming.html" class="active">Programs</a><a href="team-hire.html">Team</a><a href="actions-overdue.html">Actions</a><a href="collateral.html">Collateral</a><a href="ann-marie-ops.html">Ann-Marie</a><a href="platform-map.html">Platform</a></div>
+
+<div class="kpis">
+  <div class="kpi"><div class="l">Visit Us types</div><div class="v">6+</div><div class="s">Cars · HS · M&amp;M · parties</div></div>
+  <div class="kpi"><div class="l">Fill rate</div><div class="v"><span class="tag stub">TBD</span></div><div class="s">Needs calendar</div></div>
+  <div class="kpi"><div class="l">Protect vs fill</div><div class="v">Ladder</div><div class="s">From liquidation board</div></div>
+  <div class="kpi"><div class="l">Farm capacity</div><div class="v">≤~50 cars/day</div><div class="s">While living on site</div></div>
+</div>
+<div class="grid">
+  <div class="card"><h2>Program menu (placeholder KPIs)</h2>
+    <table><thead><tr><th>Program</th><th>SKU cue</th><th>Role</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td>Come-here cars</td><td>C-CAR50 $50</td><td>Preferred fill + reviews</td><td><span class="tag now">Menu live</span></td></tr>
+      <tr><td>Homeschool</td><td>C-HS40 $40</td><td>Weekday soft seats</td><td><span class="tag warm">Wire heat</span></td></tr>
+      <tr><td>Mommy &amp; Me</td><td>C-MM25 $25</td><td>Weekday soft seats</td><td><span class="tag warm">Wire heat</span></td></tr>
+      <tr><td>Goat yoga</td><td>C-GY $499</td><td>Dated show / protect weekend</td><td><span class="tag now">Menu live</span></td></tr>
+      <tr><td>Bunny mystery</td><td>C-BH189</td><td>Off-peak fill — not Sat</td><td><span class="tag now">Menu live</span></td></tr>
+      <tr><td>Subscription</td><td>B-SUB $175/mo</td><td>Steady calendar</td><td><span class="tag needs">Seat 2</span></td></tr>
+      <tr><td>Birthday / Standard</td><td>C-SPZ90 $499</td><td>Protect weekend</td><td><span class="tag now">Menu live</span></td></tr>
+    </tbody></table>
+  </div>
+  <div class="card"><h2>Heat map status</h2>
+    <p>Heat assets exist under <code>leads/heat/</code> (PNG exports). Interactive day grid still needs calendar truth source.</p>
+    <p class="note">Sources: date-liquidation/Rapid_Liquidation_Price_Board.md · collateral Visit Us tickets · PROGRAMMER_MARKET_MAP.md</p>
+    <canvas id="heatStub" height="180"></canvas>
+  </div>
+</div>
+<script>
+new Chart(heatStub,{type:'bar',data:{labels:['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],datasets:[
+  {label:'Fill posture',data:[2,4,4,4,3,1,1],backgroundColor:'#5b8cff'},
+  {label:'Protect posture',data:[1,1,1,1,2,5,4],backgroundColor:'#ffb020'}
+]},options:{plugins:{legend:{labels:{color:'#93a0b8'}}},scales:{x:{stacked:true,ticks:{color:'#93a0b8'},grid:{color:'#1e2a44'}},y:{stacked:true,ticks:{color:'#93a0b8'},grid:{color:'#1e2a44'}}}}});
+</script>
+
+<p class="note">Dump-home: Dashboard Bit · Built 2026-09-19 ET · JSON under data/</p>
+</div></body></html>

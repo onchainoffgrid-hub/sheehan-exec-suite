@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Macro Radar · Sheehan Exec</title>
+<style>
+:root{
+  --bg:#070b14;--card:#101828;--line:#1c2a42;--text:#eaf0ff;--muted:#8b9bb8;
+  --up:#3dd68c;--down:#ff5d6c;--flat:#ffb020;--accent:#5b8cff;--violet:#a78bfa;
+  --spring:rgba(61,214,140,.22);--reject:rgba(255,93,108,.18);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,sans-serif;background:radial-gradient(1200px 600px at 20% -10%,#152238 0%,var(--bg) 55%);color:var(--text)}
+.wrap{max-width:1180px;margin:0 auto;padding:20px}
+header{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:flex-end;margin-bottom:8px}
+h1{margin:0;font-size:1.35rem;letter-spacing:.02em}
+.sub{color:var(--muted);font-size:.85rem}
+.nav{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 18px}
+.nav a{background:var(--card);border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:.78rem;color:var(--text);text-decoration:none}
+.nav a.active{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent) inset}
+.banner{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
+.pill{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:6px 12px;font-size:.78rem;color:var(--muted)}
+.pill b{color:var(--text)}
+.grid{display:grid;gap:14px}
+.super{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+@media(max-width:900px){.super{grid-template-columns:repeat(3,1fr)}.main{grid-template-columns:1fr !important}}
+.cell{position:relative;border-radius:18px;border:1px solid var(--line);padding:14px 12px 12px;min-height:118px;overflow:hidden;background:linear-gradient(160deg,var(--card),#0c1422);cursor:help}
+.cell:before{content:"";position:absolute;inset:0;opacity:.55;background:linear-gradient(180deg,transparent,rgba(0,0,0,.35))}
+.cell > *{position:relative}
+.cell.up{box-shadow:inset 0 0 0 1px rgba(61,214,140,.35),0 0 24px rgba(61,214,140,.08);background:linear-gradient(160deg,#10261c,#101828)}
+.cell.down{box-shadow:inset 0 0 0 1px rgba(255,93,108,.35),0 0 24px rgba(255,93,108,.08);background:linear-gradient(160deg,#2a1218,#101828)}
+.cell.flat{box-shadow:inset 0 0 0 1px rgba(255,176,32,.3)}
+.cell .name{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.cell .px{font-size:1.35rem;font-weight:700;margin-top:6px}
+.cell .chg{font-size:.95rem;font-weight:600;margin-top:2px}
+.cell .hint{font-size:.68rem;color:var(--muted);margin-top:8px;line-height:1.35}
+.dance{border:1px solid var(--line);border-radius:16px;padding:12px 14px;background:var(--card);display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.dance .dot{width:12px;height:12px;border-radius:50%}
+.main{display:grid;grid-template-columns:1.4fr .9fr;gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px}
+.card h2{margin:0 0 10px;font-size:1rem}
+canvas{width:100%;height:280px;display:block;border-radius:12px;background:#0a1220}
+.boxes{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+@media(max-width:700px){.boxes{grid-template-columns:repeat(2,1fr)}}
+.box{border-radius:14px;border:1px dashed #2a3b5c;padding:12px 8px;text-align:center;min-height:76px;background:#0c1422;transition:.2s}
+.box.lit{border-style:solid;border-color:var(--up);background:linear-gradient(160deg,#143325,#0c1422);box-shadow:0 0 20px rgba(61,214,140,.15)}
+.box .lab{font-size:.72rem;font-weight:600}
+.box .st{font-size:.65rem;color:var(--muted);margin-top:6px}
+.levels{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.tag{font-size:.72rem;border-radius:999px;padding:5px 10px;border:1px solid var(--line);color:var(--muted)}
+.tag.spring{background:var(--spring);color:var(--up);border-color:rgba(61,214,140,.4)}
+.tag.reject{background:var(--reject);color:#ff8b97;border-color:rgba(255,93,108,.4)}
+.foot{color:var(--muted);font-size:.75rem;margin-top:14px;line-height:1.45}
+.crypto-row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:10px}
+.mini{border:1px solid var(--line);border-radius:12px;padding:10px;background:#0c1422}
+.mini .n{font-size:.7rem;color:var(--muted)}
+.mini .v{font-weight:700;margin-top:4px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+
+<!-- APP TOP LINKS (Michael) -->
+<div class="app-top" style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 10px;padding:10px 12px;border:1px solid #1e2a44;border-radius:14px;background:#0f1728">
+  <span style="font-size:.72rem;color:#93a0b8;text-transform:uppercase;letter-spacing:.06em;margin-right:4px">Apps</span>
+  <a href="https://onchainoffgrid-hub.github.io/critters-on-call/" target="_blank" rel="noopener" style="background:#121a2b;border:1px solid #3dd68c55;color:#e8eefc;padding:6px 10px;border-radius:999px;font-size:.78rem;text-decoration:none;font-weight:600">Critters <span style="color:#3dd68c;font-size:.65rem">LIVE</span></a>
+  <a href="https://onchainoffgrid-hub.github.io/critters-play/" target="_blank" rel="noopener" title="Play games LIVE (curtain-closed). Critter Coins economy = VISION" style="background:#121a2b;border:1px solid #a78bfa66;color:#e8eefc;padding:6px 10px;border-radius:999px;font-size:.78rem;text-decoration:none;font-weight:600">Play / Coins <span style="color:#3dd68c;font-size:.65rem">LIVE</span></a>
+  <a href="index.html" style="background:#121a2b;border:1px solid #5b8cff66;color:#e8eefc;padding:6px 10px;border-radius:999px;font-size:.78rem;text-decoration:none;font-weight:600">Dashboards</a>
+  <a href="link-tree.html" style="background:#121a2b;border:1px solid #1e2a44;color:#c5d0e6;padding:5px 9px;border-radius:999px;font-size:.72rem;text-decoration:none">All links</a>
+</div>
+<div class="apps-top" style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 12px;padding:10px 12px;background:#121a2b;border:1px solid #1e2a44;border-radius:12px">
+<span style="font-size:.72rem;color:#93a0b8;text-transform:uppercase;letter-spacing:.06em;margin-right:4px">Apps</span>
+<a href="https://onchainoffgrid-hub.github.io/critters-on-call/" target="_blank" rel="noopener" style="background:#152238;border:1px solid #5b8cff;padding:6px 12px;border-radius:999px;font-size:.78rem;color:#e8eefc;text-decoration:none;font-weight:600">Critters app</a>
+<a href="https://onchainoffgrid-hub.github.io/critters-play/" target="_blank" rel="noopener" style="background:#1a1628;border:1px solid #a78bfa;padding:6px 12px;border-radius:999px;font-size:.78rem;color:#e8eefc;text-decoration:none;font-weight:600">Play / Critter Coins</a>
+<a href="index.html" style="background:#13281d;border:1px solid #3dd68c;padding:6px 12px;border-radius:999px;font-size:.78rem;color:#e8eefc;text-decoration:none;font-weight:600">Dashboards</a>
+<a href="link-tree.html" style="border:1px solid #1e2a44;padding:6px 12px;border-radius:999px;font-size:.78rem;color:#93a0b8;text-decoration:none">All links</a>
+</div>
+
+<header>
+  <div>
+    <h1>Macro Radar — Superorganism</h1>
+    <div class="sub">One picture: dance vs decoupling · BTC spine · wait for confluence</div>
+  </div>
+  <div class="sub" id="asof">Loading…</div>
+</header>
+<div class="nav">
+  <a href="index.html">Hub</a>
+  <a href="bookings-dates.html">Bookings</a>
+  <a href="money-cfo.html">Money</a>
+  <a href="bdr-pipeline.html">BDR</a>
+  <a href="revops-tam.html">RevOps</a>
+  <a href="social-reach.html">Social</a>
+  <a href="investor-capital.html">Investor</a>
+  <a href="programming.html">Programs</a>
+  <a href="team-hire.html">Team</a>
+  <a href="actions-overdue.html">Actions</a>
+  <a href="collateral.html">Collateral</a>
+  <a href="ann-marie-ops.html">Ann-Marie</a>
+  <a href="platform-map.html">Platform</a>
+  <a href="macro-radar.html" class="active">Macro</a>
+</div>
+
+<div class="banner">
+  <div class="pill">Mode: <b>PICTURE board</b></div>
+  <div class="pill">F&amp;G: <b id="fg">—</b></div>
+  <div class="pill">Stance: <b id="stance">—</b></div>
+  <div class="pill">Score: <b id="score">—</b></div>
+  <div class="pill">Rule: <b>don’t marry a story — wait for lights</b></div>
+</div>
+
+<div class="grid">
+  <div class="dance" id="dance">Reading tape…</div>
+
+  <div>
+    <div class="sub" style="margin:0 0 8px">Superorganism strip — hover a tile for the history/geo footnote</div>
+    <div class="super" id="super"></div>
+  </div>
+
+  <div class="main">
+    <div class="card">
+      <h2>BTC spine — levels as picture</h2>
+      <canvas id="btc" width="760" height="280"></canvas>
+      <div class="levels">
+        <span class="tag spring">$59–62k spring / June shelf</span>
+        <span class="tag reject">$81–82k reject / hold</span>
+        <span class="tag">XRP $1.45 · shop $1.29–$1.10</span>
+      </div>
+      <div class="crypto-row" id="crypto"></div>
+    </div>
+    <div class="card">
+      <h2>Confluence scoreboard (8)</h2>
+      <div class="sub" style="margin-bottom:10px">Lit = Crypto/invest Bot pushed a green. Unlit = wait.</div>
+      <div class="boxes" id="boxes"></div>
+      <div class="foot" id="scoreNote">0 / 8 lit — picture only until scores arrive.</div>
+    </div>
+  </div>
+</div>
+
+<p class="foot" id="disclaimer"></p>
+</div>
+<script>window.__MACRO_FALLBACK__ = {"as_of": "2026-09-20T20:10", "source": "yahoo+alternative.me where available", "tickers": {"SPX": {"symbol": "^GSPC", "last": 7650.5, "chg_pct": 0.17, "closes": [7619.98, 7585.73, 7551.8101, 7637.7598, 7650.5]}, "IWM": {"symbol": "IWM", "last": 284.1, "chg_pct": -0.47, "closes": [287.91, 285.14, 283.92, 285.43, 284.1]}, "NDX": {"symbol": "^NDX", "last": 29644.168, "chg_pct": 0.67, "closes": [29127.1602, 28937.8398, 28945.0605, 29446.9805, 29644.1699]}, "TNX": {"symbol": "^TNX", "last": 4.998, "chg_pct": 1.03, "closes": [4.961, 4.996, 5.006, 4.947, 4.998]}, "GLD": {"symbol": "GLD", "last": 401.17, "chg_pct": 0.71, "closes": [392.84, 394.15, 391.74, 398.36, 401.17]}, "BTC": {"symbol": "BTC-USD", "last": 81509.57, "chg_pct": 0.34, "closes": [76403.7734, 80901.4609, 81233.6797, 81509.5703]}, "ETH": {"symbol": "ETH-USD", "last": 2655.6, "chg_pct": 0.9, "closes": [2447.1067, 2611.3472, 2631.9626, 2655.6001]}, "XRP": {"symbol": "XRP-USD", "last": 1.4205, "chg_pct": 0.71, "closes": [1.2959, 1.3962, 1.4104, 1.4205]}, "SOL": {"symbol": "SOL-USD", "last": 111.81, "chg_pct": 0.72, "closes": [101.6034, 112.5992, 111.0149, 111.81]}}, "fear_greed": {"value": 70, "label": "Greed"}, "levels": {"BTC": [{"lo": 59000, "hi": 62000, "label": "June '26 shelf / spring zone"}, {"lo": 81000, "hi": 82000, "label": "Near-term reject/hold"}], "XRP": [{"lo": 1.45, "hi": 1.45, "label": "$1.45 level"}, {"lo": 1.1, "hi": 1.29, "label": "Fib shop $1.29\u2013$1.10"}]}, "confluence": [{"id": "sentiment", "label": "Sentiment", "lit": false, "note": "F&G 70 Greed \u2014 not extreme; no funding/OI/ETF confirm. Soft long-trap watch at highs, not a lit box."}, {"id": "levels", "label": "Levels", "lit": true, "note": "BTC sitting in $81\u201382k reject/hold shelf. Actionable zone; direction not decided."}, {"id": "spring", "label": "Spring", "lit": false, "note": "No false breakdown + reclaim. June $59\u201362k shelf not being tested."}, {"id": "elliott", "label": "Elliott", "lit": false, "note": "Hypothesis only \u2014 no clean impulse count locked."}, {"id": "fous", "label": "Fous Krypton", "lit": false, "note": "No clear Revival/Survival/Force/Gold A+ this week yet."}, {"id": "fib", "label": "Fib/BCB", "lit": false, "note": "Not at BCB-style bottom. Mid-range above June shelf."}, {"id": "onchain", "label": "On-chain", "lit": false, "note": "June losses elevated but not Feb-panic/FTX depth \u2014 total-low not confirmed."}, {"id": "superorganism", "label": "Superorganism", "lit": true, "note": "Mixed dance: SPX/gold/BTC green, IWM red, 10Y up. Weak breadth / not clean risk-on. Gold coupling still elevated historically."}], "disclaimer": "Picture board for timing discipline. Confluence lights owned by Crypto/invest Bot \u2014 unlit until they push scores. Not advice.", "teach": {"SPX": "Equities = risk appetite. Geo shocks (war, tariffs) often hit here first.", "IWM": "Russell = smaller US cos. IWM lagging SPX = weak breadth \u2014 historically a caution for alts beta.", "TNX": "10Y \u2191 = tighter money. Often follows inflation/Fed path.", "GLD": "Gold likes fear, real-rate drops, geo stress. Mid-Sep '26: BTC\u2013gold corr near multi-year highs even without blow-off greed \u2014 monetary regime, not just risk-on.", "BTC": "Crypto spine. Levels > narratives.", "ALTS": "Alts beta to BTC; ADA = lag-catch watch only."}, "picture_rule": "One glance: green/red dance vs decoupling. Wait for confluence lights.", "score": {"lit": 2, "of": 8, "signal": "NONE \u2014 wait (\u22655 = A+)"}, "stance": "No A+ long or short. At reject/hold shelf with mixed breadth. Capital ready; jet not cleared."};</script>
+<script>
+const TEACH = {
+  SPX: "Equities = risk appetite. Strong SPX usually means liquidity is risk-on; geo shocks (war, tariffs) often hit here first.",
+  IWM: "Russell = smaller US businesses. When IWM lags SPX, breadth is weak — rallies can be fragile (classic late-cycle tell).",
+  TNX: "10Y yield ↑ = money gets tighter / alternatives to risk assets. Spikes often follow inflation prints or sticky Fed path.",
+  GLD: "Gold likes fear, real-rate drops, and geo stress. BTC–gold moving together = hard-asset bid; decoupling = crypto-specific tape.",
+  BTC: "Spine of the crypto superorganism. Levels matter more than narratives — spring zones are where patience pays.",
+  ALTS: "Alts often beta to BTC and sometimes rhyme with Russell risk. ADA = lag-catch watch only, not the thesis driver."
+};
+
+function cls(ch){ if(ch==null) return 'flat'; if(ch>0.15) return 'up'; if(ch<-0.15) return 'down'; return 'flat'; }
+function fmt(n,d=2){ if(n==null||isNaN(n)) return '—'; return Number(n).toLocaleString(undefined,{maximumFractionDigits:d}); }
+function arrow(ch){ if(ch==null) return '•'; return ch>=0 ? '▲' : '▼'; }
+
+async function load(){
+  let d;
+  try {
+    const res = await fetch('data/macro_radar.json', {cache:'no-store'});
+    if (!res.ok) throw new Error('HTTP '+res.status);
+    d = await res.json();
+  } catch (e) {
+    d = window.__MACRO_FALLBACK__;
+    if (!d) throw e;
+    console.warn('Using embedded macro fallback (file:// or fetch failed)', e);
+  }
+  document.getElementById('asof').textContent = 'As of ' + (d.as_of || '—');
+  document.getElementById('disclaimer').textContent = d.disclaimer || '';
+  const fg = d.fear_greed || {};
+  document.getElementById('fg').textContent = fg.value!=null ? (fg.value + ' · ' + fg.label) : 'TBD';
+  const stanceEl = document.getElementById('stance');
+  const scoreEl = document.getElementById('score');
+  if (stanceEl) stanceEl.textContent = d.stance || d.signal || 'NONE';
+  if (scoreEl) {
+    const sc = d.score || {};
+    const litN = (d.confluence||[]).filter(b=>b.lit).length;
+    scoreEl.textContent = (sc.lit!=null? sc.lit : litN) + ' / 8' + (sc.need_for_A_plus ? (' · need ≥'+sc.need_for_A_plus+' for A+') : ' · need ≥5 for A+');
+  }
+  // Prefer teach captions from JSON when present
+  if (d.teach) {
+    Object.assign(TEACH, {
+      SPX: d.teach.SPX || TEACH.SPX,
+      IWM: d.teach.IWM || TEACH.IWM,
+      TNX: d.teach.TNX || TEACH.TNX,
+      GLD: d.teach.GLD || TEACH.GLD,
+      BTC: d.teach.BTC || TEACH.BTC,
+      ALTS: d.teach.ALTS || d.teach.ADA || TEACH.ALTS
+    });
+  }
+
+
+  const t = d.tickers || {};
+  const strip = [
+    {k:'SPX', label:'SPX', teach:TEACH.SPX},
+    {k:'IWM', label:'IWM', teach:TEACH.IWM},
+    {k:'TNX', label:'10Y %', teach:TEACH.TNX, suffix:''},
+    {k:'GLD', label:'Gold', teach:TEACH.GLD},
+    {k:'BTC', label:'BTC', teach:TEACH.BTC, d:0},
+    {k:'ALTS', label:'Alts β', teach:TEACH.ALTS, synthetic:true}
+  ];
+
+  const host = document.getElementById('super');
+  host.innerHTML = '';
+  const dirs = [];
+  strip.forEach(s=>{
+    let last, chg;
+    if(s.synthetic){
+      // simple alts beta proxy: avg ETH/SOL/XRP chg vs IWM
+      const parts = ['ETH','SOL','XRP'].map(k=>t[k]?.chg_pct).filter(x=>x!=null);
+      chg = parts.length ? parts.reduce((a,b)=>a+b,0)/parts.length : null;
+      last = chg;
+    } else {
+      last = t[s.k]?.last; chg = t[s.k]?.chg_pct;
+    }
+    dirs.push({label:s.label, chg, c:cls(chg)});
+    const el = document.createElement('div');
+    el.className = 'cell ' + cls(chg);
+    el.title = s.teach;
+    const px = s.synthetic ? ((chg==null)?'—':((chg>=0?'+':'')+fmt(chg,2)+'%')) : fmt(last, s.d??2);
+    el.innerHTML = `<div class="name">${s.label}</div><div class="px">${px}</div><div class="chg">${s.synthetic?'proxy β ':''}${arrow(chg)} ${chg==null?'—':(fmt(chg,2)+'%')}</div><div class="hint">${s.teach}</div>`;
+    host.appendChild(el);
+  });
+
+  // Dance vs decouple
+  const spx=t.SPX?.chg_pct, iwm=t.IWM?.chg_pct, btc=t.BTC?.chg_pct, gld=t.GLD?.chg_pct;
+  let dance = 'Mixed tape';
+  if(spx!=null && iwm!=null && btc!=null){
+    const riskOn = spx>0 && btc>0;
+    const breadthLag = spx>0 && iwm<0;
+    const hardBid = gld!=null && gld>0 && btc>0;
+    if(riskOn && !breadthLag) dance = 'DANCING — risk-on together (SPX+BTC'+(iwm>0?', IWM confirming':'')+')';
+    else if(breadthLag) dance = 'DECOUPLE watch — SPX up, IWM lagging (narrow tape)';
+    else if(spx<0 && btc<0) dance = 'Risk-off dance — SPX + BTC both soft';
+    else if(spx>0 && btc<0) dance = 'DECOUPLE — equities bid, BTC soft';
+    else if(spx<0 && btc>0) dance = 'DECOUPLE — BTC bid vs equity softness';
+    if(hardBid) dance += ' · hard-asset bid (gold+BTC)';
+  }
+  const dots = dirs.map(x=>`<span class="dot" style="background:var(--${x.c==='up'?'up':x.c==='down'?'down':'flat'})"></span><span class="sub">${x.label}</span>`).join('');
+  document.getElementById('dance').innerHTML = `<b style="color:var(--accent)">Glance:</b> ${dance}<span style="flex:1"></span>${dots}`;
+
+  // crypto minis
+  const cr = document.getElementById('crypto');
+  cr.innerHTML = '';
+  ['BTC','ETH','XRP','SOL'].forEach(k=>{
+    const x=t[k]||{}; const el=document.createElement('div'); el.className='mini';
+    el.innerHTML = `<div class="n">${k}</div><div class="v">${fmt(x.last, k==='XRP'?4:2)}</div><div class="n">${arrow(x.chg_pct)} ${x.chg_pct==null?'—':fmt(x.chg_pct,2)+'%'}</div>`;
+    cr.appendChild(el);
+  });
+
+  // confluence boxes
+  const boxes = d.confluence || [];
+  const bh = document.getElementById('boxes'); bh.innerHTML='';
+  let lit=0;
+  boxes.forEach(b=>{
+    if(b.lit) lit++;
+    const el=document.createElement('div');
+    el.className='box'+(b.lit?' lit':'');
+    el.title = b.note || (b.lit?'Lit by Crypto/invest':'Waiting on Crypto/invest score');
+    el.innerHTML = `<div class="lab">${b.label}</div><div class="st">${b.lit?'LIT':'wait'}</div>`;
+    bh.appendChild(el);
+  });
+  document.getElementById('scoreNote').textContent = lit + ' / ' + boxes.length + ' lit — Crypto/invest owns the greens.';
+
+  drawBtc(t.BTC, d.levels?.BTC||[]);
+}
+
+function drawBtc(btc, levels){
+  const c = document.getElementById('btc');
+  const ctx = c.getContext('2d');
+  const w=c.width, h=c.height;
+  ctx.clearRect(0,0,w,h);
+  // grid
+  ctx.strokeStyle='#1a2740'; ctx.lineWidth=1;
+  for(let i=0;i<5;i++){ const y=20+i*(h-40)/4; ctx.beginPath(); ctx.moveTo(40,y); ctx.lineTo(w-10,y); ctx.stroke(); }
+
+  const closes = (btc && btc.closes && btc.closes.length) ? btc.closes.slice() : [78000,79000,80500,79800,81200,81500];
+  const last = btc?.last ?? closes[closes.length-1];
+  // include level bounds in scale
+  let min=Math.min(...closes, last, 59000), max=Math.max(...closes, last, 82000);
+  const pad=(max-min)*0.08; min-=pad; max+=pad;
+  const Y=v=> 20 + (max-v)/(max-min)*(h-40);
+  const X=i=> 40 + i/(Math.max(closes.length-1,1))*(w-60);
+
+  // zones
+  const spring=[59000,62000], rej=[81000,82000];
+  ctx.fillStyle='rgba(61,214,140,.15)';
+  ctx.fillRect(40, Y(spring[1]), w-50, Y(spring[0])-Y(spring[1]));
+  ctx.fillStyle='rgba(255,93,108,.12)';
+  ctx.fillRect(40, Y(rej[1]), w-50, Y(rej[0])-Y(rej[1]));
+
+  // zone labels
+  ctx.fillStyle='#3dd68c'; ctx.font='12px Inter,system-ui'; ctx.fillText('Spring $59–62k', 50, Y(62000)-6);
+  ctx.fillStyle='#ff8b97'; ctx.fillText('$81–82k', 50, Y(82000)-6);
+
+  // line
+  ctx.strokeStyle='#5b8cff'; ctx.lineWidth=2.5; ctx.beginPath();
+  closes.forEach((v,i)=>{ const x=X(i), y=Y(v); if(i===0) ctx.moveTo(x,y); else ctx.lineTo(x,y); });
+  ctx.stroke();
+
+  // last point
+  const lx=X(closes.length-1), ly=Y(last);
+  ctx.fillStyle='#eaf0ff'; ctx.beginPath(); ctx.arc(lx,ly,4,0,Math.PI*2); ctx.fill();
+  ctx.fillText('$' + Math.round(last).toLocaleString(), lx-70, ly-10);
+
+  // axis labels
+  ctx.fillStyle='#8b9bb8'; ctx.font='11px Inter,system-ui';
+  ctx.fillText(Math.round(max).toLocaleString(), 2, 28);
+  ctx.fillText(Math.round(min).toLocaleString(), 2, h-16);
+}
+
+load().catch(e=>{
+  document.getElementById('asof').textContent = 'Load failed';
+  document.getElementById('dance').textContent = String(e);
+});
+</script>
+</body>
+</html>

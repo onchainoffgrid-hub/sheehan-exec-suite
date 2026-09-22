@@ -1,0 +1,194 @@
+{
+  "as_of": "2026-09-20T20:16:50-04:00",
+  "source": "Right Now Bot DROP-BALL ROUTE (Gmail+Cal+Drive)",
+  "north_star": "paid dates locked (mobile + Visit Us)",
+  "bookings": [
+    {
+      "id": "vesta-durbin-2026-09-27",
+      "date": "2026-09-27",
+      "time": null,
+      "title": "Vesta Durbin Crossing \u2014 Mobile PZ + CoT",
+      "status": "LOCKED",
+      "paid": "unknown",
+      "deposit": "accepted",
+      "channel": "mobile",
+      "next_action": "Confirm crew + load-out; watch deposit clear",
+      "owner": "ops",
+      "risk": "low",
+      "notes": "Accepted / locked per Right Now"
+    },
+    {
+      "id": "river-city-science-2026-10-02",
+      "date": "2026-10-02",
+      "time": "08:20\u201311:20",
+      "title": "River City Science \u2014 Lauren follow-up meet",
+      "status": "WAITING_YES",
+      "paid": "partial_pitch",
+      "deposit": null,
+      "channel": "b2b",
+      "next_action": "Hold \u2014 waiting Lauren yes; on yes: calendar + send/confirm draft (Violet 59% partial donation)",
+      "owner": "Lauren (decision) \u2192 then Right Now calendar",
+      "risk": "medium",
+      "notes": "Michael 2026-09-20: just waiting for the yes. Draft exists; NOT on calendar until yes."
+    },
+    {
+      "id": "ju-birthday-2026-10-03",
+      "date": "2026-10-03",
+      "time": "12:00",
+      "title": "JU birthday \u2014 Mobile PZ (noon)",
+      "status": "NEEDS_CONFIRM",
+      "paid": "unknown",
+      "deposit": null,
+      "channel": "mobile",
+      "next_action": "Confirm if JU noon PZ is real \u2014 Oct 3 collision eases if Madeline is out",
+      "owner": "Michael",
+      "risk": "medium",
+      "notes": "Same day as Madelyn birthday + market stubs | Madeline no-pay \u2192 collision less hot"
+    },
+    {
+      "id": "madelyn-birthday-2026-10-03",
+      "date": "2026-10-03",
+      "time": "13:30\u201315:00",
+      "title": "Madelyn birthday \u2014 Mobile PZ",
+      "status": "NO_PAY",
+      "paid": "no_show_money",
+      "deposit": null,
+      "channel": "mobile",
+      "next_action": "Do not count as locked. Optional soft follow-up only \u2014 she was supposed to bring money and didn\u2019t.",
+      "owner": "\u2014",
+      "risk": "low",
+      "notes": "Michael 2026-09-20: Madeline in-town girl didn\u2019t come with the money. Annoying. Not a paid date."
+    },
+    {
+      "id": "wildlight-fernandina-2026-10-03",
+      "date": "2026-10-03",
+      "time": null,
+      "title": "Wild Light / Fernandina market stubs",
+      "status": "STUB",
+      "paid": "none",
+      "deposit": null,
+      "channel": "market",
+      "next_action": "Stub only \u2014 keep or kill; not blocking if Madeline dead",
+      "owner": "Michael",
+      "risk": "medium",
+      "notes": "Stub only \u2014 do not treat as locked"
+    },
+    {
+      "id": "fletcher-bunny-haven-2026-10-14",
+      "date": "2026-10-14",
+      "time": null,
+      "title": "Fletcher Tender Care \u2014 Bunny Haven / pet therapy",
+      "status": "PAUSE_RECONCILE",
+      "paid": "n/a",
+      "deposit": null,
+      "channel": "therapy",
+      "next_action": "Reconcile calendar: pause when cold (staff allergies) \u2014 remove or mark seasonal hold",
+      "owner": "Right Now + Michael",
+      "risk": "medium",
+      "notes": "Email: cannot continue pet therapy when cold"
+    },
+    {
+      "id": "goddard-tot-2026-10-23",
+      "date": "2026-10-23",
+      "time": null,
+      "title": "Goddard Trunk or Treat (Sunshine/Dianna)",
+      "status": "ACCEPTED",
+      "paid": "deposit_incoming",
+      "deposit": "incoming",
+      "channel": "mobile",
+      "next_action": "Watch deposit land; lock paid flag when cleared",
+      "owner": "Ann-Marie AR",
+      "risk": "low",
+      "notes": "Accepted"
+    },
+    {
+      "id": "goddard-tot-2026-10-29",
+      "date": "2026-10-29",
+      "time": null,
+      "title": "Goddard Trunk or Treat (Sunshine/Dianna)",
+      "status": "ACCEPTED",
+      "paid": "deposit_incoming",
+      "deposit": "incoming",
+      "channel": "mobile",
+      "next_action": "Watch deposit land; lock paid flag when cleared",
+      "owner": "Ann-Marie AR",
+      "risk": "low",
+      "notes": "Accepted"
+    },
+    {
+      "id": "julie-pettigrew-mia",
+      "date": null,
+      "time": null,
+      "title": "Julie Pettigrew \u2014 pipeline MIA",
+      "status": "PIPELINE_MIA",
+      "paid": null,
+      "deposit": null,
+      "channel": "pipeline",
+      "next_action": "Find where she dropped in BDR/pipeline; re-surface or kill",
+      "owner": "BDR / Michael",
+      "risk": "medium",
+      "notes": "Michael 2026-09-20: thinks Julie Pettigrew still MIA from pipeline"
+    }
+  ],
+  "next_actions_ranked": [
+    {
+      "rank": 1,
+      "action": "Confirm what\u2019s real on Oct 3 (JU noon / Wild Light stubs) \u2014 Madeline NO_PAY out",
+      "blocks": "memory gap on Oct 3"
+    },
+    {
+      "rank": 2,
+      "action": "Julie Pettigrew \u2014 pull from MIA / re-surface in pipeline",
+      "blocks": "pipeline leak"
+    },
+    {
+      "rank": 3,
+      "action": "Fletcher Oct 14: pause on calendar (cold / allergies)",
+      "blocks": "calendar lie"
+    },
+    {
+      "rank": 4,
+      "action": "Confirm Vesta Durbin Sep 27 crew + deposit clear",
+      "blocks": "delivery soon"
+    },
+    {
+      "rank": 5,
+      "action": "RCS Oct 2: waiting Lauren yes",
+      "blocks": "pending acceptance"
+    },
+    {
+      "rank": 6,
+      "action": "Goddard Oct 23 + 29: mark paid when deposits hit",
+      "blocks": "accepted \u2260 paid"
+    }
+  ],
+  "counts": {
+    "by_status": {
+      "LOCKED": 1,
+      "WAITING_YES": 1,
+      "NEEDS_CONFIRM": 1,
+      "NO_PAY": 1,
+      "STUB": 1,
+      "PAUSE_RECONCILE": 1,
+      "ACCEPTED": 2,
+      "PIPELINE_MIA": 1
+    },
+    "paid_verified": 0
+  },
+  "rules": {
+    "paid_dates_only_in_KPI": true,
+    "accepted_not_paid": "Goddard deposits incoming \u2014 do not count as paid $ until cleared",
+    "weekend_protect": true
+  },
+  "michael_notes": {
+    "rcs": "2026-09-20: Michael \u2014 RCS just waiting for the yes (Lauren). Not a chase-close.",
+    "2026-09-20b": "Oct 3: Michael doesn't remember firm hold. Madeline (in-town) supposed to come with money \u2014 didn't; annoying. Julie Pettigrew still MIA from pipeline. Sent Ross email. 'A lot stuck but not that stuck.'"
+  },
+  "activity": [
+    {
+      "at": "2026-09-20T20:16:50-04:00",
+      "what": "Ross email sent",
+      "by": "Michael"
+    }
+  ]
+}

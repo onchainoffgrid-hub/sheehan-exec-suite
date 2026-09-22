@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Money — CFO · Sheehan Exec</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--bad:#ff5d6c;--violet:#a78bfa}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1280px;margin:0 auto;padding:22px}
+header{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:14px;flex-wrap:wrap}
+h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font-size:.88rem}
+.nav{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0 18px}
+.nav a{background:var(--card);border:1px solid var(--line);padding:6px 11px;border-radius:999px;font-size:.78rem;color:var(--text)}
+.nav a.active{border-color:var(--accent);background:#152238;color:#fff}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:11px;margin-bottom:16px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px;position:relative;overflow:hidden}
+.kpi::after{content:"";position:absolute;inset:auto 0 0 0;height:2px;background:linear-gradient(90deg,var(--accent),var(--violet));opacity:.55}
+.kpi .l{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.kpi .v{font-size:1.4rem;font-weight:700;margin-top:4px}
+.kpi .s{font-size:.72rem;color:var(--muted);margin-top:3px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:980px){.grid{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:14px}
+.card h2{font-size:.98rem;margin:0 0 10px;display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+table{width:100%;border-collapse:collapse;font-size:.8rem}
+th,td{padding:7px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{color:var(--muted);font-weight:600;position:sticky;top:0;background:var(--card);z-index:1}
+.tag{display:inline-block;padding:2px 8px;border-radius:999px;font-size:.68rem;border:1px solid var(--line);white-space:nowrap}
+.tag.now{background:#13281d;color:var(--good);border-color:#2a5}.tag.warm{background:#2a2416;color:var(--warn)}
+.tag.needs{background:#1a2030;color:#9ec1ff}.tag.stub{background:#1a1f2e;color:var(--violet)}
+.note{color:var(--muted);font-size:.78rem}.scroll{max-height:420px;overflow:auto;border:1px solid var(--line);border-radius:10px}
+.scroll table{font-size:.78rem}
+.chart-box{position:relative;height:220px}
+.badge{font-size:.68rem;padding:2px 7px;border-radius:6px;background:#1a2440;color:var(--accent);border:1px solid var(--line)}
+.sep{color:var(--warn);font-size:.72rem}
+</style></head>
+<body><div class="wrap">
+
+
+<!-- APP TOP LINKS (Michael) -->
+<div class="app-top" style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 10px;padding:10px 12px;border:1px solid #1e2a44;border-radius:14px;background:#0f1728">
+  <span style="font-size:.72rem;color:#93a0b8;text-transform:uppercase;letter-spacing:.06em;margin-right:4px">Apps</span>
+  <a href="https://onchainoffgrid-hub.github.io/critters-on-call/" target="_blank" rel="noopener" style="background:#121a2b;border:1px solid #3dd68c55;color:#e8eefc;padding:6px 10px;border-radius:999px;font-size:.78rem;text-decoration:none;font-weight:600">Critters <span style="color:#3dd68c;font-size:.65rem">LIVE</span></a>
+  <a href="https://onchainoffgrid-hub.github.io/critters-play/" target="_blank" rel="noopener" title="Play games LIVE (curtain-closed). Critter Coins economy = VISION" style="background:#121a2b;border:1px solid #a78bfa66;color:#e8eefc;padding:6px 10px;border-radius:999px;font-size:.78rem;text-decoration:none;font-weight:600">Play / Coins <span style="color:#3dd68c;font-size:.65rem">LIVE</span></a>
+  <a href="index.html" style="background:#121a2b;border:1px solid #5b8cff66;color:#e8eefc;padding:6px 10px;border-radius:999px;font-size:.78rem;text-decoration:none;font-weight:600">Dashboards</a>
+  <a href="link-tree.html" style="background:#121a2b;border:1px solid #1e2a44;color:#c5d0e6;padding:5px 9px;border-radius:999px;font-size:.72rem;text-decoration:none">All links</a>
+</div>
+<div class="apps-top" style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 12px;padding:10px 12px;background:#121a2b;border:1px solid #1e2a44;border-radius:12px">
+<span style="font-size:.72rem;color:#93a0b8;text-transform:uppercase;letter-spacing:.06em;margin-right:4px">Apps</span>
+<a href="https://onchainoffgrid-hub.github.io/critters-on-call/" target="_blank" rel="noopener" style="background:#152238;border:1px solid #5b8cff;padding:6px 12px;border-radius:999px;font-size:.78rem;color:#e8eefc;text-decoration:none;font-weight:600">Critters app</a>
+<a href="https://onchainoffgrid-hub.github.io/critters-play/" target="_blank" rel="noopener" style="background:#1a1628;border:1px solid #a78bfa;padding:6px 12px;border-radius:999px;font-size:.78rem;color:#e8eefc;text-decoration:none;font-weight:600">Play / Critter Coins</a>
+<a href="index.html" style="background:#13281d;border:1px solid #3dd68c;padding:6px 12px;border-radius:999px;font-size:.78rem;color:#e8eefc;text-decoration:none;font-weight:600">Dashboards</a>
+<a href="link-tree.html" style="border:1px solid #1e2a44;padding:6px 12px;border-radius:999px;font-size:.78rem;color:#93a0b8;text-decoration:none">All links</a>
+</div>
+
+<header><div><h1>Money — CFO</h1><div class="sub">Sheehan Homestead · Michael Sheehan · dark ops BI · no Power BI · <span class="badge">v1</span></div></div>
+<div class="sub">North star: <b>bookings</b> · goal <b>$250k</b> by 2026-12-23</div></header>
+<div class="nav"><a href="index.html">Hub</a><a href="bookings-dates.html">Bookings</a><a href="money-cfo.html" class="active">Money</a><a href="bdr-pipeline.html">BDR</a><a href="revops-tam.html">RevOps</a><a href="social-reach.html">Social</a><a href="investor-capital.html">Investor</a><a href="programming.html">Programs</a><a href="team-hire.html">Team</a><a href="actions-overdue.html">Actions</a><a href="collateral.html">Collateral</a><a href="ann-marie-ops.html">Ann-Marie</a><a href="platform-map.html">Platform</a></div>
+
+<div class="kpis">
+  <div class="kpi"><div class="l">Outside H2 2025</div><div class="v">$15,409</div><div class="s">Jul–Dec · net $14,903</div></div>
+  <div class="kpi"><div class="l">Outside 2026 YTD</div><div class="v">$20,509</div><div class="s">Jan 1–Sep 1 · net $19,847</div></div>
+  <div class="kpi"><div class="l">Combined outside</div><div class="v">$35,918</div><div class="s">Jul 2025–Sep 1 2026 · no double-count</div></div>
+  <div class="kpi"><div class="l">Owner H2</div><div class="v">$4,254</div><div class="s sep">NOT revenue · separated</div></div>
+  <div class="kpi"><div class="l">Paying customers</div><div class="v">42 · 49</div><div class="s">H2 · 2026 YTD outside</div></div>
+  <div class="kpi"><div class="l">Fees outside</div><div class="v">-$1,168.11</div><div class="s">H2 -$505.47 · 2026 -$662.64</div></div>
+  <div class="kpi"><div class="l">Net outside (combined)</div><div class="v">$34,750</div><div class="s">H2 $14,903 + 2026 $19,847</div></div>
+  <div class="kpi"><div class="l">To VyStar 2026 YTD</div><div class="v">$20,096</div><div class="s">Withdraw Money · acct 4703</div></div>
+</div>
+
+<div class="card"><h2>Monthly — H2 2025 PayPal <span class="badge">outside ≠ owner</span></h2>
+<table><thead><tr><th>Month</th><th>All-in</th><th>Owner</th><th>Outside</th><th>Fees</th><th>Outside net</th><th>To VyStar</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td>Jul 2025</td><td>$3,776</td><td>$2,004</td><td>$1,772</td><td>-$61.55</td><td>$1,710</td><td>-$3,381.89</td><td class='note'>First invoice 0006 on Jul 11. Two $777 owner checkouts.</td></tr><tr><td>Aug 2025</td><td>$1,548</td><td>$1,125</td><td>$423</td><td>-$13.63</td><td>$409</td><td>-$1,880.22</td><td class='note'>Thinnest outside month. Mostly Greenwood School + a Leia balance.</td></tr><tr><td>Sep 2025</td><td>$3,187</td><td>$225</td><td>$2,962</td><td>-$99.52</td><td>$2,862</td><td>-$3,078.66</td><td class='note'>Elizabeth Scott books 3 invoices same day ($350 x3).</td></tr><tr><td>Oct 2025</td><td>$6,207</td><td>$450</td><td>$5,757</td><td>-$182.39</td><td>$5,575</td><td>-$3,762.23</td><td class='note'>Peak. Oct 24 cluster (Scott/Parker/Hadd/Bean). Clara White Mission.</td></tr><tr><td>Nov 2025</td><td>$3,335</td><td>$450</td><td>$2,885</td><td>-$94.59</td><td>$2,791</td><td>-$5,309.53</td><td class='note'>Steady invoicing. Last owner $225s on Nov 14.</td></tr><tr><td>Dec 2025</td><td>$1,610</td><td>$0</td><td>$1,610</td><td>-$53.79</td><td>$1,556</td><td>-$1,423.00</td><td class='note'>No owner charges. Repeat balances (Gayle, Kocher, Cannilla, Farmer).</td></tr>
+<tr><td><b>H2 total</b></td><td><b>$19,663</b></td><td><b>$4,254</b></td><td><b>$15,409</b></td><td><b>-$505.47</b></td><td><b>$14,903</b></td><td><b>-$18,835.53</b></td><td class="note">Do not re-sum into combined</td></tr>
+</tbody></table>
+<div class="chart-box" style="margin-top:12px"><canvas id="h2Chart"></canvas></div>
+</div>
+
+<div class="card"><h2>Monthly — 2026 YTD PayPal <span class="badge">Jan 1–Sep 1</span></h2>
+<table><thead><tr><th>Month</th><th>Outside</th><th>Fees</th><th>Outside net</th><th>Payments</th></tr></thead>
+<tbody>
+<tr><td>Jan 2026</td><td>$304.75</td><td>-$9.60</td><td>$295.15</td><td>1</td></tr><tr><td>Feb 2026</td><td>$2,014.22</td><td>-$62.68</td><td>$1,951.54</td><td>5</td></tr><tr><td>Mar 2026</td><td>$3,902.09</td><td>-$126.21</td><td>$3,775.88</td><td>11</td></tr><tr><td>Apr 2026</td><td>$5,156.21</td><td>-$165.30</td><td>$4,990.91</td><td>16</td></tr><tr><td>May 2026</td><td>$4,601.86</td><td>-$153.03</td><td>$4,448.83</td><td>16</td></tr><tr><td>Jun 2026</td><td>$333.75</td><td>-$10.99</td><td>$322.76</td><td>2</td></tr><tr><td>Jul 2026</td><td>$1,295.94</td><td>-$42.63</td><td>$1,253.31</td><td>5</td></tr><tr><td>Aug 2026</td><td>$1,780.50</td><td>-$57.73</td><td>$1,722.77</td><td>6</td></tr><tr><td>Sep 2026</td><td>$1,119.94</td><td>-$34.47</td><td>$1,085.47</td><td>2</td></tr>
+<tr><td><b>YTD total</b></td><td><b>$20,509.26</b></td><td><b>-$662.64</b></td><td><b>$19,846.62</b></td><td><b>64</b></td></tr>
+</tbody></table>
+<p class="note">Owner gross 2026 YTD: $0.00 (no Michael Sheehan Sale rows). Ann-Marie Sheehan −$110 Sale excluded from outside — see anomalies in data/paypal_2026_ytd.json.</p>
+<div class="chart-box" style="margin-top:12px"><canvas id="ytdChart"></canvas></div>
+</div>
+
+<div class="grid">
+<div class="card"><h2>Top payers — H2 outside only <span class="tag now">Michael excluded</span></h2>
+<div class="scroll"><table><thead><tr><th>Customer</th><th>#</th><th>Gross</th><th>Net</th></tr></thead>
+<tbody>
+<tr><td>Elizabeth Scott</td><td>5</td><td>$1,834.00</td><td>$1,776.70</td></tr><tr><td>Haley Hadd</td><td>2</td><td>$900.00</td><td>$869.85</td></tr><tr><td>Martin Matthews</td><td>1</td><td>$851.90</td><td>$825.94</td></tr><tr><td>Elizabeth Giacobbi</td><td>1</td><td>$811.52</td><td>$782.71</td></tr><tr><td>Niral Patel</td><td>1</td><td>$742.00</td><td>$719.32</td></tr><tr><td>Kelsey Taylor</td><td>1</td><td>$700.00</td><td>$678.58</td></tr><tr><td>Laura Harrington</td><td>3</td><td>$600.00</td><td>$577.58</td></tr><tr><td>theresa timm</td><td>1</td><td>$500.00</td><td>$485.05</td></tr><tr><td>Ericka Cooks</td><td>3</td><td>$477.00</td><td>$461.28</td></tr><tr><td>Katherine Bean</td><td>1</td><td>$475.00</td><td>$460.31</td></tr><tr><td>Sarah Bierschied</td><td>1</td><td>$429.19</td><td>$415.87</td></tr><tr><td>Stephanie Traylor</td><td>1</td><td>$400.00</td><td>$387.55</td></tr><tr><td>Amelia Parker</td><td>1</td><td>$392.00</td><td>$379.79</td></tr><tr><td>Brittany Thomas</td><td>2</td><td>$371.00</td><td>$357.08</td></tr><tr><td>Abigail Gayle</td><td>2</td><td>$344.25</td><td>$332.98</td></tr><tr><td>Vanessa Kocher</td><td>2</td><td>$344.25</td><td>$332.98</td></tr><tr><td>Clara White Mission, Inc.</td><td>1</td><td>$325.00</td><td>$313.17</td></tr><tr><td>Amanda Darga</td><td>1</td><td>$307.40</td><td>$297.72</td></tr><tr><td>Jeremiah Stanley</td><td>1</td><td>$300.00</td><td>$290.54</td></tr><tr><td>Michelle Cannilla</td><td>2</td><td>$288.25</td><td>$277.90</td></tr>
+</tbody></table></div>
+<p class="note">Owner checkout Michael Sheehan $4,254 removed from this list (v0 wrongly listed him first).</p>
+</div>
+<div class="card"><h2>Top payers — 2026 YTD outside <span class="badge">top 20</span></h2>
+<div class="scroll"><table><thead><tr><th>Customer</th><th>#</th><th>Gross</th><th>Net</th></tr></thead>
+<tbody>
+<tr><td>Kelsey Taylor</td><td>2</td><td>$2,182.25</td><td>$2,116.02</td></tr><tr><td>Natasha Simic Urick</td><td>1</td><td>$1,367.50</td><td>$1,326.12</td></tr><tr><td>noura Moussawel</td><td>1</td><td>$987.66</td><td>$957.64</td></tr><tr><td>Payton Coulter</td><td>1</td><td>$830.39</td><td>$805.07</td></tr><tr><td>Ivybrook PTO VR</td><td>1</td><td>$828.19</td><td>$802.94</td></tr><tr><td>Haley Hadd</td><td>2</td><td>$711.25</td><td>$689.00</td></tr><tr><td>Oliver Ingram</td><td>1</td><td>$660.50</td><td>$640.26</td></tr><tr><td>Niral Patel</td><td>1</td><td>$659.50</td><td>$639.29</td></tr><tr><td>Nadia Anderson</td><td>1</td><td>$603.94</td><td>$585.39</td></tr><tr><td>Michael Zaffaroni</td><td>1</td><td>$591.00</td><td>$572.84</td></tr><tr><td>Ashley Collins</td><td>1</td><td>$528.94</td><td>$512.63</td></tr><tr><td>Barbara Cline</td><td>2</td><td>$509.21</td><td>$493.00</td></tr><tr><td>Carson Richardson</td><td>2</td><td>$492.71</td><td>$476.99</td></tr><tr><td>Keith Heissler</td><td>1</td><td>$478.94</td><td>$464.13</td></tr><tr><td>Ericka Cooks</td><td>3</td><td>$477.00</td><td>$461.28</td></tr><tr><td>Rachel Hawkins</td><td>2</td><td>$474.75</td><td>$459.57</td></tr><tr><td>Rita Mairs</td><td>1</td><td>$448.91</td><td>$435.00</td></tr><tr><td>Morgan Brett</td><td>2</td><td>$430.88</td><td>$417.02</td></tr><tr><td>Patrick Young</td><td>3</td><td>$411.28</td><td>$397.51</td></tr><tr><td>Georgia Hamilton</td><td>1</td><td>$406.25</td><td>$393.61</td></tr>
+</tbody></table></div>
+<p class="note">49 paying outside names · owner transfers not mixed into revenue.</p>
+</div>
+</div>
+
+<div class="card"><h2>SKU margin <span class="tag stub">unlabeled</span></h2>
+<p class="note" style="margin:0">Unlabeled — need invoice product tags (mobile zoo, birthdays, goat yoga, subscription). No fake dollars.</p>
+</div>
+
+<div class="card"><h2>Bookings → cash / AR <span class="tag warm">ops book · unaudited</span></h2>
+<div class="kpis" style="margin-bottom:8px">
+  <div class="kpi"><div class="l">Booked YTD (ops book)</div><div class="v">~$42k</div><div class="s">said / unaudited</div></div>
+  <div class="kpi"><div class="l">Received (ops book)</div><div class="v">~$30k</div><div class="s">said / unaudited</div></div>
+  <div class="kpi"><div class="l">AR (ops book)</div><div class="v">~$12k</div><div class="s">said / unaudited</div></div>
+  <div class="kpi"><div class="l">Proven PayPal 2026 YTD</div><div class="v">$20,509</div><div class="s">outside gross · CSV reconciled</div></div>
+</div>
+<p class="note" style="margin:0">PayPal only ~$20.5k of ~$30k received → gap ~$9.5k other pipes (Venmo/check/cash/etc.). Awaiting Michael bookings truth (calendar / PayPal / HubSpot) before treating ops book as proven.</p>
+</div>
+
+<script>
+const tick={color:'#93a0b8'}; const grid={color:'#1e2a44'};
+new Chart(document.getElementById('h2Chart'),{type:'bar', data:{labels:["Jul 2025", "Aug 2025", "Sep 2025", "Oct 2025", "Nov 2025", "Dec 2025"], datasets:[
+  {label:'Outside gross', data:[1771.5, 423.0, 2961.52, 5757.3, 2885.24, 1610.1], backgroundColor:'#3dd68c'},
+  {label:'Owner (not revenue)', data:[2004.0, 1125.0, 225.0, 450.0, 450.0, 0.0], backgroundColor:'#ffb020'}
+]}, options:{responsive:true, maintainAspectRatio:false, plugins:{legend:{labels:{color:'#93a0b8'}}}, scales:{x:{ticks:tick,grid}, y:{ticks:tick,grid}}});
+new Chart(document.getElementById('ytdChart'),{type:'bar', data:{labels:["Jan 2026", "Feb 2026", "Mar 2026", "Apr 2026", "May 2026", "Jun 2026", "Jul 2026", "Aug 2026", "Sep 2026"], datasets:[
+  {label:'Outside gross', data:[304.75, 2014.22, 3902.09, 5156.21, 4601.86, 333.75, 1295.94, 1780.5, 1119.94], backgroundColor:'#5b8cff'}
+]}, options:{responsive:true, maintainAspectRatio:false, plugins:{legend:{labels:{color:'#93a0b8'}}}, scales:{x:{ticks:tick,grid}, y:{ticks:tick,grid}}});
+</script>
+
+<p class="note">Sources: data/paypal_kpis.json · data/paypal_monthly.json · data/paypal_customers.json · data/paypal_2026_ytd.json · workbook Sheehan-Homestead-PayPal-H2-2025.xlsx · PayPal BALANCE_RECONCILIATION_REPORT CSV Jan1–Sep1 2026<br/>
+Dump-home: Dashboard Bit · Built 2026-09-19 ET · file:// OK (numbers embedded) · Owner transfers ≠ revenue</p>
+</div></body></html>

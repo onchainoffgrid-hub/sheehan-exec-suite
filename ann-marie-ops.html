@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Ann-Marie Ops · Sheehan Exec</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--bad:#ff5d6c;--violet:#a78bfa}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1280px;margin:0 auto;padding:22px}
+header{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:14px;flex-wrap:wrap}
+h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font-size:.88rem}
+.nav{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0 18px}
+.nav a{background:var(--card);border:1px solid var(--line);padding:6px 11px;border-radius:999px;font-size:.78rem;color:var(--text)}
+.nav a.active{border-color:var(--accent);background:#152238;color:#fff}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:11px;margin-bottom:16px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px;position:relative;overflow:hidden}
+.kpi::after{content:"";position:absolute;inset:auto 0 0 0;height:2px;background:linear-gradient(90deg,var(--accent),var(--violet));opacity:.55}
+.kpi .l{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.kpi .v{font-size:1.4rem;font-weight:700;margin-top:4px}
+.kpi .s{font-size:.72rem;color:var(--muted);margin-top:3px}
+.grid{display:grid;grid-template-columns:2fr 1fr;gap:14px}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+@media(max-width:980px){.grid,.grid3{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:14px}
+.card h2{font-size:.98rem;margin:0 0 10px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+table{width:100%;border-collapse:collapse;font-size:.8rem}
+th,td{padding:7px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{color:var(--muted);font-weight:600;position:sticky;top:0;background:var(--card);z-index:1}
+.tag{display:inline-block;padding:2px 8px;border-radius:999px;font-size:.68rem;border:1px solid var(--line);white-space:nowrap}
+.tag.now{background:#13281d;color:var(--good);border-color:#2a5}.tag.warm{background:#2a2416;color:var(--warn)}
+.tag.needs{background:#1a2030;color:#9ec1ff}.tag.later{color:var(--muted)}.tag.hold{background:#2a1619;color:var(--bad)}
+.tag.stub{background:#1a1f2e;color:var(--violet)}
+input,select,textarea{background:var(--panel);border:1px solid var(--line);color:var(--text);border-radius:8px;padding:8px 10px;width:100%;font:inherit}
+.filters{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin-bottom:10px}
+.bar{height:9px;background:var(--panel);border-radius:6px;overflow:hidden;margin-top:5px}
+.bar>i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--violet))}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:11px}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px;display:block;color:inherit;transition:border-color .15s}
+.tile:hover{border-color:var(--accent);text-decoration:none}
+.tile h3{margin:0 0 5px;font-size:.95rem}.tile p{margin:0;color:var(--muted);font-size:.82rem}
+.note{color:var(--muted);font-size:.78rem}.scroll{max-height:520px;overflow:auto;border:1px solid var(--line);border-radius:10px}
+.scroll table{font-size:.78rem}
+.tel{font-weight:600;letter-spacing:.02em;white-space:nowrap}
+.badge{font-size:.68rem;padding:2px 7px;border-radius:6px;background:#1a2440;color:var(--accent);border:1px solid var(--line)}
+.chart-box{position:relative;height:240px}
+.muted{color:var(--muted)}
+.progress{display:flex;align-items:center;gap:10px}.progress .track{flex:1;height:10px;background:var(--panel);border-radius:99px;overflow:hidden}
+.progress .track>i{display:block;height:100%;background:linear-gradient(90deg,var(--good),var(--accent))}
+.matrix{display:grid;grid-template-columns:140px repeat(4,1fr);gap:6px;font-size:.75rem}
+.matrix .h{color:var(--muted);font-weight:600}.matrix .cell{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px;text-align:center}
+.matrix .ok{color:var(--good)}.matrix .gap{color:var(--bad)}.matrix .partial{color:var(--warn)}
+.seat{border-left:3px solid var(--accent);padding-left:10px;margin:10px 0}
+.seat.live{border-color:var(--good)}.seat.next{border-color:var(--warn)}.seat.later{border-color:var(--violet)}
+</style></head>
+<body><div class="wrap">
+
+
+<!-- APP TOP LINKS (Michael) -->
+<!-- APP TOP LINKS (Michael) -->
+<div class="app-top" style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 10px;padding:10px 12px;border:1px solid #1e2a44;border-radius:14px;background:#0f1728">
+  <span style="font-size:.72rem;color:#93a0b8;text-transform:uppercase;letter-spacing:.06em;margin-right:4px">Apps</span>
+  <a href="https://onchainoffgrid-hub.github.io/critters-on-call/" target="_blank" rel="noopener" style="background:#121a2b;border:1px solid #3dd68c55;color:#e8eefc;padding:6px 10px;border-radius:999px;font-size:.78rem;text-decoration:none;font-weight:600">Critters <span style="color:#3dd68c;font-size:.65rem">LIVE</span></a>
+  <a href="https://onchainoffgrid-hub.github.io/critters-play/" target="_blank" rel="noopener" title="Play games LIVE (curtain-closed). Critter Coins economy = VISION" style="background:#121a2b;border:1px solid #a78bfa66;color:#e8eefc;padding:6px 10px;border-radius:999px;font-size:.78rem;text-decoration:none;font-weight:600">Play / Coins <span style="color:#3dd68c;font-size:.65rem">LIVE</span></a>
+  <a href="index.html" style="background:#121a2b;border:1px solid #5b8cff66;color:#e8eefc;padding:6px 10px;border-radius:999px;font-size:.78rem;text-decoration:none;font-weight:600">Dashboards</a>
+  <a href="link-tree.html" style="background:#121a2b;border:1px solid #1e2a44;color:#c5d0e6;padding:5px 9px;border-radius:999px;font-size:.72rem;text-decoration:none">All links</a>
+</div>
+<div class="apps-top" style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 12px;padding:10px 12px;background:#121a2b;border:1px solid #1e2a44;border-radius:12px">
+<span style="font-size:.72rem;color:#93a0b8;text-transform:uppercase;letter-spacing:.06em;margin-right:4px">Apps</span>
+<a href="https://onchainoffgrid-hub.github.io/critters-on-call/" target="_blank" rel="noopener" style="background:#152238;border:1px solid #5b8cff;padding:6px 12px;border-radius:999px;font-size:.78rem;color:#e8eefc;text-decoration:none;font-weight:600">Critters app</a>
+<a href="https://onchainoffgrid-hub.github.io/critters-play/" target="_blank" rel="noopener" style="background:#1a1628;border:1px solid #a78bfa;padding:6px 12px;border-radius:999px;font-size:.78rem;color:#e8eefc;text-decoration:none;font-weight:600">Play / Critter Coins</a>
+<a href="index.html" style="background:#13281d;border:1px solid #3dd68c;padding:6px 12px;border-radius:999px;font-size:.78rem;color:#e8eefc;text-decoration:none;font-weight:600">Dashboards</a>
+<a href="link-tree.html" style="border:1px solid #1e2a44;padding:6px 12px;border-radius:999px;font-size:.78rem;color:#93a0b8;text-decoration:none">All links</a>
+</div>
+
+<header><div><h1>Ann-Marie Ops</h1><div class="sub">Sheehan Homestead · Michael Sheehan · dark ops BI · no Power BI</div></div>
+<div class="sub">North star: <b>bookings</b> · goal <b>$250k</b> by 2026-12-23</div></header>
+<div class="nav"><a href="index.html">Hub</a><a href="bookings-dates.html">Bookings</a><a href="money-cfo.html">Money</a><a href="bdr-pipeline.html">BDR</a><a href="revops-tam.html">RevOps</a><a href="social-reach.html">Social</a><a href="investor-capital.html">Investor</a><a href="programming.html">Programs</a><a href="team-hire.html">Team</a><a href="actions-overdue.html">Actions</a><a href="collateral.html">Collateral</a><a href="ann-marie-ops.html" class="active">Ann-Marie</a><a href="platform-map.html">Platform</a></div>
+
+<div class="kpis">
+  <div class="kpi"><div class="l">Delegation score</div><div class="v"><span class="tag stub">STUB</span></div><div class="s">No dated completion log yet</div></div>
+  <div class="kpi"><div class="l">Publishing cadence</div><div class="v">TBD</div><div class="s">Wire ann-marie-recurring-calendar</div></div>
+  <div class="kpi"><div class="l">Open asks</div><div class="v">See Actions</div><div class="s">Invoice entry · tax docs</div></div>
+  <div class="kpi"><div class="l">Inbound Bunny</div><div class="v">Known channel</div><div class="s">RevOps: converting</div></div>
+</div>
+<div class="grid">
+  <div class="card"><h2>Scorecard (stub)</h2>
+    <table><thead><tr><th>Area</th><th>Target</th><th>Actual</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>Invoice entry</td><td>Same-day</td><td><span class="tag stub">TBD</span></td><td>Overdue tracker BUSINESS #1</td></tr>
+      <tr><td>Publishing</td><td>Cadence met</td><td><span class="tag stub">TBD</span></td><td>Need dated source record</td></tr>
+      <tr><td>Tax doc intake</td><td>Before Oct 5</td><td><span class="tag warm">In progress</span></td><td>Duval docs acquired — upload pending</td></tr>
+      <tr><td>Inquiry handoff</td><td>Same day to BDR/Michael</td><td><span class="tag stub">TBD</span></td><td>Attribution unknown</td></tr>
+    </tbody></table>
+  </div>
+  <div class="card"><h2>Sources to wire</h2>
+    <ul class="note">
+      <li>ann-marie-publishing-plan.md</li>
+      <li>ann-marie-recurring-calendar.md</li>
+      <li>Sheehan-Homestead-action-bank.xlsx</li>
+      <li>Michael_Overdue_Action_Tracker.xlsx (EVAN_TAXES / BUSINESS)</li>
+    </ul>
+    <p>Refuse: no invented posts, approvals, or completed work without a dated source.</p>
+  </div>
+</div>
+
+<p class="note">Dump-home: Dashboard Bit · Built 2026-09-19 ET · JSON under data/</p>
+</div></body></html>

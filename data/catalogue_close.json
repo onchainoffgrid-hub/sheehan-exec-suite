@@ -1,0 +1,53 @@
+{
+  "as_of": "2026-09-20",
+  "source": "SHARE_Consumer_Menu 2026-09-16 LOCK + Rapid_Liquidation_Price_Board hard rules",
+  "banner": "TEXT GOAT · 914-263-1311 · sheehanhomestead.com · Callahan FL",
+  "close_rules": {
+    "consumer_lock": "Pay-ahead link before animals roll",
+    "b2b_lock": "50% deposit",
+    "cta": "Text GOAT",
+    "no_groupon": true,
+    "protect": ["Saturday", "Sunday", "fall fest", "premium Standard+"],
+    "fill": ["Tue-Thu", "off-peak Visit Us", "weekday Bunny", "Mommy & Me", "homeschool"]
+  },
+  "visit_us": [
+    {"sku": "C-FT25", "name": "Farm tour — 2 people", "price": 25, "lock": "pay ahead"},
+    {"sku": "C-CAR50", "name": "Whole car — up to 5", "price": 50, "lock": "pay ahead"},
+    {"sku": "C-CLUB50", "name": "Gold / Critter Club", "price": 50, "lock": "microdeposit → future mobile"},
+    {"sku": "C-GRP299", "name": "Field trip — ≤5 cars / 20 · 75 min", "price": 299, "lock": "~50%"},
+    {"sku": "C-GRP499", "name": "Field trip — ≤10 cars / 40 · ~90 min", "price": 499, "lock": "~50%"}
+  ],
+  "mobile": [
+    {"sku": "C-BH", "name": "Bunny Haven", "we": 235, "wd": 150, "role": "FILL weekday · protect WE list"},
+    {"sku": "C-MPZ", "name": "Mini", "we": 359, "wd": 299, "role": "weekday fill / soft WE"},
+    {"sku": "C-SPZ", "name": "Standard", "we": 549, "wd": 359, "role": "PROTECT weekend"},
+    {"sku": "C-SPZ-SIDE", "name": "Standard + Full Side", "we": 699, "wd": 499, "role": "PROTECT"},
+    {"sku": "C-SIDE", "name": "Full Side add-on alone", "we": 150, "wd": 150, "role": "add-on"}
+  ],
+  "gold": {
+    "price": 50,
+    "perks": ["25% off mobile services", "50% off travel (~40%)", "free 2-person farm ticket + farm gift", "deposit rolls to future mobile invoice"]
+  },
+  "close_paths": [
+    {
+      "id": "visit",
+      "label": "Come to the farm",
+      "steps": ["Pick tour / car / field trip", "Pay-ahead link", "Waiver + on time", "Text GOAT if stuck"]
+    },
+    {
+      "id": "mobile-fill",
+      "label": "Fill a weekday hole",
+      "steps": ["Offer Bunny WD $150 or Mini WD $299", "Private channel only (not public slash)", "Pay-ahead", "Text GOAT to lock"]
+    },
+    {
+      "id": "mobile-protect",
+      "label": "Book a weekend / birthday",
+      "steps": ["Quote Standard WE $549 (or Mini WE $359)", "Do not discount into danger", "Pay-ahead / 50% if B2B", "Calendar lock + text GOAT confirm"]
+    },
+    {
+      "id": "b2b",
+      "label": "CDD / HOA / festival",
+      "steps": ["Use business / Vesta menu — not consumer slash", "50% deposit", "Protect Sat list", "Text GOAT + invoice"]
+    }
+  ]
+}

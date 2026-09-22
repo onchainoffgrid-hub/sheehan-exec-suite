@@ -1,0 +1,292 @@
+{
+  "tam": {
+    "source": "/workspace/revops/MASTER_GTM_TAM_Accounts.xlsx",
+    "sheets": {
+      "00_README": {
+        "rows": 23,
+        "headers": [
+          "MASTER GTM TAM Accounts \u2014 Critters on Call / Sheehan Homestead (RevOps)",
+          "col1",
+          "col2",
+          "col3",
+          "col4",
+          "col5"
+        ]
+      },
+      "OPS_Enterprise": {
+        "rows": 313,
+        "headers": [
+          "OPS_Enterprise \u2014 Fest/events \u2014 CDD/HOA/Vesta \u00b7 luxury apt \u00b7 golf. Yellow = dial scratch.",
+          "col1",
+          "col2",
+          "col3",
+          "col4",
+          "col5",
+          "col6",
+          "col7",
+          "col8",
+          "col9",
+          "col10",
+          "col11",
+          "col12",
+          "col13",
+          "col14"
+        ]
+      },
+      "OPS_Recurring": {
+        "rows": 147,
+        "headers": [
+          "OPS_Recurring \u2014 Recurring weekday \u2014 PPEC/seniors/medical daycare + VPK. Yellow = dial scratch.",
+          "col1",
+          "col2",
+          "col3",
+          "col4",
+          "col5",
+          "col6",
+          "col7",
+          "col8",
+          "col9",
+          "col10",
+          "col11",
+          "col12",
+          "col13",
+          "col14"
+        ]
+      },
+      "OPS_Violet": {
+        "rows": 932,
+        "headers": [
+          "OPS_Violet \u2014 Violet \u2014 churches \u00b7 indie \u00b7 Goddard-type \u00b7 charity army. Yellow = dial scratch.",
+          "col1",
+          "col2",
+          "col3",
+          "col4",
+          "col5",
+          "col6",
+          "col7",
+          "col8",
+          "col9",
+          "col10",
+          "col11",
+          "col12",
+          "col13",
+          "col14"
+        ]
+      },
+      "OPS_Corp": {
+        "rows": 84,
+        "headers": [
+          "OPS_Corp \u2014 Corp field + HR (optional lane). Yellow = dial scratch.",
+          "col1",
+          "col2",
+          "col3",
+          "col4",
+          "col5",
+          "col6",
+          "col7",
+          "col8",
+          "col9",
+          "col10",
+          "col11",
+          "col12",
+          "col13",
+          "col14"
+        ]
+      },
+      "04_CALL_NOW": {
+        "rows": 362,
+        "headers": [
+          "dial_priority_rank",
+          "s_tier",
+          "priority_score",
+          "phone",
+          "contact",
+          "title",
+          "company_name",
+          "county",
+          "seat",
+          "sector",
+          "call_band",
+          "penetration",
+          "target_acv",
+          "high_acv",
+          "one_liner"
+        ]
+      },
+      "02_ACCOUNTS": {
+        "rows": 1522,
+        "headers": [
+          "account_id",
+          "company_name",
+          "county",
+          "management_company",
+          "sector",
+          "seat",
+          "tab_source",
+          "bant_tier",
+          "market_tier",
+          "contact",
+          "title",
+          "phone",
+          "email",
+          "penetration",
+          "buy_score"
+        ]
+      },
+      "06_VESTA_CLUSTER": {
+        "rows": 29,
+        "headers": [
+          "VESTA CLUSTER \u2014 management_company contains Vesta OR tab 02_VESTA_Ross (proof unit $)",
+          "col1",
+          "col2",
+          "col3",
+          "col4",
+          "col5",
+          "col6",
+          "col7",
+          "col8",
+          "col9",
+          "col10",
+          "col11",
+          "col12",
+          "col13"
+        ]
+      }
+    }
+  },
+  "market_sizing_headers": {
+    "START_HERE": {
+      "rows": 39,
+      "headers": [
+        "Critters on Call / Sheehan Homestead \u2014 Metro Jax Market Sizing",
+        "col1",
+        "col2",
+        "col3",
+        "col4",
+        "col5"
+      ]
+    },
+    "SEGMENT_COUNTS": {
+      "rows": 35,
+      "headers": [
+        "segment",
+        "orgs_in_list",
+        "named_programmers",
+        "existing_customers",
+        "decision_speed",
+        "primary_SKU",
+        "ACV_low",
+        "ACV_base",
+        "ACV_high",
+        "SAM_orgs",
+        "annual_base",
+        "notes",
+        "source_file"
+      ]
+    },
+    "TAM_ROLLUP": {
+      "rows": 29,
+      "headers": [
+        "TAM ROLLUP \u2014 List-backed vs narrative",
+        "col1",
+        "col2",
+        "col3"
+      ]
+    },
+    "B2C_MODEL": {
+      "rows": 24,
+      "headers": [
+        "B2C MODEL \u2014 Metro Jax consumer (income split 20 / 40 / 40)",
+        "col1",
+        "col2",
+        "col3"
+      ]
+    },
+    "WALLET_MAP": {
+      "rows": 21,
+      "headers": [
+        "WALLET_MAP \u2014 Money layers \u00d7 market ladder (locked 2026-09-12)",
+        "col1",
+        "col2",
+        "col3",
+        "col4",
+        "col5",
+        "col6",
+        "col7",
+        "col8"
+      ]
+    },
+    "DISCRETIONARY_FUNDS": {
+      "rows": 31,
+      "headers": [
+        "Existing / easy-access discretionary budgets (lead with these)",
+        "col1",
+        "col2",
+        "col3",
+        "col4",
+        "col5",
+        "col6"
+      ]
+    },
+    "STEP_UP_GRANTS": {
+      "rows": 58,
+      "headers": [
+        "STEP UP + GRANTS SIZING \u2014 Critters on Call / Sheehan Homestead (research scenarios \u2014 NOT forecast)",
+        "col1",
+        "col2",
+        "col3",
+        "col4",
+        "col5",
+        "col6",
+        "col7",
+        "col8",
+        "col9"
+      ]
+    },
+    "VALIDATION": {
+      "rows": 9,
+      "headers": [
+        "VALIDATION \u2014 real accounts \u2192 lookalike math",
+        "col1",
+        "col2",
+        "col3"
+      ]
+    },
+    "BUILD_NEXT": {
+      "rows": 13,
+      "headers": [
+        "BUILD NEXT \u2014 thin segments to expand",
+        "col1",
+        "col2",
+        "col3"
+      ]
+    },
+    "MASTER_ORGS": {
+      "rows": 1094,
+      "headers": [
+        "segment",
+        "company_name",
+        "county",
+        "decision_speed",
+        "status",
+        "named_contact",
+        "title",
+        "phone",
+        "email",
+        "acv_base",
+        "source",
+        "notes"
+      ]
+    },
+    "ACCOUNT_SIZED_2026_09_14": {
+      "rows": 8,
+      "headers": [
+        "Account-sized TAM overlay (2026-09-14 locked ACVs)",
+        "col1",
+        "col2",
+        "col3",
+        "col4"
+      ]
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "product": "Sheehan Homestead / Critters on Call \u2014 two-face dashboard",
+  "dump_home": "Dashboard Bit",
+  "as_of": "2026-09-22 ET",
+  "faces": [
+    {
+      "id": "investor",
+      "label": "Investor",
+      "path": "investor-home.html",
+      "role": "Clean strategy home \u2014 GTM, ICP\u00d7Connect\u00d7Product, traction, product proof, capital. Not daily ops.",
+      "groups": [
+        "Traction",
+        "Market/ICP",
+        "Product proof",
+        "Capital",
+        "GTM"
+      ]
+    },
+    {
+      "id": "operator",
+      "label": "Operator / Franchise #0",
+      "path": "index.html",
+      "role": "Franchise Layer Zero \u2014 Regional VP operator home. Department grid; Sales first. Pulls live suite feeds.",
+      "departments": [
+        "Sales",
+        "Calendar/Dates",
+        "Bookings",
+        "Money",
+        "BDR Pipeline",
+        "Actions Overdue",
+        "Staff/Team",
+        "Programming",
+        "Ann-Marie Ops",
+        "Collateral",
+        "Platform",
+        "Social"
+      ]
+    }
+  ],
+  "live_proofs": {
+    "critters_book_track_spin_gold": "https://onchainoffgrid-hub.github.io/critters-on-call/",
+    "critters_play": "https://onchainoffgrid-hub.github.io/critters-play/",
+    "gtm_business_manager": "https://onchainoffgrid-hub.github.io/gtm-business-manager/",
+    "interactive_gtm": "https://onchainoffgrid-hub.github.io/interactive-gtm/"
+  },
+  "local_base": "http://127.0.0.1:8765/",
+  "local_note": "http.server cwd = exec-suite \u2192 open /index.html and /investor-home.html (not /dashboard/...)"
+}

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Franchise Layer Zero · Operator · Sheehan Homestead</title>
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--bad:#ff5d6c;--violet:#a78bfa}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1280px;margin:0 auto;padding:22px}
+.apps{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 12px;padding:10px 12px;border:1px solid var(--line);border-radius:14px;background:#0f1728}
+.apps .lbl{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-right:4px}
+.apps a{background:var(--card);border:1px solid #3dd68c55;color:var(--text);padding:6px 10px;border-radius:999px;font-size:.78rem;text-decoration:none;font-weight:600}
+.apps a.sec{border-color:var(--line);color:#c5d0e6;font-weight:500;font-size:.72rem}
+.faces{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 14px}
+.faces .chip{padding:7px 14px;border-radius:999px;font-size:.8rem;font-weight:600;border:1px solid var(--line);background:var(--card);color:var(--muted);text-decoration:none}
+.faces .chip.on{border-color:var(--good);background:#13281d;color:#fff}
+.faces .chip:hover{text-decoration:none;border-color:var(--accent)}
+header{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:10px;flex-wrap:wrap}
+h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font-size:.88rem}
+.nav{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0 16px}
+.nav a{background:var(--card);border:1px solid var(--line);padding:6px 11px;border-radius:999px;font-size:.78rem;color:var(--text)}
+.nav a.active{border-color:var(--accent);background:#152238;color:#fff}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:11px;margin-bottom:16px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px;position:relative;overflow:hidden}
+.kpi::after{content:"";position:absolute;inset:auto 0 0 0;height:2px;background:linear-gradient(90deg,var(--accent),var(--violet));opacity:.55}
+.kpi .l{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.kpi .v{font-size:1.35rem;font-weight:700;margin-top:4px}
+.kpi .s{font-size:.72rem;color:var(--muted);margin-top:3px}
+.dept-label{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin:18px 0 10px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px;display:block;color:inherit;transition:border-color .15s}
+.tile:hover{border-color:var(--accent);text-decoration:none}
+.tile.sales{border-color:#5b8cff88;background:linear-gradient(160deg,#152238 0%,#121a2b 60%);grid-column:span 2;min-height:110px}
+@media(max-width:700px){.tile.sales{grid-column:span 1}}
+.tile.sales h3{font-size:1.08rem}
+.tile h3{margin:0 0 5px;font-size:.95rem}
+.tile p{margin:0;color:var(--muted);font-size:.82rem}
+.tile .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.tile .chipk{font-size:.7rem;padding:3px 8px;border-radius:999px;background:var(--panel);border:1px solid var(--line);color:var(--text)}
+.tile .chipk b{color:var(--good)}
+.tile.secondary{opacity:.92}
+.links-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.links-row a{font-size:.72rem;padding:3px 9px;border-radius:999px;border:1px solid var(--line);background:#0e1626;color:#c5d0e6;text-decoration:none}
+.links-row a:hover{border-color:var(--accent);color:#fff}
+.note{color:var(--muted);font-size:.78rem;margin-top:22px}
+.badge{font-size:.65rem;padding:2px 7px;border-radius:6px;background:#1a2440;color:var(--accent);border:1px solid var(--line);margin-left:6px;vertical-align:middle}
+.badge.sales{background:#152238;color:#9ec1ff;border-color:#5b8cff66}
+</style></head>
+<body><div class="wrap">
+
+<div class="apps">
+  <span class="lbl">Apps</span>
+  <a href="https://onchainoffgrid-hub.github.io/critters-on-call/" target="_blank" rel="noopener">Critters <span style="color:#3dd68c;font-size:.65rem">LIVE</span></a>
+  <a href="https://onchainoffgrid-hub.github.io/critters-play/" target="_blank" rel="noopener" style="border-color:#a78bfa66">Play / Coins <span style="color:#3dd68c;font-size:.65rem">LIVE</span></a>
+  <a href="investor-home.html" style="border-color:#5b8cff66">Investor face</a>
+  <a href="link-tree.html" class="sec">All links</a>
+</div>
+
+<div class="faces">
+  <a class="chip" href="investor-home.html">Investor</a>
+  <a class="chip on" href="index.html">Operator / Franchise #0</a>
+</div>
+
+<header>
+  <div>
+    <h1>Franchise Layer Zero · Operator</h1>
+    <div class="sub">Sheehan Homestead / Critters on Call · Regional VP · Franchise #0 · dark ops BI · no Power BI</div>
+  </div>
+  <div class="sub">North star: <b>bookings</b> · goal <b>$250k</b> by 2026-12-23</div>
+</header>
+
+<div class="nav">
+  <a href="index.html" class="active">Operator</a>
+  <a href="crm-icp.html">CRM ICP</a>
+  <a href="bookings-dates.html">Bookings</a>
+  <a href="money-cfo.html">Money</a>
+  <a href="bdr-pipeline.html">BDR</a>
+  <a href="revops-tam.html">RevOps</a>
+  <a href="actions-overdue.html">Actions</a>
+  <a href="team-hire.html">Team</a>
+  <a href="programming.html">Programs</a>
+  <a href="ann-marie-ops.html">Ann-Marie</a>
+  <a href="collateral.html">Collateral</a>
+  <a href="platform-map.html">Platform</a>
+  <a href="social-reach.html">Social</a>
+  <a href="investor-capital.html">Capital</a>
+  <a href="catalogue-close.html">Catalogue</a>
+  <a href="link-tree.html">Links</a>
+  <a href="macro-radar.html">Macro</a>
+  <a href="investor-home.html">Investor</a>
+</div>
+
+<div class="kpis" id="kpi-strip">
+  <div class="kpi"><div class="l">Call now</div><div class="v" id="k-call">—</div><div class="s">Regional enterprise</div></div>
+  <div class="kpi"><div class="l">Warm / Needs</div><div class="v" id="k-warm">—</div><div class="s" id="k-warm-s">suite feed</div></div>
+  <div class="kpi"><div class="l">PayPal outside</div><div class="v" id="k-pay">—</div><div class="s" id="k-pay-s">H2 + 2026 YTD</div></div>
+  <div class="kpi"><div class="l">Bookings goal</div><div class="v" id="k-goal">—</div><div class="s" id="k-goal-s">AR goal</div></div>
+  <div class="kpi"><div class="l">P0 actions</div><div class="v" id="k-p0">—</div><div class="s" id="k-p0-s">overdue</div></div>
+  <div class="kpi"><div class="l">CRM Top25</div><div class="v" id="k-crm">—</div><div class="s" id="k-crm-s">Monthly / Occasional</div></div>
+</div>
+
+<div class="dept-label">Departments · Sales first</div>
+<div class="tiles">
+
+<a class="tile sales" href="crm-icp.html">
+  <h3>Sales <span class="badge sales">PRIMARY</span></h3>
+  <p>CRM ICP greens · BDR · RevOps · inbound. Franchise #0 revenue motion.</p>
+  <div class="chips">
+    <span class="chipk">Top25 Monthly <b id="sales-m">—</b></span>
+    <span class="chipk">Occasional <b id="sales-o">—</b></span>
+    <span class="chipk">Call now <b id="sales-cn">—</b></span>
+    <span class="chipk">SAM <b id="sales-sam">—</b></span>
+  </div>
+  <div class="links-row">
+    <a href="crm-icp.html">CRM ICP</a>
+    <a href="bdr-pipeline.html">BDR</a>
+    <a href="revops-tam.html">RevOps</a>
+    <a href="catalogue-close.html">Catalogue → Close</a>
+  </div>
+</a>
+
+<a class="tile" href="bookings-dates.html">
+  <h3>Calendar / Dates</h3>
+  <p>Empty perishable dates · weekend protect · next actions.</p>
+  <div class="chips"><span class="chipk">Pipeline <b id="cal-n">—</b></span></div>
+</a>
+
+<a class="tile" href="bookings-dates.html">
+  <h3>Bookings</h3>
+  <p>Locked / accepted / waiting — paid dates only in KPI.</p>
+</a>
+
+<a class="tile" href="money-cfo.html">
+  <h3>Money</h3>
+  <p>Outside customer gross · owner separated · CFO view.</p>
+  <div class="chips"><span class="chipk">Outside <b id="money-out">—</b></span></div>
+</a>
+
+<a class="tile" href="bdr-pipeline.html">
+  <h3>BDR Pipeline</h3>
+  <p>Call now · Warm · Needs contact · Hold bands.</p>
+  <div class="chips"><span class="chipk">Call now <b id="bdr-cn">—</b></span></div>
+</a>
+
+<a class="tile" href="actions-overdue.html">
+  <h3>Actions Overdue</h3>
+  <p>P0 open · not started · execution debt.</p>
+  <div class="chips"><span class="chipk">P0 <b id="act-p0">—</b></span></div>
+</a>
+
+<a class="tile" href="team-hire.html">
+  <h3>Staff / Team</h3>
+  <p>Seats: enterprise · subscription · violet · B2C.</p>
+</a>
+
+<a class="tile" href="programming.html">
+  <h3>Programming</h3>
+  <p>Visit Us types · fill vs protect · heat.</p>
+</a>
+
+<a class="tile" href="ann-marie-ops.html">
+  <h3>Ann-Marie Ops</h3>
+  <p>Delegation scorecard · ops handoff.</p>
+</a>
+
+<a class="tile" href="collateral.html">
+  <h3>Collateral</h3>
+  <p>Segment × asset matrix from APPROVED pack.</p>
+</a>
+
+<a class="tile" href="platform-map.html">
+  <h3>Platform</h3>
+  <p>Bot → spec → suite · one-home-for-build.</p>
+</a>
+</div>
+
+<div class="dept-label">Secondary</div>
+<div class="tiles">
+<a class="tile secondary" href="social-reach.html"><h3>Social</h3><p>FB · LinkedIn · met reach — secondary to Sales.</p></a>
+<a class="tile secondary" href="investor-capital.html"><h3>Investor / Capital</h3><p>Raise narrative — also on Investor face.</p></a>
+<a class="tile secondary" href="macro-radar.html"><h3>Macro Radar</h3><p>Confluence lights · BTC spine.</p></a>
+<a class="tile secondary" href="link-tree.html"><h3>Link Tree</h3><p>Live ops apps + VISION Play / Coins.</p></a>
+</div>
+
+<p class="note" id="load-note">Dump-home: Dashboard Bit · Brand: Sheehan Homestead / Critters on Call · Face: Operator / Franchise #0 · KPIs load from data/*.json (serve via http://127.0.0.1:8765/ if fetch blocked on file://) · Built 2026-09-22 ET</p>
+</div>
+
+<script>
+(function(){
+  function fmt$(n){
+    if(n==null||n==='') return '—';
+    var x=Number(n); if(isNaN(x)) return '—';
+    return '$'+Math.round(x).toLocaleString('en-US');
+  }
+  function set(id,v){ var el=document.getElementById(id); if(el) el.textContent=(v==null||v==='')?'—':v; }
+  async function load(path){
+    try{
+      var r=await fetch(path,{cache:'no-store'});
+      if(!r.ok) throw new Error(r.status);
+      return await r.json();
+    }catch(e){ return null; }
+  }
+  Promise.all([
+    load('data/suite_summary.json'),
+    load('data/suite_kpis.json'),
+    load('data/paypal_kpis.json'),
+    load('data/overdue_kpis.json'),
+    load('data/crm_icp_regional_subscription.json'),
+    load('data/bookings_pipeline.json')
+  ]).then(function(arr){
+    var sum=arr[0]||{}, kpis=arr[1]||{}, pay=arr[2]||{}, od=arr[3]||{}, crm=arr[4]||{}, book=arr[5]||{};
+    var call=sum.bdr_spec_aligned && sum.bdr_spec_aligned.CALL_NOW;
+    if(call==null) call=kpis.call_now;
+    var warm=sum.bdr_spec_aligned && sum.bdr_spec_aligned.Warm;
+    if(warm==null) warm=kpis.warm;
+    var needs=sum.bdr_spec_aligned && sum.bdr_spec_aligned.WARM_NEEDS_CONTACT;
+    if(needs==null) needs=kpis.needs_contact;
+    set('k-call', call!=null?call:'—');
+    set('k-warm', (warm!=null&&needs!=null)?(warm+' / '+needs):(warm!=null?warm:'—'));
+    set('k-warm-s', 'Warm · Needs contact');
+    var outside=pay.combined_outside_gross!=null?pay.combined_outside_gross:sum.paypal_h2_outside_gross;
+    set('k-pay', fmt$(outside));
+    set('k-pay-s', pay.combined_window||'Outside customer');
+    var goal=sum.bookings_goal||kpis.bookings_goal;
+    var ar=sum.ar_goal||kpis.ar_goal;
+    set('k-goal', fmt$(goal));
+    set('k-goal-s', ar!=null?('AR ~'+fmt$(ar)):'goal');
+    var p0=od.p0_open!=null?od.p0_open:(sum.overdue_p0!=null?sum.overdue_p0:kpis.overdue_p0);
+    var ns=od.not_started!=null?od.not_started:kpis.overdue_not_started;
+    set('k-p0', p0!=null?p0:'—');
+    set('k-p0-s', ns!=null?(ns+' not started'):'P0 open');
+    var t25=crm.kpis && crm.kpis.top25;
+    if(t25){
+      set('k-crm', (t25.Monthly!=null?t25.Monthly:'—')+' / '+(t25.Occasional!=null?t25.Occasional:'—'));
+      set('k-crm-s', 'Monthly / Occasional · Top25');
+      set('sales-m', t25.Monthly);
+      set('sales-o', t25.Occasional);
+    }
+    set('sales-cn', call);
+    var sam=sum.primary_sam_annual||kpis.primary_sam_annual;
+    set('sales-sam', fmt$(sam));
+    set('bdr-cn', call);
+    set('act-p0', p0);
+    set('money-out', fmt$(outside));
+    var bn=Array.isArray(book.bookings)?book.bookings.length:book.bookings;
+    set('cal-n', bn!=null?bn:'—');
+    var note=document.getElementById('load-note');
+    if(!sum.as_of && !kpis.call_now && !pay.combined_outside_gross){
+      if(note) note.textContent+=' · KPI fetch failed — open via http://127.0.0.1:8765/ (file:// fallback)';
+    }
+  });
+})();
+</script>
+</body></html>

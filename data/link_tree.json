@@ -1,0 +1,73 @@
+{
+  "as_of": "2026-09-20",
+  "source": "App Builder \u2192 Dashboard Bit link tree",
+  "layer_a": {
+    "label": "No-frills web apps (ops / sales \u2014 curtain closed, LIVE)",
+    "links": [
+      {
+        "name": "Critters Book/Track/Spin/Gold",
+        "url": "https://onchainoffgrid-hub.github.io/critters-on-call/",
+        "repo": "https://github.com/onchainoffgrid-hub/critters-on-call",
+        "status": "LIVE"
+      },
+      {
+        "name": "GTM Business Manager",
+        "url": "https://onchainoffgrid-hub.github.io/gtm-business-manager/",
+        "note": "TAM / pipeline / traction ops board",
+        "status": "LIVE"
+      },
+      {
+        "name": "Interactive GTM",
+        "url": "https://onchainoffgrid-hub.github.io/interactive-gtm/",
+        "note": "Investor sales-rigor tour",
+        "status": "LIVE"
+      }
+    ]
+  },
+  "layer_b": {
+    "label": "Play / play-to-earn / Critter Coins (VISION)",
+    "links": [
+      {
+        "name": "Curtain-closed Play (GitHub Pages)",
+        "url": "https://onchainoffgrid-hub.github.io/critters-play/",
+        "status": "LIVE",
+        "note": "Hub + Evade Elon / Barn Cat Defender / Pyrenees Guard / Critter Match (curtain-closed). Critter Coins = VISION economy label, not live currency."
+      },
+      {
+        "name": "Build prototype (grok.me)",
+        "url": "https://crittersoncallprototype.grok.me/play",
+        "status": "VISION_INTERNAL",
+        "note": "Curtain risk \u2014 DO NOT put in investor-facing trees. Games: Evade Elon, Barn Cat Defender, Pyrenees Guard, Critter Match"
+      }
+    ],
+    "ambition": "Critter Coins / play-to-earn = vision layer (route play rewards \u2192 farm visits / Gold / experiences). Not live currency. Mark VISION on exec/investor pages.",
+    "play_status": "LIVE",
+    "play_url": "https://onchainoffgrid-hub.github.io/critters-play/"
+  },
+  "local_suite": {
+    "label": "Exec suite (this box)",
+    "base": "http://127.0.0.1:8765/",
+    "links": [
+      {
+        "name": "Hub",
+        "url": "http://127.0.0.1:8765/index.html"
+      },
+      {
+        "name": "Macro Radar",
+        "url": "http://127.0.0.1:8765/macro-radar.html"
+      },
+      {
+        "name": "Money CFO",
+        "url": "http://127.0.0.1:8765/money-cfo.html"
+      },
+      {
+        "name": "BDR Pipeline",
+        "url": "http://127.0.0.1:8765/bdr-pipeline.html"
+      },
+      {
+        "name": "Link Tree page",
+        "url": "http://127.0.0.1:8765/link-tree.html"
+      }
+    ]
+  }
+}

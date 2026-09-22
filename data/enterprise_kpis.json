@@ -1,0 +1,62 @@
+{
+  "call_now": 138,
+  "warm_total": 232,
+  "warm_band": {
+    "Warm": 81,
+    "WARM_NEEDS_CONTACT": 140,
+    "Later": 11
+  },
+  "red_tape_hold": 44,
+  "corp_field_hr": 81,
+  "corp_bands": {
+    "Call now": 16,
+    "Warm": 56,
+    "Later": 9
+  },
+  "band_counts_call_now_warm": {
+    "Call now": 138,
+    "Warm": 81,
+    "WARM_NEEDS_CONTACT": 140,
+    "Later": 11
+  },
+  "segment_call_now": {
+    "CDD/HOA": 54,
+    "CDD/HOA_Vesta": 21,
+    "University": 17,
+    "Corporate_HR": 16,
+    "Golf_Country_Club": 10,
+    "Goddard_Premium": 8,
+    "Corporate_QSR_Field": 6,
+    "Luxury_Apartment": 6
+  },
+  "county_call_now": {
+    "Duval": 54,
+    "St. Johns": 50,
+    "Clay": 22,
+    "Nassau": 9,
+    "Flagler": 2,
+    "Camden": 1
+  },
+  "segment_all": {
+    "CDD/HOA": 187,
+    "Corporate_HR": 50,
+    "Corporate_QSR_Field": 31,
+    "CDD/HOA_Vesta": 26,
+    "University": 24,
+    "Luxury_Apartment": 24,
+    "Golf_Country_Club": 20,
+    "Goddard_Premium": 8
+  },
+  "county_all": {
+    "Duval": 169,
+    "St. Johns": 118,
+    "Clay": 47,
+    "Nassau": 21,
+    "Camden": 13,
+    "Flagler": 2
+  },
+  "call_now_with_phone": 138,
+  "call_now_named": 138,
+  "source": "/workspace/bdr/lists/Regional-Enterprise-BDR-CallList.xlsx",
+  "as_of": "2026-09-19"
+}

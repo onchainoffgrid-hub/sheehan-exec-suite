@@ -1,0 +1,41 @@
+{
+  "as_of": "2026-09-19",
+  "sources": [
+    "/workspace/Sheehan-Homestead-PayPal-H2-2025.xlsx",
+    "data/paypal_monthly.json",
+    "data/paypal_customers.json",
+    "PayPal BALANCE_RECONCILIATION_REPORT CSV Jan1\u2013Sep1 2026 \u2192 data/paypal_2026_ytd.json"
+  ],
+  "note": "Owner transfers \u2260 customer revenue. Outside = customer sales only. Do not sum H2 total row with monthly rows.",
+  "h2_2025": {
+    "window": "H2 2025 (Jul 1\u2013Dec 31 2025)",
+    "outside_gross": 15408.66,
+    "outside_net": 14903.19,
+    "outside_fees": -505.47,
+    "owner_gross": 4254.0,
+    "all_in_gross": 19662.66,
+    "to_vystar": -18835.53,
+    "paying_customers": 42,
+    "invoices_paid_count": 43
+  },
+  "ytd_2026": {
+    "window": "2026 YTD (Jan 1\u2013Sep 1 2026)",
+    "outside_gross": 20509.26,
+    "outside_net": 19846.62,
+    "outside_fees": -662.64,
+    "owner_gross": 0,
+    "to_vystar": -20095.83,
+    "paying_customers": 49
+  },
+  "combined_outside_gross": 35917.92,
+  "combined_window": "Jul 2025\u2013Sep 1 2026 (H2 outside + 2026 YTD outside; no double-count)",
+  "ops_book_unaudited": {
+    "label": "ops book \u00b7 unaudited",
+    "booked_ytd_approx": 42000,
+    "received_approx": 30000,
+    "ar_approx": 12000,
+    "paypal_of_received_approx": 20509.26,
+    "other_pipes_gap_approx": 9500,
+    "note": "Said/ops book \u2014 not proven. Awaiting Michael bookings truth. Proven PayPal received 2026 YTD = outside_gross $20,509.26"
+  }
+}

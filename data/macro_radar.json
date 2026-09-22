@@ -1,0 +1,206 @@
+{
+  "as_of": "2026-09-20T20:10",
+  "source": "yahoo+alternative.me where available",
+  "tickers": {
+    "SPX": {
+      "symbol": "^GSPC",
+      "last": 7650.5,
+      "chg_pct": 0.17,
+      "closes": [
+        7619.98,
+        7585.73,
+        7551.8101,
+        7637.7598,
+        7650.5
+      ]
+    },
+    "IWM": {
+      "symbol": "IWM",
+      "last": 284.1,
+      "chg_pct": -0.47,
+      "closes": [
+        287.91,
+        285.14,
+        283.92,
+        285.43,
+        284.1
+      ]
+    },
+    "NDX": {
+      "symbol": "^NDX",
+      "last": 29644.168,
+      "chg_pct": 0.67,
+      "closes": [
+        29127.1602,
+        28937.8398,
+        28945.0605,
+        29446.9805,
+        29644.1699
+      ]
+    },
+    "TNX": {
+      "symbol": "^TNX",
+      "last": 4.998,
+      "chg_pct": 1.03,
+      "closes": [
+        4.961,
+        4.996,
+        5.006,
+        4.947,
+        4.998
+      ]
+    },
+    "GLD": {
+      "symbol": "GLD",
+      "last": 401.17,
+      "chg_pct": 0.71,
+      "closes": [
+        392.84,
+        394.15,
+        391.74,
+        398.36,
+        401.17
+      ]
+    },
+    "BTC": {
+      "symbol": "BTC-USD",
+      "last": 81509.57,
+      "chg_pct": 0.34,
+      "closes": [
+        76403.7734,
+        80901.4609,
+        81233.6797,
+        81509.5703
+      ]
+    },
+    "ETH": {
+      "symbol": "ETH-USD",
+      "last": 2655.6,
+      "chg_pct": 0.9,
+      "closes": [
+        2447.1067,
+        2611.3472,
+        2631.9626,
+        2655.6001
+      ]
+    },
+    "XRP": {
+      "symbol": "XRP-USD",
+      "last": 1.4205,
+      "chg_pct": 0.71,
+      "closes": [
+        1.2959,
+        1.3962,
+        1.4104,
+        1.4205
+      ]
+    },
+    "SOL": {
+      "symbol": "SOL-USD",
+      "last": 111.81,
+      "chg_pct": 0.72,
+      "closes": [
+        101.6034,
+        112.5992,
+        111.0149,
+        111.81
+      ]
+    }
+  },
+  "fear_greed": {
+    "value": 70,
+    "label": "Greed"
+  },
+  "levels": {
+    "BTC": [
+      {
+        "lo": 59000,
+        "hi": 62000,
+        "label": "June '26 shelf / spring zone"
+      },
+      {
+        "lo": 81000,
+        "hi": 82000,
+        "label": "Near-term reject/hold"
+      }
+    ],
+    "XRP": [
+      {
+        "lo": 1.45,
+        "hi": 1.45,
+        "label": "$1.45 level"
+      },
+      {
+        "lo": 1.1,
+        "hi": 1.29,
+        "label": "Fib shop $1.29\u2013$1.10"
+      }
+    ]
+  },
+  "confluence": [
+    {
+      "id": "sentiment",
+      "label": "Sentiment",
+      "lit": false,
+      "note": "F&G 70 Greed \u2014 not extreme; no funding/OI/ETF confirm. Soft long-trap watch at highs, not a lit box."
+    },
+    {
+      "id": "levels",
+      "label": "Levels",
+      "lit": true,
+      "note": "BTC sitting in $81\u201382k reject/hold shelf. Actionable zone; direction not decided."
+    },
+    {
+      "id": "spring",
+      "label": "Spring",
+      "lit": false,
+      "note": "No false breakdown + reclaim. June $59\u201362k shelf not being tested."
+    },
+    {
+      "id": "elliott",
+      "label": "Elliott",
+      "lit": false,
+      "note": "Hypothesis only \u2014 no clean impulse count locked."
+    },
+    {
+      "id": "fous",
+      "label": "Fous Krypton",
+      "lit": false,
+      "note": "No clear Revival/Survival/Force/Gold A+ this week yet."
+    },
+    {
+      "id": "fib",
+      "label": "Fib/BCB",
+      "lit": false,
+      "note": "Not at BCB-style bottom. Mid-range above June shelf."
+    },
+    {
+      "id": "onchain",
+      "label": "On-chain",
+      "lit": false,
+      "note": "June losses elevated but not Feb-panic/FTX depth \u2014 total-low not confirmed."
+    },
+    {
+      "id": "superorganism",
+      "label": "Superorganism",
+      "lit": true,
+      "note": "Mixed dance: SPX/gold/BTC green, IWM red, 10Y up. Weak breadth / not clean risk-on. Gold coupling still elevated historically."
+    }
+  ],
+  "disclaimer": "Picture board for timing discipline. Confluence lights owned by Crypto/invest Bot \u2014 unlit until they push scores. Not advice.",
+  "teach": {
+    "SPX": "Equities = risk appetite. Geo shocks (war, tariffs) often hit here first.",
+    "IWM": "Russell = smaller US cos. IWM lagging SPX = weak breadth \u2014 historically a caution for alts beta.",
+    "TNX": "10Y \u2191 = tighter money. Often follows inflation/Fed path.",
+    "GLD": "Gold likes fear, real-rate drops, geo stress. Mid-Sep '26: BTC\u2013gold corr near multi-year highs even without blow-off greed \u2014 monetary regime, not just risk-on.",
+    "BTC": "Crypto spine. Levels > narratives.",
+    "ALTS": "Alts beta to BTC; ADA = lag-catch watch only."
+  },
+  "picture_rule": "One glance: green/red dance vs decoupling. Wait for confluence lights.",
+  "score": {
+    "lit": 2,
+    "of": 8,
+    "signal": "NONE \u2014 wait (\u22655 = A+)"
+  },
+  "stance": "No A+ long or short. At reject/hold shelf with mixed breadth. Capital ready; jet not cleared."
+}

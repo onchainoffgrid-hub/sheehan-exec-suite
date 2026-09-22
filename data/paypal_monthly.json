@@ -1,0 +1,79 @@
+[
+  {
+    "Month": "Jul 2025",
+    "All-in gross": 3775.5,
+    "Owner (Michael)": 2004.0,
+    "Outside gross": 1771.5,
+    "Fees on outside": -61.55,
+    "Outside net": 1709.95,
+    "To Vystar": -3381.89,
+    "Notes": "First invoice 0006 on Jul 11. Two $777 owner checkouts.",
+    "window_note": "H2 2025 PayPal \u00b7 keep as H2-only"
+  },
+  {
+    "Month": "Aug 2025",
+    "All-in gross": 1548.0,
+    "Owner (Michael)": 1125.0,
+    "Outside gross": 423.0,
+    "Fees on outside": -13.63,
+    "Outside net": 409.37,
+    "To Vystar": -1880.22,
+    "Notes": "Thinnest outside month. Mostly Greenwood School + a Leia balance.",
+    "window_note": "H2 2025 PayPal \u00b7 keep as H2-only"
+  },
+  {
+    "Month": "Sep 2025",
+    "All-in gross": 3186.52,
+    "Owner (Michael)": 225.0,
+    "Outside gross": 2961.52,
+    "Fees on outside": -99.52,
+    "Outside net": 2862.0,
+    "To Vystar": -3078.66,
+    "Notes": "Elizabeth Scott books 3 invoices same day ($350 x3).",
+    "window_note": "H2 2025 PayPal \u00b7 keep as H2-only"
+  },
+  {
+    "Month": "Oct 2025",
+    "All-in gross": 6207.3,
+    "Owner (Michael)": 450.0,
+    "Outside gross": 5757.3,
+    "Fees on outside": -182.39,
+    "Outside net": 5574.91,
+    "To Vystar": -3762.23,
+    "Notes": "Peak. Oct 24 cluster (Scott/Parker/Hadd/Bean). Clara White Mission.",
+    "window_note": "H2 2025 PayPal \u00b7 keep as H2-only"
+  },
+  {
+    "Month": "Nov 2025",
+    "All-in gross": 3335.24,
+    "Owner (Michael)": 450.0,
+    "Outside gross": 2885.24,
+    "Fees on outside": -94.59,
+    "Outside net": 2790.65,
+    "To Vystar": -5309.53,
+    "Notes": "Steady invoicing. Last owner $225s on Nov 14.",
+    "window_note": "H2 2025 PayPal \u00b7 keep as H2-only"
+  },
+  {
+    "Month": "Dec 2025",
+    "All-in gross": 1610.1,
+    "Owner (Michael)": 0.0,
+    "Outside gross": 1610.1,
+    "Fees on outside": -53.79,
+    "Outside net": 1556.31,
+    "To Vystar": -1423.0,
+    "Notes": "No owner charges. Repeat balances (Gayle, Kocher, Cannilla, Farmer).",
+    "window_note": "H2 2025 PayPal \u00b7 keep as H2-only"
+  },
+  {
+    "Month": "H2 total",
+    "All-in gross": 19662.66,
+    "Owner (Michael)": 4254.0,
+    "Outside gross": 15408.66,
+    "Fees on outside": -505.47,
+    "Outside net": 14903.19,
+    "To Vystar": -18835.53,
+    "Notes": null,
+    "window_note": "H2 2025 PayPal \u00b7 keep as H2-only"
+  }
+]

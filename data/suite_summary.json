@@ -1,0 +1,23 @@
+{
+  "as_of": "2026-09-19 ET",
+  "bdr_spec_aligned": {
+    "CALL_NOW": 138,
+    "WARM": 232,
+    "Warm": 81,
+    "WARM_NEEDS_CONTACT": 140,
+    "Later": 11,
+    "RED_TAPE_HOLD": 44,
+    "note": "Detail sheets VESTA/GOLF/LUXURY/CORP are subsets \u2014 not summed into dialer KPIs"
+  },
+  "fall_priority": 129,
+  "paypal_h2_outside_gross": 15408.66,
+  "paypal_h2_outside_net": 14903.19,
+  "paypal_h2_owner_gross": 4254.0,
+  "paypal_outside_customers": 42,
+  "overdue_actions": 84,
+  "overdue_p0": 41,
+  "primary_sam_annual": 572873,
+  "bookings_goal": 250000,
+  "ar_goal": 100000,
+  "goal_date": "2026-12-23"
+}

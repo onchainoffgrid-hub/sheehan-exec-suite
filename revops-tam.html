@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>RevOps TAM · Sheehan Exec</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--bad:#ff5d6c;--violet:#a78bfa}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1280px;margin:0 auto;padding:22px}
+header{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:14px;flex-wrap:wrap}
+h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font-size:.88rem}
+.nav{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0 18px}
+.nav a{background:var(--card);border:1px solid var(--line);padding:6px 11px;border-radius:999px;font-size:.78rem;color:var(--text)}
+.nav a.active{border-color:var(--accent);background:#152238;color:#fff}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:11px;margin-bottom:16px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px;position:relative;overflow:hidden}
+.kpi::after{content:"";position:absolute;inset:auto 0 0 0;height:2px;background:linear-gradient(90deg,var(--accent),var(--violet));opacity:.55}
+.kpi .l{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.kpi .v{font-size:1.4rem;font-weight:700;margin-top:4px}
+.kpi .s{font-size:.72rem;color:var(--muted);margin-top:3px}
+.grid{display:grid;grid-template-columns:2fr 1fr;gap:14px}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+@media(max-width:980px){.grid,.grid3{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:14px}
+.card h2{font-size:.98rem;margin:0 0 10px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+table{width:100%;border-collapse:collapse;font-size:.8rem}
+th,td{padding:7px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{color:var(--muted);font-weight:600;position:sticky;top:0;background:var(--card);z-index:1}
+.tag{display:inline-block;padding:2px 8px;border-radius:999px;font-size:.68rem;border:1px solid var(--line);white-space:nowrap}
+.tag.now{background:#13281d;color:var(--good);border-color:#2a5}.tag.warm{background:#2a2416;color:var(--warn)}
+.tag.needs{background:#1a2030;color:#9ec1ff}.tag.later{color:var(--muted)}.tag.hold{background:#2a1619;color:var(--bad)}
+.tag.stub{background:#1a1f2e;color:var(--violet)}
+input,select,textarea{background:var(--panel);border:1px solid var(--line);color:var(--text);border-radius:8px;padding:8px 10px;width:100%;font:inherit}
+.filters{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin-bottom:10px}
+.bar{height:9px;background:var(--panel);border-radius:6px;overflow:hidden;margin-top:5px}
+.bar>i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--violet))}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:11px}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px;display:block;color:inherit;transition:border-color .15s}
+.tile:hover{border-color:var(--accent);text-decoration:none}
+.tile h3{margin:0 0 5px;font-size:.95rem}.tile p{margin:0;color:var(--muted);font-size:.82rem}
+.note{color:var(--muted);font-size:.78rem}.scroll{max-height:520px;overflow:auto;border:1px solid var(--line);border-radius:10px}
+.scroll table{font-size:.78rem}
+.tel{font-weight:600;letter-spacing:.02em;white-space:nowrap}
+.badge{font-size:.68rem;padding:2px 7px;border-radius:6px;background:#1a2440;color:var(--accent);border:1px solid var(--line)}
+.chart-box{position:relative;height:240px}
+.muted{color:var(--muted)}
+.progress{display:flex;align-items:center;gap:10px}.progress .track{flex:1;height:10px;background:var(--panel);border-radius:99px;overflow:hidden}
+.progress .track>i{display:block;height:100%;background:linear-gradient(90deg,var(--good),var(--accent))}
+.matrix{display:grid;grid-template-columns:140px repeat(4,1fr);gap:6px;font-size:.75rem}
+.matrix .h{color:var(--muted);font-weight:600}.matrix .cell{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px;text-align:center}
+.matrix .ok{color:var(--good)}.matrix .gap{color:var(--bad)}.matrix .partial{color:var(--warn)}
+.seat{border-left:3px solid var(--accent);padding-left:10px;margin:10px 0}
+.seat.live{border-color:var(--good)}.seat.next{border-color:var(--warn)}.seat.later{border-color:var(--violet)}
+</style></head>
+<body><div class="wrap">
+
+
+<!-- APP TOP LINKS (Michael) -->
+<div class="app-top" style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 10px;padding:10px 12px;border:1px solid #1e2a44;border-radius:14px;background:#0f1728">
+  <span style="font-size:.72rem;color:#93a0b8;text-transform:uppercase;letter-spacing:.06em;margin-right:4px">Apps</span>
+  <a href="https://onchainoffgrid-hub.github.io/critters-on-call/" target="_blank" rel="noopener" style="background:#121a2b;border:1px solid #3dd68c55;color:#e8eefc;padding:6px 10px;border-radius:999px;font-size:.78rem;text-decoration:none;font-weight:600">Critters <span style="color:#3dd68c;font-size:.65rem">LIVE</span></a>
+  <a href="https://onchainoffgrid-hub.github.io/critters-play/" target="_blank" rel="noopener" title="Play games LIVE (curtain-closed). Critter Coins economy = VISION" style="background:#121a2b;border:1px solid #a78bfa66;color:#e8eefc;padding:6px 10px;border-radius:999px;font-size:.78rem;text-decoration:none;font-weight:600">Play / Coins <span style="color:#3dd68c;font-size:.65rem">LIVE</span></a>
+  <a href="index.html" style="background:#121a2b;border:1px solid #5b8cff66;color:#e8eefc;padding:6px 10px;border-radius:999px;font-size:.78rem;text-decoration:none;font-weight:600">Dashboards</a>
+  <a href="link-tree.html" style="background:#121a2b;border:1px solid #1e2a44;color:#c5d0e6;padding:5px 9px;border-radius:999px;font-size:.72rem;text-decoration:none">All links</a>
+</div>
+<div class="apps-top" style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 12px;padding:10px 12px;background:#121a2b;border:1px solid #1e2a44;border-radius:12px">
+<span style="font-size:.72rem;color:#93a0b8;text-transform:uppercase;letter-spacing:.06em;margin-right:4px">Apps</span>
+<a href="https://onchainoffgrid-hub.github.io/critters-on-call/" target="_blank" rel="noopener" style="background:#152238;border:1px solid #5b8cff;padding:6px 12px;border-radius:999px;font-size:.78rem;color:#e8eefc;text-decoration:none;font-weight:600">Critters app</a>
+<a href="https://onchainoffgrid-hub.github.io/critters-play/" target="_blank" rel="noopener" style="background:#1a1628;border:1px solid #a78bfa;padding:6px 12px;border-radius:999px;font-size:.78rem;color:#e8eefc;text-decoration:none;font-weight:600">Play / Critter Coins</a>
+<a href="index.html" style="background:#13281d;border:1px solid #3dd68c;padding:6px 12px;border-radius:999px;font-size:.78rem;color:#e8eefc;text-decoration:none;font-weight:600">Dashboards</a>
+<a href="link-tree.html" style="border:1px solid #1e2a44;padding:6px 12px;border-radius:999px;font-size:.78rem;color:#93a0b8;text-decoration:none">All links</a>
+</div>
+
+<header><div><h1>RevOps TAM</h1><div class="sub">Sheehan Homestead · Michael Sheehan · dark ops BI · no Power BI</div></div>
+<div class="sub">North star: <b>bookings</b> · goal <b>$250k</b> by 2026-12-23</div></header>
+<div class="nav"><a href="index.html">Hub</a><a href="bookings-dates.html">Bookings</a><a href="money-cfo.html">Money</a><a href="bdr-pipeline.html">BDR</a><a href="crm-icp.html">CRM ICP</a><a href="revops-tam.html" class="active">RevOps</a><a href="social-reach.html">Social</a><a href="investor-capital.html">Investor</a><a href="programming.html">Programs</a><a href="team-hire.html">Team</a><a href="actions-overdue.html">Actions</a><a href="collateral.html">Collateral</a><a href="ann-marie-ops.html">Ann-Marie</a><a href="platform-map.html">Platform</a></div>
+
+<div class="kpis">
+  <div class="kpi"><div class="l">Primary SAM annual</div><div class="v">$572,873</div><div class="s">572 orgs · list-backed</div></div>
+  <div class="kpi"><div class="l">Full professional</div><div class="v">$586,873</div><div class="s">+ red-tape seniors</div></div>
+  <div class="kpi"><div class="l">Master accounts</div><div class="v">1,522</div><div class="s">MASTER_GTM 02_ACCOUNTS</div></div>
+  <div class="kpi"><div class="l">CALL_NOW (GTM)</div><div class="v">362</div><div class="s">04_CALL_NOW sheet</div></div>
+  <div class="kpi"><div class="l">Account-sized target ACV</div><div class="v">$1,915,430</div><div class="s">1,473 accounts rollup</div></div>
+  <div class="kpi"><div class="l">Enterprise seat ACV</div><div class="v">$766,000</div><div class="s">259 accounts · 71 call now</div></div>
+</div>
+<div class="grid">
+  <div class="card"><h2>Segment annual base (top)</h2><div class="chart-box"><canvas id="segAnn"></canvas></div></div>
+  <div class="card"><h2>Tier rollup (account-sized)</h2><div class="chart-box"><canvas id="tierChart"></canvas></div></div>
+</div>
+<div class="card"><h2>SEGMENT_COUNTS (market sizing)</h2>
+<div class="scroll"><table>
+<thead><tr><th>Segment</th><th>Orgs</th><th>SAM</th><th>ACV base</th><th>Annual base</th><th>Speed</th><th>Existing</th></tr></thead>
+<tbody>
+<tr><td>CDD / HOA amenity programmers</td><td>264</td><td>101</td><td>$1,500</td><td>$151,500</td><td>Fast</td><td>1</td></tr><tr><td>Churches (family / kids events)</td><td>407</td><td>116</td><td>$749</td><td>$86,884</td><td>Fast</td><td>0</td></tr><tr><td>VPK / ELC daycare subscription</td><td>349</td><td>80</td><td>$1,000</td><td>$80,000</td><td>Fast</td><td>0</td></tr><tr><td>Large AL / IL campus (activities)</td><td>63</td><td>63</td><td>$800</td><td>$50,400</td><td>Medium</td><td>10</td></tr><tr><td>PTA / School festival</td><td>46</td><td>46</td><td>$1,000</td><td>$46,000</td><td>Fast</td><td>2</td></tr><tr><td>Indie / faith schools (from schools-daycares)</td><td>164</td><td>60</td><td>$749</td><td>$44,940</td><td>Fast</td><td>0</td></tr><tr><td>Adult Day Care</td><td>13</td><td>13</td><td>$1,750</td><td>$22,750</td><td>Fast</td><td>1</td></tr><tr><td>PPEC (Prescribed Pediatric Extended Care)</td><td>11</td><td>11</td><td>$1,750</td><td>$19,250</td><td>Fast</td><td>2</td></tr><tr><td>Preservation / SPAR / Main Street festivals</td><td>22</td><td>22</td><td>$749</td><td>$16,478</td><td>Medium</td><td>1</td></tr><tr><td>Corporate HR / employee appreciation</td><td>79</td><td>12</td><td>$1,200</td><td>$14,400</td><td>Medium</td><td>2</td></tr><tr><td>Campus / University (Kelsey-types)</td><td>19</td><td>19</td><td>$749</td><td>$14,231</td><td>Fast</td><td>6</td></tr><tr><td>Senior Center — Government (COJ/county)</td><td>20</td><td>20</td><td>$700</td><td>$14,000</td><td>Red tape</td><td>0</td></tr><tr><td>Senior Center — Nonprofit COA / standalone</td><td>14</td><td>14</td><td>$700</td><td>$9,800</td><td>Medium</td><td>0</td></tr><tr><td>Memory Care (stand-alone / tagged MC)</td><td>5</td><td>5</td><td>$1,750</td><td>$8,750</td><td>Fast</td><td>3</td></tr><tr><td>QSR / Field operators (Publix, CFA, McD)</td><td>40</td><td>10</td><td>$749</td><td>$7,490</td><td>Fast</td><td>3</td></tr><tr><td>Small ALF (≤16 beds) — low weight</td><td>38</td><td>0</td><td>$100</td><td>$0.00</td><td>Medium</td><td>0</td></tr><tr><td>Fast SAM $</td><td>481795</td><td>0</td><td>—</td><td>—</td><td></td><td>0</td></tr><tr><td>Medium SAM $</td><td>91078</td><td>0</td><td>—</td><td>—</td><td></td><td>0</td></tr><tr><td>Red tape SAM $</td><td>14000</td><td>0</td><td>—</td><td>—</td><td></td><td>0</td></tr><tr><td>Primary SAM (Fast+Medium) $</td><td>572873</td><td>0</td><td>—</td><td>—</td><td></td><td>0</td></tr><tr><td>Full professional $</td><td>586873</td><td>0</td><td>—</td><td>—</td><td></td><td>0</td></tr><tr><td>ACV ASSUMPTIONS (stated)</td><td>0</td><td>0</td><td>—</td><td>—</td><td></td><td>0</td></tr><tr><td>Memory care / PPEC / adult day: $175×10 mo ≈ $1750/yr base (or 4×$215 quarterly)</td><td>0</td><td>0</td><td>—</td><td>—</td><td></td><td>0</td></tr><tr><td>Large AL campus: $800/yr base (mix of visits)</td><td>0</td><td>0</td><td>—</td><td>—</td><td></td><td>0</td></tr><tr><td>Small ALF: $0–215, SAM_orgs=0 (low weight)</td><td>0</td><td>0</td><td>—</td><td>—</td><td></td><td>0</td></tr>
+</tbody></table></div>
+<p class="note">Sources: Jax_B2B_Market_Sizing.xlsx · Jax_Account_Sized_TAM_CallList.xlsx · MASTER_GTM_TAM_Accounts.xlsx · schema: revops/dashboard_schema.md</p>
+</div>
+<script>
+const top = [{"segment": "CDD / HOA amenity programmers", "orgs_in_list": 264.0, "named_programmers": 150.0, "existing_customers": 1.0, "decision_speed": "Fast", "primary_SKU": "Amenity $1200–2400/yr (Durbin $2400/2 zoos)", "ACV_low": 1200.0, "ACV_base": 1500.0, "ACV_high": 2400.0, "SAM_orgs": 101.0, "annual_base": 151500.0, "notes": "cdd-hoa unique Company Name=264; list summary cites 96 CDDs; SAM=101 orgs with named amenity people in people-enterprise. Durbin Crossing EXISTING invoiced $2400. HOA $5k = pitch validation narrative (not a single invoice line in these CSVs). HOT.", "source_file": "leads/cdd-hoa.csv + archive-cdd.csv + people-enterprise.csv"}, {"segment": "Churches (family / kids events)", "orgs_in_list": 407.0, "named_programmers": 0.0, "existing_customers": 0.0, "decision_speed": "Fast", "primary_SKU": "Family event Mid $749", "ACV_low": 500.0, "ACV_base": 749.0, "ACV_high": 1000.0, "SAM_orgs": 116.0, "annual_base": 86884.0, "notes": "407 church orgs; SAM=116 with Kids/Family/Faith-Formation titles. Person names mostly blank.", "source_file": "leads/churches.csv"}, {"segment": "VPK / ELC daycare subscription", "orgs_in_list": 349.0, "named_programmers": 0.0, "existing_customers": 0.0, "decision_speed": "Fast", "primary_SKU": "Bunny Haven $249×4 ≈ $1000 or single $249", "ACV_low": 249.0, "ACV_base": 1000.0, "ACV_high": 1750.0, "SAM_orgs": 80.0, "annual_base": 80000.0, "notes": "List 349 centers (mostly Duval). SAM=80 realistic recurring — list over-counts vs near-term serviceable.", "source_file": "leads/elc-vpk-subscription.csv"}, {"segment": "Large AL / IL campus (activities)", "orgs_in_list": 63.0, "named_programmers": 7.0, "existing_customers": 10.0, "decision_speed": "Medium", "primary_SKU": "Mix visits; Mid $749 / Standard $499", "ACV_low": 500.0, "ACV_base": 800.0, "ACV_high": 1200.0, "SAM_orgs": 63.0, "annual_base": 50400.0, "notes": "IL/AL Campus + ALF≥50 + SNF. NOT every 6-bed Skip ALF. Several existing/lapsed campuses.", "source_file": "revops/al_memory.csv"}, {"segment": "PTA / School festival", "orgs_in_list": 46.0, "named_programmers": 87.0, "existing_customers": 2.0, "decision_speed": "Fast", "primary_SKU": "Festival $750–1200 / 1 event/yr", "ACV_low": 750.0, "ACV_base": 1000.0, "ACV_high": 1200.0, "SAM_orgs": 46.0, "annual_base": 46000.0, "notes": "93 officers / 46 schools. Existing: LaVilla PTSA, Ivybrook Valley Ridge PTO.", "source_file": "revops/pta_officers.csv"}, {"segment": "Indie / faith schools (from schools-daycares)", "orgs_in_list": 164.0, "named_programmers": 0.0, "existing_customers": 0.0, "decision_speed": "Fast", "primary_SKU": "Festival / field visit $499–1000", "ACV_low": 499.0, "ACV_base": 749.0, "ACV_high": 1200.0, "SAM_orgs": 60.0, "annual_base": 44940.0, "notes": "332 school orgs in file; heuristic flags 164 indie/faith-ish; SAM capped 60.", "source_file": "leads/schools-daycares.csv"}, {"segment": "Adult Day Care", "orgs_in_list": 13.0, "named_programmers": 13.0, "existing_customers": 1.0, "decision_speed": "Fast", "primary_SKU": "Subscription $175×10 mo or 4×$215", "ACV_low": 860.0, "ACV_base": 1750.0, "ACV_high": 2150.0, "SAM_orgs": 13.0, "annual_base": 22750.0, "notes": "File count 13. Existing: Peaches-Na-Basket.", "source_file": "revops/adult_daycare.csv"}, {"segment": "PPEC (Prescribed Pediatric Extended Care)", "orgs_in_list": 11.0, "named_programmers": 11.0, "existing_customers": 2.0, "decision_speed": "Fast", "primary_SKU": "Subscription $175×10 mo or 4×$215", "ACV_low": 860.0, "ACV_base": 1750.0, "ACV_high": 2150.0, "SAM_orgs": 11.0, "annual_base": 19250.0, "notes": "File count 11 unique. Existing: Advanced Care Partners Jax. Base=$175×10mo.", "source_file": "revops/ppec.csv"}, {"segment": "Preservation / SPAR / Main Street festivals", "orgs_in_list": 22.0, "named_programmers": 37.0, "existing_customers": 1.0, "decision_speed": "Medium", "primary_SKU": "Festival $500–1500 base $749", "ACV_low": 500.0, "ACV_base": 749.0, "ACV_high": 1500.0, "SAM_orgs": 22.0, "annual_base": 16478.0, "notes": "FLAG: worked off separate Excel (Jax_Preservation_SPAR_HubSpot.xlsx). Include in TAM. Existing: Springfield SPAR.", "source_file": "revops/preservation.csv (flag: separate Excel)"}, {"segment": "Corporate HR / employee appreciation", "orgs_in_list": 79.0, "named_programmers": 144.0, "existing_customers": 2.0, "decision_speed": "Medium", "primary_SKU": "Enterprise ~$1200 (list ~$1500) / Mid $749", "ACV_low": 749.0, "ACV_base": 1200.0, "ACV_high": 1500.0, "SAM_orgs": 12.0, "annual_base": 14400.0, "notes": "144 people / 79 cos. Existing: CSX, Liberty Landscape. SAM≈15% near-term penetration. Hospitals/Florida Blue = red-tape gap.", "source_file": "revops/corporate.csv"}, {"segment": "Campus / University (Kelsey-types)", "orgs_in_list": 19.0, "named_programmers": 19.0, "existing_customers": 6.0, "decision_speed": "Fast", "primary_SKU": "Mid B2B $749 / 2hr", "ACV_low": 500.0, "ACV_base": 749.0, "ACV_high": 1200.0, "SAM_orgs": 19.0, "annual_base": 14231.0, "notes": "14 institutions / 19 campus keys / 24 people.", "source_file": "revops/kelsey_types.csv"}, {"segment": "Senior Center — Government (COJ/county)", "orgs_in_list": 20.0, "named_programmers": 18.0, "existing_customers": 0.0, "decision_speed": "Red tape", "primary_SKU": "Seniors visit / program (procurement)", "ACV_low": 500.0, "ACV_base": 700.0, "ACV_high": 900.0, "SAM_orgs": 20.0, "annual_base": 14000.0, "notes": "COJ 16 + Camden/St Marys/Bradford/Putnam. City/county procurement + risk (Jax Parks won then risk-blocked). In Full professional; NOT Primary SAM.", "source_file": "revops/senior_centers.csv"}];
+new Chart(segAnn,{type:'bar',data:{labels:top.map(s=>s.segment.slice(0,28)),datasets:[{data:top.map(s=>s.annual_base||0),backgroundColor:'#5b8cff'}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{ticks:{color:'#93a0b8'},grid:{color:'#1e2a44'}},y:{ticks:{color:'#93a0b8',font:{size:10}},grid:{color:'#1e2a44'}}}}});
+const tiers=[{"market_tier": "Regional_Enterprise", "n_accounts": 259.0, "sum_target_acv": 766000.0, "sum_high_acv": 2007000.0, "n_call_now": 71.0}, {"market_tier": "Corporate_Field", "n_accounts": 39.0, "sum_target_acv": 39000.0, "sum_high_acv": 58500.0, "n_call_now": 4.0}, {"market_tier": "Corporate_HR", "n_accounts": 47.0, "sum_target_acv": 70500.0, "sum_high_acv": 141000.0, "n_call_now": 0.0}, {"market_tier": "Regional_Subscription", "n_accounts": 145.0, "sum_target_acv": 290000.0, "sum_high_acv": 435000.0, "n_call_now": 17.0}, {"market_tier": "Charity_Army", "n_accounts": 929.0, "sum_target_acv": 656930.0, "sum_high_acv": 947000.0, "n_call_now": 59.0}, {"market_tier": "Red_Tape", "n_accounts": 54.0, "sum_target_acv": 93000.0, "sum_high_acv": 154000.0, "n_call_now": 0.0}];
+new Chart(tierChart,{type:'doughnut',data:{labels:tiers.map(t=>t.market_tier),datasets:[{data:tiers.map(t=>t.sum_target_acv||0),backgroundColor:['#5b8cff','#a78bfa','#3dd68c','#ffb020','#ff5d6c','#93a0b8']}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:'#93a0b8',boxWidth:10,font:{size:10}}}}}});
+</script>
+
+<p class="note">Dump-home: Dashboard Bit · Built 2026-09-19 ET · JSON under data/</p>
+</div></body></html>

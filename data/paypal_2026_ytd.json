@@ -1,0 +1,213 @@
+{
+  "source": "PayPal BALANCE_RECONCILIATION_REPORT CSV (Jan 1\u2013Sep 1 2026)",
+  "window": "2026 YTD (Jan 1\u2013Sep 1 2026)",
+  "as_of": "2026-09-01",
+  "outside_gross": 20509.26,
+  "outside_net": 19846.62,
+  "outside_fees": -662.64,
+  "to_vystar": -20095.83,
+  "paying_customers": 49,
+  "owner_gross": 0,
+  "anomalies": [
+    {
+      "note": "Ann-Marie Sheehan Sale gross -$110.00 on 2026-05-11 \u2014 family/owner-adjacent, excluded from outside (not Michael Sheehan; no Michael Sale rows in this window)",
+      "customer": "Ann-Marie Sheehan",
+      "gross": -110.0,
+      "net": -110.0,
+      "created": "2026-05-11 07:17:36 -0700"
+    },
+    {
+      "note": "Google Sale gross -$1.00 kept in outside totals (nets with Refund/Reversal); not counted as paying customer",
+      "customer": "Google",
+      "gross": -1.0
+    }
+  ],
+  "monthly": [
+    {
+      "month": "Jan 2026",
+      "outside_gross": 304.75,
+      "outside_net": 295.15,
+      "fees": -9.6,
+      "payments": 1
+    },
+    {
+      "month": "Feb 2026",
+      "outside_gross": 2014.22,
+      "outside_net": 1951.54,
+      "fees": -62.68,
+      "payments": 5
+    },
+    {
+      "month": "Mar 2026",
+      "outside_gross": 3902.09,
+      "outside_net": 3775.88,
+      "fees": -126.21,
+      "payments": 11
+    },
+    {
+      "month": "Apr 2026",
+      "outside_gross": 5156.21,
+      "outside_net": 4990.91,
+      "fees": -165.3,
+      "payments": 16
+    },
+    {
+      "month": "May 2026",
+      "outside_gross": 4601.86,
+      "outside_net": 4448.83,
+      "fees": -153.03,
+      "payments": 16
+    },
+    {
+      "month": "Jun 2026",
+      "outside_gross": 333.75,
+      "outside_net": 322.76,
+      "fees": -10.99,
+      "payments": 2
+    },
+    {
+      "month": "Jul 2026",
+      "outside_gross": 1295.94,
+      "outside_net": 1253.31,
+      "fees": -42.63,
+      "payments": 5
+    },
+    {
+      "month": "Aug 2026",
+      "outside_gross": 1780.5,
+      "outside_net": 1722.77,
+      "fees": -57.73,
+      "payments": 6
+    },
+    {
+      "month": "Sep 2026",
+      "outside_gross": 1119.94,
+      "outside_net": 1085.47,
+      "fees": -34.47,
+      "payments": 2
+    }
+  ],
+  "top_payers": [
+    {
+      "name": "Kelsey Taylor",
+      "payments": 2,
+      "gross": 2182.25,
+      "net": 2116.02
+    },
+    {
+      "name": "Natasha Simic Urick",
+      "payments": 1,
+      "gross": 1367.5,
+      "net": 1326.12
+    },
+    {
+      "name": "noura Moussawel",
+      "payments": 1,
+      "gross": 987.66,
+      "net": 957.64
+    },
+    {
+      "name": "Payton Coulter",
+      "payments": 1,
+      "gross": 830.39,
+      "net": 805.07
+    },
+    {
+      "name": "Ivybrook PTO VR",
+      "payments": 1,
+      "gross": 828.19,
+      "net": 802.94
+    },
+    {
+      "name": "Haley Hadd",
+      "payments": 2,
+      "gross": 711.25,
+      "net": 689.0
+    },
+    {
+      "name": "Oliver Ingram",
+      "payments": 1,
+      "gross": 660.5,
+      "net": 640.26
+    },
+    {
+      "name": "Niral Patel",
+      "payments": 1,
+      "gross": 659.5,
+      "net": 639.29
+    },
+    {
+      "name": "Nadia Anderson",
+      "payments": 1,
+      "gross": 603.94,
+      "net": 585.39
+    },
+    {
+      "name": "Michael Zaffaroni",
+      "payments": 1,
+      "gross": 591.0,
+      "net": 572.84
+    },
+    {
+      "name": "Ashley Collins",
+      "payments": 1,
+      "gross": 528.94,
+      "net": 512.63
+    },
+    {
+      "name": "Barbara Cline",
+      "payments": 2,
+      "gross": 509.21,
+      "net": 493.0
+    },
+    {
+      "name": "Carson Richardson",
+      "payments": 2,
+      "gross": 492.71,
+      "net": 476.99
+    },
+    {
+      "name": "Keith Heissler",
+      "payments": 1,
+      "gross": 478.94,
+      "net": 464.13
+    },
+    {
+      "name": "Ericka Cooks",
+      "payments": 3,
+      "gross": 477.0,
+      "net": 461.28
+    },
+    {
+      "name": "Rachel Hawkins",
+      "payments": 2,
+      "gross": 474.75,
+      "net": 459.57
+    },
+    {
+      "name": "Rita Mairs",
+      "payments": 1,
+      "gross": 448.91,
+      "net": 435.0
+    },
+    {
+      "name": "Morgan Brett",
+      "payments": 2,
+      "gross": 430.88,
+      "net": 417.02
+    },
+    {
+      "name": "Patrick Young",
+      "payments": 3,
+      "gross": 411.28,
+      "net": 397.51
+    },
+    {
+      "name": "Georgia Hamilton",
+      "payments": 1,
+      "gross": 406.25,
+      "net": 393.61
+    }
+  ],
+  "paying_customers_note": "49 unique positive-gross outside names (case-sensitive as recorded); Samantha Pernas / samantha pernas are separate spellings; Google -$1 excluded from count; Ann-Marie Sheehan -$110 excluded from outside"
+}

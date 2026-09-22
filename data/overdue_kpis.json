@@ -1,0 +1,16 @@
+{
+  "source": "/workspace/Michael_Overdue_Action_Tracker.xlsx",
+  "total_actions": 84,
+  "by_status": {
+    "In progress": 8,
+    "Not started": 76
+  },
+  "by_priority": {
+    "P0": 41,
+    "P1": 28,
+    "P2": 15
+  },
+  "p0_open": 41,
+  "not_started": 76,
+  "in_progress": 8
+}
