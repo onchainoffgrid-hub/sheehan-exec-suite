@@ -21,7 +21,8 @@ cd /workspace/dashboard/exec-suite && python3 -m http.server 8765
 | Money (CFO) | [money-cfo.html](money-cfo.html) | PayPal H2 **outside $15,408.66** · 42 customers · owner $4,254 separated |
 | BDR Pipeline | [bdr-pipeline.html](bdr-pipeline.html) | **REAL** CALL_NOW 138 · Warm 81 · Needs 140 · Later 11 · Red-tape 44 + filterable dialer |
 | RevOps TAM | [revops-tam.html](revops-tam.html) | Primary SAM **$572,873** · tier rollup · segment counts |
-| Social & Reach | [social-reach.html](social-reach.html) | FB ~4.8k · LI ~13k · met ~500k / ~400 emails + weekly localStorage inputs |
+| Social & Reach | [social-reach.html](social-reach.html) |
+| Jax Local Buzz | [jax-local-buzz.html](jax-local-buzz.html) | Ranked better-than-Action-News outlets + 2-week plan | FB ~4.8k · LI ~13k · met ~500k / ~400 emails + weekly localStorage inputs |
 | Investor & Capital | [investor-capital.html](investor-capital.html) | Goals $250k bookings / ~$100k AR by 2026-12-23 |
 | Programming | [programming.html](programming.html) | Visit Us program types · fill vs protect stub heat |
 | Team & Hire | [team-hire.html](team-hire.html) | 4 seats from HIRE_PRIORITIES (enterprise live) |
@@ -65,3 +66,4 @@ See [LAYOUT_CONTRACT.md](LAYOUT_CONTRACT.md) for shared visual tokens and Money 
 - GitHub: https://github.com/onchainoffgrid-hub/sheehan-exec-suite
 - Pages: https://onchainoffgrid-hub.github.io/sheehan-exec-suite/
 - Consumer: https://onchainoffgrid-hub.github.io/sheehan-exec-suite/consumer-inbound.html
+- Jax Buzz: https://onchainoffgrid-hub.github.io/sheehan-exec-suite/jax-local-buzz.html
