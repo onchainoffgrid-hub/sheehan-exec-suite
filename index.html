@@ -71,6 +71,7 @@ h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font
 <div class="nav">
   <a href="index.html" class="active">Operator</a>
   <a href="crm-icp.html">CRM ICP</a>
+  <a href="consumer-inbound.html" style="border-color:#a78bfa88;color:#d4c4ff">Consumer / Violet</a>
   <a href="bookings-dates.html">Bookings</a>
   <a href="money-cfo.html">Money</a>
   <a href="bdr-pipeline.html">BDR</a>
@@ -112,9 +113,27 @@ h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font
   </div>
   <div class="links-row">
     <a href="crm-icp.html">CRM ICP</a>
+    <a href="consumer-inbound.html" style="border-color:#a78bfa88;color:#d4c4ff">Consumer / contact forms</a>
     <a href="bdr-pipeline.html">BDR</a>
     <a href="revops-tam.html">RevOps</a>
     <a href="catalogue-close.html">Catalogue → Close</a>
+  </div>
+</a>
+
+
+<a class="tile sales" href="consumer-inbound.html" style="border-color:#a78bfa99;background:linear-gradient(160deg,#1a1628 0%,#121a2b 60%)">
+  <h3>Consumer / Violet <span class="badge sales" style="color:#d4c4ff;border-color:#a78bfa66;background:#1a1628">B2C LIVE</span></h3>
+  <p>Contact forms · Summer Camp interest · GoDaddy inbound · waivers (GAP) · forms missing sheets.</p>
+  <div class="chips">
+    <span class="chipk">Interest <b id="cons-interest">34</b></span>
+    <span class="chipk">GoDaddy pass <b id="cons-gd">27</b></span>
+    <span class="chipk">Waivers <b style="color:var(--warn)">GAP</b></span>
+    <span class="chipk">No sheets <b id="cons-miss">4</b></span>
+  </div>
+  <div class="links-row">
+    <a href="consumer-inbound.html">Open inbound panel</a>
+    <a href="catalogue-close.html">Catalogue → Close</a>
+    <a href="crm-icp.html">CRM Violet chip</a>
   </div>
 </a>
 
@@ -248,6 +267,15 @@ h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font
       if(note) note.textContent+=' · KPI fetch failed — open via http://127.0.0.1:8765/ (file:// fallback)';
     }
   });
+
+  // Consumer inbound KPIs on Operator tile
+  load('data/consumer_inbound.json').then(function(c){
+    if(!c||!c.kpis) return;
+    set('cons-interest', c.kpis.interest_submissions);
+    set('cons-gd', c.kpis.godaddy_contacts_this_pass);
+    set('cons-miss', c.kpis.forms_missing_sheets);
+  });
+
 })();
 </script>
 </body></html>

@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-19 ET",
+  "as_of": "2026-09-22 ET",
   "bdr_spec_aligned": {
     "CALL_NOW": 138,
     "WARM": 232,
@@ -7,7 +7,7 @@
     "WARM_NEEDS_CONTACT": 140,
     "Later": 11,
     "RED_TAPE_HOLD": 44,
-    "note": "Detail sheets VESTA/GOLF/LUXURY/CORP are subsets \u2014 not summed into dialer KPIs"
+    "note": "Detail sheets VESTA/GOLF/LUXURY/CORP are subsets — not summed into dialer KPIs"
   },
   "fall_priority": 129,
   "paypal_h2_outside_gross": 15408.66,
@@ -19,5 +19,13 @@
   "primary_sam_annual": 572873,
   "bookings_goal": 250000,
   "ar_goal": 100000,
-  "goal_date": "2026-12-23"
+  "goal_date": "2026-12-23",
+  "consumer_inbound": {
+    "interest_submissions": 34,
+    "godaddy_contacts_this_pass": 27,
+    "waiver_status": "GAP",
+    "waiver_proxy_records": 10,
+    "forms_missing_sheets": 4,
+    "panel": "consumer-inbound.html"
+  }
 }

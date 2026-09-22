@@ -3,7 +3,7 @@
 **Path:** `/workspace/dashboard/exec-suite/`  
 **Owner dump-home:** Dashboard Bit  
 **Theme:** Dark ops BI · self-contained HTML+JS+CSS · Chart.js CDN · no Power BI  
-**Built:** 2026-09-19 (America/New_York)
+**Built:** 2026-09-22 (America/New_York) · Consumer inbound panel live
 
 Open `index.html` in a browser (`file://` works — data is embedded) or:
 
@@ -16,6 +16,7 @@ cd /workspace/dashboard/exec-suite && python3 -m http.server 8765
 | Page | File | Data posture |
 |---|---|---|
 | Executive Hub | [index.html](index.html) | KPI strip + links to all domains |
+| Consumer Inbound (Violet/B2C) | [consumer-inbound.html](consumer-inbound.html) | Interest **34** · GoDaddy pass **27** · waivers **GAP** · **4** forms missing sheets |
 | Bookings & Dates | [bookings-dates.html](bookings-dates.html) | Fall priority **129** real rows; $ booked **PLACEHOLDER** |
 | Money (CFO) | [money-cfo.html](money-cfo.html) | PayPal H2 **outside $15,408.66** · 42 customers · owner $4,254 separated |
 | BDR Pipeline | [bdr-pipeline.html](bdr-pipeline.html) | **REAL** CALL_NOW 138 · Warm 81 · Needs 140 · Later 11 · Red-tape 44 + filterable dialer |
@@ -39,6 +40,7 @@ JSON exports under [`data/`](data/) for offline refresh:
 - `paypal_*.json` (from Sheehan-Homestead-PayPal-H2-2025.xlsx)
 - `overdue_actions.json`, `overdue_kpis.json`
 - `revops_kpis.json`, `suite_kpis.json`
+- `consumer_inbound.json` (Summer Scholars · GoDaddy · waivers GAP · forms missing sheets)
 
 ## Specs aligned
 
@@ -57,3 +59,9 @@ JSON exports under [`data/`](data/) for offline refresh:
 ## Layout
 
 See [LAYOUT_CONTRACT.md](LAYOUT_CONTRACT.md) for shared visual tokens and Money panel order.
+
+## Public
+
+- GitHub: https://github.com/onchainoffgrid-hub/sheehan-exec-suite
+- Pages: https://onchainoffgrid-hub.github.io/sheehan-exec-suite/
+- Consumer: https://onchainoffgrid-hub.github.io/sheehan-exec-suite/consumer-inbound.html

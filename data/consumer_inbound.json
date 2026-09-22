@@ -1,0 +1,176 @@
+{
+  "as_of": "2026-09-22 ET",
+  "product": "Consumer inbound · Violet / B2C contact forms + interest + waivers",
+  "note": "Counts taken only from deputy-outreach/inbound-inventory and bdr/lists/INBOUND_FIRE*. No invented submission totals.",
+  "sources": [
+    {
+      "id": "summer_scholars",
+      "path": "/workspace/deputy-outreach/inbound-inventory/SUMMER_SCHOLARS.md",
+      "role": "Summer Camp Interest Google Form submissions"
+    },
+    {
+      "id": "waivers",
+      "path": "/workspace/deputy-outreach/inbound-inventory/WAIVERS.md",
+      "role": "Waiver GAP + email-proxy rows (not form export)"
+    },
+    {
+      "id": "godaddy_csv",
+      "path": "/workspace/deputy-outreach/inbound-inventory/GODADDY_CONTACTS.csv",
+      "role": "Paginated GoDaddy contact-form threads inventory"
+    },
+    {
+      "id": "inbound_summary",
+      "path": "/workspace/deputy-outreach/inbound-inventory/SUMMARY.md",
+      "role": "Inventory rollup counts"
+    },
+    {
+      "id": "contact_forms_raw",
+      "path": "/workspace/deputy-outreach/inbound-inventory/raw/contact_forms.json",
+      "role": "Raw Gmail contact-form search page (estimate window)"
+    },
+    {
+      "id": "inbound_fire",
+      "path": "/workspace/bdr/lists/INBOUND_FIRE_README.md",
+      "role": "Parsed inbound pass counts + forms-with-no-sheets"
+    },
+    {
+      "id": "inbound_fire_xlsx",
+      "path": "/workspace/bdr/lists/INBOUND_FIRE.xlsx",
+      "role": "GoDaddy_Inquiries / Critter_Club_Signups / Action_Queue sheets"
+    }
+  ],
+  "kpis": {
+    "interest_submissions": 34,
+    "interest_submissions_note": "Summer Camp Interest (Responses) Google Form — SUMMER_SCHOLARS.md",
+    "godaddy_contacts_this_pass": 27,
+    "godaddy_contacts_this_pass_note": "INBOUND_FIRE body-parsed this pass (of 97 newest threads pulled; ~201 estimate matching query)",
+    "godaddy_inventory_rows": 90,
+    "godaddy_inventory_note": "GODADDY_CONTACTS.csv / SUMMARY.md — all threads from paginated read-only Gmail search",
+    "waiver_status": "GAP",
+    "waiver_proxy_records": 10,
+    "waiver_note": "Google Form responses need login/export; 10 email-proxy rows only — not form export",
+    "forms_missing_sheets": 4,
+    "forms_missing_sheets_note": "Forms exist in Drive; no (Responses) spreadsheets discovered"
+  },
+  "buckets": {
+    "interest_forms": [
+      {
+        "name": "Summer Camp Interest (Responses)",
+        "count": 34,
+        "as_of": "2026-09-22 ET",
+        "latest_row_date": "5/18/2026",
+        "source_path": "/workspace/deputy-outreach/inbound-inventory/SUMMER_SCHOLARS.md",
+        "status": "exported",
+        "next_action": "Reply / convert deposits · keep sheet live for new summer interest"
+      },
+      {
+        "name": "Critter Club Signups (Monthly/Quarterly)",
+        "count": 16,
+        "as_of": "2026-09-22 ET",
+        "source_path": "/workspace/bdr/lists/INBOUND_FIRE_README.md",
+        "drive_id": "1KTPJkuzAW1yPm-BaSP5qJo5wBbWvXGKX04ZiMDAourA",
+        "status": "sheet_found",
+        "next_action": "Work Critter Club ticklers in INBOUND_FIRE Action_Queue"
+      }
+    ],
+    "godaddy_contacts": [
+      {
+        "name": "GoDaddy forms body-parsed this pass",
+        "count": 27,
+        "as_of": "2026-09-22 ET",
+        "source_path": "/workspace/bdr/lists/INBOUND_FIRE_README.md",
+        "needs_reply": 23,
+        "replied": 1,
+        "next_action": "Clear GODADDY_NEEDS_REPLY in Action_Queue / phone HTML"
+      },
+      {
+        "name": "GoDaddy contacts inventory (CSV)",
+        "count": 90,
+        "as_of": "2026-09-22 ET",
+        "source_path": "/workspace/deputy-outreach/inbound-inventory/GODADDY_CONTACTS.csv",
+        "submitted_from_breakdown": {
+          "Booking help": 40,
+          "Contact us 1": 38,
+          "Homepage": 11,
+          "other": 1
+        },
+        "next_action": "Use CSV as master list; many Booking-help messages empty — open GoDaddy Conversations"
+      },
+      {
+        "name": "GoDaddy Gmail search window (newest page)",
+        "count": 97,
+        "estimate_total_matching": 201,
+        "as_of": "2026-09-22 ET",
+        "source_path": "/workspace/bdr/lists/INBOUND_FIRE_README.md",
+        "gap": "Remaining ~70 thread IDs listed for deeper body parsing later",
+        "next_action": "Parse remaining thread_ids in _inbound_fire_work/"
+      }
+    ],
+    "waivers": [
+      {
+        "name": "Waiver Google Form responses",
+        "count": null,
+        "status": "GAP",
+        "as_of": "2026-09-22 ET",
+        "source_path": "/workspace/deputy-outreach/inbound-inventory/WAIVERS.md",
+        "gap": "Requires login to form owner Google Forms UI or response-sheet/CSV export. File is not a form export.",
+        "next_action": "Export waiver (Responses) sheet · replace proxy table"
+      },
+      {
+        "name": "Waiver email-proxy records",
+        "count": 10,
+        "status": "proxy_only",
+        "as_of": "2026-09-22 ET",
+        "source_path": "/workspace/deputy-outreach/inbound-inventory/WAIVERS.md",
+        "note": "Every row labeled email proxy — not form export. Does not prove a submitted Google Form response.",
+        "next_action": "Match proxies to real form submissions after export"
+      }
+    ],
+    "forms_missing_sheets": [
+      {
+        "name": "Simplified Critter Club Form",
+        "count": null,
+        "status": "form_only_no_responses_sheet",
+        "as_of": "2026-09-22 ET",
+        "source_path": "/workspace/bdr/lists/INBOUND_FIRE_README.md",
+        "next_action": "Create/link (Responses) spreadsheet or confirm destination"
+      },
+      {
+        "name": "Critter Club Opt-in Senior Care",
+        "count": null,
+        "status": "form_only_no_responses_sheet",
+        "as_of": "2026-09-22 ET",
+        "source_path": "/workspace/bdr/lists/INBOUND_FIRE_README.md",
+        "next_action": "Create/link (Responses) spreadsheet or confirm destination"
+      },
+      {
+        "name": "Critter Club Opt-in Gardens",
+        "count": null,
+        "status": "form_only_no_responses_sheet",
+        "as_of": "2026-09-22 ET",
+        "source_path": "/workspace/bdr/lists/INBOUND_FIRE_README.md",
+        "next_action": "Create/link (Responses) spreadsheet or confirm destination"
+      },
+      {
+        "name": "Free Zoo Entry",
+        "count": null,
+        "status": "form_only_no_responses_sheet",
+        "as_of": "2026-09-22 ET",
+        "source_path": "/workspace/bdr/lists/INBOUND_FIRE_README.md",
+        "next_action": "Create/link (Responses) spreadsheet or confirm destination"
+      }
+    ],
+    "close_menu_link": {
+      "label": "Catalogue → Close (consumer menu)",
+      "path": "catalogue-close.html",
+      "note": "Consumer menu already exists — link only; do not duplicate pricing here.",
+      "source_lock": "Consumer menu 2026-09-16"
+    }
+  },
+  "gaps": [
+    "Waiver Google Form responses not exported (GAP) — 10 email proxies only",
+    "4 Google Forms have no (Responses) sheets in Drive",
+    "~70 GoDaddy threads not body-parsed beyond newest 97-window / 27 parsed",
+    "Other non-GoDaddy inquiries (25) live in OTHER_INBOUND.md — not rolled into KPI strip"
+  ]
+}

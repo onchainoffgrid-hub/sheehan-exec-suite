@@ -17,8 +17,9 @@
     {
       "id": "violet_b2c",
       "label": "Violet / B2C",
-      "live": false,
-      "blurb": "Same pattern later"
+      "live": true,
+      "blurb": "Consumer inbound live → consumer-inbound.html (interest 34 · GoDaddy pass 27 · waivers GAP · 4 forms missing sheets)",
+      "href": "consumer-inbound.html"
     }
   ],
   "kpis": {

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Consumer Inbound · Violet / B2C · Sheehan Homestead</title>
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--bad:#ff5d6c;--violet:#a78bfa}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1180px;margin:0 auto;padding:18px}
+.apps{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 12px;padding:10px 12px;border:1px solid var(--line);border-radius:14px;background:#0f1728}
+.apps .lbl{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-right:4px}
+.apps a{background:var(--card);border:1px solid #3dd68c55;color:var(--text);padding:6px 10px;border-radius:999px;font-size:.78rem;text-decoration:none;font-weight:600}
+.apps a.sec{border-color:var(--line);color:#c5d0e6;font-weight:500;font-size:.72rem}
+.mutual{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 14px}
+.mutual a{padding:7px 14px;border-radius:999px;font-size:.8rem;font-weight:600;border:1px solid var(--line);background:var(--card);color:var(--muted);text-decoration:none}
+.mutual a.on{border-color:var(--violet);background:#1a1628;color:#fff}
+.mutual a:hover{border-color:var(--accent);color:#fff;text-decoration:none}
+header{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:10px;flex-wrap:wrap}
+h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font-size:.88rem}
+.nav{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0 16px}
+.nav a{background:var(--card);border:1px solid var(--line);padding:6px 11px;border-radius:999px;font-size:.78rem;color:var(--text);text-decoration:none}
+.nav a.active{border-color:var(--violet);background:#1a1628;color:#fff}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:11px;margin-bottom:16px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px;position:relative;overflow:hidden}
+.kpi::after{content:"";position:absolute;inset:auto 0 0 0;height:2px;background:linear-gradient(90deg,var(--violet),var(--accent));opacity:.55}
+.kpi .l{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.kpi .v{font-size:1.4rem;font-weight:700;margin-top:4px}
+.kpi .s{font-size:.72rem;color:var(--muted);margin-top:3px}
+.kpi.warn .v{color:var(--warn)}.kpi.bad .v{color:var(--bad)}.kpi.violet .v{color:var(--violet)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:14px}
+.card h2{font-size:.98rem;margin:0 0 10px;display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.card h2 .tag{font-size:.68rem;font-weight:600;padding:3px 9px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+.card h2 .tag.gap{color:var(--warn);border-color:#ffb02066;background:#2a2416}
+.card h2 .tag.ok{color:var(--good);border-color:#3dd68c55;background:#13281d}
+table{width:100%;border-collapse:collapse;font-size:.82rem}
+th,td{padding:8px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{color:var(--muted);font-weight:600;font-size:.7rem;text-transform:uppercase;letter-spacing:.04em}
+.path{font-size:.72rem;color:var(--muted);word-break:break-all}
+.badge{display:inline-block;padding:2px 8px;border-radius:999px;font-size:.7rem;border:1px solid var(--line)}
+.badge.gap{background:#2a2416;color:var(--warn);border-color:#ffb02066}
+.badge.proxy{background:#1a2030;color:#9ec1ff}
+.badge.ok{background:#13281d;color:var(--good);border-color:#3dd68c55}
+.badge.miss{background:#2a1619;color:var(--bad);border-color:#ff5d6c66}
+.note{color:var(--muted);font-size:.78rem;margin-top:8px}
+.gaps{margin:0;padding-left:18px;color:var(--muted);font-size:.82rem}
+.gaps li{margin-bottom:4px}
+.cta{display:inline-flex;align-items:center;gap:8px;margin-top:8px;padding:10px 16px;border-radius:999px;background:#1a1628;border:1px solid #a78bfa88;color:#fff;font-weight:600;font-size:.85rem;text-decoration:none}
+.cta:hover{border-color:var(--violet);text-decoration:none}
+</style></head>
+<body><div class="wrap">
+
+<div class="apps">
+  <span class="lbl">Apps</span>
+  <a href="https://onchainoffgrid-hub.github.io/critters-on-call/" target="_blank" rel="noopener">Critters <span style="color:#3dd68c;font-size:.65rem">LIVE</span></a>
+  <a href="https://onchainoffgrid-hub.github.io/critters-play/" target="_blank" rel="noopener" style="border-color:#a78bfa66">Play / Coins <span style="color:#3dd68c;font-size:.65rem">LIVE</span></a>
+  <a href="index.html" style="border-color:#5b8cff66">Operator</a>
+  <a href="link-tree.html" class="sec">All links</a>
+</div>
+
+<div class="mutual">
+  <a href="index.html">← Operator</a>
+  <a href="crm-icp.html">CRM ICP</a>
+  <a class="on" href="consumer-inbound.html">Consumer / Violet</a>
+  <a href="catalogue-close.html">Catalogue → Close</a>
+</div>
+
+<header>
+  <div>
+    <h1>Consumer Inbound · Violet / B2C</h1>
+    <div class="sub">Contact forms · summer interest · waivers · forms missing sheets · Franchise #0</div>
+  </div>
+  <div class="sub" id="asof">as of —</div>
+</header>
+
+<div class="nav">
+  <a href="index.html">Operator</a>
+  <a href="crm-icp.html">CRM ICP</a>
+  <a href="consumer-inbound.html" class="active">Consumer</a>
+  <a href="catalogue-close.html">Catalogue</a>
+  <a href="bdr-pipeline.html">BDR</a>
+  <a href="bookings-dates.html">Bookings</a>
+  <a href="link-tree.html">Links</a>
+</div>
+
+<div class="kpis" id="kpis">
+  <div class="kpi violet"><div class="l">Interest submissions</div><div class="v" id="k-interest">—</div><div class="s" id="k-interest-s">Summer Camp Interest</div></div>
+  <div class="kpi"><div class="l">GoDaddy this pass</div><div class="v" id="k-gd">—</div><div class="s" id="k-gd-s">body-parsed</div></div>
+  <div class="kpi warn"><div class="l">Waiver status</div><div class="v" id="k-waiver">—</div><div class="s" id="k-waiver-s">form export</div></div>
+  <div class="kpi bad"><div class="l">Forms missing sheets</div><div class="v" id="k-miss">—</div><div class="s" id="k-miss-s">Drive forms only</div></div>
+</div>
+
+<div class="card" id="card-interest">
+  <h2>Interest forms <span class="tag ok" id="tag-interest">—</span></h2>
+  <table>
+    <thead><tr><th>Name</th><th>Count / as of</th><th>Source</th><th>Next action</th></tr></thead>
+    <tbody id="tb-interest"></tbody>
+  </table>
+</div>
+
+<div class="card" id="card-godaddy">
+  <h2>GoDaddy contacts <span class="tag" id="tag-gd">inventory</span></h2>
+  <table>
+    <thead><tr><th>Name</th><th>Count / as of</th><th>Source</th><th>Next action</th></tr></thead>
+    <tbody id="tb-godaddy"></tbody>
+  </table>
+</div>
+
+<div class="card" id="card-waivers">
+  <h2>Waivers <span class="tag gap">GAP</span></h2>
+  <table>
+    <thead><tr><th>Name</th><th>Count / status</th><th>Source</th><th>Next action</th></tr></thead>
+    <tbody id="tb-waivers"></tbody>
+  </table>
+</div>
+
+<div class="card" id="card-missing">
+  <h2>Forms missing sheets <span class="tag gap" id="tag-miss">—</span></h2>
+  <table>
+    <thead><tr><th>Name</th><th>Status</th><th>Source</th><th>Next action</th></tr></thead>
+    <tbody id="tb-missing"></tbody>
+  </table>
+</div>
+
+<div class="card">
+  <h2>Close menu (do not duplicate pricing)</h2>
+  <p class="note" id="close-note">Catalogue → Close holds the consumer menu.</p>
+  <a class="cta" id="close-link" href="catalogue-close.html">Open Catalogue → Close →</a>
+</div>
+
+<div class="card">
+  <h2>Gaps (marked clearly)</h2>
+  <ul class="gaps" id="gaps"></ul>
+  <p class="note" id="src-note">Data: data/consumer_inbound.json · No fabricated submission counts.</p>
+</div>
+
+</div>
+<script>
+(function(){
+  function esc(s){ return String(s??'').replace(/[&<>"']/g,c=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c])); }
+  function countCell(row){
+    if(row.count == null){
+      var st = row.status || 'GAP';
+      var cls = /gap|proxy|miss|form_only/i.test(st) ? (/proxy/i.test(st)?'proxy':(/miss|form_only/i.test(st)?'miss':'gap')) : 'ok';
+      return '<span class="badge '+cls+'">'+esc(st)+'</span>'+(row.as_of?' <span class="path">'+esc(row.as_of)+'</span>':'');
+    }
+    var extra = '';
+    if(row.needs_reply != null) extra = ' · needs reply '+row.needs_reply;
+    if(row.estimate_total_matching != null) extra = ' · ~'+row.estimate_total_matching+' est. total';
+    return '<b>'+esc(row.count)+'</b>'+esc(extra)+'<div class="path">'+esc(row.as_of||'')+'</div>';
+  }
+  function rows(list, opts){
+    opts = opts||{};
+    return (list||[]).map(function(r){
+      var statusBadge = '';
+      if(opts.showStatus && r.status){
+        var cls = /gap/i.test(r.status)?'gap':(/proxy/i.test(r.status)?'proxy':(/miss|form_only/i.test(r.status)?'miss':'ok'));
+        statusBadge = '<div><span class="badge '+cls+'">'+esc(r.status)+'</span></div>';
+      }
+      var note = r.gap || r.note || '';
+      return '<tr>'+
+        '<td><b>'+esc(r.name)+'</b>'+statusBadge+(note?'<div class="path">'+esc(note)+'</div>':'')+'</td>'+
+        '<td>'+countCell(r)+'</td>'+
+        '<td class="path">'+esc(r.source_path||'')+'</td>'+
+        '<td>'+esc(r.next_action||'')+'</td>'+
+      '</tr>';
+    }).join('');
+  }
+  async function boot(){
+    var res = await fetch('data/consumer_inbound.json',{cache:'no-store'});
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    var d = await res.json();
+    var k = d.kpis||{};
+    document.getElementById('asof').textContent = 'as of '+ (d.as_of||'—');
+    document.getElementById('k-interest').textContent = k.interest_submissions != null ? k.interest_submissions : '—';
+    document.getElementById('k-interest-s').textContent = k.interest_submissions_note || 'Summer Camp Interest';
+    document.getElementById('k-gd').textContent = k.godaddy_contacts_this_pass != null ? k.godaddy_contacts_this_pass : '—';
+    document.getElementById('k-gd-s').textContent = (k.godaddy_inventory_rows != null ? (k.godaddy_inventory_rows+' in CSV · ') : '') + (k.godaddy_contacts_this_pass_note||'body-parsed');
+    document.getElementById('k-waiver').textContent = k.waiver_status || 'GAP';
+    document.getElementById('k-waiver-s').textContent = (k.waiver_proxy_records != null ? (k.waiver_proxy_records+' email proxies · ') : '') + (k.waiver_note||'');
+    document.getElementById('k-miss').textContent = k.forms_missing_sheets != null ? k.forms_missing_sheets : '—';
+    document.getElementById('k-miss-s').textContent = k.forms_missing_sheets_note || '';
+    var b = d.buckets||{};
+    document.getElementById('tag-interest').textContent = ((b.interest_forms||[]).length)+' forms';
+    document.getElementById('tb-interest').innerHTML = rows(b.interest_forms);
+    document.getElementById('tb-godaddy').innerHTML = rows(b.godaddy_contacts);
+    document.getElementById('tb-waivers').innerHTML = rows(b.waivers,{showStatus:true});
+    document.getElementById('tag-miss').textContent = (k.forms_missing_sheets||0)+' forms';
+    document.getElementById('tb-missing').innerHTML = rows(b.forms_missing_sheets,{showStatus:true});
+    var cm = b.close_menu_link||{};
+    document.getElementById('close-note').textContent = cm.note || '';
+    var a = document.getElementById('close-link');
+    a.href = cm.path || 'catalogue-close.html';
+    a.textContent = (cm.label||'Catalogue → Close') + ' →';
+    document.getElementById('gaps').innerHTML = (d.gaps||[]).map(function(g){ return '<li>'+esc(g)+'</li>'; }).join('');
+    document.getElementById('src-note').textContent = 'Data: data/consumer_inbound.json · '+(d.note||'No fabricated counts.')+' · Built '+(d.as_of||'');
+  }
+  boot().catch(function(e){
+    document.getElementById('src-note').textContent = 'Load failed: '+e+' — serve via http (not file://) or check data/consumer_inbound.json';
+  });
+})();
+</script>
+</body></html>
