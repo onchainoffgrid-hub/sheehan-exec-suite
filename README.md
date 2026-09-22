@@ -3,7 +3,7 @@
 **Path:** `/workspace/dashboard/exec-suite/`  
 **Owner dump-home:** Dashboard Bit  
 **Theme:** Dark ops BI · self-contained HTML+JS+CSS · Chart.js CDN · no Power BI  
-**Built:** 2026-09-22 (America/New_York) · Consumer inbound panel live
+**Built:** 2026-09-22 (America/New_York) · BDR TAM all-segment dialer live
 
 Open `index.html` in a browser (`file://` works — data is embedded) or:
 
@@ -19,7 +19,8 @@ cd /workspace/dashboard/exec-suite && python3 -m http.server 8765
 | Consumer Inbound (Violet/B2C) | [consumer-inbound.html](consumer-inbound.html) | Interest **34** · GoDaddy pass **27** · waivers **GAP** · **4** forms missing sheets |
 | Bookings & Dates | [bookings-dates.html](bookings-dates.html) | Fall priority **129** real rows; $ booked **PLACEHOLDER** |
 | Money (CFO) | [money-cfo.html](money-cfo.html) | PayPal H2 **outside $15,408.66** · 42 customers · owner $4,254 separated |
-| BDR Pipeline | [bdr-pipeline.html](bdr-pipeline.html) | **REAL** CALL_NOW 138 · Warm 81 · Needs 140 · Later 11 · Red-tape 44 + filterable dialer |
+| BDR TAM Dialer | [bdr-tam.html](bdr-tam.html) | **ALL segments** · Tier1-first · email ranked · unified Jax TAM contacts (`data/bdr_tam_dialer.json`) |
+| BDR Enterprise v1 | [bdr-pipeline.html](bdr-pipeline.html) | **REAL** CALL_NOW 138 · Warm 81 · Needs 140 · Later 11 · Red-tape 44 + filterable dialer |
 | RevOps TAM | [revops-tam.html](revops-tam.html) | Primary SAM **$572,873** · tier rollup · segment counts |
 | Social & Reach | [social-reach.html](social-reach.html) |
 | Jax Local Buzz | [jax-local-buzz.html](jax-local-buzz.html) | BDR table **24** outlets · sortable email/outlet · preloaded pitches · `data/jax_local_buzz.json` |
@@ -36,6 +37,7 @@ cd /workspace/dashboard/exec-suite && python3 -m http.server 8765
 JSON exports under [`data/`](data/) for offline refresh:
 
 - `enterprise_call_now.json`, `enterprise_warm.json`, `enterprise_red_tape.json`, `enterprise_dialer.json`, `enterprise_kpis.json`
+- `bdr_tam_dialer.json` (unified all-segment dialer — Tier1 + email sort)
 - `bdr_primary_dialer.json` (CALL_NOW + WARM + RED_TAPE for the BDR page)
 - `fall_priority.json`, `fall_kpis.json`
 - `paypal_*.json` (from Sheehan-Homestead-PayPal-H2-2025.xlsx)
@@ -66,4 +68,5 @@ See [LAYOUT_CONTRACT.md](LAYOUT_CONTRACT.md) for shared visual tokens and Money 
 - GitHub: https://github.com/onchainoffgrid-hub/sheehan-exec-suite
 - Pages: https://onchainoffgrid-hub.github.io/sheehan-exec-suite/
 - Consumer: https://onchainoffgrid-hub.github.io/sheehan-exec-suite/consumer-inbound.html
+- BDR TAM: https://onchainoffgrid-hub.github.io/sheehan-exec-suite/bdr-tam.html
 - Jax Buzz: https://onchainoffgrid-hub.github.io/sheehan-exec-suite/jax-local-buzz.html

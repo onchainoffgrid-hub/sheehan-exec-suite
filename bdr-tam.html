@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BDR TAM Dialer · All Segments · Sheehan Homestead</title>
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--bad:#ff5d6c;--violet:#a78bfa}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1400px;margin:0 auto;padding:18px}
+.apps{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 12px;padding:10px 12px;border:1px solid var(--line);border-radius:14px;background:#0f1728}
+.apps .lbl{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-right:4px}
+.apps a{background:var(--card);border:1px solid #3dd68c55;color:var(--text);padding:6px 10px;border-radius:999px;font-size:.78rem;text-decoration:none;font-weight:600}
+.apps a.sec{border-color:var(--line);color:#c5d0e6;font-weight:500;font-size:.72rem}
+.faces{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 14px}
+.faces a{padding:7px 14px;border-radius:999px;font-size:.8rem;font-weight:600;border:1px solid var(--line);background:var(--card);color:var(--muted);text-decoration:none}
+.faces a.on{border-color:var(--good);background:#13281d;color:#fff}
+header{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:10px;flex-wrap:wrap}
+h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font-size:.88rem}
+.nav{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0 16px}
+.nav a{background:var(--card);border:1px solid var(--line);padding:6px 11px;border-radius:999px;font-size:.78rem;color:var(--text);text-decoration:none}
+.nav a.active{border-color:var(--accent);background:#152238;color:#fff}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-bottom:14px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;position:relative;overflow:hidden}
+.kpi::after{content:"";position:absolute;inset:auto 0 0 0;height:2px;background:linear-gradient(90deg,var(--accent),var(--good));opacity:.55}
+.kpi .l{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.kpi .v{font-size:1.2rem;font-weight:700;margin-top:3px}
+.kpi .s{font-size:.68rem;color:var(--muted);margin-top:2px}
+.kpi.tier1::after{background:linear-gradient(90deg,var(--good),var(--warn))}
+.kpi.mail::after{background:linear-gradient(90deg,var(--violet),var(--accent))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:14px}
+.card h2{font-size:.95rem;margin:0 0 10px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px;max-height:160px;overflow:auto}
+.chips button{appearance:none;border:1px solid var(--line);background:var(--panel);color:var(--muted);padding:7px 11px;border-radius:999px;font-size:.72rem;font-weight:600;cursor:pointer;min-height:36px}
+.chips button.on{border-color:var(--accent);background:#152238;color:#fff}
+.chips button .n{opacity:.75;font-weight:500;margin-left:4px}
+.chips button.t1 on,.chips button.has-t1{border-color:#3dd68c55}
+.toolbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}
+.toolbar input,.toolbar select{background:var(--panel);border:1px solid var(--line);color:var(--text);border-radius:8px;padding:7px 10px;font-size:.8rem}
+.toolbar input{min-width:200px;flex:1}
+.note{color:var(--muted);font-size:.76rem}
+.table-wrap{overflow:auto;max-height:68vh;border:1px solid var(--line);border-radius:10px}
+table{width:100%;border-collapse:collapse;font-size:.76rem;min-width:1100px}
+th,td{padding:8px 7px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{color:var(--muted);font-weight:600;position:sticky;top:0;background:#152033;z-index:2;cursor:pointer;user-select:none;white-space:nowrap}
+th:hover{color:var(--text)}th.active{color:var(--accent)}
+.badge{display:inline-block;padding:2px 7px;border-radius:999px;font-size:.65rem;border:1px solid var(--line)}
+.badge.t1{background:#13281d;color:var(--good);border-color:#3dd68c66}
+.badge.seg{background:#152238;color:#9ec1ff;border-color:#5b8cff55}
+.badge.gap{background:#2a2416;color:var(--warn);border-color:#ffb02055}
+.tap{font-weight:600}
+.muted{color:var(--muted)}
+.acct{font-weight:650}
+.next{font-size:.72rem;color:var(--muted)}
+.src{font-size:.68rem;color:var(--muted);max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+</style></head>
+<body><div class="wrap">
+
+<div class="apps">
+  <span class="lbl">Apps</span>
+  <a href="https://onchainoffgrid-hub.github.io/critters-on-call/" target="_blank" rel="noopener">Critters <span style="color:#3dd68c;font-size:.65rem">LIVE</span></a>
+  <a href="index.html">Operator</a>
+  <a href="bdr-pipeline.html" class="sec">BDR Enterprise v1</a>
+  <a href="link-tree.html" class="sec">All links</a>
+</div>
+
+<div class="faces">
+  <a href="investor-home.html">Investor</a>
+  <a class="on" href="index.html">Operator / Franchise #0</a>
+</div>
+
+<header>
+  <div>
+    <h1>BDR TAM Dialer · All Segments</h1>
+    <div class="sub">Jax metro · Tier 1 first · email contacts ranked high · real phones/emails only · <span id="asof">—</span></div>
+  </div>
+  <div class="sub">North star: <b>bookings</b> · sibling: <a href="bdr-pipeline.html">Enterprise v1 bands</a></div>
+</header>
+
+<div class="nav">
+  <a href="index.html">Operator</a>
+  <a href="crm-icp.html">CRM ICP</a>
+  <a href="consumer-inbound.html">Consumer / Violet</a>
+  <a href="org-whitespace.html">Org white space</a>
+  <a href="bdr-tam.html" class="active">BDR TAM</a>
+  <a href="bdr-pipeline.html">BDR Enterprise</a>
+  <a href="revops-tam.html">RevOps</a>
+  <a href="bookings-dates.html">Bookings</a>
+  <a href="actions-overdue.html">Actions</a>
+  <a href="jax-local-buzz.html">Jax Buzz</a>
+  <a href="link-tree.html">Links</a>
+</div>
+
+<div class="kpis">
+  <div class="kpi"><div class="l">Segments</div><div class="v" id="k-seg">—</div><div class="s" id="k-seg-s">with contacts</div></div>
+  <div class="kpi"><div class="l">Accounts</div><div class="v" id="k-acct">—</div><div class="s">unique orgs</div></div>
+  <div class="kpi"><div class="l">Contacts</div><div class="v" id="k-ct">—</div><div class="s">dialer rows</div></div>
+  <div class="kpi mail"><div class="l">With email</div><div class="v" id="k-em">—</div><div class="s">mailto ready</div></div>
+  <div class="kpi"><div class="l">With phone</div><div class="v" id="k-ph">—</div><div class="s">tel ready</div></div>
+  <div class="kpi tier1"><div class="l">Tier 1</div><div class="v" id="k-t1">—</div><div class="s" id="k-t1-s">Call now / Elite / S</div></div>
+</div>
+
+<div class="card">
+  <h2>Segments — tap to filter</h2>
+  <div class="chips" id="seg-chips"></div>
+  <div class="toolbar">
+    <input id="q" type="search" placeholder="Search account / contact / email / phone / city…" autocomplete="off"/>
+    <select id="f-tier"><option value="">Tier: all</option><option value="t1">Tier 1 only</option><option value="not">Not Tier 1</option></select>
+    <select id="f-mail"><option value="">Email: all</option><option value="yes">Has email</option><option value="no">No email</option></select>
+    <select id="f-phone"><option value="">Phone: all</option><option value="yes">Has phone</option><option value="no">No phone</option></select>
+    <span class="note" id="view-note">Default sort: Tier 1 → email → phone → name (within sector)</span>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr>
+        <th data-k="segment">Segment</th>
+        <th data-k="account">Account</th>
+        <th data-k="contact">Contact</th>
+        <th data-k="title">Title</th>
+        <th data-k="phone">Phone</th>
+        <th data-k="email">Email</th>
+        <th data-k="tier">Tier</th>
+        <th data-k="penetration">Status</th>
+        <th data-k="next_action">Next action</th>
+        <th data-k="source">Source</th>
+      </tr></thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+  <p class="note" id="src-note" style="margin-top:10px">Loading data/bdr_tam_dialer.json…</p>
+</div>
+
+</div>
+<script>
+(function(){
+  var ALL=[], SEGS=[], SEG_ORDER=[], F={seg:'', tier:'', mail:'', phone:'', q:''};
+  var KPIS={};
+
+  function esc(s){ return String(s??'').replace(/[&<>"']/g,c=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c])); }
+  function telHref(p){
+    var d=String(p||'').replace(/\D/g,'');
+    if(d.length===11 && d[0]==='1') d=d.slice(1);
+    return d ? 'tel:+1'+d : '';
+  }
+  function mailtoHref(email){
+    if(!email) return '';
+    var sub=encodeURIComponent('Critters on Call / Sheehan Homestead — animal programs');
+    return 'mailto:'+encodeURIComponent(email).replace(/%40/g,'@')+'?subject='+sub;
+  }
+  function segIndex(s){
+    var i=SEG_ORDER.indexOf(s);
+    return i<0 ? 999 : i;
+  }
+  function defaultSort(a,b){
+    var sa=segIndex(a.segment), sb=segIndex(b.segment);
+    if(sa!==sb) return sa-sb;
+    if(!!a.is_tier1 !== !!b.is_tier1) return a.is_tier1 ? -1 : 1;
+    if(!!a.has_email !== !!b.has_email) return a.has_email ? -1 : 1;
+    if(!!a.has_phone !== !!b.has_phone) return a.has_phone ? -1 : 1;
+    var na=(a.account||'').toLowerCase(), nb=(b.account||'').toLowerCase();
+    if(na!==nb) return na<nb?-1:1;
+    return (a.contact||'').toLowerCase()<(b.contact||'').toLowerCase()?-1:1;
+  }
+  function matches(r){
+    if(F.seg && r.segment!==F.seg) return false;
+    if(F.tier==='t1' && !r.is_tier1) return false;
+    if(F.tier==='not' && r.is_tier1) return false;
+    if(F.mail==='yes' && !r.has_email) return false;
+    if(F.mail==='no' && r.has_email) return false;
+    if(F.phone==='yes' && !r.has_phone) return false;
+    if(F.phone==='no' && r.has_phone) return false;
+    if(F.q){
+      var hay=[r.segment,r.account,r.contact,r.title,r.email,r.phone,r.city,r.county,r.tier,r.penetration,r.next_action,r.source].join(' ').toLowerCase();
+      if(hay.indexOf(F.q)<0) return false;
+    }
+    return true;
+  }
+  function renderChips(){
+    var html='<button type="button" data-seg="" class="'+(F.seg===''?'on':'')+'">All <span class="n">'+ALL.length+'</span></button>';
+    SEGS.forEach(function(s){
+      var cls=(F.seg===s.id?'on':'')+(s.tier1?' has-t1':'');
+      html+='<button type="button" class="'+cls+'" data-seg="'+esc(s.id)+'">'+esc(s.id)+' <span class="n">'+s.contacts+(s.tier1?' · T1 '+s.tier1:'')+'</span></button>';
+    });
+    document.getElementById('seg-chips').innerHTML=html;
+    document.querySelectorAll('#seg-chips button').forEach(function(btn){
+      btn.addEventListener('click', function(){ F.seg=btn.getAttribute('data-seg')||''; render(); renderChips(); });
+    });
+  }
+  function render(){
+    var rows=ALL.filter(matches).slice().sort(defaultSort);
+    var t1=0, em=0, ph=0;
+    rows.forEach(function(r){ if(r.is_tier1) t1++; if(r.has_email) em++; if(r.has_phone) ph++; });
+    document.getElementById('view-note').textContent =
+      'Showing '+rows.length+' · Tier1 '+t1+' · email '+em+' · phone '+ph+' · sort: Tier1 → email → phone → name';
+    var tb=document.getElementById('tbody');
+    if(!rows.length){
+      tb.innerHTML='<tr><td colspan="10" class="muted">No contacts in this filter.</td></tr>';
+      return;
+    }
+    // virtualize-ish: cap DOM at 800 for speed; note if truncated
+    var max=800;
+    var slice=rows.slice(0,max);
+    tb.innerHTML=slice.map(function(r){
+      var tel=telHref(r.phone);
+      var mail=mailtoHref(r.email);
+      var phoneCell=tel?('<a class="tap" href="'+esc(tel)+'">'+esc(r.phone)+'</a>'):'<span class="muted">—</span>';
+      var emailCell=mail?('<a class="tap" href="'+esc(mail)+'">'+esc(r.email)+'</a>'):'<span class="badge gap">no email</span>';
+      var tierCell=r.is_tier1?('<span class="badge t1">'+esc(r.tier||'Tier 1')+'</span>'):esc(r.tier||'—');
+      return '<tr>'+
+        '<td><span class="badge seg">'+esc(r.segment)+'</span></td>'+
+        '<td class="acct">'+esc(r.account)+'</td>'+
+        '<td>'+(r.contact?esc(r.contact):'<span class="muted">—</span>')+'</td>'+
+        '<td>'+esc(r.title||'')+'</td>'+
+        '<td>'+phoneCell+'</td>'+
+        '<td>'+emailCell+'</td>'+
+        '<td>'+tierCell+'</td>'+
+        '<td>'+esc(r.penetration||'—')+'</td>'+
+        '<td class="next">'+esc(r.next_action||'')+'</td>'+
+        '<td class="src" title="'+esc(r.source||'')+'">'+esc((r.source||'').split('|')[0])+'</td>'+
+        '</tr>';
+    }).join('');
+    if(rows.length>max){
+      tb.innerHTML+='<tr><td colspan="10" class="muted">Showing first '+max+' of '+rows.length+' — refine filters to narrow.</td></tr>';
+    }
+  }
+  function setKpis(){
+    var k=KPIS||{};
+    document.getElementById('k-seg').textContent=k.segments??'—';
+    document.getElementById('k-seg-s').textContent=(k.segments_listed||k.segments||'—')+' listed';
+    document.getElementById('k-acct').textContent=k.accounts??'—';
+    document.getElementById('k-ct').textContent=k.contacts??'—';
+    document.getElementById('k-em').textContent=k.with_email??'—';
+    document.getElementById('k-ph').textContent=k.with_phone??'—';
+    document.getElementById('k-t1').textContent=k.tier1??'—';
+    document.getElementById('k-t1-s').textContent=(k.tier1_with_email!=null?(k.tier1_with_email+' w/ email'):'Call now / Elite / S');
+  }
+  document.getElementById('q').addEventListener('input', function(e){ F.q=(e.target.value||'').trim().toLowerCase(); render(); });
+  document.getElementById('f-tier').addEventListener('change', function(e){ F.tier=e.target.value; render(); });
+  document.getElementById('f-mail').addEventListener('change', function(e){ F.mail=e.target.value; render(); });
+  document.getElementById('f-phone').addEventListener('change', function(e){ F.phone=e.target.value; render(); });
+
+  async function boot(){
+    try{
+      var res=await fetch('data/bdr_tam_dialer.json',{cache:'no-store'});
+      var d=await res.json();
+      ALL=d.contacts||[];
+      SEGS=d.segments||[];
+      SEG_ORDER=SEGS.map(function(s){return s.id;});
+      KPIS=d.kpis||{};
+      document.getElementById('asof').textContent=d.as_of||'';
+      document.getElementById('src-note').textContent=
+        'Data: data/bdr_tam_dialer.json · '+(d.rule||'')+' · Sources: '+((d.sources||[]).slice(0,8).map(function(s){return s.id;}).join(', '))+'…';
+      setKpis();
+      renderChips();
+      render();
+    }catch(e){
+      document.getElementById('src-note').textContent='Load failed: '+e+' — serve via http or check data/bdr_tam_dialer.json';
+    }
+  }
+  boot();
+})();
+</script>
+</body></html>

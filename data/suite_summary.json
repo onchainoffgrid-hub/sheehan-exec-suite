@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-22 ET",
+  "as_of": "2026-09-22 19:27 ET",
   "bdr_spec_aligned": {
     "CALL_NOW": 138,
     "WARM": 232,
@@ -37,5 +37,15 @@
     "orgs_multi_contact": 93,
     "contacts_with_email": 494,
     "panel": "org-whitespace.html"
+  },
+  "bdr_tam": {
+    "contacts": 2592,
+    "accounts": 2290,
+    "segments": 27,
+    "with_email": 772,
+    "with_phone": 1557,
+    "tier1": 860,
+    "tier1_with_email": 392,
+    "panel": "bdr-tam.html"
   }
 }

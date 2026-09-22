@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-22",
+  "as_of": "2026-09-22 ET",
   "source": "App Builder \u2192 Dashboard Bit link tree",
   "layer_a": {
     "label": "No-frills web apps (ops / sales \u2014 curtain closed, LIVE)",
@@ -63,6 +63,11 @@
       {
         "name": "BDR Pipeline",
         "url": "http://127.0.0.1:8765/bdr-pipeline.html"
+      },
+      {
+        "name": "BDR TAM Dialer",
+        "url": "http://127.0.0.1:8765/bdr-tam.html",
+        "note": "All segments \u00b7 Tier1 \u00b7 email rank"
       },
       {
         "name": "Link Tree page",
