@@ -25,26 +25,47 @@ h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font
 .kpi .l{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
 .kpi .v{font-size:1.4rem;font-weight:700;margin-top:4px}
 .kpi .s{font-size:.72rem;color:var(--muted);margin-top:3px}
-.kpi.warn .v{color:var(--warn)}.kpi.bad .v{color:var(--bad)}.kpi.violet .v{color:var(--violet)}
+.kpi.warn .v{color:var(--warn)}.kpi.bad .v{color:var(--bad)}.kpi.violet .v{color:var(--violet)}.kpi.good .v{color:var(--good)}
 .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:14px}
 .card h2{font-size:.98rem;margin:0 0 10px;display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
 .card h2 .tag{font-size:.68rem;font-weight:600;padding:3px 9px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
 .card h2 .tag.gap{color:var(--warn);border-color:#ffb02066;background:#2a2416}
 .card h2 .tag.ok{color:var(--good);border-color:#3dd68c55;background:#13281d}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+.filters button{appearance:none;border:1px solid var(--line);background:var(--panel);color:var(--muted);padding:10px 14px;border-radius:999px;font-size:.78rem;font-weight:600;min-height:44px;cursor:pointer}
+.filters button.on{border-color:var(--violet);background:#1a1628;color:#fff}
+.scroll{overflow:auto;-webkit-overflow-scrolling:touch;max-height:min(70vh,640px);border:1px solid var(--line);border-radius:12px}
 table{width:100%;border-collapse:collapse;font-size:.82rem}
-th,td{padding:8px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
-th{color:var(--muted);font-weight:600;font-size:.7rem;text-transform:uppercase;letter-spacing:.04em}
-.path{font-size:.72rem;color:var(--muted);word-break:break-all}
+th,td{padding:10px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:middle}
+th{color:var(--muted);font-weight:600;font-size:.7rem;text-transform:uppercase;letter-spacing:.04em;position:sticky;top:0;background:var(--card);z-index:1}
+.path{font-size:.72rem;color:var(--muted);word-break:break-word}
 .badge{display:inline-block;padding:2px 8px;border-radius:999px;font-size:.7rem;border:1px solid var(--line)}
 .badge.gap{background:#2a2416;color:var(--warn);border-color:#ffb02066}
 .badge.proxy{background:#1a2030;color:#9ec1ff}
 .badge.ok{background:#13281d;color:var(--good);border-color:#3dd68c55}
 .badge.miss{background:#2a1619;color:var(--bad);border-color:#ff5d6c66}
+.badge.tickler{background:#2a2416;color:var(--warn);border-color:#ffb02066}
+.badge.booked{background:#13281d;color:var(--good);border-color:#3dd68c55}
+.badge.needs_attention,.badge.needs_reply{background:#2a1619;color:var(--bad);border-color:#ff5d6c66}
+.badge.tam_tap,.badge.warm{background:#1a2030;color:#9ec1ff}
 .note{color:var(--muted);font-size:.78rem;margin-top:8px}
 .gaps{margin:0;padding-left:18px;color:var(--muted);font-size:.82rem}
 .gaps li{margin-bottom:4px}
-.cta{display:inline-flex;align-items:center;gap:8px;margin-top:8px;padding:10px 16px;border-radius:999px;background:#1a1628;border:1px solid #a78bfa88;color:#fff;font-weight:600;font-size:.85rem;text-decoration:none}
+.cta{display:inline-flex;align-items:center;gap:8px;margin-top:8px;padding:10px 16px;border-radius:999px;background:#1a1628;border:1px solid #a78bfa88;color:#fff;font-weight:600;font-size:.85rem;text-decoration:none;min-height:44px}
 .cta:hover{border-color:var(--violet);text-decoration:none}
+a.tap{display:inline-flex;align-items:center;min-height:44px;padding:8px 4px;font-weight:600;word-break:break-all}
+a.tel{color:var(--good)}
+a.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 14px;border-radius:999px;background:#1a1628;border:1px solid #a78bfa88;color:#fff;font-weight:700;font-size:.78rem;text-decoration:none;white-space:nowrap}
+a.btn:hover{border-color:var(--violet);text-decoration:none}
+a.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
+.actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.namecell b{font-size:.9rem}
+@media (max-width:700px){
+  th:nth-child(3),td:nth-child(3){display:none} /* hide detail on very narrow — still in name path */
+  .scroll{max-height:none}
+  table{font-size:.9rem}
+  th,td{padding:12px 8px}
+}
 </style></head>
 <body><div class="wrap">
 
@@ -66,7 +87,7 @@ th{color:var(--muted);font-weight:600;font-size:.7rem;text-transform:uppercase;l
 <header>
   <div>
     <h1>Consumer Inbound · Violet / B2C</h1>
-    <div class="sub">Contact forms · summer interest · waivers · forms missing sheets · Franchise #0</div>
+    <div class="sub">Tap email / phone · summer interest · Critters · GoDaddy · waivers · forms missing sheets</div>
   </div>
   <div class="sub" id="asof">as of —</div>
 </header>
@@ -84,8 +105,28 @@ th{color:var(--muted);font-weight:600;font-size:.7rem;text-transform:uppercase;l
 <div class="kpis" id="kpis">
   <div class="kpi violet"><div class="l">Interest submissions</div><div class="v" id="k-interest">—</div><div class="s" id="k-interest-s">Summer Camp Interest</div></div>
   <div class="kpi"><div class="l">GoDaddy this pass</div><div class="v" id="k-gd">—</div><div class="s" id="k-gd-s">body-parsed</div></div>
+  <div class="kpi good"><div class="l">Mailto contacts</div><div class="v" id="k-mail">—</div><div class="s" id="k-mail-s">tappable rows</div></div>
   <div class="kpi warn"><div class="l">Waiver status</div><div class="v" id="k-waiver">—</div><div class="s" id="k-waiver-s">form export</div></div>
   <div class="kpi bad"><div class="l">Forms missing sheets</div><div class="v" id="k-miss">—</div><div class="s" id="k-miss-s">Drive forms only</div></div>
+</div>
+
+<div class="card" id="card-people">
+  <h2>People · tap to email / call <span class="tag ok" id="tag-people">—</span></h2>
+  <div class="filters" id="filters">
+    <button type="button" class="on" data-bucket="all">All</button>
+    <button type="button" data-bucket="summer_interest">Summer</button>
+    <button type="button" data-bucket="godaddy">GoDaddy</button>
+    <button type="button" data-bucket="critter_club">Critter Club</button>
+    <button type="button" data-bucket="waiver_proxy">Waivers (proxy)</button>
+    <button type="button" data-bucket="action_queue">Action queue</button>
+  </div>
+  <div class="scroll">
+    <table>
+      <thead><tr><th>Name</th><th>Email / phone</th><th>Detail</th><th>Action</th></tr></thead>
+      <tbody id="tb-people"></tbody>
+    </table>
+  </div>
+  <p class="note" id="people-note">Real emails/phones only — no invented addresses.</p>
 </div>
 
 <div class="card" id="card-interest">
@@ -136,6 +177,16 @@ th{color:var(--muted);font-weight:600;font-size:.7rem;text-transform:uppercase;l
 <script>
 (function(){
   function esc(s){ return String(s??'').replace(/[&<>"']/g,c=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c])); }
+  function mailtoHref(email, subject, body){
+    var q = [];
+    if(subject) q.push('subject='+encodeURIComponent(subject));
+    if(body) q.push('body='+encodeURIComponent(body));
+    return 'mailto:'+encodeURIComponent(email).replace(/%40/g,'@') + (q.length?'?'+q.join('&'):'');
+  }
+  function telHref(phone){
+    var digits = String(phone).replace(/[^\d+]/g,'');
+    return 'tel:'+digits;
+  }
   function countCell(row){
     if(row.count == null){
       var st = row.status || 'GAP';
@@ -145,6 +196,7 @@ th{color:var(--muted);font-weight:600;font-size:.7rem;text-transform:uppercase;l
     var extra = '';
     if(row.needs_reply != null) extra = ' · needs reply '+row.needs_reply;
     if(row.estimate_total_matching != null) extra = ' · ~'+row.estimate_total_matching+' est. total';
+    if(row.mailto_rows != null) extra += ' · '+row.mailto_rows+' mailto';
     return '<b>'+esc(row.count)+'</b>'+esc(extra)+'<div class="path">'+esc(row.as_of||'')+'</div>';
   }
   function rows(list, opts){
@@ -164,6 +216,47 @@ th{color:var(--muted);font-weight:600;font-size:.7rem;text-transform:uppercase;l
       '</tr>';
     }).join('');
   }
+  function statusBadge(st){
+    if(!st) return '';
+    var key = String(st).toLowerCase().replace(/\s+/g,'_');
+    var cls = 'ok';
+    if(/proxy|gap/.test(key)) cls='proxy';
+    if(/tickler|needs/.test(key)) cls='tickler';
+    if(/booked/.test(key)) cls='booked';
+    if(/needs_attention|needs_reply/.test(key)) cls='needs_attention';
+    if(/tam|warm/.test(key)) cls='tam_tap';
+    return '<span class="badge '+cls+'">'+esc(st)+'</span>';
+  }
+  var ALL = [];
+  var FILTER = 'all';
+  function renderPeople(){
+    var list = ALL.filter(function(c){ return FILTER==='all' || c.bucket===FILTER; });
+    document.getElementById('tag-people').textContent = list.length+' contacts';
+    document.getElementById('tb-people').innerHTML = list.map(function(c){
+      var subj = c.subject || 'Sheehan Homestead / Critters follow-up';
+      var body = 'Hi '+(c.name||'').split(/[\/(]/)[0].trim()+',\n\n';
+      var mail = c.email ? mailtoHref(c.email, subj, body) : '';
+      var tel = c.phone ? telHref(c.phone) : '';
+      var contactBits = '';
+      if(c.email) contactBits += '<div><a class="tap" href="'+esc(mail)+'">'+esc(c.email)+'</a></div>';
+      if(c.phone) contactBits += '<div><a class="tap tel" href="'+esc(tel)+'">'+esc(c.phone)+'</a></div>';
+      if(!contactBits) contactBits = '<span class="path">no email</span>';
+      var actionBtns = '<div class="actions">';
+      if(c.email) actionBtns += '<a class="btn" href="'+esc(mail)+'">Email</a>';
+      if(c.phone) actionBtns += '<a class="btn sec" href="'+esc(tel)+'">Call</a>';
+      actionBtns += '</div>';
+      if(c.next_action) actionBtns += '<div class="path" style="margin-top:4px">'+esc(c.next_action)+'</div>';
+      return '<tr data-bucket="'+esc(c.bucket||'')+'">'+
+        '<td class="namecell"><b>'+esc(c.name||'')+'</b> '+statusBadge(c.status)+
+          (c.date?'<div class="path">'+esc(c.date)+'</div>':'')+
+          (c.bucket?'<div class="path">'+esc(c.bucket)+'</div>':'')+
+        '</td>'+
+        '<td>'+contactBits+'</td>'+
+        '<td class="path">'+esc(c.detail||'')+'</td>'+
+        '<td>'+actionBtns+'</td>'+
+      '</tr>';
+    }).join('') || '<tr><td colspan="4" class="path">No contacts in this filter.</td></tr>';
+  }
   async function boot(){
     var res = await fetch('data/consumer_inbound.json',{cache:'no-store'});
     if(!res.ok) throw new Error('HTTP '+res.status);
@@ -174,6 +267,8 @@ th{color:var(--muted);font-weight:600;font-size:.7rem;text-transform:uppercase;l
     document.getElementById('k-interest-s').textContent = k.interest_submissions_note || 'Summer Camp Interest';
     document.getElementById('k-gd').textContent = k.godaddy_contacts_this_pass != null ? k.godaddy_contacts_this_pass : '—';
     document.getElementById('k-gd-s').textContent = (k.godaddy_inventory_rows != null ? (k.godaddy_inventory_rows+' in CSV · ') : '') + (k.godaddy_contacts_this_pass_note||'body-parsed');
+    document.getElementById('k-mail').textContent = k.mailto_contacts != null ? k.mailto_contacts : ((d.contacts||[]).length||'—');
+    document.getElementById('k-mail-s').textContent = (k.tel_contacts!=null?(k.tel_contacts+' with phone · '):'') + 'tap Email on phone';
     document.getElementById('k-waiver').textContent = k.waiver_status || 'GAP';
     document.getElementById('k-waiver-s').textContent = (k.waiver_proxy_records != null ? (k.waiver_proxy_records+' email proxies · ') : '') + (k.waiver_note||'');
     document.getElementById('k-miss').textContent = k.forms_missing_sheets != null ? k.forms_missing_sheets : '—';
@@ -191,7 +286,32 @@ th{color:var(--muted);font-weight:600;font-size:.7rem;text-transform:uppercase;l
     a.href = cm.path || 'catalogue-close.html';
     a.textContent = (cm.label||'Catalogue → Close') + ' →';
     document.getElementById('gaps').innerHTML = (d.gaps||[]).map(function(g){ return '<li>'+esc(g)+'</li>'; }).join('');
+    ALL = d.contacts || [];
+    // Priority: action_queue / needs first, then by date desc-ish — keep source order but float AQ to top
+    ALL.sort(function(x,y){
+      var px = x.priority != null ? Number(x.priority) : 999;
+      var py = y.priority != null ? Number(y.priority) : 999;
+      if(px !== py) return px - py;
+      var bx = x.bucket==='action_queue'?0:x.bucket==='summer_interest'?1:x.bucket==='critter_club'?2:x.bucket==='godaddy'?3:4;
+      var by = y.bucket==='action_queue'?0:y.bucket==='summer_interest'?1:y.bucket==='critter_club'?2:y.bucket==='godaddy'?3:4;
+      if(bx!==by) return bx-by;
+      return String(y.date||'').localeCompare(String(x.date||''));
+    });
+    renderPeople();
+    var cc = d.contact_counts||{};
+    document.getElementById('people-note').textContent =
+      'Real emails/phones only · '+ALL.length+' mailto rows'+(cc.tel_total!=null?' · '+cc.tel_total+' tel':'')+
+      ' · Summer '+(cc.summer_interest||0)+' · GoDaddy '+(cc.godaddy||0)+' · Critter '+(cc.critter_club||0)+
+      ' · Waiver proxy '+(cc.waiver_proxy||0)+' · AQ extras '+(cc.action_queue_extra||0)+
+      '. Data: data/consumer_inbound.json';
     document.getElementById('src-note').textContent = 'Data: data/consumer_inbound.json · '+(d.note||'No fabricated counts.')+' · Built '+(d.as_of||'');
+    document.getElementById('filters').addEventListener('click', function(ev){
+      var btn = ev.target.closest('button[data-bucket]');
+      if(!btn) return;
+      FILTER = btn.getAttribute('data-bucket');
+      Array.prototype.forEach.call(document.querySelectorAll('#filters button'), function(b){ b.classList.toggle('on', b===btn); });
+      renderPeople();
+    });
   }
   boot().catch(function(e){
     document.getElementById('src-note').textContent = 'Load failed: '+e+' — serve via http (not file://) or check data/consumer_inbound.json';
