@@ -7,7 +7,7 @@
     "WARM_NEEDS_CONTACT": 140,
     "Later": 11,
     "RED_TAPE_HOLD": 44,
-    "note": "Detail sheets VESTA/GOLF/LUXURY/CORP are subsets — not summed into dialer KPIs"
+    "note": "Detail sheets VESTA/GOLF/LUXURY/CORP are subsets \u2014 not summed into dialer KPIs"
   },
   "fall_priority": 129,
   "paypal_h2_outside_gross": 15408.66,
@@ -27,5 +27,15 @@
     "waiver_proxy_records": 10,
     "forms_missing_sheets": 4,
     "panel": "consumer-inbound.html"
+  },
+  "org_whitespace": {
+    "orgs_total": 718,
+    "customers": 162,
+    "non_customers": 556,
+    "orgs_missing_email": 301,
+    "orgs_zero_contacts": 33,
+    "orgs_multi_contact": 93,
+    "contacts_with_email": 494,
+    "panel": "org-whitespace.html"
   }
 }

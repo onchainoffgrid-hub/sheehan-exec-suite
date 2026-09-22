@@ -82,6 +82,18 @@ a.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
 .filters.hubspot{margin-top:4px}
 .filters.hubspot button.on.yes{border-color:#a78bfa88;background:#1a1628;color:#c4b5fd}
 .filters.hubspot button.on.no{border-color:#5b8cff66;background:#1a2030;color:#9aa8c0}
+
+.badge.done{background:#13281d;color:var(--good);border-color:#3dd68c88}
+.filters.donef{margin-top:4px}
+.filters.donef button.on.open{border-color:#ff5d6c66;background:#2a1619;color:#ff9aa5}
+.filters.donef button.on.done{border-color:#3dd68c88;background:#13281d;color:var(--good)}
+button.btn.done-btn{border-color:#3dd68c66;background:var(--panel);color:var(--muted);font-family:inherit;cursor:pointer}
+button.btn.done-btn.is-done{border-color:#3dd68c88;background:#13281d;color:var(--good)}
+.notes-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:6px}
+.notes-row input[type=text]{flex:1;min-width:140px;padding:8px 10px;border-radius:10px;border:1px solid var(--line);background:var(--panel);color:var(--text);font-size:.78rem;min-height:40px}
+.notes-row .saved{font-size:.68rem;color:var(--good);opacity:0;transition:opacity .2s}
+.notes-row .saved.show{opacity:1}
+tr.done-row{opacity:.72}
 </style></head>
 <body><div class="wrap">
 
@@ -96,6 +108,7 @@ a.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
 <div class="mutual">
   <a href="index.html">← Operator</a>
   <a href="crm-icp.html">CRM ICP</a>
+  <a href="org-whitespace.html">Org white space</a>
   <a class="on" href="consumer-inbound.html">Consumer / Violet</a>
   <a href="catalogue-close.html">Catalogue → Close</a>
 </div>
@@ -111,6 +124,7 @@ a.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
 <div class="nav">
   <a href="index.html">Operator</a>
   <a href="crm-icp.html">CRM ICP</a>
+  <a href="org-whitespace.html">Org white space</a>
   <a href="consumer-inbound.html" class="active">Consumer</a>
   <a href="catalogue-close.html">Catalogue</a>
   <a href="bdr-pipeline.html">BDR</a>
@@ -154,6 +168,12 @@ a.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
     <button type="button" class="on" data-hubspot="all">All HubSpot</button>
     <button type="button" class="yes" data-hubspot="yes">HubSpot CSV</button>
     <button type="button" class="no" data-hubspot="no">Not in CSV</button>
+  </div>
+
+  <div class="filters donef" id="filters-done">
+    <button type="button" class="on" data-done="all">All (Done)</button>
+    <button type="button" class="open" data-done="open">Open</button>
+    <button type="button" class="done" data-done="done">Done</button>
   </div>
   <div class="scroll">
     <table>
@@ -267,6 +287,17 @@ a.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
   var FILTER = 'all';
   var PFILTER = 'all';
   var HFILTER = 'all';
+  var DFILTER = 'all';
+  var LS_KEY = 'sheehan_consumer_inbound_v1';
+  function loadState(){ try{ return JSON.parse(localStorage.getItem(LS_KEY)||'{}')||{}; }catch(e){ return {}; } }
+  function saveState(st){ try{ localStorage.setItem(LS_KEY, JSON.stringify(st)); }catch(e){} }
+  function contactKey(c){
+    if(c.id) return String(c.id);
+    if(c.email) return 'em:'+String(c.email).toLowerCase();
+    return 'n:'+String(c.name||'').toLowerCase()+'|'+String(c.phone||'')+'|'+String(c.bucket||'');
+  }
+  function getRow(st, id){ if(!st[id]) st[id]={done:false,notes:''}; return st[id]; }
+  var STATE = loadState();
   function purchaseBadge(c){
     var st = c.purchase_status || 'unknown';
     var label = st === 'bought' ? 'Bought' : (st === 'not_seen' ? 'Not seen' : 'Unknown');
@@ -287,6 +318,9 @@ a.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
       if(PFILTER!=='all' && (c.purchase_status||'unknown')!==PFILTER) return false;
       if(HFILTER==='yes' && !c.hubspot_listed) return false;
       if(HFILTER==='no' && c.hubspot_listed) return false;
+      var row = getRow(STATE, contactKey(c));
+      if(DFILTER==='done' && !row.done) return false;
+      if(DFILTER==='open' && row.done) return false;
       return true;
     });
     document.getElementById('tag-people').textContent = list.length+' contacts';
@@ -299,15 +333,21 @@ a.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
       if(c.email) contactBits += '<div><a class="tap" href="'+esc(mail)+'">'+esc(c.email)+'</a></div>';
       if(c.phone) contactBits += '<div><a class="tap tel" href="'+esc(tel)+'">'+esc(c.phone)+'</a></div>';
       if(!contactBits) contactBits = '<span class="path">no email</span>';
+      var ck = contactKey(c);
+      var row = getRow(STATE, ck);
       var actionBtns = '<div class="actions">';
       if(c.email) actionBtns += '<a class="btn" href="'+esc(mail)+'">Email</a>';
       if(c.phone) actionBtns += '<a class="btn sec" href="'+esc(tel)+'">Call</a>';
+      actionBtns += '<button type="button" class="btn done-btn'+(row.done?' is-done':'')+'" data-done-toggle="'+esc(ck)+'">'+(row.done?'Done ✓':'Done')+'</button>';
       actionBtns += '</div>';
+      actionBtns += '<div class="notes-row"><input type="text" maxlength="240" placeholder="Notes…" value="'+esc(row.notes||'')+'" data-notes-input="'+esc(ck)+'"/><button type="button" class="btn sec" data-notes-save="'+esc(ck)+'">Save</button><span class="saved" data-saved="'+esc(ck)+'">Saved</span></div>';
       if(c.next_action) actionBtns += '<div class="path" style="margin-top:4px">'+esc(c.next_action)+'</div>';
-      return '<tr data-bucket="'+esc(c.bucket||'')+'" data-purchase="'+esc(c.purchase_status||'unknown')+'" data-hubspot="'+(c.hubspot_listed?'yes':'no')+'">'+
+      return '<tr class="'+(row.done?'done-row':'')+'" data-bucket="'+esc(c.bucket||'')+'" data-purchase="'+esc(c.purchase_status||'unknown')+'" data-hubspot="'+(c.hubspot_listed?'yes':'no')+'" data-ck="'+esc(ck)+'">'+
         '<td class="namecell"><b>'+esc(c.name||'')+'</b> '+statusBadge(c.status)+
+          (row.done?' <span class="badge done">Done</span>':'')+
           (c.date?'<div class="path">'+esc(c.date)+'</div>':'')+
           (c.bucket?'<div class="path">'+esc(c.bucket)+'</div>':'')+
+          (row.notes?'<div class="path">📝 '+esc(row.notes)+'</div>':'')+
         '</td>'+
         '<td>'+purchaseBadge(c)+'</td>'+
         '<td>'+contactBits+'</td>'+
@@ -385,7 +425,7 @@ a.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
       ' · Unknown '+(pxc2.unknown!=null?pxc2.unknown:(k.purchase_unknown||0))+
       ' · HubSpot CSV '+(hxc2.hubspot_listed!=null?hxc2.hubspot_listed:(k.hubspot_listed||0))+
       '/'+(hxc2.hubspot_not_listed!=null?hxc2.hubspot_not_listed:(k.hubspot_not_listed||0))+' not · Summer '+(cc.summer_interest||0)+
-      '. Never invent purchases or live HubSpot status.';
+      ' · Done/notes local ('+LS_KEY+'). Never invent purchases or live HubSpot status.';
     var srcUsed = ((d.purchase_crossref||{}).sources_used||[]).map(function(s){ return s.id; }).join(', ');
     var hsPaths = ((d.hubspot_crossref||{}).sources_used||[]).map(function(s){ return s.id; }).join(', ');
     var srcGaps = ((d.purchase_crossref||{}).gaps||[]).slice(0,3).join(' · ');
@@ -414,6 +454,46 @@ a.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
       HFILTER = btn.getAttribute('data-hubspot');
       Array.prototype.forEach.call(document.querySelectorAll('#filters-hubspot button'), function(b){ b.classList.toggle('on', b===btn); });
       renderPeople();
+    });
+
+    document.getElementById('filters-done').addEventListener('click', function(ev){
+      var btn = ev.target.closest('button[data-done]');
+      if(!btn) return;
+      DFILTER = btn.getAttribute('data-done');
+      Array.prototype.forEach.call(document.querySelectorAll('#filters-done button'), function(b){ b.classList.toggle('on', b===btn); });
+      renderPeople();
+    });
+    document.getElementById('tb-people').addEventListener('click', function(ev){
+      var doneBtn = ev.target.closest('[data-done-toggle]');
+      if(doneBtn){
+        ev.preventDefault();
+        var id = doneBtn.getAttribute('data-done-toggle');
+        var row = getRow(STATE, id);
+        row.done = !row.done;
+        saveState(STATE);
+        renderPeople();
+        return;
+      }
+      var saveBtn = ev.target.closest('[data-notes-save]');
+      if(saveBtn){
+        ev.preventDefault();
+        var id = saveBtn.getAttribute('data-notes-save');
+        var input = document.querySelector('[data-notes-input="'+id.replace(/"/g,'')+'"]');
+        var row = getRow(STATE, id);
+        row.notes = input ? input.value.trim() : '';
+        saveState(STATE);
+        var flash = document.querySelector('[data-saved="'+id+'"]');
+        if(flash){ flash.classList.add('show'); setTimeout(function(){ flash.classList.remove('show'); }, 1200); }
+        renderPeople();
+      }
+    });
+    document.getElementById('tb-people').addEventListener('change', function(ev){
+      var input = ev.target.closest('[data-notes-input]');
+      if(!input) return;
+      var id = input.getAttribute('data-notes-input');
+      var row = getRow(STATE, id);
+      row.notes = input.value.trim();
+      saveState(STATE);
     });
   }
   boot().catch(function(e){

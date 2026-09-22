@@ -72,6 +72,7 @@ h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font
   <a href="index.html" class="active">Operator</a>
   <a href="crm-icp.html">CRM ICP</a>
   <a href="consumer-inbound.html" style="border-color:#a78bfa88;color:#d4c4ff">Consumer / Violet</a>
+  <a href="org-whitespace.html" style="border-color:#5b8cff88">Org white space</a>
   <a href="bookings-dates.html">Bookings</a>
   <a href="money-cfo.html">Money</a>
   <a href="bdr-pipeline.html">BDR</a>
@@ -134,6 +135,23 @@ h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font
     <a href="consumer-inbound.html">Open inbound panel</a>
     <a href="catalogue-close.html">Catalogue → Close</a>
     <a href="crm-icp.html">CRM Violet chip</a>
+  </div>
+</a>
+
+
+<a class="tile sales" href="org-whitespace.html" style="border-color:#5b8cff99;background:linear-gradient(160deg,#152238 0%,#121a2b 60%)">
+  <h3>Org white space <span class="badge sales">B2B ACCOUNTS</span></h3>
+  <p>Account contacts · customers + non-customers · email gaps · Done + notes.</p>
+  <div class="chips">
+    <span class="chipk">Orgs <b id="orgws-n">—</b></span>
+    <span class="chipk">Customers <b id="orgws-c">—</b></span>
+    <span class="chipk">Email gaps <b id="orgws-gap">—</b></span>
+    <span class="chipk">0 contacts <b id="orgws-zero">—</b></span>
+  </div>
+  <div class="links-row">
+    <a href="org-whitespace.html">Open org white space</a>
+    <a href="crm-icp.html">CRM ICP</a>
+    <a href="consumer-inbound.html">Consumer inbound</a>
   </div>
 </a>
 
@@ -200,7 +218,7 @@ h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font
 <a class="tile secondary" href="link-tree.html"><h3>Link Tree</h3><p>Live ops apps + VISION Play / Coins.</p></a>
 </div>
 
-<p class="note" id="load-note">Dump-home: Dashboard Bit · Brand: Sheehan Homestead / Critters on Call · Face: Operator / Franchise #0 · KPIs load from data/*.json (serve via http://127.0.0.1:8765/ if fetch blocked on file://) · Built 2026-09-22 ET</p>
+<p class="note" id="load-note">Dump-home: Dashboard Bit · Brand: Sheehan Homestead / Critters on Call · Face: Operator / Franchise #0 · KPIs load from data/*.json (serve via http://127.0.0.1:8765/ if fetch blocked on file://) · Built 2026-09-22 ET · Org white space live</p>
 </div>
 
 <script>
@@ -224,9 +242,10 @@ h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font
     load('data/paypal_kpis.json'),
     load('data/overdue_kpis.json'),
     load('data/crm_icp_regional_subscription.json'),
-    load('data/bookings_pipeline.json')
+    load('data/bookings_pipeline.json'),
+    load('data/org_whitespace.json')
   ]).then(function(arr){
-    var sum=arr[0]||{}, kpis=arr[1]||{}, pay=arr[2]||{}, od=arr[3]||{}, crm=arr[4]||{}, book=arr[5]||{};
+    var sum=arr[0]||{}, kpis=arr[1]||{}, pay=arr[2]||{}, od=arr[3]||{}, crm=arr[4]||{}, book=arr[5]||{}, orgws=arr[6]||{};
     var call=sum.bdr_spec_aligned && sum.bdr_spec_aligned.CALL_NOW;
     if(call==null) call=kpis.call_now;
     var warm=sum.bdr_spec_aligned && sum.bdr_spec_aligned.Warm;
@@ -271,6 +290,11 @@ h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font
   // Consumer inbound KPIs on Operator tile
   load('data/consumer_inbound.json').then(function(c){
     if(!c||!c.kpis) return;
+    var ok = orgws.kpis||{};
+    set('orgws-n', ok.orgs_total!=null?ok.orgs_total:'—');
+    set('orgws-c', ok.customers!=null?ok.customers:'—');
+    set('orgws-gap', ok.orgs_missing_email!=null?ok.orgs_missing_email:'—');
+    set('orgws-zero', ok.orgs_zero_contacts!=null?ok.orgs_zero_contacts:'—');
     set('cons-interest', c.kpis.interest_submissions);
     set('cons-gd', c.kpis.godaddy_contacts_this_pass);
     set('cons-miss', c.kpis.forms_missing_sheets);

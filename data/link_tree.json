@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-20",
+  "as_of": "2026-09-22",
   "source": "App Builder \u2192 Dashboard Bit link tree",
   "layer_a": {
     "label": "No-frills web apps (ops / sales \u2014 curtain closed, LIVE)",
@@ -67,6 +67,14 @@
       {
         "name": "Link Tree page",
         "url": "http://127.0.0.1:8765/link-tree.html"
+      },
+      {
+        "name": "Org white space",
+        "url": "http://127.0.0.1:8765/org-whitespace.html"
+      },
+      {
+        "name": "Consumer inbound",
+        "url": "http://127.0.0.1:8765/consumer-inbound.html"
       }
     ]
   }
