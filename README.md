@@ -22,7 +22,7 @@ cd /workspace/dashboard/exec-suite && python3 -m http.server 8765
 | BDR Pipeline | [bdr-pipeline.html](bdr-pipeline.html) | **REAL** CALL_NOW 138 · Warm 81 · Needs 140 · Later 11 · Red-tape 44 + filterable dialer |
 | RevOps TAM | [revops-tam.html](revops-tam.html) | Primary SAM **$572,873** · tier rollup · segment counts |
 | Social & Reach | [social-reach.html](social-reach.html) |
-| Jax Local Buzz | [jax-local-buzz.html](jax-local-buzz.html) | Ranked better-than-Action-News outlets + 2-week plan | FB ~4.8k · LI ~13k · met ~500k / ~400 emails + weekly localStorage inputs |
+| Jax Local Buzz | [jax-local-buzz.html](jax-local-buzz.html) | BDR table **24** outlets · sortable email/outlet · preloaded pitches · `data/jax_local_buzz.json` |
 | Investor & Capital | [investor-capital.html](investor-capital.html) | Goals $250k bookings / ~$100k AR by 2026-12-23 |
 | Programming | [programming.html](programming.html) | Visit Us program types · fill vs protect stub heat |
 | Team & Hire | [team-hire.html](team-hire.html) | 4 seats from HIRE_PRIORITIES (enterprise live) |

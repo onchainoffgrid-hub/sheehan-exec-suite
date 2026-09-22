@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Jax Local Buzz · Sheehan Exec</title>
+<title>Jax Local Buzz · BDR Media · Sheehan Exec</title>
 <style>
 :root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--bad:#ff5d6c;--violet:#a78bfa}
 *{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
 a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
-.wrap{max-width:1100px;margin:0 auto;padding:22px}
+.wrap{max-width:1280px;margin:0 auto;padding:22px}
 header{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:14px;flex-wrap:wrap}
 h1{font-size:1.35rem;margin:0}.sub{color:var(--muted);font-size:.88rem}
 .nav{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0 18px}
 .nav a{background:var(--card);border:1px solid var(--line);padding:6px 11px;border-radius:999px;font-size:.78rem;color:var(--text)}
 .nav a.active{border-color:var(--accent);background:#152238;color:#fff}
-.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:11px;margin-bottom:16px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:11px;margin-bottom:16px}
 .kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px;position:relative;overflow:hidden}
 .kpi::after{content:"";position:absolute;inset:auto 0 0 0;height:2px;background:linear-gradient(90deg,var(--accent),var(--violet));opacity:.55}
 .kpi .l{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
@@ -19,19 +19,39 @@ h1{font-size:1.35rem;margin:0}.sub{color:var(--muted);font-size:.88rem}
 .kpi .s{font-size:.72rem;color:var(--muted);margin-top:3px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:14px}
 .card h2{font-size:.98rem;margin:0 0 10px}
-table{width:100%;border-collapse:collapse;font-size:.8rem}
-th,td{padding:8px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
-th{color:var(--muted);font-weight:600}
-.tag{display:inline-block;padding:2px 8px;border-radius:999px;font-size:.68rem;border:1px solid var(--line)}
-.tag.now{background:#13281d;color:var(--good);border-color:#2a5}
-.tag.warm{background:#2a2416;color:var(--warn)}
-.tag.later{color:var(--muted)}
+.toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:10px}
+.toolbar input,.toolbar select{background:var(--panel);border:1px solid var(--line);color:var(--text);border-radius:8px;padding:7px 10px;font-size:.8rem}
+.toolbar input{min-width:180px;flex:1}
 .note{color:var(--muted);font-size:.78rem}
+.table-wrap{overflow:auto;max-height:70vh;border:1px solid var(--line);border-radius:10px}
+table{width:100%;border-collapse:collapse;font-size:.78rem;min-width:980px}
+th,td{padding:9px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{color:var(--muted);font-weight:600;position:sticky;top:0;background:#152033;z-index:2;cursor:pointer;user-select:none;white-space:nowrap}
+th:hover{color:var(--text)}
+th .arrow{opacity:.45;font-size:.7rem;margin-left:4px}
+th.active{color:var(--accent)}
+th.active .arrow{opacity:1}
+.tag{display:inline-block;padding:2px 8px;border-radius:999px;font-size:.68rem;border:1px solid var(--line)}
+.tag.both{background:#152238;color:#9ec1ff;border-color:#3a5a9a}
+.tag.am{background:#231833;color:#d4b8ff;border-color:#6b4a9a}
+.tag.michael{background:#13281d;color:var(--good);border-color:#2a5}
+.pitch{max-width:340px;color:var(--text);font-size:.76rem;line-height:1.4;white-space:pre-wrap}
+.email-empty{color:var(--muted);font-style:italic}
+.acts{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.btn{appearance:none;border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:8px;padding:5px 9px;font-size:.72rem;cursor:pointer}
+.btn:hover{border-color:var(--accent);color:#fff}
+.btn.mail{border-color:#3a5a9a;color:#9ec1ff}
+.btn.copy{border-color:#2a5;color:var(--good)}
+.btn.copied{background:#13281d;border-color:var(--good)}
+.lane{color:var(--muted);font-size:.72rem}
+.next{font-size:.72rem;color:var(--muted)}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 @media(max-width:900px){.grid2{grid-template-columns:1fr}}
 ol.plan{margin:0;padding-left:1.2rem;font-size:.85rem}
 ol.plan li{margin:6px 0}
 code{font-size:.78rem;background:var(--panel);padding:1px 5px;border-radius:4px}
+.toast{position:fixed;bottom:18px;right:18px;background:#13281d;border:1px solid var(--good);color:var(--good);padding:10px 14px;border-radius:10px;font-size:.8rem;opacity:0;pointer-events:none;transition:opacity .2s;z-index:9}
+.toast.show{opacity:1}
 </style></head>
 <body><div class="wrap">
 <div class="app-top" style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 12px;padding:10px 12px;background:#121a2b;border:1px solid #1e2a44;border-radius:12px">
@@ -40,82 +60,232 @@ code{font-size:.78rem;background:var(--panel);padding:1px 5px;border-radius:4px}
 <a href="index.html" style="background:#13281d;border:1px solid #3dd68c;padding:6px 12px;border-radius:999px;font-size:.78rem;color:#e8eefc;text-decoration:none;font-weight:600">Dashboards</a>
 <a href="link-tree.html" style="border:1px solid #1e2a44;padding:6px 12px;border-radius:999px;font-size:.78rem;color:#93a0b8;text-decoration:none">All links</a>
 </div>
-<header><div><h1>Jax Local Buzz</h1><div class="sub">Better than Action News desk · farm / petting zoo / family feature PR · 2026-09-22 ET</div></div>
-<div class="sub">North star: <b>bookings</b> · no invented emails</div></header>
+<header><div><h1>Jax Local Buzz · BDR Media</h1><div class="sub">Sortable outreach table · preloaded pitches · no invented emails · <span id="asof">2026-09-22 ET</span></div></div>
+<div class="sub">North star: <b>bookings</b> · empty emails sort last</div></header>
 <div class="nav"><a href="index.html">Hub</a><a href="bookings-dates.html">Bookings</a><a href="money-cfo.html">Money</a><a href="bdr-pipeline.html">BDR</a><a href="revops-tam.html">RevOps</a><a href="social-reach.html">Social</a><a href="jax-local-buzz.html" class="active">Jax Buzz</a><a href="investor-capital.html">Investor</a><a href="programming.html">Programs</a><a href="team-hire.html">Team</a><a href="actions-overdue.html">Actions</a><a href="collateral.html">Collateral</a><a href="ann-marie-ops.html">Ann-Marie</a><a href="platform-map.html">Platform</a></div>
 
 <div class="kpis">
-  <div class="kpi"><div class="l">Verdict</div><div class="v">Yes — better options</div><div class="s">Feature / lifestyle &gt; crime desk</div></div>
-  <div class="kpi"><div class="l">#1 TV demo</div><div class="v">River City Live</div><div class="s">News4JAX help desk</div></div>
-  <div class="kpi"><div class="l">#1 mommy collateral</div><div class="v">Jacksonville Mom</div><div class="s">info@jacksonvillemom.com</div></div>
-  <div class="kpi"><div class="l">House account</div><div class="v">DNN / Jax Buzz</div><div class="s">Book more, not new net</div></div>
+  <div class="kpi"><div class="l">Outlets</div><div class="v" id="k-rows">—</div><div class="s">BDR table rows</div></div>
+  <div class="kpi"><div class="l">With email</div><div class="v" id="k-mail">—</div><div class="s">mailto + copy ready</div></div>
+  <div class="kpi"><div class="l">Form-only</div><div class="v" id="k-form">—</div><div class="s">empty email · path link</div></div>
+  <div class="kpi"><div class="l">#1 demo</div><div class="v">River City Live</div><div class="s">help desk · goat demo</div></div>
 </div>
 
 <div class="card">
-<h2>Ranked alternatives to Action News Jax</h2>
-<table>
-<thead><tr><th>#</th><th>Outlet</th><th>Why better</th><th>Public path</th></tr></thead>
-<tbody>
-<tr><td>1</td><td><b>River City Live</b></td><td>Lifestyle; wants a <b>demo</b></td><td><a href="https://help.news4jax.com/kb/article/255-river-city-live-how-do-i-get-on-the-show/" target="_blank" rel="noopener">Help article</a> → <a href="https://help.news4jax.com/new/" target="_blank" rel="noopener">ticket</a></td></tr>
-<tr><td>2</td><td><b>Jacksonville Mom</b></td><td>Guest essay + calendar; shareable</td><td><code>info@jacksonvillemom.com</code> · <a href="https://jacksonvillemom.com/guest-blog-guidelines/" target="_blank" rel="noopener">guidelines</a></td></tr>
-<tr><td>3</td><td><b>DNN / Jacksonville Buzz</b></td><td>Already booked — expand</td><td><a href="https://dailynewsnetwork.com/contact/request-an-interview/" target="_blank" rel="noopener">Interview form</a></td></tr>
-<tr><td>4</td><td><b>I Know Jax</b> (CW17)</td><td>Local-fun press inbox</td><td><code>info@iknowjax.com</code></td></tr>
-<tr><td>5</td><td><b>The Coastal</b></td><td>Open story + byline</td><td><code>editor@thecoastal.com</code> · <a href="https://thecoastal.com/submit-your-story/" target="_blank" rel="noopener">submit</a></td></tr>
-<tr><td>6</td><td><b>Folio Weekly</b></td><td>Event + PR inbox</td><td><code>team@folioweekly.com</code> · <a href="https://folioweekly.com/all-events/submit-event/" target="_blank" rel="noopener">submit event</a></td></tr>
-<tr><td>7</td><td><b>WJCT First Coast Connect</b></td><td>Civic / event call-in</td><td><code>firstcoastconnect@wjct.org</code> · <code>sbennett@wjct.org</code></td></tr>
-<tr><td>8</td><td><b>Jacksonville Today</b></td><td>Weekday newsletter tip</td><td><code>news@jaxtoday.org</code></td></tr>
-<tr><td>9</td><td><b>Jacksonville Magazine</b></td><td>Slow feature</td><td><code>joe@jacksonvillemag.com</code></td></tr>
-<tr><td>—</td><td>Action News Jax</td><td>Calendar / tip only; <b>no guest form</b></td><td><code>events@actionnewsjax.com</code> · <code>news@ActionNewsJax.com</code></td></tr>
-</tbody>
+<h2>BDR table — click headers to sort</h2>
+<div class="toolbar">
+  <input id="q" type="search" placeholder="Filter outlet / lane / email / who…" aria-label="Filter"/>
+  <select id="who-f" aria-label="Who filter"><option value="">Who: all</option><option value="Michael">Michael</option><option value="AM">AM</option><option value="Both">Both</option></select>
+  <select id="mail-f" aria-label="Email filter"><option value="">Email: all</option><option value="yes">Has email</option><option value="no">Form / empty</option></select>
+  <span class="note" id="sort-hint">Sort: click Email or Outlet (asc/desc). Empty emails always last when sorting by email.</span>
+</div>
+<div class="table-wrap">
+<table id="buzz-table">
+<thead><tr>
+  <th data-key="outlet" class="active">Outlet <span class="arrow">▲</span></th>
+  <th data-key="lane">Lane <span class="arrow">↕</span></th>
+  <th data-key="email">Email <span class="arrow">↕</span></th>
+  <th data-key="pitch">Pitch <span class="arrow">↕</span></th>
+  <th data-key="who">Who <span class="arrow">↕</span></th>
+  <th data-key="next">Next action <span class="arrow">↕</span></th>
+</tr></thead>
+<tbody id="tbody"></tbody>
 </table>
-<p class="note">Sources: public help/contact/submit pages rechecked 2026-09-22. Full phonebook: workspace <code>jax-free-local-media.md</code>.</p>
+</div>
+<p class="note" id="src-note" style="margin-top:10px">Loading data/jax_local_buzz.json…</p>
 </div>
 
 <div class="grid2">
 <div class="card">
-<h2>Week 1</h2>
+<h2>Week 1 cheat</h2>
 <ol class="plan">
-<li><span class="tag now">Mon</span> River City Live ticket — goat yoga / animal <b>demo</b></li>
-<li><span class="tag now">Mon</span> Calendar dump: Folio, Jax Mom, News4JAX CitySpark, Action News events@, FirstCoast.Life, Nassau Chamber</li>
-<li><span class="tag now">Tue</span> Jax Mom guest essay (Ann-Marie) — no sales copy; URL in bio</li>
-<li><span class="tag now">Wed</span> DNN form — Ask the Educator or Around Town</li>
-<li><span class="tag warm">Thu</span> I Know Jax press + photos → fall festival / Visit Us</li>
-<li><span class="tag warm">Fri</span> The Coastal original piece</li>
+<li>River City Live ticket — goat yoga / animal <b>demo</b></li>
+<li>Calendar dump: Folio, Jax Mom, News4JAX CitySpark, Action News events@, FirstCoast.Life, Nassau Chamber</li>
+<li>Jax Mom guest essay (AM) — no sales; URL in bio</li>
+<li>DNN form — Ask the Educator or Around Town</li>
+<li>I Know Jax press + photos</li>
+<li>The Coastal original piece</li>
 </ol>
 </div>
-<div class="card">
-<h2>Week 2</h2>
-<ol class="plan">
-<li><span class="tag now">Mon</span> WJCT — STEM / ag literacy / dated Visit Us</li>
-<li><span class="tag warm">Tue</span> Jax Today tip → news@jaxtoday.org</li>
-<li><span class="tag warm">Wed</span> News4JAX Morning Show — fall festival dated</li>
-<li><span class="tag later">Thu</span> Jax Mag joe@ + Momcast contact form</li>
-<li><span class="tag later">Fri</span> Mobile zoo <b>only if Duval venue</b> → Visit Jax + calendars; Shop the 904 open mic</li>
-</ol>
-</div>
-</div>
-
-<div class="card">
-<h2>Pitch → offer map</h2>
-<table>
-<thead><tr><th>Offer</th><th>Lead with</th></tr></thead>
-<tbody>
-<tr><td>Fall festival</td><td>Calendars → Morning Show → Folio → I Know Jax → Jax Today</td></tr>
-<tr><td>Goat yoga</td><td><b>River City Live</b> → Jax Mom → Momcast</td></tr>
-<tr><td>Visit Us</td><td>Jax Mom + DNN → WJCT (homeschool/STEM)</td></tr>
-<tr><td>Mobile zoo</td><td>RCL / I Know Jax if Jax venue; Visit Jax = Duval only</td></tr>
-</tbody>
-</table>
-</div>
-
 <div class="card">
 <h2>Skip / unknowns</h2>
 <ul class="note" style="margin:0;padding-left:1.1rem">
-<li><b>Beaches Watch</b> = civic nonprofit, not lifestyle buzz (wrong fit).</li>
+<li><b>Beaches Watch</b> = civic nonprofit, wrong fit.</li>
 <li>First Coast Living “Grow Your Business” = paid-unless-confirmed-free.</li>
-<li>Visit Jacksonville rejects Callahan/Nassau farm days (Duval only).</li>
+<li>Visit Jacksonville = Duval only (no Callahan farm days).</li>
 <li>No invented reporter inboxes. Times-Union event form not reconfirmed for 2026.</li>
 </ul>
-<p class="note" style="margin-top:10px">Plan markdown: <code>/workspace/dashboard/exec-bots/JAX_LOCAL_BUZZ_PLAN.md</code></p>
 </div>
+</div>
+</div>
+<div class="toast" id="toast">Copied</div>
+<script>
+(function(){
+  var ALL=[], VIEW=[];
+  var sortKey='outlet', sortDir=1; // 1 asc, -1 desc
+
+  function mailtoHref(email, subject, body){
+    if(!email) return '';
+    var q=[];
+    if(subject) q.push('subject='+encodeURIComponent(subject));
+    if(body) q.push('body='+encodeURIComponent(body));
+    return 'mailto:'+email + (q.length?'?'+q.join('&'):'');
+  }
+
+  function whoClass(w){
+    if(w==='AM') return 'am';
+    if(w==='Michael') return 'michael';
+    return 'both';
+  }
+
+  function toast(msg){
+    var t=document.getElementById('toast');
+    t.textContent=msg; t.classList.add('show');
+    setTimeout(function(){ t.classList.remove('show'); }, 1400);
+  }
+
+  function copyText(text, btn){
+    if(!text) return;
+    function ok(){
+      if(btn){ btn.classList.add('copied'); btn.textContent='Copied'; setTimeout(function(){ btn.classList.remove('copied'); btn.textContent='Copy pitch'; }, 1200); }
+      toast('Pitch copied');
+    }
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(ok).catch(function(){ fallback(); });
+    } else { fallback(); }
+    function fallback(){
+      var ta=document.createElement('textarea'); ta.value=text; document.body.appendChild(ta); ta.select();
+      try{ document.execCommand('copy'); ok(); } catch(e){ toast('Copy failed'); }
+      document.body.removeChild(ta);
+    }
+  }
+
+  function cmp(a,b,key){
+    var av=a[key], bv=b[key];
+    if(key==='email'){
+      var ae=(av||'').trim(), be=(bv||'').trim();
+      if(!ae && !be) return String(a.outlet||'').localeCompare(String(b.outlet||''));
+      if(!ae) return 1;  // empty last
+      if(!be) return -1;
+      var c=ae.toLowerCase().localeCompare(be.toLowerCase());
+      return c || String(a.outlet||'').localeCompare(String(b.outlet||''));
+    }
+    av=(av==null?'':String(av)).toLowerCase();
+    bv=(bv==null?'':String(bv)).toLowerCase();
+    if(av<bv) return -1; if(av>bv) return 1;
+    return String(a.outlet||'').localeCompare(String(b.outlet||''));
+  }
+
+  function applySort(){
+    VIEW.sort(function(a,b){ return cmp(a,b,sortKey)*sortDir; });
+  }
+
+  function filter(){
+    var q=(document.getElementById('q').value||'').trim().toLowerCase();
+    var who=document.getElementById('who-f').value;
+    var mail=document.getElementById('mail-f').value;
+    VIEW=ALL.filter(function(r){
+      if(who && r.who!==who) return false;
+      var has=!!(r.email||'').trim();
+      if(mail==='yes' && !has) return false;
+      if(mail==='no' && has) return false;
+      if(!q) return true;
+      var blob=[r.outlet,r.lane,r.email,r.who,r.next,r.pitch].join(' ').toLowerCase();
+      return blob.indexOf(q)>=0;
+    });
+    applySort();
+    render();
+  }
+
+  function updateHeaders(){
+    document.querySelectorAll('#buzz-table th').forEach(function(th){
+      var k=th.getAttribute('data-key');
+      var arrow=th.querySelector('.arrow');
+      if(k===sortKey){
+        th.classList.add('active');
+        arrow.textContent=sortDir>0?'▲':'▼';
+      } else {
+        th.classList.remove('active');
+        arrow.textContent='↕';
+      }
+    });
+  }
+
+  function render(){
+    updateHeaders();
+    var tb=document.getElementById('tbody');
+    tb.innerHTML='';
+    VIEW.forEach(function(r, idx){
+      var tr=document.createElement('tr');
+      var emailCell;
+      if(r.email){
+        emailCell='<a href="'+mailtoHref(r.email,r.subject,r.pitch)+'">'+esc(r.email)+'</a>';
+      } else {
+        emailCell='<span class="email-empty">— form/path</span>';
+        if(r.path) emailCell+='<div><a href="'+esc(r.path)+'" target="_blank" rel="noopener">'+(esc(r.path_label||'Open path'))+'</a></div>';
+      }
+      var acts='<div class="acts">';
+      acts+='<button type="button" class="btn copy" data-i="'+idx+'">Copy pitch</button>';
+      if(r.email){
+        acts+='<a class="btn mail" href="'+mailtoHref(r.email,r.subject,r.pitch)+'">Mailto</a>';
+      } else if(r.path){
+        acts+='<a class="btn mail" href="'+esc(r.path)+'" target="_blank" rel="noopener">Open form</a>';
+      }
+      acts+='</div>';
+      tr.innerHTML=
+        '<td><b>'+esc(r.outlet)+'</b>'+(r.path && r.email?'<div class="lane"><a href="'+esc(r.path)+'" target="_blank" rel="noopener">'+(esc(r.path_label||'Link'))+'</a></div>':'')+'</td>'+
+        '<td><span class="lane">'+esc(r.lane||'')+'</span></td>'+
+        '<td>'+emailCell+'</td>'+
+        '<td><div class="pitch">'+esc(r.pitch||'')+'</div>'+acts+'</td>'+
+        '<td><span class="tag '+whoClass(r.who)+'">'+esc(r.who||'')+'</span></td>'+
+        '<td class="next">'+esc(r.next||'')+'</td>';
+      tb.appendChild(tr);
+    });
+    tb.querySelectorAll('button.copy').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var i=+btn.getAttribute('data-i');
+        var row=VIEW[i];
+        if(row) copyText(row.pitch, btn);
+      });
+    });
+  }
+
+  function esc(s){
+    return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  document.querySelectorAll('#buzz-table th').forEach(function(th){
+    th.addEventListener('click', function(){
+      var k=th.getAttribute('data-key');
+      if(k===sortKey) sortDir*=-1;
+      else { sortKey=k; sortDir=1; }
+      applySort();
+      render();
+    });
+  });
+  document.getElementById('q').addEventListener('input', filter);
+  document.getElementById('who-f').addEventListener('change', filter);
+  document.getElementById('mail-f').addEventListener('change', filter);
+
+  async function boot(){
+    try{
+      var res=await fetch('data/jax_local_buzz.json',{cache:'no-store'});
+      if(!res.ok) throw new Error('HTTP '+res.status);
+      var d=await res.json();
+      ALL=d.outlets||[];
+      document.getElementById('k-rows').textContent=ALL.length;
+      var withMail=ALL.filter(function(o){return !!(o.email||'').trim();}).length;
+      document.getElementById('k-mail').textContent=withMail;
+      document.getElementById('k-form').textContent=ALL.length-withMail;
+      if(d.as_of) document.getElementById('asof').textContent=d.as_of+' ET';
+      document.getElementById('src-note').textContent=
+        'Data: data/jax_local_buzz.json · '+ALL.length+' rows · '+withMail+' mailto · rule: '+(d.rule||'no invented emails');
+      filter();
+    }catch(e){
+      document.getElementById('src-note').textContent='Load failed: '+e+' — serve via http or check data/jax_local_buzz.json';
+    }
+  }
+  boot();
+})();
+</script>
 </div></body></html>
