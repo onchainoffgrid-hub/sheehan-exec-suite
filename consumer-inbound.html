@@ -76,6 +76,12 @@ a.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
 .filters.purchase button.on.not_seen{border-color:#5b8cff88;background:#1a2030;color:#9ec1ff}
 .filters.purchase button.on.unknown{border-color:#ffb02088;background:#2a2416;color:var(--warn)}
 .ev{font-size:.68rem;color:var(--muted);margin-top:2px}
+
+.badge.hubspot{background:#1a1628;color:#c4b5fd;border-color:#a78bfa88}
+.badge.hubspot_no{background:#121a2b;color:#6b7a94;border-color:#2a3550}
+.filters.hubspot{margin-top:4px}
+.filters.hubspot button.on.yes{border-color:#a78bfa88;background:#1a1628;color:#c4b5fd}
+.filters.hubspot button.on.no{border-color:#5b8cff66;background:#1a2030;color:#9aa8c0}
 </style></head>
 <body><div class="wrap">
 
@@ -122,6 +128,8 @@ a.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
   <div class="kpi good"><div class="l">Bought</div><div class="v" id="k-bought">—</div><div class="s" id="k-bought-s">cross-ref hit</div></div>
   <div class="kpi"><div class="l">Not seen</div><div class="v" id="k-notseen">—</div><div class="s" id="k-notseen-s">no purchase hit</div></div>
   <div class="kpi warn"><div class="l">Unknown</div><div class="v" id="k-unknown">—</div><div class="s" id="k-unknown-s">calendar/booking only</div></div>
+
+  <div class="kpi violet"><div class="l">HubSpot CSV</div><div class="v" id="k-hs">—</div><div class="s" id="k-hs-s">upload-ready listed</div></div>
 </div>
 
 <div class="card" id="card-people">
@@ -140,6 +148,12 @@ a.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
     <button type="button" class="bought" data-purchase="bought">Bought</button>
     <button type="button" class="not_seen" data-purchase="not_seen">Not seen</button>
     <button type="button" class="unknown" data-purchase="unknown">Unknown</button>
+  </div>
+
+  <div class="filters hubspot" id="filters-hubspot">
+    <button type="button" class="on" data-hubspot="all">All HubSpot</button>
+    <button type="button" class="yes" data-hubspot="yes">HubSpot CSV</button>
+    <button type="button" class="no" data-hubspot="no">Not in CSV</button>
   </div>
   <div class="scroll">
     <table>
@@ -252,11 +266,14 @@ a.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
   var ALL = [];
   var FILTER = 'all';
   var PFILTER = 'all';
+  var HFILTER = 'all';
   function purchaseBadge(c){
     var st = c.purchase_status || 'unknown';
     var label = st === 'bought' ? 'Bought' : (st === 'not_seen' ? 'Not seen' : 'Unknown');
     var html = '<span class="badge '+st+'">'+esc(label)+'</span>';
     if(c.match_confidence === 'low') html += ' <span class="badge lowconf">low conf</span>';
+    if(c.hubspot_listed) html += ' <span class="badge hubspot">HubSpot CSV</span>';
+    else html += ' <span class="badge hubspot_no">not in CSV</span>';
     var bits = [];
     if(c.amount != null) bits.push('$'+Number(c.amount).toLocaleString(undefined,{maximumFractionDigits:2}));
     if(c.last_paid_or_booked) bits.push(c.last_paid_or_booked);
@@ -268,6 +285,8 @@ a.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
     var list = ALL.filter(function(c){
       if(FILTER!=='all' && c.bucket!==FILTER) return false;
       if(PFILTER!=='all' && (c.purchase_status||'unknown')!==PFILTER) return false;
+      if(HFILTER==='yes' && !c.hubspot_listed) return false;
+      if(HFILTER==='no' && c.hubspot_listed) return false;
       return true;
     });
     document.getElementById('tag-people').textContent = list.length+' contacts';
@@ -285,7 +304,7 @@ a.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
       if(c.phone) actionBtns += '<a class="btn sec" href="'+esc(tel)+'">Call</a>';
       actionBtns += '</div>';
       if(c.next_action) actionBtns += '<div class="path" style="margin-top:4px">'+esc(c.next_action)+'</div>';
-      return '<tr data-bucket="'+esc(c.bucket||'')+'" data-purchase="'+esc(c.purchase_status||'unknown')+'">'+
+      return '<tr data-bucket="'+esc(c.bucket||'')+'" data-purchase="'+esc(c.purchase_status||'unknown')+'" data-hubspot="'+(c.hubspot_listed?'yes':'no')+'">'+
         '<td class="namecell"><b>'+esc(c.name||'')+'</b> '+statusBadge(c.status)+
           (c.date?'<div class="path">'+esc(c.date)+'</div>':'')+
           (c.bucket?'<div class="path">'+esc(c.bucket)+'</div>':'')+
@@ -323,6 +342,10 @@ a.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
     document.getElementById('k-notseen-s').textContent = 'no hit in indexed sources';
     document.getElementById('k-unknown').textContent = k.purchase_unknown != null ? k.purchase_unknown : (pxc.unknown != null ? pxc.unknown : '—');
     document.getElementById('k-unknown-s').textContent = 'calendar/booking without pay proof';
+    var hx = d.hubspot_crossref || {};
+    var hxc = hx.counts || {};
+    document.getElementById('k-hs').textContent = k.hubspot_listed != null ? k.hubspot_listed : (hxc.hubspot_listed != null ? hxc.hubspot_listed : '—');
+    document.getElementById('k-hs-s').textContent = (k.hubspot_note || hx.note || 'upload-ready CSV only') + (hxc.hubspot_not_listed != null ? (' · '+hxc.hubspot_not_listed+' not in CSV') : '');
 
     var b = d.buckets||{};
     document.getElementById('tag-interest').textContent = ((b.interest_forms||[]).length)+' forms';
@@ -355,17 +378,21 @@ a.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
     renderPeople();
     var cc = d.contact_counts||{};
     var pxc2 = (d.purchase_crossref||{}).counts || {};
+    var hxc2 = (d.hubspot_crossref||{}).counts || {};
     document.getElementById('people-note').textContent =
       'Real emails/phones only · '+ALL.length+' mailto · Bought '+(pxc2.bought!=null?pxc2.bought:(k.purchase_bought||0))+
       ' · Not seen '+(pxc2.not_seen!=null?pxc2.not_seen:(k.purchase_not_seen||0))+
       ' · Unknown '+(pxc2.unknown!=null?pxc2.unknown:(k.purchase_unknown||0))+
-      ' · Summer '+(cc.summer_interest||0)+' · GoDaddy '+(cc.godaddy||0)+' · Critter '+(cc.critter_club||0)+
-      '. Never invent purchases.';
+      ' · HubSpot CSV '+(hxc2.hubspot_listed!=null?hxc2.hubspot_listed:(k.hubspot_listed||0))+
+      '/'+(hxc2.hubspot_not_listed!=null?hxc2.hubspot_not_listed:(k.hubspot_not_listed||0))+' not · Summer '+(cc.summer_interest||0)+
+      '. Never invent purchases or live HubSpot status.';
     var srcUsed = ((d.purchase_crossref||{}).sources_used||[]).map(function(s){ return s.id; }).join(', ');
-    var srcGaps = ((d.purchase_crossref||{}).gaps||[]).slice(0,4).join(' · ');
+    var hsPaths = ((d.hubspot_crossref||{}).sources_used||[]).map(function(s){ return s.id; }).join(', ');
+    var srcGaps = ((d.purchase_crossref||{}).gaps||[]).slice(0,3).join(' · ');
     document.getElementById('src-note').textContent =
-      'Data: data/consumer_inbound.json · Purchase sources: '+(srcUsed||'PayPal names, harvest emails, live calendar, website autobooks')+
-      ' · Gaps: '+(srcGaps||'VyStar not used; calendar dumps were empty — live MCP used')+
+      'Data: data/consumer_inbound.json · Purchase: '+(srcUsed||'PayPal, harvest, calendar, autobooks')+
+      ' · HubSpot CSVs: '+(hsPaths||'HubSpot-Ready / P1 / P2 / Summer / INBOUND_MERGE')+
+      ' · Gaps: '+(srcGaps||'VyStar unused; HubSpot=CSV only not live CRM')+
       ' · '+(d.note||'')+' · Built '+(d.as_of||'');
     document.getElementById('filters').addEventListener('click', function(ev){
       var btn = ev.target.closest('button[data-bucket]');
@@ -379,6 +406,13 @@ a.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
       if(!btn) return;
       PFILTER = btn.getAttribute('data-purchase');
       Array.prototype.forEach.call(document.querySelectorAll('#filters-purchase button'), function(b){ b.classList.toggle('on', b===btn); });
+      renderPeople();
+    });
+    document.getElementById('filters-hubspot').addEventListener('click', function(ev){
+      var btn = ev.target.closest('button[data-hubspot]');
+      if(!btn) return;
+      HFILTER = btn.getAttribute('data-hubspot');
+      Array.prototype.forEach.call(document.querySelectorAll('#filters-hubspot button'), function(b){ b.classList.toggle('on', b===btn); });
       renderPeople();
     });
   }

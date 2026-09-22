@@ -56,7 +56,10 @@
     "purchase_bought": 43,
     "purchase_not_seen": 88,
     "purchase_unknown": 26,
-    "purchase_note": "Cross-ref PayPal names + harvest emails + live calendar + website autobooks \u00b7 VyStar unused"
+    "purchase_note": "Cross-ref PayPal names + harvest emails + live calendar + website autobooks \u00b7 VyStar unused",
+    "hubspot_listed": 118,
+    "hubspot_not_listed": 39,
+    "hubspot_note": "In HubSpot-ready upload CSVs only \u2014 not live CRM status"
   },
   "contact_counts": {
     "summer_interest": 33,
@@ -196,7 +199,8 @@
     "1 Summer Scholars row (Amanda Lawrence) had no valid email \u2014 omitted from mailto table",
     "Purchase cross-ref: VyStar not used; PayPal name-only (no emails)",
     "Purchase cross-ref: website Booking Confirmed emails truncated \u2014 name match only",
-    "Purchase cross-ref: bookings_pipeline paid status often OPEN/unknown"
+    "Purchase cross-ref: bookings_pipeline paid status often OPEN/unknown",
+    "HubSpot cross-ref: upload-ready CSV presence only (not live CRM)"
   ],
   "contacts": [
     {
@@ -211,10 +215,33 @@
       "next_action": "Reply \u00b7 convert deposit",
       "status": "interest",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p2_warm",
+        "hubspot_summer_scholars",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_inbound_merge:WARM_P2",
+        "hubspot_p1_p2_combined",
+        "hubspot_p2_warm",
+        "hubspot_ready_prioritized",
+        "hubspot_summer_scholars"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "Yes",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "2",
+        "Lifecyclestage": "lead",
+        "Lead_Status": "Lead"
+      }
     },
     {
       "bucket": "summer_interest",
@@ -228,10 +255,33 @@
       "next_action": "Reply \u00b7 convert deposit",
       "status": "interest",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p2_warm",
+        "hubspot_summer_scholars",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_inbound_merge:WARM_P2",
+        "hubspot_p1_p2_combined",
+        "hubspot_p2_warm",
+        "hubspot_ready_prioritized",
+        "hubspot_summer_scholars"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "Yes",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "2",
+        "Lifecyclestage": "lead",
+        "Lead_Status": "Lead"
+      }
     },
     {
       "bucket": "summer_interest",
@@ -245,10 +295,33 @@
       "next_action": "Reply \u00b7 convert deposit",
       "status": "interest",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p2_warm",
+        "hubspot_summer_scholars",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_inbound_merge:WARM_P2",
+        "hubspot_p1_p2_combined",
+        "hubspot_p2_warm",
+        "hubspot_ready_prioritized",
+        "hubspot_summer_scholars"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "Yes",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "2",
+        "Lifecyclestage": "lead",
+        "Lead_Status": "Lead"
+      }
     },
     {
       "bucket": "summer_interest",
@@ -262,10 +335,33 @@
       "next_action": "Reply \u00b7 convert deposit",
       "status": "interest",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p2_warm",
+        "hubspot_summer_scholars",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_inbound_merge:WARM_P2",
+        "hubspot_p1_p2_combined",
+        "hubspot_p2_warm",
+        "hubspot_ready_prioritized",
+        "hubspot_summer_scholars"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "Yes",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "2",
+        "Lifecyclestage": "lead",
+        "Lead_Status": "Lead"
+      }
     },
     {
       "bucket": "summer_interest",
@@ -280,11 +376,33 @@
       "status": "interest",
       "purchase_status": "unknown",
       "evidence": [
-        "payment_mention"
+        "payment_mention",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_summer_scholars",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized",
+        "hubspot_summer_scholars"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "summer_interest",
@@ -298,10 +416,33 @@
       "next_action": "Reply \u00b7 convert deposit",
       "status": "interest",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p2_warm",
+        "hubspot_summer_scholars",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_inbound_merge:WARM_P2",
+        "hubspot_p1_p2_combined",
+        "hubspot_p2_warm",
+        "hubspot_ready_prioritized",
+        "hubspot_summer_scholars"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "Yes",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "2",
+        "Lifecyclestage": "lead",
+        "Lead_Status": "Lead"
+      }
     },
     {
       "bucket": "summer_interest",
@@ -315,10 +456,24 @@
       "next_action": "Reply \u00b7 convert deposit",
       "status": "interest",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_summer_scholars",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_summer_scholars"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "Yes",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "2"
+      }
     },
     {
       "bucket": "summer_interest",
@@ -332,10 +487,33 @@
       "next_action": "Reply \u00b7 convert deposit",
       "status": "interest",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p2_warm",
+        "hubspot_summer_scholars",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_inbound_merge:WARM_P2",
+        "hubspot_p1_p2_combined",
+        "hubspot_p2_warm",
+        "hubspot_ready_prioritized",
+        "hubspot_summer_scholars"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "Yes",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "2",
+        "Lifecyclestage": "lead",
+        "Lead_Status": "Lead"
+      }
     },
     {
       "bucket": "summer_interest",
@@ -349,10 +527,33 @@
       "next_action": "Reply \u00b7 convert deposit",
       "status": "interest",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p2_warm",
+        "hubspot_summer_scholars",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_inbound_merge:WARM_P2",
+        "hubspot_p1_p2_combined",
+        "hubspot_p2_warm",
+        "hubspot_ready_prioritized",
+        "hubspot_summer_scholars"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "Yes",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "2",
+        "Lifecyclestage": "lead",
+        "Lead_Status": "Lead"
+      }
     },
     {
       "bucket": "summer_interest",
@@ -366,10 +567,33 @@
       "next_action": "Reply \u00b7 convert deposit",
       "status": "interest",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p2_warm",
+        "hubspot_summer_scholars",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_inbound_merge:WARM_P2",
+        "hubspot_p1_p2_combined",
+        "hubspot_p2_warm",
+        "hubspot_ready_prioritized",
+        "hubspot_summer_scholars"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "Yes",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "2",
+        "Lifecyclestage": "lead",
+        "Lead_Status": "Lead"
+      }
     },
     {
       "bucket": "summer_interest",
@@ -383,10 +607,33 @@
       "next_action": "Reply \u00b7 convert deposit",
       "status": "interest",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p2_warm",
+        "hubspot_summer_scholars",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_inbound_merge:WARM_P2",
+        "hubspot_p1_p2_combined",
+        "hubspot_p2_warm",
+        "hubspot_ready_prioritized",
+        "hubspot_summer_scholars"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "Yes",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "2",
+        "Lifecyclestage": "lead",
+        "Lead_Status": "Lead"
+      }
     },
     {
       "bucket": "summer_interest",
@@ -400,10 +647,33 @@
       "next_action": "Reply \u00b7 convert deposit",
       "status": "interest",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p2_warm",
+        "hubspot_summer_scholars",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_inbound_merge:WARM_P2",
+        "hubspot_p1_p2_combined",
+        "hubspot_p2_warm",
+        "hubspot_ready_prioritized",
+        "hubspot_summer_scholars"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "Yes",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "2",
+        "Lifecyclestage": "lead",
+        "Lead_Status": "Lead"
+      }
     },
     {
       "bucket": "summer_interest",
@@ -417,10 +687,33 @@
       "next_action": "Reply \u00b7 convert deposit",
       "status": "interest",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p2_warm",
+        "hubspot_summer_scholars",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_inbound_merge:WARM_P2",
+        "hubspot_p1_p2_combined",
+        "hubspot_p2_warm",
+        "hubspot_ready_prioritized",
+        "hubspot_summer_scholars"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "Yes",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "2",
+        "Lifecyclestage": "lead",
+        "Lead_Status": "Lead"
+      }
     },
     {
       "bucket": "summer_interest",
@@ -434,10 +727,33 @@
       "next_action": "Reply \u00b7 convert deposit",
       "status": "interest",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p2_warm",
+        "hubspot_summer_scholars",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_inbound_merge:WARM_P2",
+        "hubspot_p1_p2_combined",
+        "hubspot_p2_warm",
+        "hubspot_ready_prioritized",
+        "hubspot_summer_scholars"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "Yes",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "2",
+        "Lifecyclestage": "lead",
+        "Lead_Status": "Lead"
+      }
     },
     {
       "bucket": "summer_interest",
@@ -451,10 +767,33 @@
       "next_action": "Reply \u00b7 convert deposit",
       "status": "interest",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p2_warm",
+        "hubspot_summer_scholars",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_inbound_merge:WARM_P2",
+        "hubspot_p1_p2_combined",
+        "hubspot_p2_warm",
+        "hubspot_ready_prioritized",
+        "hubspot_summer_scholars"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "Yes",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "2",
+        "Lifecyclestage": "lead",
+        "Lead_Status": "Lead"
+      }
     },
     {
       "bucket": "summer_interest",
@@ -468,10 +807,33 @@
       "next_action": "Reply \u00b7 convert deposit",
       "status": "interest",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p2_warm",
+        "hubspot_summer_scholars",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_inbound_merge:WARM_P2",
+        "hubspot_p1_p2_combined",
+        "hubspot_p2_warm",
+        "hubspot_ready_prioritized",
+        "hubspot_summer_scholars"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "Yes",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "2",
+        "Lifecyclestage": "lead",
+        "Lead_Status": "Lead"
+      }
     },
     {
       "bucket": "summer_interest",
@@ -485,10 +847,33 @@
       "next_action": "Reply \u00b7 convert deposit",
       "status": "interest",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p2_warm",
+        "hubspot_summer_scholars",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_inbound_merge:WARM_P2",
+        "hubspot_p1_p2_combined",
+        "hubspot_p2_warm",
+        "hubspot_ready_prioritized",
+        "hubspot_summer_scholars"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "Yes",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "2",
+        "Lifecyclestage": "lead",
+        "Lead_Status": "Lead"
+      }
     },
     {
       "bucket": "summer_interest",
@@ -502,10 +887,33 @@
       "next_action": "Reply \u00b7 convert deposit",
       "status": "interest",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p2_warm",
+        "hubspot_summer_scholars",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_inbound_merge:WARM_P2",
+        "hubspot_p1_p2_combined",
+        "hubspot_p2_warm",
+        "hubspot_ready_prioritized",
+        "hubspot_summer_scholars"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "Yes",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "2",
+        "Lifecyclestage": "lead",
+        "Lead_Status": "Lead"
+      }
     },
     {
       "bucket": "summer_interest",
@@ -520,11 +928,33 @@
       "status": "interest",
       "purchase_status": "unknown",
       "evidence": [
-        "payment_mention"
+        "payment_mention",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_summer_scholars",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized",
+        "hubspot_summer_scholars"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "summer_interest",
@@ -539,11 +969,33 @@
       "status": "interest",
       "purchase_status": "unknown",
       "evidence": [
-        "payment_mention"
+        "payment_mention",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_summer_scholars",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized",
+        "hubspot_summer_scholars"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "summer_interest",
@@ -557,10 +1009,33 @@
       "next_action": "Reply \u00b7 convert deposit",
       "status": "interest",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p2_warm",
+        "hubspot_summer_scholars",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_inbound_merge:WARM_P2",
+        "hubspot_p1_p2_combined",
+        "hubspot_p2_warm",
+        "hubspot_ready_prioritized",
+        "hubspot_summer_scholars"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "Yes",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "2",
+        "Lifecyclestage": "lead",
+        "Lead_Status": "Lead"
+      }
     },
     {
       "bucket": "summer_interest",
@@ -574,10 +1049,24 @@
       "next_action": "Reply \u00b7 convert deposit",
       "status": "interest",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_summer_scholars",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_summer_scholars"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "Yes",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "2"
+      }
     },
     {
       "bucket": "summer_interest",
@@ -591,10 +1080,33 @@
       "next_action": "Reply \u00b7 convert deposit",
       "status": "interest",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p2_warm",
+        "hubspot_summer_scholars",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_inbound_merge:WARM_P2",
+        "hubspot_p1_p2_combined",
+        "hubspot_p2_warm",
+        "hubspot_ready_prioritized",
+        "hubspot_summer_scholars"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "Yes",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "2",
+        "Lifecyclestage": "lead",
+        "Lead_Status": "Lead"
+      }
     },
     {
       "bucket": "summer_interest",
@@ -608,10 +1120,33 @@
       "next_action": "Reply \u00b7 convert deposit",
       "status": "interest",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p2_warm",
+        "hubspot_summer_scholars",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_inbound_merge:WARM_P2",
+        "hubspot_p1_p2_combined",
+        "hubspot_p2_warm",
+        "hubspot_ready_prioritized",
+        "hubspot_summer_scholars"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "Yes",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "2",
+        "Lifecyclestage": "lead",
+        "Lead_Status": "Lead"
+      }
     },
     {
       "bucket": "summer_interest",
@@ -625,10 +1160,33 @@
       "next_action": "Reply \u00b7 convert deposit",
       "status": "interest",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p2_warm",
+        "hubspot_summer_scholars",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_inbound_merge:WARM_P2",
+        "hubspot_p1_p2_combined",
+        "hubspot_p2_warm",
+        "hubspot_ready_prioritized",
+        "hubspot_summer_scholars"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "Yes",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "2",
+        "Lifecyclestage": "lead",
+        "Lead_Status": "Lead"
+      }
     },
     {
       "bucket": "summer_interest",
@@ -642,10 +1200,24 @@
       "next_action": "Reply \u00b7 convert deposit",
       "status": "interest",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_summer_scholars",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_summer_scholars"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "Yes",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "2"
+      }
     },
     {
       "bucket": "summer_interest",
@@ -660,11 +1232,33 @@
       "status": "interest",
       "purchase_status": "unknown",
       "evidence": [
-        "payment_mention"
+        "payment_mention",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_summer_scholars",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized",
+        "hubspot_summer_scholars"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "summer_interest",
@@ -678,10 +1272,33 @@
       "next_action": "Reply \u00b7 convert deposit",
       "status": "interest",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p2_warm",
+        "hubspot_summer_scholars",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_inbound_merge:WARM_P2",
+        "hubspot_p1_p2_combined",
+        "hubspot_p2_warm",
+        "hubspot_ready_prioritized",
+        "hubspot_summer_scholars"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "Yes",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "2",
+        "Lifecyclestage": "lead",
+        "Lead_Status": "Lead"
+      }
     },
     {
       "bucket": "summer_interest",
@@ -695,10 +1312,33 @@
       "next_action": "Reply \u00b7 convert deposit",
       "status": "interest",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p2_warm",
+        "hubspot_summer_scholars",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_inbound_merge:WARM_P2",
+        "hubspot_p1_p2_combined",
+        "hubspot_p2_warm",
+        "hubspot_ready_prioritized",
+        "hubspot_summer_scholars"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "Yes",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "2",
+        "Lifecyclestage": "lead",
+        "Lead_Status": "Lead"
+      }
     },
     {
       "bucket": "summer_interest",
@@ -712,10 +1352,33 @@
       "next_action": "Reply \u00b7 convert deposit",
       "status": "interest",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p2_warm",
+        "hubspot_summer_scholars",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_inbound_merge:WARM_P2",
+        "hubspot_p1_p2_combined",
+        "hubspot_p2_warm",
+        "hubspot_ready_prioritized",
+        "hubspot_summer_scholars"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "Yes",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "2",
+        "Lifecyclestage": "lead",
+        "Lead_Status": "Lead"
+      }
     },
     {
       "bucket": "summer_interest",
@@ -729,10 +1392,33 @@
       "next_action": "Reply \u00b7 convert deposit",
       "status": "interest",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p2_warm",
+        "hubspot_summer_scholars",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_inbound_merge:WARM_P2",
+        "hubspot_p1_p2_combined",
+        "hubspot_p2_warm",
+        "hubspot_ready_prioritized",
+        "hubspot_summer_scholars"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "Yes",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "2",
+        "Lifecyclestage": "lead",
+        "Lead_Status": "Lead"
+      }
     },
     {
       "bucket": "summer_interest",
@@ -746,10 +1432,33 @@
       "next_action": "Reply \u00b7 convert deposit",
       "status": "interest",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p2_warm",
+        "hubspot_summer_scholars",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_inbound_merge:WARM_P2",
+        "hubspot_p1_p2_combined",
+        "hubspot_p2_warm",
+        "hubspot_ready_prioritized",
+        "hubspot_summer_scholars"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "Yes",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "2",
+        "Lifecyclestage": "lead",
+        "Lead_Status": "Lead"
+      }
     },
     {
       "bucket": "summer_interest",
@@ -763,10 +1472,33 @@
       "next_action": "Reply \u00b7 convert deposit",
       "status": "interest",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p2_warm",
+        "hubspot_summer_scholars",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_inbound_merge:WARM_P2",
+        "hubspot_p1_p2_combined",
+        "hubspot_p2_warm",
+        "hubspot_ready_prioritized",
+        "hubspot_summer_scholars"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "Yes",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "2",
+        "Lifecyclestage": "lead",
+        "Lead_Status": "Lead"
+      }
     },
     {
       "bucket": "godaddy",
@@ -781,10 +1513,19 @@
       "next_action": "Reply via mailto or GoDaddy Conversations",
       "status": "inbound",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_inbound_merge:INBOUND_NEW"
+      ]
     },
     {
       "bucket": "godaddy",
@@ -802,11 +1543,31 @@
       "evidence": [
         "invoice_paid",
         "booking_thread",
-        "calendar_event"
+        "calendar_event",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": "2026-10-23",
       "amount": 528.94,
-      "match_confidence": "high"
+      "match_confidence": "high",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "godaddy",
@@ -821,10 +1582,19 @@
       "next_action": "Reply via mailto or GoDaddy Conversations",
       "status": "inbound",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_inbound_merge:INBOUND_NEW"
+      ]
     },
     {
       "bucket": "godaddy",
@@ -841,11 +1611,31 @@
       "purchase_status": "unknown",
       "evidence": [
         "payment_mention",
-        "calendar_event"
+        "calendar_event",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": null,
       "amount": 248.88,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "godaddy",
@@ -862,11 +1652,31 @@
       "purchase_status": "bought",
       "evidence": [
         "calendar_event",
-        "website_autobook"
+        "website_autobook",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": "2026-08-17",
       "amount": 50.0,
-      "match_confidence": "high"
+      "match_confidence": "high",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "godaddy",
@@ -881,10 +1691,19 @@
       "next_action": "Reply via mailto or GoDaddy Conversations",
       "status": "inbound",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_inbound_merge:INBOUND_NEW"
+      ]
     },
     {
       "bucket": "godaddy",
@@ -899,10 +1718,19 @@
       "next_action": "Reply via mailto or GoDaddy Conversations",
       "status": "inbound",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_inbound_merge:INBOUND_NEW"
+      ]
     },
     {
       "bucket": "godaddy",
@@ -917,10 +1745,31 @@
       "next_action": "Reply via mailto or GoDaddy Conversations",
       "status": "inbound",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p2_warm",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_inbound_merge:WARM_P2",
+        "hubspot_p1_p2_combined",
+        "hubspot_p2_warm",
+        "hubspot_ready_prioritized"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "Yes",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "2",
+        "Lifecyclestage": "lead",
+        "Lead_Status": "Lead"
+      }
     },
     {
       "bucket": "godaddy",
@@ -936,11 +1785,25 @@
       "status": "inbound",
       "purchase_status": "unknown",
       "evidence": [
-        "booking_thread"
+        "booking_thread",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_ready_prioritized"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "6"
+      }
     },
     {
       "bucket": "godaddy",
@@ -955,10 +1818,19 @@
       "next_action": "Reply via mailto or GoDaddy Conversations",
       "status": "inbound",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_inbound_merge:INBOUND_NEW"
+      ]
     },
     {
       "bucket": "godaddy",
@@ -973,10 +1845,25 @@
       "next_action": "Reply via mailto or GoDaddy Conversations",
       "status": "inbound",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_ready_prioritized"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "4"
+      }
     },
     {
       "bucket": "godaddy",
@@ -995,11 +1882,33 @@
         "prior_customer",
         "invoice_paid",
         "calendar_event",
-        "booking_thread"
+        "booking_thread",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": null,
       "amount": 104.94,
-      "match_confidence": "high"
+      "match_confidence": "high",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized",
+        "leads_all_hubspot",
+        "leads_hubspot_contacts"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "godaddy",
@@ -1014,10 +1923,19 @@
       "next_action": "Reply via mailto or GoDaddy Conversations",
       "status": "inbound",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_inbound_merge:INBOUND_NEW"
+      ]
     },
     {
       "bucket": "godaddy",
@@ -1032,10 +1950,19 @@
       "next_action": "Reply via mailto or GoDaddy Conversations",
       "status": "inbound",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_inbound_merge:INBOUND_NEW"
+      ]
     },
     {
       "bucket": "godaddy",
@@ -1051,11 +1978,25 @@
       "status": "inbound",
       "purchase_status": "unknown",
       "evidence": [
-        "booking_thread"
+        "booking_thread",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_ready_prioritized"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "6"
+      }
     },
     {
       "bucket": "godaddy",
@@ -1070,10 +2011,19 @@
       "next_action": "Reply via mailto or GoDaddy Conversations",
       "status": "inbound",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_inbound_merge:INBOUND_NEW"
+      ]
     },
     {
       "bucket": "godaddy",
@@ -1093,14 +2043,36 @@
         "invoice_paid",
         "calendar_event",
         "booking_thread",
-        "paypal_customer"
+        "paypal_customer",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": null,
       "amount": 492.71,
       "match_confidence": "high",
       "match_notes": [
         "paypal via paypal_2026_top_payer"
-      ]
+      ],
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized",
+        "leads_all_hubspot",
+        "leads_hubspot_contacts"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "godaddy",
@@ -1115,10 +2087,19 @@
       "next_action": "Reply via mailto or GoDaddy Conversations",
       "status": "inbound",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_inbound_merge:INBOUND_NEW"
+      ]
     },
     {
       "bucket": "godaddy",
@@ -1136,7 +2117,8 @@
       "evidence": [],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": false
     },
     {
       "bucket": "godaddy",
@@ -1151,10 +2133,25 @@
       "next_action": "Reply via mailto or GoDaddy Conversations",
       "status": "inbound",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_ready_prioritized"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "4"
+      }
     },
     {
       "bucket": "godaddy",
@@ -1172,7 +2169,8 @@
       "evidence": [],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": false
     },
     {
       "bucket": "godaddy",
@@ -1190,7 +2188,8 @@
       "evidence": [],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": false
     },
     {
       "bucket": "godaddy",
@@ -1208,7 +2207,8 @@
       "evidence": [],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": false
     },
     {
       "bucket": "godaddy",
@@ -1226,7 +2226,8 @@
       "evidence": [],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": false
     },
     {
       "bucket": "godaddy",
@@ -1244,11 +2245,33 @@
       "evidence": [
         "prior_customer",
         "invoice_paid",
-        "calendar_event"
+        "calendar_event",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": null,
       "amount": 253.88,
-      "match_confidence": "high"
+      "match_confidence": "high",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized",
+        "leads_all_hubspot",
+        "leads_hubspot_contacts"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "godaddy",
@@ -1263,10 +2286,25 @@
       "next_action": "Reply via mailto or GoDaddy Conversations",
       "status": "inbound",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_ready_prioritized"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "4"
+      }
     },
     {
       "bucket": "godaddy",
@@ -1281,10 +2319,25 @@
       "next_action": "Reply via mailto or GoDaddy Conversations",
       "status": "inbound",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_ready_prioritized"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "4"
+      }
     },
     {
       "bucket": "godaddy",
@@ -1302,7 +2355,8 @@
       "evidence": [],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": false
     },
     {
       "bucket": "godaddy",
@@ -1317,10 +2371,19 @@
       "next_action": "Reply via mailto or GoDaddy Conversations",
       "status": "inbound",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_inbound_merge:INBOUND_NEW"
+      ]
     },
     {
       "bucket": "godaddy",
@@ -1339,11 +2402,33 @@
         "prior_customer",
         "invoice_paid",
         "calendar_event",
-        "booking_thread"
+        "booking_thread",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": "2026-03-13",
       "amount": null,
-      "match_confidence": "high"
+      "match_confidence": "high",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized",
+        "leads_all_hubspot",
+        "leads_hubspot_contacts"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "godaddy",
@@ -1361,7 +2446,8 @@
       "evidence": [],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": false
     },
     {
       "bucket": "godaddy",
@@ -1377,11 +2463,25 @@
       "status": "inbound",
       "purchase_status": "unknown",
       "evidence": [
-        "booking_thread"
+        "booking_thread",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_ready_prioritized"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "6"
+      }
     },
     {
       "bucket": "godaddy",
@@ -1399,7 +2499,8 @@
       "evidence": [],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": false
     },
     {
       "bucket": "godaddy",
@@ -1419,14 +2520,36 @@
         "invoice_paid",
         "calendar_event",
         "booking_thread",
-        "paypal_customer"
+        "paypal_customer",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": "2025-12-21",
       "amount": 288.25,
       "match_confidence": "high",
       "match_notes": [
         "paypal via paypal_customers_h2"
-      ]
+      ],
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized",
+        "leads_all_hubspot",
+        "leads_hubspot_contacts"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "godaddy",
@@ -1446,14 +2569,36 @@
         "invoice_paid",
         "calendar_event",
         "booking_thread",
-        "paypal_customer"
+        "paypal_customer",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": "2025-12-28",
       "amount": 273.0,
       "match_confidence": "low",
       "match_notes": [
         "paypal name fuzzy 0.88 \u2192 Martha Howard (paypal_customers_h2)"
-      ]
+      ],
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized",
+        "leads_all_hubspot",
+        "leads_hubspot_contacts"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "godaddy",
@@ -1473,14 +2618,36 @@
         "invoice_paid",
         "calendar_event",
         "booking_thread",
-        "paypal_customer"
+        "paypal_customer",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": "2025-11-22",
       "amount": 302.1,
       "match_confidence": "high",
       "match_notes": [
         "paypal via paypal_customers_h2"
-      ]
+      ],
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized",
+        "leads_all_hubspot",
+        "leads_hubspot_contacts"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "godaddy",
@@ -1498,7 +2665,8 @@
       "evidence": [],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": false
     },
     {
       "bucket": "godaddy",
@@ -1516,7 +2684,8 @@
       "evidence": [],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": false
     },
     {
       "bucket": "godaddy",
@@ -1532,11 +2701,25 @@
       "status": "inbound",
       "purchase_status": "unknown",
       "evidence": [
-        "booking_thread"
+        "booking_thread",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_ready_prioritized"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "6"
+      }
     },
     {
       "bucket": "godaddy",
@@ -1554,7 +2737,8 @@
       "evidence": [],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": false
     },
     {
       "bucket": "godaddy",
@@ -1569,10 +2753,19 @@
       "next_action": "Reply via mailto or GoDaddy Conversations",
       "status": "inbound",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_inbound_merge:INBOUND_NEW"
+      ]
     },
     {
       "bucket": "godaddy",
@@ -1588,11 +2781,25 @@
       "status": "inbound",
       "purchase_status": "unknown",
       "evidence": [
-        "booking_thread"
+        "booking_thread",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_ready_prioritized"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "6"
+      }
     },
     {
       "bucket": "godaddy",
@@ -1608,11 +2815,31 @@
       "status": "inbound",
       "purchase_status": "unknown",
       "evidence": [
-        "calendar_event"
+        "calendar_event",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": "2025-08-29",
       "amount": null,
-      "match_confidence": "high"
+      "match_confidence": "high",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "godaddy",
@@ -1630,7 +2857,8 @@
       "evidence": [],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": false
     },
     {
       "bucket": "godaddy",
@@ -1648,7 +2876,8 @@
       "evidence": [],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": false
     },
     {
       "bucket": "godaddy",
@@ -1666,7 +2895,8 @@
       "evidence": [],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": false
     },
     {
       "bucket": "godaddy",
@@ -1682,11 +2912,25 @@
       "status": "inbound",
       "purchase_status": "unknown",
       "evidence": [
-        "booking_thread"
+        "booking_thread",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_ready_prioritized"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "6"
+      }
     },
     {
       "bucket": "godaddy",
@@ -1705,11 +2949,33 @@
         "prior_customer",
         "invoice_paid",
         "calendar_event",
-        "booking_thread"
+        "booking_thread",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": "2025-09-27",
       "amount": 575.0,
-      "match_confidence": "high"
+      "match_confidence": "high",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized",
+        "leads_all_hubspot",
+        "leads_hubspot_contacts"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "godaddy",
@@ -1727,7 +2993,8 @@
       "evidence": [],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": false
     },
     {
       "bucket": "godaddy",
@@ -1744,11 +3011,31 @@
       "purchase_status": "unknown",
       "evidence": [
         "payment_mention",
-        "booking_thread"
+        "booking_thread",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "godaddy",
@@ -1766,7 +3053,8 @@
       "evidence": [],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": false
     },
     {
       "bucket": "godaddy",
@@ -1785,14 +3073,36 @@
         "prior_customer",
         "invoice_paid",
         "calendar_event",
-        "paypal_customer"
+        "paypal_customer",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": "2025-12-22",
       "amount": 371.0,
       "match_confidence": "high",
       "match_notes": [
         "paypal via paypal_customers_h2"
-      ]
+      ],
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized",
+        "leads_all_hubspot",
+        "leads_hubspot_contacts"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "godaddy",
@@ -1812,14 +3122,36 @@
         "invoice_paid",
         "calendar_event",
         "booking_thread",
-        "paypal_customer"
+        "paypal_customer",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": "2025-08-02",
       "amount": 235.5,
       "match_confidence": "high",
       "match_notes": [
         "paypal via paypal_customers_h2"
-      ]
+      ],
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized",
+        "leads_all_hubspot",
+        "leads_hubspot_contacts"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "godaddy",
@@ -1837,7 +3169,8 @@
       "evidence": [],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": false
     },
     {
       "bucket": "godaddy",
@@ -1855,7 +3188,8 @@
       "evidence": [],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": false
     },
     {
       "bucket": "godaddy",
@@ -1870,10 +3204,25 @@
       "next_action": "Reply via mailto or GoDaddy Conversations",
       "status": "inbound",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_ready_prioritized"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "4"
+      }
     },
     {
       "bucket": "godaddy",
@@ -1893,7 +3242,8 @@
       ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": false
     },
     {
       "bucket": "godaddy",
@@ -1911,7 +3261,8 @@
       "evidence": [],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": false
     },
     {
       "bucket": "godaddy",
@@ -1929,7 +3280,8 @@
       "evidence": [],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": false
     },
     {
       "bucket": "godaddy",
@@ -1945,11 +3297,25 @@
       "status": "inbound",
       "purchase_status": "unknown",
       "evidence": [
-        "booking_thread"
+        "booking_thread",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_ready_prioritized"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "6"
+      }
     },
     {
       "bucket": "godaddy",
@@ -1966,11 +3332,33 @@
       "purchase_status": "bought",
       "evidence": [
         "prior_customer",
-        "booking_thread"
+        "booking_thread",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "high"
+      "match_confidence": "high",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized",
+        "leads_all_hubspot",
+        "leads_hubspot_contacts"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "godaddy",
@@ -1988,7 +3376,8 @@
       "evidence": [],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": false
     },
     {
       "bucket": "godaddy",
@@ -2005,11 +3394,33 @@
       "purchase_status": "bought",
       "evidence": [
         "prior_customer",
-        "booking_thread"
+        "booking_thread",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "high"
+      "match_confidence": "high",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized",
+        "leads_all_hubspot",
+        "leads_hubspot_contacts"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "godaddy",
@@ -2026,11 +3437,31 @@
       "purchase_status": "unknown",
       "evidence": [
         "payment_mention",
-        "booking_thread"
+        "booking_thread",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "godaddy",
@@ -2046,11 +3477,25 @@
       "status": "inbound",
       "purchase_status": "unknown",
       "evidence": [
-        "booking_thread"
+        "booking_thread",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_ready_prioritized"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "6"
+      }
     },
     {
       "bucket": "godaddy",
@@ -2068,7 +3513,8 @@
       "evidence": [],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": false
     },
     {
       "bucket": "godaddy",
@@ -2086,11 +3532,31 @@
       "evidence": [
         "payment_mention",
         "calendar_event",
-        "booking_thread"
+        "booking_thread",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "godaddy",
@@ -2108,11 +3574,31 @@
       "evidence": [
         "payment_mention",
         "calendar_event",
-        "booking_thread"
+        "booking_thread",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "godaddy",
@@ -2130,11 +3616,33 @@
       "evidence": [
         "prior_customer",
         "calendar_event",
-        "booking_thread"
+        "booking_thread",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "high"
+      "match_confidence": "high",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized",
+        "leads_all_hubspot",
+        "leads_hubspot_contacts"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "godaddy",
@@ -2151,11 +3659,33 @@
       "purchase_status": "bought",
       "evidence": [
         "prior_customer",
-        "booking_thread"
+        "booking_thread",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "high"
+      "match_confidence": "high",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized",
+        "leads_all_hubspot",
+        "leads_hubspot_contacts"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "godaddy",
@@ -2173,7 +3703,8 @@
       "evidence": [],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": false
     },
     {
       "bucket": "godaddy",
@@ -2189,11 +3720,25 @@
       "status": "inbound",
       "purchase_status": "unknown",
       "evidence": [
-        "booking_thread"
+        "booking_thread",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_ready_prioritized"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "6"
+      }
     },
     {
       "bucket": "godaddy",
@@ -2211,7 +3756,8 @@
       "evidence": [],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": false
     },
     {
       "bucket": "godaddy",
@@ -2229,7 +3775,8 @@
       "evidence": [],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": false
     },
     {
       "bucket": "godaddy",
@@ -2246,11 +3793,33 @@
       "purchase_status": "bought",
       "evidence": [
         "prior_customer",
-        "booking_thread"
+        "booking_thread",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "high"
+      "match_confidence": "high",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized",
+        "leads_all_hubspot",
+        "leads_hubspot_contacts"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "godaddy",
@@ -2268,7 +3837,8 @@
       "evidence": [],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": false
     },
     {
       "bucket": "godaddy",
@@ -2286,7 +3856,8 @@
       "evidence": [],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": false
     },
     {
       "bucket": "godaddy",
@@ -2304,7 +3875,8 @@
       "evidence": [],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": false
     },
     {
       "bucket": "godaddy",
@@ -2323,11 +3895,33 @@
         "prior_customer",
         "invoice_paid",
         "calendar_event",
-        "booking_thread"
+        "booking_thread",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": "2025-09-27",
       "amount": 811.52,
-      "match_confidence": "high"
+      "match_confidence": "high",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized",
+        "leads_all_hubspot",
+        "leads_hubspot_contacts"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "godaddy",
@@ -2345,7 +3939,8 @@
       "evidence": [],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": false
     },
     {
       "bucket": "godaddy",
@@ -2363,7 +3958,8 @@
       "evidence": [],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": false
     },
     {
       "bucket": "godaddy",
@@ -2381,7 +3977,8 @@
       "evidence": [],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": false
     },
     {
       "bucket": "godaddy",
@@ -2399,7 +3996,8 @@
       "evidence": [],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": false
     },
     {
       "bucket": "godaddy",
@@ -2417,7 +4015,8 @@
       "evidence": [],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": false
     },
     {
       "bucket": "godaddy",
@@ -2434,11 +4033,33 @@
       "purchase_status": "bought",
       "evidence": [
         "prior_customer",
-        "booking_thread"
+        "booking_thread",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "high"
+      "match_confidence": "high",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized",
+        "leads_all_hubspot",
+        "leads_hubspot_contacts"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "godaddy",
@@ -2456,7 +4077,8 @@
       "evidence": [],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": false
     },
     {
       "bucket": "godaddy",
@@ -2474,7 +4096,8 @@
       "evidence": [],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": false
     },
     {
       "bucket": "godaddy",
@@ -2490,11 +4113,31 @@
       "status": "inbound",
       "purchase_status": "unknown",
       "evidence": [
-        "calendar_event"
+        "calendar_event",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p2_warm",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_inbound_merge:WARM_P2",
+        "hubspot_p1_p2_combined",
+        "hubspot_p2_warm",
+        "hubspot_ready_prioritized"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "Yes",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "2",
+        "Lifecyclestage": "lead",
+        "Lead_Status": "Lead"
+      }
     },
     {
       "bucket": "godaddy",
@@ -2509,10 +4152,25 @@
       "next_action": "Reply via mailto or GoDaddy Conversations",
       "status": "inbound",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_ready_prioritized"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "4"
+      }
     },
     {
       "bucket": "critter_club",
@@ -2530,11 +4188,33 @@
         "prior_customer",
         "invoice_paid",
         "calendar_event",
-        "booking_thread"
+        "booking_thread",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": null,
       "amount": 185.5,
-      "match_confidence": "high"
+      "match_confidence": "high",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized",
+        "leads_all_hubspot",
+        "leads_hubspot_contacts"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "critter_club",
@@ -2551,11 +4231,33 @@
       "evidence": [
         "prior_customer",
         "calendar_event",
-        "booking_thread"
+        "booking_thread",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": "2025-12-29",
       "amount": null,
-      "match_confidence": "high"
+      "match_confidence": "high",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized",
+        "leads_all_hubspot",
+        "leads_hubspot_contacts"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "critter_club",
@@ -2573,11 +4275,33 @@
         "prior_customer",
         "invoice_paid",
         "calendar_event",
-        "booking_thread"
+        "booking_thread",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": "2025-10-16",
       "amount": 185.5,
-      "match_confidence": "high"
+      "match_confidence": "high",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized",
+        "leads_all_hubspot",
+        "leads_hubspot_contacts"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "critter_club",
@@ -2595,11 +4319,33 @@
         "prior_customer",
         "invoice_paid",
         "calendar_event",
-        "booking_thread"
+        "booking_thread",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": "2025-11-19",
       "amount": 159.0,
-      "match_confidence": "high"
+      "match_confidence": "high",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized",
+        "leads_all_hubspot",
+        "leads_hubspot_contacts"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "critter_club",
@@ -2616,11 +4362,33 @@
       "evidence": [
         "prior_customer",
         "invoice_paid",
-        "calendar_event"
+        "calendar_event",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": "2025-10-11",
       "amount": 185.5,
-      "match_confidence": "high"
+      "match_confidence": "high",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized",
+        "leads_all_hubspot",
+        "leads_hubspot_contacts"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "critter_club",
@@ -2638,11 +4406,33 @@
         "prior_customer",
         "invoice_paid",
         "calendar_event",
-        "booking_thread"
+        "booking_thread",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": "2025-09-26",
       "amount": 125.0,
-      "match_confidence": "high"
+      "match_confidence": "high",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized",
+        "leads_all_hubspot",
+        "leads_hubspot_contacts"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "critter_club",
@@ -2660,11 +4450,33 @@
         "prior_customer",
         "invoice_paid",
         "calendar_event",
-        "booking_thread"
+        "booking_thread",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": "2025-09-09",
       "amount": 125.0,
-      "match_confidence": "high"
+      "match_confidence": "high",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized",
+        "leads_all_hubspot",
+        "leads_hubspot_contacts"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "critter_club",
@@ -2682,11 +4494,33 @@
         "prior_customer",
         "invoice_paid",
         "calendar_event",
-        "booking_thread"
+        "booking_thread",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": "2025-08-19",
       "amount": 200.0,
-      "match_confidence": "high"
+      "match_confidence": "high",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized",
+        "leads_all_hubspot",
+        "leads_hubspot_contacts"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "critter_club",
@@ -2704,11 +4538,33 @@
         "prior_customer",
         "invoice_paid",
         "calendar_event",
-        "booking_thread"
+        "booking_thread",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": null,
       "amount": 153.7,
-      "match_confidence": "high"
+      "match_confidence": "high",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized",
+        "leads_all_hubspot",
+        "leads_hubspot_contacts"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "critter_club",
@@ -2725,11 +4581,33 @@
       "evidence": [
         "prior_customer",
         "calendar_event",
-        "booking_thread"
+        "booking_thread",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "high"
+      "match_confidence": "high",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized",
+        "leads_all_hubspot",
+        "leads_hubspot_contacts"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "critter_club",
@@ -2747,11 +4625,33 @@
         "prior_customer",
         "invoice_paid",
         "calendar_event",
-        "booking_thread"
+        "booking_thread",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": null,
       "amount": 159.0,
-      "match_confidence": "high"
+      "match_confidence": "high",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized",
+        "leads_all_hubspot",
+        "leads_hubspot_contacts"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "critter_club",
@@ -2768,11 +4668,33 @@
       "evidence": [
         "prior_customer",
         "invoice_paid",
-        "calendar_event"
+        "calendar_event",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": "2025-08-15",
       "amount": 200.5,
-      "match_confidence": "high"
+      "match_confidence": "high",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized",
+        "leads_all_hubspot",
+        "leads_hubspot_contacts"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "critter_club",
@@ -2789,11 +4711,33 @@
       "evidence": [
         "prior_customer",
         "invoice_paid",
-        "calendar_event"
+        "calendar_event",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": "2025-07-22",
       "amount": 235.5,
-      "match_confidence": "high"
+      "match_confidence": "high",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized",
+        "leads_all_hubspot",
+        "leads_hubspot_contacts"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "critter_club",
@@ -2809,11 +4753,33 @@
       "purchase_status": "bought",
       "evidence": [
         "prior_customer",
-        "calendar_event"
+        "calendar_event",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "high"
+      "match_confidence": "high",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized",
+        "leads_all_hubspot",
+        "leads_hubspot_contacts"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "critter_club",
@@ -2829,11 +4795,31 @@
       "purchase_status": "bought",
       "evidence": [
         "invoice_paid",
-        "calendar_event"
+        "calendar_event",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": null,
       "amount": 185.5,
-      "match_confidence": "high"
+      "match_confidence": "high",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "waiver_proxy",
@@ -2848,11 +4834,31 @@
       "status": "proxy",
       "purchase_status": "bought",
       "evidence": [
-        "website_autobook"
+        "website_autobook",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p2_warm",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": "2026-08-20",
       "amount": 40.0,
-      "match_confidence": "high"
+      "match_confidence": "high",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_inbound_merge:WARM_P2",
+        "hubspot_p1_p2_combined",
+        "hubspot_p2_warm",
+        "hubspot_ready_prioritized"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "Yes",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "2",
+        "Lifecyclestage": "lead",
+        "Lead_Status": "Lead"
+      }
     },
     {
       "bucket": "waiver_proxy",
@@ -2869,7 +4875,8 @@
       "evidence": [],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": false
     },
     {
       "bucket": "waiver_proxy",
@@ -2883,10 +4890,25 @@
       "next_action": "Confirm waiver signed \u00b7 GAP until form export",
       "status": "proxy",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_ready_prioritized"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "4"
+      }
     },
     {
       "bucket": "waiver_proxy",
@@ -2903,7 +4925,8 @@
       "evidence": [],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": false
     },
     {
       "bucket": "waiver_proxy",
@@ -2919,11 +4942,33 @@
       "purchase_status": "bought",
       "evidence": [
         "prior_customer",
-        "booking_thread"
+        "booking_thread",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "high"
+      "match_confidence": "high",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized",
+        "leads_all_hubspot",
+        "leads_hubspot_contacts"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "waiver_proxy",
@@ -2938,11 +4983,33 @@
       "status": "proxy",
       "purchase_status": "bought",
       "evidence": [
-        "prior_customer"
+        "prior_customer",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "high"
+      "match_confidence": "high",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized",
+        "leads_all_hubspot",
+        "leads_hubspot_contacts"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "waiver_proxy",
@@ -2957,11 +5024,33 @@
       "status": "proxy",
       "purchase_status": "bought",
       "evidence": [
-        "prior_customer"
+        "prior_customer",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "high"
+      "match_confidence": "high",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized",
+        "leads_all_hubspot",
+        "leads_hubspot_contacts"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "waiver_proxy",
@@ -2980,7 +5069,8 @@
       ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": false
     },
     {
       "bucket": "waiver_proxy",
@@ -2995,11 +5085,25 @@
       "status": "proxy",
       "purchase_status": "unknown",
       "evidence": [
-        "booking_thread"
+        "booking_thread",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_ready_prioritized"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "6"
+      }
     },
     {
       "bucket": "waiver_proxy",
@@ -3014,11 +5118,31 @@
       "status": "proxy",
       "purchase_status": "unknown",
       "evidence": [
-        "payment_mention"
+        "payment_mention",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "action_queue",
@@ -3036,14 +5160,34 @@
       "purchase_status": "unknown",
       "evidence": [
         "booking_thread",
-        "bookings_pipeline"
+        "bookings_pipeline",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p2_warm",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": "2026-10-02",
       "amount": null,
       "match_confidence": "low",
       "match_notes": [
         "pipeline river-city-science-2026-10-02 paid=partial_pitch"
-      ]
+      ],
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_inbound_merge:WARM_P2",
+        "hubspot_p1_p2_combined",
+        "hubspot_p2_warm",
+        "hubspot_ready_prioritized"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "Yes",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "2",
+        "Lifecyclestage": "lead",
+        "Lead_Status": "Lead"
+      }
     },
     {
       "bucket": "action_queue",
@@ -3063,11 +5207,33 @@
         "prior_customer",
         "invoice_paid",
         "calendar_event",
-        "booking_thread"
+        "booking_thread",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": "2026-03-28",
       "amount": 987.66,
-      "match_confidence": "high"
+      "match_confidence": "high",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized",
+        "leads_all_hubspot",
+        "leads_hubspot_contacts"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "action_queue",
@@ -3086,11 +5252,31 @@
       "evidence": [
         "invoice_paid",
         "calendar_event",
-        "booking_thread"
+        "booking_thread",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": "2026-06-17",
       "amount": 474.75,
-      "match_confidence": "high"
+      "match_confidence": "high",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "action_queue",
@@ -3109,11 +5295,31 @@
       "evidence": [
         "invoice_paid",
         "booking_thread",
-        "calendar_event"
+        "calendar_event",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": "2026-10-24",
       "amount": 587.0,
-      "match_confidence": "high"
+      "match_confidence": "high",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "action_queue",
@@ -3129,10 +5335,31 @@
       "priority": 5,
       "aq_kind": "NEEDS_ATTENTION",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p2_warm",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_inbound_merge:WARM_P2",
+        "hubspot_p1_p2_combined",
+        "hubspot_p2_warm",
+        "hubspot_ready_prioritized"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "Yes",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "2",
+        "Lifecyclestage": "lead",
+        "Lead_Status": "Lead"
+      }
     },
     {
       "bucket": "action_queue",
@@ -3148,10 +5375,19 @@
       "priority": 6,
       "aq_kind": "TAM_TAP",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_inbound_merge:INBOUND_NEW"
+      ]
     },
     {
       "bucket": "action_queue",
@@ -3167,10 +5403,25 @@
       "priority": 8,
       "aq_kind": "TAM_TAP",
       "purchase_status": "not_seen",
-      "evidence": [],
+      "evidence": [
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_upload_ready"
+      ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_ready_prioritized"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "No",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Prospect",
+        "Priority": "4"
+      }
     },
     {
       "bucket": "action_queue",
@@ -3187,11 +5438,19 @@
       "aq_kind": "WARM",
       "purchase_status": "unknown",
       "evidence": [
-        "booking_thread"
+        "booking_thread",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": null,
       "amount": null,
-      "match_confidence": "none"
+      "match_confidence": "none",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_inbound_merge:INBOUND_NEW"
+      ]
     },
     {
       "bucket": "action_queue",
@@ -3210,11 +5469,31 @@
       "evidence": [
         "invoice_paid",
         "booking_thread",
-        "calendar_event"
+        "calendar_event",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": "2026-09-26",
       "amount": 386.9,
-      "match_confidence": "high"
+      "match_confidence": "high",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     },
     {
       "bucket": "action_queue",
@@ -3232,11 +5511,31 @@
       "purchase_status": "bought",
       "evidence": [
         "invoice_paid",
-        "calendar_event"
+        "calendar_event",
+        "already_in_hubspot_csv",
+        "hubspot_inbound_merge",
+        "hubspot_p1_customer",
+        "hubspot_upload_ready"
       ],
       "last_paid_or_booked": "2026-10-15",
       "amount": 400.0,
-      "match_confidence": "high"
+      "match_confidence": "high",
+      "hubspot_listed": true,
+      "hubspot_csv_files": [
+        "hubspot_inbound_merge:CUSTOMERS_P1",
+        "hubspot_inbound_merge:Contacts",
+        "hubspot_p1_customers",
+        "hubspot_p1_p2_combined",
+        "hubspot_ready_prioritized"
+      ],
+      "hubspot_csv_flags": {
+        "Customer_Flag": "Yes",
+        "Warm_Flag": "No",
+        "Existing_vs_Prospect": "Existing",
+        "Priority": "1",
+        "Lifecyclestage": "customer",
+        "Lead_Status": "Customer"
+      }
     }
   ],
   "purchase_crossref": {
@@ -3287,6 +5586,46 @@
         "id": "bookings_pipeline",
         "path": "data/bookings_pipeline.json",
         "role": "Ops pipeline \u2014 paid status often unknown/OPEN"
+      },
+      {
+        "id": "hubspot_ready_prioritized",
+        "path": "/workspace/revops/crm-sot/HubSpot-Ready-Prioritized-Import.csv",
+        "role": "Canonical HubSpot-Ready prioritized import (\u22642000) \u2014 upload CSV, not live CRM \u00b7 2000 emails"
+      },
+      {
+        "id": "hubspot_p1_customers",
+        "path": "/workspace/deputy-outreach/hubspot-import/HubSpot_Contacts_P1_Customers.csv",
+        "role": "P1 customers HubSpot upload pack \u00b7 559 emails"
+      },
+      {
+        "id": "hubspot_p2_warm",
+        "path": "/workspace/deputy-outreach/hubspot-import/HubSpot_Contacts_P2_Warm.csv",
+        "role": "P2 warm HubSpot upload pack \u00b7 243 emails"
+      },
+      {
+        "id": "hubspot_p1_p2_combined",
+        "path": "/workspace/deputy-outreach/hubspot-import/HubSpot_Contacts_P1_P2_COMBINED.csv",
+        "role": "P1+P2 combined HubSpot upload CSV \u00b7 802 emails"
+      },
+      {
+        "id": "hubspot_summer_scholars",
+        "path": "/workspace/deputy-outreach/summer-scholars-narrow/HubSpot_SummerScholars_Warm_GOOD.csv",
+        "role": "Summer Scholars warm GOOD HubSpot upload CSV \u00b7 33 emails"
+      },
+      {
+        "id": "leads_all_hubspot",
+        "path": "/workspace/leads/ALL-LEADS-hubspot.csv",
+        "role": "ALL-LEADS HubSpot-format CSV (leads pipeline; upload-shaped) \u00b7 1227 emails"
+      },
+      {
+        "id": "leads_hubspot_contacts",
+        "path": "/workspace/leads/hubspot-contacts.csv",
+        "role": "leads/hubspot-contacts.csv (HubSpot contact columns) \u00b7 384 emails"
+      },
+      {
+        "id": "hubspot_inbound_merge",
+        "path": "/workspace/revops/crm-sot/HubSpot-Ready-INBOUND_MERGE.xlsx",
+        "role": "HubSpot-Ready-INBOUND_MERGE.xlsx Contacts/CUSTOMERS_P1/INBOUND_NEW sheets \u2014 upload workbook \u00b7 2817 emails"
       }
     ],
     "gaps": [
@@ -3297,7 +5636,8 @@
       "bookings_pipeline paid truth still OPEN for several locked dates",
       "invoice_to without payment tag still counted bought (billed customer) \u2014 see match_notes",
       "Gmail:booking / calendar_event alone \u2192 unknown (not bought)",
-      "Cash/Venmo/check and missing invoice #s outside PayPal window not matched"
+      "Cash/Venmo/check and missing invoice #s outside PayPal window not matched",
+      "HubSpot: CSV/XLSX upload-ready presence only \u2014 no live HubSpot export"
     ],
     "rules": {
       "bought": "paypal_customer | prior_customer | invoice_paid/invoice_to | website_autobook",
@@ -3620,6 +5960,71 @@
         "date": "2025-09-26",
         "confidence": "high"
       }
+    ]
+  },
+  "hubspot_crossref": {
+    "as_of": "2026-09-22 ET",
+    "note": "CSV presence only \u2014 HubSpot-ready / upload packs. No live HubSpot CRM API export used; do not treat as CRM lifecycle truth.",
+    "counts": {
+      "hubspot_listed": 118,
+      "hubspot_not_listed": 39,
+      "contacts_total": 157,
+      "unique_emails_in_hubspot_csvs": 2102
+    },
+    "sources_used": [
+      {
+        "id": "hubspot_ready_prioritized",
+        "path": "/workspace/revops/crm-sot/HubSpot-Ready-Prioritized-Import.csv",
+        "role": "Canonical HubSpot-Ready prioritized import (\u22642000) \u2014 upload CSV, not live CRM",
+        "n_emails": 2000
+      },
+      {
+        "id": "hubspot_p1_customers",
+        "path": "/workspace/deputy-outreach/hubspot-import/HubSpot_Contacts_P1_Customers.csv",
+        "role": "P1 customers HubSpot upload pack",
+        "n_emails": 559
+      },
+      {
+        "id": "hubspot_p2_warm",
+        "path": "/workspace/deputy-outreach/hubspot-import/HubSpot_Contacts_P2_Warm.csv",
+        "role": "P2 warm HubSpot upload pack",
+        "n_emails": 243
+      },
+      {
+        "id": "hubspot_p1_p2_combined",
+        "path": "/workspace/deputy-outreach/hubspot-import/HubSpot_Contacts_P1_P2_COMBINED.csv",
+        "role": "P1+P2 combined HubSpot upload CSV",
+        "n_emails": 802
+      },
+      {
+        "id": "hubspot_summer_scholars",
+        "path": "/workspace/deputy-outreach/summer-scholars-narrow/HubSpot_SummerScholars_Warm_GOOD.csv",
+        "role": "Summer Scholars warm GOOD HubSpot upload CSV",
+        "n_emails": 33
+      },
+      {
+        "id": "leads_all_hubspot",
+        "path": "/workspace/leads/ALL-LEADS-hubspot.csv",
+        "role": "ALL-LEADS HubSpot-format CSV (leads pipeline; upload-shaped)",
+        "n_emails": 1227
+      },
+      {
+        "id": "leads_hubspot_contacts",
+        "path": "/workspace/leads/hubspot-contacts.csv",
+        "role": "leads/hubspot-contacts.csv (HubSpot contact columns)",
+        "n_emails": 384
+      },
+      {
+        "id": "hubspot_inbound_merge",
+        "path": "/workspace/revops/crm-sot/HubSpot-Ready-INBOUND_MERGE.xlsx",
+        "role": "HubSpot-Ready-INBOUND_MERGE.xlsx Contacts/CUSTOMERS_P1/INBOUND_NEW sheets \u2014 upload workbook",
+        "n_emails": 2817
+      }
+    ],
+    "gaps": [
+      "No live HubSpot CRM export in this pass \u2014 listed = present in upload-ready CSV/XLSX only",
+      "ALL-LEADS / leads hubspot-contacts may include B2B prospects never uploaded",
+      "Customer_Flag / Warm_Flag / Existing_vs_Prospect are CSV columns, not live HubSpot properties"
     ]
   }
 }
