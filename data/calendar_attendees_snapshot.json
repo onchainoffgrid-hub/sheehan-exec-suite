@@ -1,0 +1,1414 @@
+{
+  "as_of": "2026-09-22 ET",
+  "source": "Google Calendar MCP list_events (2025-07..2026-12) + search_events + earlier pages",
+  "n_events": 179,
+  "attendee_emails": 110,
+  "by_email": {
+    "ecooks@fletcherstendercare.com": [
+      {
+        "summary": "Bunny Haven",
+        "start": "2056-09-13T11:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      },
+      {
+        "summary": "Bunny Haven",
+        "start": "2056-08-09T11:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      },
+      {
+        "summary": "Bunny Haven",
+        "start": "2056-07-12T11:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      },
+      {
+        "summary": "Bunny Haven",
+        "start": "2056-06-14T11:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      },
+      {
+        "summary": "Bunny Haven",
+        "start": "2056-05-10T11:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      },
+      {
+        "summary": "Bunny Haven",
+        "start": "2056-04-12T11:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      },
+      {
+        "summary": "Bunny Haven",
+        "start": "2056-03-08T11:00:00-05:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      },
+      {
+        "summary": "Bunny Haven",
+        "start": "2056-02-09T11:00:00-05:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      }
+    ],
+    "tfelix@discoveryvillages.com": [
+      {
+        "summary": "Bunny Haven",
+        "start": "2056-09-12T11:30:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      },
+      {
+        "summary": "Bunny Haven",
+        "start": "2056-08-08T11:30:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      },
+      {
+        "summary": "Bunny Haven",
+        "start": "2056-07-11T11:30:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      },
+      {
+        "summary": "Bunny Haven",
+        "start": "2056-06-13T11:30:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      },
+      {
+        "summary": "Bunny Haven",
+        "start": "2056-05-09T11:30:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      },
+      {
+        "summary": "Bunny Haven",
+        "start": "2056-04-11T11:30:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      },
+      {
+        "summary": "Bunny Haven",
+        "start": "2056-03-14T11:30:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      },
+      {
+        "summary": "Bunny Haven",
+        "start": "2056-02-08T11:30:00-05:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      }
+    ],
+    "diazcarla@cypressvillageretirement.com": [
+      {
+        "summary": "Bunny Haven ",
+        "start": "2056-08-15T10:45:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      },
+      {
+        "summary": "Bunny Haven ",
+        "start": "2056-07-18T10:45:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      },
+      {
+        "summary": "Bunny Haven ",
+        "start": "2056-06-20T10:45:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      },
+      {
+        "summary": "Bunny Haven ",
+        "start": "2056-05-16T10:45:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      },
+      {
+        "summary": "Bunny Haven ",
+        "start": "2056-04-18T10:45:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      },
+      {
+        "summary": "Bunny Haven ",
+        "start": "2056-03-21T10:45:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      },
+      {
+        "summary": "Bunny Haven ",
+        "start": "2056-02-15T10:45:00-05:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      }
+    ],
+    "marieljaster@gmail.com": [
+      {
+        "summary": "Mini petting zoo",
+        "start": "2026-09-26T13:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "failingforwardfarm@gmail.com": [
+      {
+        "summary": "Mobile petting zoo & side of critters",
+        "start": "2026-10-23T16:00:00-04:00",
+        "displayName": "Madison",
+        "responseStatus": "needsAction"
+      },
+      {
+        "summary": "Mini Petting Zoo ",
+        "start": "2026-10-15T11:00:00-04:00",
+        "displayName": "Madison",
+        "responseStatus": "needsAction"
+      },
+      {
+        "summary": "Mini petting zoo",
+        "start": "2026-09-26T13:00:00-04:00",
+        "displayName": "Madison",
+        "responseStatus": "needsAction"
+      },
+      {
+        "summary": "Intercoastal Kids - Mini Petting Zoo",
+        "start": "2026-09-10T10:00:00-04:00",
+        "displayName": "Madison",
+        "responseStatus": "needsAction"
+      },
+      {
+        "summary": "Mobile PZ + Side of Critters ",
+        "start": "2026-08-07T17:00:00-04:00",
+        "displayName": "Madison",
+        "responseStatus": "needsAction"
+      },
+      {
+        "summary": "Mobile petting zoo ",
+        "start": "2026-07-13T10:00:00-04:00",
+        "displayName": "Madison",
+        "responseStatus": "needsAction"
+      },
+      {
+        "summary": "Mini Petting Zoo - 2 hours",
+        "start": "2026-06-17T09:45:00-04:00",
+        "displayName": "Madison",
+        "responseStatus": "needsAction"
+      },
+      {
+        "summary": "Mini petting zoo ",
+        "start": "2026-05-09T17:00:00-04:00",
+        "displayName": "Madison",
+        "responseStatus": "accepted"
+      }
+    ],
+    "mbeck@rivercityscience.org": [
+      {
+        "summary": "Mini Petting Zoo ",
+        "start": "2026-10-15T11:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      }
+    ],
+    "info@intercoastalkids.com": [
+      {
+        "summary": "Intercoastal Kids - Mini Petting Zoo",
+        "start": "2026-09-10T10:00:00-04:00",
+        "displayName": "Ted Prevost",
+        "responseStatus": "needsAction"
+      },
+      {
+        "summary": "Intercoastal Kids - Mini Petting Zoo",
+        "start": "2025-09-12T10:30:00-04:00",
+        "displayName": "Ted Prevost",
+        "responseStatus": "needsAction"
+      }
+    ],
+    "kmclearn12@gmail.com": [
+      {
+        "summary": "Mobile petting zoo & side of critters",
+        "start": "2026-10-23T16:00:00-04:00",
+        "displayName": "Kathy McLearn",
+        "responseStatus": "needsAction"
+      }
+    ],
+    "cgross@elcduval.org": [
+      {
+        "summary": "Eartha mobile petting zoo ",
+        "start": "2026-10-24T10:00:00-04:00",
+        "displayName": "Charlene Gross",
+        "responseStatus": "accepted"
+      }
+    ],
+    "honeybeeresale@gmail.com": [
+      {
+        "summary": "Eartha mobile petting zoo ",
+        "start": "2026-10-24T10:00:00-04:00",
+        "displayName": "Melissa Hyte",
+        "responseStatus": "accepted"
+      },
+      {
+        "summary": "Petting Zoo + CoT",
+        "start": "2026-06-13T10:00:00-04:00",
+        "displayName": "Melissa Hyte",
+        "responseStatus": "needsAction"
+      },
+      {
+        "summary": "Petting Zoo ",
+        "start": "2026-04-24T17:00:00-04:00",
+        "displayName": "Melissa Hyte",
+        "responseStatus": "accepted"
+      },
+      {
+        "summary": "Mini Petting Zoo + Critters on top ",
+        "start": "2026-04-04T12:00:00-04:00",
+        "displayName": "Melissa Hyte",
+        "responseStatus": "accepted"
+      },
+      {
+        "summary": "Mini Petting Zoo - No Fowl extra bunnies ",
+        "start": "2026-04-03T14:00:00-04:00",
+        "displayName": "Melissa Hyte",
+        "responseStatus": "accepted"
+      },
+      {
+        "summary": "Mobile Petting Zoo",
+        "start": "2026-03-28T11:00:00-04:00",
+        "displayName": "Melissa Hyte",
+        "responseStatus": "accepted"
+      },
+      {
+        "summary": "Mobile Petting Zoo",
+        "start": "2026-03-08T11:00:00-04:00",
+        "displayName": "Melissa Hyte",
+        "responseStatus": "accepted"
+      },
+      {
+        "summary": "Mobile Petting Zoo",
+        "start": "2026-03-07T11:00:00-05:00",
+        "displayName": "Melissa Hyte",
+        "responseStatus": "accepted"
+      }
+    ],
+    "amann0312@gmail.com": [
+      {
+        "summary": "90 Min Petting Zoo + CoT",
+        "start": "2026-09-06T11:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      }
+    ],
+    "amollitt@yahoo.com": [
+      {
+        "summary": "90 Min Petting Zoo + CoT",
+        "start": "2026-09-06T11:00:00-04:00",
+        "displayName": "Audrey - Pz Helper",
+        "responseStatus": "accepted"
+      }
+    ],
+    "nadia.anderson@steveandkate.com": [
+      {
+        "summary": "Mobile petting zoo ",
+        "start": "2026-07-13T10:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      }
+    ],
+    "lnelson@ctkearlylearning.com": [
+      {
+        "summary": "Mini Petting Zoo - 2 hours",
+        "start": "2026-06-17T09:45:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      }
+    ],
+    "natasha.urick@safariland.com": [
+      {
+        "summary": "Petting Zoo + CoT",
+        "start": "2026-06-13T10:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "jessicaanne1109@icloud.com": [
+      {
+        "summary": "Petting Zoo + CoT",
+        "start": "2026-06-13T10:00:00-04:00",
+        "displayName": "Jessica  Gorton",
+        "responseStatus": "accepted"
+      },
+      {
+        "summary": "Mobile Petting Zoo",
+        "start": "2026-03-28T11:00:00-04:00",
+        "displayName": "Jessica  Gorton",
+        "responseStatus": "needsAction"
+      }
+    ],
+    "pagelj4777@gmail.com": [
+      {
+        "summary": "Mobile PZ + Side of Critters ",
+        "start": "2026-08-07T17:00:00-04:00",
+        "displayName": "Joanna Pagel",
+        "responseStatus": "accepted"
+      },
+      {
+        "summary": "Petting Zoo + CoT",
+        "start": "2026-06-13T10:00:00-04:00",
+        "displayName": "Joanna Pagel",
+        "responseStatus": "needsAction"
+      },
+      {
+        "summary": "Mobile Petting Zoo + Critters on Top + side",
+        "start": "2026-03-28T11:00:00-04:00",
+        "displayName": "Joanna Pagel",
+        "responseStatus": "needsAction"
+      }
+    ],
+    "jessica.rose.hund@gmail.com": [
+      {
+        "summary": "Mini petting zoo ",
+        "start": "2026-05-09T17:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "ivybrookptovr@gmail.com": [
+      {
+        "summary": "Petting Zoo ",
+        "start": "2026-04-24T17:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "courtney@peakperformanceprinting.com": [
+      {
+        "summary": "Petting Zoo ",
+        "start": "2026-04-24T17:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      }
+    ],
+    "jennifer.ripkey@ivybrookacademy.com": [
+      {
+        "summary": "Petting Zoo ",
+        "start": "2026-04-24T17:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "cathy.hemphill@goddardschools.com": [
+      {
+        "summary": "Mini Petting Zoo",
+        "start": "2026-04-11T10:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "amyleighdesignco@gmail.com": [
+      {
+        "summary": "Mini Petting Zoo",
+        "start": "2026-04-11T10:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "raimonie222@gmail.com": [
+      {
+        "summary": "Mini Petting Zoo + Critters on top ",
+        "start": "2026-04-04T12:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "director@seniorsjacksonville.com": [
+      {
+        "summary": "Mini Petting Zoo - No Fowl extra bunnies ",
+        "start": "2026-04-03T14:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      }
+    ],
+    "life@seniorsjacksonville.com": [
+      {
+        "summary": "Mini Petting Zoo - No Fowl extra bunnies ",
+        "start": "2026-04-03T14:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      }
+    ],
+    "tadamek@concertgolfclubs.com": [
+      {
+        "summary": "Mobile PZ + Side of Critters ",
+        "start": "2026-08-07T17:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      }
+    ],
+    "igrady@marshlandingcc.com": [
+      {
+        "summary": "Mobile PZ + Side of Critters ",
+        "start": "2026-08-07T17:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "ghamilton@vestapropertyservices.com": [
+      {
+        "summary": "Mini Petting Zoo",
+        "start": "2026-03-28T13:30:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "malikfloyd16@gmail.com": [
+      {
+        "summary": "Mini Petting Zoo",
+        "start": "2026-03-28T13:30:00-04:00",
+        "displayName": "Malik",
+        "responseStatus": "needsAction"
+      },
+      {
+        "summary": "Mobile Petting Zoo",
+        "start": "2026-03-28T10:00:00-04:00",
+        "displayName": "Malik",
+        "responseStatus": "needsAction"
+      },
+      {
+        "summary": "Mobile Petting Zoo",
+        "start": "2026-03-13T09:15:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      }
+    ],
+    "taylor.k.bass@gmail.com": [
+      {
+        "summary": "Mini Petting Zoo",
+        "start": "2026-03-28T13:30:00-04:00",
+        "displayName": "Taylor Bass",
+        "responseStatus": "accepted"
+      },
+      {
+        "summary": "Mobile Petting Zoo",
+        "start": "2026-03-28T10:00:00-04:00",
+        "displayName": "Taylor Bass",
+        "responseStatus": "needsAction"
+      }
+    ],
+    "kfatuch@vestapropertyservices.com": [
+      {
+        "summary": "Mobile Petting Zoo",
+        "start": "2026-03-28T11:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      }
+    ],
+    "ebricknell@ccmcnet.com": [
+      {
+        "summary": "Petting Zoo With Critters on Top",
+        "start": "2026-03-28T11:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "lavender.lotus.loving.lady@gmail.com": [
+      {
+        "summary": "Petting Zoo With Critters on Top",
+        "start": "2026-03-28T11:00:00-04:00",
+        "displayName": "Angie Lyn",
+        "responseStatus": "accepted"
+      },
+      {
+        "summary": "Mobile Petting Zoo",
+        "start": "2026-03-07T11:30:00-05:00",
+        "displayName": "Angie Lyn",
+        "responseStatus": "accepted"
+      },
+      {
+        "summary": "Goat Yoga",
+        "start": "2025-11-15T10:00:00-05:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      },
+      {
+        "summary": "Goat Yoga",
+        "start": "2025-10-04T10:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "hila.stalcup@marshallcreekcdd.com": [
+      {
+        "summary": "Mobile Petting Zoo + Critters on Top + side",
+        "start": "2026-03-28T11:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "missynglink@gmail.com": [
+      {
+        "summary": "Mobile Petting Zoo + Critters on Top + side",
+        "start": "2026-03-28T11:00:00-04:00",
+        "displayName": "Chris PZ Help",
+        "responseStatus": "needsAction"
+      },
+      {
+        "summary": "Mobile Petting Zoo",
+        "start": "2026-03-07T11:00:00-05:00",
+        "displayName": "Chris PZ Help",
+        "responseStatus": "accepted"
+      }
+    ],
+    "recharge@etownjax.com": [
+      {
+        "summary": "Mobile Petting Zoo",
+        "start": "2026-03-28T10:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "kfloyd@cornerstoneclassical.org": [
+      {
+        "summary": "Mobile Petting Zoo",
+        "start": "2026-03-13T09:15:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "keith.heissler@nm.com": [
+      {
+        "summary": "Mobile Petting Zoo",
+        "start": "2026-03-08T11:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "studio@cfmedia.net": [
+      {
+        "summary": "Industry Champions with Chris Budihas",
+        "start": "2026-09-03T10:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      },
+      {
+        "summary": "Finding Your Frequency with Brian Sexton",
+        "start": "2026-08-18T14:30:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "chris.budihas@cfmedia.net": [
+      {
+        "summary": "Industry Champions with Chris Budihas",
+        "start": "2026-09-03T10:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "clbudihas@gmail.com": [
+      {
+        "summary": "Industry Champions with Chris Budihas",
+        "start": "2026-09-03T10:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "marykslover@gmail.com": [
+      {
+        "summary": "Mobile Petting Zoo",
+        "start": "2026-03-07T11:00:00-05:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      }
+    ],
+    "payton@cobbemanagement.com": [
+      {
+        "summary": "Mobile Petting Zoo",
+        "start": "2026-03-07T11:30:00-05:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "gcallis@coj.net": [
+      {
+        "summary": "Petting Zoo discussion - Easter Event",
+        "start": "2026-03-04T11:30:00-05:00",
+        "displayName": "Callis, Garrett - RPCM",
+        "responseStatus": "accepted"
+      }
+    ],
+    "young.j.patrick@gmail.com": [
+      {
+        "summary": "Mini Petting Zoo - Goats and Bunnies ",
+        "start": "2026-03-01T15:00:00-05:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "thatbriansexton@gmail.com": [
+      {
+        "summary": "Finding Your Frequency with Brian Sexton",
+        "start": "2026-08-18T14:30:00-04:00",
+        "displayName": null,
+        "responseStatus": "declined"
+      }
+    ],
+    "jenna.sims01@gmail.com": [
+      {
+        "summary": "Mini petting zoo",
+        "start": "2026-01-25T13:00:00-05:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      }
+    ],
+    "mchan293@gmail.com": [
+      {
+        "summary": "Mini Petting Zoo - 1 Hour ",
+        "start": "2025-12-21T13:00:00-05:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      }
+    ],
+    "pmiddleton@tendercarecenters.com": [
+      {
+        "summary": "Bunny Haven - Tender Care ",
+        "start": "2025-07-22T10:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      },
+      {
+        "summary": "Bunny Haven",
+        "start": "2025-07-10T10:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "thepeachpower@hotmail.com": [
+      {
+        "summary": "Mobile Petting Zoo ",
+        "start": "2025-07-18T16:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "life@sevenpines.com": [
+      {
+        "summary": "STEM Lesson ",
+        "start": "2025-07-20T13:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      }
+    ],
+    "lblitchington@tcms.care": [
+      {
+        "summary": "Bunny Haven - Tender Care ",
+        "start": "2025-07-22T10:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      }
+    ],
+    "wtlaharrington@gmail.com": [
+      {
+        "summary": "Mobile PZ - Birthday ",
+        "start": "2025-11-16T14:00:00-05:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      },
+      {
+        "summary": "Mobile PZ event",
+        "start": "2025-07-24T09:30:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "nikoesil78@gmail.com": [
+      {
+        "summary": "Farm Tour",
+        "start": "2025-07-24T13:30:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      }
+    ],
+    "leia933@yahoo.com": [
+      {
+        "summary": "Bunny Haven Birthday Party ",
+        "start": "2025-08-02T10:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "bthomas@advancedcarepartners.com": [
+      {
+        "summary": "Bunny Haven",
+        "start": "2025-12-22T11:00:00-05:00",
+        "displayName": null,
+        "responseStatus": "declined"
+      },
+      {
+        "summary": "Critter Club Bunny Haven ",
+        "start": "2025-11-26T11:00:00-05:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      },
+      {
+        "summary": "Critter Club - Bunny Haven ",
+        "start": "2025-08-06T11:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "urick9@yahoo.com": [
+      {
+        "summary": "Goat Haven",
+        "start": "2025-08-09T08:30:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      }
+    ],
+    "jtallaksen@vestapropertyservices.com": [
+      {
+        "summary": "Goat Yoga",
+        "start": "2025-11-15T10:00:00-05:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      },
+      {
+        "summary": "Full Mobile Petting Zoo",
+        "start": "2025-08-09T11:30:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      }
+    ],
+    "jdennie@brightsidepediatrics.com": [
+      {
+        "summary": "Bunny Haven ",
+        "start": "2025-08-15T13:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "mandarindle@harborchase.com": [
+      {
+        "summary": "Bunny Haven Trial Visit ",
+        "start": "2025-08-19T11:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      }
+    ],
+    "aprilmallard091@gmail.com": [
+      {
+        "summary": "Bunny Haven - Senior Care visit",
+        "start": "2025-08-25T13:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      }
+    ],
+    "manager@ameliaspringsalf.com": [
+      {
+        "summary": "Bunny Haven - Senior Care visit",
+        "start": "2025-08-25T13:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      }
+    ],
+    "christina.dutcher@gardensmemorycare.com": [
+      {
+        "summary": "Bunny Haven",
+        "start": "2025-12-29T10:30:00-05:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      },
+      {
+        "summary": "Critter Visit ",
+        "start": "2025-10-21T10:30:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      },
+      {
+        "summary": "Critter Visit ",
+        "start": "2025-08-28T10:30:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "cmatlosz93@gmail.com": [
+      {
+        "summary": "Farm tour ",
+        "start": "2025-08-29T13:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      }
+    ],
+    "tracy.levanich@gardensmemorycare.com": [
+      {
+        "summary": "Critter Club Visit - Ortega - chicks and rabbits ",
+        "start": "2025-09-09T14:30:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "lindseyrgriffith@yahoo.com": [
+      {
+        "summary": "Rabbit Haven",
+        "start": "2025-09-13T14:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "robin_dake@lcca.com": [
+      {
+        "summary": "Mini Petting Zoo",
+        "start": "2025-09-19T10:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "randyharp@gmail.com": [
+      {
+        "summary": "Mobile petting zoo ",
+        "start": "2025-09-19T17:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "peachesnabasket@gmail.com": [
+      {
+        "summary": "Bunny Haven",
+        "start": "2025-09-26T14:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      }
+    ],
+    "liz@firstcoastcms.com": [
+      {
+        "summary": "Mobile Petting Zoo",
+        "start": "2025-09-27T11:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      }
+    ],
+    "kfraser@greenwoodjax.org": [
+      {
+        "summary": "Mobile Petting Zoo - Greenwood Schools, inc ",
+        "start": "2025-09-27T13:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "emyers@vestapropertyservices.com": [
+      {
+        "summary": "Tison Bluff PH - ",
+        "start": "2025-10-25T16:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      },
+      {
+        "summary": "Goat Yoga",
+        "start": "2025-10-04T10:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "deandre.stringer@legendseniorliving.com": [
+      {
+        "summary": "Bunny Haven",
+        "start": "2025-10-11T14:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "coachleah15@outlook.com": [
+      {
+        "summary": "Petting Zoo Trinity Mandarin",
+        "start": "2025-10-12T11:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      }
+    ],
+    "abell@fletcherstendercare.com": [
+      {
+        "summary": "Critters on call ",
+        "start": "2025-11-11T11:30:00-05:00",
+        "displayName": "Antoinette Bell",
+        "responseStatus": "needsAction"
+      },
+      {
+        "summary": "Critters on call ",
+        "start": "2025-10-15T11:00:00-04:00",
+        "displayName": "Antoinette Bell",
+        "responseStatus": "needsAction"
+      }
+    ],
+    "dwatkins@fletcherstendercare.com": [
+      {
+        "summary": "Critters on call ",
+        "start": "2025-11-11T11:30:00-05:00",
+        "displayName": "Danielle Watkins",
+        "responseStatus": "needsAction"
+      },
+      {
+        "summary": "Critters on call ",
+        "start": "2025-10-15T11:00:00-04:00",
+        "displayName": "Danielle Watkins",
+        "responseStatus": "needsAction"
+      }
+    ],
+    "prinehart@fletcherstendercare.com": [
+      {
+        "summary": "Critters on call ",
+        "start": "2025-11-11T11:30:00-05:00",
+        "displayName": "Patti Rinehart",
+        "responseStatus": "needsAction"
+      },
+      {
+        "summary": "Critters on call ",
+        "start": "2025-10-15T11:00:00-04:00",
+        "displayName": "Patti Rinehart",
+        "responseStatus": "needsAction"
+      }
+    ],
+    "rbleasdell@fletcherstendercare.com": [
+      {
+        "summary": "Critters on call ",
+        "start": "2025-10-15T11:00:00-04:00",
+        "displayName": "Ruther Bleasdell",
+        "responseStatus": "needsAction"
+      }
+    ],
+    "salbertie@fletcherstendercare.com": [
+      {
+        "summary": "Critters on call ",
+        "start": "2025-11-11T11:30:00-05:00",
+        "displayName": "Shamecia Albertie",
+        "responseStatus": "needsAction"
+      },
+      {
+        "summary": "Critters on call ",
+        "start": "2025-10-15T11:00:00-04:00",
+        "displayName": "Shamecia Albertie",
+        "responseStatus": "needsAction"
+      }
+    ],
+    "svarnado@fletcherstendercare.com": [
+      {
+        "summary": "Critters on call ",
+        "start": "2025-11-11T11:30:00-05:00",
+        "displayName": "Shannon Varnado",
+        "responseStatus": "needsAction"
+      },
+      {
+        "summary": "Critters on call ",
+        "start": "2025-10-15T11:00:00-04:00",
+        "displayName": "Shannon Varnado",
+        "responseStatus": "needsAction"
+      }
+    ],
+    "patrice.pusha@palmgarden.com": [
+      {
+        "summary": "Bunny Haven - Recurring ",
+        "start": "2025-11-19T13:30:00-05:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      },
+      {
+        "summary": "Critter Club Visit ",
+        "start": "2025-10-15T13:30:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      }
+    ],
+    "gnldelivery4@gmail.com": [
+      {
+        "summary": "Critter Club Visit ",
+        "start": "2025-10-16T13:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      }
+    ],
+    "dodsonamy@yahoo.com": [
+      {
+        "summary": "Petting Zoo Event ",
+        "start": "2025-10-19T13:30:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      }
+    ],
+    "klsmith@vestapropertyservices.com": [
+      {
+        "summary": "Goat Yoga Chat - Mike to call: 904-230-2011",
+        "start": "2025-10-22T11:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      }
+    ],
+    "memorycaredirector@palagioseniorliving.com": [
+      {
+        "summary": "Mini Petting Zoo",
+        "start": "2025-10-22T14:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "amelia.parker@sunshinepreschoolsfl.com": [
+      {
+        "summary": "Trunk or Treat Mobile Petting Zoo",
+        "start": "2025-10-30T14:30:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      },
+      {
+        "summary": "Trunk or Treat Mobile Petting Zoo",
+        "start": "2025-10-29T14:30:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      },
+      {
+        "summary": "Trunk or Treat Mobile Petting Zoo",
+        "start": "2025-10-24T14:30:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      },
+      {
+        "summary": "Trunk or Treat Mobile Petting Zoo",
+        "start": "2025-10-23T14:30:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "dianna.sheikh@sunshinepreschoolsfl.com": [
+      {
+        "summary": "Trunk or Treat Mobile Petting Zoo",
+        "start": "2025-10-30T14:30:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      },
+      {
+        "summary": "Trunk or Treat Mobile Petting Zoo",
+        "start": "2025-10-29T14:30:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      },
+      {
+        "summary": "Trunk or Treat Mobile Petting Zoo",
+        "start": "2025-10-24T14:30:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      },
+      {
+        "summary": "Trunk or Treat Mobile Petting Zoo",
+        "start": "2025-10-23T14:30:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "bdawson@clarawhitemission.org": [
+      {
+        "summary": "Mobile PZ",
+        "start": "2025-10-25T10:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "connie889305@gmail.com": [
+      {
+        "summary": "Mobile PZ",
+        "start": "2025-10-25T12:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "stephen.strum@nm.com": [
+      {
+        "summary": "Buzzworthy Businesses with Steve Strum",
+        "start": "2025-10-28T11:00:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      }
+    ],
+    "williams.alc224@gmail.com": [
+      {
+        "summary": "Mobile Petting Zoo",
+        "start": "2025-11-08T12:00:00-05:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      },
+      {
+        "summary": "Trunk or Treat Mobile Petting Zoo",
+        "start": "2025-10-30T14:30:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      },
+      {
+        "summary": "Trunk or Treat Mobile Petting Zoo",
+        "start": "2025-10-29T14:30:00-04:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      }
+    ],
+    "richard.ellis@orbussoftware.com": [
+      {
+        "summary": "Rich & Mike- Investment Chat",
+        "start": "2025-11-04T13:00:00-05:00",
+        "displayName": null,
+        "responseStatus": "declined"
+      }
+    ],
+    "taylornkelly4@gmail.com": [
+      {
+        "summary": "Mini petting zoo ju",
+        "start": "2025-11-08T11:00:00-05:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "kbean@aipca.net": [
+      {
+        "summary": "Mobile Petting Zoo",
+        "start": "2025-11-08T12:00:00-05:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "walls24.megan@gmail.com": [
+      {
+        "summary": "Bunny Haven",
+        "start": "2025-11-10T10:30:00-05:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      }
+    ],
+    "syoung91389@gmail.com": [
+      {
+        "summary": "Mobile PZ Event - Birthday Party",
+        "start": "2025-11-15T14:00:00-05:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "hgrover@ju.edu": [
+      {
+        "summary": "Mobile PZ Event ",
+        "start": "2025-11-17T12:00:00-05:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "reagan.brunett@gmail.com": [
+      {
+        "summary": "Mobile PZ Event ",
+        "start": "2025-11-17T12:00:00-05:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "ktaylor28@ju.edu": [
+      {
+        "summary": "Mobile PZ Event ",
+        "start": "2025-11-17T12:00:00-05:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "aroundtheclockkidcare904@gmail.com": [
+      {
+        "summary": "Mini Petting Zoo - 1 Hr",
+        "start": "2025-11-18T09:45:00-05:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      }
+    ],
+    "lavillavisualartsboosters@gmail.com": [
+      {
+        "summary": "Mobile Petting Zoo",
+        "start": "2025-11-20T17:00:00-05:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      }
+    ],
+    "liudmila.lashchenko@gmail.com": [
+      {
+        "summary": "Mini Petting Zoo Bday",
+        "start": "2025-11-22T16:00:00-05:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      }
+    ],
+    "brittinee.bailey@yahoo.com": [
+      {
+        "summary": "Mini Petting Zoo",
+        "start": "2025-11-23T11:00:00-05:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      }
+    ],
+    "laytanwickizer@gmail.com": [
+      {
+        "summary": "Bunny Haven Bday Party",
+        "start": "2025-11-23T16:30:00-05:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      }
+    ],
+    "vanessa.allen9959@gmail.com": [
+      {
+        "summary": "Mini PZ Birthday Party",
+        "start": "2025-12-07T10:30:00-05:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ],
+    "abi@alanidentistry.com": [
+      {
+        "summary": "Mini Petting Zoo - Birthday Party",
+        "start": "2025-12-07T13:00:00-05:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      }
+    ],
+    "audree.ware@sysco.com": [
+      {
+        "summary": "Mobile PZ Event",
+        "start": "2025-12-20T10:00:00-05:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      }
+    ],
+    "catalina.farmer@gmail.com": [
+      {
+        "summary": "Bunny Haven",
+        "start": "2025-12-20T11:00:00-05:00",
+        "displayName": null,
+        "responseStatus": "needsAction"
+      }
+    ],
+    "marti.howard9@gmail.com": [
+      {
+        "summary": "Goat Haven",
+        "start": "2025-12-28T15:00:00-05:00",
+        "displayName": null,
+        "responseStatus": "accepted"
+      }
+    ]
+  },
+  "website_autobooks": [
+    {
+      "name": "Nalinie Ramnaraine",
+      "email": null,
+      "amount": 25.0,
+      "order": "C-1F0BA841ABD74790",
+      "date": "2026-09-22",
+      "subject": "Order # C-1F0BA841ABD74790: Booking Confirmed"
+    },
+    {
+      "name": "Miguel Santiesteban",
+      "email": null,
+      "amount": 225.0,
+      "order": "C-D580362407434430",
+      "date": "2026-09-14",
+      "subject": "Order # C-D580362407434430: Booking Confirmed"
+    },
+    {
+      "name": "Stefania Cook",
+      "email": null,
+      "amount": 40.0,
+      "order": "C-A431659254E74ED8",
+      "date": "2026-09-04",
+      "subject": "Order # C-A431659254E74ED8: Booking Confirmed"
+    },
+    {
+      "name": "Danielle Wagner",
+      "email": null,
+      "amount": 40.0,
+      "order": "C-6D99E02FE1274858",
+      "date": "2026-09-04",
+      "subject": "Order # C-6D99E02FE1274858: Booking Confirmed"
+    },
+    {
+      "name": "Naomi Lindauer",
+      "email": null,
+      "amount": 25.0,
+      "order": "C-8AD7F508CB4D42BB",
+      "date": "2026-08-27",
+      "subject": "Order # C-8AD7F508CB4D42BB: Booking Confirmed"
+    },
+    {
+      "name": "Julie Bennett",
+      "email": null,
+      "amount": 40.0,
+      "order": "C-412C4DDDBD2248E1",
+      "date": "2026-08-20",
+      "subject": "Order # C-412C4DDDBD2248E1: Booking Confirmed"
+    },
+    {
+      "name": "Kelli Robinson",
+      "email": null,
+      "amount": 50.0,
+      "order": "C-604AC241F4FB4E95",
+      "date": "2026-08-17",
+      "subject": "Order # C-604AC241F4FB4E95: Booking Confirmed"
+    },
+    {
+      "name": "Chad Jones",
+      "email": null,
+      "amount": 25.0,
+      "order": "C-DD2BE9F846AD43AB",
+      "date": "2026-08-15",
+      "subject": "Order # C-DD2BE9F846AD43AB: Booking Confirmed"
+    }
+  ],
+  "calendar_accepts_from_booking_gmail": [
+    {
+      "email": "marieljaster@gmail.com",
+      "name": "Mini petting zoo Mariel Jasterzenski",
+      "date": "2026-09-21",
+      "subject": "Accepted: Mini petting zoo @ Sat Sep 26, 2026 1pm - 2:15pm (EDT) (sheehanhomestead@gmail.com)",
+      "snippet": "Mini petting zoo Mariel Jasterzenski has accepted this invitation. When Saturday Sep 26, 2026 \u22c5 1pm \u2013 2:15pm (Eastern Ti"
+    },
+    {
+      "email": "mystysa@gmail.com",
+      "name": "Goat Yoga Emylou Gall",
+      "date": "2026-09-11",
+      "subject": "Accepted: Goat Yoga  @ Sat Nov 7, 2026 10am - 11am (EST) (sheehanhomestead@gmail.com)",
+      "snippet": "Goat Yoga Emylou Gall has accepted this invitation. When Saturday Nov 7, 2026 \u22c5 10am \u2013 11am (Eastern Time - New York) Lo"
+    },
+    {
+      "email": "calendar-notification@google.com",
+      "name": "Goat Yoga jtallaksen@vestapropertyservices.com",
+      "date": "2026-09-09",
+      "subject": "Accepted: Goat Yoga  @ Sat Nov 7, 2026 10am - 11am (EST) (sheehanhomestead@gmail.com)",
+      "snippet": "Goat Yoga jtallaksen@vestapropertyservices.com has accepted this invitation. When Saturday Nov 7, 2026 \u22c5 10am \u2013 11am (Ea"
+    },
+    {
+      "email": "tiffanygumino@gmail.com",
+      "name": "Goat Yoga Tiffany Gumino",
+      "date": "2026-08-30",
+      "subject": "Accepted: Goat Yoga @ Sat Dec 5, 2026 5:45pm - 6:45pm (EST) (sheehanhomestead@gmail.com)",
+      "snippet": "Goat Yoga Tiffany Gumino has accepted this invitation. When Saturday Dec 5, 2026 \u22c5 5:45pm \u2013 6:45pm (Eastern Time - New Y"
+    },
+    {
+      "email": "honeybeeresale@gmail.com",
+      "name": "Eartha mobile petting zoo Melissa Hyte",
+      "date": "2026-08-25",
+      "subject": "Accepted: Eartha mobile petting zoo  @ Sat Oct 24, 2026 10am - 2pm (EDT) (sheehanhomestead@gmail.com)",
+      "snippet": "Eartha mobile petting zoo Melissa Hyte has accepted this invitation. When Saturday Oct 24, 2026 \u22c5 10am \u2013 2pm (Eastern Ti"
+    },
+    {
+      "email": "calendar-notification@google.com",
+      "name": "90 Min Petting Zoo + CoT amollitt@yahoo.com",
+      "date": "2026-08-21",
+      "subject": "Accepted: 90 Min Petting Zoo + CoT @ Sun Sep 6, 2026 11am - 12:30pm (EDT) (sheehanhomestead@gmail.com)",
+      "snippet": "90 Min Petting Zoo + CoT amollitt@yahoo.com has accepted this invitation. (904) 505-7483 Angela Heichel When Sunday Sep "
+    },
+    {
+      "email": "marieljaster@gmail.com",
+      "name": "Mini petting zoo Mariel Jasterzenski",
+      "date": "2026-08-10",
+      "subject": "Accepted: Mini petting zoo @ Sat Sep 26, 2026 1:30pm - 2:45pm (EDT) (sheehanhomestead@gmail.com)",
+      "snippet": "Mini petting zoo Mariel Jasterzenski has accepted this invitation. When Saturday Sep 26, 2026 \u22c5 1:30pm \u2013 2:45pm (Eastern"
+    }
+  ],
+  "note": "Calendar attendee \u2260 paid. Website Booking Confirmed with Paid at checkout = purchase."
+}

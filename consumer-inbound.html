@@ -66,6 +66,16 @@ a.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
   table{font-size:.9rem}
   th,td{padding:12px 8px}
 }
+
+.badge.bought{background:#13281d;color:var(--good);border-color:#3dd68c55}
+.badge.not_seen{background:#1a2030;color:#9aa8c0;border-color:#2a3550}
+.badge.unknown{background:#2a2416;color:var(--warn);border-color:#ffb02066}
+.badge.lowconf{background:#2a1619;color:#ff9aa5;border-color:#ff5d6c66;margin-left:4px}
+.filters.purchase{margin-top:4px}
+.filters.purchase button.on.bought{border-color:#3dd68c88;background:#13281d;color:var(--good)}
+.filters.purchase button.on.not_seen{border-color:#5b8cff88;background:#1a2030;color:#9ec1ff}
+.filters.purchase button.on.unknown{border-color:#ffb02088;background:#2a2416;color:var(--warn)}
+.ev{font-size:.68rem;color:var(--muted);margin-top:2px}
 </style></head>
 <body><div class="wrap">
 
@@ -87,7 +97,7 @@ a.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
 <header>
   <div>
     <h1>Consumer Inbound · Violet / B2C</h1>
-    <div class="sub">Tap email / phone · summer interest · Critters · GoDaddy · waivers · forms missing sheets</div>
+    <div class="sub">Tap email / phone · bought vs not · summer · Critters · GoDaddy · waivers</div>
   </div>
   <div class="sub" id="asof">as of —</div>
 </header>
@@ -108,6 +118,10 @@ a.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
   <div class="kpi good"><div class="l">Mailto contacts</div><div class="v" id="k-mail">—</div><div class="s" id="k-mail-s">tappable rows</div></div>
   <div class="kpi warn"><div class="l">Waiver status</div><div class="v" id="k-waiver">—</div><div class="s" id="k-waiver-s">form export</div></div>
   <div class="kpi bad"><div class="l">Forms missing sheets</div><div class="v" id="k-miss">—</div><div class="s" id="k-miss-s">Drive forms only</div></div>
+
+  <div class="kpi good"><div class="l">Bought</div><div class="v" id="k-bought">—</div><div class="s" id="k-bought-s">cross-ref hit</div></div>
+  <div class="kpi"><div class="l">Not seen</div><div class="v" id="k-notseen">—</div><div class="s" id="k-notseen-s">no purchase hit</div></div>
+  <div class="kpi warn"><div class="l">Unknown</div><div class="v" id="k-unknown">—</div><div class="s" id="k-unknown-s">calendar/booking only</div></div>
 </div>
 
 <div class="card" id="card-people">
@@ -120,9 +134,16 @@ a.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
     <button type="button" data-bucket="waiver_proxy">Waivers (proxy)</button>
     <button type="button" data-bucket="action_queue">Action queue</button>
   </div>
+
+  <div class="filters purchase" id="filters-purchase">
+    <button type="button" class="on" data-purchase="all">All purchases</button>
+    <button type="button" class="bought" data-purchase="bought">Bought</button>
+    <button type="button" class="not_seen" data-purchase="not_seen">Not seen</button>
+    <button type="button" class="unknown" data-purchase="unknown">Unknown</button>
+  </div>
   <div class="scroll">
     <table>
-      <thead><tr><th>Name</th><th>Email / phone</th><th>Detail</th><th>Action</th></tr></thead>
+      <thead><tr><th>Name</th><th>Purchase</th><th>Email / phone</th><th>Detail</th><th>Action</th></tr></thead>
       <tbody id="tb-people"></tbody>
     </table>
   </div>
@@ -227,10 +248,28 @@ a.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
     if(/tam|warm/.test(key)) cls='tam_tap';
     return '<span class="badge '+cls+'">'+esc(st)+'</span>';
   }
+
   var ALL = [];
   var FILTER = 'all';
+  var PFILTER = 'all';
+  function purchaseBadge(c){
+    var st = c.purchase_status || 'unknown';
+    var label = st === 'bought' ? 'Bought' : (st === 'not_seen' ? 'Not seen' : 'Unknown');
+    var html = '<span class="badge '+st+'">'+esc(label)+'</span>';
+    if(c.match_confidence === 'low') html += ' <span class="badge lowconf">low conf</span>';
+    var bits = [];
+    if(c.amount != null) bits.push('$'+Number(c.amount).toLocaleString(undefined,{maximumFractionDigits:2}));
+    if(c.last_paid_or_booked) bits.push(c.last_paid_or_booked);
+    if((c.evidence||[]).length) bits.push((c.evidence||[]).join(', '));
+    if(bits.length) html += '<div class="ev">'+esc(bits.join(' · '))+'</div>';
+    return html;
+  }
   function renderPeople(){
-    var list = ALL.filter(function(c){ return FILTER==='all' || c.bucket===FILTER; });
+    var list = ALL.filter(function(c){
+      if(FILTER!=='all' && c.bucket!==FILTER) return false;
+      if(PFILTER!=='all' && (c.purchase_status||'unknown')!==PFILTER) return false;
+      return true;
+    });
     document.getElementById('tag-people').textContent = list.length+' contacts';
     document.getElementById('tb-people').innerHTML = list.map(function(c){
       var subj = c.subject || 'Sheehan Homestead / Critters follow-up';
@@ -246,17 +285,19 @@ a.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
       if(c.phone) actionBtns += '<a class="btn sec" href="'+esc(tel)+'">Call</a>';
       actionBtns += '</div>';
       if(c.next_action) actionBtns += '<div class="path" style="margin-top:4px">'+esc(c.next_action)+'</div>';
-      return '<tr data-bucket="'+esc(c.bucket||'')+'">'+
+      return '<tr data-bucket="'+esc(c.bucket||'')+'" data-purchase="'+esc(c.purchase_status||'unknown')+'">'+
         '<td class="namecell"><b>'+esc(c.name||'')+'</b> '+statusBadge(c.status)+
           (c.date?'<div class="path">'+esc(c.date)+'</div>':'')+
           (c.bucket?'<div class="path">'+esc(c.bucket)+'</div>':'')+
         '</td>'+
+        '<td>'+purchaseBadge(c)+'</td>'+
         '<td>'+contactBits+'</td>'+
         '<td class="path">'+esc(c.detail||'')+'</td>'+
         '<td>'+actionBtns+'</td>'+
       '</tr>';
-    }).join('') || '<tr><td colspan="4" class="path">No contacts in this filter.</td></tr>';
+    }).join('') || '<tr><td colspan="5" class="path">No contacts in this filter.</td></tr>';
   }
+
   async function boot(){
     var res = await fetch('data/consumer_inbound.json',{cache:'no-store'});
     if(!res.ok) throw new Error('HTTP '+res.status);
@@ -273,6 +314,16 @@ a.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
     document.getElementById('k-waiver-s').textContent = (k.waiver_proxy_records != null ? (k.waiver_proxy_records+' email proxies · ') : '') + (k.waiver_note||'');
     document.getElementById('k-miss').textContent = k.forms_missing_sheets != null ? k.forms_missing_sheets : '—';
     document.getElementById('k-miss-s').textContent = k.forms_missing_sheets_note || '';
+
+    var px = d.purchase_crossref || {};
+    var pxc = px.counts || {};
+    document.getElementById('k-bought').textContent = k.purchase_bought != null ? k.purchase_bought : (pxc.bought != null ? pxc.bought : '—');
+    document.getElementById('k-bought-s').textContent = k.purchase_note || 'PayPal · invoices · calendar · autobook';
+    document.getElementById('k-notseen').textContent = k.purchase_not_seen != null ? k.purchase_not_seen : (pxc.not_seen != null ? pxc.not_seen : '—');
+    document.getElementById('k-notseen-s').textContent = 'no hit in indexed sources';
+    document.getElementById('k-unknown').textContent = k.purchase_unknown != null ? k.purchase_unknown : (pxc.unknown != null ? pxc.unknown : '—');
+    document.getElementById('k-unknown-s').textContent = 'calendar/booking without pay proof';
+
     var b = d.buckets||{};
     document.getElementById('tag-interest').textContent = ((b.interest_forms||[]).length)+' forms';
     document.getElementById('tb-interest').innerHTML = rows(b.interest_forms);
@@ -289,6 +340,10 @@ a.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
     ALL = d.contacts || [];
     // Priority: action_queue / needs first, then by date desc-ish — keep source order but float AQ to top
     ALL.sort(function(x,y){
+      var ps = {bought:0, unknown:1, not_seen:2};
+      var pxs = ps[x.purchase_status] != null ? ps[x.purchase_status] : 9;
+      var pys = ps[y.purchase_status] != null ? ps[y.purchase_status] : 9;
+      if(pxs !== pys) return pxs - pys;
       var px = x.priority != null ? Number(x.priority) : 999;
       var py = y.priority != null ? Number(y.priority) : 999;
       if(px !== py) return px - py;
@@ -299,17 +354,31 @@ a.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
     });
     renderPeople();
     var cc = d.contact_counts||{};
+    var pxc2 = (d.purchase_crossref||{}).counts || {};
     document.getElementById('people-note').textContent =
-      'Real emails/phones only · '+ALL.length+' mailto rows'+(cc.tel_total!=null?' · '+cc.tel_total+' tel':'')+
+      'Real emails/phones only · '+ALL.length+' mailto · Bought '+(pxc2.bought!=null?pxc2.bought:(k.purchase_bought||0))+
+      ' · Not seen '+(pxc2.not_seen!=null?pxc2.not_seen:(k.purchase_not_seen||0))+
+      ' · Unknown '+(pxc2.unknown!=null?pxc2.unknown:(k.purchase_unknown||0))+
       ' · Summer '+(cc.summer_interest||0)+' · GoDaddy '+(cc.godaddy||0)+' · Critter '+(cc.critter_club||0)+
-      ' · Waiver proxy '+(cc.waiver_proxy||0)+' · AQ extras '+(cc.action_queue_extra||0)+
-      '. Data: data/consumer_inbound.json';
-    document.getElementById('src-note').textContent = 'Data: data/consumer_inbound.json · '+(d.note||'No fabricated counts.')+' · Built '+(d.as_of||'');
+      '. Never invent purchases.';
+    var srcUsed = ((d.purchase_crossref||{}).sources_used||[]).map(function(s){ return s.id; }).join(', ');
+    var srcGaps = ((d.purchase_crossref||{}).gaps||[]).slice(0,4).join(' · ');
+    document.getElementById('src-note').textContent =
+      'Data: data/consumer_inbound.json · Purchase sources: '+(srcUsed||'PayPal names, harvest emails, live calendar, website autobooks')+
+      ' · Gaps: '+(srcGaps||'VyStar not used; calendar dumps were empty — live MCP used')+
+      ' · '+(d.note||'')+' · Built '+(d.as_of||'');
     document.getElementById('filters').addEventListener('click', function(ev){
       var btn = ev.target.closest('button[data-bucket]');
       if(!btn) return;
       FILTER = btn.getAttribute('data-bucket');
       Array.prototype.forEach.call(document.querySelectorAll('#filters button'), function(b){ b.classList.toggle('on', b===btn); });
+      renderPeople();
+    });
+    document.getElementById('filters-purchase').addEventListener('click', function(ev){
+      var btn = ev.target.closest('button[data-purchase]');
+      if(!btn) return;
+      PFILTER = btn.getAttribute('data-purchase');
+      Array.prototype.forEach.call(document.querySelectorAll('#filters-purchase button'), function(b){ b.classList.toggle('on', b===btn); });
       renderPeople();
     });
   }

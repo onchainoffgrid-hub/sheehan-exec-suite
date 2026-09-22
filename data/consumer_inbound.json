@@ -1,7 +1,7 @@
 {
   "as_of": "2026-09-22 ET",
-  "product": "Consumer inbound · Violet / B2C contact forms + interest + waivers",
-  "note": "Counts from deputy-outreach/inbound-inventory and bdr/lists/INBOUND_FIRE*. Contact rows are real emails/phones only — no invented addresses. Amanda Lawrence Summer Scholars row omitted (email field was name, not an address).",
+  "product": "Consumer inbound \u00b7 Violet / B2C contact forms + interest + waivers",
+  "note": "Counts from deputy-outreach/inbound-inventory and bdr/lists/INBOUND_FIRE*. Contact rows are real emails/phones only \u2014 no invented addresses. Amanda Lawrence Summer Scholars row omitted (email field was name, not an address).",
   "sources": [
     {
       "id": "summer_scholars",
@@ -41,18 +41,22 @@
   ],
   "kpis": {
     "interest_submissions": 34,
-    "interest_submissions_note": "Summer Camp Interest (Responses) Google Form — SUMMER_SCHOLARS.md",
+    "interest_submissions_note": "Summer Camp Interest (Responses) Google Form \u2014 SUMMER_SCHOLARS.md",
     "godaddy_contacts_this_pass": 27,
     "godaddy_contacts_this_pass_note": "INBOUND_FIRE body-parsed this pass (of 97 newest threads pulled; ~201 estimate matching query)",
     "godaddy_inventory_rows": 90,
-    "godaddy_inventory_note": "GODADDY_CONTACTS.csv / SUMMARY.md — all threads from paginated read-only Gmail search",
+    "godaddy_inventory_note": "GODADDY_CONTACTS.csv / SUMMARY.md \u2014 all threads from paginated read-only Gmail search",
     "waiver_status": "GAP",
     "waiver_proxy_records": 10,
-    "waiver_note": "Google Form responses need login/export; 10 email-proxy rows only — not form export",
+    "waiver_note": "Google Form responses need login/export; 10 email-proxy rows only \u2014 not form export",
     "forms_missing_sheets": 4,
     "forms_missing_sheets_note": "Forms exist in Drive; no (Responses) spreadsheets discovered",
     "mailto_contacts": 157,
-    "tel_contacts": 5
+    "tel_contacts": 5,
+    "purchase_bought": 43,
+    "purchase_not_seen": 88,
+    "purchase_unknown": 26,
+    "purchase_note": "Cross-ref PayPal names + harvest emails + live calendar + website autobooks \u00b7 VyStar unused"
   },
   "contact_counts": {
     "summer_interest": 33,
@@ -73,9 +77,9 @@
         "latest_row_date": "5/18/2026",
         "source_path": "/workspace/deputy-outreach/inbound-inventory/SUMMER_SCHOLARS.md",
         "status": "exported",
-        "next_action": "Reply / convert deposits · keep sheet live for new summer interest",
+        "next_action": "Reply / convert deposits \u00b7 keep sheet live for new summer interest",
         "mailto_rows": 33,
-        "note": "33 tappable emails in People table · 1 row skipped (no valid email)"
+        "note": "33 tappable emails in People table \u00b7 1 row skipped (no valid email)"
       },
       {
         "name": "Critter Club Signups (Monthly/Quarterly)",
@@ -109,7 +113,7 @@
           "Homepage": 11,
           "other": 1
         },
-        "next_action": "Use CSV as master list; many Booking-help messages empty — open GoDaddy Conversations",
+        "next_action": "Use CSV as master list; many Booking-help messages empty \u2014 open GoDaddy Conversations",
         "mailto_rows": 89
       },
       {
@@ -130,7 +134,7 @@
         "as_of": "2026-09-22 ET",
         "source_path": "/workspace/deputy-outreach/inbound-inventory/WAIVERS.md",
         "gap": "Requires login to form owner Google Forms UI or response-sheet/CSV export. File is not a form export.",
-        "next_action": "Export waiver (Responses) sheet · replace proxy table"
+        "next_action": "Export waiver (Responses) sheet \u00b7 replace proxy table"
       },
       {
         "name": "Waiver email-proxy records",
@@ -138,7 +142,7 @@
         "status": "proxy_only",
         "as_of": "2026-09-22 ET",
         "source_path": "/workspace/deputy-outreach/inbound-inventory/WAIVERS.md",
-        "note": "Every row labeled email proxy — not form export. Does not prove a submitted Google Form response.",
+        "note": "Every row labeled email proxy \u2014 not form export. Does not prove a submitted Google Form response.",
         "next_action": "Match proxies to real form submissions after export",
         "mailto_rows": 10
       }
@@ -178,18 +182,21 @@
       }
     ],
     "close_menu_link": {
-      "label": "Catalogue → Close (consumer menu)",
+      "label": "Catalogue \u2192 Close (consumer menu)",
       "path": "catalogue-close.html",
-      "note": "Consumer menu already exists — link only; do not duplicate pricing here.",
+      "note": "Consumer menu already exists \u2014 link only; do not duplicate pricing here.",
       "source_lock": "Consumer menu 2026-09-16"
     }
   },
   "gaps": [
-    "Waiver Google Form responses not exported (GAP) — 10 email proxies only (tappable but not form export)",
+    "Waiver Google Form responses not exported (GAP) \u2014 10 email proxies only (tappable but not form export)",
     "4 Google Forms have no (Responses) sheets in Drive",
     "~70 GoDaddy threads not body-parsed beyond newest 97-window / 27 parsed",
-    "Other non-GoDaddy inquiries (25) live in OTHER_INBOUND.md — not rolled into KPI strip",
-    "1 Summer Scholars row (Amanda Lawrence) had no valid email — omitted from mailto table"
+    "Other non-GoDaddy inquiries (25) live in OTHER_INBOUND.md \u2014 not rolled into KPI strip",
+    "1 Summer Scholars row (Amanda Lawrence) had no valid email \u2014 omitted from mailto table",
+    "Purchase cross-ref: VyStar not used; PayPal name-only (no emails)",
+    "Purchase cross-ref: website Booking Confirmed emails truncated \u2014 name match only",
+    "Purchase cross-ref: bookings_pipeline paid status often OPEN/unknown"
   ],
   "contacts": [
     {
@@ -201,8 +208,13 @@
       "detail": "Interest form: kids 7,9,11; prefers Full Day 9am-3pm; focus STEM",
       "source": "SUMMER_SCHOLARS.md",
       "subject": "Sheehan Homestead / Summer Camp Interest follow-up",
-      "next_action": "Reply · convert deposit",
-      "status": "interest"
+      "next_action": "Reply \u00b7 convert deposit",
+      "status": "interest",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "summer_interest",
@@ -213,8 +225,13 @@
       "detail": "Interest form: kids 10,12,13; prefers Half Day 9am-12:30pm; focus Both",
       "source": "SUMMER_SCHOLARS.md",
       "subject": "Sheehan Homestead / Summer Camp Interest follow-up",
-      "next_action": "Reply · convert deposit",
-      "status": "interest"
+      "next_action": "Reply \u00b7 convert deposit",
+      "status": "interest",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "summer_interest",
@@ -225,8 +242,13 @@
       "detail": "Interest form: kids 3 and 4; prefers Alternating days; focus Both",
       "source": "SUMMER_SCHOLARS.md",
       "subject": "Sheehan Homestead / Summer Camp Interest follow-up",
-      "next_action": "Reply · convert deposit",
-      "status": "interest"
+      "next_action": "Reply \u00b7 convert deposit",
+      "status": "interest",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "summer_interest",
@@ -237,8 +259,13 @@
       "detail": "Interest form: kids 6-14; prefers Full Day 9am-3pm; focus Both",
       "source": "SUMMER_SCHOLARS.md",
       "subject": "Sheehan Homestead / Summer Camp Interest follow-up",
-      "next_action": "Reply · convert deposit",
-      "status": "interest"
+      "next_action": "Reply \u00b7 convert deposit",
+      "status": "interest",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "summer_interest",
@@ -249,8 +276,15 @@
       "detail": "Interest form: kids 7, 5; prefers Other; focus Both",
       "source": "SUMMER_SCHOLARS.md",
       "subject": "Sheehan Homestead / Summer Camp Interest follow-up",
-      "next_action": "Reply · convert deposit",
-      "status": "interest"
+      "next_action": "Reply \u00b7 convert deposit",
+      "status": "interest",
+      "purchase_status": "unknown",
+      "evidence": [
+        "payment_mention"
+      ],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "summer_interest",
@@ -261,8 +295,13 @@
       "detail": "Interest form: kids 4 and 9; prefers Full Day 9am-3pm; focus Both",
       "source": "SUMMER_SCHOLARS.md",
       "subject": "Sheehan Homestead / Summer Camp Interest follow-up",
-      "next_action": "Reply · convert deposit",
-      "status": "interest"
+      "next_action": "Reply \u00b7 convert deposit",
+      "status": "interest",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "summer_interest",
@@ -273,8 +312,13 @@
       "detail": "Interest form: kids 3; prefers Other; focus Both",
       "source": "SUMMER_SCHOLARS.md",
       "subject": "Sheehan Homestead / Summer Camp Interest follow-up",
-      "next_action": "Reply · convert deposit",
-      "status": "interest"
+      "next_action": "Reply \u00b7 convert deposit",
+      "status": "interest",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "summer_interest",
@@ -285,8 +329,13 @@
       "detail": "Interest form: kids 12; prefers Full Day 9am-3pm; focus Both",
       "source": "SUMMER_SCHOLARS.md",
       "subject": "Sheehan Homestead / Summer Camp Interest follow-up",
-      "next_action": "Reply · convert deposit",
-      "status": "interest"
+      "next_action": "Reply \u00b7 convert deposit",
+      "status": "interest",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "summer_interest",
@@ -297,8 +346,13 @@
       "detail": "Interest form: kids 9; prefers Full Day 9am-3pm; focus Both",
       "source": "SUMMER_SCHOLARS.md",
       "subject": "Sheehan Homestead / Summer Camp Interest follow-up",
-      "next_action": "Reply · convert deposit",
-      "status": "interest"
+      "next_action": "Reply \u00b7 convert deposit",
+      "status": "interest",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "summer_interest",
@@ -309,8 +363,13 @@
       "detail": "Interest form: kids She'll turn 7 on 7/10; prefers Full Day 9am-3pm; focus Both",
       "source": "SUMMER_SCHOLARS.md",
       "subject": "Sheehan Homestead / Summer Camp Interest follow-up",
-      "next_action": "Reply · convert deposit",
-      "status": "interest"
+      "next_action": "Reply \u00b7 convert deposit",
+      "status": "interest",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "summer_interest",
@@ -321,8 +380,13 @@
       "detail": "Interest form: kids He'll be 6 by summer; prefers Full Day 9am-3pm; focus Both",
       "source": "SUMMER_SCHOLARS.md",
       "subject": "Sheehan Homestead / Summer Camp Interest follow-up",
-      "next_action": "Reply · convert deposit",
-      "status": "interest"
+      "next_action": "Reply \u00b7 convert deposit",
+      "status": "interest",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "summer_interest",
@@ -333,8 +397,13 @@
       "detail": "Interest form: kids 6 (7 in may); prefers Half Day 9am-12:30pm; focus Both",
       "source": "SUMMER_SCHOLARS.md",
       "subject": "Sheehan Homestead / Summer Camp Interest follow-up",
-      "next_action": "Reply · convert deposit",
-      "status": "interest"
+      "next_action": "Reply \u00b7 convert deposit",
+      "status": "interest",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "summer_interest",
@@ -345,8 +414,13 @@
       "detail": "Interest form: kids 13; prefers Full Day 9am-3pm; focus STEM",
       "source": "SUMMER_SCHOLARS.md",
       "subject": "Sheehan Homestead / Summer Camp Interest follow-up",
-      "next_action": "Reply · convert deposit",
-      "status": "interest"
+      "next_action": "Reply \u00b7 convert deposit",
+      "status": "interest",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "summer_interest",
@@ -357,8 +431,13 @@
       "detail": "Interest form: kids 9 and 6; prefers Full Day 9am-3pm; focus Both; deposit Yes",
       "source": "SUMMER_SCHOLARS.md",
       "subject": "Sheehan Homestead / Summer Camp Interest follow-up",
-      "next_action": "Reply · convert deposit",
-      "status": "interest"
+      "next_action": "Reply \u00b7 convert deposit",
+      "status": "interest",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "summer_interest",
@@ -369,8 +448,13 @@
       "detail": "Interest form: kids 8; prefers Full Day 9am-3pm; focus STEM; deposit Yes",
       "source": "SUMMER_SCHOLARS.md",
       "subject": "Sheehan Homestead / Summer Camp Interest follow-up",
-      "next_action": "Reply · convert deposit",
-      "status": "interest"
+      "next_action": "Reply \u00b7 convert deposit",
+      "status": "interest",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "summer_interest",
@@ -381,8 +465,13 @@
       "detail": "Interest form: kids 5; prefers Alternating days; focus Farm/Animal care; deposit Yes",
       "source": "SUMMER_SCHOLARS.md",
       "subject": "Sheehan Homestead / Summer Camp Interest follow-up",
-      "next_action": "Reply · convert deposit",
-      "status": "interest"
+      "next_action": "Reply \u00b7 convert deposit",
+      "status": "interest",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "summer_interest",
@@ -393,8 +482,13 @@
       "detail": "Interest form: kids 8; prefers Full Day 9am-3pm; focus Both; deposit Yes",
       "source": "SUMMER_SCHOLARS.md",
       "subject": "Sheehan Homestead / Summer Camp Interest follow-up",
-      "next_action": "Reply · convert deposit",
-      "status": "interest"
+      "next_action": "Reply \u00b7 convert deposit",
+      "status": "interest",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "summer_interest",
@@ -405,8 +499,13 @@
       "detail": "Interest form: kids 7, 9, 14; prefers Half Day 9am-12:30pm; focus Farm/Animal care; deposit Maybe",
       "source": "SUMMER_SCHOLARS.md",
       "subject": "Sheehan Homestead / Summer Camp Interest follow-up",
-      "next_action": "Reply · convert deposit",
-      "status": "interest"
+      "next_action": "Reply \u00b7 convert deposit",
+      "status": "interest",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "summer_interest",
@@ -417,8 +516,15 @@
       "detail": "Interest form: kids 6; prefers Full Day 9am-3pm; focus Both; deposit Maybe",
       "source": "SUMMER_SCHOLARS.md",
       "subject": "Sheehan Homestead / Summer Camp Interest follow-up",
-      "next_action": "Reply · convert deposit",
-      "status": "interest"
+      "next_action": "Reply \u00b7 convert deposit",
+      "status": "interest",
+      "purchase_status": "unknown",
+      "evidence": [
+        "payment_mention"
+      ],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "summer_interest",
@@ -429,8 +535,15 @@
       "detail": "Interest form: kids 7; will be 8 in July; prefers Full Day 9am-3pm; focus Both; deposit Yes",
       "source": "SUMMER_SCHOLARS.md",
       "subject": "Sheehan Homestead / Summer Camp Interest follow-up",
-      "next_action": "Reply · convert deposit",
-      "status": "interest"
+      "next_action": "Reply \u00b7 convert deposit",
+      "status": "interest",
+      "purchase_status": "unknown",
+      "evidence": [
+        "payment_mention"
+      ],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "summer_interest",
@@ -441,8 +554,13 @@
       "detail": "Interest form: kids 5; prefers Half Day 9am-12:30pm; focus Both; deposit Maybe",
       "source": "SUMMER_SCHOLARS.md",
       "subject": "Sheehan Homestead / Summer Camp Interest follow-up",
-      "next_action": "Reply · convert deposit",
-      "status": "interest"
+      "next_action": "Reply \u00b7 convert deposit",
+      "status": "interest",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "summer_interest",
@@ -453,8 +571,13 @@
       "detail": "Interest form: kids 11 and 15; prefers Half Day 9am-12:30pm; focus Farm/Animal care; deposit Yes",
       "source": "SUMMER_SCHOLARS.md",
       "subject": "Sheehan Homestead / Summer Camp Interest follow-up",
-      "next_action": "Reply · convert deposit",
-      "status": "interest"
+      "next_action": "Reply \u00b7 convert deposit",
+      "status": "interest",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "summer_interest",
@@ -465,8 +588,13 @@
       "detail": "Interest form: kids 4 years old; prefers Full Day 9am-3pm; focus Both; deposit Maybe",
       "source": "SUMMER_SCHOLARS.md",
       "subject": "Sheehan Homestead / Summer Camp Interest follow-up",
-      "next_action": "Reply · convert deposit",
-      "status": "interest"
+      "next_action": "Reply \u00b7 convert deposit",
+      "status": "interest",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "summer_interest",
@@ -477,8 +605,13 @@
       "detail": "Interest form: kids Daughter 13 (vol 15); prefers Half Day 9am-12:30pm; focus Both; deposit Yes",
       "source": "SUMMER_SCHOLARS.md",
       "subject": "Sheehan Homestead / Summer Camp Interest follow-up",
-      "next_action": "Reply · convert deposit",
-      "status": "interest"
+      "next_action": "Reply \u00b7 convert deposit",
+      "status": "interest",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "summer_interest",
@@ -489,8 +622,13 @@
       "detail": "Interest form: kids 7 and 6; prefers Other; focus Both; deposit Maybe",
       "source": "SUMMER_SCHOLARS.md",
       "subject": "Sheehan Homestead / Summer Camp Interest follow-up",
-      "next_action": "Reply · convert deposit",
-      "status": "interest"
+      "next_action": "Reply \u00b7 convert deposit",
+      "status": "interest",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "summer_interest",
@@ -501,8 +639,13 @@
       "detail": "Interest form: kids 5; prefers Half Day 9am-12:30pm; focus Both; deposit Maybe",
       "source": "SUMMER_SCHOLARS.md",
       "subject": "Sheehan Homestead / Summer Camp Interest follow-up",
-      "next_action": "Reply · convert deposit",
-      "status": "interest"
+      "next_action": "Reply \u00b7 convert deposit",
+      "status": "interest",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "summer_interest",
@@ -513,8 +656,15 @@
       "detail": "Interest form: kids 9; prefers Half Day 9am-12:30pm; focus Both; deposit Yes",
       "source": "SUMMER_SCHOLARS.md",
       "subject": "Sheehan Homestead / Summer Camp Interest follow-up",
-      "next_action": "Reply · convert deposit",
-      "status": "interest"
+      "next_action": "Reply \u00b7 convert deposit",
+      "status": "interest",
+      "purchase_status": "unknown",
+      "evidence": [
+        "payment_mention"
+      ],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "summer_interest",
@@ -525,8 +675,13 @@
       "detail": "Interest form: kids 16; prefers Full Day 9am-3pm; focus Both; deposit Yes",
       "source": "SUMMER_SCHOLARS.md",
       "subject": "Sheehan Homestead / Summer Camp Interest follow-up",
-      "next_action": "Reply · convert deposit",
-      "status": "interest"
+      "next_action": "Reply \u00b7 convert deposit",
+      "status": "interest",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "summer_interest",
@@ -537,8 +692,13 @@
       "detail": "Interest form: kids 5.5; prefers Full Day 9am-3pm; focus Both; deposit Yes",
       "source": "SUMMER_SCHOLARS.md",
       "subject": "Sheehan Homestead / Summer Camp Interest follow-up",
-      "next_action": "Reply · convert deposit",
-      "status": "interest"
+      "next_action": "Reply \u00b7 convert deposit",
+      "status": "interest",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "summer_interest",
@@ -549,8 +709,13 @@
       "detail": "Interest form: kids 7 and 10; prefers Half Day 9am-12:30pm; focus Both; deposit Maybe",
       "source": "SUMMER_SCHOLARS.md",
       "subject": "Sheehan Homestead / Summer Camp Interest follow-up",
-      "next_action": "Reply · convert deposit",
-      "status": "interest"
+      "next_action": "Reply \u00b7 convert deposit",
+      "status": "interest",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "summer_interest",
@@ -561,8 +726,13 @@
       "detail": "Interest form: kids 8 and 10; prefers Alternating days; focus Both; deposit Maybe",
       "source": "SUMMER_SCHOLARS.md",
       "subject": "Sheehan Homestead / Summer Camp Interest follow-up",
-      "next_action": "Reply · convert deposit",
-      "status": "interest"
+      "next_action": "Reply \u00b7 convert deposit",
+      "status": "interest",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "summer_interest",
@@ -573,8 +743,13 @@
       "detail": "Interest form: kids 7 & 8; prefers Half Day 9am-12:30pm; focus Both; deposit Maybe",
       "source": "SUMMER_SCHOLARS.md",
       "subject": "Sheehan Homestead / Summer Camp Interest follow-up",
-      "next_action": "Reply · convert deposit",
-      "status": "interest"
+      "next_action": "Reply \u00b7 convert deposit",
+      "status": "interest",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "summer_interest",
@@ -585,8 +760,13 @@
       "detail": "Interest form: kids 8 and 10; prefers Half Day 9am-12:30pm; focus Both; deposit Maybe",
       "source": "SUMMER_SCHOLARS.md",
       "subject": "Sheehan Homestead / Summer Camp Interest follow-up",
-      "next_action": "Reply · convert deposit",
-      "status": "interest"
+      "next_action": "Reply \u00b7 convert deposit",
+      "status": "interest",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -599,7 +779,12 @@
       "thread_id": "1a09f0d1b442b7cb",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -612,7 +797,16 @@
       "thread_id": "1a038f90391127f9",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "bought",
+      "evidence": [
+        "invoice_paid",
+        "booking_thread",
+        "calendar_event"
+      ],
+      "last_paid_or_booked": "2026-10-23",
+      "amount": 528.94,
+      "match_confidence": "high"
     },
     {
       "bucket": "godaddy",
@@ -625,7 +819,12 @@
       "thread_id": "1a0301af9ea92b97",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -638,7 +837,15 @@
       "thread_id": "1a02fe95650281e2",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "unknown",
+      "evidence": [
+        "payment_mention",
+        "calendar_event"
+      ],
+      "last_paid_or_booked": null,
+      "amount": 248.88,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -651,7 +858,15 @@
       "thread_id": "1a010de2afcc463c",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "bought",
+      "evidence": [
+        "calendar_event",
+        "website_autobook"
+      ],
+      "last_paid_or_booked": "2026-08-17",
+      "amount": 50.0,
+      "match_confidence": "high"
     },
     {
       "bucket": "godaddy",
@@ -664,7 +879,12 @@
       "thread_id": "19fc52f106044604",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -677,7 +897,12 @@
       "thread_id": "19efa883502e4264",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -690,7 +915,12 @@
       "thread_id": "19ee004962befd06",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -703,7 +933,14 @@
       "thread_id": "19ecc03b08ee5883",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "unknown",
+      "evidence": [
+        "booking_thread"
+      ],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -716,7 +953,12 @@
       "thread_id": "19ebc9ba58343574",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -729,7 +971,12 @@
       "thread_id": "19eb789cbea42e38",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -742,7 +989,17 @@
       "thread_id": "19e4e20eb301b439",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "bought",
+      "evidence": [
+        "prior_customer",
+        "invoice_paid",
+        "calendar_event",
+        "booking_thread"
+      ],
+      "last_paid_or_booked": null,
+      "amount": 104.94,
+      "match_confidence": "high"
     },
     {
       "bucket": "godaddy",
@@ -755,7 +1012,12 @@
       "thread_id": "19e1e2ed8a0b2682",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -768,7 +1030,12 @@
       "thread_id": "19e19478eafe4adb",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -781,7 +1048,14 @@
       "thread_id": "19de949bba8524b0",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "unknown",
+      "evidence": [
+        "booking_thread"
+      ],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -794,7 +1068,12 @@
       "thread_id": "19dc52ab534639f2",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -807,7 +1086,21 @@
       "thread_id": "19db32db0b199d24",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "bought",
+      "evidence": [
+        "prior_customer",
+        "invoice_paid",
+        "calendar_event",
+        "booking_thread",
+        "paypal_customer"
+      ],
+      "last_paid_or_booked": null,
+      "amount": 492.71,
+      "match_confidence": "high",
+      "match_notes": [
+        "paypal via paypal_2026_top_payer"
+      ]
     },
     {
       "bucket": "godaddy",
@@ -820,7 +1113,12 @@
       "thread_id": "19d7dda6525152e6",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -833,7 +1131,12 @@
       "thread_id": "19d78ba6bcbf691f",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -846,7 +1149,12 @@
       "thread_id": "19d750ebf0467de9",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -859,7 +1167,12 @@
       "thread_id": "19d59b4144938e1d",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -872,7 +1185,12 @@
       "thread_id": "19d599705b3bfb0e",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -885,7 +1203,12 @@
       "thread_id": "19d59967b888b5d4",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -898,7 +1221,12 @@
       "thread_id": "19d59744868cf2fc",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -911,7 +1239,16 @@
       "thread_id": "19d4f4d80b980de6",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "bought",
+      "evidence": [
+        "prior_customer",
+        "invoice_paid",
+        "calendar_event"
+      ],
+      "last_paid_or_booked": null,
+      "amount": 253.88,
+      "match_confidence": "high"
     },
     {
       "bucket": "godaddy",
@@ -924,7 +1261,12 @@
       "thread_id": "19d358aec5ab42d4",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -937,7 +1279,12 @@
       "thread_id": "19d351ce751bf984",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -950,7 +1297,12 @@
       "thread_id": "19cda5e499bae887",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -963,7 +1315,12 @@
       "thread_id": "19cba4edc8a805ee",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -976,7 +1333,17 @@
       "thread_id": "19c53ddc9f7bc14a",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "bought",
+      "evidence": [
+        "prior_customer",
+        "invoice_paid",
+        "calendar_event",
+        "booking_thread"
+      ],
+      "last_paid_or_booked": "2026-03-13",
+      "amount": null,
+      "match_confidence": "high"
     },
     {
       "bucket": "godaddy",
@@ -989,7 +1356,12 @@
       "thread_id": "19bdfc515e4118b4",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -1002,7 +1374,14 @@
       "thread_id": "19b70e59b4eda72b",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "unknown",
+      "evidence": [
+        "booking_thread"
+      ],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -1015,7 +1394,12 @@
       "thread_id": "19b12fa47352ccdd",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -1028,7 +1412,21 @@
       "thread_id": "19ab74fb99679304",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "bought",
+      "evidence": [
+        "prior_customer",
+        "invoice_paid",
+        "calendar_event",
+        "booking_thread",
+        "paypal_customer"
+      ],
+      "last_paid_or_booked": "2025-12-21",
+      "amount": 288.25,
+      "match_confidence": "high",
+      "match_notes": [
+        "paypal via paypal_customers_h2"
+      ]
     },
     {
       "bucket": "godaddy",
@@ -1041,7 +1439,21 @@
       "thread_id": "19aa3e220228a157",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "bought",
+      "evidence": [
+        "prior_customer",
+        "invoice_paid",
+        "calendar_event",
+        "booking_thread",
+        "paypal_customer"
+      ],
+      "last_paid_or_booked": "2025-12-28",
+      "amount": 273.0,
+      "match_confidence": "low",
+      "match_notes": [
+        "paypal name fuzzy 0.88 \u2192 Martha Howard (paypal_customers_h2)"
+      ]
     },
     {
       "bucket": "godaddy",
@@ -1054,7 +1466,21 @@
       "thread_id": "19a91ec8ba90afb5",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "bought",
+      "evidence": [
+        "prior_customer",
+        "invoice_paid",
+        "calendar_event",
+        "booking_thread",
+        "paypal_customer"
+      ],
+      "last_paid_or_booked": "2025-11-22",
+      "amount": 302.1,
+      "match_confidence": "high",
+      "match_notes": [
+        "paypal via paypal_customers_h2"
+      ]
     },
     {
       "bucket": "godaddy",
@@ -1067,7 +1493,12 @@
       "thread_id": "19a4f6bad9a9d5aa",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -1080,7 +1511,12 @@
       "thread_id": "199cf931f156cdd4",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -1093,7 +1529,14 @@
       "thread_id": "199a779168d22872",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "unknown",
+      "evidence": [
+        "booking_thread"
+      ],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -1106,7 +1549,12 @@
       "thread_id": "1999cd4df4c4d922",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -1119,7 +1567,12 @@
       "thread_id": "198fdf3247ab9f14",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -1132,7 +1585,14 @@
       "thread_id": "198c8769e5eb202f",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "unknown",
+      "evidence": [
+        "booking_thread"
+      ],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -1145,7 +1605,14 @@
       "thread_id": "198c7a26e50ed6c5",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "unknown",
+      "evidence": [
+        "calendar_event"
+      ],
+      "last_paid_or_booked": "2025-08-29",
+      "amount": null,
+      "match_confidence": "high"
     },
     {
       "bucket": "godaddy",
@@ -1158,7 +1625,12 @@
       "thread_id": "198ba7015e2b656a",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -1171,7 +1643,12 @@
       "thread_id": "198ad91d9eda0bf6",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -1184,7 +1661,12 @@
       "thread_id": "1988b68a70709581",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -1197,7 +1679,14 @@
       "thread_id": "198759a43cad6227",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "unknown",
+      "evidence": [
+        "booking_thread"
+      ],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -1205,12 +1694,22 @@
       "email": "kfraser@greenwoodjax.org",
       "phone": null,
       "date": "2025-07-30",
-      "detail": "Contact us 1: We are a school for students with learning differences having a 40th anniversary celebration Sep 27, 1–3pm. We would lov",
+      "detail": "Contact us 1: We are a school for students with learning differences having a 40th anniversary celebration Sep 27, 1\u20133pm. We would lov",
       "source": "GODADDY_CONTACTS.csv",
       "thread_id": "1985c78834f94e3a",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "bought",
+      "evidence": [
+        "prior_customer",
+        "invoice_paid",
+        "calendar_event",
+        "booking_thread"
+      ],
+      "last_paid_or_booked": "2025-09-27",
+      "amount": 575.0,
+      "match_confidence": "high"
     },
     {
       "bucket": "godaddy",
@@ -1223,7 +1722,12 @@
       "thread_id": "19851c86bdd1b76e",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -1236,7 +1740,15 @@
       "thread_id": "19837ded076c5615",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "unknown",
+      "evidence": [
+        "payment_mention",
+        "booking_thread"
+      ],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -1244,12 +1756,17 @@
       "email": "Amandasaxon34@gmail.com",
       "phone": null,
       "date": "2025-07-18",
-      "detail": "Contact us 1: Can we walk in during normal hours today? Please text if we can set up a visit today 12–2.",
+      "detail": "Contact us 1: Can we walk in during normal hours today? Please text if we can set up a visit today 12\u20132.",
       "source": "GODADDY_CONTACTS.csv",
       "thread_id": "1981db500faaa329",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -1262,7 +1779,20 @@
       "thread_id": "19800fe7181ecad3",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "bought",
+      "evidence": [
+        "prior_customer",
+        "invoice_paid",
+        "calendar_event",
+        "paypal_customer"
+      ],
+      "last_paid_or_booked": "2025-12-22",
+      "amount": 371.0,
+      "match_confidence": "high",
+      "match_notes": [
+        "paypal via paypal_customers_h2"
+      ]
     },
     {
       "bucket": "godaddy",
@@ -1270,12 +1800,26 @@
       "email": "leia933@yahoo.com",
       "phone": null,
       "date": "2025-07-10",
-      "detail": "Contact us 1: Are you available for a mobile petting zoo for a child's birthday party on Aug 2 in Neptune Beach? Party is 10am–12:30pm",
+      "detail": "Contact us 1: Are you available for a mobile petting zoo for a child's birthday party on Aug 2 in Neptune Beach? Party is 10am\u201312:30pm",
       "source": "GODADDY_CONTACTS.csv",
       "thread_id": "197f4e8e48e352dc",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "bought",
+      "evidence": [
+        "prior_customer",
+        "invoice_paid",
+        "calendar_event",
+        "booking_thread",
+        "paypal_customer"
+      ],
+      "last_paid_or_booked": "2025-08-02",
+      "amount": 235.5,
+      "match_confidence": "high",
+      "match_notes": [
+        "paypal via paypal_customers_h2"
+      ]
     },
     {
       "bucket": "godaddy",
@@ -1288,7 +1832,12 @@
       "thread_id": "197f039e0197f6f1",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -1301,7 +1850,12 @@
       "thread_id": "197a21e49dfebdf5",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -1314,7 +1868,12 @@
       "thread_id": "1977e34b73809c37",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -1322,12 +1881,19 @@
       "email": "smcsfallbazaar@gmail.com",
       "phone": null,
       "date": "2025-06-02",
-      "detail": "Contact us 1: St Matthew's Catholic school wants a petting zoo at its annual fall bazaar Oct 26, 10am–4pm. Please provide pricing.",
+      "detail": "Contact us 1: St Matthew's Catholic school wants a petting zoo at its annual fall bazaar Oct 26, 10am\u20134pm. Please provide pricing.",
       "source": "GODADDY_CONTACTS.csv",
       "thread_id": "19732caeeee8de4b",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "unknown",
+      "evidence": [
+        "booking_thread"
+      ],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -1340,7 +1906,12 @@
       "thread_id": "197079ff916e79e7",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -1353,7 +1924,12 @@
       "thread_id": "197030dc25cc0b0e",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -1366,7 +1942,14 @@
       "thread_id": "196c02bc01767d6e",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "unknown",
+      "evidence": [
+        "booking_thread"
+      ],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -1379,7 +1962,15 @@
       "thread_id": "196b5a873e29f107",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "bought",
+      "evidence": [
+        "prior_customer",
+        "booking_thread"
+      ],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "high"
     },
     {
       "bucket": "godaddy",
@@ -1392,7 +1983,12 @@
       "thread_id": "19610fbf842b8403",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -1405,7 +2001,15 @@
       "thread_id": "195b97800da9a929",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "bought",
+      "evidence": [
+        "prior_customer",
+        "booking_thread"
+      ],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "high"
     },
     {
       "bucket": "godaddy",
@@ -1413,12 +2017,20 @@
       "email": "cshaw@mecojax.com",
       "phone": null,
       "date": "2025-03-17",
-      "detail": "Contact us 1: Our corporate spring festival at Miller Electric is Apr 17, 6–9pm. What are your availability and rates for rabbits, duc",
+      "detail": "Contact us 1: Our corporate spring festival at Miller Electric is Apr 17, 6\u20139pm. What are your availability and rates for rabbits, duc",
       "source": "GODADDY_CONTACTS.csv",
       "thread_id": "195a4b8d0d11f7ed",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "unknown",
+      "evidence": [
+        "payment_mention",
+        "booking_thread"
+      ],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -1431,7 +2043,14 @@
       "thread_id": "195803a7775ac3e6",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "unknown",
+      "evidence": [
+        "booking_thread"
+      ],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -1444,7 +2063,12 @@
       "thread_id": "194e7d46d4050e83",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -1457,7 +2081,16 @@
       "thread_id": "194d852b455bee3b",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "unknown",
+      "evidence": [
+        "payment_mention",
+        "calendar_event",
+        "booking_thread"
+      ],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -1465,12 +2098,21 @@
       "email": "knb@keepnassaubeautiful.org",
       "phone": null,
       "date": "2025-01-27",
-      "detail": "Contact us 1: We would like a quote for the mobile petting zoo at Wild Amelia Nature Festival May 17, 10am–3pm.",
+      "detail": "Contact us 1: We would like a quote for the mobile petting zoo at Wild Amelia Nature Festival May 17, 10am\u20133pm.",
       "source": "GODADDY_CONTACTS.csv",
       "thread_id": "194a8fb98ed0e35b",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "unknown",
+      "evidence": [
+        "payment_mention",
+        "calendar_event",
+        "booking_thread"
+      ],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -1483,7 +2125,16 @@
       "thread_id": "1948b067d61f1882",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "bought",
+      "evidence": [
+        "prior_customer",
+        "calendar_event",
+        "booking_thread"
+      ],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "high"
     },
     {
       "bucket": "godaddy",
@@ -1496,7 +2147,15 @@
       "thread_id": "1947a155028ed186",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "bought",
+      "evidence": [
+        "prior_customer",
+        "booking_thread"
+      ],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "high"
     },
     {
       "bucket": "godaddy",
@@ -1509,7 +2168,12 @@
       "thread_id": "1945cdbf3dd639ef",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -1522,7 +2186,14 @@
       "thread_id": "19452162db39c2be",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "unknown",
+      "evidence": [
+        "booking_thread"
+      ],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -1535,7 +2206,12 @@
       "thread_id": "1944ce88a6ce8a04",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -1548,7 +2224,12 @@
       "thread_id": "194289f344948507",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -1561,7 +2242,15 @@
       "thread_id": "1941edc80040e8f1",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "bought",
+      "evidence": [
+        "prior_customer",
+        "booking_thread"
+      ],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "high"
     },
     {
       "bucket": "godaddy",
@@ -1574,7 +2263,12 @@
       "thread_id": "193bee1701036a29",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -1587,7 +2281,12 @@
       "thread_id": "193b3f2132a46cea",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -1600,7 +2299,12 @@
       "thread_id": "193b2a0e57e40c36",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -1608,12 +2312,22 @@
       "email": "Liz@firstcoastcms.com",
       "phone": null,
       "date": "2024-12-08",
-      "detail": "Contact us 1: SilverLeaf community asks if you are available Apr 12, 1–4pm, for an Easter event and whether you do community events.",
+      "detail": "Contact us 1: SilverLeaf community asks if you are available Apr 12, 1\u20134pm, for an Easter event and whether you do community events.",
       "source": "GODADDY_CONTACTS.csv",
       "thread_id": "193a767881d40221",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "bought",
+      "evidence": [
+        "prior_customer",
+        "invoice_paid",
+        "calendar_event",
+        "booking_thread"
+      ],
+      "last_paid_or_booked": "2025-09-27",
+      "amount": 811.52,
+      "match_confidence": "high"
     },
     {
       "bucket": "godaddy",
@@ -1626,7 +2340,12 @@
       "thread_id": "192bf11cd90b5d06",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -1639,7 +2358,12 @@
       "thread_id": "192596639907605b",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -1652,7 +2376,12 @@
       "thread_id": "191f9928894a2a55",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -1665,7 +2394,12 @@
       "thread_id": "1917af7a80772839",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -1678,7 +2412,12 @@
       "thread_id": "1917553c7b3a8c83",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -1691,7 +2430,15 @@
       "thread_id": "191534379d958fb9",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "bought",
+      "evidence": [
+        "prior_customer",
+        "booking_thread"
+      ],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "high"
     },
     {
       "bucket": "godaddy",
@@ -1704,7 +2451,12 @@
       "thread_id": "19118c211d7f8a1b",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -1717,7 +2469,12 @@
       "thread_id": "1911561dd4503733",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -1730,7 +2487,14 @@
       "thread_id": "190453c45d5bd52e",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "unknown",
+      "evidence": [
+        "calendar_event"
+      ],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "godaddy",
@@ -1743,7 +2507,12 @@
       "thread_id": "19012d592ebb74bf",
       "subject": "Sheehan Homestead / booking inquiry follow-up",
       "next_action": "Reply via mailto or GoDaddy Conversations",
-      "status": "inbound"
+      "status": "inbound",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "critter_club",
@@ -1751,11 +2520,21 @@
       "email": "tfelix@discoveryvillages.com",
       "phone": null,
       "date": "",
-      "detail": "Monthly · $185.50 · Booked through Dec 2027",
+      "detail": "Monthly \u00b7 $185.50 \u00b7 Booked through Dec 2027",
       "source": "INBOUND_FIRE Critter_Club_Signups",
       "subject": "Sheehan Homestead / Critters follow-up",
       "next_action": "Confirm schedule",
-      "status": "booked"
+      "status": "booked",
+      "purchase_status": "bought",
+      "evidence": [
+        "prior_customer",
+        "invoice_paid",
+        "calendar_event",
+        "booking_thread"
+      ],
+      "last_paid_or_booked": null,
+      "amount": 185.5,
+      "match_confidence": "high"
     },
     {
       "bucket": "critter_club",
@@ -1763,11 +2542,20 @@
       "email": "christina.dutcher@gardensmemorycare.com",
       "phone": null,
       "date": "",
-      "detail": "Quarterly · $125.00 · Booked through Dec 2027",
+      "detail": "Quarterly \u00b7 $125.00 \u00b7 Booked through Dec 2027",
       "source": "INBOUND_FIRE Critter_Club_Signups",
       "subject": "Sheehan Homestead / Critters follow-up",
       "next_action": "Confirm schedule",
-      "status": "booked"
+      "status": "booked",
+      "purchase_status": "bought",
+      "evidence": [
+        "prior_customer",
+        "calendar_event",
+        "booking_thread"
+      ],
+      "last_paid_or_booked": "2025-12-29",
+      "amount": null,
+      "match_confidence": "high"
     },
     {
       "bucket": "critter_club",
@@ -1775,11 +2563,21 @@
       "email": "gnldelivery4@gmail.com",
       "phone": null,
       "date": "",
-      "detail": "Quarterly · $185.50 · Tickler due — emailed 8/19, no booked-through",
+      "detail": "Quarterly \u00b7 $185.50 \u00b7 Tickler due \u2014 emailed 8/19, no booked-through",
       "source": "INBOUND_FIRE Critter_Club_Signups",
       "subject": "Sheehan Homestead / Critters follow-up",
       "next_action": "Tickler / renew",
-      "status": "tickler"
+      "status": "tickler",
+      "purchase_status": "bought",
+      "evidence": [
+        "prior_customer",
+        "invoice_paid",
+        "calendar_event",
+        "booking_thread"
+      ],
+      "last_paid_or_booked": "2025-10-16",
+      "amount": 185.5,
+      "match_confidence": "high"
     },
     {
       "bucket": "critter_club",
@@ -1787,11 +2585,21 @@
       "email": "patrice.pusha@palmgarden.com",
       "phone": null,
       "date": "",
-      "detail": "Monthly · $159.00 · Tickler due — bounced email; chase via website",
+      "detail": "Monthly \u00b7 $159.00 \u00b7 Tickler due \u2014 bounced email; chase via website",
       "source": "INBOUND_FIRE Critter_Club_Signups",
       "subject": "Sheehan Homestead / Critters follow-up",
       "next_action": "Tickler / renew",
-      "status": "tickler"
+      "status": "tickler",
+      "purchase_status": "bought",
+      "evidence": [
+        "prior_customer",
+        "invoice_paid",
+        "calendar_event",
+        "booking_thread"
+      ],
+      "last_paid_or_booked": "2025-11-19",
+      "amount": 159.0,
+      "match_confidence": "high"
     },
     {
       "bucket": "critter_club",
@@ -1799,11 +2607,20 @@
       "email": "deandre.stringer@legendseniorliving.com",
       "phone": null,
       "date": "",
-      "detail": "Quarterly · $185.50 · Booked through Dec 2027",
+      "detail": "Quarterly \u00b7 $185.50 \u00b7 Booked through Dec 2027",
       "source": "INBOUND_FIRE Critter_Club_Signups",
       "subject": "Sheehan Homestead / Critters follow-up",
       "next_action": "Confirm schedule",
-      "status": "booked"
+      "status": "booked",
+      "purchase_status": "bought",
+      "evidence": [
+        "prior_customer",
+        "invoice_paid",
+        "calendar_event"
+      ],
+      "last_paid_or_booked": "2025-10-11",
+      "amount": 185.5,
+      "match_confidence": "high"
     },
     {
       "bucket": "critter_club",
@@ -1811,11 +2628,21 @@
       "email": "peachesnabasket@gmail.com",
       "phone": null,
       "date": "",
-      "detail": "random · $125.00 · Tickler due — emailed 5/4",
+      "detail": "random \u00b7 $125.00 \u00b7 Tickler due \u2014 emailed 5/4",
       "source": "INBOUND_FIRE Critter_Club_Signups",
       "subject": "Sheehan Homestead / Critters follow-up",
       "next_action": "Tickler / renew",
-      "status": "tickler"
+      "status": "tickler",
+      "purchase_status": "bought",
+      "evidence": [
+        "prior_customer",
+        "invoice_paid",
+        "calendar_event",
+        "booking_thread"
+      ],
+      "last_paid_or_booked": "2025-09-26",
+      "amount": 125.0,
+      "match_confidence": "high"
     },
     {
       "bucket": "critter_club",
@@ -1823,11 +2650,21 @@
       "email": "tracy.levanich@gardensmemorycare.com",
       "phone": null,
       "date": "",
-      "detail": "Quarterly · $125.00 · Booked through Dec 2027",
+      "detail": "Quarterly \u00b7 $125.00 \u00b7 Booked through Dec 2027",
       "source": "INBOUND_FIRE Critter_Club_Signups",
       "subject": "Sheehan Homestead / Critters follow-up",
       "next_action": "Confirm schedule",
-      "status": "booked"
+      "status": "booked",
+      "purchase_status": "bought",
+      "evidence": [
+        "prior_customer",
+        "invoice_paid",
+        "calendar_event",
+        "booking_thread"
+      ],
+      "last_paid_or_booked": "2025-09-09",
+      "amount": 125.0,
+      "match_confidence": "high"
     },
     {
       "bucket": "critter_club",
@@ -1835,11 +2672,21 @@
       "email": "mandarindle@harborchase.com",
       "phone": null,
       "date": "",
-      "detail": "random · $200.00 · Tickler due — emailed 8/19",
+      "detail": "random \u00b7 $200.00 \u00b7 Tickler due \u2014 emailed 8/19",
       "source": "INBOUND_FIRE Critter_Club_Signups",
       "subject": "Sheehan Homestead / Critters follow-up",
       "next_action": "Tickler / renew",
-      "status": "tickler"
+      "status": "tickler",
+      "purchase_status": "bought",
+      "evidence": [
+        "prior_customer",
+        "invoice_paid",
+        "calendar_event",
+        "booking_thread"
+      ],
+      "last_paid_or_booked": "2025-08-19",
+      "amount": 200.0,
+      "match_confidence": "high"
     },
     {
       "bucket": "critter_club",
@@ -1847,11 +2694,21 @@
       "email": "dee.stanziano@gardensmemorycare.com",
       "phone": null,
       "date": "",
-      "detail": "Quarterly · $125.00 · Booked through Dec 2027",
+      "detail": "Quarterly \u00b7 $125.00 \u00b7 Booked through Dec 2027",
       "source": "INBOUND_FIRE Critter_Club_Signups",
       "subject": "Sheehan Homestead / Critters follow-up",
       "next_action": "Confirm schedule",
-      "status": "booked"
+      "status": "booked",
+      "purchase_status": "bought",
+      "evidence": [
+        "prior_customer",
+        "invoice_paid",
+        "calendar_event",
+        "booking_thread"
+      ],
+      "last_paid_or_booked": null,
+      "amount": 153.7,
+      "match_confidence": "high"
     },
     {
       "bucket": "critter_club",
@@ -1859,11 +2716,20 @@
       "email": "sales@seniorsjacksonville.com",
       "phone": null,
       "date": "",
-      "detail": "random · $175.00 · Tickler due — emailed 5/4",
+      "detail": "random \u00b7 $175.00 \u00b7 Tickler due \u2014 emailed 5/4",
       "source": "INBOUND_FIRE Critter_Club_Signups",
       "subject": "Sheehan Homestead / Critters follow-up",
       "next_action": "Tickler / renew",
-      "status": "tickler"
+      "status": "tickler",
+      "purchase_status": "bought",
+      "evidence": [
+        "prior_customer",
+        "calendar_event",
+        "booking_thread"
+      ],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "high"
     },
     {
       "bucket": "critter_club",
@@ -1871,11 +2737,21 @@
       "email": "ecooks@fletcherstendercare.com",
       "phone": null,
       "date": "",
-      "detail": "Monthly · $159.00 · Booked through Dec 2027",
+      "detail": "Monthly \u00b7 $159.00 \u00b7 Booked through Dec 2027",
       "source": "INBOUND_FIRE Critter_Club_Signups",
       "subject": "Sheehan Homestead / Critters follow-up",
       "next_action": "Confirm schedule",
-      "status": "booked"
+      "status": "booked",
+      "purchase_status": "bought",
+      "evidence": [
+        "prior_customer",
+        "invoice_paid",
+        "calendar_event",
+        "booking_thread"
+      ],
+      "last_paid_or_booked": null,
+      "amount": 159.0,
+      "match_confidence": "high"
     },
     {
       "bucket": "critter_club",
@@ -1883,11 +2759,20 @@
       "email": "jdennie@brightsidepediatrics.com",
       "phone": null,
       "date": "",
-      "detail": "random · $200.00 · Tickler due — emailed 8/18",
+      "detail": "random \u00b7 $200.00 \u00b7 Tickler due \u2014 emailed 8/18",
       "source": "INBOUND_FIRE Critter_Club_Signups",
       "subject": "Sheehan Homestead / Critters follow-up",
       "next_action": "Tickler / renew",
-      "status": "tickler"
+      "status": "tickler",
+      "purchase_status": "bought",
+      "evidence": [
+        "prior_customer",
+        "invoice_paid",
+        "calendar_event"
+      ],
+      "last_paid_or_booked": "2025-08-15",
+      "amount": 200.5,
+      "match_confidence": "high"
     },
     {
       "bucket": "critter_club",
@@ -1895,11 +2780,20 @@
       "email": "pmiddleton@tendercarecenters.com",
       "phone": null,
       "date": "",
-      "detail": "random · $125.00 · Tickler due — emailed 8/18",
+      "detail": "random \u00b7 $125.00 \u00b7 Tickler due \u2014 emailed 8/18",
       "source": "INBOUND_FIRE Critter_Club_Signups",
       "subject": "Sheehan Homestead / Critters follow-up",
       "next_action": "Tickler / renew",
-      "status": "tickler"
+      "status": "tickler",
+      "purchase_status": "bought",
+      "evidence": [
+        "prior_customer",
+        "invoice_paid",
+        "calendar_event"
+      ],
+      "last_paid_or_booked": "2025-07-22",
+      "amount": 235.5,
+      "match_confidence": "high"
     },
     {
       "bucket": "critter_club",
@@ -1907,11 +2801,19 @@
       "email": "diazcarla@cypressvillageretirement.com",
       "phone": null,
       "date": "",
-      "detail": "Monthly · $170.00 · Booked through Dec 2027",
+      "detail": "Monthly \u00b7 $170.00 \u00b7 Booked through Dec 2027",
       "source": "INBOUND_FIRE Critter_Club_Signups",
       "subject": "Sheehan Homestead / Critters follow-up",
       "next_action": "Confirm schedule",
-      "status": "booked"
+      "status": "booked",
+      "purchase_status": "bought",
+      "evidence": [
+        "prior_customer",
+        "calendar_event"
+      ],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "high"
     },
     {
       "bucket": "critter_club",
@@ -1919,11 +2821,19 @@
       "email": "christil123@yahoo.com",
       "phone": null,
       "date": "",
-      "detail": "Quarterly · $175.00 · Booked through May 2027",
+      "detail": "Quarterly \u00b7 $175.00 \u00b7 Booked through May 2027",
       "source": "INBOUND_FIRE Critter_Club_Signups",
       "subject": "Sheehan Homestead / Critters follow-up",
       "next_action": "Confirm schedule",
-      "status": "booked"
+      "status": "booked",
+      "purchase_status": "bought",
+      "evidence": [
+        "invoice_paid",
+        "calendar_event"
+      ],
+      "last_paid_or_booked": null,
+      "amount": 185.5,
+      "match_confidence": "high"
     },
     {
       "bucket": "waiver_proxy",
@@ -1931,11 +2841,18 @@
       "email": "jmbennett96@gmail.com",
       "phone": null,
       "date": "",
-      "detail": "Homeschool Monday — Said she will sign; visited Homeschool Monday. (email proxy, not form export)",
+      "detail": "Homeschool Monday \u2014 Said she will sign; visited Homeschool Monday. (email proxy, not form export)",
       "source": "WAIVERS.md",
       "subject": "Sheehan Homestead / waiver follow-up",
-      "next_action": "Confirm waiver signed · GAP until form export",
-      "status": "proxy"
+      "next_action": "Confirm waiver signed \u00b7 GAP until form export",
+      "status": "proxy",
+      "purchase_status": "bought",
+      "evidence": [
+        "website_autobook"
+      ],
+      "last_paid_or_booked": "2026-08-20",
+      "amount": 40.0,
+      "match_confidence": "high"
     },
     {
       "bucket": "waiver_proxy",
@@ -1943,11 +2860,16 @@
       "email": "Jacobleon74@outlook.com",
       "phone": null,
       "date": "",
-      "detail": "Farm waiver — Farm waiver link sent. (email proxy, not form export)",
+      "detail": "Farm waiver \u2014 Farm waiver link sent. (email proxy, not form export)",
       "source": "WAIVERS.md",
       "subject": "Sheehan Homestead / waiver follow-up",
-      "next_action": "Confirm waiver signed · GAP until form export",
-      "status": "proxy"
+      "next_action": "Confirm waiver signed \u00b7 GAP until form export",
+      "status": "proxy",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "waiver_proxy",
@@ -1955,11 +2877,16 @@
       "email": "janerkelly@outlook.com",
       "phone": null,
       "date": "",
-      "detail": "Farm tour — Waiver link sent for farm tour. (email proxy, not form export)",
+      "detail": "Farm tour \u2014 Waiver link sent for farm tour. (email proxy, not form export)",
       "source": "WAIVERS.md",
       "subject": "Sheehan Homestead / waiver follow-up",
-      "next_action": "Confirm waiver signed · GAP until form export",
-      "status": "proxy"
+      "next_action": "Confirm waiver signed \u00b7 GAP until form export",
+      "status": "proxy",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "waiver_proxy",
@@ -1967,11 +2894,16 @@
       "email": "johnsonkenneth037@gmail.com",
       "phone": null,
       "date": "",
-      "detail": "Farm waiver — Farm waiver link sent. (email proxy, not form export)",
+      "detail": "Farm waiver \u2014 Farm waiver link sent. (email proxy, not form export)",
       "source": "WAIVERS.md",
       "subject": "Sheehan Homestead / waiver follow-up",
-      "next_action": "Confirm waiver signed · GAP until form export",
-      "status": "proxy"
+      "next_action": "Confirm waiver signed \u00b7 GAP until form export",
+      "status": "proxy",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "waiver_proxy",
@@ -1979,11 +2911,19 @@
       "email": "tmjsteelers8@gmail.com",
       "phone": null,
       "date": "",
-      "detail": "Mommy & Me — Mommy & Me waiver email; attended. (email proxy, not form export)",
+      "detail": "Mommy & Me \u2014 Mommy & Me waiver email; attended. (email proxy, not form export)",
       "source": "WAIVERS.md",
       "subject": "Sheehan Homestead / waiver follow-up",
-      "next_action": "Confirm waiver signed · GAP until form export",
-      "status": "proxy"
+      "next_action": "Confirm waiver signed \u00b7 GAP until form export",
+      "status": "proxy",
+      "purchase_status": "bought",
+      "evidence": [
+        "prior_customer",
+        "booking_thread"
+      ],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "high"
     },
     {
       "bucket": "waiver_proxy",
@@ -1991,11 +2931,18 @@
       "email": "hsinclair2013@gmail.com",
       "phone": null,
       "date": "",
-      "detail": "Mommy & Me — Mommy & Me waiver email; attended. (email proxy, not form export)",
+      "detail": "Mommy & Me \u2014 Mommy & Me waiver email; attended. (email proxy, not form export)",
       "source": "WAIVERS.md",
       "subject": "Sheehan Homestead / waiver follow-up",
-      "next_action": "Confirm waiver signed · GAP until form export",
-      "status": "proxy"
+      "next_action": "Confirm waiver signed \u00b7 GAP until form export",
+      "status": "proxy",
+      "purchase_status": "bought",
+      "evidence": [
+        "prior_customer"
+      ],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "high"
     },
     {
       "bucket": "waiver_proxy",
@@ -2003,11 +2950,18 @@
       "email": "kerrycblankenship@gmail.com",
       "phone": null,
       "date": "",
-      "detail": "Mommy & Me — Mommy & Me waiver email; attended. (email proxy, not form export)",
+      "detail": "Mommy & Me \u2014 Mommy & Me waiver email; attended. (email proxy, not form export)",
       "source": "WAIVERS.md",
       "subject": "Sheehan Homestead / waiver follow-up",
-      "next_action": "Confirm waiver signed · GAP until form export",
-      "status": "proxy"
+      "next_action": "Confirm waiver signed \u00b7 GAP until form export",
+      "status": "proxy",
+      "purchase_status": "bought",
+      "evidence": [
+        "prior_customer"
+      ],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "high"
     },
     {
       "bucket": "waiver_proxy",
@@ -2015,11 +2969,18 @@
       "email": "rebecca.pervaza00@gmail.com",
       "phone": null,
       "date": "",
-      "detail": "Waiver form access — Requested access to waiver form. (email proxy, not form export)",
+      "detail": "Waiver form access \u2014 Requested access to waiver form. (email proxy, not form export)",
       "source": "WAIVERS.md",
       "subject": "Sheehan Homestead / waiver follow-up",
-      "next_action": "Confirm waiver signed · GAP until form export",
-      "status": "proxy"
+      "next_action": "Confirm waiver signed \u00b7 GAP until form export",
+      "status": "proxy",
+      "purchase_status": "unknown",
+      "evidence": [
+        "booking_thread"
+      ],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "waiver_proxy",
@@ -2027,11 +2988,18 @@
       "email": "ajmckee2020@gmail.com",
       "phone": null,
       "date": "",
-      "detail": "Waiver form access — Requested access to waiver form. (email proxy, not form export)",
+      "detail": "Waiver form access \u2014 Requested access to waiver form. (email proxy, not form export)",
       "source": "WAIVERS.md",
       "subject": "Sheehan Homestead / waiver follow-up",
-      "next_action": "Confirm waiver signed · GAP until form export",
-      "status": "proxy"
+      "next_action": "Confirm waiver signed \u00b7 GAP until form export",
+      "status": "proxy",
+      "purchase_status": "unknown",
+      "evidence": [
+        "booking_thread"
+      ],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "waiver_proxy",
@@ -2039,11 +3007,18 @@
       "email": "stefaniag90@yahoo.com",
       "phone": null,
       "date": "",
-      "detail": "Homeschool Monday — Homeschool Monday waiver mentioned Sep 20. (email proxy, not form export)",
+      "detail": "Homeschool Monday \u2014 Homeschool Monday waiver mentioned Sep 20. (email proxy, not form export)",
       "source": "WAIVERS.md",
       "subject": "Sheehan Homestead / waiver follow-up",
-      "next_action": "Confirm waiver signed · GAP until form export",
-      "status": "proxy"
+      "next_action": "Confirm waiver signed \u00b7 GAP until form export",
+      "status": "proxy",
+      "purchase_status": "unknown",
+      "evidence": [
+        "payment_mention"
+      ],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "action_queue",
@@ -2051,13 +3026,24 @@
       "email": "lburnette@rivercityscience.org",
       "phone": null,
       "date": "",
-      "detail": "OWED REPLY: Sep 20 asked to meet again re Violet 59%/$600 Oct-2 PZ (8:20–11:20). Calendar Accepted: Mobile PZ on 2026-09-22. Committed + meet pending.",
+      "detail": "OWED REPLY: Sep 20 asked to meet again re Violet 59%/$600 Oct-2 PZ (8:20\u201311:20). Calendar Accepted: Mobile PZ on 2026-09-22. Committed + meet pending.",
       "source": "INBOUND_FIRE Action_Queue",
       "subject": "Sheehan Homestead / Critters follow-up",
       "next_action": "NEEDS ATTENTION",
       "status": "needs_attention",
       "priority": 1,
-      "aq_kind": "NEEDS_ATTENTION"
+      "aq_kind": "NEEDS_ATTENTION",
+      "purchase_status": "unknown",
+      "evidence": [
+        "booking_thread",
+        "bookings_pipeline"
+      ],
+      "last_paid_or_booked": "2026-10-02",
+      "amount": null,
+      "match_confidence": "low",
+      "match_notes": [
+        "pipeline river-city-science-2026-10-02 paid=partial_pitch"
+      ]
     },
     {
       "bucket": "action_queue",
@@ -2065,13 +3051,23 @@
       "email": "ebricknell@ccmcnet.com",
       "phone": "904-510-3346",
       "date": "",
-      "detail": "NEEDS_ATTENTION: Trunk or Treat Sat Oct 24 4–6pm Tinker St confirmed; Hold Harmless completed 2026-09-22. Flag: invoiced ~$800 (Ann-Marie) — confirm invoice sent + deposit status (not yet on AnnMarie ",
+      "detail": "NEEDS_ATTENTION: Trunk or Treat Sat Oct 24 4\u20136pm Tinker St confirmed; Hold Harmless completed 2026-09-22. Flag: invoiced ~$800 (Ann-Marie) \u2014 confirm invoice sent + deposit status (not yet on AnnMarie ",
       "source": "INBOUND_FIRE Action_Queue",
       "subject": "Sheehan Homestead / Critters follow-up",
       "next_action": "NEEDS ATTENTION",
       "status": "needs_attention",
       "priority": 2,
-      "aq_kind": "NEEDS_ATTENTION"
+      "aq_kind": "NEEDS_ATTENTION",
+      "purchase_status": "bought",
+      "evidence": [
+        "prior_customer",
+        "invoice_paid",
+        "calendar_event",
+        "booking_thread"
+      ],
+      "last_paid_or_booked": "2026-03-28",
+      "amount": 987.66,
+      "match_confidence": "high"
     },
     {
       "bucket": "action_queue",
@@ -2085,7 +3081,16 @@
       "next_action": "NEEDS ATTENTION",
       "status": "needs_attention",
       "priority": 3,
-      "aq_kind": "NEEDS_ATTENTION"
+      "aq_kind": "NEEDS_ATTENTION",
+      "purchase_status": "bought",
+      "evidence": [
+        "invoice_paid",
+        "calendar_event",
+        "booking_thread"
+      ],
+      "last_paid_or_booked": "2026-06-17",
+      "amount": 474.75,
+      "match_confidence": "high"
     },
     {
       "bucket": "action_queue",
@@ -2093,13 +3098,22 @@
       "email": "cgross@elcduval.org",
       "phone": "904-591-5351",
       "date": "",
-      "detail": "Falladay 10/24 booked at $500 (sponsor Marco Polo). AnnMarie row 10.24.26 Total Due $587 Deposit=No Final=No — chase deposit/payment.",
+      "detail": "Falladay 10/24 booked at $500 (sponsor Marco Polo). AnnMarie row 10.24.26 Total Due $587 Deposit=No Final=No \u2014 chase deposit/payment.",
       "source": "INBOUND_FIRE Action_Queue",
       "subject": "Sheehan Homestead / Critters follow-up",
       "next_action": "NEEDS ATTENTION",
       "status": "needs_attention",
       "priority": 4,
-      "aq_kind": "NEEDS_ATTENTION"
+      "aq_kind": "NEEDS_ATTENTION",
+      "purchase_status": "bought",
+      "evidence": [
+        "invoice_paid",
+        "booking_thread",
+        "calendar_event"
+      ],
+      "last_paid_or_booked": "2026-10-24",
+      "amount": 587.0,
+      "match_confidence": "high"
     },
     {
       "bucket": "action_queue",
@@ -2107,13 +3121,18 @@
       "email": "jillian@arizetogether.org",
       "phone": null,
       "date": "",
-      "detail": "OWED REPLY since 2026-08-27 — donation request for 12/11 Christmas experiences (72 members).",
+      "detail": "OWED REPLY since 2026-08-27 \u2014 donation request for 12/11 Christmas experiences (72 members).",
       "source": "INBOUND_FIRE Action_Queue",
       "subject": "Sheehan Homestead / Critters follow-up",
       "next_action": "NEEDS ATTENTION",
       "status": "needs_attention",
       "priority": 5,
-      "aq_kind": "NEEDS_ATTENTION"
+      "aq_kind": "NEEDS_ATTENTION",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "action_queue",
@@ -2127,7 +3146,12 @@
       "next_action": "TAM TAP",
       "status": "tam_tap",
       "priority": 6,
-      "aq_kind": "TAM_TAP"
+      "aq_kind": "TAM_TAP",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "action_queue",
@@ -2135,13 +3159,18 @@
       "email": "amber.johnson1@ascension.org",
       "phone": null,
       "date": "",
-      "detail": "GoDaddy Booking help 2026-04-10 used amber.johnson1@ascension.orh (likely typo). High-signal Ascension employee inbound — reply + correct domain.",
+      "detail": "GoDaddy Booking help 2026-04-10 used amber.johnson1@ascension.orh (likely typo). High-signal Ascension employee inbound \u2014 reply + correct domain.",
       "source": "INBOUND_FIRE Action_Queue",
       "subject": "Sheehan Homestead / Critters follow-up",
       "next_action": "TAM TAP",
       "status": "tam_tap",
       "priority": 8,
-      "aq_kind": "TAM_TAP"
+      "aq_kind": "TAM_TAP",
+      "purchase_status": "not_seen",
+      "evidence": [],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "action_queue",
@@ -2149,13 +3178,20 @@
       "email": "tamikah@sparkpediatrics.com",
       "phone": "904-380-9099",
       "date": "",
-      "detail": "Warm: Jul 20 she would forward mini-PZ pricing to Regional Director. Michael tickler sent 2026-09-22 — wait for reply or soft bump if quiet >5d.",
+      "detail": "Warm: Jul 20 she would forward mini-PZ pricing to Regional Director. Michael tickler sent 2026-09-22 \u2014 wait for reply or soft bump if quiet >5d.",
       "source": "INBOUND_FIRE Action_Queue",
       "subject": "Sheehan Homestead / Critters follow-up",
       "next_action": "WARM",
       "status": "warm",
       "priority": 9,
-      "aq_kind": "WARM"
+      "aq_kind": "WARM",
+      "purchase_status": "unknown",
+      "evidence": [
+        "booking_thread"
+      ],
+      "last_paid_or_booked": null,
+      "amount": null,
+      "match_confidence": "none"
     },
     {
       "bucket": "action_queue",
@@ -2163,13 +3199,22 @@
       "email": "marieljaster@gmail.com",
       "phone": null,
       "date": "",
-      "detail": "UNPAID/OVERDUE: 9.26.26 Mini PZ inv 184 Total $386.90 deposit Yes — $211.90 Due",
+      "detail": "UNPAID/OVERDUE: 9.26.26 Mini PZ inv 184 Total $386.90 deposit Yes \u2014 $211.90 Due",
       "source": "INBOUND_FIRE Action_Queue",
       "subject": "Sheehan Homestead / Critters follow-up",
       "next_action": "NEEDS ATTENTION",
       "status": "needs_attention",
       "priority": 40,
-      "aq_kind": "NEEDS_ATTENTION"
+      "aq_kind": "NEEDS_ATTENTION",
+      "purchase_status": "bought",
+      "evidence": [
+        "invoice_paid",
+        "booking_thread",
+        "calendar_event"
+      ],
+      "last_paid_or_booked": "2026-09-26",
+      "amount": 386.9,
+      "match_confidence": "high"
     },
     {
       "bucket": "action_queue",
@@ -2177,13 +3222,404 @@
       "email": "mbeck@rivercityscience.org",
       "phone": null,
       "date": "",
-      "detail": "UNPAID: 10.15.26 Mini PZ inv 204 $400 deposit Yes — $190 Due (related to River City / Lauren orbit)",
+      "detail": "UNPAID: 10.15.26 Mini PZ inv 204 $400 deposit Yes \u2014 $190 Due (related to River City / Lauren orbit)",
       "source": "INBOUND_FIRE Action_Queue",
       "subject": "Sheehan Homestead / Critters follow-up",
       "next_action": "NEEDS ATTENTION",
       "status": "needs_attention",
       "priority": 41,
-      "aq_kind": "NEEDS_ATTENTION"
+      "aq_kind": "NEEDS_ATTENTION",
+      "purchase_status": "bought",
+      "evidence": [
+        "invoice_paid",
+        "calendar_event"
+      ],
+      "last_paid_or_booked": "2026-10-15",
+      "amount": 400.0,
+      "match_confidence": "high"
     }
-  ]
+  ],
+  "purchase_crossref": {
+    "as_of": "2026-09-22 ET",
+    "counts": {
+      "bought": 43,
+      "not_seen": 88,
+      "unknown": 26,
+      "contacts_total": 157
+    },
+    "sources_used": [
+      {
+        "id": "paypal_customers",
+        "path": "data/paypal_customers.json",
+        "role": "H2 2025 PayPal outside payers (name only \u2014 no emails in PayPal export)"
+      },
+      {
+        "id": "paypal_invoices",
+        "path": "data/paypal_invoices.json",
+        "role": "Invoices paid + payer names"
+      },
+      {
+        "id": "paypal_2026_ytd",
+        "path": "data/paypal_2026_ytd.json",
+        "role": "2026 YTD top payers (name only)"
+      },
+      {
+        "id": "paypal_h2_xlsx",
+        "path": "/workspace/Sheehan-Homestead-PayPal-H2-2025.xlsx",
+        "role": "Source workbook for H2 customers/invoices (no emails)"
+      },
+      {
+        "id": "contacts_all_harvest",
+        "path": "/workspace/revops/crm-sot/harvest_google/contacts_all.json",
+        "role": "Email\u2192source tags from Gmail invoice/paypal/deposit/booking + Drive PriorCustomers + Calendar"
+      },
+      {
+        "id": "calendar_live",
+        "path": "data/calendar_attendees_snapshot.json",
+        "role": "Live Google Calendar MCP attendees Jul 2025\u2013Dec 2026 (calendar \u2260 paid)"
+      },
+      {
+        "id": "website_autobook",
+        "path": "/workspace/deputy-outreach/inbound-inventory/raw/booking.json",
+        "role": "GoDaddy Booking Confirmed emails (Paid at checkout; names; emails truncated in snippets)"
+      },
+      {
+        "id": "bookings_pipeline",
+        "path": "data/bookings_pipeline.json",
+        "role": "Ops pipeline \u2014 paid status often unknown/OPEN"
+      }
+    ],
+    "gaps": [
+      "VyStar / bank deposits not used \u2014 PayPal is only cash pipe in this match",
+      "PayPal exports have payer names but no customer emails \u2014 name match (exact preferred; fuzzy \u22650.88 flagged low confidence)",
+      "Website autobook snippets truncate customer Email: field \u2014 name-only match for those 8 orders",
+      "calendar_next.txt / gmail_*_next harvest dumps empty or token-only \u2014 used live Calendar MCP + contacts_all instead",
+      "bookings_pipeline paid truth still OPEN for several locked dates",
+      "invoice_to without payment tag still counted bought (billed customer) \u2014 see match_notes",
+      "Gmail:booking / calendar_event alone \u2192 unknown (not bought)",
+      "Cash/Venmo/check and missing invoice #s outside PayPal window not matched"
+    ],
+    "rules": {
+      "bought": "paypal_customer | prior_customer | invoice_paid/invoice_to | website_autobook",
+      "unknown": "calendar_event / booking_thread / bookings_pipeline / payment_mention without purchase proof",
+      "not_seen": "no hit in indexed sources",
+      "prefer": "exact email over name; name fuzzy only secondary with match_confidence=low",
+      "never_invent": true
+    },
+    "bought_sample": [
+      {
+        "name": "Kathy McLearn",
+        "email": "kmclearn12@gmail.com",
+        "evidence": [
+          "invoice_paid",
+          "booking_thread",
+          "calendar_event"
+        ],
+        "amount": 528.94,
+        "date": "2026-10-23",
+        "confidence": "high"
+      },
+      {
+        "name": "kelli robinson",
+        "email": "kellirobinson1019@gmail.com",
+        "evidence": [
+          "calendar_event",
+          "website_autobook"
+        ],
+        "amount": 50.0,
+        "date": "2026-08-17",
+        "confidence": "high"
+      },
+      {
+        "name": "Yolanda Grimes",
+        "email": "yolanda_grimes@yahoo.com",
+        "evidence": [
+          "prior_customer",
+          "invoice_paid",
+          "calendar_event",
+          "booking_thread"
+        ],
+        "amount": 104.94,
+        "date": null,
+        "confidence": "high"
+      },
+      {
+        "name": "Carson Richardson",
+        "email": "carson.richardson27@gmail.com",
+        "evidence": [
+          "prior_customer",
+          "invoice_paid",
+          "calendar_event",
+          "booking_thread",
+          "paypal_customer"
+        ],
+        "amount": 492.71,
+        "date": null,
+        "confidence": "high"
+      },
+      {
+        "name": "John Cinicola",
+        "email": "jcinicola89@gmail.com",
+        "evidence": [
+          "prior_customer",
+          "invoice_paid",
+          "calendar_event"
+        ],
+        "amount": 253.88,
+        "date": null,
+        "confidence": "high"
+      },
+      {
+        "name": "Kayla floyd",
+        "email": "kfloyd@cornerstoneclassical.org",
+        "evidence": [
+          "prior_customer",
+          "invoice_paid",
+          "calendar_event",
+          "booking_thread"
+        ],
+        "amount": null,
+        "date": "2026-03-13",
+        "confidence": "high"
+      },
+      {
+        "name": "Michelle Cannilla",
+        "email": "mchan293@gmail.com",
+        "evidence": [
+          "prior_customer",
+          "invoice_paid",
+          "calendar_event",
+          "booking_thread",
+          "paypal_customer"
+        ],
+        "amount": 288.25,
+        "date": "2025-12-21",
+        "confidence": "high"
+      },
+      {
+        "name": "Marti Howard",
+        "email": "marti.howard9@gmail.com",
+        "evidence": [
+          "prior_customer",
+          "invoice_paid",
+          "calendar_event",
+          "booking_thread",
+          "paypal_customer"
+        ],
+        "amount": 273.0,
+        "date": "2025-12-28",
+        "confidence": "low"
+      },
+      {
+        "name": "Liudmila Lashchenko",
+        "email": "liudmila.lashchenko@gmail.com",
+        "evidence": [
+          "prior_customer",
+          "invoice_paid",
+          "calendar_event",
+          "booking_thread",
+          "paypal_customer"
+        ],
+        "amount": 302.1,
+        "date": "2025-11-22",
+        "confidence": "high"
+      },
+      {
+        "name": "Kate Fraser",
+        "email": "kfraser@greenwoodjax.org",
+        "evidence": [
+          "prior_customer",
+          "invoice_paid",
+          "calendar_event",
+          "booking_thread"
+        ],
+        "amount": 575.0,
+        "date": "2025-09-27",
+        "confidence": "high"
+      },
+      {
+        "name": "Brittany Thomas",
+        "email": "bthomas@advancedcarepartners.com",
+        "evidence": [
+          "prior_customer",
+          "invoice_paid",
+          "calendar_event",
+          "paypal_customer"
+        ],
+        "amount": 371.0,
+        "date": "2025-12-22",
+        "confidence": "high"
+      },
+      {
+        "name": "Leia Leiser",
+        "email": "leia933@yahoo.com",
+        "evidence": [
+          "prior_customer",
+          "invoice_paid",
+          "calendar_event",
+          "booking_thread",
+          "paypal_customer"
+        ],
+        "amount": 235.5,
+        "date": "2025-08-02",
+        "confidence": "high"
+      },
+      {
+        "name": "Emily White",
+        "email": "emilywhite723@yahoo.com",
+        "evidence": [
+          "prior_customer",
+          "booking_thread"
+        ],
+        "amount": null,
+        "date": null,
+        "confidence": "high"
+      },
+      {
+        "name": "Rachael",
+        "email": "rachael.wright0@icloud.com",
+        "evidence": [
+          "prior_customer",
+          "booking_thread"
+        ],
+        "amount": null,
+        "date": null,
+        "confidence": "high"
+      },
+      {
+        "name": "Heather Stephens",
+        "email": "hasolier@gmail.com",
+        "evidence": [
+          "prior_customer",
+          "calendar_event",
+          "booking_thread"
+        ],
+        "amount": null,
+        "date": null,
+        "confidence": "high"
+      },
+      {
+        "name": "Vivian Olinger",
+        "email": "vivian.rodriguez@gmail.com",
+        "evidence": [
+          "prior_customer",
+          "booking_thread"
+        ],
+        "amount": null,
+        "date": null,
+        "confidence": "high"
+      },
+      {
+        "name": "Emily Bridges",
+        "email": "emilybridges0924@gmail.com",
+        "evidence": [
+          "prior_customer",
+          "booking_thread"
+        ],
+        "amount": null,
+        "date": null,
+        "confidence": "high"
+      },
+      {
+        "name": "Liz",
+        "email": "liz@firstcoastcms.com",
+        "evidence": [
+          "prior_customer",
+          "invoice_paid",
+          "calendar_event",
+          "booking_thread"
+        ],
+        "amount": 811.52,
+        "date": "2025-09-27",
+        "confidence": "high"
+      },
+      {
+        "name": "Sarah",
+        "email": "sarahstecko@gmail.com",
+        "evidence": [
+          "prior_customer",
+          "booking_thread"
+        ],
+        "amount": null,
+        "date": null,
+        "confidence": "high"
+      },
+      {
+        "name": "10660 Validus Drive",
+        "email": "tfelix@discoveryvillages.com",
+        "evidence": [
+          "prior_customer",
+          "invoice_paid",
+          "calendar_event",
+          "booking_thread"
+        ],
+        "amount": 185.5,
+        "date": null,
+        "confidence": "high"
+      },
+      {
+        "name": "3760 Dupont Avenue",
+        "email": "christina.dutcher@gardensmemorycare.com",
+        "evidence": [
+          "prior_customer",
+          "calendar_event",
+          "booking_thread"
+        ],
+        "amount": null,
+        "date": "2025-12-29",
+        "confidence": "high"
+      },
+      {
+        "name": "Orange Park Rehabilitation & Nursing Center",
+        "email": "gnldelivery4@gmail.com",
+        "evidence": [
+          "prior_customer",
+          "invoice_paid",
+          "calendar_event",
+          "booking_thread"
+        ],
+        "amount": 185.5,
+        "date": "2025-10-16",
+        "confidence": "high"
+      },
+      {
+        "name": "Palm Garden of Jacksonville",
+        "email": "patrice.pusha@palmgarden.com",
+        "evidence": [
+          "prior_customer",
+          "invoice_paid",
+          "calendar_event",
+          "booking_thread"
+        ],
+        "amount": 159.0,
+        "date": "2025-11-19",
+        "confidence": "high"
+      },
+      {
+        "name": "5939 Roosevelt Blvd",
+        "email": "deandre.stringer@legendseniorliving.com",
+        "evidence": [
+          "prior_customer",
+          "invoice_paid",
+          "calendar_event"
+        ],
+        "amount": 185.5,
+        "date": "2025-10-11",
+        "confidence": "high"
+      },
+      {
+        "name": "2040 Soutel Drive",
+        "email": "peachesnabasket@gmail.com",
+        "evidence": [
+          "prior_customer",
+          "invoice_paid",
+          "calendar_event",
+          "booking_thread"
+        ],
+        "amount": 125.0,
+        "date": "2025-09-26",
+        "confidence": "high"
+      }
+    ]
+  }
 }
