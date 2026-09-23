@@ -1,0 +1,101 @@
+{
+  "as_of": "2026-09-23 16:30 ET",
+  "title": "Battle Row · Physical Ops",
+  "brand": "Sheehan Homestead / Critters on Call",
+  "location": "Callahan FL",
+  "tagline": "logistics of joy · wellness · education · FOMO",
+  "primary_page": "ops-battle-row.html",
+  "parent": "rvp-ops.html",
+  "rule": "No invented animal headcounts, insurance claims, or capacity numbers. Capacity for goat yoga = unknown until measured.",
+  "enclosures": [
+    {
+      "id": "pen-1",
+      "row": 1,
+      "label": "Petting-zoo chickens",
+      "kind": "chickens",
+      "status": "active",
+      "note": "Active enclosure — no headcount claimed"
+    },
+    {
+      "id": "pen-2",
+      "row": 2,
+      "label": "Petting-zoo chickens",
+      "kind": "chickens",
+      "status": "active",
+      "note": "Active enclosure — no headcount claimed"
+    },
+    {
+      "id": "pen-3",
+      "row": 3,
+      "label": "Half petting-zoo chicken / half bunny",
+      "kind": "mixed",
+      "status": "active",
+      "note": "Split pen — chicken + bunny"
+    },
+    {
+      "id": "pen-4",
+      "row": 4,
+      "label": "Full bunny",
+      "kind": "bunny",
+      "status": "active",
+      "note": "Active enclosure — no headcount claimed"
+    },
+    {
+      "id": "pen-5",
+      "row": 5,
+      "label": "Junior-high birds",
+      "kind": "birds",
+      "status": "active",
+      "note": "Active enclosure — no headcount claimed"
+    }
+  ],
+  "exhibits": [
+    {
+      "id": "hay-frame",
+      "label": "Hay frame",
+      "builder": "Ann-Marie",
+      "status": "built",
+      "note": "Cool exhibit — STEM opportunity",
+      "stem_ask": {
+        "owner": "Ann-Marie",
+        "action": "Film what she built (private) → drop into homeschool content",
+        "privacy": "private film first",
+        "panel": "ann-marie-ops.html"
+      }
+    }
+  ],
+  "goat_yoga": {
+    "label": "Goat yoga",
+    "tents": {
+      "status": "on_hand",
+      "covered": true,
+      "note": "Tents now on hand → can run covered"
+    },
+    "mosquito_netting": {
+      "status": "optional",
+      "note": "Optional mosquito netting"
+    },
+    "upsell": {
+      "amount_range_usd": [10, 20],
+      "label": "+$10–20 covered / tent upsell",
+      "note": "Upsell when tents / cover in play"
+    },
+    "capacity": {
+      "status": "unknown",
+      "headcount": null,
+      "note": "Capacity TBD — do not invent headcount"
+    }
+  },
+  "instructors": {
+    "label": "Yoga instructor roster",
+    "named": [
+      { "name": "Angie", "status": "named", "role": "Yoga instructor" },
+      { "name": "Emmy", "status": "named", "role": "Yoga instructor" }
+    ],
+    "vacant_seats": [
+      { "id": "instructor-3", "status": "vacant", "role": "Yoga instructor", "note": "Need more instructors" },
+      { "id": "instructor-4", "status": "vacant", "role": "Yoga instructor", "note": "Need more instructors" }
+    ],
+    "need": "More instructors — vacant seats open"
+  }
+}
