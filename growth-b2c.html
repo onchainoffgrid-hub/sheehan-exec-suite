@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>B2C engine · Growth · Sheehan Homestead</title>
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--violet:#a78bfa;--money:#f0abfc}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1180px;margin:0 auto;padding:28px 22px 48px}
+.top{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 18px;padding:10px 14px;border:1px solid var(--line);border-radius:14px;background:#0f1728}
+.top .lbl{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-right:4px}
+.top a{background:var(--card);border:1px solid var(--line);color:var(--text);padding:7px 12px;border-radius:999px;font-size:.78rem;font-weight:600;text-decoration:none}
+.top a.on{border-color:#a78bfa88;background:#1a1530}
+.top a.money{border-color:#a855f788;background:linear-gradient(135deg,#2a1530,#121a2b);color:#f0abfc}
+.crumb{font-size:.82rem;color:var(--muted);margin:0 0 12px}.crumb a{color:#d4c4ff;font-weight:600}
+h1{font-size:clamp(1.45rem,3vw,1.9rem);margin:0 0 6px;letter-spacing:-.02em;font-weight:750}
+.sub{color:var(--muted);font-size:.92rem;margin-bottom:16px}
+.kpi-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:0 0 16px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}
+.kpi .l{font-size:.65rem;color:var(--muted);text-transform:uppercase}
+.kpi .v{font-size:1.25rem;font-weight:750;margin-top:4px}
+.kpi .s{font-size:.7rem;color:var(--muted);margin-top:3px;line-height:1.35}
+.sketch{margin:0 0 18px;padding:14px 16px;border:1px dashed #ffb02088;border-radius:14px;background:#16140f;font-size:.84rem;color:#c5d0e6}
+.sketch b{color:#fde68a}.sketch .lbl{font-size:.65rem;text-transform:uppercase;letter-spacing:.07em;color:var(--warn);margin-bottom:6px}
+.fields{margin:0 0 16px;padding:12px 14px;border:1px solid #a78bfa55;border-radius:14px;background:#15101f;font-size:.82rem;color:#c5d0e6}
+.fields code{font-size:.75rem;color:#d4c4ff}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 16px}
+.links a{padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--card);font-weight:700;font-size:.8rem;text-decoration:none;color:var(--text)}
+.links a:hover{border-color:var(--violet)}
+table{width:100%;border-collapse:collapse;font-size:.8rem}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:.66rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:600}
+tr:hover td{background:#0f1728}
+.tag{display:inline-block;font-size:.65rem;padding:2px 7px;border-radius:999px;border:1px solid var(--line);background:var(--panel);color:#c5d0e6}
+.tag.bought{border-color:#3dd68c55;color:var(--good)}.tag.not{border-color:#ffb02066;color:var(--warn)}.tag.unk{border-color:#93a0b855;color:var(--muted)}
+.muted{color:var(--muted)}.note{color:var(--muted);font-size:.75rem;margin-top:16px}
+.badge{font-size:.65rem;padding:2px 8px;border-radius:6px;background:#1a1530;color:var(--violet);border:1px solid #a78bfa55;margin-left:6px}
+#meta{font-size:.8rem;color:var(--muted);margin-bottom:10px}
+</style></head>
+<body data-flow-face="sales" data-flow-chip="growth-b2c"><div class="wrap">
+
+<div class="top">
+  <span class="lbl">Growth</span>
+  <a href="growth-home.html">Growth home</a>
+  <a href="growth-b2b.html">B2B</a>
+  <a class="on" href="growth-b2c.html">B2C</a>
+  <a href="consumer-inbound.html">Consumer inbound</a>
+  <a class="money" href="one-touch.html">One-touch</a>
+  <a href="rvp-ops.html">RVP</a>
+</div>
+
+<p class="crumb"><a href="rvp-ops.html">RVP</a> → <a href="growth-home.html">Growth</a> → <b>B2C</b></p>
+
+<header>
+  <h1>B2C engine <span class="badge">warm consumer pool</span></h1>
+  <div class="sub">Counts from <code>data/consumer_inbound.json</code> only · never invent to hit 300 · still valuable for reviews + increments</div>
+</header>
+
+<div class="kpi-row" aria-label="Real counts">
+  <div class="kpi"><div class="l">Mailto contacts</div><div class="v" id="k-mailto">—</div><div class="s">unique emails in pool</div></div>
+  <div class="kpi"><div class="l">GoDaddy inventory</div><div class="v" id="k-godaddy">—</div><div class="s" id="k-godaddy-s">contact-form threads</div></div>
+  <div class="kpi"><div class="l">Summer interest</div><div class="v" id="k-summer">—</div><div class="s">form submissions</div></div>
+  <div class="kpi"><div class="l">Purchase · bought</div><div class="v" id="k-bought">—</div><div class="s">cross-ref PayPal / calendar</div></div>
+  <div class="kpi"><div class="l">Purchase · not_seen</div><div class="v" id="k-notseen">—</div><div class="s">no paid match yet</div></div>
+  <div class="kpi"><div class="l">Purchase · unknown</div><div class="v" id="k-unk">—</div><div class="s">needs follow-up</div></div>
+</div>
+
+<aside class="sketch" aria-label="Quota sketch">
+  <div class="lbl">Sketch · theoretical warm pool (not a forecast)</div>
+  <div><b>If</b> ~300 warms × <b>$25 avg</b> = <b>$7,500</b> theoretical pool — labeled sketch only.</div>
+  <div style="margin-top:6px">Real pool size below is whatever JSON reports (not forced to 300). One <b>$500</b> close beats twenty $25 closes — still valuable for <b>reviews + increments</b>.</div>
+</aside>
+
+<div class="fields">
+  <b>Intent fields (use what exists):</b>
+  source · detail / subject (what they wanted) · purchase_status (bought vs curious/not_seen) · status · next_action.
+  <div style="margin-top:6px;color:var(--muted)">Gaps TBD: structured “what they wanted” taxonomy beyond free-text <code>detail</code>/<code>subject</code>; waiver form export still GAP; forms missing sheets = 4.</div>
+</div>
+
+<div class="links">
+  <a href="consumer-inbound.html">Full consumer inbound →</a>
+  <a href="one-touch-warm.html">One-touch warm →</a>
+  <a href="one-touch-campaign-inbound-forms.html">Inbound forms campaign →</a>
+  <a href="one-touch-campaign-summer-scholars.html">Summer scholars →</a>
+</div>
+
+<div id="meta">Loading consumer_inbound.json…</div>
+<div style="overflow:auto;max-height:58vh;border:1px solid var(--line);border-radius:12px">
+<table>
+<thead><tr><th>Name</th><th>Source</th><th>What they wanted</th><th>Bought vs curious</th><th>Status</th><th>Next</th></tr></thead>
+<tbody id="rows"><tr><td colspan="6" class="muted">Loading…</td></tr></tbody>
+</table>
+</div>
+
+<p class="note">Growth · B2C engine · Built 2026-09-23 ET · Source: data/consumer_inbound.json · No invented contacts</p>
+</div>
+<script>
+(function(){
+  function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g,function(c){return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c];}); }
+  function set(id,v){ var el=document.getElementById(id); if(el) el.textContent=(v==null||v==='')?'—':v; }
+  function tag(ps){
+    if(ps==='bought') return '<span class="tag bought">bought</span>';
+    if(ps==='not_seen') return '<span class="tag not">not_seen / curious</span>';
+    if(ps==='unknown') return '<span class="tag unk">unknown</span>';
+    return '<span class="tag">'+esc(ps||'—')+'</span>';
+  }
+  fetch('data/consumer_inbound.json',{cache:'no-store'}).then(function(r){return r.json()}).then(function(d){
+    var k=d.kpis||{}, cc=d.contact_counts||{};
+    set('k-mailto', k.mailto_contacts!=null?k.mailto_contacts:cc.mailto_total);
+    set('k-godaddy', k.godaddy_inventory_rows!=null?k.godaddy_inventory_rows:cc.godaddy);
+    set('k-godaddy-s', k.godaddy_inventory_note||'inventory rows');
+    set('k-summer', k.interest_submissions!=null?k.interest_submissions:cc.summer_interest);
+    set('k-bought', k.purchase_bought);
+    set('k-notseen', k.purchase_not_seen);
+    set('k-unk', k.purchase_unknown);
+    document.getElementById('meta').textContent='as_of '+(d.as_of||'')+' · contacts '+(d.contacts?d.contacts.length:0)+' · '+((d.note||'').slice(0,160));
+    var tb=document.getElementById('rows'); tb.innerHTML='';
+    (d.contacts||[]).slice(0,120).forEach(function(c){
+      var wanted=c.detail||c.subject||'—';
+      tb.innerHTML+='<tr><td><b>'+esc(c.name||'—')+'</b><div class="muted">'+esc(c.email||'')+'</div></td><td>'+esc(c.source||c.bucket||'')+'</td><td>'+esc(wanted)+'</td><td>'+tag(c.purchase_status)+'</td><td>'+esc(c.status||'')+'</td><td>'+esc(c.next_action||'')+'</td></tr>';
+    });
+    if(!(d.contacts||[]).length) tb.innerHTML='<tr><td colspan="6" class="muted">Honest empty — no contacts in JSON.</td></tr>';
+    else if((d.contacts||[]).length>120) tb.innerHTML+='<tr><td colspan="6" class="muted">Showing first 120 of '+d.contacts.length+' — see consumer-inbound.html for full.</td></tr>';
+  }).catch(function(){
+    document.getElementById('meta').textContent='Could not load consumer_inbound.json';
+    document.getElementById('rows').innerHTML='<tr><td colspan="6" class="muted">Load failed</td></tr>';
+  });
+})();
+</script>
+<script src="shared/flow-spine.js" defer></script>
+</body></html>

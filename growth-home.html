@@ -15,24 +15,45 @@ a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
 h1{font-size:clamp(1.55rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;font-weight:750}
 .sub{color:var(--muted);font-size:.95rem}
 .north{margin:10px 0 18px;font-size:1.02rem;color:#c5d0e6}.north b{color:#fff}
-.money-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;margin:0 0 22px;padding:16px 20px;border:1px solid #a855f799;border-radius:16px;background:linear-gradient(135deg,#2a1530,#121a2b);color:inherit;text-decoration:none}
+.sprint{margin:0 0 18px;padding:16px 18px;border:1px solid #5b8cff88;border-radius:16px;background:linear-gradient(160deg,#152238,#0f1728)}
+.sprint h2{margin:0 0 4px;font-size:1.12rem;color:#9ec1ff}
+.sprint .tagline{margin:0 0 12px;font-size:.82rem;color:var(--muted)}
+.kpi-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}
+.kpi .l{font-size:.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.kpi .v{font-size:1.2rem;font-weight:750;margin-top:4px}
+.kpi .s{font-size:.7rem;color:var(--muted);margin-top:3px;line-height:1.35}
+.rev{margin:0 0 20px;padding:14px 16px;border:1px solid #a855f766;border-radius:14px;background:#16101c;font-size:.84rem;color:#d4c4ff}
+.rev b{color:#f5d0fe}.rev .gap{color:var(--warn);font-size:.78rem;margin-top:8px}
+.engines{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin:0 0 22px}
+.engine{display:flex;flex-direction:column;justify-content:space-between;min-height:180px;padding:22px 24px;border-radius:18px;border:1px solid var(--line);background:var(--card);color:inherit;text-decoration:none;transition:transform .12s,border-color .15s}
+.engine:hover{transform:translateY(-2px);text-decoration:none}
+.engine .kicker{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px}
+.engine h3{margin:0 0 8px;font-size:1.55rem}
+.engine p{margin:0;color:var(--muted);font-size:.9rem}
+.engine .go{margin-top:16px;font-weight:800;font-size:.95rem}
+.engine.b2b{border-color:#5b8cff99;background:linear-gradient(160deg,#152238,#121a2b 72%)}.engine.b2b .go{color:#9ec1ff}
+.engine.b2c{border-color:#a78bfa99;background:linear-gradient(160deg,#1a1530,#121a2b 72%)}.engine.b2c .go{color:#d4c4ff}
+.sec-label{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:4px 0 10px}
+.money-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;margin:0 0 18px;padding:14px 18px;border:1px solid #a855f799;border-radius:16px;background:linear-gradient(135deg,#2a1530,#121a2b);color:inherit;text-decoration:none}
 .money-bar:hover{text-decoration:none;filter:brightness(1.04)}
-.money-bar h3{margin:0;font-size:1.15rem;color:#f5d0fe}
-.money-bar p{margin:4px 0 0;color:#d4c4ff;font-size:.85rem}
-.money-bar .cta{padding:10px 16px;border-radius:999px;background:#a855f7;color:#fff;font-weight:800}
-.hub{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
-.hub-tile{display:flex;flex-direction:column;justify-content:space-between;min-height:140px;padding:20px 22px;border-radius:18px;border:1px solid var(--line);background:var(--card);color:inherit;text-decoration:none;transition:transform .12s,border-color .15s}
+.money-bar h3{margin:0;font-size:1.05rem;color:#f5d0fe}
+.money-bar p{margin:4px 0 0;color:#d4c4ff;font-size:.82rem}
+.money-bar .cta{padding:9px 14px;border-radius:999px;background:#a855f7;color:#fff;font-weight:800}
+.hub{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+.hub-tile{display:flex;flex-direction:column;justify-content:space-between;min-height:120px;padding:16px 18px;border-radius:16px;border:1px solid var(--line);background:var(--card);color:inherit;text-decoration:none;transition:transform .12s,border-color .15s}
 .hub-tile:hover{transform:translateY(-2px);text-decoration:none;border-color:var(--accent)}
-.hub-tile .kicker{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px}
-.hub-tile h3{margin:0 0 6px;font-size:1.25rem}
-.hub-tile p{margin:0;color:var(--muted);font-size:.86rem}
-.hub-tile .go{margin-top:14px;font-weight:800;font-size:.88rem;color:var(--accent)}
-.hub-tile.icp{border-color:#5b8cff88}.hub-tile.top{border-color:#fbbf2466}.hub-tile.top .go{color:#fde68a}
+.hub-tile .kicker{font-size:.65rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:6px}
+.hub-tile h3{margin:0 0 4px;font-size:1.1rem}
+.hub-tile p{margin:0;color:var(--muted);font-size:.8rem}
+.hub-tile .go{margin-top:10px;font-weight:800;font-size:.82rem;color:var(--accent)}
+.hub-tile.icp{border-color:#5b8cff66}.hub-tile.top{border-color:#fbbf2466}.hub-tile.top .go{color:#fde68a}
 .hub-tile.cdd{border-color:#a78bfa66}.hub-tile.cdd .go{color:#d4c4ff}
 .hub-tile.pen{border-color:#3dd68c66}.hub-tile.pen .go{color:#9dffc5}
 .hub-tile.pipe{border-color:#ffb02066}.hub-tile.pipe .go{color:#ffd78a}
-.hub-tile.money{border-color:#a855f788;background:linear-gradient(160deg,#2a1530,#121a2b 70%)}.hub-tile.money .go{color:#f0abfc}
-.note{color:var(--muted);font-size:.78rem;margin-top:22px}
+.sketch{margin:22px 0 0;padding:14px 16px;border:1px dashed #ffb02088;border-radius:14px;background:#16140f;font-size:.82rem;color:#c5d0e6}
+.sketch b{color:#fde68a}.sketch .lbl{font-size:.65rem;text-transform:uppercase;letter-spacing:.07em;color:var(--warn);margin-bottom:6px}
+.note{color:var(--muted);font-size:.78rem;margin-top:18px}
 .badge{font-size:.65rem;padding:2px 8px;border-radius:6px;background:#1a2440;color:var(--accent);border:1px solid var(--line);margin-left:6px}
 </style></head>
 <body data-flow-face="sales" data-flow-chip="growth-home"><div class="wrap">
@@ -50,9 +71,63 @@ h1{font-size:clamp(1.55rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;fon
 
 <header>
   <h1>Growth <span class="badge">$250k path</span></h1>
-  <div class="sub">All customers + growing customers · if we don’t, we fail · tiles → new pages</div>
+  <div class="sub">All customers + growing customers · if we don’t, we fail · engines first, then attack tiles</div>
 </header>
-<p class="north">Quota <b>$250k</b> by <b>Dec 23, 2026</b> · Top lists · CDD/HOA amenity filter · penetration · one-touch · pipeline</p>
+<p class="north">Quota <b>$250k</b> by <b>Dec 23, 2026</b> · two engines (B2B · B2C) · Top lists · CDD/HOA · penetration · one-touch</p>
+
+<section class="sprint" aria-label="Sprint strip">
+  <h2>Sprint: Aug 12 → Dec 23, 2026 <span style="color:var(--muted);font-weight:600;font-size:.85rem">(running start)</span></h2>
+  <p class="tagline">Cut-the-twine Aug 12 · finish line Dec 23 · operator KPIs below (not GBP JSON unless shown separately)</p>
+  <div class="kpi-row">
+    <div class="kpi">
+      <div class="l">Reviews (operator-stated)</div>
+      <div class="v">17 → 96</div>
+      <div class="s">Michael stated · sprint review count · not GBP pull</div>
+    </div>
+    <div class="kpi">
+      <div class="l">Days left</div>
+      <div class="v" id="k-days">91</div>
+      <div class="s">to Dec 23 · from today</div>
+    </div>
+    <div class="kpi">
+      <div class="l">PayPal outside YTD</div>
+      <div class="v" id="k-paypal">$20,509</div>
+      <div class="s" id="k-paypal-s">proven · window ~Jan 1–Sep 1</div>
+    </div>
+    <div class="kpi">
+      <div class="l">Ops-book (unaudited)</div>
+      <div class="v" id="k-opsbook">~$42k</div>
+      <div class="s" id="k-opsbook-s">booked · recv / AR below</div>
+    </div>
+  </div>
+</section>
+
+<div class="rev" aria-label="Revenue labels">
+  <div><b>Proven PayPal outside YTD:</b> <span id="rev-paypal">$20,509</span> <span style="color:var(--muted)">(from <code>data/paypal_kpis.json</code>)</span></div>
+  <div style="margin-top:6px"><b>Ops-book · unaudited:</b> booked ~$42k · recv ~$30k · AR ~$12k</div>
+  <div style="margin-top:6px;color:var(--muted)">PayPal invoices file = <b style="color:#d4c4ff">paid history (43 invoices)</b> — not a clean AR aging.</div>
+  <div class="gap"><b>Gap (deferred):</b> Ann-Marie invoice emails + site booking emails need Gmail scrape — not wired yet · do not treat PayPal invoices as open AR.</div>
+</div>
+
+<div class="sec-label">Two growth engines</div>
+<nav class="engines" aria-label="Growth engines">
+  <a class="engine b2b" href="growth-b2b.html">
+    <div>
+      <div class="kicker">Engine A</div>
+      <h3>B2B</h3>
+      <p>Enterprise · subscription · violet/~50% · small-biz/programmer · EMBA · CDD/HOA · Hail Mary · schools · Top20/100 · one-touch</p>
+    </div>
+    <span class="go">Open B2B →</span>
+  </a>
+  <a class="engine b2c" href="growth-b2c.html">
+    <div>
+      <div class="kicker">Engine B</div>
+      <h3>B2C</h3>
+      <p>Warm / existing consumer pool from inbound JSON · real counts only · reviews + increments · quota sketch labeled</p>
+    </div>
+    <span class="go">Open B2C →</span>
+  </a>
+</nav>
 
 <a class="money-bar" href="one-touch.html">
   <div>
@@ -62,38 +137,62 @@ h1{font-size:clamp(1.55rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;fon
   <span class="cta">Open →</span>
 </a>
 
+<div class="sec-label">Attack &amp; proof tiles (kept)</div>
 <nav class="hub" aria-label="Growth doors">
   <a class="hub-tile icp" href="sales-review.html">
-    <div><div class="kicker">01 · Doors</div><h3>ICP / Connect / Product</h3><p>Existing three doors for screen-share</p></div>
+    <div><div class="kicker">Doors</div><h3>ICP / Connect / Product</h3><p>Existing three doors for screen-share</p></div>
     <span class="go">Open →</span>
   </a>
   <a class="hub-tile top" href="growth-top20.html">
-    <div><div class="kicker">02 · Attack</div><h3>Top 20</h3><p>Best ICP / amenity-director CALL_NOW accounts</p></div>
+    <div><div class="kicker">Attack</div><h3>Top 20</h3><p>Best ICP / amenity-director CALL_NOW accounts</p></div>
     <span class="go">Open Top 20 →</span>
   </a>
   <a class="hub-tile top" href="growth-top100.html">
-    <div><div class="kicker">03 · Attack</div><h3>Top 100</h3><p>Wider attack list from dialer bands</p></div>
+    <div><div class="kicker">Attack</div><h3>Top 100</h3><p>Wider attack list from dialer bands</p></div>
     <span class="go">Open Top 100 →</span>
   </a>
   <a class="hub-tile cdd" href="growth-cdd-hoa.html">
-    <div><div class="kicker">04 · Tiers</div><h3>CDD / HOA tiers</h3><p>Homes · budget band (est) · amenity director? qualifier</p></div>
+    <div><div class="kicker">Tiers</div><h3>CDD / HOA tiers</h3><p>Homes · budget band (est) · amenity director? qualifier</p></div>
     <span class="go">Open CDD / HOA →</span>
   </a>
   <a class="hub-tile pen" href="growth-penetration.html">
-    <div><div class="kicker">05 · Proof</div><h3>Penetration proof</h3><p>JU · Vesta/Wildlight · lost HOAs · Goddard whitespace</p></div>
+    <div><div class="kicker">Proof</div><h3>Penetration proof</h3><p>JU · Vesta/Wildlight · lost HOAs · Goddard whitespace</p></div>
     <span class="go">Open proof →</span>
   </a>
-  <a class="hub-tile money" href="one-touch.html">
-    <div><div class="kicker">06 · Dialer</div><h3>One-touch hub</h3><p>Mass-touch stage · money motion</p></div>
-    <span class="go">Open one-touch →</span>
-  </a>
   <a class="hub-tile pipe" href="ops-pipeline.html">
-    <div><div class="kicker">07 · Quotes</div><h3>Pipeline</h3><p>Quotes sent · no answer · closed-lost crumbs</p></div>
+    <div><div class="kicker">Quotes</div><h3>Pipeline</h3><p>Quotes sent · no answer · closed-lost crumbs</p></div>
     <span class="go">Open pipeline →</span>
   </a>
 </nav>
 
-<p class="note">RVP Growth face (not “Sales”) · Built 2026-09-23 ET · Never invent budgets-as-fact · estimates labeled</p>
+<aside class="sketch" aria-label="BDR comp sketch">
+  <div class="lbl">Sketch · BDR comp (not a full HR page)</div>
+  <div><b>FL minimum wage:</b> $14/hr through Sep 29, 2026 → <b>$15/hr</b> Sep 30, 2026.</div>
+  <div style="margin-top:6px">Michael’s sketch = low base (min or ~$15/hr) + benefits + high variable · activity bar like ~100 dials/day.</div>
+  <div style="margin-top:6px;color:var(--muted)">Label only — for CFO / comp plan later. Not an offer letter.</div>
+</aside>
+
+<p class="note">RVP Growth face (not “Sales”) · Built 2026-09-23 ET · Never invent revenue · estimates / sketches labeled · Gmail invoice scrape = gap</p>
 </div>
+<script>
+(function(){
+  function fmt$(n){ if(n==null||n==='') return '—'; var x=Number(n); if(isNaN(x)) return '—'; return '$'+Math.round(x).toLocaleString('en-US'); }
+  function set(id,v){ var el=document.getElementById(id); if(el) el.textContent=(v==null||v==='')?'—':v; }
+  var today=new Date(); today.setHours(0,0,0,0);
+  var end=new Date(2026,11,23);
+  set('k-days', Math.max(0, Math.round((end-today)/86400000)));
+  fetch('data/paypal_kpis.json',{cache:'no-store'}).then(function(r){return r.json()}).then(function(pay){
+    var ytd=pay.ytd_2026&&pay.ytd_2026.outside_gross;
+    var ops=pay.ops_book_unaudited||{};
+    set('k-paypal', fmt$(ytd));
+    set('rev-paypal', fmt$(ytd));
+    set('k-paypal-s', (pay.ytd_2026&&pay.ytd_2026.window)||'proven');
+    if(ops.booked_ytd_approx!=null){
+      set('k-opsbook', '~'+fmt$(ops.booked_ytd_approx));
+      set('k-opsbook-s', 'recv ~'+fmt$(ops.received_approx)+' · AR ~'+fmt$(ops.ar_approx)+' · unaudited');
+    }
+  }).catch(function(){});
+})();
+</script>
 <script src="shared/flow-spine.js" defer></script>
 </body></html>
