@@ -24,7 +24,9 @@ cd /workspace/dashboard/exec-suite && python3 -m http.server 8765
 | RevOps TAM | [revops-tam.html](revops-tam.html) | Primary SAM **$572,873** · tier rollup · segment counts |
 | Social & Reach | [social-reach.html](social-reach.html) |
 | Jax Local Buzz | [jax-local-buzz.html](jax-local-buzz.html) | BDR table **24** outlets · sortable email/outlet · preloaded pitches · `data/jax_local_buzz.json` |
-| Investor & Capital | [investor-capital.html](investor-capital.html) | Goals $250k bookings / ~$100k AR by 2026-12-23 |
+| Investor Home | [investor-home.html](investor-home.html) | Frame spine + traction / capital / GTM tiles |
+| Investor Checklist | [investor-checklist.html](investor-checklist.html) | **Seed / pre-seed readiness** — Assets · Proof · Founder · Co-founder · Ops · Have/Need localStorage |
+| Investor & Capital | [investor-capital.html](investor-capital.html) | Goals $250k bookings / ~$100k AR by 2026-12-23 · nested under checklist |
 | Programming | [programming.html](programming.html) | Visit Us program types · fill vs protect stub heat |
 | Team & Hire | [team-hire.html](team-hire.html) | 4 seats from HIRE_PRIORITIES (enterprise live) |
 | Actions & Overdue | [actions-overdue.html](actions-overdue.html) | **84** actions from Michael_Overdue_Action_Tracker.xlsx |
@@ -65,7 +67,7 @@ Shared top rail: `shared/flow-spine.js` on Operator, Sales, and Investor pages.
 
 - **Operations** → `index.html` (money / bookings / actions / Ann-Marie)
 - **Sales** subchips: BDR TAM · Big Enterprise · Sponsor · Violet · Subscription
-- **Investors** → `investor-home.html` with links back to Sales proof (bookings/money) + Ops traction
+- **Investors** → `investor-checklist.html` (Seed / pre-seed: Assets · Proof · Founder · Co-founder · Ops) · `investor-home.html` · capital nested · Sales proof (bookings/money)
 
 Inject/refresh: `python3 scripts/inject_flow_spine.py`
 
@@ -89,3 +91,9 @@ cd /workspace/dashboard/exec-suite && python3 scripts/build_bdr_tam_dialer.py &&
 ```
 
 localStorage keys: `sheehan_bdr_v2_notes`, `sheehan_bdr_v2_customers`, `sheehan_bdr_v2_tags`, `sheehan_bdr_v2_done`.
+
+## Investor readiness
+
+- Checklist: https://onchainoffgrid-hub.github.io/sheehan-exec-suite/investor-checklist.html
+- Data: `data/investor_readiness.json` · localStorage `sheehan_investor_readiness`
+- Critters mirror: https://onchainoffgrid-hub.github.io/critters-on-call/exec/investor-checklist.html

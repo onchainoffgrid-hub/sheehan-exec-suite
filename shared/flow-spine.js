@@ -40,6 +40,9 @@
       } else if (path === "bdr-pipeline.html") CHIP = "big-enterprise";
       else if (path === "consumer-inbound.html") CHIP = "violet";
       else if (path === "crm-icp.html") CHIP = "subscription";
+      else if (path === "investor-checklist.html") CHIP = "checklist";
+      else if (path === "investor-capital.html") CHIP = "capital";
+      else if (path === "investor-home.html") CHIP = "home";
     }
   } catch (e) {}
 
@@ -113,12 +116,13 @@
 
   var investorSubs =
     '<div class="flow-sub" id="flow-investor-sub">' +
-    '<span class="sl">Proof</span>' +
+    '<span class="sl">Investors</span>' +
+    a("investor-checklist.html", "Checklist", "", CHIP === "checklist" || /investor-checklist/.test(location.pathname || "")) +
+    a("investor-home.html", "Home", "", CHIP === "home" || (/investor-home/.test(location.pathname || "") && CHIP !== "checklist")) +
+    a("investor-capital.html", "Capital", "", CHIP === "capital" || /investor-capital/.test(location.pathname || "")) +
     a("bookings-dates.html", "Bookings (Sales proof)", "", false) +
     a("money-cfo.html", "Money (Sales proof)", "", false) +
     a("actions-overdue.html", "Ops traction", "", false) +
-    a("index.html", "Operator hub", "", false) +
-    a("bdr-tam.html", "Sales dialer", "", false) +
     "</div>";
 
   var html =
@@ -136,7 +140,7 @@
     (FACE === "sales" || FACE === "ops" ? salesSubs : "") +
     (FACE === "investor" ? investorSubs : "") +
     (FACE === "investor"
-      ? '<div class="flow-hint">Investor face · hop back to <a href="bookings-dates.html">bookings</a> / <a href="money-cfo.html">money</a> for Sales proof, or <a href="actions-overdue.html">actions</a> for Ops traction.</div>'
+      ? '<div class="flow-hint">Investor face · <a href="investor-checklist.html">Seed / pre-seed checklist</a> (Assets · Proof · Founder · Co-founder · Ops) · hop to <a href="bookings-dates.html">bookings</a> / <a href="money-cfo.html">money</a> for Sales proof.</div>'
       : FACE === "sales"
       ? '<div class="flow-hint">Sales face · Big Enterprise = Regional Enterprise lane · Sponsor = festivals / foundations already on file · Violet = consumer inbound · Subscription = recurring senior / campus.</div>'
       : '<div class="flow-hint">Operations face · Money · Bookings · Actions · Ann-Marie. Use Sales chips to dial without hunting.</div>') +

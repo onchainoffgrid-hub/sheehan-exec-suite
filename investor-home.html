@@ -14,18 +14,27 @@ a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
 .faces .chip{padding:8px 16px;border-radius:999px;font-size:.82rem;font-weight:600;border:1px solid var(--line);background:var(--card);color:var(--muted);text-decoration:none}
 .faces .chip.on{border-color:var(--accent);background:#152238;color:#fff}
 .faces .chip:hover{text-decoration:none;border-color:var(--accent)}
-header{margin-bottom:28px}
+header{margin-bottom:22px}
 h1{font-size:1.55rem;margin:0 0 6px;letter-spacing:-.02em;font-weight:700}
-.sub{color:var(--muted);font-size:.92rem;max-width:42rem}
+.sub{color:var(--muted);font-size:.92rem;max-width:44rem}
+.stage{display:inline-block;margin-top:10px;padding:4px 11px;border-radius:999px;font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:#1a1530;color:var(--violet);border:1px solid #a78bfa55}
+.hero{background:linear-gradient(135deg,#1a1530,#121a2b 55%,#0e1626);border:1px solid #a78bfa55;border-radius:16px;padding:20px 22px;margin-bottom:22px}
+.hero h2{margin:0 0 6px;font-size:1.15rem}.hero p{margin:0 0 14px;color:var(--muted);font-size:.88rem;max-width:40rem}
+.hero .cta{display:inline-block;background:#a78bfa22;border:1px solid #a78bfa88;color:#e8eefc;padding:9px 16px;border-radius:999px;font-size:.84rem;font-weight:700;text-decoration:none}
+.hero .cta:hover{background:#a78bfa33;text-decoration:none}
 .group{margin:28px 0 10px;font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
-.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
-.tile{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 20px;display:block;color:inherit;min-height:118px;transition:border-color .15s,transform .15s}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 16px;display:block;color:inherit;min-height:108px;transition:border-color .15s,transform .15s}
 .tile:hover{border-color:var(--accent);text-decoration:none;transform:translateY(-1px)}
+.tile.pillar{border-color:#a78bfa33}
+.tile.pillar:hover{border-color:#a78bfa99}
 .tile .tag{display:inline-block;font-size:.65rem;padding:2px 8px;border-radius:6px;background:#1a2440;color:var(--accent);border:1px solid var(--line);margin-bottom:10px;letter-spacing:.04em;text-transform:uppercase}
+.tile .tag.frame{background:#1a1530;color:var(--violet);border-color:#a78bfa55}
 .tile .tag.live{background:#13281d;color:var(--good);border-color:#2a5}
 .tile .tag.proof{background:#1a1628;color:var(--violet);border-color:#a78bfa55}
-.tile h3{margin:0 0 8px;font-size:1.08rem;letter-spacing:-.01em}
-.tile p{margin:0;color:var(--muted);font-size:.88rem;line-height:1.45}
+.tile .num{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:7px;background:#1a1530;color:var(--violet);font-size:.7rem;font-weight:800;border:1px solid #a78bfa44;margin-right:6px;vertical-align:middle}
+.tile h3{margin:0 0 8px;font-size:1.02rem;letter-spacing:-.01em}
+.tile p{margin:0;color:var(--muted);font-size:.84rem;line-height:1.45}
 .note{color:var(--muted);font-size:.78rem;margin-top:36px}
 </style></head>
 <body data-flow-face="investor"><div class="wrap">
@@ -46,8 +55,44 @@ h1{font-size:1.55rem;margin:0 0 6px;letter-spacing:-.02em;font-weight:700}
 
 <header>
   <h1>Investor Home</h1>
-  <div class="sub">Sheehan Homestead / Critters on Call · strategy face · GTM · ICP × Connect × Product · traction &amp; capital. Not daily ops.</div>
+  <div class="sub">Sheehan Homestead / Critters on Call · strategy face · frame spine first, then traction &amp; capital. Not daily ops.</div>
+  <span class="stage">Seed / pre-seed readiness</span>
 </header>
+
+<div class="hero">
+  <h2>Open the readiness checklist</h2>
+  <p>Five pillars Michael owns for the room: Assets · Proof · Founder · Co-founder · Ops. Toggle Have / Need in-browser. Capital and bookings stay nested underneath — not orphaned.</p>
+  <a class="cta" href="investor-checklist.html">Seed / pre-seed checklist →</a>
+</div>
+
+<div class="group">Frame spine</div>
+<div class="tiles">
+  <a class="tile pillar" href="investor-checklist.html#assets">
+    <span class="tag frame">1 · Assets</span>
+    <h3><span class="num">1</span>Assets</h3>
+    <p>Real estate · Livestock · Customer list</p>
+  </a>
+  <a class="tile pillar" href="investor-checklist.html#proof">
+    <span class="tag frame">2 · Proof</span>
+    <h3><span class="num">2</span>Proof</h3>
+    <p>Logos · Quotes · Research stack · Market / GTM</p>
+  </a>
+  <a class="tile pillar" href="investor-checklist.html#founder">
+    <span class="tag frame">3 · Founder</span>
+    <h3><span class="num">3</span>Founder</h3>
+    <p>EMBA · Key deals · Lead-gen · Every job · Media reel</p>
+  </a>
+  <a class="tile pillar" href="investor-checklist.html#cofounder">
+    <span class="tag frame">4 · Co-founder</span>
+    <h3><span class="num">4</span>Co-founder</h3>
+    <p>Ann-Marie — educator · mom · STEM · builds ops</p>
+  </a>
+  <a class="tile pillar" href="investor-checklist.html#ops">
+    <span class="tag frame">5 · Ops</span>
+    <h3><span class="num">5</span>Ops</h3>
+    <p>6 peaks · Journey · 10+ team · FB · SEO · eBay</p>
+  </a>
+</div>
 
 <div class="group">Traction</div>
 <div class="tiles">
@@ -96,7 +141,7 @@ h1{font-size:1.55rem;margin:0 0 6px;letter-spacing:-.02em;font-weight:700}
   <a class="tile" href="investor-capital.html">
     <span class="tag">Capital</span>
     <h3>Capital Narrative</h3>
-    <p>$250k bookings / ~$100k AR by 2026-12-23 — raise story and milestones.</p>
+    <p>$250k bookings / ~$100k AR by 2026-12-23 — raise story and milestones under the readiness frame.</p>
   </a>
   <a class="tile" href="money-cfo.html">
     <span class="tag">Capital</span>
@@ -119,7 +164,7 @@ h1{font-size:1.55rem;margin:0 0 6px;letter-spacing:-.02em;font-weight:700}
   </a>
 </div>
 
-<p class="note">Dump-home: Dashboard Bit · Brand: Sheehan Homestead / Critters on Call · Face: Investor · Switch to <a href="index.html">Operator / Franchise #0</a> for daily departments · Built 2026-09-22 ET</p>
+<p class="note">Dump-home: Dashboard Bit · Brand: Sheehan Homestead / Critters on Call · Face: Investor · Frame: Assets / Proof / Founder / Co-founder / Ops · Switch to <a href="index.html">Operator / Franchise #0</a> for daily departments · Built 2026-09-22 ET</p>
 </div>
 <script src="shared/flow-spine.js" defer></script>
 </body></html>

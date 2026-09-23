@@ -20,8 +20,9 @@ PAGES = {
     "consumer-inbound.html": ("sales", "violet"),
     "org-whitespace.html": ("sales", ""),
     "catalogue-close.html": ("sales", ""),
-    "investor-home.html": ("investor", ""),
-    "investor-capital.html": ("investor", ""),
+    "investor-home.html": ("investor", "home"),
+    "investor-checklist.html": ("investor", "checklist"),
+    "investor-capital.html": ("investor", "capital"),
     "macro-radar.html": ("investor", ""),
 }
 

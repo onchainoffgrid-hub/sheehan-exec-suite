@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Seed / pre-seed readiness · Investor Checklist · Sheehan Exec</title>
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--bad:#ff5d6c;--violet:#a78bfa}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.5}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1100px;margin:0 auto;padding:22px 24px 56px}
+.apps{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 16px;padding:10px 14px;border:1px solid var(--line);border-radius:14px;background:#0f1728}
+.apps .lbl{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-right:4px}
+.apps a{background:var(--card);border:1px solid #3dd68c55;color:var(--text);padding:6px 11px;border-radius:999px;font-size:.78rem;font-weight:600;text-decoration:none}
+.apps a.sec{border-color:var(--line);color:#c5d0e6;font-weight:500;font-size:.72rem}
+.faces{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 22px}
+.faces .chip{padding:8px 16px;border-radius:999px;font-size:.82rem;font-weight:600;border:1px solid var(--line);background:var(--card);color:var(--muted);text-decoration:none}
+.faces .chip.on{border-color:var(--violet);background:#1a1530;color:#fff}
+header{margin-bottom:18px}
+h1{font-size:1.55rem;margin:0 0 6px;letter-spacing:-.02em;font-weight:700}
+.sub{color:var(--muted);font-size:.92rem;max-width:46rem}
+.stage{display:inline-block;margin-top:10px;padding:4px 11px;border-radius:999px;font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:#1a1530;color:var(--violet);border:1px solid #a78bfa55}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin:18px 0 22px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.kpi .l{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.kpi .v{font-size:1.35rem;font-weight:700;margin-top:3px}
+.kpi .s{font-size:.72rem;color:var(--muted);margin-top:2px}
+.kpi.have .v{color:var(--good)}.kpi.need .v{color:var(--warn)}.kpi.unset .v{color:var(--muted)}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px}
+.toc a{padding:7px 13px;border-radius:999px;font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--card);color:var(--text);text-decoration:none}
+.toc a:hover{border-color:var(--accent);text-decoration:none}
+.toc a span{color:var(--muted);font-weight:500;margin-left:4px}
+.pillar{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 18px 10px;margin-bottom:16px}
+.pillar h2{margin:0 0 4px;font-size:1.12rem;letter-spacing:-.01em;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.pillar h2 .num{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:8px;background:#1a1530;color:var(--violet);font-size:.78rem;font-weight:800;border:1px solid #a78bfa44}
+.pillar .blurb{color:var(--muted);font-size:.84rem;margin:0 0 12px}
+.pillar .count{font-size:.72rem;color:var(--muted);font-weight:600;margin-left:auto}
+.item{display:grid;grid-template-columns:auto 1fr;gap:10px 14px;padding:12px 0;border-top:1px solid #1e2a4488;align-items:start}
+.item:first-of-type{border-top:none}
+.toggle{display:flex;flex-direction:column;gap:5px;min-width:72px}
+.toggle button{appearance:none;border:1px solid var(--line);background:var(--panel);color:var(--muted);border-radius:8px;padding:5px 8px;font-size:.68rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;font-family:inherit}
+.toggle button:hover{border-color:var(--accent);color:#fff}
+.toggle button.on.have{background:#13281d;border-color:#2a5;color:var(--good)}
+.toggle button.on.need{background:#2a2416;border-color:#a70;color:var(--warn)}
+.item h3{margin:0 0 4px;font-size:.95rem;font-weight:650}
+.item p{margin:0;color:var(--muted);font-size:.84rem;line-height:1.45}
+.item .meta{margin-top:6px;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.tag{display:inline-block;font-size:.65rem;padding:2px 8px;border-radius:6px;background:#1a2440;color:var(--accent);border:1px solid var(--line);letter-spacing:.03em}
+.tag.attach{background:#1a1628;color:var(--violet);border-color:#a78bfa55}
+.tag.link a{color:inherit;text-decoration:none}
+.tag.link a:hover{text-decoration:underline}
+.nested{margin:28px 0 10px;font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;display:block;color:inherit;transition:border-color .15s,transform .15s}
+.tile:hover{border-color:var(--accent);text-decoration:none;transform:translateY(-1px)}
+.tile h3{margin:0 0 6px;font-size:.98rem}.tile p{margin:0;color:var(--muted);font-size:.84rem}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 18px}
+.actions button{appearance:none;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:999px;padding:7px 14px;font-size:.76rem;font-weight:600;cursor:pointer;font-family:inherit}
+.actions button:hover{border-color:var(--accent)}
+.note{color:var(--muted);font-size:.78rem;margin-top:28px}
+</style></head>
+<body data-flow-face="investor" data-flow-chip="checklist"><div class="wrap">
+
+<div class="apps">
+  <span class="lbl">Apps</span>
+  <a href="https://onchainoffgrid-hub.github.io/critters-on-call/" target="_blank" rel="noopener">Critters <span style="color:#3dd68c;font-size:.65rem">LIVE</span></a>
+  <a href="https://onchainoffgrid-hub.github.io/critters-play/" target="_blank" rel="noopener" style="border-color:#a78bfa66">Play / Coins <span style="color:#3dd68c;font-size:.65rem">LIVE</span></a>
+  <a href="https://onchainoffgrid-hub.github.io/gtm-business-manager/" target="_blank" rel="noopener" style="border-color:#5b8cff66">GTM Manager <span style="color:#3dd68c;font-size:.65rem">LIVE</span></a>
+  <a href="link-tree.html" class="sec">All links</a>
+</div>
+
+<div class="faces legacy-faces">
+  <a class="chip" href="index.html">Operations</a>
+  <a class="chip" href="bdr-tam.html">Sales</a>
+  <a class="chip on" href="investor-home.html">Investors</a>
+</div>
+
+<header>
+  <h1>Investor checklist</h1>
+  <div class="sub">Sheehan Homestead / Critters on Call · Michael’s seed / pre-seed readiness frame. Toggle <b>Have</b> / <b>Need</b> — saved in this browser. No invented revenue, logos, or testimonials.</div>
+  <span class="stage">Seed / pre-seed readiness</span>
+</header>
+
+<div class="kpis" id="kpis">
+  <div class="kpi"><div class="l">Pillars</div><div class="v">5</div><div class="s">Assets → Ops</div></div>
+  <div class="kpi have"><div class="l">Have</div><div class="v" id="kpi-have">—</div><div class="s">ready to show</div></div>
+  <div class="kpi need"><div class="l">Need</div><div class="v" id="kpi-need">—</div><div class="s">attach / finish</div></div>
+  <div class="kpi unset"><div class="l">Unset</div><div class="v" id="kpi-unset">—</div><div class="s">not marked</div></div>
+</div>
+
+<div class="actions">
+  <button type="button" id="btn-apply-defaults">Apply defaults from JSON</button>
+  <button type="button" id="btn-clear">Clear all marks</button>
+  <a href="investor-home.html" style="padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:var(--card);font-size:.76rem;font-weight:600;color:var(--text);text-decoration:none">← Investor home</a>
+  <a href="investor-capital.html" style="padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:var(--card);font-size:.76rem;font-weight:600;color:var(--text);text-decoration:none">Capital narrative →</a>
+</div>
+
+<nav class="toc" id="toc" aria-label="Pillars"></nav>
+<div id="pillars"></div>
+
+<div class="nested">Keep nested — capital &amp; traction</div>
+<div class="tiles">
+  <a class="tile" href="investor-capital.html"><h3>Capital narrative</h3><p>$250k bookings / ~$100k AR by 2026-12-23 — raise story under this frame.</p></a>
+  <a class="tile" href="bookings-dates.html"><h3>Bookings (Sales proof)</h3><p>Paid-date pipeline — hop back to Sales proof without leaving the spine.</p></a>
+  <a class="tile" href="money-cfo.html"><h3>Money snapshot</h3><p>Outside customer gross vs owner transfers — cash proof.</p></a>
+  <a class="tile" href="https://onchainoffgrid-hub.github.io/gtm-business-manager/" target="_blank" rel="noopener"><h3>GTM Business Manager</h3><p>Live GTM surface for diligence walkthroughs.</p></a>
+</div>
+
+<p class="note">Dump-home: Dashboard Bit · Face: Investors · Frame: Assets / Proof / Founder / Co-founder / Ops · localStorage key <code>sheehan_investor_readiness</code> · Built 2026-09-22 ET · Ann-Marie investor-safe only (ops critiques live elsewhere, never here).</p>
+</div>
+<script>
+(function(){
+  var LS_KEY='sheehan_investor_readiness';
+  var DATA=null;
+  var state={};
+
+  function loadState(){
+    try{ state=JSON.parse(localStorage.getItem(LS_KEY)||'{}')||{}; }
+    catch(e){ state={}; }
+  }
+  function saveState(){
+    try{ localStorage.setItem(LS_KEY, JSON.stringify(state)); }catch(e){}
+  }
+  function getMark(id, def){
+    if(state[id]==='have'||state[id]==='need'||state[id]==='') return state[id];
+    return def||'';
+  }
+  function setMark(id, val){
+    if(!val) delete state[id];
+    else state[id]=val;
+    saveState();
+    render();
+  }
+  function applyDefaults(){
+    if(!DATA) return;
+    DATA.pillars.forEach(function(p){
+      p.items.forEach(function(it){
+        if(it.default) state[it.id]=it.default;
+      });
+    });
+    saveState();
+    render();
+  }
+  function clearAll(){
+    state={};
+    saveState();
+    render();
+  }
+  function counts(){
+    var have=0,need=0,unset=0,total=0;
+    if(!DATA) return {have:0,need:0,unset:0,total:0};
+    DATA.pillars.forEach(function(p){
+      p.items.forEach(function(it){
+        total++;
+        var m=getMark(it.id, '');
+        if(m==='have') have++;
+        else if(m==='need') need++;
+        else unset++;
+      });
+    });
+    return {have:have,need:need,unset:unset,total:total};
+  }
+  function pillarCount(p){
+    var h=0,n=0,t=p.items.length;
+    p.items.forEach(function(it){
+      var m=getMark(it.id,'');
+      if(m==='have') h++; else if(m==='need') n++;
+    });
+    return {have:h,need:n,total:t};
+  }
+  function esc(s){
+    return String(s||'').replace(/[&<>"']/g,function(c){
+      return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c];
+    });
+  }
+  function render(){
+    if(!DATA) return;
+    var c=counts();
+    document.getElementById('kpi-have').textContent=c.have;
+    document.getElementById('kpi-need').textContent=c.need;
+    document.getElementById('kpi-unset').textContent=c.unset;
+
+    var toc=document.getElementById('toc');
+    toc.innerHTML='';
+    DATA.pillars.forEach(function(p,i){
+      var pc=pillarCount(p);
+      var a=document.createElement('a');
+      a.href='#'+p.id;
+      a.innerHTML=esc(p.label)+' <span>'+pc.have+'/'+pc.total+'</span>';
+      toc.appendChild(a);
+    });
+
+    var root=document.getElementById('pillars');
+    root.innerHTML='';
+    DATA.pillars.forEach(function(p,i){
+      var pc=pillarCount(p);
+      var sec=document.createElement('section');
+      sec.className='pillar';
+      sec.id=p.id;
+      var head=document.createElement('h2');
+      head.innerHTML='<span class="num">'+(i+1)+'</span> '+esc(p.label)+
+        '<span class="count">'+pc.have+' have · '+pc.need+' need · '+pc.total+' items</span>';
+      sec.appendChild(head);
+      var blurb=document.createElement('p');
+      blurb.className='blurb';
+      blurb.textContent=p.blurb||'';
+      sec.appendChild(blurb);
+
+      p.items.forEach(function(it){
+        var mark=getMark(it.id, '');
+        var row=document.createElement('div');
+        row.className='item';
+        row.dataset.id=it.id;
+
+        var tog=document.createElement('div');
+        tog.className='toggle';
+        var bHave=document.createElement('button');
+        bHave.type='button'; bHave.textContent='Have';
+        bHave.className='have'+(mark==='have'?' on':'');
+        bHave.addEventListener('click',function(){ setMark(it.id, mark==='have'?'':'have'); });
+        var bNeed=document.createElement('button');
+        bNeed.type='button'; bNeed.textContent='Need';
+        bNeed.className='need'+(mark==='need'?' on':'');
+        bNeed.addEventListener('click',function(){ setMark(it.id, mark==='need'?'':'need'); });
+        tog.appendChild(bHave); tog.appendChild(bNeed);
+
+        var body=document.createElement('div');
+        body.innerHTML='<h3>'+esc(it.title)+'</h3><p>'+esc(it.detail)+'</p>';
+        var meta=document.createElement('div');
+        meta.className='meta';
+        if(it.attach){
+          var t=document.createElement('span');
+          t.className='tag attach';
+          t.textContent='Attach later · '+it.attach;
+          meta.appendChild(t);
+        }
+        if(it.link){
+          var t2=document.createElement('span');
+          t2.className='tag link';
+          t2.innerHTML='<a href="'+esc(it.link)+'">Open linked panel →</a>';
+          meta.appendChild(t2);
+        }
+        if(meta.childNodes.length) body.appendChild(meta);
+
+        row.appendChild(tog);
+        row.appendChild(body);
+        sec.appendChild(row);
+      });
+      root.appendChild(sec);
+    });
+  }
+
+  document.getElementById('btn-apply-defaults').addEventListener('click', applyDefaults);
+  document.getElementById('btn-clear').addEventListener('click', clearAll);
+
+  loadState();
+  fetch('data/investor_readiness.json')
+    .then(function(r){ return r.json(); })
+    .then(function(d){
+      DATA=d;
+      if(d.localStorage_key) LS_KEY=d.localStorage_key;
+      loadState();
+      // First visit: seed defaults if empty
+      if(Object.keys(state).length===0){
+        d.pillars.forEach(function(p){
+          p.items.forEach(function(it){
+            if(it.default) state[it.id]=it.default;
+          });
+        });
+        saveState();
+      }
+      render();
+    })
+    .catch(function(err){
+      document.getElementById('pillars').innerHTML=
+        '<p class="note">Could not load data/investor_readiness.json — open via http.server or Pages. ('+esc(String(err))+')</p>';
+    });
+})();
+</script>
+<script src="shared/flow-spine.js" defer></script>
+</body></html>

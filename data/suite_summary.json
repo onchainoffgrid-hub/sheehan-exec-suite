@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-22 20:54 ET",
+  "as_of": "2026-09-22 21:45 ET",
   "bdr_spec_aligned": {
     "CALL_NOW": 138,
     "WARM": 232,
@@ -89,7 +89,26 @@
       "catalogue-close.html",
       "investor-home.html",
       "investor-capital.html",
-      "macro-radar.html"
+      "macro-radar.html",
+      "investor-checklist.html"
+    ],
+    "investor_subchips": [
+      "Checklist",
+      "Home",
+      "Capital"
     ]
+  },
+  "investor_readiness": {
+    "label": "Seed / pre-seed readiness",
+    "panel": "investor-checklist.html",
+    "pillars": [
+      "Assets",
+      "Proof",
+      "Founder",
+      "Co-founder",
+      "Ops"
+    ],
+    "data": "data/investor_readiness.json",
+    "localStorage_key": "sheehan_investor_readiness"
   }
 }

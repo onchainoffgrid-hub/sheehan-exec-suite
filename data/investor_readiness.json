@@ -1,0 +1,220 @@
+{
+  "as_of": "2026-09-22 ET",
+  "label": "Seed / pre-seed readiness",
+  "stage_note": "Light label — seed vs pre-money still open. Frame is readiness, not a declared round.",
+  "dump_home": "Dashboard Bit",
+  "localStorage_key": "sheehan_investor_readiness",
+  "pillars": [
+    {
+      "id": "assets",
+      "label": "Assets",
+      "blurb": "Pass-through you can point at. Estimates stay estimates — attach proof when ready.",
+      "items": [
+        {
+          "id": "assets-real-estate",
+          "title": "Real estate",
+          "detail": "Homestead / Callahan property. Historical estimate on file in leave-behind kit — appraisal pending. Attach deed / appraisal when ready.",
+          "default": "have",
+          "attach": "placeholder"
+        },
+        {
+          "id": "assets-livestock",
+          "title": "Livestock",
+          "detail": "Working animal inventory (liquidation-style estimate in kit). Infra / equipment TBD — do not invent a stack.",
+          "default": "have",
+          "attach": "placeholder"
+        },
+        {
+          "id": "assets-customer-list",
+          "title": "Customer list",
+          "detail": "Outreach / TAM book — customers and programmers on disk (CRM, dialers, PayPal outside). Not a balance-sheet asset; still a raise asset.",
+          "default": "have",
+          "link": "org-whitespace.html"
+        }
+      ]
+    },
+    {
+      "id": "proof",
+      "label": "Proof",
+      "blurb": "What the room can see. Logos and quotes need files before you wave them; research stack is already written.",
+      "items": [
+        {
+          "id": "proof-logos",
+          "title": "Logos (customer / partner)",
+          "detail": "Institutional proof cited in kit (Sysco, Vesta, JU, YMCA, Durbin invoiced, etc.). Attach a clean logo slide — do not invent mark files.",
+          "default": "need",
+          "attach": "logo-slide placeholder"
+        },
+        {
+          "id": "proof-quotes",
+          "title": "Quotes / testimonials",
+          "detail": "Vesta-class letterhead testimonials. Checkpoint open — toggle Have when letterhead lands.",
+          "default": "need",
+          "attach": "testimonial placeholder"
+        },
+        {
+          "id": "proof-research-uk",
+          "title": "Research: UK blue-collar tech enablement",
+          "detail": "Checkatrade / peers frame — tech layer on analog labor. On disk: PRECEDENT-TECH-ENABLE-MULTIPLES.",
+          "default": "have"
+        },
+        {
+          "id": "proof-research-ea",
+          "title": "Research: EA software consolidation (lived through)",
+          "detail": "Founder lived enterprise-architecture / compliance software consolidation cycle — grades the category correctly.",
+          "default": "have"
+        },
+        {
+          "id": "proof-research-mit",
+          "title": "Research: MIT Sloan case study",
+          "detail": "Case-study stack item — keep citation ready for diligence; attach PDF/link when you want it on the leave-behind.",
+          "default": "have",
+          "attach": "case-study placeholder"
+        },
+        {
+          "id": "proof-market-gtm",
+          "title": "Market sizing · segmentation · GTM playbook",
+          "detail": "Done at a high level to facilitate rapid scaling. Live: RevOps SAM, ICP boards, GTM Manager, Interactive GTM.",
+          "default": "have",
+          "link": "revops-tam.html"
+        }
+      ]
+    },
+    {
+      "id": "founder",
+      "label": "Founder",
+      "blurb": "Why investors should care who did the vetting above — Michael.",
+      "items": [
+        {
+          "id": "founder-emba",
+          "title": "EMBA — living capstone",
+          "detail": "Quantic EMBA. Homestead is the real-world doctorate / living capstone — not a paper.",
+          "default": "have"
+        },
+        {
+          "id": "founder-deals",
+          "title": "Key deals · investor-level shoutouts",
+          "detail": "Won work that got shoutouts at VC-backed companies with exits / massive funding. Logos: TJX, J&J, Carter’s, Rockwell, Stanley Black & Decker, Rockwell Automation, Alkermes, Bissell, Vaisala, Laird — and more.",
+          "default": "have"
+        },
+        {
+          "id": "founder-leadgen",
+          "title": "Lead-gen machine · 120 meetings/mo · $5M+",
+          "detail": "Built and hired/trained the lead-gen team that produced 120 meetings/month with high QA SLAs → $5M+ in new biz (perpetual sales) while pivoting to SaaS. Stood up systems and first reporting functions with a BI biz partner.",
+          "default": "have"
+        },
+        {
+          "id": "founder-every-job",
+          "title": "Every job in the current biz",
+          "detail": "Hundreds of events. Hundreds of thousands met. Operator who actually ran the truck.",
+          "default": "have"
+        },
+        {
+          "id": "founder-media",
+          "title": "Media segments (demo reel)",
+          "detail": "Attach demo-reel link when ready. Jax Local Buzz / free media path is live on the suite.",
+          "default": "need",
+          "attach": "demo-reel URL placeholder",
+          "link": "jax-local-buzz.html"
+        }
+      ]
+    },
+    {
+      "id": "cofounder",
+      "label": "Co-founder",
+      "blurb": "Ann-Marie — investor-facing shine only.",
+      "items": [
+        {
+          "id": "am-story",
+          "title": "Great story · co-owner / educator / mom / public face",
+          "detail": "Co-owner. Educator. Mom. Public face of the brand on air and on the farm.",
+          "default": "have"
+        },
+        {
+          "id": "am-ops-skills",
+          "title": "Taught Michael practical ops",
+          "detail": "3D print, animal care, propagate basil, divide plants — partnership on the ground, not just a title.",
+          "default": "have"
+        },
+        {
+          "id": "am-mobile-pz",
+          "title": "Mobile petting zoo was her idea",
+          "detail": "Critters wedge started from her idea. Ownership of the origin story.",
+          "default": "have"
+        },
+        {
+          "id": "am-media",
+          "title": "More media coming · woman / mom / educator angle",
+          "detail": "Angle ready for local and education media. More segments in pipeline.",
+          "default": "need"
+        },
+        {
+          "id": "am-credentials",
+          "title": "Credentials · STEM on Call",
+          "detail": "4.0 grad school. 10+ years teaching. M.Ed. STEM / educator brands (STEM on Call).",
+          "default": "have"
+        },
+        {
+          "id": "am-builds",
+          "title": "Builds physical ops",
+          "detail": "Pallets and more — she builds and builds everything. Capable mid/senior professional caliber.",
+          "default": "have"
+        }
+      ]
+    },
+    {
+      "id": "ops",
+      "label": "Ops",
+      "blurb": "Operational chops the room underestimates until you list them.",
+      "items": [
+        {
+          "id": "ops-six-peaks",
+          "title": "6 concurrent event peaks",
+          "detail": "Peak calendar concurrency already proven — capacity story, not theory.",
+          "default": "have"
+        },
+        {
+          "id": "ops-journey",
+          "title": "Customer journey on visits",
+          "detail": "Visit Us / come-here journey designed and run — not a blank canvas.",
+          "default": "have",
+          "link": "programming.html"
+        },
+        {
+          "id": "ops-team",
+          "title": "10+ team members",
+          "detail": "Crew depth beyond founder-only. Seat map lives on Team & Hire.",
+          "default": "have",
+          "link": "team-hire.html"
+        },
+        {
+          "id": "ops-fb",
+          "title": "Monetized Facebook (~4.8k)",
+          "detail": "Known baseline on Social & Reach. Monetized FB — do not invent $ without books.",
+          "default": "have",
+          "link": "social-reach.html"
+        },
+        {
+          "id": "ops-seo-reviews",
+          "title": "Strong SEO and reviews",
+          "detail": "Search + review footprint as trust proof. Keep claims tied to live profiles.",
+          "default": "have"
+        },
+        {
+          "id": "ops-ebay",
+          "title": "eBay strong stars",
+          "detail": "How you do one thing is how you do everything — seller reputation as character proof.",
+          "default": "have"
+        }
+      ]
+    }
+  ],
+  "nested_links": {
+    "capital": "investor-capital.html",
+    "bookings": "bookings-dates.html",
+    "money": "money-cfo.html",
+    "gtm_live": "https://onchainoffgrid-hub.github.io/gtm-business-manager/",
+    "interactive_gtm": "https://onchainoffgrid-hub.github.io/interactive-gtm/",
+    "leavebehind_assets": "Assets leave-behind lives in sheehan-investors/leavebehinds/assets-checklist.html (kit, not suite)"
+  }
+}
