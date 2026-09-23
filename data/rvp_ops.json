@@ -1,6 +1,6 @@
 {
-  "as_of": "2026-09-23 16:25 ET",
-  "title": "Franchise RVP \u00b7 Area Ops",
+  "as_of": "2026-09-23 16:30 ET",
+  "title": "Franchise RVP · Area Ops",
   "franchise": "#0",
   "brand": "Sheehan Homestead / Critters on Call",
   "role": "Franchise Operator / Area VP",
@@ -36,7 +36,7 @@
     "reporting_today": [
       {
         "name": "Michael Sheehan",
-        "seat": "RVP / Operator \u2014 owns almost everything today",
+        "seat": "RVP / Operator — owns almost everything today",
         "status": "named"
       },
       {
@@ -50,52 +50,161 @@
       "name": null,
       "seat": "BDR Manager",
       "status": "vacant",
-      "note": "Future outsource target \u2014 no named hire yet; Michael still filling seats"
+      "note": "Future outsource target — no named hire yet; Michael still filling seats"
     },
     "seats": [
       {
         "id": "enterprise",
         "label": "Regional enterprise",
+        "tier": "mature_b2b",
         "priority": 1,
         "owner": null,
         "status": "vacant",
-        "lane": "CDD/HOA \u00b7 amenity \u00b7 corp \u00b7 golf \u00b7 campus",
-        "note": "Outsource target \u2014 SOP later"
+        "lane": "CDD/HOA · amenity · corp · golf · campus",
+        "note": "Mature B2B · BDR-owned · outsource target — SOP later",
+        "boards": [
+          "bdr-tam.html",
+          "bdr-pipeline.html",
+          "one-touch.html",
+          "easy-attack.html"
+        ]
       },
       {
         "id": "subscription",
         "label": "Regional subscription",
+        "tier": "mature_b2b",
         "priority": 2,
         "owner": null,
         "status": "vacant",
         "lane": "Sr / PPEC / ADC / AL",
-        "note": "Outsource target \u2014 SOP later"
+        "note": "Mature B2B · BDR-owned · outsource target — SOP later",
+        "boards": [
+          "crm-icp.html",
+          "bdr-tam.html",
+          "one-touch.html"
+        ]
       },
       {
         "id": "violet",
-        "label": "Violet / events",
+        "label": "Violet ~50%",
+        "tier": "mature_b2b",
         "priority": 3,
         "owner": null,
         "status": "vacant",
-        "lane": "PTA \u00b7 church \u00b7 indie",
-        "note": "Outsource target \u2014 SOP later"
+        "lane": "Schools / churches lean · PTA · indie · community programming",
+        "note": "Mature B2B · BDR-owned. Automatic donation discount (marketing + real lane).",
+        "discount_notes": "Bigger schools ≈ ~50% off list / donation framing. HOA he often nets ~35% off list; schools/churches can go ~50–60% off as donation. Every org with community programming + budget + events = in-town inventory.",
+        "boards": [
+          "consumer-inbound.html",
+          "org-whitespace.html",
+          "one-touch.html",
+          "easy-attack.html"
+        ]
       },
       {
-        "id": "b2c",
-        "label": "B2C conversion",
+        "id": "red_tape",
+        "label": "Red tape / municipal",
+        "tier": "mature_b2b",
         "priority": 4,
         "owner": null,
         "status": "vacant",
-        "lane": "Inbound \u2192 site buy",
-        "note": "Outsource target \u2014 SOP later"
+        "lane": "Duval / municipal · cautious / red-tape",
+        "note": "Mature B2B · BDR-owned · mark cautious.",
+        "soft_play": {
+          "example": "Jack Sparks — Duval / municipal style",
+          "easter": "Easter cancelled by risk. Do NOT re-fight Easter.",
+          "ask": "One ask for senior/rec referral; if no pointer, park — no sunk-cost chase."
+        },
+        "boards": [
+          "bdr-pipeline.html",
+          "one-touch.html"
+        ]
+      },
+      {
+        "id": "charity_partner",
+        "label": "Small-biz partner / cross-promo / real charity BDR",
+        "tier": "also_run_b2b",
+        "priority": 5,
+        "owner": null,
+        "status": "vacant",
+        "lane": "Cross-promo · sponsor · real charity · karma/marketing",
+        "note": "Also-run B2B. Cover costs, maybe sponsor; still do if $1 over labor.",
+        "boards": [
+          "easy-attack.html",
+          "one-touch.html",
+          "org-whitespace.html"
+        ]
+      },
+      {
+        "id": "enterprise_tester",
+        "label": "True enterprise rep",
+        "tier": "also_run_b2b",
+        "priority": 6,
+        "owner": "Michael Sheehan",
+        "status": "testing",
+        "lane": "All enterprise opportunities · manager/Michael testing",
+        "note": "Also-run B2B. Today = manager/Michael testing all opportunities (not a named hire).",
+        "boards": [
+          "one-touch.html",
+          "bdr-pipeline.html",
+          "bdr-tam.html",
+          "enterprise"
+        ]
+      },
+      {
+        "id": "b2c_customers",
+        "label": "Customer list B2C",
+        "tier": "b2c",
+        "priority": 7,
+        "owner": null,
+        "status": "vacant",
+        "lane": "Work existing consumers · P1 list",
+        "note": "B2C seat. Truth: P1_customers_559.csv = 559 (so ≥300 is true; show 559).",
+        "consumer_count": 559,
+        "consumer_source": "P1_customers_559.csv",
+        "boards": [
+          "consumer-inbound.html",
+          "catalogue-close.html",
+          "one-touch.html"
+        ]
+      },
+      {
+        "id": "b2c_field",
+        "label": "FB / field / media B2C",
+        "tier": "b2c",
+        "priority": 8,
+        "owner": null,
+        "status": "vacant",
+        "lane": "Groups · personal vs page posts · Daily Buzz · Action Jax",
+        "note": "B2C seat. Daily Buzz (Ann-Marie signed). Action Jax still behind. Buzz → bookings.",
+        "boards": [
+          "jax-local-buzz.html",
+          "social-reach.html",
+          "consumer-inbound.html"
+        ]
       }
     ],
-    "rule": "Do not invent named BDR hires. Vacant = future outsource, document via SOPs later."
+    "rule": "Do not invent named BDR hires or emails/contacts. Vacant = future outsource, document via SOPs later. Named seats today: Michael + Ann-Marie only. RVP = Michael.",
+    "sales_enablement": {
+      "label": "Pricing menu + Book / Wheel / Gold",
+      "kind": "customer_facing_not_bdr_seat",
+      "note": "Web app sales enablement — not a BDR seat.",
+      "field_loop": "free sample → review → app/spin → ~$100-feel prize → mailing list (paying $100 to hand goats for that loop = rational)",
+      "live_links": [
+        "https://onchainoffgrid-hub.github.io/critters-on-call/pricing.html",
+        "https://onchainoffgrid-hub.github.io/critters-on-call/book.html",
+        "https://onchainoffgrid-hub.github.io/critters-on-call/wheel.html",
+        "https://onchainoffgrid-hub.github.io/critters-on-call/gold.html",
+        "https://onchainoffgrid-hub.github.io/critters-on-call/one-touch.html"
+      ]
+    },
+    "gtm_page": "gtm-seats.html",
+    "north_star": "2M in Jax — why not 100 × $50 fall farm today?"
   },
   "widgets": [
     {
       "id": "one-touch",
-      "title": "One-touch \u00b7 money button",
+      "title": "One-touch · money button",
       "href": "one-touch.html",
       "href_live": "https://onchainoffgrid-hub.github.io/critters-on-call/one-touch.html",
       "primary": true
@@ -107,6 +216,12 @@
       "also": [
         "ann-marie-ops.html"
       ]
+    },
+    {
+      "id": "gtm-seats",
+      "title": "GTM seat map",
+      "href": "gtm-seats.html",
+      "note": "Locked franchise seats — mature B2B / also-run / B2C"
     },
     {
       "id": "gigs",
@@ -164,14 +279,14 @@
     "rep_dials": "sheehan_bdr_rep_dials_v1"
   },
   "one_touch": {
-    "label": "One-touch \u00b7 money button",
+    "label": "One-touch · money button",
     "priority": 1,
     "href_suite": "one-touch.html",
     "href_live": "https://onchainoffgrid-hub.github.io/critters-on-call/one-touch.html",
-    "note": "#1 money motion \u2014 Michael tapped ~10 from board \u2192 ~$700 verbal; River City $600 invoiced"
+    "note": "#1 money motion — Michael tapped ~10 from board → ~$700 verbal; River City $600 invoiced"
   },
   "franchise_ops_gray": {
-    "label": "Insurance / liability (gray \u2014 SOP later)",
-    "note": "Franchise #0 currently operates under business insurance + personal liability. No dedicated petting-zoo / goat-yoga product policy claimed. Frame as documentation work later \u2014 do not invent carrier claims."
+    "label": "Insurance / liability (gray — SOP later)",
+    "note": "Franchise #0 currently operates under business insurance + personal liability. No dedicated petting-zoo / goat-yoga product policy claimed. Frame as documentation work later — do not invent carrier claims."
   }
 }

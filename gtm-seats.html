@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GTM seat map · Sheehan Homestead</title>
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--bad:#ff5d6c;--violet:#a78bfa;--money:#f0abfc}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1280px;margin:0 auto;padding:22px}
+.apps{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 12px;padding:10px 12px;border:1px solid var(--line);border-radius:14px;background:#0f1728}
+.apps .lbl{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-right:4px}
+.apps a{background:var(--card);border:1px solid #3dd68c55;color:var(--text);padding:6px 10px;border-radius:999px;font-size:.78rem;text-decoration:none;font-weight:600}
+.apps a.sec{border-color:var(--line);color:#c5d0e6;font-weight:500;font-size:.72rem}
+.apps a.money{border-color:#a855f788;background:linear-gradient(135deg,#2a1530,#121a2b);font-size:.88rem;padding:8px 16px}
+.cascade{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin:0 0 14px;padding:10px 12px;border:1px solid var(--line);border-radius:14px;background:#0f1728}
+.cascade .lbl{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-right:4px}
+.cascade a{padding:6px 12px;border-radius:999px;font-size:.76rem;font-weight:600;border:1px solid var(--line);background:var(--card);color:var(--text);text-decoration:none}
+.cascade a.on{border-color:var(--good);background:#13281d;color:#fff}
+.cascade .arr{color:var(--muted);opacity:.7}
+header{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:10px;flex-wrap:wrap}
+h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font-size:.88rem}
+.nav{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0 16px}
+.nav a{background:var(--card);border:1px solid var(--line);padding:6px 11px;border-radius:999px;font-size:.78rem;color:var(--text)}
+.nav a.active{border-color:var(--accent);background:#152238;color:#fff}
+.north{margin:0 0 16px;padding:14px 16px;border:1px solid #f0abfc66;border-radius:14px;background:linear-gradient(135deg,#2a1530,#121a2b);font-size:.95rem;font-weight:600;color:#f5d0fe}
+.north span{color:var(--muted);font-weight:500;font-size:.78rem;display:block;margin-bottom:4px;text-transform:uppercase;letter-spacing:.06em}
+.dept-label{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin:18px 0 10px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+.seat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:8px}
+.seat.mature{border-color:#5b8cff66}
+.seat.also{border-color:#ffb02055}
+.seat.b2c{border-color:#a78bfa66}
+.seat.testing{border-color:#3dd68c66;background:linear-gradient(160deg,#13281d 0%,#121a2b 70%)}
+.seat.enable{border-color:#f0abfc55;background:linear-gradient(160deg,#2a1530 0%,#121a2b 70%);grid-column:1/-1}
+.seat h3{margin:0;font-size:1rem;display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.seat .lane{color:var(--muted);font-size:.82rem;margin:0}
+.seat .note{color:#c5d0e6;font-size:.8rem;margin:0}
+.seat .soft{margin-top:4px;padding:10px 12px;border:1px dashed #ff5d6c66;border-radius:10px;background:#1a1216;font-size:.78rem;color:#e8c4c8}
+.seat .soft b{color:var(--bad)}
+.seat .disc{margin-top:4px;padding:10px 12px;border:1px solid #a78bfa44;border-radius:10px;background:#16141f;font-size:.78rem;color:#d4c4ff}
+.badge{font-size:.65rem;padding:2px 7px;border-radius:6px;background:#1a2440;color:var(--accent);border:1px solid var(--line)}
+.badge.vacant{background:#1a1f2e;color:var(--violet);border-color:#a78bfa55}
+.badge.testing{background:#13281d;color:var(--good);border-color:#3dd68c66}
+.badge.mature{background:#152238;color:#9ec1ff;border-color:#5b8cff66}
+.badge.also{background:#2a2416;color:var(--warn);border-color:#ffb02066}
+.badge.b2c{background:#1a1f2e;color:var(--violet);border-color:#a78bfa55}
+.badge.money{background:#2a1530;color:#f0abfc;border-color:#a855f766}
+.owner{font-size:.78rem}
+.owner.vacant{color:var(--violet)}.owner.named{color:var(--good)}
+.links-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.links-row a{font-size:.72rem;padding:3px 9px;border-radius:999px;border:1px solid var(--line);background:#0e1626;color:#c5d0e6;text-decoration:none}
+.links-row a:hover{border-color:var(--accent);color:#fff}
+.links-row a.live{border-color:#3dd68c55;color:var(--good)}
+.links-row a.money{border-color:#a855f788;color:#f0abfc}
+.kpi-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:11px;margin-bottom:16px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px;position:relative;overflow:hidden}
+.kpi::after{content:"";position:absolute;inset:auto 0 0 0;height:2px;background:linear-gradient(90deg,var(--accent),var(--violet));opacity:.55}
+.kpi .l{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.kpi .v{font-size:1.35rem;font-weight:700;margin-top:4px}
+.kpi .s{font-size:.72rem;color:var(--muted);margin-top:3px}
+.truth{margin-top:16px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--panel);font-size:.8rem;color:var(--muted)}
+.truth b{color:var(--text)}
+.note-foot{color:var(--muted);font-size:.78rem;margin-top:22px}
+</style></head>
+<body data-flow-face="sales" data-flow-chip="gtm-seats"><div class="wrap">
+
+<div class="apps">
+  <span class="lbl">Apps</span>
+  <a class="money" href="one-touch.html">One-touch · money</a>
+  <a href="rvp-ops.html">RVP Ops</a>
+  <a href="sales-review.html">Sales review</a>
+  <a href="https://onchainoffgrid-hub.github.io/critters-on-call/" target="_blank" rel="noopener">Critters <span style="color:#3dd68c;font-size:.65rem">LIVE</span></a>
+  <a href="index.html" class="sec">Layer Zero hub</a>
+</div>
+
+<div class="cascade" aria-label="RVP sales cascade">
+  <span class="lbl">Cascade</span>
+  <a href="rvp-ops.html">RVP Ops</a><span class="arr">→</span>
+  <a href="sales-review.html">Sales review</a><span class="arr">→</span>
+  <a href="gtm-seats.html" class="on">GTM seats</a><span class="arr">→</span>
+  <a href="bdr-manager-review.html">BDR Manager</a><span class="arr">→</span>
+  <a href="bdr-rep-review.html">Rep desk</a>
+</div>
+
+<header>
+  <div>
+    <h1>GTM seat map <span class="badge">LOCKED</span></h1>
+    <div class="sub">Sheehan Homestead / Critters on Call · Franchise #0 · RVP = Michael · Named today: Michael + Ann-Marie only</div>
+  </div>
+  <div class="sub">All BDR seats = vacant (future outsource / SOP)</div>
+</header>
+
+<div class="nav">
+  <a href="rvp-ops.html">RVP Ops</a>
+  <a href="sales-review.html">Sales review</a>
+  <a href="gtm-seats.html" class="active">GTM seats</a>
+  <a href="one-touch.html" style="border-color:#a855f788;color:#f0abfc;font-weight:700">One-touch</a>
+  <a href="bdr-tam.html">BDR TAM</a>
+  <a href="easy-attack.html">Easy attack</a>
+  <a href="consumer-inbound.html">Consumer</a>
+  <a href="team-hire.html">Team</a>
+</div>
+
+<div class="north"><span>North star</span>2M in Jax — why not 100 × $50 fall farm today?</div>
+
+<div class="kpi-strip">
+  <div class="kpi"><div class="l">Mature B2B</div><div class="v">4</div><div class="s">enterprise · sub · violet · red tape</div></div>
+  <div class="kpi"><div class="l">Also-run B2B</div><div class="v">2</div><div class="s">charity partner · enterprise tester</div></div>
+  <div class="kpi"><div class="l">B2C seats</div><div class="v">2</div><div class="s">customers · field/media</div></div>
+  <div class="kpi"><div class="l">P1 customers</div><div class="v">559</div><div class="s">P1_customers_559.csv</div></div>
+  <div class="kpi"><div class="l">Vacant BDR</div><div class="v" id="k-vacant">7</div><div class="s">+ Michael testing enterprise</div></div>
+</div>
+
+<div class="dept-label">Mature B2B · BDR-owned</div>
+<div class="tiles" id="mature-seats">
+
+<div class="seat mature" id="enterprise">
+  <h3>1. Regional enterprise <span class="badge mature">MATURE</span> <span class="badge vacant">VACANT</span></h3>
+  <p class="lane">CDD/HOA · amenity · corp · golf · campus</p>
+  <p class="note">BDR-owned outsource target — SOP later. No invented hire name.</p>
+  <div class="owner vacant">Owner: vacant</div>
+  <div class="links-row">
+    <a class="money" href="one-touch.html">One-touch</a>
+    <a href="bdr-tam.html">BDR TAM</a>
+    <a href="easy-attack.html">Easy attack</a>
+    <a href="bdr-pipeline.html">Pipeline</a>
+  </div>
+</div>
+
+<div class="seat mature" id="subscription">
+  <h3>2. Regional subscription <span class="badge mature">MATURE</span> <span class="badge vacant">VACANT</span></h3>
+  <p class="lane">Sr / PPEC / ADC / AL</p>
+  <p class="note">BDR-owned outsource target — SOP later.</p>
+  <div class="owner vacant">Owner: vacant</div>
+  <div class="links-row">
+    <a class="money" href="one-touch.html">One-touch</a>
+    <a href="crm-icp.html">CRM / ICP</a>
+    <a href="bdr-tam.html">BDR TAM</a>
+  </div>
+</div>
+
+<div class="seat mature" id="violet">
+  <h3>3. Violet ~50% <span class="badge mature">MATURE</span> <span class="badge vacant">VACANT</span></h3>
+  <p class="lane">Schools / churches lean · PTA · indie · community programming + budget + events</p>
+  <p class="note">Automatic donation discount — marketing + real lane. In-town inventory.</p>
+  <div class="disc"><b>Discount notes:</b> Bigger schools ≈ ~50% off list / donation framing. HOA often nets ~35% off list; schools/churches can go ~50–60% off as donation.</div>
+  <div class="owner vacant">Owner: vacant</div>
+  <div class="links-row">
+    <a class="money" href="one-touch.html">One-touch</a>
+    <a href="consumer-inbound.html">Consumer boards</a>
+    <a href="org-whitespace.html">Org whitespace</a>
+    <a href="easy-attack.html">Easy attack</a>
+  </div>
+</div>
+
+<div class="seat mature" id="red_tape">
+  <h3>4. Red tape / municipal <span class="badge mature">MATURE</span> <span class="badge vacant">VACANT</span> <span class="badge" style="color:var(--bad);border-color:#ff5d6c66;background:#1a1216">CAUTIOUS</span></h3>
+  <p class="lane">Duval / municipal · Jack Sparks–style</p>
+  <p class="note">Mark as cautious / red-tape. Soft play on desk — no sunk-cost chase.</p>
+  <div class="soft">
+    <b>Jack Sparks soft play:</b> Easter cancelled by risk — do <b>NOT</b> re-fight Easter.
+    One ask for senior/rec referral; if no pointer, park.
+  </div>
+  <div class="owner vacant">Owner: vacant</div>
+  <div class="links-row">
+    <a class="money" href="one-touch.html">One-touch</a>
+    <a href="bdr-pipeline.html">Pipeline</a>
+    <a href="bdr-tam.html">BDR TAM</a>
+  </div>
+</div>
+
+</div>
+
+<div class="dept-label">Also-run B2B</div>
+<div class="tiles">
+
+<div class="seat also" id="charity_partner">
+  <h3>5. Small-biz partner / cross-promo / real charity BDR <span class="badge also">ALSO-RUN</span> <span class="badge vacant">VACANT</span></h3>
+  <p class="lane">Cover costs · maybe sponsor · karma / marketing</p>
+  <p class="note">Still do if $1 over labor. Not a mature money lane — still a real seat.</p>
+  <div class="owner vacant">Owner: vacant</div>
+  <div class="links-row">
+    <a class="money" href="one-touch.html">One-touch</a>
+    <a href="easy-attack.html">Easy attack</a>
+    <a href="org-whitespace.html">Org whitespace</a>
+  </div>
+</div>
+
+<div class="seat also testing" id="enterprise_tester">
+  <h3>6. True enterprise rep <span class="badge also">ALSO-RUN</span> <span class="badge testing">MICHAEL TESTING</span></h3>
+  <p class="lane">All enterprise opportunities · manager testing</p>
+  <p class="note">Today = manager/Michael testing all opportunities (not a named hire).</p>
+  <div class="owner named">Owner: Michael Sheehan (testing — not a hire name)</div>
+  <div class="links-row">
+    <a class="money" href="one-touch.html">One-touch</a>
+    <a href="bdr-pipeline.html">Pipeline</a>
+    <a href="bdr-tam.html">BDR TAM</a>
+    <a href="easy-attack.html">Easy attack</a>
+  </div>
+</div>
+
+</div>
+
+<div class="dept-label">B2C · two seats</div>
+<div class="tiles">
+
+<div class="seat b2c" id="b2c_customers">
+  <h3>7. Customer list B2C <span class="badge b2c">B2C</span> <span class="badge vacant">VACANT</span></h3>
+  <p class="lane">Work existing consumers</p>
+  <p class="note">Truth: <b style="color:var(--good)">P1_customers_559.csv = 559</b> (≥300 is true — show 559).</p>
+  <div class="owner vacant">Owner: vacant</div>
+  <div class="links-row">
+    <a class="money" href="one-touch.html">One-touch</a>
+    <a href="consumer-inbound.html">Consumer inbound</a>
+    <a href="catalogue-close.html">Catalogue → close</a>
+  </div>
+</div>
+
+<div class="seat b2c" id="b2c_field">
+  <h3>8. FB / field / media B2C <span class="badge b2c">B2C</span> <span class="badge vacant">VACANT</span></h3>
+  <p class="lane">Groups · personal vs page posts · Daily Buzz · Action Jax</p>
+  <p class="note">Daily Buzz (Ann-Marie signed). Action Jax still behind. Buzz → bookings.</p>
+  <div class="owner vacant">Owner: vacant</div>
+  <div class="links-row">
+    <a href="jax-local-buzz.html">Jax local buzz</a>
+    <a href="social-reach.html">Social reach</a>
+    <a href="consumer-inbound.html">Consumer boards</a>
+    <a class="money" href="one-touch.html">One-touch</a>
+  </div>
+</div>
+
+</div>
+
+<div class="dept-label">Sales enablement · customer-facing (not a BDR seat)</div>
+<div class="tiles">
+<div class="seat enable">
+  <h3>Pricing menu + Book / Wheel / Gold <span class="badge money">ENABLEMENT</span></h3>
+  <p class="lane">Web app sales enablement — not a BDR dialer seat</p>
+  <p class="note"><b>Field loop:</b> free sample → review → app/spin → ~$100-feel prize → mailing list. Paying $100 to hand goats for that loop = rational.</p>
+  <div class="links-row">
+    <a class="live" href="https://onchainoffgrid-hub.github.io/critters-on-call/pricing.html" target="_blank" rel="noopener">pricing.html LIVE</a>
+    <a class="live" href="https://onchainoffgrid-hub.github.io/critters-on-call/book.html" target="_blank" rel="noopener">book.html LIVE</a>
+    <a class="live" href="https://onchainoffgrid-hub.github.io/critters-on-call/wheel.html" target="_blank" rel="noopener">wheel.html LIVE</a>
+    <a class="live" href="https://onchainoffgrid-hub.github.io/critters-on-call/gold.html" target="_blank" rel="noopener">gold.html LIVE</a>
+    <a class="live money" href="https://onchainoffgrid-hub.github.io/critters-on-call/one-touch.html" target="_blank" rel="noopener">one-touch.html LIVE</a>
+  </div>
+</div>
+</div>
+
+<div class="truth">
+  <b>Org truth:</b> RVP = Michael · Named seats today: Michael + Ann-Marie only · All BDR seats = vacant (future outsource / SOP).
+  Do not invent emails, contacts, or BDR hire names. Do not auto-send.
+</div>
+
+<p class="note-foot" id="load-note">Dump-home · Brand: Sheehan Homestead · Face: GTM seats · Built 2026-09-23 ET · data/rvp_ops.json</p>
+</div>
+<script>
+(function(){
+  async function load(p){ try{ var r=await fetch(p,{cache:'no-store'}); if(!r.ok) throw 0; return await r.json(); }catch(e){ return null; } }
+  load('data/rvp_ops.json').then(function(rvp){
+    if(!rvp||!rvp.ownership) return;
+    var seats=rvp.ownership.seats||[];
+    var vacant=seats.filter(function(s){ return s.status==='vacant'; }).length;
+    var el=document.getElementById('k-vacant');
+    if(el) el.textContent=vacant;
+    var note=document.getElementById('load-note');
+    if(note && rvp.as_of) note.textContent='Dump-home · Brand: Sheehan Homestead · Face: GTM seats · as_of '+rvp.as_of+' · data/rvp_ops.json';
+  });
+})();
+</script>
+<script src="shared/flow-spine.js" defer></script>
+</body></html>
