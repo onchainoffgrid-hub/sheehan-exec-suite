@@ -1,375 +1,88 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Franchise Layer Zero · Operator · Sheehan Homestead</title>
+<title>Sheehan Homestead · Franchise Layer Zero</title>
 <style>
-:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--bad:#ff5d6c;--violet:#a78bfa}
+:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--violet:#a78bfa}
 *{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
 a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
-.wrap{max-width:1280px;margin:0 auto;padding:22px}
-.apps{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 12px;padding:10px 12px;border:1px solid var(--line);border-radius:14px;background:#0f1728}
-.apps .lbl{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-right:4px}
-.apps a{background:var(--card);border:1px solid #3dd68c55;color:var(--text);padding:6px 10px;border-radius:999px;font-size:.78rem;text-decoration:none;font-weight:600}
-.apps a.sec{border-color:var(--line);color:#c5d0e6;font-weight:500;font-size:.72rem}
-.faces{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 14px}
-.faces .chip{padding:7px 14px;border-radius:999px;font-size:.8rem;font-weight:600;border:1px solid var(--line);background:var(--card);color:var(--muted);text-decoration:none}
-.faces .chip.on{border-color:var(--good);background:#13281d;color:#fff}
-.faces .chip:hover{text-decoration:none;border-color:var(--accent)}
-header{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:10px;flex-wrap:wrap}
-h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font-size:.88rem}
-.nav{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0 16px}
-.nav a{background:var(--card);border:1px solid var(--line);padding:6px 11px;border-radius:999px;font-size:.78rem;color:var(--text)}
-.nav a.active{border-color:var(--accent);background:#152238;color:#fff}
-.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:11px;margin-bottom:16px}
-.kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px;position:relative;overflow:hidden}
-.kpi::after{content:"";position:absolute;inset:auto 0 0 0;height:2px;background:linear-gradient(90deg,var(--accent),var(--violet));opacity:.55}
-.kpi .l{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
-.kpi .v{font-size:1.35rem;font-weight:700;margin-top:4px}
-.kpi .s{font-size:.72rem;color:var(--muted);margin-top:3px}
-.dept-label{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin:18px 0 10px}
-.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
-.tile{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px;display:block;color:inherit;transition:border-color .15s}
-.tile:hover{border-color:var(--accent);text-decoration:none}
-.tile.sales{border-color:#5b8cff88;background:linear-gradient(160deg,#152238 0%,#121a2b 60%);grid-column:span 2;min-height:110px}
-@media(max-width:700px){.tile.sales{grid-column:span 1}}
-.tile.sales h3{font-size:1.08rem}
-.tile h3{margin:0 0 5px;font-size:.95rem}
-.tile p{margin:0;color:var(--muted);font-size:.82rem}
-.tile .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
-.tile .chipk{font-size:.7rem;padding:3px 8px;border-radius:999px;background:var(--panel);border:1px solid var(--line);color:var(--text)}
-.tile .chipk b{color:var(--good)}
-.tile.secondary{opacity:.92}
-.links-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
-.links-row a{font-size:.72rem;padding:3px 9px;border-radius:999px;border:1px solid var(--line);background:#0e1626;color:#c5d0e6;text-decoration:none}
-.links-row a:hover{border-color:var(--accent);color:#fff}
-.note{color:var(--muted);font-size:.78rem;margin-top:22px}
-.badge{font-size:.65rem;padding:2px 7px;border-radius:6px;background:#1a2440;color:var(--accent);border:1px solid var(--line);margin-left:6px;vertical-align:middle}
-.badge.sales{background:#152238;color:#9ec1ff;border-color:#5b8cff66}
+.wrap{max-width:980px;margin:0 auto;padding:36px 22px 72px}
+header{margin:0 0 28px}
+h1{font-size:clamp(1.55rem,3.2vw,2.15rem);margin:0 0 8px;letter-spacing:-.02em;font-weight:750}
+.sub{color:var(--muted);font-size:.98rem;max-width:52ch}
+.sec-label{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:28px 0 12px}
+.tiles{display:grid;gap:14px}
+.tiles.row2{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.tile{display:block;padding:22px 24px;border-radius:18px;border:1px solid var(--line);background:var(--card);color:inherit;text-decoration:none;transition:border-color .15s,transform .12s}
+.tile:hover{border-color:var(--accent);transform:translateY(-1px);text-decoration:none}
+.tile.live{border-color:#3dd68c88;background:linear-gradient(160deg,#13281d,#121a2b 70%);min-height:140px}
+.tile.template{border-color:#1e2a44;background:linear-gradient(160deg,#141a28,#121a2b 75%);opacity:.95}
+.tile.secondary{border-color:#1e2a44;background:#0f1728}
+.tile .kicker{font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px}
+.tile h2{margin:0 0 6px;font-size:1.25rem;letter-spacing:-.015em}
+.tile.live h2{font-size:clamp(1.35rem,2.8vw,1.7rem);color:#9dffc5}
+.tile p{margin:0;color:var(--muted);font-size:.88rem;max-width:48ch}
+.tile .go{margin-top:14px;font-weight:750;font-size:.9rem;color:#9dffc5}
+.tile.template .go{color:#93a0b8}
+.tile.secondary .go{color:#9ec1ff}
+.badge{font-size:.65rem;padding:2px 8px;border-radius:6px;border:1px solid var(--line);margin-left:8px;vertical-align:middle;font-weight:650}
+.badge.live{background:#13281d;color:var(--good);border-color:#3dd68c66}
+.badge.template{background:#1a1f2e;color:#93a0b8;border-color:#2a3548}
+footer{margin-top:48px;padding-top:18px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:14px 22px;align-items:center}
+footer a{font-size:.78rem;color:var(--muted)}footer a:hover{color:var(--text)}
+.note{color:var(--muted);font-size:.72rem;margin-top:16px}
 </style></head>
-<body data-flow-face="ops"><div class="wrap">
-
-<div class="apps">
-  <span class="lbl">Apps</span>
-  <a href="https://onchainoffgrid-hub.github.io/critters-on-call/" target="_blank" rel="noopener">Critters <span style="color:#3dd68c;font-size:.65rem">LIVE</span></a>
-  <a href="https://onchainoffgrid-hub.github.io/critters-play/" target="_blank" rel="noopener" style="border-color:#a78bfa66">Play / Coins <span style="color:#3dd68c;font-size:.65rem">LIVE</span></a>
-  <a href="rvp-ops.html" style="border-color:#3dd68c88">Franchise Hub</a>
-  <a href="one-touch.html" style="border-color:#a855f788;background:linear-gradient(135deg,#2a1530,#121a2b)">One-touch · money</a>
-  <a href="investor-home.html" style="border-color:#5b8cff66">Investor face</a>
-  <a href="link-tree.html" class="sec">All links</a>
-</div>
-
-<div class="faces legacy-faces">
-  <a class="chip on" href="index.html">Operations</a>
-  <a class="chip" href="bdr-tam.html">Sales</a>
-  <a class="chip" href="investor-home.html">Investors</a>
-</div>
+<body><div class="wrap">
 
 <header>
-  <div>
-    <h1>Franchise Layer Zero · Operator</h1>
-    <div class="sub">Sheehan Homestead / Critters on Call · Regional VP · Franchise #0 · dark ops BI · no Power BI · <a href="rvp-ops.html" style="color:#3dd68c;font-weight:700">Franchise Hub →</a> · <a href="one-touch.html" style="color:#f0abfc;font-weight:700">One-touch · money</a></div>
-  </div>
-  <div class="sub">North star: <b>bookings</b> · goal <b>$250k</b> by 2026-12-23</div>
+  <h1>Sheehan Homestead · Franchise Layer Zero</h1>
+  <p class="sub">Live operator system for Jacksonville Homestead, plus franchise market templates. Investor-safe · Ops · Growth · Support.</p>
 </header>
 
-<div class="nav">
-  <a href="index.html" class="active">Operator</a>
-  <a href="rvp-ops.html" style="border-color:#3dd68c88;color:#9dffc5;font-weight:700">Franchise Hub</a>
-  <a href="one-touch.html" style="border-color:#a855f788;color:#f0abfc;font-weight:700">One-touch</a>
-  <a href="sales-review.html" style="border-color:#5b8cff88">Sales review</a>
-  <a href="crm-icp.html">CRM ICP</a>
-  <a href="consumer-inbound.html" style="border-color:#a78bfa88;color:#d4c4ff">Consumer / Violet</a>
-  <a href="org-whitespace.html" style="border-color:#5b8cff88">Org white space</a>
-  <a href="bookings-dates.html">Bookings</a>
-  <a href="money-cfo.html">Money</a>
-  <a href="bdr-tam.html" style="border-color:#3dd68c88;color:#9dffc5">BDR TAM v2</a>
-  <a href="bdr-pipeline.html">BDR Enterprise</a>
-  <a href="revops-tam.html">RevOps</a>
-  <a href="actions-overdue.html">Actions</a>
-  <a href="team-hire.html">Team</a>
-  <a href="programming.html">Programs</a>
-  <a href="ann-marie-ops.html">Ann-Marie</a>
-  <a href="collateral.html">Collateral</a>
-  <a href="platform-map.html">Platform</a>
-  <a href="social-reach.html">Social</a><a href="easy-attack.html" style="border-color:#ffb02088">Easy attack</a><a href="one-touch.html" style="border-color:#a855f788">One-touch</a><a href="jax-local-buzz.html">Jax Buzz</a>
-  <a href="investor-capital.html">Capital</a>
-  <a href="catalogue-close.html">Catalogue</a>
-  <a href="link-tree.html">Links</a>
-  <a href="macro-radar.html">Macro</a>
-  <a href="investor-home.html">Investor</a>
-</div>
+<div class="sec-label">Live market</div>
+<nav class="tiles" aria-label="Live market">
+  <a class="tile live" href="owner-operator.html">
+    <div class="kicker">Franchise #0 · Callahan / Jacksonville</div>
+    <h2>Jacksonville Homestead · Operator <span class="badge live">LIVE</span></h2>
+    <p>Owner-operator identity, then Ops · Growth · Support. Territory view for the live market.</p>
+    <div class="go">Open operator →</div>
+  </a>
+</nav>
 
-<div class="kpis" id="kpi-strip">
-  <div class="kpi"><div class="l">Call now</div><div class="v" id="k-call">—</div><div class="s">Regional enterprise</div></div>
-  <div class="kpi"><div class="l">Warm / Needs</div><div class="v" id="k-warm">—</div><div class="s" id="k-warm-s">suite feed</div></div>
-  <div class="kpi"><div class="l">PayPal outside</div><div class="v" id="k-pay">—</div><div class="s" id="k-pay-s">H2 + 2026 YTD</div></div>
-  <div class="kpi"><div class="l">Bookings goal</div><div class="v" id="k-goal">—</div><div class="s" id="k-goal-s">AR goal</div></div>
-  <div class="kpi"><div class="l">P0 actions</div><div class="v" id="k-p0">—</div><div class="s" id="k-p0-s">overdue</div></div>
-  <div class="kpi"><div class="l">CRM Top25</div><div class="v" id="k-crm">—</div><div class="s" id="k-crm-s">Monthly / Occasional</div></div>
-</div>
+<div class="sec-label">Franchise templates <span style="text-transform:none;letter-spacing:0;font-size:.78rem;color:#93a0b8">(sample · not live ops)</span></div>
+<nav class="tiles row2" aria-label="Franchise templates">
+  <a class="tile template" href="market-tampa.html">
+    <div class="kicker">Closest peer · FL</div>
+    <h2>Tampa <span class="badge template">Template</span></h2>
+    <p>Same Ops · Growth · Support pattern as Jax. Content TBD.</p>
+    <div class="go">Open Tampa template →</div>
+  </a>
+  <a class="tile template" href="market-orlando.html">
+    <div class="kicker">Closest peer · FL</div>
+    <h2>Orlando <span class="badge template">Template</span></h2>
+    <p>Same Ops · Growth · Support pattern as Jax. Content TBD.</p>
+    <div class="go">Open Orlando template →</div>
+  </a>
+</nav>
 
+<div class="sec-label">Also</div>
+<nav class="tiles row2" aria-label="Secondary">
+  <a class="tile secondary" href="investor-home.html">
+    <div class="kicker">Capital</div>
+    <h2>Investor face</h2>
+    <p>Frame spine · checklist · capital narrative.</p>
+    <div class="go">Open investor →</div>
+  </a>
+  <a class="tile secondary" href="franchise-peer-cities.html">
+    <div class="kicker">Research</div>
+    <h2>Peer cities research</h2>
+    <p>Expansion markets · not live ops.</p>
+    <div class="go">Open peer cities →</div>
+  </a>
+</nav>
 
-<div class="dept-label">Sales motions · hop without hunting</div>
-<div class="links-row" style="margin:0 0 14px">
-  <a href="bdr-tam.html" style="border-color:#5b8cff88">BDR TAM</a>
-  <a href="bdr-tam.html?lane=Regional%20Enterprise" style="border-color:#5b8cff88;font-weight:700">Big Enterprise</a>
-  <a href="bdr-tam.html?lane=Sponsor" style="border-color:#ffb02088;font-weight:700">Sponsor</a>
-  <a href="consumer-inbound.html" style="border-color:#a78bfa88">Violet</a>
-  <a href="easy-attack.html" style="border-color:#ffb02088;font-weight:700">Easy attack</a><a href="one-touch.html" style="border-color:#a855f788;font-weight:700">One-touch</a>
-  <a href="bdr-tam.html?lane=Regional%20Subscription" style="border-color:#3dd68c88">Subscription</a>
-  <a href="bdr-tam.html?lane=Hail%20Mary" style="border-color:#f0abfc88;font-weight:700">Hail Mary</a>
-  <a href="bdr-tam.html?lane=Hail%20Mary&hail=Bazillionaires" style="border-color:#f0abfc55">Bazillionaires</a>
-  <a href="bdr-pipeline.html">BDR Pipeline</a>
-  <a href="crm-icp.html">CRM ICP</a>
-</div>
-<div class="dept-label">Departments · Sales first</div>
-<div class="tiles">
-
-<a class="tile sales" href="one-touch.html" style="border-color:#a855f799;background:linear-gradient(160deg,#2a1530 0%,#121a2b 60%)">
-  <h3>One-touch · money button<span class="badge sales" style="color:#f0abfc;border-color:#a855f766;background:#2a1530">#1 MONEY</span></h3>
-  <p>~10 taps → ~$700 verbal · River City $600 invoiced. Primary money motion from RVP home.</p>
-  <div class="links-row">
-    <a href="one-touch.html" style="border-color:#a855f788;color:#f0abfc">Open one-touch</a>
-    <a href="rvp-ops.html">Franchise Hub</a>
-    <a href="https://onchainoffgrid-hub.github.io/critters-on-call/one-touch.html" target="_blank" rel="noopener">Live Critters</a>
-  </div>
-</a>
-
-<a class="tile sales" href="ops.html" style="border-color:#fbbf2499;background:linear-gradient(160deg,#2a2210 0%,#121a2b 60%)">
-  <h3>Operations<span class="badge sales" style="color:#fde68a;border-color:#fbbf2466;background:#2a2210">OPS IA</span></h3>
-  <p>People · Animals &amp; facilities · What we can supply · Booked gigs · Pipeline. Money / Support later.</p>
-  <div class="links-row">
-    <a href="ops.html" style="border-color:#fbbf2466;color:#fde68a">Open Ops landing</a>
-    <a href="ops-people.html">People / Team</a>
-  </div>
-</a>
-
-<a class="tile sales" href="rvp-ops.html" style="border-color:#3dd68c99;background:linear-gradient(160deg,#13281d 0%,#121a2b 60%)">
-  <h3>Franchise RVP · Area Ops<span class="badge sales" style="color:#9dffc5;border-color:#3dd68c66;background:#13281d">COMMAND</span></h3>
-  <p>Team · gigs · money · calendar · actions · sales cascade. Primary ops face for Franchise #0.</p>
-  <div class="links-row">
-    <a href="rvp-ops.html">Open RVP home</a>
-    <a href="sales-review.html">Sales review cascade</a>
-  </div>
-</a>
-
-
-<a class="tile sales" href="crm-icp.html">
-  <h3>BDR TAM Dialer v2<span class="badge sales">PRIMARY</span></h3>
-  <p>CRM ICP greens · BDR · RevOps · inbound. Franchise #0 revenue motion.</p>
-  <div class="chips">
-    <span class="chipk">Top25 Monthly <b id="sales-m">—</b></span>
-    <span class="chipk">Occasional <b id="sales-o">—</b></span>
-    <span class="chipk">Call now <b id="sales-cn">—</b></span>
-    <span class="chipk">SAM <b id="sales-sam">—</b></span>
-  </div>
-  <div class="links-row">
-    <a href="crm-icp.html">CRM ICP</a>
-    <a href="consumer-inbound.html" style="border-color:#a78bfa88;color:#d4c4ff">Consumer / contact forms</a>
-    <a href="bdr-tam.html">BDR TAM v2</a>
-    <a href="bdr-pipeline.html">BDR Enterprise</a>
-    <a href="revops-tam.html">RevOps</a>
-    <a href="catalogue-close.html">Catalogue → Close</a>
-  </div>
-</a>
-
-
-<a class="tile sales" href="consumer-inbound.html" style="border-color:#a78bfa99;background:linear-gradient(160deg,#1a1628 0%,#121a2b 60%)">
-  <h3>Consumer / Violet <span class="badge sales" style="color:#d4c4ff;border-color:#a78bfa66;background:#1a1628">B2C LIVE</span></h3>
-  <p>Contact forms · Summer Camp interest · GoDaddy inbound · waivers (GAP) · forms missing sheets.</p>
-  <div class="chips">
-    <span class="chipk">Interest <b id="cons-interest">34</b></span>
-    <span class="chipk">GoDaddy pass <b id="cons-gd">27</b></span>
-    <span class="chipk">Waivers <b style="color:var(--warn)">GAP</b></span>
-    <span class="chipk">No sheets <b id="cons-miss">4</b></span>
-  </div>
-  <div class="links-row">
-    <a href="consumer-inbound.html">Open inbound panel</a>
-    <a href="catalogue-close.html">Catalogue → Close</a>
-    <a href="crm-icp.html">CRM Violet chip</a>
-  </div>
-</a>
-
-
-<a class="tile sales" href="org-whitespace.html" style="border-color:#5b8cff99;background:linear-gradient(160deg,#152238 0%,#121a2b 60%)">
-  <h3>Org white space <span class="badge sales">B2B ACCOUNTS</span></h3>
-  <p>Account contacts · customers + non-customers · email gaps · Done + notes.</p>
-  <div class="chips">
-    <span class="chipk">Orgs <b id="orgws-n">—</b></span>
-    <span class="chipk">Customers <b id="orgws-c">—</b></span>
-    <span class="chipk">Email gaps <b id="orgws-gap">—</b></span>
-    <span class="chipk">0 contacts <b id="orgws-zero">—</b></span>
-  </div>
-  <div class="links-row">
-    <a href="org-whitespace.html">Open org white space</a>
-    <a href="crm-icp.html">CRM ICP</a>
-    <a href="consumer-inbound.html">Consumer inbound</a>
-  </div>
-</a>
-
-<a class="tile" href="bookings-dates.html">
-  <h3>Calendar / Dates</h3>
-  <p>Empty perishable dates · weekend protect · next actions.</p>
-  <div class="chips"><span class="chipk">Pipeline <b id="cal-n">—</b></span></div>
-</a>
-
-<a class="tile" href="bookings-dates.html">
-  <h3>Bookings</h3>
-  <p>Locked / accepted / waiting — paid dates only in KPI.</p>
-</a>
-
-<a class="tile" href="money-cfo.html">
-  <h3>Money</h3>
-  <p>Outside customer gross · owner separated · CFO view.</p>
-  <div class="chips"><span class="chipk">Outside <b id="money-out">—</b></span></div>
-</a>
-
-<a class="tile sales" href="bdr-tam.html" style="border-color:#3dd68c99;background:linear-gradient(160deg,#13281d 0%,#121a2b 60%)">
-  <h3>BDR TAM Dialer <span class="badge sales" style="color:#9dffc5;border-color:#3dd68c66;background:#13281d">ENTERPRISE · SPONSOR · HAIL MARY · EMBA</span></h3>
-  <p>Tier 1 first · email ranked high · every Jax sector · real contacts only.</p>
-  <div class="chips">
-    <span class="chipk">Contacts <b id="bdrtam-ct">—</b></span>
-    <span class="chipk">Email <b id="bdrtam-em">—</b></span>
-    <span class="chipk">Tier1 <b id="bdrtam-t1">—</b></span>
-    <span class="chipk">Segs <b id="bdrtam-seg">—</b></span>
-  </div>
-  <div class="links-row">
-    <a href="bdr-tam.html">Open BDR TAM v2</a>
-    <a href="bdr-pipeline.html">Enterprise bands</a>
-    <a href="org-whitespace.html">Org white space</a>
-  </div>
-</a>
-
-<a class="tile" href="bdr-pipeline.html">
-  <h3>BDR Enterprise v1</h3>
-  <p>Call now · Warm · Needs contact · Hold bands.</p>
-  <div class="chips"><span class="chipk">Call now <b id="bdr-cn">—</b></span></div>
-</a>
-
-<a class="tile" href="actions-overdue.html">
-  <h3>Actions Overdue</h3>
-  <p>P0 open · not started · execution debt.</p>
-  <div class="chips"><span class="chipk">P0 <b id="act-p0">—</b></span></div>
-</a>
-
-<a class="tile" href="team-hire.html">
-  <h3>Staff / Team</h3>
-  <p>Seats: enterprise · subscription · violet · B2C.</p>
-</a>
-
-<a class="tile" href="programming.html">
-  <h3>Programming</h3>
-  <p>Visit Us types · fill vs protect · heat.</p>
-</a>
-
-<a class="tile" href="ann-marie-ops.html">
-  <h3>Ann-Marie Ops</h3>
-  <p>Delegation scorecard · ops handoff.</p>
-</a>
-
-<a class="tile" href="collateral.html">
-  <h3>Collateral</h3>
-  <p>Segment × asset matrix from APPROVED pack.</p>
-</a>
-
-
-<a class="tile" href="jax-local-buzz.html"><h3>Jax Local Buzz</h3><p>BDR media table · sortable email · preloaded pitches · copy/mailto</p></a>
-<a class="tile" href="platform-map.html">
-  <h3>Platform</h3>
-  <p>Bot → spec → suite · one-home-for-build.</p>
-</a>
-</div>
-
-<div class="dept-label">Secondary</div>
-<div class="tiles">
-<a class="tile secondary" href="social-reach.html"><h3>Social</h3><p>FB · LinkedIn · met reach — secondary to Sales.</p></a>
-<a class="tile secondary" href="investor-capital.html"><h3>Investor / Capital</h3><p>Raise narrative — also on Investor face.</p></a>
-<a class="tile secondary" href="macro-radar.html"><h3>Macro Radar</h3><p>Confluence lights · BTC spine.</p></a>
-<a class="tile secondary" href="link-tree.html"><h3>Link Tree</h3><p>Live ops apps + VISION Play / Coins.</p></a>
-</div>
-
-<p class="note" id="load-note">Dump-home: Dashboard Bit · Brand: Sheehan Homestead / Critters on Call · Face: Operator / Franchise #0 · KPIs load from data/*.json (serve via http://127.0.0.1:8765/ if fetch blocked on file://) · Built 2026-09-22 ET · Org white space live</p>
-</div>
-
-<script>
-(function(){
-  function fmt$(n){
-    if(n==null||n==='') return '—';
-    var x=Number(n); if(isNaN(x)) return '—';
-    return '$'+Math.round(x).toLocaleString('en-US');
-  }
-  function set(id,v){ var el=document.getElementById(id); if(el) el.textContent=(v==null||v==='')?'—':v; }
-  async function load(path){
-    try{
-      var r=await fetch(path,{cache:'no-store'});
-      if(!r.ok) throw new Error(r.status);
-      return await r.json();
-    }catch(e){ return null; }
-  }
-  Promise.all([
-    load('data/suite_summary.json'),
-    load('data/suite_kpis.json'),
-    load('data/paypal_kpis.json'),
-    load('data/overdue_kpis.json'),
-    load('data/crm_icp_regional_subscription.json'),
-    load('data/bookings_pipeline.json'),
-    load('data/org_whitespace.json')
-  ]).then(function(arr){
-    var sum=arr[0]||{}, kpis=arr[1]||{}, pay=arr[2]||{}, od=arr[3]||{}, crm=arr[4]||{}, book=arr[5]||{}, orgws=arr[6]||{};
-    var call=sum.bdr_spec_aligned && sum.bdr_spec_aligned.CALL_NOW;
-    if(call==null) call=kpis.call_now;
-    var warm=sum.bdr_spec_aligned && sum.bdr_spec_aligned.Warm;
-    if(warm==null) warm=kpis.warm;
-    var needs=sum.bdr_spec_aligned && sum.bdr_spec_aligned.WARM_NEEDS_CONTACT;
-    if(needs==null) needs=kpis.needs_contact;
-    set('k-call', call!=null?call:'—');
-    set('k-warm', (warm!=null&&needs!=null)?(warm+' / '+needs):(warm!=null?warm:'—'));
-    set('k-warm-s', 'Warm · Needs contact');
-    var outside=pay.combined_outside_gross!=null?pay.combined_outside_gross:sum.paypal_h2_outside_gross;
-    set('k-pay', fmt$(outside));
-    set('k-pay-s', pay.combined_window||'Outside customer');
-    var goal=sum.bookings_goal||kpis.bookings_goal;
-    var ar=sum.ar_goal||kpis.ar_goal;
-    set('k-goal', fmt$(goal));
-    set('k-goal-s', ar!=null?('AR ~'+fmt$(ar)):'goal');
-    var p0=od.p0_open!=null?od.p0_open:(sum.overdue_p0!=null?sum.overdue_p0:kpis.overdue_p0);
-    var ns=od.not_started!=null?od.not_started:kpis.overdue_not_started;
-    set('k-p0', p0!=null?p0:'—');
-    set('k-p0-s', ns!=null?(ns+' not started'):'P0 open');
-    var t25=crm.kpis && crm.kpis.top25;
-    if(t25){
-      set('k-crm', (t25.Monthly!=null?t25.Monthly:'—')+' / '+(t25.Occasional!=null?t25.Occasional:'—'));
-      set('k-crm-s', 'Monthly / Occasional · Top25');
-      set('sales-m', t25.Monthly);
-      set('sales-o', t25.Occasional);
-    }
-    set('sales-cn', call);
-    var sam=sum.primary_sam_annual||kpis.primary_sam_annual;
-    set('sales-sam', fmt$(sam));
-    set('bdr-cn', call);
-    set('act-p0', p0);
-    set('money-out', fmt$(outside));
-    var bn=Array.isArray(book.bookings)?book.bookings.length:book.bookings;
-    set('cal-n', bn!=null?bn:'—');
-    var note=document.getElementById('load-note');
-    if(!sum.as_of && !kpis.call_now && !pay.combined_outside_gross){
-      if(note) note.textContent+=' · KPI fetch failed — open via http://127.0.0.1:8765/ (file:// fallback)';
-    }
-  });
-
-  // Consumer inbound KPIs on Operator tile
-  load('data/consumer_inbound.json').then(function(c){
-    if(!c||!c.kpis) return;
-    var ok = orgws.kpis||{};
-    set('orgws-n', ok.orgs_total!=null?ok.orgs_total:'—');
-    set('orgws-c', ok.customers!=null?ok.customers:'—');
-    set('orgws-gap', ok.orgs_missing_email!=null?ok.orgs_missing_email:'—');
-    set('orgws-zero', ok.orgs_zero_contacts!=null?ok.orgs_zero_contacts:'—');
-    set('cons-interest', c.kpis.interest_submissions);
-    set('cons-gd', c.kpis.godaddy_contacts_this_pass);
-    set('cons-miss', c.kpis.forms_missing_sheets);
-  });
-
-})();
-</script>
-<script src="shared/flow-spine.js" defer></script>
-</body></html>
+<footer>
+  <a href="link-tree.html">All links</a>
+  <a href="layer-zero-archive.html">Legacy Layer Zero (archive)</a>
+</footer>
+<p class="note">Public landing · 2026-09-23 UX lock · no mega-nav · no KPI dump on home</p>
+</div></body></html>

@@ -56,6 +56,23 @@ h1{font-size:clamp(1.55rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;fon
 .sketch{margin:22px 0 0;padding:14px 16px;border:1px dashed #ffb02088;border-radius:14px;background:#16140f;font-size:.82rem;color:#c5d0e6}
 .sketch b{color:#fde68a}.sketch .lbl{font-size:.65rem;text-transform:uppercase;letter-spacing:.07em;color:var(--warn);margin-bottom:6px}
 .note{color:var(--muted);font-size:.78rem;margin-top:18px}
+
+.seats{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:0 0 22px}
+.seat-tile{display:flex;flex-direction:column;justify-content:space-between;min-height:128px;padding:16px 18px;border-radius:16px;border:1px solid var(--line);background:var(--card);color:inherit;text-decoration:none;transition:transform .12s,border-color .15s}
+.seat-tile:hover{transform:translateY(-2px);text-decoration:none;border-color:var(--accent)}
+.seat-tile .kicker{font-size:.65rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:6px}
+.seat-tile h3{margin:0 0 4px;font-size:1.05rem}
+.seat-tile p{margin:0;color:var(--muted);font-size:.8rem}
+.seat-tile .go{margin-top:10px;font-weight:800;font-size:.82rem;color:var(--accent)}
+.seat-tile.mature{border-color:#5b8cff66}
+.seat-tile.b2c{border-color:#a78bfa66}.seat-tile.b2c .go{color:#d4c4ff}
+.seat-tile.social{border-color:#ffb02066}.seat-tile.social .go{color:#ffd78a}
+.seat-tile.experimental{opacity:.62;border-style:dashed;border-color:#2a3548;background:#0e1420;pointer-events:auto}
+.seat-tile.experimental:hover{opacity:.85;border-color:#93a0b8}
+.seat-tile.experimental .go{color:#93a0b8}
+.badge.exp{background:#1a1f2e;color:#93a0b8;border-color:#2a3548;font-size:.62rem;padding:2px 7px;border-radius:6px;border:1px solid;margin-left:6px;vertical-align:middle}
+.badge.mature{background:#152238;color:#9ec1ff;border:1px solid #5b8cff66;font-size:.62rem;padding:2px 7px;border-radius:6px;margin-left:6px;vertical-align:middle}
+
 .badge{font-size:.65rem;padding:2px 8px;border-radius:6px;background:#1a2440;color:var(--accent);border:1px solid var(--line);margin-left:6px}
 </style></head>
 <body data-flow-face="sales" data-flow-chip="growth-home"><div class="wrap">
@@ -66,10 +83,11 @@ h1{font-size:clamp(1.55rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;fon
   <a href="rvp-ops.html">RVP home</a>
   <a href="ops.html">Operations</a>
   <a href="support.html">Support</a>
+  <a href="owner-operator.html" class="sec">Owner-operator</a>
   <a href="index.html" class="sec">Layer Zero</a>
 </div>
 
-<p class="crumb"><a href="rvp-ops.html">RVP</a> → <b>Growth</b></p>
+<p class="crumb"><a href="index.html">Layer Zero</a> → <a href="owner-operator.html">Operator</a> → <b>Growth</b></p>
 
 <header>
   <h1>Growth <span class="badge">$250k path</span></h1>
@@ -144,6 +162,43 @@ h1{font-size:clamp(1.55rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;fon
   <span class="cta">Open →</span>
 </a>
 
+
+<div class="sec-label">Seats · sales-director view</div>
+<nav class="seats" aria-label="Growth seats">
+  <a class="seat-tile mature" href="growth-b2b.html">
+    <div><div class="kicker">Mature · B2B</div><h3>Regional Enterprise <span class="badge mature">LIVE</span></h3><p>CDD / HOA · amenity · campus · corp — B2B engine + TAM</p></div>
+    <span class="go">Open B2B / TAM →</span>
+  </a>
+  <a class="seat-tile mature" href="bdr-tam.html?lane=Regional%20Subscription">
+    <div><div class="kicker">Mature · B2B</div><h3>Regional Subscription <span class="badge mature">LIVE</span></h3><p>Recurring / subscription lane on the dialer</p></div>
+    <span class="go">Open subscription lane →</span>
+  </a>
+  <a class="seat-tile mature b2c" href="consumer-inbound.html">
+    <div><div class="kicker">Mature · schools / Violet</div><h3>Violet / schools <span class="badge mature">LIVE</span></h3><p>School &amp; program motion · consumer inbound + B2C engine</p></div>
+    <span class="go">Open Violet / inbound →</span>
+  </a>
+  <a class="seat-tile mature" href="bdr-tam.html">
+    <div><div class="kicker">Mature · B2B</div><h3>Small-biz / programmer <span class="badge mature">LIVE</span></h3><p>Breweries · bookstores · local programmers — TAM lane</p></div>
+    <span class="go">Open BDR TAM →</span>
+  </a>
+  <a class="seat-tile mature b2c" href="consumer-inbound.html">
+    <div><div class="kicker">Mature · B2C</div><h3>Inbound Consumer <span class="badge mature">LIVE</span></h3><p>Inbound consumer rep · age / form leads</p></div>
+    <span class="go">Open inbound consumer →</span>
+  </a>
+  <a class="seat-tile mature social" href="social-reach.html">
+    <div><div class="kicker">Mature · demand gen</div><h3>Social / field marketing B2C <span class="badge mature">LIVE</span></h3><p>Demand gen + social selling · field reach</p></div>
+    <span class="go">Open social reach →</span>
+  </a>
+  <a class="seat-tile experimental" href="hail-mary.html">
+    <div><div class="kicker">Experimental</div><h3>Hail Mary <span class="badge exp">NOT LIVE PITCH</span></h3><p>Long-shot / stretch lane — visible, not a live hire pitch</p></div>
+    <span class="go">View sketch →</span>
+  </a>
+  <a class="seat-tile experimental" href="franchise-peer-cities.html">
+    <div><div class="kicker">Experimental</div><h3>Franchise consulting <span class="badge exp">NOT LIVE PITCH</span></h3><p>Peer-city research face — not a live consulting offer</p></div>
+    <span class="go">View peer cities →</span>
+  </a>
+</nav>
+
 <div class="sec-label">Attack &amp; proof tiles (kept)</div>
 <nav class="hub" aria-label="Growth doors">
   <a class="hub-tile hot" href="hot-links.html">
@@ -195,7 +250,7 @@ h1{font-size:clamp(1.55rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;fon
   <div style="margin-top:6px;color:var(--muted)">Label only — for CFO / comp plan later. Not an offer letter.</div>
 </aside>
 
-<p class="note">RVP Growth face · clean tiles only · pitch bodies live on quick-pitches.html (not this hub) · Built 2026-09-23 ET · Never invent revenue</p>
+<p class="note">Growth face · seats + engines · pitch bodies on quick-pitches.html · Built 2026-09-23 ET · Never invent revenue · investor-safe</p>
 </div>
 <script>
 (function(){
