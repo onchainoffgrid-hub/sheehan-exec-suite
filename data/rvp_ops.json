@@ -1,6 +1,6 @@
 {
-  "as_of": "2026-09-23 16:42 ET",
-  "title": "Franchise RVP \u00b7 Area Ops",
+  "as_of": "2026-09-23 16:55 ET",
+  "title": "Franchise Hub \u00b7 RVP",
   "franchise": "#0",
   "brand": "Sheehan Homestead / Critters on Call",
   "role": "Franchise Operator / Area VP",
@@ -8,13 +8,18 @@
   "cascade": [
     {
       "id": "rvp",
-      "label": "RVP Ops",
+      "label": "Franchise Hub",
       "href": "rvp-ops.html"
     },
     {
       "id": "sales-review",
-      "label": "Sales review",
+      "label": "Sales hub",
       "href": "sales-review.html"
+    },
+    {
+      "id": "connect",
+      "label": "Connect",
+      "href": "connect.html"
     },
     {
       "id": "bdr-manager",

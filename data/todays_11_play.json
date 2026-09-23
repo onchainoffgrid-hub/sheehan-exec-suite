@@ -1,0 +1,488 @@
+{
+  "as_of": "2026-09-23 16:55 ET",
+  "rule": "Today\u2019s 11 per mature GTM seat \u2014 mailto + Open form only. NO auto-send. Click opens email client; Michael sends.",
+  "n_target": 11,
+  "localStorage_key": "sheehan_todays_11",
+  "segments": [
+    {
+      "id": "enterprise",
+      "label": "Enterprise",
+      "gtm_seat": "Regional enterprise",
+      "contacts": [
+        {
+          "email": "klsmith@vestapropertyservices.com",
+          "name": "Kate Smith",
+          "org": "Durbin Crossing CDD (Vesta)",
+          "phone": "(904) 230-2011",
+          "form": "",
+          "source_note": "enterprise_call_now"
+        },
+        {
+          "email": "jlucansky@vestapropertyservices.com",
+          "name": "John Lucansky",
+          "org": "Grand Haven CDD (Vesta)",
+          "phone": "(386) 447-0192",
+          "form": "",
+          "source_note": "enterprise_call_now"
+        },
+        {
+          "email": "tmyhill@vestapropertyservices.com",
+          "name": "Todd Myhill",
+          "org": "Heritage Landing CDD / Camp Heritage (Vesta)",
+          "phone": "(904) 940-6095",
+          "form": "",
+          "source_note": "enterprise_call_now"
+        },
+        {
+          "email": "ghamilton@vestapropertyservices.com",
+          "name": "Georgia Hamilton",
+          "org": "Johns Creek / Brandy Creek CDD (Vesta)",
+          "phone": "(904) 230-4208",
+          "form": "",
+          "source_note": "enterprise_call_now"
+        },
+        {
+          "email": "llicata@vestapropertyservices.com",
+          "name": "Lisa Licata",
+          "org": "Markland / Southaven CDD (Vesta)",
+          "phone": "(904) 315-5171",
+          "form": "",
+          "source_note": "enterprise_call_now"
+        },
+        {
+          "email": "kcouncil@vestapropertyservices.com",
+          "name": "Ken Council",
+          "org": "RiverTown / Rivers Edge CDD (Vesta)",
+          "phone": "(904) 679-5523",
+          "form": "",
+          "source_note": "enterprise_call_now"
+        },
+        {
+          "email": "staylor@vestapropertyservices.com",
+          "name": "Stephanie Taylor",
+          "org": "Sampson Creek CDD / St. Johns Golf & CC (Vesta)",
+          "phone": "(904) 599-9093",
+          "form": "",
+          "source_note": "enterprise_call_now"
+        },
+        {
+          "email": "wynnfieldlakesmanager@gmail.com",
+          "name": "Lina Hernandez",
+          "org": "Wynnfield Lakes CDD (Vesta)",
+          "phone": "(904) 565-9385",
+          "form": "",
+          "source_note": "enterprise_call_now"
+        },
+        {
+          "email": "emyers@vestapropertyservices.com",
+          "name": "Elizabeth Myers-Hesford",
+          "org": "Yellow Bluff Landing / Tison's Landing (Vesta)",
+          "phone": "(904) 757-1547",
+          "form": "",
+          "source_note": "enterprise_call_now"
+        },
+        {
+          "email": "minsel@vestapropertyservices.com",
+          "name": "Mark Insel",
+          "org": "Cross Creek North CDD amenity (Vesta)",
+          "phone": "(904) 408-7716",
+          "form": "",
+          "source_note": "enterprise_call_now"
+        },
+        {
+          "email": "jolear@vestapropertyservices.com",
+          "name": "Joe O'Lear",
+          "org": "Entrada HOA (Vesta Property Services)",
+          "phone": "(904) 747-0181",
+          "form": "",
+          "source_note": "enterprise_call_now"
+        }
+      ],
+      "note": "From enterprise_call_now"
+    },
+    {
+      "id": "subscription",
+      "label": "Subscription",
+      "gtm_seat": "Regional subscription",
+      "contacts": [
+        {
+          "email": "tfelix@discoveryvillages.com",
+          "name": "Patricia Valenzuela, Director of Celebrations",
+          "org": "Discovery Village at Deerwood",
+          "phone": "(904) 667-3500",
+          "form": "https://discoveryvillages.com/contact-discovery-village/schedule-a-tour/",
+          "source_note": "crm_icp_regional_subscription"
+        },
+        {
+          "email": "tracy.levanich@gardensmemorycare.com",
+          "name": "Tracy Levanich, Programming Director <tracy.levanich@gardens",
+          "org": "Ortega Gardens Alzheimer's Special Care Center",
+          "phone": "(904) 701-7227",
+          "form": "https://gardensmemorycare.com/ortega-gardens/",
+          "source_note": "crm_icp_regional_subscription"
+        },
+        {
+          "email": "christina.dutcher@gardensmemorycare.com",
+          "name": "Christina Dutcher, Program Director <christina.dutcher@garde",
+          "org": "San Jose Gardens Alzheimer's Special Care Center",
+          "phone": "(904) 739-3500",
+          "form": "https://gardensmemorycare.com/san-jose-gardens/",
+          "source_note": "crm_icp_regional_subscription"
+        },
+        {
+          "email": "dee.stanziano@gardensmemorycare.com",
+          "name": "Dee Stanziano, Activities Director <dee.stanziano@gardensmem",
+          "org": "Ponte Vedra Gardens Alzheimer's Special Care Center",
+          "phone": "(904) 834-7578",
+          "form": "https://gardensmemorycare.com/ponte-vedra-gardens/",
+          "source_note": "crm_icp_regional_subscription"
+        },
+        {
+          "email": "diazcarla@cypressvillageretirement.com",
+          "name": "Carla Diaz <DiazCarla@cypressvillageretirement.com>",
+          "org": "The Inn at Cypress Village",
+          "phone": "(904) 807-6149",
+          "form": "https://cypressvillageretirement.com/contact/",
+          "source_note": "crm_icp_regional_subscription"
+        },
+        {
+          "email": "deandre.stringer@legendseniorliving.com",
+          "name": "Deandre Stringer, Life Enrichment Director <deandre.stringer",
+          "org": "The Windsor at Ortega",
+          "phone": "(904) 353-9500",
+          "form": "https://info.legendseniorliving.com/ortega-request-a-visit",
+          "source_note": "crm_icp_regional_subscription"
+        },
+        {
+          "email": "sales@seniorsjacksonville.com",
+          "name": "sales@seniorsjacksonville.com (prior CRM)",
+          "org": "Rosecastle at Deerwood",
+          "phone": "(904) 513-6990",
+          "form": "https://seniorsjacksonville.com/contact-us/",
+          "source_note": "crm_icp_regional_subscription"
+        },
+        {
+          "email": "mandarindle@harborchase.com",
+          "name": "Manda Rindle <mandarindle@harborchase.com>",
+          "org": "HarborChase of Mandarin",
+          "phone": "(904) 580-7676",
+          "form": "https://www.harborchase.com/communities/mandarin/schedule-visit/",
+          "source_note": "crm_icp_regional_subscription"
+        },
+        {
+          "email": "lifeenrichmentdirector@palagioseniorliving.com",
+          "name": "Kristi Wilder, Life Enrichment Director",
+          "org": "Palagio Senior Living",
+          "phone": "(904) 639-4700",
+          "form": "https://palagioseniorliving.com/contact/",
+          "source_note": "crm_icp_regional_subscription"
+        },
+        {
+          "email": "emccann@grandliving.com",
+          "name": "emccann@grandliving.com / slewis@grandliving.com",
+          "org": "Grand Living at Tamaya",
+          "phone": "(904) 410-8500",
+          "form": "https://grandliving.com/contact-us/",
+          "source_note": "crm_icp_regional_subscription"
+        },
+        {
+          "email": "thecoves@rivergarden.org",
+          "name": "The Coves IL (904) 292-2683",
+          "org": "River Garden / The Coves",
+          "phone": "(904) 292-2683",
+          "form": "https://rivergarden.org/contact/",
+          "source_note": "crm_icp_regional_subscription"
+        }
+      ],
+      "note": "From CRM ICP subscription"
+    },
+    {
+      "id": "violet50",
+      "label": "Violet ~50%",
+      "gtm_seat": "Violet / partial-donation",
+      "contacts": [
+        {
+          "email": "barnal2@aol.com",
+          "name": "Amanda Barnett",
+          "org": "summer_interest",
+          "phone": "",
+          "form": "",
+          "source_note": "consumer_inbound"
+        },
+        {
+          "email": "helenedwebb@gmail.com",
+          "name": "Helene Webb",
+          "org": "summer_interest",
+          "phone": "",
+          "form": "",
+          "source_note": "consumer_inbound"
+        },
+        {
+          "email": "tesza818@gmail.com",
+          "name": "Jessica Justice",
+          "org": "summer_interest",
+          "phone": "",
+          "form": "",
+          "source_note": "consumer_inbound"
+        },
+        {
+          "email": "hilliardgstroop@yahoo.com",
+          "name": "Amanda Hodges",
+          "org": "summer_interest",
+          "phone": "",
+          "form": "",
+          "source_note": "consumer_inbound"
+        },
+        {
+          "email": "alyxharrington@yahoo.com",
+          "name": "Alyx",
+          "org": "summer_interest",
+          "phone": "",
+          "form": "",
+          "source_note": "consumer_inbound"
+        },
+        {
+          "email": "sparkmabml@gmail.com",
+          "name": "Mandy Sparkman",
+          "org": "summer_interest",
+          "phone": "",
+          "form": "",
+          "source_note": "consumer_inbound"
+        },
+        {
+          "email": "ciaranw92@gmail.com",
+          "name": "Ciara",
+          "org": "summer_interest",
+          "phone": "",
+          "form": "",
+          "source_note": "consumer_inbound"
+        },
+        {
+          "email": "william12768@yahoo.com",
+          "name": "William Lane",
+          "org": "summer_interest",
+          "phone": "",
+          "form": "",
+          "source_note": "consumer_inbound"
+        },
+        {
+          "email": "aliugles@icloud.com",
+          "name": "Alexandra Harry",
+          "org": "summer_interest",
+          "phone": "",
+          "form": "",
+          "source_note": "consumer_inbound"
+        },
+        {
+          "email": "sunnyandkevin@gmail.com",
+          "name": "Sunny Forrest",
+          "org": "summer_interest",
+          "phone": "",
+          "form": "",
+          "source_note": "consumer_inbound"
+        },
+        {
+          "email": "mhenkel88@gmail.com",
+          "name": "Meghan Gardner",
+          "org": "summer_interest",
+          "phone": "",
+          "form": "",
+          "source_note": "consumer_inbound"
+        }
+      ],
+      "note": "From consumer_inbound"
+    },
+    {
+      "id": "small_biz",
+      "label": "Small-biz",
+      "gtm_seat": "Also-run / small-biz field",
+      "contacts": [
+        {
+          "email": "caitlin.brunell@ascension.org",
+          "name": "Caitlin Brunell",
+          "org": "Ascension St. Vincent's Foundation",
+          "phone": "",
+          "form": "",
+          "source_note": "org_whitespace non-customer"
+        },
+        {
+          "email": "cclapper@cmcjaxfla.com",
+          "name": "Corey Clapper",
+          "org": "Associa Community Management Concepts of Jacksonville",
+          "phone": "",
+          "form": "",
+          "source_note": "org_whitespace non-customer"
+        },
+        {
+          "email": "mdorsey@jcpcdd.org",
+          "name": "Maddie Dorsey",
+          "org": "Julington Creek Plantation CDD",
+          "phone": "",
+          "form": "",
+          "source_note": "org_whitespace non-customer"
+        },
+        {
+          "email": "david.decamp@crowley.com",
+          "name": "David DeCamp",
+          "org": "Crowley",
+          "phone": "",
+          "form": "",
+          "source_note": "org_whitespace non-customer"
+        },
+        {
+          "email": "mgiles@gmsnf.com",
+          "name": "Marilee Giles",
+          "org": "GMS North Florida",
+          "phone": "",
+          "form": "",
+          "source_note": "org_whitespace non-customer"
+        },
+        {
+          "email": "aquatics@oakleafresidents.com",
+          "name": "Susan Raab",
+          "org": "Oakleaf Plantation",
+          "phone": "",
+          "form": "",
+          "source_note": "org_whitespace non-customer"
+        },
+        {
+          "email": "ddemarco@gmsnf.com",
+          "name": "Danelle DeMarco",
+          "org": "Bartram Springs CDD (GMS)",
+          "phone": "",
+          "form": "",
+          "source_note": "org_whitespace non-customer"
+        },
+        {
+          "email": "comments@mcdjax.com",
+          "name": "David Mullins",
+          "org": "DCC LEE Enterprises, Inc. (McDonald's)",
+          "phone": "",
+          "form": "",
+          "source_note": "org_whitespace non-customer"
+        },
+        {
+          "email": "jmeadows@vestapropertyservices.com",
+          "name": "Jennifer Meadows",
+          "org": "Fleming Island Plantation CDD (Vesta)",
+          "phone": "",
+          "form": "",
+          "source_note": "org_whitespace non-customer"
+        },
+        {
+          "email": "krichardson@marshlanding.org",
+          "name": "Kate Richardson",
+          "org": "Marsh Landing Management Company / Sawgrass Players Club",
+          "phone": "",
+          "form": "",
+          "source_note": "org_whitespace non-customer"
+        },
+        {
+          "email": "flaevents@mayo.edu",
+          "name": "Sarah Schmermund",
+          "org": "Mayo Clinic in Florida",
+          "phone": "",
+          "form": "",
+          "source_note": "org_whitespace non-customer"
+        }
+      ],
+      "note": "From org_whitespace contacts with email"
+    },
+    {
+      "id": "consumer",
+      "label": "Consumer",
+      "gtm_seat": "B2C customers",
+      "contacts": [
+        {
+          "email": "wildwoodcreates@gmail.com",
+          "name": "Emma Scott",
+          "org": "B2C / inbound",
+          "phone": "",
+          "form": "",
+          "source_note": "consumer_inbound proxy \u2014 PayPal customers lack email on file"
+        },
+        {
+          "email": "flcolleen90@yahoo.com",
+          "name": "Colleen Adams",
+          "org": "B2C / inbound",
+          "phone": "",
+          "form": "",
+          "source_note": "consumer_inbound proxy \u2014 PayPal customers lack email on file"
+        },
+        {
+          "email": "thelmasmiller@yahoo.com",
+          "name": "Suzanne Miller",
+          "org": "B2C / inbound",
+          "phone": "",
+          "form": "",
+          "source_note": "consumer_inbound proxy \u2014 PayPal customers lack email on file"
+        },
+        {
+          "email": "gilbert7509@gmail.com",
+          "name": "Sarah Gilbert",
+          "org": "B2C / inbound",
+          "phone": "",
+          "form": "",
+          "source_note": "consumer_inbound proxy \u2014 PayPal customers lack email on file"
+        },
+        {
+          "email": "rileykilpatrick@gmail.com",
+          "name": "Kate Kilpatrick",
+          "org": "B2C / inbound",
+          "phone": "",
+          "form": "",
+          "source_note": "consumer_inbound proxy \u2014 PayPal customers lack email on file"
+        },
+        {
+          "email": "hskelly0710@gmail.com",
+          "name": "Haley Kelly",
+          "org": "B2C / inbound",
+          "phone": "",
+          "form": "",
+          "source_note": "consumer_inbound proxy \u2014 PayPal customers lack email on file"
+        },
+        {
+          "email": "kncooke521@gmail.com",
+          "name": "Kristina Cooke",
+          "org": "B2C / inbound",
+          "phone": "",
+          "form": "",
+          "source_note": "consumer_inbound proxy \u2014 PayPal customers lack email on file"
+        },
+        {
+          "email": "holly2185@hotmail.com",
+          "name": "Holly",
+          "org": "B2C / inbound",
+          "phone": "",
+          "form": "",
+          "source_note": "consumer_inbound proxy \u2014 PayPal customers lack email on file"
+        },
+        {
+          "email": "callieann710@outlook.com",
+          "name": "CallieAnn Maggart",
+          "org": "B2C / inbound",
+          "phone": "",
+          "form": "",
+          "source_note": "consumer_inbound proxy \u2014 PayPal customers lack email on file"
+        },
+        {
+          "email": "doubler2019@hotmail.com",
+          "name": "Raxhel Roberts",
+          "org": "B2C / inbound",
+          "phone": "",
+          "form": "",
+          "source_note": "consumer_inbound proxy \u2014 PayPal customers lack email on file"
+        },
+        {
+          "email": "jeneeharrell4@yahoo.com",
+          "name": "Jenee Harrell",
+          "org": "B2C / inbound",
+          "phone": "",
+          "form": "",
+          "source_note": "consumer_inbound proxy \u2014 PayPal customers lack email on file"
+        }
+      ],
+      "note": "PayPal customers lack email \u2014 inbound proxy"
+    }
+  ]
+}

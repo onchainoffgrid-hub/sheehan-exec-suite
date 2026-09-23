@@ -9,7 +9,7 @@
       "Investors"
     ],
     "ops_home": "rvp-ops.html",
-    "sales_home": "bdr-tam.html",
+    "sales_home": "sales-review.html",
     "investor_home": "investor-home.html",
     "sales_subchips": [
       {
@@ -23,6 +23,12 @@
         "label": "Sales review",
         "href": "sales-review.html",
         "note": "RVP \u2192 Manager \u2192 Rep cascade"
+      },
+      {
+        "id": "connect",
+        "label": "Connect",
+        "href": "connect.html",
+        "note": "Wheel \u00b7 book \u00b7 gold \u00b7 collateral \u00b7 pitch/objection GAPs"
       },
       {
         "id": "bdr-tam",

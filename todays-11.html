@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Today’s 11 · Sheehan Homestead</title>
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--violet:#a78bfa;--money:#f0abfc}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
+a{color:var(--accent);text-decoration:none}.wrap{max-width:1100px;margin:0 auto;padding:28px 22px 48px}
+.top{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 16px;padding:10px 14px;border:1px solid var(--line);border-radius:14px;background:#0f1728}
+.top a{background:var(--card);border:1px solid var(--line);color:var(--text);padding:7px 12px;border-radius:999px;font-size:.78rem;font-weight:600;text-decoration:none}
+.top a.money{border-color:#a855f788;color:#f0abfc}
+.crumb{font-size:.82rem;color:var(--muted);margin:0 0 12px}.crumb a{color:#9ec1ff;font-weight:600}
+h1{font-size:clamp(1.45rem,2.8vw,1.95rem);margin:0 0 6px}
+.sub{color:var(--muted);margin:0 0 14px;font-size:.95rem}
+.banner{background:#2a1619;color:#ff9aa5;border:1px solid #ff5d6c66;padding:12px 14px;border-radius:12px;font-size:.88rem;font-weight:700;margin:0 0 16px}
+.mailto-note{background:#152238;border:1px solid #5b8cff66;padding:12px 14px;border-radius:12px;font-size:.88rem;color:#c5d0e6;margin:0 0 18px}
+.mailto-note b{color:#9ec1ff}
+.segs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.segs button{appearance:none;border:1px solid var(--line);background:var(--card);color:var(--muted);padding:12px 16px;border-radius:999px;font-size:.9rem;font-weight:800;cursor:pointer;min-height:48px}
+.segs button.on{border-color:var(--accent);background:#152238;color:#fff}
+.meta{font-size:.82rem;color:var(--muted);margin:0 0 12px}
+.row{display:grid;grid-template-columns:40px 1fr auto;gap:12px;align-items:center;padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:var(--card);margin:0 0 10px}
+.row.done{opacity:.55}
+.row .n{font-weight:800;color:var(--violet);font-size:1.05rem}
+.row .who{font-weight:700}.row .org{color:var(--muted);font-size:.82rem;margin-top:2px}
+.row .acts{display:flex;flex-wrap:wrap;gap:8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:8px 14px;border-radius:999px;background:#152238;border:1px solid #5b8cff88;color:#fff;font-weight:800;font-size:.78rem;text-decoration:none;cursor:pointer;font-family:inherit}
+.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
+.btn.tick{border-color:var(--line);background:var(--panel);color:var(--muted)}
+.badge{font-size:.65rem;padding:2px 8px;border-radius:6px;border:1px solid var(--line);margin-left:6px}
+.badge.gap{background:#2a2416;color:var(--warn);border-color:#ffb02066}
+.note{color:var(--muted);font-size:.78rem;margin-top:20px}
+</style></head>
+<body data-flow-face="sales"><div class="wrap">
+<div class="top">
+  <a class="money" href="one-touch.html">One-touch</a>
+  <a href="rvp-ops.html">Franchise Hub</a>
+  <a href="rvp-ops.html#revops">RevOps</a>
+  <a href="gtm-seats.html">GTM seats</a>
+  <a href="sales-review.html">Sales hub</a>
+</div>
+<p class="crumb"><a href="rvp-ops.html">Franchise Hub</a> → <a href="rvp-ops.html#revops">RevOps</a> → <b>Today’s 11</b></p>
+<h1>Today’s 11 <span class="badge" style="background:#1a1530;color:#f0abfc;border-color:#a855f766">per GTM seat</span></h1>
+<p class="sub">Pick a mature seat · stage 11 touches · <b>mailto + form only</b>. Brand: Sheehan Homestead.</p>
+<div class="banner">NO AUTO-SEND. Click Email → your email client opens populated → <b>you</b> hit send. Same rule as one-touch.</div>
+<div class="mailto-note"><b>CRM interactive rule:</b> Suite stages. Michael sends. No Gmail API · no bulk blast from this page.</div>
+<div class="segs" id="segs" role="tablist" aria-label="GTM segments"></div>
+<p class="meta" id="meta">Loading…</p>
+<div id="list"></div>
+<p class="note" id="foot">Today’s 11 · data/todays_11_play.json · Built 2026-09-23 ET</p>
+</div>
+<script>
+(function(){
+  var KEY='sheehan_todays_11';
+  var data=null, segId=null;
+  function todayKey(){ var d=new Date(); return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'); }
+  function loadDone(){
+    try{ return JSON.parse(localStorage.getItem(KEY)||'{}'); }catch(e){ return {}; }
+  }
+  function saveDone(obj){ try{ localStorage.setItem(KEY, JSON.stringify(obj)); }catch(e){} }
+  function doneSet(seg){
+    var all=loadDone(); var day=all[todayKey()]||{}; return new Set(day[seg]||[]);
+  }
+  function markDone(seg, email){
+    var all=loadDone(); var day=all[todayKey()]||{}; var arr=day[seg]||[];
+    if(arr.indexOf(email)<0) arr.push(email);
+    day[seg]=arr; all[todayKey()]=day; saveDone(all);
+  }
+  function mailto(c){
+    var sub=encodeURIComponent('Sheehan Homestead / Critters on Call — quick note');
+    var body=encodeURIComponent('Hi'+(c.name?(' '+c.name.split(' ')[0]):'')+',\n\nMichael Sheehan — Sheehan Homestead / Critters on Call (Callahan · Jax).\n\n[your ask]\n\nMichael\n914-263-1311');
+    return 'mailto:'+encodeURIComponent(c.email)+'?subject='+sub+'&body='+body;
+  }
+  function render(){
+    if(!data) return;
+    var segs=data.segments||[];
+    var host=document.getElementById('segs'); host.innerHTML='';
+    segs.forEach(function(s){
+      var b=document.createElement('button'); b.type='button';
+      b.textContent=s.label+' ('+((s.contacts||[]).length)+')';
+      if(s.id===segId) b.className='on';
+      b.onclick=function(){ segId=s.id; render(); };
+      host.appendChild(b);
+    });
+    var seg=segs.find(function(s){ return s.id===segId; })||segs[0];
+    if(!seg){ document.getElementById('meta').textContent='No segments'; return; }
+    segId=seg.id;
+    var done=doneSet(segId);
+    var contacts=seg.contacts||[];
+    document.getElementById('meta').innerHTML='Seat: <b>'+seg.gtm_seat+'</b> · target <b>'+(data.n_target||11)+'</b> · on list <b>'+contacts.length+(contacts.length<(data.n_target||11)?' <span class="badge gap">SHORT</span>':'')+'</b> · done today <b>'+done.size+'</b><br><span style="color:#93a0b8">'+(seg.note||'')+'</span>';
+    var list=document.getElementById('list'); list.innerHTML='';
+    if(!contacts.length){
+      list.innerHTML='<div class="row"><div></div><div><div class="who">No emails on disk for this seat</div><div class="org">GAP — use one-touch board; do not invent contacts</div></div><div class="acts"><a class="btn" href="one-touch.html">One-touch →</a></div></div>';
+      return;
+    }
+    contacts.forEach(function(c,i){
+      var row=document.createElement('div'); row.className='row'+(done.has(c.email)?' done':'');
+      var acts='<a class="btn" href="'+mailto(c)+'">Email</a>';
+      if(c.form) acts+=' <a class="btn sec" href="'+c.form+'" target="_blank" rel="noopener">Open form</a>';
+      acts+=' <button type="button" class="btn tick" data-email="'+c.email+'">Done</button>';
+      row.innerHTML='<div class="n">'+(i+1)+'</div><div><div class="who">'+(c.name||c.email)+'</div><div class="org">'+(c.org||'')+' · '+c.email+(c.phone?(' · '+c.phone):'')+'</div></div><div class="acts">'+acts+'</div>';
+      row.querySelector('button.tick').onclick=function(){ markDone(segId, c.email); render(); };
+      list.appendChild(row);
+    });
+    // highlight on button
+    Array.prototype.forEach.call(host.querySelectorAll('button'), function(b,i){
+      b.className=(segs[i]&&segs[i].id===segId)?'on':'';
+    });
+  }
+  fetch('data/todays_11_play.json',{cache:'no-store'}).then(function(r){ return r.json(); }).then(function(j){
+    data=j; segId=(location.hash||'').replace('#','')||'enterprise'; render();
+  }).catch(function(){ document.getElementById('meta').textContent='Could not load todays_11_play.json'; });
+})();
+</script>
+<script src="shared/flow-spine.js" defer></script>
+</body></html>

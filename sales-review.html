@@ -1,156 +1,220 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Sales review · BDR Manager · Sheehan Homestead</title>
+<title>Sales Hub · ICP · Connect · Product · Sheehan Homestead</title>
 <style>
-:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--bad:#ff5d6c;--violet:#a78bfa}
+:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--bad:#ff5d6c;--violet:#a78bfa;--money:#f0abfc}
 *{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
 a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
-.wrap{max-width:1280px;margin:0 auto;padding:22px}
-.apps{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 12px;padding:10px 12px;border:1px solid var(--line);border-radius:14px;background:#0f1728}
-.apps .lbl{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-right:4px}
-.apps a{background:var(--card);border:1px solid #3dd68c55;color:var(--text);padding:6px 10px;border-radius:999px;font-size:.78rem;text-decoration:none;font-weight:600}
-.apps a.money{border-color:#a855f788;background:linear-gradient(135deg,#2a1530,#121a2b);font-size:.88rem;padding:8px 16px}
-.cascade{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin:0 0 14px;padding:10px 12px;border:1px solid var(--line);border-radius:14px;background:#0f1728}
-.cascade .lbl{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-right:4px}
-.cascade a{padding:6px 12px;border-radius:999px;font-size:.76rem;font-weight:600;border:1px solid var(--line);background:var(--card);color:var(--text);text-decoration:none}
-.cascade a.on{border-color:var(--accent);background:#152238;color:#fff}
-.cascade .arr{color:var(--muted);opacity:.7}
-header{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:10px;flex-wrap:wrap}
-h1{font-size:1.35rem;margin:0}.sub{color:var(--muted);font-size:.88rem}
-.nav{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0 16px}
-.nav a{background:var(--card);border:1px solid var(--line);padding:6px 11px;border-radius:999px;font-size:.78rem;color:var(--text)}
-.nav a.active{border-color:var(--accent);background:#152238;color:#fff}
-.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:11px;margin-bottom:16px}
-.kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px;position:relative;overflow:hidden}
-.kpi::after{content:"";position:absolute;inset:auto 0 0 0;height:2px;background:linear-gradient(90deg,var(--accent),var(--violet));opacity:.55}
-.kpi .l{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
-.kpi .v{font-size:1.35rem;font-weight:700;margin-top:4px}
+.wrap{max-width:1180px;margin:0 auto;padding:28px 22px 48px}
+.top{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 18px;padding:10px 14px;border:1px solid var(--line);border-radius:14px;background:#0f1728}
+.top .lbl{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-right:4px}
+.top a{background:var(--card);border:1px solid var(--line);color:var(--text);padding:7px 12px;border-radius:999px;font-size:.78rem;font-weight:600;text-decoration:none}
+.top a.money{border-color:#a855f788;background:linear-gradient(135deg,#2a1530,#121a2b);color:#f0abfc;font-size:.9rem;padding:9px 16px}
+.top a.sec{font-weight:500;font-size:.72rem;color:#c5d0e6}
+.crumb{font-size:.82rem;color:var(--muted);margin:0 0 12px}
+.crumb a{color:#9ec1ff;font-weight:600}
+header{margin-bottom:8px}
+h1{font-size:clamp(1.55rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;font-weight:750}
+.sub{color:var(--muted);font-size:.95rem}
+.north{margin:10px 0 20px;font-size:1.02rem;color:#c5d0e6}
+.north b{color:#fff}
+.kpi-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:0 0 22px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
+.kpi .l{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.kpi .v{font-size:1.4rem;font-weight:750;margin-top:4px}
 .kpi .s{font-size:.72rem;color:var(--muted);margin-top:3px}
-.dept-label{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin:18px 0 10px}
-.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
-.tile{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px;display:block;color:inherit}
-.tile:hover{border-color:var(--accent);text-decoration:none}
-.tile.primary{grid-column:1/-1;border-color:#5b8cff99;background:linear-gradient(160deg,#152238,#121a2b);min-height:100px}
-.tile.money{border-color:#a855f799;background:linear-gradient(160deg,#2a1530,#121a2b)}
-.tile h3{margin:0 0 5px;font-size:.95rem}.tile p{margin:0;color:var(--muted);font-size:.82rem}
-.tile .open{display:inline-block;margin-top:12px;font-size:.78rem;font-weight:700;color:var(--accent)}
-.tile .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
-.chipk{font-size:.7rem;padding:3px 8px;border-radius:999px;background:var(--panel);border:1px solid var(--line)}
-.chipk b{color:var(--good)}
-.badge{font-size:.65rem;padding:2px 7px;border-radius:6px;background:#1a2440;color:var(--accent);border:1px solid var(--line);margin-left:6px}
+.pace{height:10px;background:var(--panel);border-radius:99px;overflow:hidden;margin-top:8px;border:1px solid var(--line)}
+.pace>i{display:block;height:100%;background:linear-gradient(90deg,var(--good),var(--accent));width:0}
+.doors{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:28px}
+@media(max-width:900px){.doors{grid-template-columns:1fr}}
+.door-tile{display:flex;flex-direction:column;justify-content:space-between;min-height:200px;padding:24px;border-radius:20px;border:1px solid var(--line);background:var(--card);color:inherit;text-decoration:none;transition:border-color .15s,transform .12s}
+.door-tile:hover{transform:translateY(-2px);text-decoration:none}
+.door-tile .kicker{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:10px}
+.door-tile h2{margin:0 0 10px;font-size:clamp(1.45rem,2.8vw,1.9rem);letter-spacing:-.015em;line-height:1.1}
+.door-tile p{margin:0;color:var(--muted);font-size:.95rem}
+.door-tile .go{margin-top:20px;font-size:1rem;font-weight:800}
+.door-tile.icp{border-color:#5b8cff88;background:linear-gradient(160deg,#152238,#121a2b 70%)}.door-tile.icp .go{color:#9ec1ff}
+.door-tile.connect{border-color:#a78bfa88;background:linear-gradient(160deg,#1a1530,#121a2b 70%)}.door-tile.connect .go{color:#c4b5fd}
+.door-tile.product{border-color:#fbbf2466;background:linear-gradient(160deg,#2a2210,#121a2b 70%)}.door-tile.product .go{color:#fde68a}
+.money-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;margin:0 0 26px;padding:16px 20px;border:1px solid #a855f799;border-radius:16px;background:linear-gradient(135deg,#2a1530,#121a2b)}
+.money-bar h3{margin:0;font-size:1.15rem;color:#f5d0fe}
+.money-bar p{margin:4px 0 0;color:#d4c4ff;font-size:.85rem}
+.money-bar .cta{padding:10px 16px;border-radius:999px;background:#a855f7;color:#fff;font-weight:800;text-decoration:none}
+.drill{scroll-margin-top:18px;margin:0 0 22px;padding:22px 24px;border:1px solid var(--line);border-radius:18px;background:#0f1728}
+.drill h2{margin:0 0 6px;font-size:clamp(1.2rem,2.2vw,1.5rem)}
+.drill .blurb{color:var(--muted);margin:0 0 14px;font-size:.92rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.card{display:block;padding:16px 18px;border-radius:14px;border:1px solid var(--line);background:var(--card);color:inherit;text-decoration:none;min-height:100px}
+.card:hover{border-color:var(--accent);text-decoration:none}
+.card h3{margin:0 0 6px;font-size:1.02rem}
+.card p{margin:0;color:var(--muted);font-size:.82rem}
+.card .open{display:inline-block;margin-top:10px;font-weight:700;font-size:.78rem;color:var(--accent)}
+.badge{font-size:.65rem;padding:2px 8px;border-radius:6px;background:#1a2440;color:var(--accent);border:1px solid var(--line);margin-left:6px;vertical-align:middle}
+.badge.gap{background:#2a2416;color:var(--warn);border-color:#ffb02066}
+.badge.demo{background:#2a2416;color:var(--warn);border-color:#ffb02066}
 .badge.vacant{background:#1a1f2e;color:var(--violet);border-color:#a78bfa55}
-.seat{border-left:3px solid var(--violet);padding:8px 12px;margin:8px 0;background:var(--panel);border-radius:0 8px 8px 0;font-size:.82rem}
+.book-card{margin:28px 0 12px;padding:20px 22px;border:1px dashed #ffb02088;border-radius:16px;background:#16140f}
+.book-card h3{margin:0 0 8px;font-size:1.1rem;color:#fde68a}
+.book-card ol{margin:8px 0 0;padding-left:1.2rem;color:#c5d0e6;font-size:.88rem}
+.book-card li{margin:6px 0}
+.note{color:var(--muted);font-size:.78rem;margin-top:18px}
+.seat{border-left:3px solid var(--violet);padding:8px 12px;margin:8px 0;background:var(--panel);border-radius:0 8px 8px 0;font-size:.84rem}
 .seat.named{border-color:var(--good)}
-.note{color:var(--muted);font-size:.78rem;margin-top:22px}
-.links-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
-.links-row a{font-size:.72rem;padding:3px 9px;border-radius:999px;border:1px solid var(--line);background:#0e1626;color:#c5d0e6;text-decoration:none}
 </style></head>
 <body data-flow-face="sales" data-flow-chip="sales-review"><div class="wrap">
 
-<div class="apps">
+<div class="top">
   <span class="lbl">Apps</span>
   <a class="money" href="one-touch.html">One-touch · money</a>
-  <a href="rvp-ops.html">RVP Ops</a>
-  <a href="gtm-seats.html" style="border-color:#a78bfa66">GTM seats</a>
-  <a href="index.html" style="border-color:var(--line);font-weight:500;font-size:.72rem">Layer Zero</a>
+  <a href="rvp-ops.html">Franchise Hub</a>
+  <a href="connect.html">Connect</a>
+  <a href="index.html" class="sec">Layer Zero</a>
 </div>
 
-<div class="cascade">
-  <span class="lbl">Cascade</span>
-  <a href="rvp-ops.html">RVP Ops</a><span class="arr">→</span>
-  <a href="sales-review.html" class="on">Sales review</a><span class="arr">→</span>
-  <a href="gtm-seats.html">GTM seats</a><span class="arr">→</span>
-  <a href="bdr-manager-review.html">BDR Manager</a><span class="arr">→</span>
-  <a href="bdr-rep-review.html">Rep desk</a>
-</div>
+<p class="crumb"><a href="rvp-ops.html">Franchise Hub</a> → <b>Sales hub</b></p>
 
 <header>
-  <div>
-    <h1>Sales review · with BDR Manager <span class="badge vacant">Manager seat vacant</span></h1>
-    <div class="sub">Michael reviews pipeline · hire seats · boards. No invented BDR names — vacant seats are future SOP outsource.</div>
-  </div>
-  <div class="sub">Reviewer: <b>Michael Sheehan</b> (RVP)</div>
+  <h1>Sales hub <span class="badge vacant">BDR Mgr vacant</span></h1>
+  <div class="sub">Sheehan Homestead · Michael reviews · three doors for screen-share — not a chip laundry list</div>
 </header>
+<p class="north">Quota <b>$250k</b> by <b>2026-12-23</b> · pace from real PayPal / ops book · bookings JSON = dates/status (no $ fields)</p>
 
-<div class="nav">
-  <a href="rvp-ops.html">RVP Ops</a>
-  <a href="sales-review.html" class="active">Sales review</a>
-  <a href="gtm-seats.html" style="border-color:#a78bfa88;color:#c4b5fd">GTM seats</a>
-  <a href="one-touch.html" style="border-color:#a855f788;color:#f0abfc">One-touch</a>
-  <a href="bdr-tam.html">BDR TAM</a>
-  <a href="bdr-pipeline.html">Pipeline</a>
-  <a href="easy-attack.html">Easy attack</a>
-  <a href="team-hire.html">Team</a>
-</div>
+<a class="money-bar" href="one-touch.html">
+  <div>
+    <h3>One-touch · money accent</h3>
+    <p>Stage mass-touch · Michael closes. Hard link from every sales desk.</p>
+  </div>
+  <span class="cta">Open →</span>
+</a>
 
-<div class="kpis">
+<div class="kpi-row">
+  <div class="kpi"><div class="l">Quota</div><div class="v">$250k</div><div class="s">goal date 2026-12-23</div></div>
+  <div class="kpi"><div class="l">Pace vs goal</div><div class="v" id="k-pace">—</div><div class="s" id="k-pace-s">PayPal / ops book</div><div class="pace"><i id="k-pace-bar"></i></div></div>
   <div class="kpi"><div class="l">CALL_NOW</div><div class="v" id="k-call">—</div><div class="s">dialer</div></div>
-  <div class="kpi"><div class="l">Warm</div><div class="v" id="k-warm">—</div><div class="s">warm band</div></div>
-  <div class="kpi"><div class="l">Needs contact</div><div class="v" id="k-needs">—</div><div class="s">WARM_NEEDS</div></div>
-  <div class="kpi"><div class="l">BDR seats open</div><div class="v">7</div><div class="s">vacant · + Michael testing</div></div>
+  <div class="kpi"><div class="l">Warm / Needs</div><div class="v" id="k-warm">—</div><div class="s" id="k-warm-s">bands</div></div>
   <div class="kpi"><div class="l">TAM contacts</div><div class="v" id="k-tam">—</div><div class="s">bdr_tam</div></div>
+  <div class="kpi"><div class="l">Upcoming gigs</div><div class="v" id="k-gigs">—</div><div class="s" id="k-gigs-s">bookings</div></div>
 </div>
 
-<div class="dept-label">Ownership (honest)</div>
+<nav class="doors" aria-label="Sales three doors">
+  <a class="door-tile icp" href="#icp">
+    <div>
+      <div class="kicker">Door 1</div>
+      <h2>ICP</h2>
+      <p>Lists that matter: one-touch · BDR TAM · GTM seats · lead sources</p>
+    </div>
+    <span class="go">Open ICP →</span>
+  </a>
+  <a class="door-tile connect" href="connect.html">
+    <div>
+      <div class="kicker">Door 2</div>
+      <h2>Connect</h2>
+      <p>Repository: wheel · book · gold · collateral · pitches · objections</p>
+    </div>
+    <span class="go">Open Connect →</span>
+  </a>
+  <a class="door-tile product" href="#product">
+    <div>
+      <div class="kicker">Door 3</div>
+      <h2>Product</h2>
+      <p>Pricing · packages · Battle Row animals/assets · programs</p>
+    </div>
+    <span class="go">Open Product →</span>
+  </a>
+</nav>
+
 <div class="seat named"><b>Michael Sheehan</b> — RVP / Operator · owns sales motion today</div>
-<div class="seat named"><b>Ann-Marie</b> — Ops / AR · supports invoices &amp; handoffs (not BDR dialer)</div>
-<div class="seat"><b>BDR Manager</b> — <span style="color:var(--violet)">vacant</span> · future outsource · SOP later · no named hire</div>
-<div class="seat"><b>GTM seats</b> — Enterprise · Subscription · Violet ~50% · Red tape · Charity partner · B2C customers (559) · B2C field = <span style="color:var(--violet)">vacant</span>; Enterprise tester = Michael testing. <a href="gtm-seats.html">Open map →</a></div>
+<div class="seat named"><b>Ann-Marie</b> — Ops / AR · invoices &amp; handoffs (not BDR dialer)</div>
+<div class="seat"><b>BDR Manager</b> — <span style="color:var(--violet)">vacant</span> · future outsource · no named hire</div>
 
-<div class="dept-label">Drill</div>
-<div class="tiles">
-<a class="tile money" href="one-touch.html">
-  <h3>One-touch · money button</h3>
-  <p>#1 money motion — hard link from every sales desk.</p>
-  <span class="open">Open →</span>
-</a>
-<a class="tile" href="gtm-seats.html" style="border-color:#a78bfa88">
-  <h3>GTM seat map <span class="badge vacant">LOCKED</span></h3>
-  <p>Mature B2B · also-run · B2C · who owns what. Vacant vs Michael testing. Consumer list = 559.</p>
-  <span class="open">Open →</span>
-</a>
-<a class="tile primary" href="bdr-manager-review.html">
-  <h3>BDR Manager desk → <span class="badge vacant">VACANT SEAT</span></h3>
-  <p>Template desk for reviewing a BDR / setter under the manager seat. Queue slices · easy-attack · inbound · personal actions. Seat empty until hired / outsourced.</p>
-  <span class="open">Open →</span>
-</a>
-<a class="tile" href="bdr-tam.html">
-  <h3>BDR TAM</h3>
-  <p>Primary dialer board · lanes · compose.</p>
-  <div class="chips"><span class="chipk">Contacts <b id="w-tam">—</b></span></div>
-  <span class="open">Open →</span>
-</a>
-<a class="tile" href="bdr-pipeline.html">
-  <h3>BDR Pipeline</h3>
-  <p>Enterprise bands · Call now · Warm · Needs.</p>
-  <div class="chips"><span class="chipk">CALL_NOW <b id="w-call">—</b></span></div>
-  <span class="open">Open →</span>
-</a>
-<a class="tile" href="easy-attack.html">
-  <h3>Easy attack</h3>
-  <p>Mass-touch ideas · manual/light only.</p>
-  <span class="open">Open →</span>
-</a>
-<a class="tile" href="team-hire.html">
-  <h3>Hire seats</h3>
-  <p>8 GTM seats · vacant until outsourced · see map.</p>
-  <span class="open">Open →</span>
-</a>
-</div>
+<section class="drill" id="icp">
+  <h2>ICP · lists</h2>
+  <p class="blurb">Who we sell to and who owns the seat. Drill into live boards — don’t invent names.</p>
+  <div class="cards">
+    <a class="card" href="one-touch.html" style="border-color:#a855f788"><h3>One-touch</h3><p>#1 money list / compose surface.</p><span class="open" style="color:#f0abfc">Open →</span></a>
+    <a class="card" href="bdr-tam.html"><h3>BDR TAM</h3><p>Primary dialer · lanes · compose.</p><span class="open">Open →</span></a>
+    <a class="card" href="gtm-seats.html" style="border-color:#a78bfa66"><h3>GTM seats</h3><p>Mature B2B · also-run · B2C · vacant map.</p><span class="open" style="color:#c4b5fd">Open →</span></a>
+    <a class="card" href="lead-sources.html"><h3>Lead sources</h3><p>Human source tags on file.</p><span class="open">Open →</span></a>
+    <a class="card" href="bdr-pipeline.html"><h3>BDR Pipeline</h3><p>CALL_NOW · Warm · Needs.</p><span class="open">Open →</span></a>
+    <a class="card" href="crm-icp.html"><h3>CRM ICP</h3><p>Regional subscription greens.</p><span class="open">Open →</span></a>
+    <a class="card" href="bdr-manager-review.html"><h3>BDR Manager desk <span class="badge vacant">VACANT</span></h3><p>Template until hired / outsourced.</p><span class="open">Open →</span></a>
+    <a class="card" href="easy-attack.html"><h3>Easy attack</h3><p>Mass-touch ideas · staging only.</p><span class="open">Open →</span></a>
+    <a class="card" href="todays-11.html" style="border-color:#a855f788"><h3>Today’s 11</h3><p>Per GTM seat · mailto + form · no auto-send.</p><span class="open" style="color:#f0abfc">Open →</span></a>
+  </div>
+</section>
 
-<p class="note">Cascade: RVP → Sales review → BDR Manager → Rep · Brand: Sheehan Homestead · Built 2026-09-23 ET</p>
+<section class="drill" id="connect">
+  <h2>Connect · repository</h2>
+  <p class="blurb">Sales aids Michael can share on a call. Thin pitches/objections = honest GAP — no invented copy.</p>
+  <div class="cards">
+    <a class="card" href="connect.html" style="border-color:#a78bfa88"><h3>Connect home</h3><p>Wheel · book · gold · collateral · gaps.</p><span class="open" style="color:#c4b5fd">Open →</span></a>
+    <a class="card" href="https://onchainoffgrid-hub.github.io/critters-on-call/wheel.html" target="_blank" rel="noopener"><h3>Prize wheel</h3><p>Live Critters wheel.</p><span class="open">Open live →</span></a>
+    <a class="card" href="https://onchainoffgrid-hub.github.io/critters-on-call/book.html" target="_blank" rel="noopener"><h3>Book <span class="badge demo">DEMO/LOCAL</span></h3><p>localStorage only — not on marketing site.</p><span class="open">Open demo →</span></a>
+    <a class="card" href="https://onchainoffgrid-hub.github.io/critters-on-call/gold.html" target="_blank" rel="noopener"><h3>Gold / deals</h3><p>Membership path · Critters app.</p><span class="open">Open live →</span></a>
+    <a class="card" href="collateral.html"><h3>Collateral</h3><p>Coverage board · one-pagers on disk.</p><span class="open">Open →</span></a>
+  </div>
+</section>
+
+<section class="drill" id="product">
+  <h2>Product</h2>
+  <p class="blurb">What we sell and what we can physically deliver this week.</p>
+  <div class="cards">
+    <a class="card" href="https://onchainoffgrid-hub.github.io/critters-on-call/pricing.html" target="_blank" rel="noopener" style="border-color:#fbbf2466"><h3>Pricing</h3><p>Family menu · farm + mobile · live Critters.</p><span class="open" style="color:#fde68a">Open live →</span></a>
+    <a class="card" href="catalogue-close.html"><h3>Packages / catalogue</h3><p>Close catalogue · offer chips.</p><span class="open">Open →</span></a>
+    <a class="card" href="ops-battle-row.html" style="border-color:#fbbf2466"><h3>Battle Row</h3><p>Animals · pens · tents · assets.</p><span class="open" style="color:#fde68a">Open →</span></a>
+    <a class="card" href="programming.html"><h3>Programs</h3><p>What we run · heat map.</p><span class="open">Open →</span></a>
+    <a class="card" href="bookings-dates.html"><h3>Bookings / dates</h3><p>Locked gigs · next actions.</p><span class="open">Open →</span></a>
+  </div>
+</section>
+
+<section class="book-card" id="make-book-live">
+  <h3>Make Book live <span class="badge demo">BLOCKED · DEMO/LOCAL</span></h3>
+  <p style="margin:0;color:#c5d0e6;font-size:.88rem"><b>sheehanhomestead.com</b> unreachable (HTTP 000). Critters Book = localStorage only.</p>
+  <p style="margin:10px 0 0;color:#fde68a;font-size:.88rem"><b>Need from Michael:</b></p>
+  <ol>
+    <li>Site platform (Wix / Squarespace / WordPress / other) + admin path <b>OR</b> paste embed/booking URL.</li>
+    <li>Preferred path: <b>(A)</b> embed <code>https://onchainoffgrid-hub.github.io/critters-on-call/book.html</code> on /book, <b>(B)</b> point Book CTA to that URL, or <b>(C)</b> Calendly/Acuity/Setmore link to wrap.</li>
+    <li>Confirmation landing (email Michael / Ann-Marie).</li>
+  </ol>
+</section>
+
+<p class="note">Cascade: Franchise Hub → Sales hub (ICP · Connect · Product) · Brand: Sheehan Homestead · Built 2026-09-23 ET · No invented revenue</p>
 </div>
 <script>
 (function(){
+  function fmt$(n){ if(n==null||n==='') return '—'; var x=Number(n); if(isNaN(x)) return '—'; return '$'+Math.round(x).toLocaleString('en-US'); }
   function set(id,v){ var el=document.getElementById(id); if(el) el.textContent=(v==null||v==='')?'—':v; }
   async function load(p){ try{ var r=await fetch(p,{cache:'no-store'}); if(!r.ok) throw 0; return await r.json(); }catch(e){ return null; } }
-  Promise.all([load('data/suite_summary.json'),load('data/suite_kpis.json')]).then(function(a){
-    var sum=a[0]||{}, k=a[1]||{};
+  var today='2026-09-23', goal=250000;
+  Promise.all([
+    load('data/suite_summary.json'),
+    load('data/suite_kpis.json'),
+    load('data/paypal_kpis.json'),
+    load('data/bookings_pipeline.json')
+  ]).then(function(a){
+    var sum=a[0]||{}, k=a[1]||{}, pay=a[2]||{}, book=a[3]||{};
+    if(sum.bookings_goal) goal=Number(sum.bookings_goal)||goal;
+    var ytd=pay.ytd_2026&&pay.ytd_2026.outside_gross;
+    var opsBook=pay.ops_book_unaudited&&pay.ops_book_unaudited.booked_ytd_approx;
+    var pct=ytd!=null?Math.min(100,Math.round(1000*ytd/goal)/10):null;
+    set('k-pace', ytd!=null?(fmt$(ytd)+(pct!=null?' · '+pct+'%':'')):'—');
+    var sub='PayPal 2026 YTD outside';
+    if(opsBook!=null) sub+=' · ops book ~'+fmt$(opsBook)+' (unaudited)';
+    set('k-pace-s', sub);
+    var bar=document.getElementById('k-pace-bar');
+    if(bar&&pct!=null) bar.style.width=pct+'%';
     var call=(sum.bdr_spec_aligned&&sum.bdr_spec_aligned.CALL_NOW)!=null?sum.bdr_spec_aligned.CALL_NOW:k.call_now;
     var warm=(sum.bdr_spec_aligned&&sum.bdr_spec_aligned.Warm)!=null?sum.bdr_spec_aligned.Warm:k.warm;
     var needs=(sum.bdr_spec_aligned&&sum.bdr_spec_aligned.WARM_NEEDS_CONTACT)!=null?sum.bdr_spec_aligned.WARM_NEEDS_CONTACT:k.needs_contact;
-    set('k-call',call); set('w-call',call); set('k-warm',warm); set('k-needs',needs);
-    var tam=sum.bdr_tam&&sum.bdr_tam.contacts; set('k-tam',tam); set('w-tam',tam);
+    set('k-call', call); set('k-warm', (warm!=null&&needs!=null)?(warm+' / '+needs):(warm||needs||'—'));
+    set('k-warm-s', 'Warm / Needs contact');
+    set('k-tam', sum.bdr_tam&&sum.bdr_tam.contacts);
+    var rows=Array.isArray(book.bookings)?book.bookings:[];
+    var skip={'NO_PAY':1,'PIPELINE_MIA':1,'STUB':1};
+    var upcoming=rows.filter(function(b){ return b.date&&b.date>=today&&!skip[b.status]; })
+      .sort(function(a,c){ return (a.date||'').localeCompare(c.date||''); });
+    set('k-gigs', upcoming.length);
+    if(upcoming.length) set('k-gigs-s', 'Next '+upcoming[0].date);
   });
 })();
 </script>

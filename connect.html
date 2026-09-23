@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Connect · Sales repository · Sheehan Homestead</title>
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--bad:#ff5d6c;--violet:#a78bfa}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1100px;margin:0 auto;padding:28px 22px 48px}
+.top{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 18px;padding:10px 14px;border:1px solid var(--line);border-radius:14px;background:#0f1728}
+.top .lbl{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-right:4px}
+.top a{background:var(--card);border:1px solid var(--line);color:var(--text);padding:7px 12px;border-radius:999px;font-size:.78rem;font-weight:600;text-decoration:none}
+.top a.money{border-color:#a855f788;background:linear-gradient(135deg,#2a1530,#121a2b);color:#f0abfc}
+.crumb{font-size:.82rem;color:var(--muted);margin:0 0 12px}
+.crumb a{color:#9ec1ff;font-weight:600}
+h1{font-size:clamp(1.5rem,3vw,2rem);margin:0 0 6px;letter-spacing:-.02em}
+.sub{color:var(--muted);font-size:.95rem;margin-bottom:22px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.tile{display:flex;flex-direction:column;justify-content:space-between;min-height:140px;padding:18px 20px;border-radius:16px;border:1px solid var(--line);background:var(--card);color:inherit;text-decoration:none}
+.tile:hover{border-color:var(--accent);text-decoration:none}
+.tile h3{margin:0 0 6px;font-size:1.15rem}
+.tile p{margin:0;color:var(--muted);font-size:.85rem}
+.tile .open{margin-top:14px;font-weight:800;font-size:.85rem;color:var(--accent)}
+.tile.gap{border-style:dashed;border-color:#ffb02066;background:#16140f}
+.tile.gap h3{color:#fde68a}
+.tile.gap .open{color:var(--warn)}
+.badge{font-size:.65rem;padding:2px 8px;border-radius:6px;background:#1a2440;color:var(--accent);border:1px solid var(--line);margin-left:6px}
+.badge.live{background:#13281d;color:var(--good);border-color:#3dd68c66}
+.badge.demo{background:#2a2416;color:var(--warn);border-color:#ffb02066}
+.badge.gap{background:#2a2416;color:var(--warn);border-color:#ffb02066}
+.book-card{margin:28px 0 12px;padding:20px 22px;border:1px dashed #ffb02088;border-radius:16px;background:#16140f}
+.book-card h3{margin:0 0 8px;font-size:1.1rem;color:#fde68a}
+.book-card ol{margin:8px 0 0;padding-left:1.2rem;color:#c5d0e6;font-size:.88rem}
+.book-card li{margin:6px 0}
+.note{color:var(--muted);font-size:.78rem;margin-top:18px}
+.lbls{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin:22px 0 10px}
+</style></head>
+<body data-flow-face="sales" data-flow-chip="connect"><div class="wrap">
+
+<div class="top">
+  <span class="lbl">Apps</span>
+  <a class="money" href="one-touch.html">One-touch</a>
+  <a href="rvp-ops.html">Franchise Hub</a>
+  <a href="sales-review.html">Sales hub</a>
+  <a href="https://onchainoffgrid-hub.github.io/critters-on-call/" target="_blank" rel="noopener">Critters LIVE</a>
+</div>
+
+<p class="crumb"><a href="rvp-ops.html">Franchise Hub</a> → <a href="sales-review.html">Sales hub</a> → <b>Connect</b></p>
+
+<h1>Connect <span class="badge">repository</span></h1>
+
+<div style="margin:0 0 18px;padding:14px 16px;border:1px solid #5b8cff66;border-radius:14px;background:#152238;font-size:.9rem;color:#c5d0e6">
+  <b style="color:#9ec1ff">CRM interactive:</b> Click Email / Compose opens a <b>populated email client</b> (mailto). <b>Michael sends</b> — suite never auto-sends. Same rule on <a href="one-touch.html" style="color:#f0abfc;font-weight:700">one-touch</a> · <a href="todays-11.html" style="color:#f0abfc;font-weight:700">Today’s 11</a>.
+</div>
+<p class="sub">Sales aids for screen-share. Links to live Critters assets where they exist. Thin areas = honest GAP cards — no invented pitch/objection copy.</p>
+
+<div class="lbls">Live / on disk</div>
+<div class="grid">
+  <a class="tile" href="https://onchainoffgrid-hub.github.io/critters-on-call/wheel.html" target="_blank" rel="noopener">
+    <div><h3>Prize wheel <span class="badge live">LIVE</span></h3><p>“How Sweet It Is” · Critters on Call.</p></div>
+    <span class="open">Open →</span>
+  </a>
+  <a class="tile" href="https://onchainoffgrid-hub.github.io/critters-on-call/book.html" target="_blank" rel="noopener">
+    <div><h3>Book / app <span class="badge demo">DEMO · localStorage</span></h3><p>Works in-browser · not embedded on sheehanhomestead.com.</p></div>
+    <span class="open">Open demo →</span>
+  </a>
+  <a class="tile" href="https://onchainoffgrid-hub.github.io/critters-on-call/gold.html" target="_blank" rel="noopener">
+    <div><h3>Gold / deals <span class="badge live">LIVE</span></h3><p>Membership · upsell paths.</p></div>
+    <span class="open">Open →</span>
+  </a>
+  <a class="tile" href="collateral.html">
+    <div><h3>Collateral <span class="badge live">SUITE</span></h3><p>Coverage board · one-pagers on disk.</p></div>
+    <span class="open">Open →</span>
+  </a>
+  <a class="tile" href="https://onchainoffgrid-hub.github.io/critters-on-call/pricing.html" target="_blank" rel="noopener">
+    <div><h3>Pricing sheet <span class="badge live">LIVE</span></h3><p>Family menu · farm + mobile.</p></div>
+    <span class="open">Open →</span>
+  </a>
+  <a class="tile" href="one-touch.html">
+    <div><h3>One-touch compose <span class="badge live">SUITE</span></h3><p>Stage outreach · Michael closes.</p></div>
+    <span class="open">Open →</span>
+  </a>
+  <a class="tile" href="todays-11.html" style="border-color:#a855f788">
+    <div><h3>Today’s 11 <span class="badge live">PLAY</span></h3><p>11 per GTM seat · mailto + form only · no auto-send.</p></div>
+    <span class="open" style="color:#f0abfc">Open →</span>
+  </a>
+</div>
+
+<div class="lbls">Gaps · do not invent copy</div>
+<div class="grid">
+  <div class="tile gap">
+    <div><h3>Pitches library <span class="badge gap">GAP</span></h3><p>No dedicated pitch deck / talk-track pack in suite yet. Use one-touch compose + sell_catalog chips until Michael drops copy.</p></div>
+    <span class="open">Blocked on Michael copy</span>
+  </div>
+  <div class="tile gap">
+    <div><h3>Objection handling <span class="badge gap">GAP</span></h3><p>No objection-handling sheet on disk. Stub only — do not invent answers.</p></div>
+    <span class="open">Blocked on Michael copy</span>
+  </div>
+</div>
+
+<section class="book-card" id="make-book-live">
+  <h3>Make Book live <span class="badge demo">BLOCKED</span></h3>
+  <p style="margin:0;color:#c5d0e6;font-size:.88rem"><b>sheehanhomestead.com</b> returns unreachable (HTTP 000) from this box. Critters <code>book.html</code> = <b>localStorage only</b>.</p>
+  <p style="margin:10px 0 0;color:#fde68a;font-size:.88rem"><b>Need from Michael:</b></p>
+  <ol>
+    <li>Confirm site platform (Wix / Squarespace / WordPress / other) + admin access path <b>OR</b> paste an embed/booking URL if one exists.</li>
+    <li>Preferred live path: <b>(A)</b> embed <code>https://onchainoffgrid-hub.github.io/critters-on-call/book.html</code> on a /book page, <b>(B)</b> point Book CTA to that URL, or <b>(C)</b> give Calendly/Acuity/Setmore link to wrap.</li>
+    <li>Where confirmations should land (email to Michael / Ann-Marie).</li>
+  </ol>
+  <p style="margin:12px 0 0;font-size:.85rem;color:var(--muted)">Until then Book stays <b>demo/local</b>.</p>
+</section>
+
+<p class="note">Connect · Sales repository · Sheehan Homestead · Built 2026-09-23 ET</p>
+</div>
+<script src="shared/flow-spine.js" defer></script>
+</body></html>
