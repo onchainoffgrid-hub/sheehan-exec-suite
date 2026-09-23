@@ -57,13 +57,14 @@ h1{font-size:clamp(1.5rem,3vw,2rem);margin:0 0 6px;letter-spacing:-.02em;font-we
 
 <header>
   <h1>Support catalog <span class="badge">by role</span></h1>
-  <div class="sub">Pick the buyer role · open HTML one-pagers · Gmail compose prefill (you hit send)</div>
+  <div class="sub">Pick the buyer role · open HTML one-pagers · email pitches live on Quick pitches (link out)</div>
 </header>
 
 <div class="lead"><b>Give-first voice:</b> free / donate / giveaways / silent auction → cheap cross-promo → come-here cheap → affordable programming → mobile = convenience premium. ICP Connect (come-here · go-there · B2B/B2C) lives as links here — not a PDF dump on the hub. Print any HTML if you want a PDF.</div>
 
 <div class="seg-label">Other Support doors (own pages)</div>
 <nav class="doors" aria-label="Support doors">
+  <a class="door" href="quick-pitches.html" style="border-color:#9ec1ff88"><h3>Quick pitches</h3><p>By role · Gmail prefilled · stage only</p></a>
   <a class="door" href="date-liquidation.html"><h3>Date liquidation</h3><p>Perishable open dates · EXAMPLE until GCal wire</p></a>
   <a class="door" href="support-giveables.html"><h3>Giveables / auction</h3><p>Donate · silent auction kit</p></a>
   <a class="door" href="support-reviews.html"><h3>Reviews</h3><p>Journey · pace to 555</p></a>
@@ -74,7 +75,7 @@ h1{font-size:clamp(1.5rem,3vw,2rem);margin:0 0 6px;letter-spacing:-.02em;font-we
 <div class="segs" id="segs" role="tablist" aria-label="Buyer roles"></div>
 <div id="panels"></div>
 
-<p class="note">Prices = labeled ranges from <code>collateral/*.html</code> — never invent hard $. Compose = Gmail prefill only · never auto-send. Built 2026-09-23 ET.</p>
+<p class="note">Prices = labeled ranges from <code>collateral/*.html</code> — never invent hard $. Email pitch bodies live only on quick-pitches.html · catalog links out · never auto-send. Built 2026-09-23 ET.</p>
 </div>
 <script>
 (function(){
@@ -96,49 +97,49 @@ h1{font-size:clamp(1.5rem,3vw,2rem);margin:0 0 6px;letter-spacing:-.02em;font-we
     {id:'ppec', label:'PPEC Director', ready:true, who:'PPEC / pediatric extended care — director or therapy lead.',
       offers:[
         {tag:'Recurring mobile', title:'Monthly / visit path', blurb:'We show up so your team keeps working.', price:'Labeled · ~$175/mo · ~$215/visit (PPEC one-pager)',
-          compose:{su:'Critters visit for your PPEC · Sheehan Homestead', body:'Hi —\n\nWe bring a calm mobile petting experience to PPECs so staff can keep working while kids get hands-on joy.\n\nHappy to send the one-pager or hold a weekday slot.\n\n— Michael\nSheehan Homestead / Critters on Call\n914-263-1311'},
+
           links:[{h:'collateral/ppec-one-pager.html',t:'PPEC HTML'},{h:'collateral/ppec-minizoo-one-pager.html',t:'Mini zoo'}]},
         {tag:'Give-first', title:'Intro / donate visit', blurb:'Open the door with give · then rebook.', price:'$0 entry · then collateral ranges',
-          compose:{su:'Complimentary critter visit · Sheehan Homestead', body:'Hi —\n\nWe often start with a complimentary / donate visit for the right fit — educate or entertain, no hard sell.\n\nIf useful, I can hold a weekday.\n\n— Michael\n914-263-1311'},
+
           links:[{h:'support-giveables.html',t:'Giveables',cls:'muted'}]}
       ]},
     {id:'senior', label:'Activity Director', ready:true, who:'Senior / AL / IL — Activity Director seat.',
       offers:[
         {tag:'Mobile premium', title:'Senior center visit', blurb:'Bunny / mini / standard — we come to you.', price:'Labeled · ~$175/mo · ~$215/visit · business menu ladder',
-          compose:{su:'Animal visit for your activity calendar', body:'Hi —\n\nWe bring a mobile petting experience to senior communities — soft animals, short set, staff can keep working.\n\nWant the one-pager or a midweek hold?\n\n— Michael\nSheehan Homestead / Critters on Call\n914-263-1311'},
+
           links:[{h:'collateral/sr-center-one-pager.html',t:'SR center'},{h:'collateral/sr-minizoo-one-pager.html',t:'SR mini'},{h:'collateral/business-menu-one-pager.html',t:'Business menu'}]},
         {tag:'Auction', title:'Silent auction Critter Club', blurb:'They raise money · we get buzz.', price:'Auction card · Club $50 path (labeled)',
-          compose:{su:'Silent auction donation · Critter Club', body:'Hi —\n\nHappy to donate a Critter Club silent-auction package for your fundraiser.\n\nI can email the card / terms.\n\n— Michael\n914-263-1311'},
+
           links:[{h:'collateral/auction-critter-club-card.html',t:'Auction card'},{h:'support-giveables.html',t:'Giveables',cls:'muted'}]}
       ]},
     {id:'pta', label:'PTA / school', ready:true, who:'PTA · VPK · independent school · Montessori after-school.',
       offers:[
         {tag:'School visit', title:'VPK / classroom visit', blurb:'Educate or entertain on campus.', price:'Labeled · ~$175/mo · ~$215/visit · fest menus separate',
-          compose:{su:'Critters visit for your school / PTA', body:'Hi —\n\nWe do affordable school / VPK visits and festival add-ons — educate or entertain.\n\nHappy to share the one-pager.\n\n— Michael\nSheehan Homestead / Critters on Call\n914-263-1311'},
+
           links:[{h:'collateral/vpk-one-pager.html',t:'VPK'},{h:'collateral/independent-school-festival.html',t:'School fest'},{h:'collateral/montessori-afterschool-leavebehind.html',t:'Montessori'}]},
         {tag:'Come-here', title:'Field trip / farm day', blurb:'Come-here cheap · reviews live here.', price:'Consumer menu · groups $299–$499 · cars $25–$50 (labeled)',
-          compose:{su:'Farm field trip · Sheehan Homestead', body:'Hi —\n\nCome-here farm days are our affordable lane for groups — cars / tickets / Gold path.\n\nWant options for a date?\n\n— Michael\n914-263-1311'},
+
           links:[{h:'collateral/homeschool-field-trip.html',t:'Field trip'},{h:'collateral/consumer-menu-one-pager.html',t:'Consumer menu'}]}
       ]},
-    {id:'amenity', label:'Amenity Director', ready:true, who:'CDD / HOA amenity or lifestyle director.',
+    {id:'amenity', label:'Amenity Director', ready:true, who:'CDD / HOA amenity or lifestyle director · call/email lane (not Hot Links CAPTCHA).',
       offers:[
         {tag:'Protect mobile', title:'Amenity event / festival', blurb:'Standard+ · protect Saturday list.', price:'Amenity menu · $235→$1,349 ladder (labeled)',
-          compose:{su:'Amenity event · Critters on Call', body:'Hi —\n\nWe run mobile petting / festival sets for CDD & HOA amenity calendars — convenience premium so residents show up and staff can work the event.\n\nI can send the amenity menu.\n\n— Michael\nSheehan Homestead / Critters on Call\n914-263-1311'},
-          links:[{h:'collateral/amenity-cdd-menu.html',t:'Amenity menu'},{h:'collateral/vesta-amenity-menu.html',t:'Vesta'},{h:'growth-cdd-hoa.html',t:'Growth CDD/HOA',cls:'muted'}]},
+
+          links:[{h:'collateral/amenity-cdd-menu.html',t:'Amenity menu'},{h:'collateral/vesta-amenity-menu.html',t:'Vesta'},{h:'cdd-call-lane.html',t:'Call/email lane',cls:'muted'},{h:'growth-cdd-hoa.html',t:'Growth CDD/HOA',cls:'muted'}]},
         {tag:'Recurring', title:'Midweek subscription', blurb:'Fill empty weekdays.', price:'Rapid board · ~$175/mo · ~$225/qtr (labeled)',
-          compose:{su:'Recurring midweek amenity visits', body:'Hi —\n\nIf you want a steady midweek animal program (not just festivals), we do recurring visits.\n\nHappy to sketch a calendar around your open days.\n\n— Michael\n914-263-1311'},
+
           links:[{h:'collateral/icp-subscription-one-pager.html',t:'ICP subscription'},{h:'date-liquidation.html',t:'Open dates',cls:'muted'}]}
       ]},
     {id:'smb', label:'Small-biz owner', ready:true, who:'Local shop / cross-promo partner.',
       offers:[
         {tag:'Cheap / barter', title:'Cross-promo package', blurb:'Cheap or no-cost when it fills a hole.', price:'Local packages · Bunny $235–$285 · Mini $549 (labeled) · barter OK',
-          compose:{su:'Cross-promo · Critters + your shop', body:'Hi —\n\nWe do cheap / barter cross-promos with local shops when it fills an open date — shout for shout or a soft package.\n\nOpen to a quick swap?\n\n— Michael\n914-263-1311'},
+
           links:[{h:'collateral/local-business-packages.html',t:'Local packages'},{h:'collateral/business-menu-one-pager.html',t:'Business menu'}]}
       ]},
     {id:'charity', label:'Charity / auction chair', ready:true, who:'Fundraiser · PTA auction · dugout give.',
       offers:[
         {tag:'Give 2×', title:'Silent auction Critter Club', blurb:'Donate package · they raise $.', price:'Bid-up labeled $100 · Club $50 (collateral)',
-          compose:{su:'Donation for your silent auction', body:'Hi —\n\nGlad to donate a Critter Club silent-auction package.\n\nI can send the card and how winners redeem.\n\n— Michael\nSheehan Homestead / Critters on Call\n914-263-1311'},
+
           links:[{h:'collateral/auction-critter-club-card.html',t:'Auction card'},{h:'collateral/giving-comps-trainer.html',t:'Giving comps'},{h:'support-giveables.html',t:'Giveables',cls:'muted'}]},
         {tag:'Gold', title:'Gold / Golden Ticket', blurb:'Microdeposit toward experience.', price:'Gold $50 · gift $25 path (labeled)',
           links:[{h:'collateral/gold-membership-one-pager.html',t:'Gold'},{h:'collateral/golden-ticket-card.html',t:'Golden Ticket'}]}
@@ -146,10 +147,10 @@ h1{font-size:clamp(1.5rem,3vw,2rem);margin:0 0 6px;letter-spacing:-.02em;font-we
     {id:'b2c', label:'Birthday / family', ready:true, who:'B2C birthday · come-here family · Visit Us.',
       offers:[
         {tag:'Come-here', title:'Farm visit / cars', blurb:'Cheap come-here · review machine.', price:'Consumer · $25 / $50 cars · groups $299–$499 (labeled)',
-          compose:{su:'Farm visit · Sheehan Homestead', body:'Hi —\n\nCome-here farm visits are our affordable family lane — cars, tickets, Gold.\n\nWant a date?\n\n— Michael\n914-263-1311'},
+
           links:[{h:'collateral/consumer-menu-one-pager.html',t:'Consumer menu'},{h:'collateral/gold-membership-one-pager.html',t:'Gold'}]},
         {tag:'Mobile premium', title:'Birthday mobile', blurb:'We come so you can host.', price:'Birthday · Standard from $499 · Bunny/Mini smaller (labeled)',
-          compose:{su:'Birthday mobile petting zoo', body:'Hi —\n\nWe bring the mobile petting zoo to birthday parties — convenience premium so you can host.\n\nI can send packages / hold a slot.\n\n— Michael\nSheehan Homestead / Critters on Call\n914-263-1311'},
+
           links:[{h:'collateral/birthday-one-pager.html',t:'Birthday'},{h:'collateral/mobile-consumer.html',t:'Mobile consumer'}]}
       ]},
     {id:'franchise', label:'Franchise / consulting', ready:false, who:'Peer cities · consulting — gray / not-ready.',
@@ -174,13 +175,13 @@ h1{font-size:clamp(1.5rem,3vw,2rem);margin:0 0 6px;letter-spacing:-.02em;font-we
     p.className='panel'+(i===0?' show':'');
     p.id='seg-'+s.id;
     var html='<h2>'+s.label+'</h2><p class="who">'+s.who+'</p><div class="offers">';
+    var pitchHash={ppec:'role-ppec',senior:'role-activity',pta:'role-pta',amenity:'role-cdd',smb:'role-smb',charity:'role-auction'};
     s.offers.forEach(function(o){
       var L=o.links.slice();
-      if(o.compose){
-        L.unshift({h:gmail(o.compose.su,o.compose.body),t:'Gmail compose',cls:'compose'});
-        L.push({h:mailto(o.compose.su,o.compose.body),t:'mailto',cls:'muted'});
-      }
-      html+='<article class="offer"><div class="tag">'+o.tag+'</div><h3>'+o.title+'</h3><p class="blurb">'+o.blurb+'</p><div class="price">'+o.price+' <span>· HTML > PDF</span></div>'+linksHtml(L)+'</article>';
+      var ph=pitchHash[s.id];
+      if(ph){ L.unshift({h:'quick-pitches.html#'+ph,t:'Quick pitch · Gmail',cls:'compose'}); }
+      else { L.unshift({h:'quick-pitches.html',t:'Quick pitches board',cls:'compose'}); }
+      html+='<article class="offer"><div class="tag">'+o.tag+'</div><h3>'+o.title+'</h3><p class="blurb">'+o.blurb+'</p><div class="price">'+o.price+' <span>· HTML > PDF · pitches on Quick pitches only</span></div>'+linksHtml(L)+'</article>';
     });
     html+='</div>';
     p.innerHTML=html;
