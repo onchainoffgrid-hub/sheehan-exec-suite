@@ -19,7 +19,7 @@ cd /workspace/dashboard/exec-suite && python3 -m http.server 8765
 | Consumer Inbound (Violet/B2C) | [consumer-inbound.html](consumer-inbound.html) | Interest **34** · GoDaddy pass **27** · waivers **GAP** · **4** forms missing sheets |
 | Bookings & Dates | [bookings-dates.html](bookings-dates.html) | Fall priority **129** real rows; $ booked **PLACEHOLDER** |
 | Money (CFO) | [money-cfo.html](money-cfo.html) | PayPal H2 **outside $15,408.66** · 42 customers · owner $4,254 separated |
-| BDR TAM Dialer | [bdr-tam.html](bdr-tam.html) | **ALL segments** · Tier1-first · email ranked · unified Jax TAM contacts (`data/bdr_tam_dialer.json`) |
+| BDR TAM Dialer v2 | [bdr-tam.html](bdr-tam.html) | **5 Michael lanes** · score 0–100 · notes/customer ticks (localStorage) · compose pitches · violet fruit · Patricia/Tasia seed · `data/bdr_tam_dialer.json` |
 | BDR Enterprise v1 | [bdr-pipeline.html](bdr-pipeline.html) | **REAL** CALL_NOW 138 · Warm 81 · Needs 140 · Later 11 · Red-tape 44 + filterable dialer |
 | RevOps TAM | [revops-tam.html](revops-tam.html) | Primary SAM **$572,873** · tier rollup · segment counts |
 | Social & Reach | [social-reach.html](social-reach.html) |
@@ -70,3 +70,12 @@ See [LAYOUT_CONTRACT.md](LAYOUT_CONTRACT.md) for shared visual tokens and Money 
 - Consumer: https://onchainoffgrid-hub.github.io/sheehan-exec-suite/consumer-inbound.html
 - BDR TAM: https://onchainoffgrid-hub.github.io/sheehan-exec-suite/bdr-tam.html
 - Jax Buzz: https://onchainoffgrid-hub.github.io/sheehan-exec-suite/jax-local-buzz.html
+
+
+### BDR TAM v2 rebuild
+
+```bash
+cd /workspace/dashboard/exec-suite && python3 scripts/build_bdr_tam_dialer.py && python3 scripts/enrich_bdr_tam_v2.py
+```
+
+localStorage keys: `sheehan_bdr_v2_notes`, `sheehan_bdr_v2_customers`, `sheehan_bdr_v2_tags`, `sheehan_bdr_v2_done`.

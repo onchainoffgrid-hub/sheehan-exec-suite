@@ -1,63 +1,86 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>BDR TAM Dialer · All Segments · Sheehan Homestead</title>
+<html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BDR TAM Dialer v2 · 5 Lanes · Sheehan Homestead</title>
 <style>
 :root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--bad:#ff5d6c;--violet:#a78bfa}
-*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
 a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
-.wrap{max-width:1400px;margin:0 auto;padding:18px}
-.apps{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 12px;padding:10px 12px;border:1px solid var(--line);border-radius:14px;background:#0f1728}
-.apps .lbl{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-right:4px}
-.apps a{background:var(--card);border:1px solid #3dd68c55;color:var(--text);padding:6px 10px;border-radius:999px;font-size:.78rem;text-decoration:none;font-weight:600}
-.apps a.sec{border-color:var(--line);color:#c5d0e6;font-weight:500;font-size:.72rem}
-.faces{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 14px}
-.faces a{padding:7px 14px;border-radius:999px;font-size:.8rem;font-weight:600;border:1px solid var(--line);background:var(--card);color:var(--muted);text-decoration:none}
-.faces a.on{border-color:var(--good);background:#13281d;color:#fff}
-header{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:10px;flex-wrap:wrap}
-h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font-size:.88rem}
-.nav{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0 16px}
-.nav a{background:var(--card);border:1px solid var(--line);padding:6px 11px;border-radius:999px;font-size:.78rem;color:var(--text);text-decoration:none}
-.nav a.active{border-color:var(--accent);background:#152238;color:#fff}
-.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-bottom:14px}
+.wrap{max-width:1480px;margin:0 auto;padding:18px}
+.apps,.faces,.nav,.lanes,.toolbar,.actions,.mem,.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.apps{margin:0 0 12px;padding:10px 12px;border:1px solid var(--line);border-radius:14px;background:#0f1728}
+.apps .lbl{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.apps a,.faces a,.nav a{background:var(--card);border:1px solid var(--line);color:var(--text);padding:6px 11px;border-radius:999px;font-size:.78rem;text-decoration:none;font-weight:600}
+.apps a{border-color:#3dd68c55}.apps a.op,.nav a.op{border-color:#5b8cff88;background:#152238}
+.apps a.sec{border-color:var(--line);font-weight:500;font-size:.72rem;color:#c5d0e6}
+.faces{margin:0 0 14px}.faces a{color:var(--muted)}.faces a.on{border-color:var(--good);background:#13281d;color:#fff}
+header{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:10px}
+h1{font-size:1.35rem;margin:0}.sub{color:var(--muted);font-size:.88rem}
+.nav{margin:10px 0 16px}.nav a.active{border-color:var(--accent);background:#152238;color:#fff}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:10px;margin-bottom:14px}
 .kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;position:relative;overflow:hidden}
-.kpi::after{content:"";position:absolute;inset:auto 0 0 0;height:2px;background:linear-gradient(90deg,var(--accent),var(--good));opacity:.55}
-.kpi .l{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
-.kpi .v{font-size:1.2rem;font-weight:700;margin-top:3px}
-.kpi .s{font-size:.68rem;color:var(--muted);margin-top:2px}
-.kpi.tier1::after{background:linear-gradient(90deg,var(--good),var(--warn))}
-.kpi.mail::after{background:linear-gradient(90deg,var(--violet),var(--accent))}
+.kpi::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--good));opacity:.55}
+.kpi.good::after{background:linear-gradient(90deg,var(--good),#6ee7b7)}
+.kpi.violet::after{background:linear-gradient(90deg,var(--violet),var(--accent))}
+.kpi.warn::after{background:linear-gradient(90deg,var(--warn),var(--accent))}
+.kpi .l{font-size:.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.kpi .v{font-size:1.15rem;font-weight:700;margin-top:3px}
+.kpi .s{font-size:.65rem;color:var(--muted);margin-top:2px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:14px}
 .card h2{font-size:.95rem;margin:0 0 10px}
-.chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px;max-height:160px;overflow:auto}
-.chips button{appearance:none;border:1px solid var(--line);background:var(--panel);color:var(--muted);padding:7px 11px;border-radius:999px;font-size:.72rem;font-weight:600;cursor:pointer;min-height:36px}
-.chips button.on{border-color:var(--accent);background:#152238;color:#fff}
-.chips button .n{opacity:.75;font-weight:500;margin-left:4px}
-.chips button.t1 on,.chips button.has-t1{border-color:#3dd68c55}
-.toolbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}
-.toolbar input,.toolbar select{background:var(--panel);border:1px solid var(--line);color:var(--text);border-radius:8px;padding:7px 10px;font-size:.8rem}
+.emba{font-size:.72rem;color:var(--muted);background:#152238;border:1px solid #5b8cff44;border-radius:10px;padding:10px;margin-bottom:12px}
+.lanes{margin:0 0 12px}
+.lanes button{appearance:none;border:1px solid var(--line);background:var(--panel);color:var(--muted);padding:10px 14px;border-radius:999px;font-size:.78rem;font-weight:700;cursor:pointer;min-height:44px}
+.lanes button.on{border-color:var(--accent);background:#152238;color:#fff}
+.lanes button.sub.on{border-color:#3dd68c88;background:#13281d;color:var(--good)}
+.lanes button.vio.on{border-color:#a78bfa88;background:#1a1530;color:#d4c4ff}
+.lanes button.smb.on{border-color:#ffb02088;background:#2a2416;color:var(--warn)}
+.lanes button.emba.on{border-color:#5b8cff88;color:#9ec1ff}
+.lanes .n{opacity:.75;font-weight:500;margin-left:4px;font-size:.7rem}
+.toolbar{margin-bottom:10px}
+.toolbar input,.toolbar select{background:var(--panel);border:1px solid var(--line);color:var(--text);border-radius:8px;padding:8px 10px;font-size:.8rem;min-height:40px}
 .toolbar input{min-width:200px;flex:1}
 .note{color:var(--muted);font-size:.76rem}
-.table-wrap{overflow:auto;max-height:68vh;border:1px solid var(--line);border-radius:10px}
-table{width:100%;border-collapse:collapse;font-size:.76rem;min-width:1100px}
+.table-wrap{overflow:auto;max-height:70vh;border:1px solid var(--line);border-radius:10px}
+table{width:100%;border-collapse:collapse;font-size:.76rem;min-width:1280px}
 th,td{padding:8px 7px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
-th{color:var(--muted);font-weight:600;position:sticky;top:0;background:#152033;z-index:2;cursor:pointer;user-select:none;white-space:nowrap}
-th:hover{color:var(--text)}th.active{color:var(--accent)}
-.badge{display:inline-block;padding:2px 7px;border-radius:999px;font-size:.65rem;border:1px solid var(--line)}
+th{color:var(--muted);font-weight:600;position:sticky;top:0;background:#152033;z-index:2;white-space:nowrap}
+tr.cust{background:#0f1f18}tr.cust td:first-child{box-shadow:inset 3px 0 0 var(--good)}
+.badge{display:inline-block;padding:2px 7px;border-radius:999px;font-size:.65rem;border:1px solid var(--line);margin:1px 2px 1px 0}
 .badge.t1{background:#13281d;color:var(--good);border-color:#3dd68c66}
-.badge.seg{background:#152238;color:#9ec1ff;border-color:#5b8cff55}
+.badge.lane{background:#152238;color:#9ec1ff;border-color:#5b8cff55}
+.badge.vio{background:#1a1530;color:#d4c4ff;border-color:#a78bfa66}
+.badge.cust{background:#13281d;color:var(--good);border-color:#3dd68c88}
+.badge.rel{background:#1a2030;color:#9ec1ff}
+.badge.path{background:#0e1626;color:#c5d0e6}
 .badge.gap{background:#2a2416;color:var(--warn);border-color:#ffb02055}
-.tap{font-weight:600}
-.muted{color:var(--muted)}
-.acct{font-weight:650}
-.next{font-size:.72rem;color:var(--muted)}
-.src{font-size:.68rem;color:var(--muted);max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-</style></head>
-<body><div class="wrap">
+.badge.stale{background:#2a1619;color:#ff9aa5;border-color:#ff5d6c66}
+.badge.never{background:#1a1530;color:#d4c4ff;border-color:#a78bfa66}
+.badge.score{font-weight:700;min-width:2.2rem;text-align:center;background:#152238;color:#fff}
+.hi{color:var(--good)}.mid{color:var(--warn)}.lo{color:var(--muted)}
+.acct{font-weight:650}.tap{font-weight:600}.muted{color:var(--muted)}
+button.btn,a.btn{display:inline-flex;align-items:center;justify-content:center;min-height:34px;padding:6px 10px;border-radius:999px;background:#152238;border:1px solid #5b8cff88;color:#fff;font-weight:700;font-size:.7rem;text-decoration:none;cursor:pointer;font-family:inherit;white-space:nowrap}
+button.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
+button.btn.tick{border-color:var(--line);background:var(--panel);color:var(--muted)}
+button.btn.tick.on{border-color:#3dd68c88;background:#13281d;color:var(--good)}
+a.btn.vio,button.btn.vio{border-color:#a78bfa66;background:#1a1530;color:#d4c4ff}
+.mem{margin-top:6px;align-items:flex-start}
+.mem textarea{flex:1;min-width:180px;min-height:52px;padding:8px;border-radius:8px;border:1px solid var(--line);background:var(--panel);color:var(--text);font-size:.72rem;font-family:inherit}
+.mem input.tags{width:140px;padding:8px;border-radius:8px;border:1px solid var(--line);background:var(--panel);color:var(--text);font-size:.72rem}
+.mem .saved{font-size:.65rem;color:var(--good);opacity:0}.mem .saved.show{opacity:1}
+.modal-bg{display:none;position:fixed;inset:0;background:#000a;z-index:50;align-items:center;justify-content:center;padding:16px}
+.modal-bg.on{display:flex}
+.modal{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;max-width:640px;width:100%;max-height:90vh;overflow:auto}
+.modal h3{margin:0 0 8px}.modal pre{white-space:pre-wrap;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px;font-size:.78rem}
+.modal input{width:100%;margin:4px 0 8px;padding:8px;border-radius:8px;border:1px solid var(--line);background:var(--panel);color:var(--text)}
+.modal .row{margin-top:10px}
+</style>
+</head><body><div class="wrap">
 
 <div class="apps">
   <span class="lbl">Apps</span>
   <a href="https://onchainoffgrid-hub.github.io/critters-on-call/" target="_blank" rel="noopener">Critters <span style="color:#3dd68c;font-size:.65rem">LIVE</span></a>
-  <a href="index.html">Operator</a>
+  <a class="op" href="index.html">Operator</a>
   <a href="bdr-pipeline.html" class="sec">BDR Enterprise v1</a>
   <a href="link-tree.html" class="sec">All links</a>
 </div>
@@ -69,18 +92,18 @@ th:hover{color:var(--text)}th.active{color:var(--accent)}
 
 <header>
   <div>
-    <h1>BDR TAM Dialer · All Segments</h1>
-    <div class="sub">Jax metro · Tier 1 first · email contacts ranked high · real phones/emails only · <span id="asof">—</span></div>
+    <h1>BDR TAM Dialer v2 · 5 Lanes</h1>
+    <div class="sub">Score · notes · customer ticks · compose · violet fruit · real contacts only · <span id="asof">—</span></div>
   </div>
-  <div class="sub">North star: <b>bookings</b> · sibling: <a href="bdr-pipeline.html">Enterprise v1 bands</a></div>
+  <div class="sub">North star: <b>bookings</b> · <a href="index.html">Operator hub</a></div>
 </header>
 
 <div class="nav">
-  <a href="index.html">Operator</a>
+  <a class="op" href="index.html">★ Operator</a>
   <a href="crm-icp.html">CRM ICP</a>
   <a href="consumer-inbound.html">Consumer / Violet</a>
   <a href="org-whitespace.html">Org white space</a>
-  <a href="bdr-tam.html" class="active">BDR TAM</a>
+  <a href="bdr-tam.html" class="active">BDR TAM v2</a>
   <a href="bdr-pipeline.html">BDR Enterprise</a>
   <a href="revops-tam.html">RevOps</a>
   <a href="bookings-dates.html">Bookings</a>
@@ -90,172 +113,337 @@ th:hover{color:var(--text)}th.active{color:var(--accent)}
 </div>
 
 <div class="kpis">
-  <div class="kpi"><div class="l">Segments</div><div class="v" id="k-seg">—</div><div class="s" id="k-seg-s">with contacts</div></div>
-  <div class="kpi"><div class="l">Accounts</div><div class="v" id="k-acct">—</div><div class="s">unique orgs</div></div>
-  <div class="kpi"><div class="l">Contacts</div><div class="v" id="k-ct">—</div><div class="s">dialer rows</div></div>
-  <div class="kpi mail"><div class="l">With email</div><div class="v" id="k-em">—</div><div class="s">mailto ready</div></div>
-  <div class="kpi"><div class="l">With phone</div><div class="v" id="k-ph">—</div><div class="s">tel ready</div></div>
-  <div class="kpi tier1"><div class="l">Tier 1</div><div class="v" id="k-t1">—</div><div class="s" id="k-t1-s">Call now / Elite / S</div></div>
+  <div class="kpi good"><div class="l">Customers ticked</div><div class="v" id="k-cust">—</div><div class="s" id="k-cust-s">matchable + local</div></div>
+  <div class="kpi"><div class="l">Top-20 floor</div><div class="v" id="k-top">—</div><div class="s">score cutoff</div></div>
+  <div class="kpi violet"><div class="l">Never-hit</div><div class="v" id="k-never">—</div><div class="s">inbound / violet</div></div>
+  <div class="kpi"><div class="l">Notes saved</div><div class="v" id="k-notes">—</div><div class="s">local memory</div></div>
+  <div class="kpi"><div class="l">Enterprise</div><div class="v" id="k-le">—</div><div class="s">lane</div></div>
+  <div class="kpi good"><div class="l">Subscription</div><div class="v" id="k-ls">—</div><div class="s">lane</div></div>
+  <div class="kpi violet"><div class="l">Violet ~50%</div><div class="v" id="k-lv">—</div><div class="s">lane</div></div>
+  <div class="kpi warn"><div class="l">Small Biz Prog</div><div class="v" id="k-lb">—</div><div class="s">lane</div></div>
+  <div class="kpi"><div class="l">EMBA on Call</div><div class="v" id="k-lm">—</div><div class="s">lane</div></div>
 </div>
 
 <div class="card">
-  <h2>Segments — tap to filter</h2>
-  <div class="chips" id="seg-chips"></div>
+  <h2>Michael’s 5 lanes — tap to filter</h2>
+  <div class="emba" id="emba-note">Loading EMBA note…</div>
+  <div class="lanes" id="lane-chips"></div>
   <div class="toolbar">
-    <input id="q" type="search" placeholder="Search account / contact / email / phone / city…" autocomplete="off"/>
+    <input id="q" type="search" placeholder="Search account / contact / email / phone / city / notes…" autocomplete="off"/>
+    <select id="f-seg"><option value="">Fine segment: all</option></select>
     <select id="f-tier"><option value="">Tier: all</option><option value="t1">Tier 1 only</option><option value="not">Not Tier 1</option></select>
-    <select id="f-mail"><option value="">Email: all</option><option value="yes">Has email</option><option value="no">No email</option></select>
+    <select id="f-mail"><option value="">Email: all</option><option value="yes">Has email</option><option value="no">No / whitespace email</option></select>
     <select id="f-phone"><option value="">Phone: all</option><option value="yes">Has phone</option><option value="no">No phone</option></select>
-    <span class="note" id="view-note">Default sort: Tier 1 → email → phone → name (within sector)</span>
+    <select id="f-cust"><option value="">Customer: all</option><option value="yes">Customers</option><option value="no">Not customers</option></select>
+    <select id="f-never"><option value="">Never-hit: all</option><option value="yes">Never-hit only</option></select>
+    <select id="f-sort">
+      <option value="score">Sort: score ↓ (default)</option>
+      <option value="tier">Sort: Tier1 → email → name</option>
+      <option value="name">Sort: name</option>
+    </select>
   </div>
+  <p class="note" id="view-note">Loading…</p>
   <div class="table-wrap">
     <table>
       <thead><tr>
-        <th data-k="segment">Segment</th>
-        <th data-k="account">Account</th>
-        <th data-k="contact">Contact</th>
-        <th data-k="title">Title</th>
-        <th data-k="phone">Phone</th>
-        <th data-k="email">Email</th>
-        <th data-k="tier">Tier</th>
-        <th data-k="penetration">Status</th>
-        <th data-k="next_action">Next action</th>
-        <th data-k="source">Source</th>
+        <th>Score</th><th>Lane</th><th>Account</th><th>Contact</th><th>Best paths</th><th>Status</th><th>Memory / compose</th>
       </tr></thead>
       <tbody id="tbody"></tbody>
     </table>
   </div>
   <p class="note" id="src-note" style="margin-top:10px">Loading data/bdr_tam_dialer.json…</p>
 </div>
-
 </div>
-<script>
-(function(){
-  var ALL=[], SEGS=[], SEG_ORDER=[], F={seg:'', tier:'', mail:'', phone:'', q:''};
-  var KPIS={};
 
-  function esc(s){ return String(s??'').replace(/[&<>"']/g,c=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c])); }
-  function telHref(p){
-    var d=String(p||'').replace(/\D/g,'');
-    if(d.length===11 && d[0]==='1') d=d.slice(1);
-    return d ? 'tel:+1'+d : '';
+<div class="modal-bg" id="compose-modal">
+  <div class="modal">
+    <h3 id="compose-title">Compose</h3>
+    <p class="note" id="compose-meta"></p>
+    <label class="note">Subject</label>
+    <input id="compose-subj"/>
+    <label class="note">Body</label>
+    <pre id="compose-body"></pre>
+    <div class="row">
+      <a class="btn" id="compose-mailto" href="#">Open mailto</a>
+      <button type="button" class="btn sec" id="compose-copy">Copy draft</button>
+      <button type="button" class="btn" id="compose-close">Close</button>
+    </div>
+    <p class="note" id="compose-warn" style="margin-top:8px"></p>
+  </div>
+</div>
+
+<script>
+
+(function(){
+  var ALL=[], LANES=[], SEGS=[], KPIS={};
+  var F={lane:'',seg:'',tier:'',mail:'',phone:'',cust:'',never:'',q:'',sort:'score'};
+  var K_NOTES='sheehan_bdr_v2_notes', K_CUST='sheehan_bdr_v2_customers', K_TAGS='sheehan_bdr_v2_tags', K_DONE='sheehan_bdr_v2_done', K_SEED='sheehan_bdr_v2_seeded';
+  var STORE={notes:{},cust:{},tags:{},done:{}};
+
+  var PITCH={
+    'Regional Enterprise':{subj:'Critters on Call — employee / community animal program', body:'Hi {name},\n\nMichael Sheehan here with Sheehan Homestead / Critters on Call (Jax metro).\n\nWe bring a mobile petting zoo and animal enrichment programs to workplaces, campuses, and community events — easy logistics, insured, kid-friendly.\n\nOpen to a quick look at dates for an employee appreciation, family day, or campus visit?\n\nWarmly,\nMichael Sheehan\n914-263-1311 · sheehanhomestead.com'},
+    'Regional Subscription':{subj:'Monthly animal visit for your residents — Critters on Call', body:'Hi {name},\n\nMichael Sheehan with Sheehan Homestead / Critters on Call.\n\nWe run recurring (monthly / quarterly) animal enrichment visits for IL/AL and similar campuses — soft, resident-loved, low lift for your team.\n\nWould a short call to compare calendars make sense?\n\nWarmly,\nMichael Sheehan\n914-263-1311 · sheehanhomestead.com'},
+    'Regional Violet ~50%':{subj:'Got your note — Critters on Call / Sheehan Homestead', body:'Hi {name},\n\nThanks for reaching out — Michael Sheehan here at Sheehan Homestead / Critters on Call.\n\nIf you are still looking at dates for a party, farm visit, or mobile petting zoo, reply with 2–3 preferred windows and I will check the calendar.\n\nOr text/call 914-263-1311.\n\nWarmly,\nMichael'},
+    'Regional Small Biz Programmer':{subj:'Family programming / animal pop-up for {account}', body:'Hi {name},\n\nMichael Sheehan with Critters on Call — we place soft animal programming with breweries, bookstores, coffee shops, and indie venues (family hours / weekend pop-ups).\n\nWould a low-commitment trial date interest you?\n\nWarmly,\nMichael\n914-263-1311 · sheehanhomestead.com'},
+    'EMBA on Call':{subj:'EMBA on Call — homestead shout → farm tour → sponsor → consulting', body:'Hi {name},\n\nMichael Sheehan (Sheehan Homestead). Sharing our EMBA on Call ladder for founders / small biz:\n\n1) Free homestead shout\n2) Small donation → goat-statue farm tour\n3) Mini-zoo sponsor-in-name\n4) Bigger donations\n5) Consulting (BDR / convert old leads)\n\nStated targets (Michael’s goals, not proven metrics): 80%+ on qualified software work; ~100% transactional/meeting if qualified.\n\nCurious which rung fits?\n\nMichael · 914-263-1311'}
+  };
+
+  function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+  function keyOf(r){return (r.org_key||'')+'::'+String(r.contact||'').toLowerCase()+'::'+String(r.email||'').toLowerCase();}
+  function telOf(p){var d=String(p||'').replace(/\D/g,''); if(d.length===11&&d[0]==='1')d=d.slice(1); return d?'tel:+1'+d:'';}
+  function load(k){try{return JSON.parse(localStorage.getItem(k)||'{}')||{};}catch(e){return {};}}
+  function save(k,v){try{localStorage.setItem(k,JSON.stringify(v));}catch(e){}}
+  function isCust(r){return !!(STORE.cust[keyOf(r)]||r.is_customer||r.customer_match);}
+  function noteOf(r){return STORE.notes[keyOf(r)]||'';}
+  function tagsOf(r){return STORE.tags[keyOf(r)]||'';}
+
+  function seed(){
+    if(localStorage.getItem(K_SEED)==='1') return;
+    var ch=false;
+    ALL.forEach(function(r){
+      if(!r.seed_note) return;
+      var k=keyOf(r);
+      if(!STORE.notes[k]){STORE.notes[k]=r.seed_note; ch=true;}
+    });
+    if(ch) save(K_NOTES, STORE.notes);
+    localStorage.setItem(K_SEED,'1');
   }
-  function mailtoHref(email){
-    if(!email) return '';
-    var sub=encodeURIComponent('Critters on Call / Sheehan Homestead — animal programs');
-    return 'mailto:'+encodeURIComponent(email).replace(/%40/g,'@')+'?subject='+sub;
-  }
-  function segIndex(s){
-    var i=SEG_ORDER.indexOf(s);
-    return i<0 ? 999 : i;
-  }
-  function defaultSort(a,b){
-    var sa=segIndex(a.segment), sb=segIndex(b.segment);
-    if(sa!==sb) return sa-sb;
-    if(!!a.is_tier1 !== !!b.is_tier1) return a.is_tier1 ? -1 : 1;
-    if(!!a.has_email !== !!b.has_email) return a.has_email ? -1 : 1;
-    if(!!a.has_phone !== !!b.has_phone) return a.has_phone ? -1 : 1;
-    var na=(a.account||'').toLowerCase(), nb=(b.account||'').toLowerCase();
-    if(na!==nb) return na<nb?-1:1;
-    return (a.contact||'').toLowerCase()<(b.contact||'').toLowerCase()?-1:1;
-  }
-  function matches(r){
+
+  function ok(r){
+    if(F.lane && r.lane!==F.lane) return false;
     if(F.seg && r.segment!==F.seg) return false;
     if(F.tier==='t1' && !r.is_tier1) return false;
     if(F.tier==='not' && r.is_tier1) return false;
     if(F.mail==='yes' && !r.has_email) return false;
-    if(F.mail==='no' && r.has_email) return false;
+    if(F.mail==='no' && r.has_email && !r.stale_email && !r.whitespace_email) return false;
     if(F.phone==='yes' && !r.has_phone) return false;
     if(F.phone==='no' && r.has_phone) return false;
+    if(F.cust==='yes' && !isCust(r)) return false;
+    if(F.cust==='no' && isCust(r)) return false;
+    if(F.never==='yes' && !r.never_hit) return false;
     if(F.q){
-      var hay=[r.segment,r.account,r.contact,r.title,r.email,r.phone,r.city,r.county,r.tier,r.penetration,r.next_action,r.source].join(' ').toLowerCase();
+      var hay=[r.lane,r.segment,r.account,r.contact,r.title,r.email,r.phone,r.city,r.county,r.penetration,r.notes,r.seed_note,noteOf(r),tagsOf(r),(r.related_accounts||[]).join(' ')].join(' ').toLowerCase();
       if(hay.indexOf(F.q)<0) return false;
     }
     return true;
   }
-  function renderChips(){
-    var html='<button type="button" data-seg="" class="'+(F.seg===''?'on':'')+'">All <span class="n">'+ALL.length+'</span></button>';
-    SEGS.forEach(function(s){
-      var cls=(F.seg===s.id?'on':'')+(s.tier1?' has-t1':'');
-      html+='<button type="button" class="'+cls+'" data-seg="'+esc(s.id)+'">'+esc(s.id)+' <span class="n">'+s.contacts+(s.tier1?' · T1 '+s.tier1:'')+'</span></button>';
-    });
-    document.getElementById('seg-chips').innerHTML=html;
-    document.querySelectorAll('#seg-chips button').forEach(function(btn){
-      btn.addEventListener('click', function(){ F.seg=btn.getAttribute('data-seg')||''; render(); renderChips(); });
+
+  function sorted(rows){
+    var ord={}; LANES.forEach(function(l,i){ord[l.id]=i;});
+    return rows.slice().sort(function(a,b){
+      if(!F.lane){
+        var la=ord[a.lane]; if(la==null) la=99;
+        var lb=ord[b.lane]; if(lb==null) lb=99;
+        if(la!==lb) return la-lb;
+      }
+      if(F.sort==='name'){
+        var na=(a.account||'').toLowerCase(), nb=(b.account||'').toLowerCase();
+        if(na!==nb) return na<nb?-1:1;
+        return (a.contact||'').toLowerCase()<(b.contact||'').toLowerCase()?-1:1;
+      }
+      if(F.sort==='tier'){
+        if(!!a.is_tier1!==!!b.is_tier1) return a.is_tier1?-1:1;
+        if(!!a.has_email!==!!b.has_email) return a.has_email?-1:1;
+        return (a.account||'').toLowerCase()<(b.account||'').toLowerCase()?-1:1;
+      }
+      if((b.score||0)!==(a.score||0)) return (b.score||0)-(a.score||0);
+      if(!!a.is_tier1!==!!b.is_tier1) return a.is_tier1?-1:1;
+      return (a.account||'').toLowerCase()<(b.account||'').toLowerCase()?-1:1;
     });
   }
-  function render(){
-    var rows=ALL.filter(matches).slice().sort(defaultSort);
-    var t1=0, em=0, ph=0;
-    rows.forEach(function(r){ if(r.is_tier1) t1++; if(r.has_email) em++; if(r.has_phone) ph++; });
-    document.getElementById('view-note').textContent =
-      'Showing '+rows.length+' · Tier1 '+t1+' · email '+em+' · phone '+ph+' · sort: Tier1 → email → phone → name';
-    var tb=document.getElementById('tbody');
-    if(!rows.length){
-      tb.innerHTML='<tr><td colspan="10" class="muted">No contacts in this filter.</td></tr>';
-      return;
-    }
-    // virtualize-ish: cap DOM at 800 for speed; note if truncated
-    var max=800;
-    var slice=rows.slice(0,max);
-    tb.innerHTML=slice.map(function(r){
-      var tel=telHref(r.phone);
-      var mail=mailtoHref(r.email);
-      var phoneCell=tel?('<a class="tap" href="'+esc(tel)+'">'+esc(r.phone)+'</a>'):'<span class="muted">—</span>';
-      var emailCell=mail?('<a class="tap" href="'+esc(mail)+'">'+esc(r.email)+'</a>'):'<span class="badge gap">no email</span>';
-      var tierCell=r.is_tier1?('<span class="badge t1">'+esc(r.tier||'Tier 1')+'</span>'):esc(r.tier||'—');
-      return '<tr>'+
-        '<td><span class="badge seg">'+esc(r.segment)+'</span></td>'+
-        '<td class="acct">'+esc(r.account)+'</td>'+
-        '<td>'+(r.contact?esc(r.contact):'<span class="muted">—</span>')+'</td>'+
-        '<td>'+esc(r.title||'')+'</td>'+
-        '<td>'+phoneCell+'</td>'+
-        '<td>'+emailCell+'</td>'+
-        '<td>'+tierCell+'</td>'+
-        '<td>'+esc(r.penetration||'—')+'</td>'+
-        '<td class="next">'+esc(r.next_action||'')+'</td>'+
-        '<td class="src" title="'+esc(r.source||'')+'">'+esc((r.source||'').split('|')[0])+'</td>'+
-        '</tr>';
-    }).join('');
-    if(rows.length>max){
-      tb.innerHTML+='<tr><td colspan="10" class="muted">Showing first '+max+' of '+rows.length+' — refine filters to narrow.</td></tr>';
-    }
+
+  function laneCls(id){
+    if(id.indexOf('Subscription')>=0) return 'sub';
+    if(id.indexOf('Violet')>=0) return 'vio';
+    if(id.indexOf('Small Biz')>=0) return 'smb';
+    if(id.indexOf('EMBA')>=0) return 'emba';
+    return '';
   }
+
+  function drawLanes(){
+    var h='<button type="button" data-lane="" class="'+(F.lane===''?'on':'')+'">All <span class="n">'+ALL.length+'</span></button>';
+    LANES.forEach(function(l){
+      h+='<button type="button" class="'+((F.lane===l.id?'on ':'')+laneCls(l.id))+'" data-lane="'+esc(l.id)+'">'+esc(l.id)+
+        ' <span class="n">'+l.contacts+(l.customers?' · cust '+l.customers:'')+(l.never_hit?' · never '+l.never_hit:'')+'</span></button>';
+    });
+    document.getElementById('lane-chips').innerHTML=h;
+    document.querySelectorAll('#lane-chips button').forEach(function(b){
+      b.onclick=function(){ F.lane=b.getAttribute('data-lane')||''; drawLanes(); draw(); };
+    });
+  }
+
+  function paths(r){
+    var h='';
+    (r.best_paths||[]).forEach(function(p){
+      if(p==='email' && r.email && !r.stale_email) h+='<a class="badge path" href="mailto:'+esc(r.email)+'">email</a>';
+      else if((p==='cell'||p==='phone') && r.phone) h+='<a class="badge path" href="'+esc(telOf(r.phone))+'">cell</a>';
+      else if((p==='LinkedIn'||p==='linkedin') && r.linkedin_url) h+='<a class="badge path" href="'+esc(r.linkedin_url)+'" target="_blank" rel="noopener">LinkedIn</a>';
+      else if(p==='form' && r.form_url) h+='<a class="badge path" href="'+esc(r.form_url)+'" target="_blank" rel="noopener">'+(r.form_quality==='hard'?'form (hard)':'Open form')+'</a>';
+      else h+='<span class="badge path">'+esc(p)+'</span>';
+    });
+    if(r.stale_email) h+='<span class="badge stale">stale_email</span>';
+    if(r.messy_list) h+='<span class="badge stale">messy_list</span>';
+    if(r.whitespace_email) h+='<span class="badge gap">needs email</span>';
+    if(r.never_hit) h+='<span class="badge never">never-hit</span>';
+    if(r.likely_related) h+='<span class="badge rel" title="'+esc((r.related_accounts||[]).join(', '))+'">likely related</span>';
+    return h||'<span class="muted">—</span>';
+  }
+
+  function compose(r){
+    var lane=r.lane||'Regional Enterprise';
+    var p=PITCH[lane]||PITCH['Regional Enterprise'];
+    var name=(r.contact||'there').split(/\s+/)[0]||'there';
+    var subj=p.subj.replace(/\{account\}/g,r.account||'').replace(/\{name\}/g,name);
+    var body=p.body.replace(/\{name\}/g,name).replace(/\{account\}/g,r.account||'');
+    document.getElementById('compose-title').textContent='Compose · '+lane;
+    document.getElementById('compose-meta').textContent=(r.account||'')+(r.contact?' · '+r.contact:'')+(r.email?' · '+r.email:' · (no email on file)');
+    document.getElementById('compose-subj').value=subj;
+    document.getElementById('compose-body').textContent=body;
+    var mail=document.getElementById('compose-mailto');
+    var warn=document.getElementById('compose-warn');
+    if(r.email && !r.stale_email){
+      mail.href='mailto:'+encodeURIComponent(r.email).replace(/%40/g,'@')+'?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);
+      mail.style.display='';
+      warn.textContent='Recipient is the on-file email only — never invented.';
+    } else {
+      mail.removeAttribute('href'); mail.style.display='none';
+      warn.textContent='No usable email on file — copy the draft and use Open form / phone / LinkedIn. We do not invent addresses.';
+    }
+    document.getElementById('compose-modal').classList.add('on');
+  }
+
+  function liveKpis(rows){
+    var notes=Object.keys(STORE.notes).filter(function(k){return !!(STORE.notes[k]&&String(STORE.notes[k]).trim());}).length;
+    var custLocal=Object.keys(STORE.cust).filter(function(k){return STORE.cust[k];}).length;
+    document.getElementById('k-notes').textContent=notes;
+    document.getElementById('k-cust').textContent=rows.filter(isCust).length;
+    document.getElementById('k-cust-s').textContent='data matchable '+(KPIS.customers_matchable||0)+' · local ticks '+custLocal;
+  }
+
   function setKpis(){
-    var k=KPIS||{};
-    document.getElementById('k-seg').textContent=k.segments??'—';
-    document.getElementById('k-seg-s').textContent=(k.segments_listed||k.segments||'—')+' listed';
-    document.getElementById('k-acct').textContent=k.accounts??'—';
-    document.getElementById('k-ct').textContent=k.contacts??'—';
-    document.getElementById('k-em').textContent=k.with_email??'—';
-    document.getElementById('k-ph').textContent=k.with_phone??'—';
-    document.getElementById('k-t1').textContent=k.tier1??'—';
-    document.getElementById('k-t1-s').textContent=(k.tier1_with_email!=null?(k.tier1_with_email+' w/ email'):'Call now / Elite / S');
+    document.getElementById('k-top').textContent=KPIS.top20_score_floor!=null?KPIS.top20_score_floor:'—';
+    document.getElementById('k-never').textContent=KPIS.never_hit!=null?KPIS.never_hit:'—';
+    var by={}; LANES.forEach(function(l){by[l.id]=l.contacts;});
+    document.getElementById('k-le').textContent=by['Regional Enterprise']!=null?by['Regional Enterprise']:'—';
+    document.getElementById('k-ls').textContent=by['Regional Subscription']!=null?by['Regional Subscription']:'—';
+    document.getElementById('k-lv').textContent=by['Regional Violet ~50%']!=null?by['Regional Violet ~50%']:'—';
+    document.getElementById('k-lb').textContent=by['Regional Small Biz Programmer']!=null?by['Regional Small Biz Programmer']:'—';
+    document.getElementById('k-lm').textContent=by['EMBA on Call']!=null?by['EMBA on Call']:'—';
+    liveKpis(ALL);
   }
-  document.getElementById('q').addEventListener('input', function(e){ F.q=(e.target.value||'').trim().toLowerCase(); render(); });
-  document.getElementById('f-tier').addEventListener('change', function(e){ F.tier=e.target.value; render(); });
-  document.getElementById('f-mail').addEventListener('change', function(e){ F.mail=e.target.value; render(); });
-  document.getElementById('f-phone').addEventListener('change', function(e){ F.phone=e.target.value; render(); });
+
+  function bindRows(){
+    document.querySelectorAll('#tbody tr[data-key]').forEach(function(tr){
+      var key=tr.getAttribute('data-key');
+      var r=null;
+      for(var i=0;i<ALL.length;i++){ if(keyOf(ALL[i])===key){ r=ALL[i]; break; } }
+      if(!r) return;
+      tr.querySelectorAll('[data-act]').forEach(function(el){
+        var act=el.getAttribute('data-act');
+        if(act==='cust'){
+          el.onclick=function(){
+            if(STORE.cust[key]) delete STORE.cust[key]; else STORE.cust[key]=true;
+            save(K_CUST, STORE.cust); draw();
+          };
+        } else if(act==='compose'){
+          el.onclick=function(){ compose(r); };
+        } else if(act==='save'){
+          el.onclick=function(){
+            var ta=tr.querySelector('textarea');
+            var tg=tr.querySelector('input.tags');
+            STORE.notes[key]=((ta&&ta.value)||'').trim();
+            STORE.tags[key]=((tg&&tg.value)||'').trim();
+            if(!STORE.notes[key]) delete STORE.notes[key];
+            if(!STORE.tags[key]) delete STORE.tags[key];
+            save(K_NOTES, STORE.notes); save(K_TAGS, STORE.tags);
+            var s=tr.querySelector('[data-saved]');
+            if(s){ s.classList.add('show'); setTimeout(function(){ s.classList.remove('show'); }, 1200); }
+            liveKpis(sorted(ALL.filter(ok)));
+          };
+        }
+      });
+    });
+  }
+
+  function draw(){
+    var rows=sorted(ALL.filter(ok));
+    var custN=0, notesN=0, neverN=0;
+    rows.forEach(function(r){ if(isCust(r)) custN++; if(noteOf(r)) notesN++; if(r.never_hit) neverN++; });
+    document.getElementById('view-note').textContent='Showing '+rows.length+' · customers '+custN+' · notes '+notesN+' · never-hit '+neverN+' · sort: '+F.sort;
+    liveKpis(rows);
+    var tb=document.getElementById('tbody');
+    if(!rows.length){ tb.innerHTML='<tr><td colspan="7" class="muted">No contacts in this filter.</td></tr>'; return; }
+    var max=500, slice=rows.slice(0,max);
+    tb.innerHTML=slice.map(function(r){
+      var k=keyOf(r), cust=isCust(r), note=noteOf(r), tags=tagsOf(r), sc=r.score||0;
+      var scCls=sc>=70?'hi':(sc>=45?'mid':'lo');
+      var laneBadge=r.lane&&r.lane.indexOf('Violet')>=0?'badge vio':'badge lane';
+      var softForm=r.form_url && r.form_quality!=='hard';
+      return '<tr class="'+(cust?'cust':'')+'" data-key="'+esc(k)+'">'+
+        '<td><span class="badge score '+scCls+'">'+sc+'</span>'+(r.is_tier1?' <span class="badge t1">T1</span>':'')+'</td>'+
+        '<td><span class="'+laneBadge+'">'+esc(String(r.lane||'').replace('Regional ',''))+'</span><div class="muted" style="font-size:.65rem;margin-top:3px">'+esc(r.segment||'')+'</div></td>'+
+        '<td class="acct">'+esc(r.account)+(cust?' <span class="badge cust">✓ Customer</span>':'')+'</td>'+
+        '<td>'+(r.contact?esc(r.contact):'<span class="muted">—</span>')+(r.title?'<div class="muted" style="font-size:.65rem">'+esc(r.title)+'</div>':'')+'</td>'+
+        '<td>'+paths(r)+
+          (r.email?'<div style="margin-top:4px"><a class="tap" href="mailto:'+esc(r.email)+'">'+esc(r.email)+'</a></div>':'')+
+          (r.phone?'<div><a class="tap" href="'+esc(telOf(r.phone))+'">'+esc(r.phone)+'</a></div>':'')+
+        '</td>'+
+        '<td>'+esc(r.penetration||r.pen_bucket||'—')+(r.next_action?'<div class="muted" style="font-size:.65rem;margin-top:3px">'+esc(r.next_action)+'</div>':'')+'</td>'+
+        '<td><div class="actions">'+
+          '<button type="button" class="btn tick'+(cust?' on':'')+'" data-act="cust">✓ Customer</button>'+
+          '<button type="button" class="btn" data-act="compose">Compose email</button>'+
+          (softForm?'<a class="btn vio" href="'+esc(r.form_url)+'" target="_blank" rel="noopener">Open form</a>':'')+
+        '</div><div class="mem">'+
+          '<textarea placeholder="Account / contact notes…">'+esc(note)+'</textarea>'+
+          '<input class="tags" placeholder="tags" value="'+esc(tags)+'"/>'+
+          '<button type="button" class="btn sec" data-act="save">Save</button>'+
+          '<span class="saved" data-saved>saved</span>'+
+        '</div></td></tr>';
+    }).join('');
+    if(rows.length>max) tb.innerHTML+='<tr><td colspan="7" class="muted">Showing first '+max+' of '+rows.length+' — refine filters.</td></tr>';
+    bindRows();
+  }
+
+  document.getElementById('q').oninput=function(e){ F.q=(e.target.value||'').trim().toLowerCase(); draw(); };
+  ['seg','tier','mail','phone','cust','never','sort'].forEach(function(name){
+    document.getElementById('f-'+name).onchange=function(e){ F[name]=e.target.value; draw(); };
+  });
+  document.getElementById('compose-close').onclick=function(){ document.getElementById('compose-modal').classList.remove('on'); };
+  document.getElementById('compose-modal').onclick=function(e){ if(e.target.id==='compose-modal') e.target.classList.remove('on'); };
+  document.getElementById('compose-copy').onclick=function(){
+    var t='Subject: '+document.getElementById('compose-subj').value+'\n\n'+document.getElementById('compose-body').textContent;
+    if(navigator.clipboard&&navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(function(){ document.getElementById('compose-warn').textContent='Draft copied.'; });
+    else document.getElementById('compose-warn').textContent='Select and copy the draft manually.';
+  };
 
   async function boot(){
     try{
       var res=await fetch('data/bdr_tam_dialer.json',{cache:'no-store'});
       var d=await res.json();
-      ALL=d.contacts||[];
-      SEGS=d.segments||[];
-      SEG_ORDER=SEGS.map(function(s){return s.id;});
-      KPIS=d.kpis||{};
+      ALL=d.contacts||[]; LANES=d.lanes||[]; SEGS=d.segments||[]; KPIS=d.kpis||{};
+      if(d.localStorage_keys){
+        K_NOTES=d.localStorage_keys.notes||K_NOTES;
+        K_CUST=d.localStorage_keys.customers||K_CUST;
+        K_TAGS=d.localStorage_keys.tags||K_TAGS;
+        K_DONE=d.localStorage_keys.done||K_DONE;
+      }
+      STORE={notes:load(K_NOTES),cust:load(K_CUST),tags:load(K_TAGS),done:load(K_DONE)};
       document.getElementById('asof').textContent=d.as_of||'';
+      document.getElementById('emba-note').textContent=d.emba_note||'EMBA on Call ladder: free homestead shout · goat-statue farm tour · mini-zoo sponsor-in-name · bigger donations · consulting. Targets are Michael’s stated goals, not proven metrics.';
+      var sel=document.getElementById('f-seg');
+      SEGS.forEach(function(s){ var o=document.createElement('option'); o.value=s.id; o.textContent=s.id+' ('+s.contacts+')'; sel.appendChild(o); });
+      seed(); setKpis(); drawLanes(); draw();
       document.getElementById('src-note').textContent=
-        'Data: data/bdr_tam_dialer.json · '+(d.rule||'')+' · Sources: '+((d.sources||[]).slice(0,8).map(function(s){return s.id;}).join(', '))+'…';
-      setKpis();
-      renderChips();
-      render();
+        'Data: data/bdr_tam_dialer.json v'+(d.version||'?')+' · '+(d.rule||'')+
+        ' · fruit +'+((d.kpis||{}).fruit_added||0)+
+        ' · Patricia/Tasia seed: '+((d.kpis||{}).patricia_tasia_seed?'YES':'no')+
+        ' · LS: '+K_NOTES;
     }catch(e){
-      document.getElementById('src-note').textContent='Load failed: '+e+' — serve via http or check data/bdr_tam_dialer.json';
+      document.getElementById('src-note').textContent='Load failed: '+e;
     }
   }
   boot();
 })();
+
 </script>
 </body></html>

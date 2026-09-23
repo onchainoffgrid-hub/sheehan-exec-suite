@@ -971,7 +971,65 @@ def main():
             )
         wb.close()
 
+
+    # 10) Consumer inbound JSON (Violet fruit — never invent emails)
+    ci_path = Path("/workspace/dashboard/exec-suite/data/consumer_inbound.json")
+    if ci_path.exists():
+        ci = json.loads(ci_path.read_text())
+        for r in ci.get("contacts") or []:
+            email = r.get("email") or ""
+            name = r.get("name") or ""
+            if not email and not name:
+                continue
+            never = str(r.get("status") or "").lower() in ("interest", "needs_reply", "never_hit", "open", "")
+            if str(r.get("purchase_status") or "") in ("bought", "customer", "repeat"):
+                never = False
+            D.add(
+                make_row(
+                    account=name or email,
+                    contact=name,
+                    email=email,
+                    phone=r.get("phone"),
+                    segment="B2C / Violet / Inbound",
+                    call_band="Call now" if never else "Warm",
+                    notes=(r.get("detail") or r.get("next_action") or "")[:200],
+                    source=f"consumer_inbound:{r.get('bucket') or r.get('source') or 'row'}",
+                    penetration="never_hit" if never else (r.get("purchase_status") or r.get("status") or "inbound"),
+                    tier="Tier 1 / Inbound" if never else "",
+                    form_url=r.get("form_url") or "",
+                )
+            )
+
+    # 11) Deputy one-touch inbound queue
+    iq = Path("/workspace/deputy-outreach/one-touch/INBOUND_QUEUE.csv")
+    if iq.exists():
+        with iq.open(newline="", encoding="utf-8", errors="replace") as f:
+            for r in csv.DictReader(f):
+                email = r.get("email") or ""
+                contact = r.get("contact_name") or ""
+                org = r.get("org") or contact or email
+                if not org:
+                    continue
+                flag = (r.get("flag") or "").lower()
+                D.add(
+                    make_row(
+                        account=org,
+                        contact=contact,
+                        email=email,
+                        phone=r.get("phone"),
+                        title=r.get("title"),
+                        segment="B2C / Violet / Inbound",
+                        call_band="Call now" if flag in ("inbound", "never_hit", "") else "Warm",
+                        notes=((r.get("call_need_to_knows") or "") + " " + (r.get("draft_subject") or "")).strip()[:200],
+                        source=f"deputy_inbound:{r.get('source') or 'INBOUND_QUEUE'}",
+                        penetration="never_hit" if flag in ("inbound", "never_hit", "") else flag,
+                        form_url=r.get("form_url") or "",
+                        tier="Tier 1 / Inbound",
+                    )
+                )
+
     # ---------- Sort & KPIs ----------
+
     def sort_key(r: dict):
         seg = r.get("segment") or "Other"
         try:
@@ -1043,6 +1101,15 @@ def main():
     print("gaps:", kpis["gaps_zero_contacts"])
     print("top segments:", [(s["id"], s["contacts"], s["tier1"], s["with_email"]) for s in segments_meta[:15]])
 
+
+    # v2 enrich (lanes, scores, fruit, seeds) — never invents contacts
+    try:
+        from enrich_bdr_tam_v2 import main as enrich_v2
+        enrich_v2()
+    except Exception as e:
+        # allow relative import when run as script
+        import runpy
+        runpy.run_path(str(Path(__file__).with_name("enrich_bdr_tam_v2.py")), run_name="__main__")
 
 if __name__ == "__main__":
     main()
