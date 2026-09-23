@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Customers · no next date · Growth · Sheehan Homestead</title>
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--violet:#a78bfa;--money:#f0abfc}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1100px;margin:0 auto;padding:22px 18px 48px}
+.top{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 16px;padding:10px 14px;border:1px solid var(--line);border-radius:14px;background:#0f1728}
+.top .lbl{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-right:4px}
+.top a{background:var(--card);border:1px solid var(--line);color:var(--text);padding:7px 12px;border-radius:999px;font-size:.78rem;font-weight:600;text-decoration:none}
+.top a.money{border-color:#a855f788;background:linear-gradient(135deg,#2a1530,#121a2b);color:#f0abfc}
+.crumb{font-size:.82rem;color:var(--muted);margin:0 0 12px}.crumb a{color:#9ec1ff;font-weight:600}
+h1{font-size:clamp(1.4rem,3vw,1.9rem);margin:0 0 6px;letter-spacing:-.02em}
+.sub{color:var(--muted);font-size:.92rem;max-width:62ch}
+.banner{margin:14px 0 16px;padding:12px 14px;border:1px solid #a78bfa88;border-radius:12px;background:#16101c;font-size:.84rem;color:#d4c4ff}
+.banner b{color:#f5d0fe}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin:0 0 14px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}
+.kpi .l{font-size:.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.kpi .v{font-size:1.25rem;font-weight:750;margin-top:4px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+.filters button{appearance:none;border:1px solid var(--line);background:var(--panel);color:var(--muted);padding:9px 12px;border-radius:999px;font-size:.74rem;font-weight:700;cursor:pointer;min-height:40px}
+.filters button.on{border-color:#a78bfa;background:#1a1530;color:#fff}
+.filters input{flex:1;min-width:160px;min-height:40px;padding:8px 12px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--text);font-size:.84rem}
+.row{border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:0 0 10px;background:var(--card)}
+.row.nodate{border-color:#ffb02066}
+.row.hasdate{opacity:.85}
+.row h3{margin:0 0 6px;font-size:1rem}
+.meta{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 6px}
+.chip{display:inline-block;padding:3px 9px;border-radius:999px;font-size:.68rem;font-weight:700;border:1px solid var(--line)}
+.chip.warn{background:#2a2416;color:var(--warn);border-color:#ffb02066}
+.chip.ok{background:#13281d;color:var(--good);border-color:#3dd68c55}
+.chip.city{background:#0e1626;color:#c5d0e6}
+.why{font-size:.8rem;color:var(--muted)}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+a.btn{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:8px 12px;border-radius:999px;background:#1a1530;border:1px solid #a78bfa88;color:#fff;font-weight:700;font-size:.76rem;text-decoration:none}
+a.btn.sec{border-color:var(--line);background:var(--panel);color:#c5d0e6;font-weight:600}
+.note{color:var(--muted);font-size:.76rem;margin-top:18px}
+.alt{margin:18px 0 0;padding:14px 16px;border:1px dashed #5b8cff88;border-radius:14px;background:#152238;font-size:.84rem;color:#c5d0e6}
+.alt a{font-weight:700}
+.empty{color:var(--muted);padding:20px;text-align:center}
+</style></head>
+<body data-flow-face="sales" data-flow-chip="customers-no-next"><div class="wrap">
+
+<div class="top">
+  <span class="lbl">Apps</span>
+  <a class="money" href="one-touch.html">One-touch · money</a>
+  <a href="growth-home.html">Growth</a>
+  <a href="hot-links.html">Hot Links (net-new)</a>
+  <a href="one-touch-winback.html">Win-back</a>
+  <a href="rvp-ops.html">RVP home</a>
+</div>
+
+<p class="crumb"><a href="rvp-ops.html">RVP</a> → <a href="growth-home.html">Growth</a> → <b>Customers · no next date</b></p>
+
+<header>
+  <h1>Customers · no next date</h1>
+  <div class="sub">Accounts we’ve sold before with <b>no upcoming gig</b> on calendar/books. Rebook / win-back tone — <b>not</b> stranger cold forms. Dates never invented · unknown = <b>NO DATE</b>.</div>
+</header>
+
+<div class="banner"><b>Includes</b> Palagio + Orange Park customers + burned senior book Michael already worked — route here instead of Hot Links.</div>
+
+<div class="kpis">
+  <div class="kpi"><div class="l">No next date</div><div class="v" id="k-n">—</div></div>
+  <div class="kpi"><div class="l">Has upcoming date</div><div class="v" id="k-h">—</div></div>
+  <div class="kpi"><div class="l">Total on board</div><div class="v" id="k-t">—</div></div>
+  <div class="kpi"><div class="l">Showing</div><div class="v" id="k-s">—</div></div>
+</div>
+
+<div class="filters" id="filters">
+  <button type="button" class="on" data-f="NO_DATE">No date</button>
+  <button type="button" data-f="HAS_DATE">Has upcoming</button>
+  <button type="button" data-f="all">All</button>
+  <input id="q" type="search" placeholder="Filter account / city…" autocomplete="off"/>
+</div>
+
+<div id="list"></div>
+<p class="empty" id="empty" hidden>No rows in this filter.</p>
+
+<div class="alt">Net-new forms (not customers) live on <a href="hot-links.html">Hot Links</a>.</div>
+<p class="note">Built from PayPal / P1 / org whitespace customers + bookings pipeline. Never invent a next date.</p>
+</div>
+<script>
+(function(){
+  var DATA=null, filt='NO_DATE', q='';
+  function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g,function(c){return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]);}); }
+  function statusOf(r){ return r.status || (r.next_date || (r.next_dates&&r.next_dates[0]) ? 'HAS_DATE' : 'NO_DATE'); }
+  function nextOf(r){ return r.next_date || (r.next_dates && r.next_dates[0]) || null; }
+  function render(){
+    var rows=(DATA&&DATA.rows)||[];
+    var qq=q.trim().toLowerCase();
+    var show=rows.filter(function(r){
+      var st=statusOf(r);
+      if(filt!=='all' && st!==filt) return false;
+      if(!qq) return true;
+      var blob=((r.account||'')+' '+(r.brand||'')+' '+(r.city||'')+' '+(r.reason||'')+' '+(r.why||'')).toLowerCase();
+      return blob.indexOf(qq)>=0;
+    });
+    document.getElementById('k-s').textContent=show.length;
+    document.getElementById('empty').hidden=show.length>0;
+    document.getElementById('list').innerHTML=show.map(function(r){
+      var st=statusOf(r);
+      var nd=nextOf(r);
+      var tel=r.phone?('<a class="btn sec" href="tel:'+String(r.phone).replace(/[^\d+]/g,'')+'">'+esc(r.phone)+'</a>'):'';
+      var mail=r.email?('<a class="btn sec" href="mailto:'+esc(r.email)+'">Email</a>'):'';
+      var chip=st==='NO_DATE'?'<span class="chip warn">NO DATE</span>':'<span class="chip ok">Next · '+esc(nd)+'</span>';
+      return '<article class="row '+(st==='NO_DATE'?'nodate':'hasdate')+'"><h3>'+esc(r.account)+'</h3>'
+        +'<div class="meta">'+chip+(r.city?('<span class="chip city">'+esc(r.city)+'</span>'):'')+'</div>'
+        +'<div class="why">'+esc(r.reason||r.why||'')+(r.penetration?(' · '+esc(r.penetration)):'')+(r.last_paid?(' · last paid '+esc(r.last_paid)):'')+'</div>'
+        +'<div class="actions"><a class="btn" href="one-touch-winback.html">Win-back / rebook →</a>'+tel+mail+'</div></article>';
+    }).join('');
+  }
+  document.getElementById('filters').addEventListener('click',function(e){
+    var b=e.target.closest('button[data-f]'); if(!b) return;
+    filt=b.getAttribute('data-f');
+    [].forEach.call(document.querySelectorAll('#filters button'),function(x){x.classList.toggle('on',x===b);});
+    render();
+  });
+  document.getElementById('q').addEventListener('input',function(e){ q=e.target.value; render(); });
+  fetch('data/customers_no_next_date.json',{cache:'no-store'}).then(function(r){return r.json()}).then(function(d){
+    DATA=d;
+    var c=d.counts||{};
+    document.getElementById('k-n').textContent=c.no_date!=null?c.no_date:'—';
+    document.getElementById('k-h').textContent=c.has_upcoming_date!=null?c.has_upcoming_date:'—';
+    document.getElementById('k-t').textContent=c.total!=null?c.total:((d.rows||[]).length);
+    render();
+  }).catch(function(){
+    document.getElementById('list').innerHTML='<p class="empty">Failed to load data/customers_no_next_date.json</p>';
+  });
+})();
+</script>
+<script src="shared/flow-spine.js" defer></script>
+</body></html>
