@@ -1,284 +1,145 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Franchise Hub · RVP · Sheehan Homestead</title>
+<title>RVP · Operations · Growth · Support · Sheehan Homestead</title>
 <style>
-:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--bad:#ff5d6c;--violet:#a78bfa;--money:#f0abfc}
+:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--money:#f0abfc;--joy:#fbbf24}
 *{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
 a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
-.wrap{max-width:1180px;margin:0 auto;padding:28px 22px 48px}
+.wrap{max-width:1100px;margin:0 auto;padding:28px 22px 48px}
 .top{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 18px;padding:10px 14px;border:1px solid var(--line);border-radius:14px;background:#0f1728}
 .top .lbl{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-right:4px}
 .top a{background:var(--card);border:1px solid var(--line);color:var(--text);padding:7px 12px;border-radius:999px;font-size:.78rem;font-weight:600;text-decoration:none}
-.top a.money{border-color:#a855f788;background:linear-gradient(135deg,#2a1530,#121a2b);color:#f0abfc;font-size:.9rem;padding:9px 16px}
+.top a.money{border-color:#a855f788;background:linear-gradient(135deg,#2a1530,#121a2b);color:#f0abfc;font-size:.88rem;padding:8px 14px}
 .top a.sec{font-weight:500;font-size:.72rem;color:#c5d0e6}
-header{margin-bottom:8px}
-h1{font-size:clamp(1.6rem,3.2vw,2.15rem);margin:0 0 6px;letter-spacing:-.02em;font-weight:750}
+h1{font-size:clamp(1.55rem,3.1vw,2.1rem);margin:0 0 6px;letter-spacing:-.02em;font-weight:750}
 .sub{color:var(--muted);font-size:.95rem}
-.north{margin:10px 0 22px;font-size:1.05rem;color:#c5d0e6}
-.north b{color:#fff}
-.money-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;margin:0 0 22px;padding:18px 22px;border:1px solid #a855f799;border-radius:18px;background:linear-gradient(135deg,#2a1530 0%,#152238 55%,#121a2b 100%);min-height:88px}
-.money-bar h2{margin:0;font-size:clamp(1.25rem,2.4vw,1.55rem);color:#f5d0fe}
-.money-bar p{margin:4px 0 0;color:#d4c4ff;font-size:.9rem}
-.money-bar .cta{display:inline-block;padding:12px 20px;border-radius:999px;background:#a855f7;color:#fff;font-weight:800;font-size:1rem;text-decoration:none;border:0}
-.money-bar .cta:hover{filter:brightness(1.08);text-decoration:none}
-.hub{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:28px}
-@media(max-width:820px){.hub{grid-template-columns:1fr}}
-.hub-tile{display:flex;flex-direction:column;justify-content:space-between;min-height:168px;padding:22px 24px;border-radius:20px;border:1px solid var(--line);background:var(--card);color:inherit;text-decoration:none;transition:border-color .15s,transform .12s}
-.hub-tile:hover{border-color:var(--accent);transform:translateY(-2px);text-decoration:none}
-.hub-tile .kicker{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px}
-.hub-tile h3{margin:0 0 8px;font-size:clamp(1.35rem,2.6vw,1.75rem);letter-spacing:-.015em;line-height:1.15}
-.hub-tile p{margin:0;color:var(--muted);font-size:.95rem;max-width:36ch}
-.hub-tile .go{margin-top:18px;font-size:.95rem;font-weight:800;color:var(--accent)}
-.hub-tile.ops{border-color:#fbbf2466;background:linear-gradient(160deg,#2a2210,#121a2b 70%)}.hub-tile.ops .go{color:#fde68a}
-.hub-tile.sales{border-color:#5b8cff88;background:linear-gradient(160deg,#152238,#121a2b 65%)}.hub-tile.sales .go{color:#9ec1ff}
-.hub-tile.revops{border-color:#a855f766;background:linear-gradient(160deg,#231530,#121a2b 65%)}.hub-tile.revops .go{color:#f0abfc}
-.hub-tile.invest{border-color:#3dd68c66;background:linear-gradient(160deg,#13281d,#121a2b 65%)}.hub-tile.invest .go{color:#9dffc5}
-.kpi-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:0 0 28px}
-.kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
-.kpi .l{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
-.kpi .v{font-size:1.45rem;font-weight:750;margin-top:4px}
+.north{margin:10px 0 18px;font-size:1.02rem;color:#c5d0e6}.north b{color:#fff}
+.pace-strip{margin:0 0 22px;padding:18px 20px;border:1px solid #5b8cff66;border-radius:18px;background:linear-gradient(160deg,#152238,#0f1728 70%)}
+.pace-strip h2{margin:0 0 4px;font-size:1.1rem;color:#9ec1ff}
+.pace-strip .meta{color:var(--muted);font-size:.82rem;margin-bottom:12px}
+.kpi-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.kpi .l{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.kpi .v{font-size:1.35rem;font-weight:750;margin-top:4px}
 .kpi .s{font-size:.72rem;color:var(--muted);margin-top:3px}
 .pace{height:10px;background:var(--panel);border-radius:99px;overflow:hidden;margin-top:8px;border:1px solid var(--line)}
 .pace>i{display:block;height:100%;background:linear-gradient(90deg,var(--good),var(--accent));width:0}
-.drill{scroll-margin-top:18px;margin:0 0 22px;padding:22px 24px;border:1px solid var(--line);border-radius:18px;background:#0f1728}
-.drill h2{margin:0 0 6px;font-size:clamp(1.25rem,2.2vw,1.55rem)}
-.drill .blurb{color:var(--muted);margin:0 0 16px;font-size:.95rem}
-.doors{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
-.door{display:block;padding:16px 18px;border-radius:14px;border:1px solid var(--line);background:var(--card);color:inherit;text-decoration:none;min-height:110px}
-.door:hover{border-color:var(--accent);text-decoration:none}
-.door h3{margin:0 0 6px;font-size:1.05rem}
-.door p{margin:0;color:var(--muted);font-size:.82rem}
-.door .open{display:inline-block;margin-top:12px;font-weight:700;font-size:.8rem;color:var(--accent)}
-.badge{font-size:.65rem;padding:2px 8px;border-radius:6px;background:#1a2440;color:var(--accent);border:1px solid var(--line);margin-left:6px;vertical-align:middle}
-.badge.gap{background:#2a2416;color:var(--warn);border-color:#ffb02066}
-.badge.live{background:#13281d;color:var(--good);border-color:#3dd68c66}
-.badge.demo{background:#2a2416;color:var(--warn);border-color:#ffb02066}
-.book-card{margin:28px 0 12px;padding:20px 22px;border:1px dashed #ffb02088;border-radius:16px;background:#16140f}
-.book-card h3{margin:0 0 8px;font-size:1.15rem;color:#fde68a}
-.book-card ol{margin:8px 0 0;padding-left:1.2rem;color:#c5d0e6;font-size:.9rem}
-.book-card li{margin:6px 0}
+.hub{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:18px}
+@media(max-width:900px){.hub{grid-template-columns:1fr}}
+.hub-tile{display:flex;flex-direction:column;justify-content:space-between;min-height:190px;padding:22px 24px;border-radius:20px;border:1px solid var(--line);background:var(--card);color:inherit;text-decoration:none;transition:border-color .15s,transform .12s}
+.hub-tile:hover{transform:translateY(-2px);text-decoration:none}
+.hub-tile .kicker{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px}
+.hub-tile h3{margin:0 0 8px;font-size:clamp(1.4rem,2.6vw,1.75rem);letter-spacing:-.015em;line-height:1.15}
+.hub-tile p{margin:0;color:var(--muted);font-size:.92rem;max-width:34ch}
+.hub-tile .go{margin-top:18px;font-size:.95rem;font-weight:800}
+.hub-tile.ops{border-color:#fbbf2466;background:linear-gradient(160deg,#2a2210,#121a2b 70%)}.hub-tile.ops .go{color:#fde68a}
+.hub-tile.growth{border-color:#5b8cff88;background:linear-gradient(160deg,#152238,#121a2b 65%)}.hub-tile.growth .go{color:#9ec1ff}
+.hub-tile.support{border-color:#3dd68c66;background:linear-gradient(160deg,#13281d,#121a2b 65%)}.hub-tile.support .go{color:#9dffc5}
+.accent-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:0 0 18px}
+.accent-row a.money{display:inline-block;padding:10px 16px;border-radius:999px;border:1px solid #a855f788;background:linear-gradient(135deg,#2a1530,#121a2b);color:#f0abfc;font-weight:800;font-size:.9rem;text-decoration:none}
+.accent-row .hint{color:var(--muted);font-size:.8rem}
+.sec-links{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.sec-links a{font-size:.78rem;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:#c5d0e6;text-decoration:none}
 .note{color:var(--muted);font-size:.78rem;margin-top:18px}
-.chip{display:inline-block;font-size:.72rem;padding:3px 9px;border-radius:999px;border:1px solid var(--line);background:var(--panel);margin:2px 4px 2px 0;color:#c5d0e6}
-.chip b{color:var(--good)}
+.badge{font-size:.65rem;padding:2px 8px;border-radius:6px;background:#13281d;color:var(--good);border:1px solid #3dd68c66;margin-left:6px;vertical-align:middle}
 </style></head>
 <body data-flow-face="ops" data-flow-chip="rvp"><div class="wrap">
 
 <div class="top">
   <span class="lbl">Apps</span>
-  <a class="money" href="one-touch.html">One-touch · money</a>
-  <a href="sales-review.html">Sales hub</a>
+  <a class="money" href="one-touch.html">One-touch</a>
+  <a href="ops.html">Operations</a>
+  <a href="growth-home.html">Growth</a>
+  <a href="support.html">Support</a>
   <a href="https://onchainoffgrid-hub.github.io/critters-on-call/" target="_blank" rel="noopener">Critters <span style="color:#3dd68c;font-size:.65rem">LIVE</span></a>
+  <a href="investor-home.html" class="sec">Investor</a>
   <a href="index.html" class="sec">Layer Zero</a>
-  <a href="link-tree.html" class="sec">All links</a>
 </div>
 
 <header>
-  <h1>Franchise Hub <span class="badge live">#0 · Callahan</span></h1>
-  <div class="sub">Sheehan Homestead / Critters on Call · Michael Sheehan · Area VP / Operator</div>
+  <h1>RVP home <span class="badge">#0 · Callahan</span></h1>
+  <div class="sub">Sheehan Homestead / Critters on Call · Michael Sheehan · exactly three tiles</div>
 </header>
-<p class="north">North star: <b>bookings</b> · quota <b>$250k</b> by <b>2026-12-23</b> · screen-share story (few tiles → deep drill)</p>
+<p class="north">North star: <b>$250k bookings</b> by <b>Dec 23, 2026</b> · tile → new page</p>
 
-<a class="money-bar" href="one-touch.html" id="one-touch">
-  <div>
-    <h2>One-touch · money button</h2>
-    <p>Mass-touch <i>stage</i> so Michael closes — not auto-send. Fat accent, not one of fifteen equal tiles.</p>
+<section class="pace-strip" aria-label="Pace vs quota">
+  <h2>Pace vs $250k quota</h2>
+  <div class="meta">Proven PayPal only for cash % · ops-book labeled unaudited · <code>data/paypal_kpis.json</code></div>
+  <div class="kpi-row">
+    <div class="kpi"><div class="l">Quota</div><div class="v">$250k</div><div class="s">by 2026-12-23</div></div>
+    <div class="kpi"><div class="l">Days left</div><div class="v" id="k-days">91</div><div class="s">from 2026-09-23</div></div>
+    <div class="kpi"><div class="l">PayPal YTD outside</div><div class="v" id="k-paypal">—</div><div class="s" id="k-paypal-s">as_of Sep 1 · proven</div></div>
+    <div class="kpi"><div class="l">Ops-book booked</div><div class="v" id="k-opsbook">—</div><div class="s" id="k-opsbook-s">unaudited</div></div>
+    <div class="kpi"><div class="l">Cash vs quota</div><div class="v" id="k-cash-pct">—</div><div class="s">PayPal / $250k</div><div class="pace"><i id="k-cash-bar"></i></div></div>
+    <div class="kpi"><div class="l">Ops-book vs quota</div><div class="v" id="k-ops-pct">—</div><div class="s">unaudited / $250k</div><div class="pace"><i id="k-ops-bar"></i></div></div>
   </div>
-  <span class="cta">Open →</span>
-</a>
+</section>
 
-<div class="kpi-row" id="kpi-strip" aria-label="Live KPIs">
-  <div class="kpi"><div class="l">Quota</div><div class="v">$250k</div><div class="s">by 2026-12-23</div></div>
-  <div class="kpi"><div class="l">Pace vs goal</div><div class="v" id="k-pace">—</div><div class="s" id="k-pace-s">from PayPal / ops book</div><div class="pace" aria-hidden="true"><i id="k-pace-bar"></i></div></div>
-  <div class="kpi"><div class="l">Upcoming gigs</div><div class="v" id="k-gigs">—</div><div class="s" id="k-gigs-s">bookings_pipeline</div></div>
-  <div class="kpi"><div class="l">P0 overdue</div><div class="v" id="k-p0">—</div><div class="s" id="k-p0-s">actions</div></div>
-  <div class="kpi"><div class="l">CALL_NOW</div><div class="v" id="k-call">—</div><div class="s">BDR dialer</div></div>
-</div>
-
-<nav class="hub" aria-label="Franchise hub tiles">
+<nav class="hub" aria-label="Operations Growth Support">
   <a class="hub-tile ops" href="ops.html">
     <div>
-      <div class="kicker">01 · Drill</div>
+      <div class="kicker">01 · In the trenches</div>
       <h3>Operations</h3>
-      <p>People · Animals · Supply · Booked gigs · Pipeline — new page (tiles)</p>
+      <p>Internal run · deliver what we sold · idle minutes → Growth + Support</p>
     </div>
     <span class="go">Open Operations →</span>
   </a>
-  <a class="hub-tile sales" href="sales-review.html">
+  <a class="hub-tile growth" href="growth-home.html">
     <div>
-      <div class="kicker">02 · Drill</div>
-      <h3>Sales &amp; Bookings</h3>
-      <p>Quota + pace · ICP · Connect · Product — three doors only</p>
+      <div class="kicker">02 · Stay alive</div>
+      <h3>Growth</h3>
+      <p>All customers + growing customers · Top 20/100 · CDD/HOA · one-touch · pipeline</p>
     </div>
-    <span class="go">Open Sales hub →</span>
+    <span class="go">Open Growth →</span>
   </a>
-  <a class="hub-tile revops" href="#revops">
+  <a class="hub-tile support" href="support.html">
     <div>
-      <div class="kicker">03 · Drill</div>
-      <h3>RevOps / Leading–Lagging</h3>
-      <p>GBP receipts · Today’s 11 · One-touch · seats · actions · mass-touch</p>
+      <div class="kicker">03 · Partner</div>
+      <h3>Support</h3>
+      <p>Business partner to Ops + Growth · pace · reviews · collateral · giveables</p>
     </div>
-    <span class="go">Open RevOps →</span>
-  </a>
-  <a class="hub-tile invest" href="#investors">
-    <div>
-      <div class="kicker">04 · Drill</div>
-      <h3>Investors / Franchise</h3>
-      <p>Proof / bona fide · peer cities · what’s live vs grayed</p>
-    </div>
-    <span class="go">Open Investors →</span>
+    <span class="go">Open Support →</span>
   </a>
 </nav>
 
-<section class="drill" id="ops">
-  <h2>Operations</h2>
-  <p class="blurb">Primary face is the <a href="ops.html" style="color:#fde68a;font-weight:700">Ops landing (new page)</a> — People · Animals · Supply · Gigs · Pipeline. Cards below are legacy shortcuts.</p>
-  <div class="doors">
-        <a class="door" href="sop-sla.html" style="border-color:#fbbf2466"><h3>SOP / SLA library</h3><p>Interview · grade helpers · assign · day-of · fall-off · cash recon · Ann-Marie RACI. TBD marked honest.</p><span class="open" style="color:#fde68a">Open →</span></a>
-<a class="door" href="ops-battle-row.html" style="border-color:#fbbf2466"><h3>Battle Row</h3><p>Animals · pens · tents · instructors. Logistics of joy.</p><span class="open" style="color:#fde68a">Open →</span></a>
-    <a class="door" href="ops-people.html"><h3>People / Team</h3><p>Org truth · Team roster (private operator).</p><span class="open" style="color:#fde68a">Open →</span></a>
-    <a class="door" href="ann-marie-ops.html"><h3>Ann-Marie RACI</h3><p>Scheduling · hay-frame STEM · ops handoffs.</p><span class="open">Open →</span></a>
-    <a class="door" href="programming.html"><h3>Programs</h3><p>Program heat · what we actually run.</p><span class="open">Open →</span></a>
-    <a class="door" href="bookings-dates.html"><h3>Calendar / gigs</h3><p>Upcoming from bookings pipeline — no invented free days.</p><span class="open">Open →</span></a>
-  </div>
-</section>
+<div class="accent-row">
+  <a class="money" href="one-touch.html">One-touch · money accent →</a>
+  <span class="hint">Lives under Growth · small accent here only · not a fourth peer tile</span>
+</div>
 
-<section class="drill" id="sales">
-  <h2>Sales &amp; Bookings</h2>
-  <p class="blurb">Quota $250k by 2026-12-23. Pace uses real PayPal / ops-book labels — bookings JSON has dates/status, not $ amounts.</p>
-  <div class="doors">
-    <a class="door" href="sales-review.html" style="border-color:#5b8cff88"><h3>Sales hub · 3 doors</h3><p>ICP · Connect · Product — presentation drill.</p><span class="open">Open →</span></a>
-    <a class="door" href="bookings-dates.html"><h3>Bookings board</h3><p>Locked / accepted / waiting · next actions.</p><span class="open">Open →</span></a>
-    <a class="door" href="money-cfo.html"><h3>Money (CFO)</h3><p>Outside customer gross · owner separated.</p><span class="open">Open →</span></a>
-  </div>
-</section>
+<div class="sec-links">
+  <a href="investor-home.html">Investor home (no Team)</a>
+  <a href="link-tree.html">All links</a>
+</div>
 
-<section class="drill" id="revops">
-  <h2>RevOps / Leading–Lagging</h2>
-  <p class="blurb">Leading = lists &amp; seats · Lagging = overdue &amp; cash · GBP discovery vs calls. One-touch stays the money accent.</p>
-
-  <div id="gbp-receipts" style="margin:0 0 14px;padding:16px 18px;border:1px solid #a855f788;border-radius:14px;background:linear-gradient(135deg,#2a1530,#121a2b)">
-    <div style="font-size:.68rem;color:#93a0b8;text-transform:uppercase;letter-spacing:.07em;margin-bottom:4px">GBP receipts · not audited $</div>
-    <h3 style="margin:0 0 8px;font-size:1.15rem;color:#f5d0fe">Google Business Profile · Sheehan Homestead</h3>
-    <p style="margin:0 0 10px;font-size:.88rem;color:#d4c4ff">Leading–lagging tension: Aug calls/interactions <b style="color:#3dd68c">up YoY</b>; discovery (views/search) <b style="color:#ffb020">down YoY</b>. Website in ads: <a href="https://sheehanhomestead.com/" target="_blank" rel="noopener" style="color:#f0abfc">sheehanhomestead.com</a> · kids party angle.</p>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin:0 0 10px">
-      <div style="background:#0e1626;border:1px solid #1e2a44;border-radius:12px;padding:10px 12px"><div style="font-size:.65rem;color:#93a0b8;text-transform:uppercase">Apr–Sep interactions</div><div style="font-size:1.35rem;font-weight:800" id="gbp-int">1,258</div></div>
-      <div style="background:#0e1626;border:1px solid #1e2a44;border-radius:12px;padding:10px 12px"><div style="font-size:.65rem;color:#93a0b8;text-transform:uppercase">Website clicks</div><div style="font-size:1.35rem;font-weight:800" id="gbp-web">814</div></div>
-      <div style="background:#0e1626;border:1px solid #1e2a44;border-radius:12px;padding:10px 12px"><div style="font-size:.65rem;color:#93a0b8;text-transform:uppercase">Calls (Apr–Sep)</div><div style="font-size:1.35rem;font-weight:800" id="gbp-calls">68</div></div>
-      <div style="background:#0e1626;border:1px solid #1e2a44;border-radius:12px;padding:10px 12px"><div style="font-size:.65rem;color:#93a0b8;text-transform:uppercase">Aug interactions</div><div style="font-size:1.35rem;font-weight:800" id="gbp-aug-int">213 <span style="font-size:.75rem;color:#3dd68c">+4.4%</span></div></div>
-      <div style="background:#0e1626;border:1px solid #1e2a44;border-radius:12px;padding:10px 12px"><div style="font-size:.65rem;color:#93a0b8;text-transform:uppercase">Aug calls</div><div style="font-size:1.35rem;font-weight:800" id="gbp-aug-calls">12 <span style="font-size:.75rem;color:#3dd68c">+9.1%</span></div></div>
-      <div style="background:#0e1626;border:1px solid #1e2a44;border-radius:12px;padding:10px 12px"><div style="font-size:.65rem;color:#93a0b8;text-transform:uppercase">Aug views</div><div style="font-size:1.35rem;font-weight:800" id="gbp-aug-views">2,086 <span style="font-size:.75rem;color:#ffb020">−19.3%</span></div></div>
-      <div style="background:#0e1626;border:1px solid #1e2a44;border-radius:12px;padding:10px 12px"><div style="font-size:.65rem;color:#93a0b8;text-transform:uppercase">Aug search</div><div style="font-size:1.35rem;font-weight:800" id="gbp-aug-search">665 <span style="font-size:.75rem;color:#ffb020">−18.0%</span></div></div>
-    </div>
-    <p style="margin:0;font-size:.78rem;color:#93a0b8">Source: GBP Performance screenshots (Michael 2026-09-23) · <a href="assets/gbp/interactions-apr-sep.jpg" target="_blank" rel="noopener">receipts</a> · <span id="gbp-read">calls/interactions YoY up; discovery down</span></p>
-  </div>
-
-  <div class="doors">
-        <a class="door" href="todays-11.html" style="border-color:#a855f788"><h3>Today’s 11</h3><p>Per mature GTM seat · mailto + form only · NO auto-send.</p><span class="open" style="color:#f0abfc">Open play →</span></a>
-<a class="door" href="one-touch.html" style="border-color:#a855f788"><h3>One-touch</h3><p>#1 money motion · stage only.</p><span class="open" style="color:#f0abfc">Open →</span></a>
-    <a class="door" href="lead-sources.html"><h3>Lead sources</h3><p>Human source chips — no invented origins.</p><span class="open">Open →</span></a>
-    <a class="door" href="gtm-seats.html" style="border-color:#a78bfa66"><h3>GTM seats</h3><p>Named vs vacant · Michael testing Enterprise.</p><span class="open" style="color:#c4b5fd">Open →</span></a>
-    <a class="door" href="actions-overdue.html"><h3>Actions / overdue</h3><p>P0 open · not started · execution debt.</p><span class="open">Open →</span></a>
-    <a class="door" href="easy-attack.html"><h3>Mass-touch staging</h3><p>Easy attack ideas · manual/light only.</p><span class="open">Open →</span></a>
-  </div>
-</section>
-
-<section class="drill" id="investors">
-  <h2>Investors / Franchise network</h2>
-  <p class="blurb">Ops know-how <em>is</em> the product. Proof posture — no invented financials.</p>
-  <div class="doors">
-    <a class="door" href="investor-home.html" style="border-color:#3dd68c66"><h3>Investor home · Proof</h3><p>Bona fide operating system · readiness face.</p><span class="open" style="color:#9dffc5">Open →</span></a>
-    <a class="door" href="investor-checklist.html"><h3>Investor checklist</h3><p>Assets · proof · gray gaps labeled.</p><span class="open">Open →</span></a>
-    <a class="door" href="franchise-peer-cities.html" style="border-color:#3dd68c66"><h3>Peer cities</h3><p>10 Jax-class metros · research · not NYC first.</p><span class="open" style="color:#9dffc5">Open →</span></a>
-    <a class="door" href="investor-capital.html"><h3>Capital</h3><p>What’s live vs grayed for raise narrative.</p><span class="open">Open →</span></a>
-  </div>
-
-  <div style="margin-top:16px;padding:14px 16px;border:1px solid #3dd68c55;border-radius:14px;background:#0e1626;font-size:.88rem;color:#c5d0e6">
-    <b style="color:#9dffc5">Franchise / asset-sale notes (neutral · not legal advice):</b>
-    <ul style="margin:8px 0 0;padding-left:1.15rem">
-      <li>Selling the keys = a <b>proper asset sale</b> (counsel for structure) — not a casual page handoff.</li>
-      <li><b>GBP display name</b> can differ from legal brand; renaming risks review history — treat carefully.</li>
-      <li><b>Meta Page</b> sales/transfers have platform restrictions — recommend counsel before any attempt.</li>
-      <li>Preferred local line while reviews are thin/valuable: keep <b>Sheehan Homestead</b>, optional tagline <b>“Jacksonville’s Homestead”</b> — prefer over a full rebrand.</li>
-    </ul>
-  </div>
-  <p style="margin:14px 0 0;font-size:.82rem;color:var(--muted)"><span class="chip"><b>Live</b> Critters app / Play / exec suite</span><span class="chip badge gap" style="display:inline">Gray</span> franchise insurance SOP · dedicated petting-zoo product policy · sheehanhomestead.com Book embed</p>
-</section>
-
-<section class="book-card" id="make-book-live">
-  <h3>Make Book live <span class="badge demo">BLOCKED · DEMO/LOCAL</span></h3>
-  <p style="margin:0;color:#c5d0e6;font-size:.9rem"><b>sheehanhomestead.com</b> is unreachable from this box (HTTP 000). Critters <code>book.html</code> saves via <b>localStorage only</b> — not embedded on the marketing site.</p>
-  <p style="margin:10px 0 0;color:#fde68a;font-size:.9rem"><b>Need from Michael:</b></p>
-  <ol>
-    <li>Confirm site platform (Wix / Squarespace / WordPress / other) + admin access path <b>OR</b> paste an embed/booking URL if one exists.</li>
-    <li>Preferred live path: <b>(A)</b> embed <code>https://onchainoffgrid-hub.github.io/critters-on-call/book.html</code> on a /book page, <b>(B)</b> point Book CTA to that URL, or <b>(C)</b> give Calendly/Acuity/Setmore link to wrap.</li>
-    <li>Where confirmations should land (email to Michael / Ann-Marie).</li>
-  </ol>
-  <p style="margin:12px 0 0;font-size:.85rem;color:var(--muted)">Until then Book stays <b>demo/local</b>. Demo app: <a href="https://onchainoffgrid-hub.github.io/critters-on-call/book.html" target="_blank" rel="noopener">critters-on-call/book.html</a> · Connect repo: <a href="connect.html">connect.html</a></p>
-</section>
-
-<p class="note">Dump-home: Dashboard Bit · Brand: Sheehan Homestead · Face: Franchise Hub / RVP · KPIs from data/*.json · Built 2026-09-23 ET · No invented revenue</p>
+<p class="note">IA: RVP_THREE_FACES_IA · Built 2026-09-23 ET · Never invent revenue · Team private off investor</p>
 </div>
 <script>
 (function(){
   function fmt$(n){ if(n==null||n==='') return '—'; var x=Number(n); if(isNaN(x)) return '—'; return '$'+Math.round(x).toLocaleString('en-US'); }
   function set(id,v){ var el=document.getElementById(id); if(el) el.textContent=(v==null||v==='')?'—':v; }
-  async function load(path){
-    try{ var r=await fetch(path,{cache:'no-store'}); if(!r.ok) throw 0; return await r.json(); }
-    catch(e){ return null; }
-  }
-  var today='2026-09-23';
   var goal=250000;
-  Promise.all([
-    load('data/suite_summary.json'),
-    load('data/suite_kpis.json'),
-    load('data/paypal_kpis.json'),
-    load('data/overdue_kpis.json'),
-    load('data/bookings_pipeline.json')
-  ]).then(function(arr){
-    var sum=arr[0]||{}, kpis=arr[1]||{}, pay=arr[2]||{}, od=arr[3]||{}, book=arr[4]||{};
-    if(sum.bookings_goal) goal=Number(sum.bookings_goal)||goal;
+  var today=new Date(2026,8,23), end=new Date(2026,11,23);
+  set('k-days', Math.round((end-today)/86400000));
+  fetch('data/paypal_kpis.json',{cache:'no-store'}).then(function(r){return r.json()}).then(function(pay){
     var ytd=pay.ytd_2026&&pay.ytd_2026.outside_gross;
-    var opsBook=pay.ops_book_unaudited&&pay.ops_book_unaudited.booked_ytd_approx;
-    var paceVal=ytd!=null?ytd:null;
-    var pct=paceVal!=null?Math.min(100,Math.round(1000*paceVal/goal)/10):null;
-    set('k-pace', paceVal!=null?(fmt$(paceVal)+(pct!=null?' · '+pct+'%':'')):'—');
-    var sub='PayPal 2026 YTD outside';
-    if(opsBook!=null) sub+=' · ops book ~'+fmt$(opsBook)+' (unaudited)';
-    set('k-pace-s', sub);
-    var bar=document.getElementById('k-pace-bar');
-    if(bar&&pct!=null) bar.style.width=pct+'%';
-    var call=(sum.bdr_spec_aligned&&sum.bdr_spec_aligned.CALL_NOW)!=null?sum.bdr_spec_aligned.CALL_NOW:kpis.call_now;
-    set('k-call', call);
-    var p0=od.p0_open!=null?od.p0_open:sum.overdue_p0;
-    var ns=od.not_started!=null?od.not_started:kpis.overdue_not_started;
-    set('k-p0', p0);
-    set('k-p0-s', ns!=null?(ns+' not started'):'P0 open');
-    var rows=Array.isArray(book.bookings)?book.bookings:[];
-    var skip={'NO_PAY':1,'PIPELINE_MIA':1,'STUB':1};
-    var upcoming=rows.filter(function(b){ return b.date&&b.date>=today&&!skip[b.status]; })
-      .sort(function(a,c){ return (a.date||'').localeCompare(c.date||''); });
-    set('k-gigs', upcoming.length);
-    if(upcoming.length){
-      var n=upcoming[0];
-      set('k-gigs-s', 'Next '+n.date+' · '+(n.title||'').slice(0,28));
-    }
-  });
-
-  load('data/gbp_performance.json').then(function(gbp){
-    if(!gbp||!gbp.windows) return;
-    var a=gbp.windows.apr_sep_2026||{}, u=gbp.windows.aug_2026||{};
-    function n(x){ return x==null?'—':Number(x).toLocaleString('en-US'); }
-    function yoy(p){ if(p==null) return ''; var s=p>0?'+':''; var col=p>=0?'#3dd68c':'#ffb020'; return ' <span style="font-size:.75rem;color:'+col+'">'+s+p+'%</span>'; }
-    var el;
-    if(el=document.getElementById('gbp-int')) el.textContent=n(a.profile_interactions);
-    if(el=document.getElementById('gbp-web')) el.textContent=n(a.website_clicks);
-    if(el=document.getElementById('gbp-calls')) el.textContent=n(a.calls);
-    if(el=document.getElementById('gbp-aug-int')) el.innerHTML=n(u.profile_interactions)+yoy(u.profile_interactions_yoy_pct);
-    if(el=document.getElementById('gbp-aug-calls')) el.innerHTML=n(u.calls)+yoy(u.calls_yoy_pct);
-    if(el=document.getElementById('gbp-aug-views')) el.innerHTML=n(u.profile_views)+yoy(u.profile_views_yoy_pct);
-    if(el=document.getElementById('gbp-aug-search')) el.innerHTML=n(u.search_appearances)+yoy(u.search_appearances_yoy_pct);
-    if(el=document.getElementById('gbp-read')) el.textContent=gbp.read||'';
-  });
+    var asOf=pay.ytd_2026&&pay.ytd_2026.window;
+    var ops=pay.ops_book_unaudited||{};
+    var booked=ops.booked_ytd_approx;
+    set('k-paypal', fmt$(ytd));
+    set('k-paypal-s', (asOf||'2026 YTD')+' · proven outside');
+    set('k-opsbook', booked!=null?('~'+fmt$(booked)):'—');
+    var opsSub='unaudited';
+    if(ops.received_approx!=null) opsSub+=' · recv ~'+fmt$(ops.received_approx);
+    if(ops.ar_approx!=null) opsSub+=' · AR ~'+fmt$(ops.ar_approx);
+    set('k-opsbook-s', opsSub);
+    var cashPct=ytd!=null?Math.round(1000*ytd/goal)/10:null;
+    var opsPct=booked!=null?Math.round(1000*booked/goal)/10:null;
+    set('k-cash-pct', cashPct!=null?(cashPct+'%'):'—');
+    set('k-ops-pct', opsPct!=null?(opsPct+'%'):'—');
+    var cb=document.getElementById('k-cash-bar'); if(cb&&cashPct!=null) cb.style.width=Math.min(100,cashPct)+'%';
+    var ob=document.getElementById('k-ops-bar'); if(ob&&opsPct!=null) ob.style.width=Math.min(100,opsPct)+'%';
+  }).catch(function(){});
 })();
 </script>
 <script src="shared/flow-spine.js" defer></script>

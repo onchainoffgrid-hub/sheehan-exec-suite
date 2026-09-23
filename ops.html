@@ -2,7 +2,7 @@
 <html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Operations · Sheehan Homestead / Critters on Call</title>
 <style>
-:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--violet:#a78bfa;--joy:#fbbf24;--money:#f0abfc}
+:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--violet:#a78bfa;--joy:#fbbf24}
 *{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
 a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
 .wrap{max-width:1100px;margin:0 auto;padding:28px 22px 48px}
@@ -11,88 +11,75 @@ a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
 .top a{background:var(--card);border:1px solid var(--line);color:var(--text);padding:7px 12px;border-radius:999px;font-size:.78rem;font-weight:600;text-decoration:none}
 .top a.money{border-color:#a855f788;background:linear-gradient(135deg,#2a1530,#121a2b);color:#f0abfc}
 .top a.sec{font-weight:500;font-size:.72rem;color:#c5d0e6}
-header{margin-bottom:10px}
+.crumb{font-size:.82rem;color:var(--muted);margin:0 0 12px}.crumb a{color:#fde68a;font-weight:600}
 h1{font-size:clamp(1.55rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;font-weight:750}
 .sub{color:var(--muted);font-size:.95rem}
 .banner{margin:14px 0 22px;padding:14px 16px;border:1px solid #fbbf2466;border-radius:14px;background:linear-gradient(135deg,#2a2210,#121a2b);font-size:.9rem;color:#fde68a}
 .banner b{color:#fff}
-.hub{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-.hub-tile{display:flex;flex-direction:column;justify-content:space-between;min-height:150px;padding:22px 24px;border-radius:20px;border:1px solid var(--line);background:var(--card);color:inherit;text-decoration:none;transition:border-color .15s,transform .12s}
+.hub{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.hub-tile{display:flex;flex-direction:column;justify-content:space-between;min-height:145px;padding:20px 22px;border-radius:18px;border:1px solid var(--line);background:var(--card);color:inherit;text-decoration:none;transition:border-color .15s,transform .12s}
 .hub-tile:hover{border-color:var(--accent);transform:translateY(-2px);text-decoration:none}
-.hub-tile .kicker{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px}
-.hub-tile h3{margin:0 0 8px;font-size:clamp(1.2rem,2.4vw,1.55rem);letter-spacing:-.015em;line-height:1.15}
-.hub-tile p{margin:0;color:var(--muted);font-size:.9rem;max-width:34ch}
-.hub-tile .go{margin-top:16px;font-size:.92rem;font-weight:800;color:var(--accent)}
-.hub-tile.people{border-color:#5b8cff88;background:linear-gradient(160deg,#152238,#121a2b 70%)}.hub-tile.people .go{color:#9ec1ff}
-.hub-tile.animals{border-color:#fbbf2466;background:linear-gradient(160deg,#2a2210,#121a2b 70%)}.hub-tile.animals .go{color:#fde68a}
-.hub-tile.supply{border-color:#3dd68c66;background:linear-gradient(160deg,#13281d,#121a2b 70%)}.hub-tile.supply .go{color:#9dffc5}
-.hub-tile.gigs{border-color:#a78bfa66;background:linear-gradient(160deg,#231530,#121a2b 70%)}.hub-tile.gigs .go{color:#d4c4ff}
-.hub-tile.pipeline{border-color:#ffb02066;background:linear-gradient(160deg,#2a2410,#121a2b 70%)}.hub-tile.pipeline .go{color:#ffd78a}
+.hub-tile .kicker{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px}
+.hub-tile h3{margin:0 0 6px;font-size:1.25rem}
+.hub-tile p{margin:0;color:var(--muted);font-size:.86rem}
+.hub-tile .go{margin-top:14px;font-size:.88rem;font-weight:800;color:var(--accent)}
+.hub-tile.people{border-color:#5b8cff88}.hub-tile.people .go{color:#9ec1ff}
+.hub-tile.animals{border-color:#fbbf2466}.hub-tile.animals .go{color:#fde68a}
+.hub-tile.daily{border-color:#ffb02066}.hub-tile.daily .go{color:#ffd78a}
+.hub-tile.products{border-color:#3dd68c66}.hub-tile.products .go{color:#9dffc5}
+.hub-tile.gigs{border-color:#a78bfa66}.hub-tile.gigs .go{color:#d4c4ff}
+.hub-tile.idle{border-color:#1e2a44;border-style:dashed}
 .note{color:var(--muted);font-size:.78rem;margin-top:24px}
-.badge{font-size:.65rem;padding:2px 8px;border-radius:6px;background:#13281d;color:var(--good);border:1px solid #3dd68c66;margin-left:6px;vertical-align:middle}
+.badge{font-size:.65rem;padding:2px 8px;border-radius:6px;background:#13281d;color:var(--good);border:1px solid #3dd68c66;margin-left:6px}
 </style></head>
 <body data-flow-face="ops"><div class="wrap">
 
 <div class="top">
   <span class="lbl">Apps</span>
-  <a class="money" href="one-touch.html">One-touch · money</a>
-  <a href="rvp-ops.html">Franchise Hub</a>
-  <a href="sales-review.html">Sales hub</a>
-  <a href="https://onchainoffgrid-hub.github.io/critters-on-call/" target="_blank" rel="noopener">Critters <span style="color:#3dd68c;font-size:.65rem">LIVE</span></a>
+  <a class="money" href="one-touch.html">One-touch</a>
+  <a href="rvp-ops.html">RVP home</a>
+  <a href="growth-home.html">Growth</a>
+  <a href="support.html">Support</a>
   <a href="index.html" class="sec">Layer Zero</a>
 </div>
 
+<p class="crumb"><a href="rvp-ops.html">RVP</a> → <b>Operations</b></p>
+
 <header>
-  <h1>Operations <span class="badge">LIVE</span></h1>
-  <div class="sub">Sheehan Homestead / Critters on Call · tiles only · each door = new page</div>
+  <h1>Operations <span class="badge">trenches</span></h1>
+  <div class="sub">Execution only · internal run · external delivery of what we sold · idle → Growth + Support</div>
 </header>
 
-<div class="banner"><b>Org truth:</b> Ann-Marie owns Operations · Michael mentors / supports (not ego hierarchy). Money / Support sibling hubs later — this face is Ops only.</div>
+<div class="banner"><b>Ops cares about:</b> (1) internal run — feed, dogs vs coyotes, mixed flock, barn cat, facilities · (2) deliver what we already sold · (3) white calendar / empty minutes → handoff to Growth + Support. Ann-Marie owns Ops; Michael mentors. Team private off investor.</div>
 
 <nav class="hub" aria-label="Operations doors">
   <a class="hub-tile people" href="ops-people.html">
-    <div>
-      <div class="kicker">01 · People</div>
-      <h3>People</h3>
-      <p>Org truth + Team roster (private operator face)</p>
-    </div>
-    <span class="go">Open People →</span>
+    <div><div class="kicker">01 · People → Team</div><h3>Team</h3><p>Ann-Marie owns · roster private · off investor</p></div>
+    <span class="go">Open People / Team →</span>
   </a>
   <a class="hub-tile animals" href="ops-animals.html">
-    <div>
-      <div class="kicker">02 · Inventory</div>
-      <h3>Animals &amp; facilities</h3>
-      <p>Battle Row · pens · tents · animals · site assets</p>
-    </div>
-    <span class="go">Open Animals &amp; facilities →</span>
+    <div><div class="kicker">02 · Inventory + safety</div><h3>Animals &amp; facilities</h3><p>Battle Row · dogs / flock / barn · site assets</p></div>
+    <span class="go">Open Animals →</span>
   </a>
-  <a class="hub-tile supply" href="ops-supply.html">
-    <div>
-      <div class="kicker">03 · Sales-shared</div>
-      <h3>What we can supply</h3>
-      <p>W-9 · COI · WC · Hiscox · kit · limits (objection sheet)</p>
-    </div>
-    <span class="go">Open supply sheet →</span>
+  <a class="hub-tile daily" href="ops-daily-run.html">
+    <div><div class="kicker">03 · Morning board</div><h3>Daily run / feed</h3><p>Feed · dogs · flock · barn cat · list + tags</p></div>
+    <span class="go">Open daily run →</span>
+  </a>
+  <a class="hub-tile products" href="ops-products.html">
+    <div><div class="kicker">04 · Capable today</div><h3>Products / offers</h3><p>Catalog of what we can deliver or give today</p></div>
+    <span class="go">Open products →</span>
   </a>
   <a class="hub-tile gigs" href="ops-gigs.html">
-    <div>
-      <div class="kicker">04 · Calendar</div>
-      <h3>Booked gigs</h3>
-      <p>Date · offer · staffed · deposit · paid · on GCal?</p>
-    </div>
+    <div><div class="kicker">05 · External delivery</div><h3>Booked gigs</h3><p>Staffed · deposit · paid · on GCal?</p></div>
     <span class="go">Open booked gigs →</span>
   </a>
-  <a class="hub-tile pipeline" href="ops-pipeline.html">
-    <div>
-      <div class="kicker">05 · Quotes</div>
-      <h3>Pipeline</h3>
-      <p>Quotes sent · no answer · closed-lost crumbs</p>
-    </div>
-    <span class="go">Open pipeline →</span>
+  <a class="hub-tile idle" href="growth-home.html">
+    <div><div class="kicker">06 · Idle → opportunity</div><h3>Open minutes → Growth</h3><p>White calendar / empty minutes — create sellable work</p></div>
+    <span class="go">Handoff to Growth →</span>
   </a>
 </nav>
 
-<p class="note">Pattern: homepage = tiles · click = brand-new HTML page (not mega-scroll). Team is private — linked from People only, not investor hub. Built 2026-09-23 ~5:50pm ET · Talk-Deputy IA.</p>
+<p class="note">Supply / W-9 kit: <a href="ops-supply.html">ops-supply.html</a> · Pipeline under <a href="growth-home.html">Growth</a> · Built 2026-09-23 ET</p>
 </div>
 <script src="shared/flow-spine.js" defer></script>
 </body></html>

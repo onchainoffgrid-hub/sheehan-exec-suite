@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CDD / HOA tiers · Growth · Sheehan Homestead</title>
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--violet:#a78bfa}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
+a{color:var(--accent);text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:22px 18px 48px}
+.top{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 14px;padding:10px 14px;border:1px solid var(--line);border-radius:14px;background:#0f1728}
+.top .lbl{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-right:4px}
+.top a{background:var(--card);border:1px solid var(--line);color:var(--text);padding:7px 12px;border-radius:999px;font-size:.78rem;font-weight:600;text-decoration:none}
+.top a.on{border-color:#5b8cff88;background:#152238}
+.crumb{font-size:.82rem;color:var(--muted);margin:0 0 12px}.crumb a{color:#9ec1ff;font-weight:600}
+h1{font-size:1.45rem;margin:0 0 4px}.sub{color:var(--muted);font-size:.88rem;margin-bottom:12px}
+.banner{margin:0 0 14px;padding:12px 14px;border:1px solid #5b8cff66;border-radius:14px;background:#152238;font-size:.86rem;color:#c5d0e6}
+table{width:100%;border-collapse:collapse;font-size:.82rem}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:.68rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:600}
+tr:hover td{background:#0f1728}
+.tag{display:inline-block;font-size:.65rem;padding:2px 7px;border-radius:999px;border:1px solid var(--line);background:var(--panel);color:#c5d0e6}
+.tag.y{border-color:#3dd68c55;color:var(--good)}.tag.n{border-color:#ff5d6c44;color:#ff8a95}.tag.u{border-color:#ffb02066;color:var(--warn)}
+.note{color:var(--muted);font-size:.75rem;margin-top:16px}
+.muted{color:var(--muted)}.actions a{margin-right:8px;font-weight:700;font-size:.78rem}
+</style></head>
+<body data-flow-face="sales"><div class="wrap">
+<div class="top">
+  <span class="lbl">Growth</span>
+  <a href="growth-home.html">Growth home</a>
+  <a class="" href="growth-top20.html">Top 20</a>
+  <a class="" href="growth-top100.html">Top 100</a>
+  <a class="on" href="growth-cdd-hoa.html">CDD / HOA</a>
+  <a href="one-touch.html">One-touch</a>
+  <a href="rvp-ops.html">RVP</a>
+</div>
+<p class="crumb"><a href="rvp-ops.html">RVP</a> → <a href="growth-home.html">Growth</a> → <b>CDD / HOA tiers</b></p>
+<h1>CDD / HOA tiers</h1>
+<div class="sub">Attack / tier view · honest gaps OK · no invented directors</div>
+<div class="banner">Budget bands + homes = <b>estimates labeled</b>. mailto/sms/tel only.</div>
+<div id="meta" class="muted" style="font-size:.8rem;margin-bottom:10px"></div>
+<div style="overflow:auto;max-height:70vh"><table>
+<thead><tr><th>Name</th><th>Homes</th><th>Budget band</th><th>Amenity / lifestyle dir?</th><th>Title on file</th><th>Band</th><th>Tap</th></tr></thead>
+<tbody id="rows"><tr><td colspan="7" class="muted">Loading…</td></tr></tbody>
+</table></div>
+<p class="note">Source: data/growth_attack_lists.json · Built 2026-09-23 ET</p>
+</div>
+<script>
+(function(){
+  function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g,function(c){return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c];}); }
+  
+function amenTag(v){ if(v==='Y') return '<span class="tag y">Y</span>'; if(v==='N') return '<span class="tag n">N</span>'; return '<span class="tag u">unknown</span>'; }
+function telHref(p){ if(!p) return ''; var d=String(p).replace(/\D/g,''); if(d.length===10) d='1'+d; return d?'tel:+'+d:''; }
+fetch('data/growth_attack_lists.json',{cache:'no-store'}).then(function(r){return r.json()}).then(function(d){
+  document.getElementById('meta').textContent=(d.cdd_hoa_count||0)+' communities · Vesta/Wildlight sorted first · '+(d.as_of||'');
+  var tb=document.getElementById('rows'); tb.innerHTML='';
+  (d.cdd_hoa||[]).forEach(function(row){
+    var homes=row.homes!=null?(Number(row.homes).toLocaleString('en-US')+' <span class="tag u">est</span>'):'<span class="muted">unknown</span>';
+    var bud=row.budget_band?esc(row.budget_band)+' <span class="tag u">est</span>':'<span class="muted">—</span>';
+    var taps=[];
+    if(row.email) taps.push('<a href="mailto:'+esc(row.email)+'">Email</a>');
+    var th=telHref(row.phone); if(th) taps.push('<a href="'+th+'">Call</a>');
+    tb.innerHTML+='<tr><td><b>'+esc(row.name)+'</b><div class="muted">'+esc(row.city||'')+(row.segment?' · '+esc(row.segment):'')+'</div></td><td>'+homes+'</td><td>'+bud+'</td><td>'+amenTag(row.amenity_lifestyle_director)+'</td><td>'+esc(row.title_on_file||'—')+(row.contact?'<div class="muted">'+esc(row.contact)+'</div>':'')+'</td><td>'+esc(row.call_band||'')+'</td><td class="actions">'+(taps.join(' ')||'—')+'</td></tr>';
+  });
+}).catch(function(){ document.getElementById('rows').innerHTML='<tr><td colspan="7" class="muted">Could not load list</td></tr>'; });
+
+})();
+</script>
+<script src="shared/flow-spine.js" defer></script>
+</body></html>

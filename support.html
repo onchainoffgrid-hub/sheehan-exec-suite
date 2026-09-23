@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Support · Sheehan Homestead / Critters on Call</title>
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--violet:#a78bfa;--money:#f0abfc}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1100px;margin:0 auto;padding:28px 22px 48px}
+.top{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 18px;padding:10px 14px;border:1px solid var(--line);border-radius:14px;background:#0f1728}
+.top .lbl{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-right:4px}
+.top a{background:var(--card);border:1px solid var(--line);color:var(--text);padding:7px 12px;border-radius:999px;font-size:.78rem;font-weight:600;text-decoration:none}
+.top a.money{border-color:#a855f788;background:linear-gradient(135deg,#2a1530,#121a2b);color:#f0abfc}
+.crumb{font-size:.82rem;color:var(--muted);margin:0 0 12px}.crumb a{color:#9dffc5;font-weight:600}
+h1{font-size:clamp(1.55rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;font-weight:750}
+.sub{color:var(--muted);font-size:.95rem;margin-bottom:14px}
+.tenets{margin:0 0 20px;padding:14px 16px;border:1px solid #3dd68c55;border-radius:14px;background:#0e1626;font-size:.9rem;color:#c5d0e6}
+.tenets b{color:#9dffc5}
+.pace{margin:0 0 20px;padding:16px 18px;border:1px solid #5b8cff66;border-radius:16px;background:linear-gradient(160deg,#152238,#0f1728)}
+.pace h2{margin:0 0 8px;font-size:1.1rem;color:#9ec1ff}
+.kpi-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}
+.kpi .l{font-size:.65rem;color:var(--muted);text-transform:uppercase}
+.kpi .v{font-size:1.25rem;font-weight:750;margin-top:4px}
+.kpi .s{font-size:.7rem;color:var(--muted);margin-top:2px}
+.bar{height:8px;background:var(--panel);border-radius:99px;overflow:hidden;margin-top:6px;border:1px solid var(--line)}.bar>i{display:block;height:100%;background:linear-gradient(90deg,var(--good),var(--accent));width:0}
+.hub{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.hub-tile{display:flex;flex-direction:column;justify-content:space-between;min-height:130px;padding:18px 20px;border-radius:16px;border:1px solid var(--line);background:var(--card);color:inherit;text-decoration:none}
+.hub-tile:hover{border-color:var(--accent);text-decoration:none}
+.hub-tile h3{margin:0 0 6px;font-size:1.15rem}
+.hub-tile p{margin:0;color:var(--muted);font-size:.85rem}
+.hub-tile .go{margin-top:12px;font-weight:800;font-size:.85rem;color:var(--accent)}
+.note{color:var(--muted);font-size:.78rem;margin-top:20px}
+.badge{font-size:.65rem;padding:2px 8px;border-radius:6px;background:#13281d;color:var(--good);border:1px solid #3dd68c66;margin-left:6px}
+</style></head>
+<body data-flow-face="ops" data-flow-chip="support"><div class="wrap">
+<div class="top">
+  <span class="lbl">Apps</span>
+  <a class="money" href="one-touch.html">One-touch</a>
+  <a href="rvp-ops.html">RVP home</a>
+  <a href="ops.html">Operations</a>
+  <a href="growth-home.html">Growth</a>
+</div>
+<p class="crumb"><a href="rvp-ops.html">RVP</a> → <b>Support</b></p>
+<header>
+  <h1>Support <span class="badge">partner</span></h1>
+  <div class="sub">Business partner to Operations + Growth only · not a fourth empire</div>
+</header>
+
+<div class="tenets"><b>Core tenets:</b> give 2× receive · educate or entertain · attention economy · screenless / IQ-up when possible</div>
+
+<section class="pace" aria-label="Pace">
+  <h2>Pace (inline)</h2>
+  <div class="kpi-row">
+    <div class="kpi"><div class="l">Quota</div><div class="v">$250k</div><div class="s">by Dec 23</div></div>
+    <div class="kpi"><div class="l">Days left</div><div class="v" id="k-days">91</div><div class="s">from Sep 23</div></div>
+    <div class="kpi"><div class="l">PayPal outside</div><div class="v" id="k-paypal">—</div><div class="s" id="k-paypal-s">proven</div><div class="bar"><i id="k-cash-bar"></i></div></div>
+    <div class="kpi"><div class="l">Ops-book</div><div class="v" id="k-opsbook">—</div><div class="s">unaudited</div><div class="bar"><i id="k-ops-bar"></i></div></div>
+  </div>
+</section>
+
+<nav class="hub">
+  <a class="hub-tile" href="support-reviews.html" style="border-color:#fbbf2466"><div><h3>Reviews journey</h3><p>84 showing / ~96–99 / target 555 · Aug 12 cut-the-twine</p></div><span class="go" style="color:#fde68a">Open →</span></a>
+  <a class="hub-tile" href="collateral.html" style="border-color:#a78bfa66"><div><h3>Collateral</h3><p>One-pagers / pitches on disk · Connect coverage</p></div><span class="go" style="color:#d4c4ff">Open →</span></a>
+  <a class="hub-tile" href="support-giveables.html" style="border-color:#3dd68c66"><div><h3>Giveables / silent auction</h3><p>Yuli dugout + inbound · same kit as wheel</p></div><span class="go" style="color:#9dffc5">Open →</span></a>
+  <a class="hub-tile" href="connect.html"><div><h3>Connect repo</h3><p>Wheel · book · gold · gaps</p></div><span class="go">Open →</span></a>
+</nav>
+
+<p class="note">Support partners Ops + Growth · Built 2026-09-23 ET · No invented revenue</p>
+</div>
+<script>
+(function(){
+  function fmt$(n){ if(n==null||n==='') return '—'; var x=Number(n); if(isNaN(x)) return '—'; return '$'+Math.round(x).toLocaleString('en-US'); }
+  function set(id,v){ var el=document.getElementById(id); if(el) el.textContent=(v==null||v==='')?'—':v; }
+  var goal=250000;
+  set('k-days', Math.round((new Date(2026,11,23)-new Date(2026,8,23))/86400000));
+  fetch('data/paypal_kpis.json',{cache:'no-store'}).then(function(r){return r.json()}).then(function(pay){
+    var ytd=pay.ytd_2026&&pay.ytd_2026.outside_gross;
+    var ops=pay.ops_book_unaudited||{};
+    set('k-paypal', fmt$(ytd)+(ytd!=null?(' · '+(Math.round(1000*ytd/goal)/10)+'%'):''));
+    set('k-paypal-s', (pay.ytd_2026&&pay.ytd_2026.window)||'proven');
+    set('k-opsbook', ops.booked_ytd_approx!=null?('~'+fmt$(ops.booked_ytd_approx)+' · '+(Math.round(1000*ops.booked_ytd_approx/goal)/10)+'%'):'—');
+    var cb=document.getElementById('k-cash-bar'); if(cb&&ytd!=null) cb.style.width=Math.min(100,100*ytd/goal)+'%';
+    var ob=document.getElementById('k-ops-bar'); if(ob&&ops.booked_ytd_approx!=null) ob.style.width=Math.min(100,100*ops.booked_ytd_approx/goal)+'%';
+  }).catch(function(){});
+})();
+</script>
+<script src="shared/flow-spine.js" defer></script>
+</body></html>

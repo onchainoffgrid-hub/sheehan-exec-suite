@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Products / offers · Delivery Ops · Sheehan Homestead</title>
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--violet:#a78bfa;--joy:#fbbf24}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1100px;margin:0 auto;padding:22px 18px 48px}
+.top{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 14px;padding:10px 14px;border:1px solid var(--line);border-radius:14px;background:#0f1728}
+.top .lbl{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-right:4px}
+.top a{background:var(--card);border:1px solid var(--line);color:var(--text);padding:7px 12px;border-radius:999px;font-size:.78rem;font-weight:600;text-decoration:none}
+.top a.on{border-color:#3dd68c66;background:#13281d}
+.crumb{font-size:.82rem;color:var(--muted);margin:0 0 12px}.crumb a{color:#9dffc5;font-weight:600}
+h1{font-size:1.5rem;margin:0 0 4px}.sub{color:var(--muted);font-size:.9rem;margin-bottom:14px}
+.banner{margin:0 0 16px;padding:12px 14px;border:1px solid #3dd68c66;border-radius:14px;background:linear-gradient(135deg,#13281d,#121a2b);font-size:.88rem;color:#bbf7d0}
+.section{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin:20px 0 10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;color:inherit;text-decoration:none;min-height:110px}
+.card:hover{border-color:var(--accent);text-decoration:none}
+.card h3{margin:0 0 6px;font-size:1rem}
+.card p{margin:0;font-size:.84rem;color:#c5d0e6}
+.tag{display:inline-block;font-size:.65rem;padding:2px 8px;border-radius:999px;border:1px solid var(--line);margin:6px 4px 0 0;background:var(--panel);color:#c5d0e6}
+.tag.live{border-color:#3dd68c55;color:var(--good)}.tag.gray{border-color:#ffb02066;color:var(--warn)}.tag.give{border-color:#a78bfa55;color:#d4c4ff}
+.note{color:var(--muted);font-size:.75rem;margin-top:20px}
+.open{display:inline-block;margin-top:10px;font-weight:700;font-size:.78rem;color:var(--accent)}
+</style></head>
+<body data-flow-face="ops"><div class="wrap">
+<div class="top">
+  <span class="lbl">Ops</span>
+  <a href="ops.html">Delivery Ops</a>
+  <a class="on" href="ops-products.html">Products / offers</a>
+  <a href="ops-supply.html">Supply kit</a>
+  <a href="rvp-ops.html">RVP</a>
+</div>
+<p class="crumb"><a href="rvp-ops.html">RVP</a> → <a href="ops.html">Ops</a> → <b>Products / offers</b></p>
+<header>
+  <h1>Products / offers</h1>
+  <div class="sub">Clickable catalog of everything we can sell or give <b>today</b> · live chips from sell_catalog · gray = visible not ready</div>
+</header>
+<div class="banner">Capability face — not a price list. Gray offers stay visible but labeled. Link supply sheet for W-9 / COI / Hiscox answers.</div>
+
+<div class="section">Live sell catalog <span id="sc-meta"></span></div>
+<div class="grid" id="sell-live"></div>
+
+<div class="section">Farm · mobile · wheel (capable today)</div>
+<div class="grid">
+  <a class="card" href="https://onchainoffgrid-hub.github.io/critters-on-call/" target="_blank" rel="noopener"><h3>Farm tour / cut-the-twine</h3><p>On-farm visit · meet-the-swine / cut-the-twine family path.</p><span class="tag live">capable</span><span class="open">Critters home →</span></a>
+  <a class="card" href="https://onchainoffgrid-hub.github.io/critters-on-call/pricing.html" target="_blank" rel="noopener"><h3>Mobile petting zoo</h3><p>On-site events · CDD/HOA · schools · parties.</p><span class="tag live">capable</span><span class="open">Pricing →</span></a>
+  <a class="card" href="programming.html"><h3>Goat yoga · STEM / Emmy</h3><p>Programs we can stand up with instructors / kit.</p><span class="tag live">capable</span><span class="open">Programs →</span></a>
+  <a class="card" href="https://onchainoffgrid-hub.github.io/critters-on-call/wheel.html" target="_blank" rel="noopener"><h3>Wheel prizes</h3><p>Same kit as silent-auction giveables · “How Sweet It Is”.</p><span class="tag live">live wheel</span><span class="open">Wheel →</span></a>
+</div>
+
+<div class="section">Silent auction / booster giveables</div>
+<div class="grid">
+  <div class="card"><h3>Membership</h3><p>Gold / recurring farm membership framing.</p><span class="tag give">giveable</span></div>
+  <div class="card"><h3>Goat statue</h3><p>Goat-statue farm tour donation rung.</p><span class="tag give">giveable</span></div>
+  <div class="card"><h3>Chip / Critter Coins</h3><p>Play chip as promo give — digital economy still gray as sell SKU.</p><span class="tag give">giveable</span></div>
+  <div class="card"><h3>Farm gift</h3><p>Homestead gift certificate / farm goodie.</p><span class="tag give">giveable</span></div>
+  <div class="card"><h3>Farm tour</h3><p>Direct tour donate/give for boosters (Yuli dugout + inbound).</p><span class="tag give">giveable</span></div>
+  <div class="card"><h3>Discounts</h3><p>Event / party discount certificates.</p><span class="tag give">giveable</span></div>
+  <a class="card" href="support-giveables.html" style="border-color:#a78bfa66"><h3>Answer page → Giveables</h3><p>One page for Yuli dugout + inbound lady.</p><span class="open" style="color:#d4c4ff">Open Support giveables →</span></a>
+</div>
+
+<div class="section">Merch · digital · low overhead</div>
+<div class="grid">
+  <div class="card"><h3>Merch / candles</h3><p>Low-overhead farm merch when stocked.</p><span class="tag live">capable</span></div>
+  <div class="card"><h3>Golden-goat naming rights</h3><p>~$300 charity framing (eBay-style) · low overhead.</p><span class="tag live">capable</span></div>
+  <a class="card" href="https://onchainoffgrid-hub.github.io/critters-on-call/gold.html" target="_blank" rel="noopener"><h3>Gold / digital</h3><p>Membership / deals path on Critters.</p><span class="tag live">live</span><span class="open">Gold →</span></a>
+</div>
+
+<div class="section">Gray · visible not ready</div>
+<div class="grid" id="sell-gray"></div>
+
+<div class="section">Compliance kit (shared)</div>
+<div class="grid">
+  <a class="card" href="ops-supply.html" style="border-color:#3dd68c66"><h3>W-9 · COI · Hiscox · kit limits</h3><p>Objection / proof sheet · 5 enclosures · no horses yet.</p><span class="tag live">ready answers</span><span class="open">Open supply →</span></a>
+</div>
+
+<p class="note">Source: data/sell_catalog.json + RVP IA · Built 2026-09-23 ET · No invented SKUs as live</p>
+</div>
+<script>
+(function(){
+  async function load(p){ try{ var r=await fetch(p,{cache:'no-store'}); if(!r.ok) throw 0; return await r.json(); }catch(e){ return null; } }
+  function card(o){
+    var live=o.status==='live';
+    var h='<div class="card"><h3>'+esc(o.label||o.id)+'</h3><p>'+esc(o.note||'')+'</p>';
+    h+='<span class="tag '+(live?'live':'gray')+'">'+(live?'live':'gray')+'</span>';
+    if(o.primary) h+='<span class="tag live">primary</span>';
+    h+='</div>';
+    return h;
+  }
+  function esc(s){ return String(s||'').replace(/[&<>"']/g,function(c){return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]);}); }
+  load('data/sell_catalog.json').then(function(sc){
+    if(!sc) return;
+    var meta=document.getElementById('sc-meta');
+    if(meta) meta.textContent='· as_of '+(sc.as_of||'');
+    var live=document.getElementById('sell-live'), gray=document.getElementById('sell-gray');
+    (sc.offers||[]).forEach(function(o){
+      if(o.status==='live') live.innerHTML+=card(o); else gray.innerHTML+=card(o);
+    });
+  });
+})();
+</script>
+<script src="shared/flow-spine.js" defer></script>
+</body></html>
