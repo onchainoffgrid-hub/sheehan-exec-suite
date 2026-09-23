@@ -41,12 +41,25 @@ h1{font-size:clamp(1.5rem,3vw,2rem);margin:0 0 6px;letter-spacing:-.02em;font-we
 .door:hover{border-color:var(--accent);text-decoration:none}
 .door h3{margin:0 0 4px;font-size:1rem}.door p{margin:0;color:var(--muted);font-size:.8rem}
 .badge{font-size:.65rem;padding:2px 8px;border-radius:6px;background:#13281d;color:var(--good);border:1px solid #3dd68c66;margin-left:6px}
+.tee-strip{margin:0 0 18px;padding:16px 18px;border-radius:16px;border:1px solid #fbbf2466;background:linear-gradient(160deg,#2a2210,#0f1728 70%)}
+.tee-strip h2{margin:0 0 4px;font-size:1.1rem;color:#fde68a}
+.tee-strip .tagline{margin:0 0 12px;font-size:.88rem;color:#c5d0e6}.tee-strip .tagline b{color:#fff}
+.tee-sizes{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+.tee{padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--card);font-size:.82rem;font-weight:750}
+.tee.s{border-color:#93a0b866;color:#c5d0e6}.tee.m{border-color:#5b8cff88;color:#9ec1ff}
+.tee.l{border-color:#fbbf2488;background:#2a2210;color:#fde68a;font-size:.92rem}.tee.xl{border-color:#a78bfa55;color:#d4c4ff;opacity:.75}
+.tee-items{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.tee-item{padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--panel)}
+.tee-item .sz{font-size:.65rem;text-transform:uppercase;letter-spacing:.06em;color:var(--joy);margin-bottom:4px}
+.tee-item h3{margin:0 0 4px;font-size:.95rem}
+.tee-item p{margin:0;color:var(--muted);font-size:.78rem}
 .note{color:var(--muted);font-size:.78rem;margin-top:18px}
 </style></head>
 <body data-flow-face="ops" data-flow-chip="support-catalog"><div class="wrap">
 
 <div class="top">
   <span class="lbl">Apps</span>
+  <a href="owner-operator.html">Owner-operator</a>
   <a href="rvp-ops.html">RVP home</a>
   <a href="ops-status.html">Ops RYG</a>
   <a href="growth-home.html">Growth</a>
@@ -61,6 +74,40 @@ h1{font-size:clamp(1.5rem,3vw,2rem);margin:0 0 6px;letter-spacing:-.02em;font-we
 </header>
 
 <div class="lead"><b>Give-first voice:</b> free / donate / giveaways / silent auction → cheap cross-promo → come-here cheap → affordable programming → mobile = convenience premium. ICP Connect (come-here · go-there · B2B/B2C) lives as links here — not a PDF dump on the hub. Print any HTML if you want a PDF.</div>
+
+
+<section class="tee-strip" aria-label="Catalog tee sizes">
+  <h2>Catalog tee-sizes · S / M / L</h2>
+  <p class="tagline"><b>Large is the new medium — sell Large.</b> XL rare. Line items below even when pricing TBD — never invent hard $.</p>
+  <div class="tee-sizes">
+    <span class="tee s">S · Small</span>
+    <span class="tee m">M · Medium</span>
+    <span class="tee l">L · Large ← sell this</span>
+    <span class="tee xl">XL · rare</span>
+  </div>
+  <div class="tee-items">
+    <article class="tee-item">
+      <div class="sz">L · sell Large</div>
+      <h3>Emory after-school with Ames</h3>
+      <p>Line item on the board · pricing TBD / labeled when collateral confirms · do not invent $.</p>
+    </article>
+    <article class="tee-item">
+      <div class="sz">L · sell Large</div>
+      <h3>Assembly</h3>
+      <p>School / group assembly path · sizing Large · price from collateral when live.</p>
+    </article>
+    <article class="tee-item">
+      <div class="sz">L · leave-behind</div>
+      <h3>Petting-zoo leave-behind lab</h3>
+      <p>Leave-behind lab SKU · Large framing · HTML collateral links below by role.</p>
+    </article>
+    <article class="tee-item">
+      <div class="sz">Pricing still connecting</div>
+      <h3>Goat yoga / teaching</h3>
+      <p><b style="color:#fde68a">Pricing still connecting</b> — not fake numbers. Pitch path exists on Quick pitches; $ stays TBD until connected.</p>
+    </article>
+  </div>
+</section>
 
 <div class="seg-label">Other Support doors (own pages)</div>
 <nav class="doors" aria-label="Support doors">
