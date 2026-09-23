@@ -52,7 +52,7 @@ input,select,textarea{background:var(--panel);border:1px solid var(--line);color
 .seat{border-left:3px solid var(--accent);padding-left:10px;margin:10px 0}
 .seat.live{border-color:var(--good)}.seat.next{border-color:var(--warn)}.seat.later{border-color:var(--violet)}
 </style></head>
-<body><div class="wrap">
+<body data-flow-face="investor"><div class="wrap">
 
 
 <!-- APP TOP LINKS (Michael) -->
@@ -120,5 +120,5 @@ daysLeft.textContent=Math.max(0, Math.ceil((goal-now)/86400000));
 <ul><li><a href="https://onchainoffgrid-hub.github.io/critters-play/" target="_blank" rel="noopener">Curtain-closed Play (GitHub Pages)</a> <b>VISION</b> — App Builder pinging when Pages live</li></ul>
 <p class="note">Internal Build/grok prototypes are curtain-closed and omitted here. See <a href="link-tree.html">link tree</a>.</p>
 </div>
-
+<script src="shared/flow-spine.js" defer></script>
 </body></html>

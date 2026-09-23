@@ -45,7 +45,7 @@ h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font
 .badge{font-size:.65rem;padding:2px 7px;border-radius:6px;background:#1a2440;color:var(--accent);border:1px solid var(--line);margin-left:6px;vertical-align:middle}
 .badge.sales{background:#152238;color:#9ec1ff;border-color:#5b8cff66}
 </style></head>
-<body><div class="wrap">
+<body data-flow-face="ops"><div class="wrap">
 
 <div class="apps">
   <span class="lbl">Apps</span>
@@ -55,9 +55,10 @@ h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font
   <a href="link-tree.html" class="sec">All links</a>
 </div>
 
-<div class="faces">
-  <a class="chip" href="investor-home.html">Investor</a>
-  <a class="chip on" href="index.html">Operator / Franchise #0</a>
+<div class="faces legacy-faces">
+  <a class="chip on" href="index.html">Operations</a>
+  <a class="chip" href="bdr-tam.html">Sales</a>
+  <a class="chip" href="investor-home.html">Investors</a>
 </div>
 
 <header>
@@ -101,6 +102,17 @@ h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font
   <div class="kpi"><div class="l">CRM Top25</div><div class="v" id="k-crm">—</div><div class="s" id="k-crm-s">Monthly / Occasional</div></div>
 </div>
 
+
+<div class="dept-label">Sales motions · hop without hunting</div>
+<div class="links-row" style="margin:0 0 14px">
+  <a href="bdr-tam.html" style="border-color:#5b8cff88">BDR TAM</a>
+  <a href="bdr-tam.html?lane=Regional%20Enterprise" style="border-color:#5b8cff88;font-weight:700">Big Enterprise</a>
+  <a href="bdr-tam.html?lane=Sponsor" style="border-color:#ffb02088;font-weight:700">Sponsor</a>
+  <a href="consumer-inbound.html" style="border-color:#a78bfa88">Violet</a>
+  <a href="bdr-tam.html?lane=Regional%20Subscription" style="border-color:#3dd68c88">Subscription</a>
+  <a href="bdr-pipeline.html">BDR Pipeline</a>
+  <a href="crm-icp.html">CRM ICP</a>
+</div>
 <div class="dept-label">Departments · Sales first</div>
 <div class="tiles">
 
@@ -175,7 +187,7 @@ h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font
 </a>
 
 <a class="tile sales" href="bdr-tam.html" style="border-color:#3dd68c99;background:linear-gradient(160deg,#13281d 0%,#121a2b 60%)">
-  <h3>BDR TAM Dialer <span class="badge sales" style="color:#9dffc5;border-color:#3dd68c66;background:#13281d">ALL SEGMENTS</span></h3>
+  <h3>BDR TAM Dialer <span class="badge sales" style="color:#9dffc5;border-color:#3dd68c66;background:#13281d">ENTERPRISE · SPONSOR · EMBA</span></h3>
   <p>Tier 1 first · email ranked high · every Jax sector · real contacts only.</p>
   <div class="chips">
     <span class="chipk">Contacts <b id="bdrtam-ct">—</b></span>
@@ -322,4 +334,5 @@ h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font
 
 })();
 </script>
+<script src="shared/flow-spine.js" defer></script>
 </body></html>

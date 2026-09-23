@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head>
 <meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>BDR TAM Dialer v2 · 5 Lanes · Sheehan Homestead</title>
+<title>BDR TAM Dialer v2 · Lanes + Sponsor · Sheehan Homestead</title>
 <style>
 :root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--bad:#ff5d6c;--violet:#a78bfa}
 *{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
@@ -36,6 +36,10 @@ h1{font-size:1.35rem;margin:0}.sub{color:var(--muted);font-size:.88rem}
 .lanes button.vio.on{border-color:#a78bfa88;background:#1a1530;color:#d4c4ff}
 .lanes button.smb.on{border-color:#ffb02088;background:#2a2416;color:var(--warn)}
 .lanes button.emba.on{border-color:#5b8cff88;color:#9ec1ff}
+.lanes button.sp.on{border-color:#ffb02088;background:#2a2416;color:var(--warn)}
+.compose-modes{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px}
+.compose-modes button{appearance:none;border:1px solid var(--line);background:var(--panel);color:var(--muted);padding:7px 12px;border-radius:999px;font-size:.72rem;font-weight:700;cursor:pointer}
+.compose-modes button.on{border-color:var(--accent);background:#152238;color:#fff}
 .lanes .n{opacity:.75;font-weight:500;margin-left:4px;font-size:.7rem}
 .toolbar{margin-bottom:10px}
 .toolbar input,.toolbar select{background:var(--panel);border:1px solid var(--line);color:var(--text);border-radius:8px;padding:8px 10px;font-size:.8rem;min-height:40px}
@@ -75,7 +79,7 @@ a.btn.vio,button.btn.vio{border-color:#a78bfa66;background:#1a1530;color:#d4c4ff
 .modal input{width:100%;margin:4px 0 8px;padding:8px;border-radius:8px;border:1px solid var(--line);background:var(--panel);color:var(--text)}
 .modal .row{margin-top:10px}
 </style>
-</head><body><div class="wrap">
+</head><body data-flow-face="sales" data-flow-chip="bdr-tam"><div class="wrap">
 
 <div class="apps">
   <span class="lbl">Apps</span>
@@ -92,7 +96,7 @@ a.btn.vio,button.btn.vio{border-color:#a78bfa66;background:#1a1530;color:#d4c4ff
 
 <header>
   <div>
-    <h1>BDR TAM Dialer v2 · 5 Lanes</h1>
+    <h1>BDR TAM Dialer v2 · Enterprise · Sponsor · EMBA</h1>
     <div class="sub">Score · notes · customer ticks · compose · violet fruit · real contacts only · <span id="asof">—</span></div>
   </div>
   <div class="sub">North star: <b>bookings</b> · <a href="index.html">Operator hub</a></div>
@@ -117,7 +121,8 @@ a.btn.vio,button.btn.vio{border-color:#a78bfa66;background:#1a1530;color:#d4c4ff
   <div class="kpi"><div class="l">Top-20 floor</div><div class="v" id="k-top">—</div><div class="s">score cutoff</div></div>
   <div class="kpi violet"><div class="l">Never-hit</div><div class="v" id="k-never">—</div><div class="s">inbound / violet</div></div>
   <div class="kpi"><div class="l">Notes saved</div><div class="v" id="k-notes">—</div><div class="s">local memory</div></div>
-  <div class="kpi"><div class="l">Enterprise</div><div class="v" id="k-le">—</div><div class="s">lane</div></div>
+  <div class="kpi"><div class="l">Enterprise</div><div class="v" id="k-le">—</div><div class="s">Big Enterprise</div></div>
+  <div class="kpi warn"><div class="l">Sponsor</div><div class="v" id="k-lsp">—</div><div class="s">festivals / foundations</div></div>
   <div class="kpi good"><div class="l">Subscription</div><div class="v" id="k-ls">—</div><div class="s">lane</div></div>
   <div class="kpi violet"><div class="l">Violet ~50%</div><div class="v" id="k-lv">—</div><div class="s">lane</div></div>
   <div class="kpi warn"><div class="l">Small Biz Prog</div><div class="v" id="k-lb">—</div><div class="s">lane</div></div>
@@ -125,8 +130,9 @@ a.btn.vio,button.btn.vio{border-color:#a78bfa66;background:#1a1530;color:#d4c4ff
 </div>
 
 <div class="card">
-  <h2>Michael’s 5 lanes — tap to filter</h2>
+  <h2>Michael’s lanes — tap to filter (Sales chips: Big Enterprise · Sponsor · Violet · Subscription)</h2>
   <div class="emba" id="emba-note">Loading EMBA note…</div>
+  <div class="emba" id="sponsor-note" style="display:none;border-color:#ffb02044;color:var(--warn)">Loading sponsor note…</div>
   <div class="lanes" id="lane-chips"></div>
   <div class="toolbar">
     <input id="q" type="search" placeholder="Search account / contact / email / phone / city / notes…" autocomplete="off"/>
@@ -159,6 +165,7 @@ a.btn.vio,button.btn.vio{border-color:#a78bfa66;background:#1a1530;color:#d4c4ff
   <div class="modal">
     <h3 id="compose-title">Compose</h3>
     <p class="note" id="compose-meta"></p>
+    <div class="compose-modes" id="compose-modes" style="display:none"></div>
     <label class="note">Subject</label>
     <input id="compose-subj"/>
     <label class="note">Body</label>
@@ -182,11 +189,18 @@ a.btn.vio,button.btn.vio{border-color:#a78bfa66;background:#1a1530;color:#d4c4ff
 
   var PITCH={
     'Regional Enterprise':{subj:'Critters on Call — employee / community animal program', body:'Hi {name},\n\nMichael Sheehan here with Sheehan Homestead / Critters on Call (Jax metro).\n\nWe bring a mobile petting zoo and animal enrichment programs to workplaces, campuses, and community events — easy logistics, insured, kid-friendly.\n\nOpen to a quick look at dates for an employee appreciation, family day, or campus visit?\n\nWarmly,\nMichael Sheehan\n914-263-1311 · sheehanhomestead.com'},
+    'Sponsor':{subj:'Mini-zoo sponsor / goat-statue tour / homestead shout — Critters on Call', body:'Hi {name},\n\nMichael Sheehan with Sheehan Homestead / Critters on Call (Jax metro).\n\nFor festivals, foundations, and community partners we offer:\n• Homestead shoutouts\n• Small-donation goat-statue farm tour\n• Mini-zoo sponsor-in-name\n\nHappy to sketch a light package for {account} this season.\n\nWarmly,\nMichael Sheehan\n914-263-1311 · sheehanhomestead.com'},
     'Regional Subscription':{subj:'Monthly animal visit for your residents — Critters on Call', body:'Hi {name},\n\nMichael Sheehan with Sheehan Homestead / Critters on Call.\n\nWe run recurring (monthly / quarterly) animal enrichment visits for IL/AL and similar campuses — soft, resident-loved, low lift for your team.\n\nWould a short call to compare calendars make sense?\n\nWarmly,\nMichael Sheehan\n914-263-1311 · sheehanhomestead.com'},
     'Regional Violet ~50%':{subj:'Got your note — Critters on Call / Sheehan Homestead', body:'Hi {name},\n\nThanks for reaching out — Michael Sheehan here at Sheehan Homestead / Critters on Call.\n\nIf you are still looking at dates for a party, farm visit, or mobile petting zoo, reply with 2–3 preferred windows and I will check the calendar.\n\nOr text/call 914-263-1311.\n\nWarmly,\nMichael'},
     'Regional Small Biz Programmer':{subj:'Family programming / animal pop-up for {account}', body:'Hi {name},\n\nMichael Sheehan with Critters on Call — we place soft animal programming with breweries, bookstores, coffee shops, and indie venues (family hours / weekend pop-ups).\n\nWould a low-commitment trial date interest you?\n\nWarmly,\nMichael\n914-263-1311 · sheehanhomestead.com'},
-    'EMBA on Call':{subj:'EMBA on Call — homestead shout → farm tour → sponsor → consulting', body:'Hi {name},\n\nMichael Sheehan (Sheehan Homestead). Sharing our EMBA on Call ladder for founders / small biz:\n\n1) Free homestead shout\n2) Small donation → goat-statue farm tour\n3) Mini-zoo sponsor-in-name\n4) Bigger donations\n5) Consulting (BDR / convert old leads)\n\nStated targets (Michael’s goals, not proven metrics): 80%+ on qualified software work; ~100% transactional/meeting if qualified.\n\nCurious which rung fits?\n\nMichael · 914-263-1311'}
+    'EMBA on Call':{subj:'EMBA on Call — donation ladder', body:'Hi {name},\n\nMichael Sheehan (Sheehan Homestead). Sharing our EMBA on Call donation ladder for founders / small biz:\n\n1) Free homestead shout\n2) Small donation → goat-statue farm tour\n3) Mini-zoo sponsor-in-name\n4) Bigger donations\n5) Consulting (BDR / convert old leads)\n\nCurious which rung fits?\n\nMichael · 914-263-1311'}
   };
+  var EMBA_MODES={
+    donation:{label:'Donation ladder', subj:'EMBA on Call — homestead shout → farm tour → sponsor → consulting', body:'Hi {name},\n\nMichael Sheehan (Sheehan Homestead). Sharing our EMBA on Call donation ladder for founders / small biz:\n\n1) Free homestead shout\n2) Small donation → goat-statue farm tour\n3) Mini-zoo sponsor-in-name\n4) Bigger donations\n5) Consulting (BDR / convert old leads)\n\nStated targets (Michael’s goals, not proven metrics): 80%+ on qualified software work; ~100% transactional/meeting if qualified.\n\nCurious which rung fits?\n\nMichael · 914-263-1311'},
+    markup:{label:'Markup', subj:'EMBA on Call — markup / BDR / convert-old-leads', body:'Hi {name},\n\nMichael Sheehan (Sheehan Homestead / Critters on Call).\n\nBesides the animal programs, EMBA on Call includes a markup path: software / BDR systems help and converting old leads into booked work.\n\nStated targets (Michael’s goals, not proven metrics): 80%+ close on qualified software work; ~100% on transactional / meeting work when qualified.\n\nIf you have a list, funnel, or tool stack that is underperforming, happy to sketch a scoped markup engagement.\n\nMichael · 914-263-1311 · sheehanhomestead.com'},
+    idea:{label:'Idea', subj:'EMBA on Call — bring an idea, we shape the next step', body:'Hi {name},\n\nMichael Sheehan (Sheehan Homestead).\n\nEMBA on Call also works as an idea lane: bring a business idea / wedge (event series, sponsor package, productized service, lead reactivation) and we shape the next concrete step together — often via the donation ladder, a mini-zoo sponsor-in-name, or a short consulting sprint.\n\nWhat idea are you sitting on?\n\nMichael · 914-263-1311'}
+  };
+  var COMPOSE_CTX={row:null, mode:'donation'};
 
   function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
   function keyOf(r){return (r.org_key||'')+'::'+String(r.contact||'').toLowerCase()+'::'+String(r.email||'').toLowerCase();}
@@ -257,6 +271,7 @@ a.btn.vio,button.btn.vio{border-color:#a78bfa66;background:#1a1530;color:#d4c4ff
     if(id.indexOf('Violet')>=0) return 'vio';
     if(id.indexOf('Small Biz')>=0) return 'smb';
     if(id.indexOf('EMBA')>=0) return 'emba';
+    if(id==='Sponsor' || id.indexOf('Sponsor')>=0) return 'sp';
     return '';
   }
 
@@ -268,7 +283,7 @@ a.btn.vio,button.btn.vio{border-color:#a78bfa66;background:#1a1530;color:#d4c4ff
     });
     document.getElementById('lane-chips').innerHTML=h;
     document.querySelectorAll('#lane-chips button').forEach(function(b){
-      b.onclick=function(){ F.lane=b.getAttribute('data-lane')||''; drawLanes(); draw(); };
+      b.onclick=function(){ F.lane=b.getAttribute('data-lane')||''; try{ var u=new URL(location.href); if(F.lane) u.searchParams.set('lane',F.lane); else u.searchParams.delete('lane'); history.replaceState(null,'',u); if(document.body){ var chip='bdr-tam'; if(F.lane.indexOf('Enterprise')>=0) chip='big-enterprise'; else if(F.lane==='Sponsor') chip='sponsor'; else if(F.lane.indexOf('Subscription')>=0) chip='subscription'; else if(F.lane.indexOf('Violet')>=0) chip='violet'; document.body.setAttribute('data-flow-chip', chip);} }catch(e){} drawLanes(); draw(); };
     });
   }
 
@@ -289,13 +304,20 @@ a.btn.vio,button.btn.vio{border-color:#a78bfa66;background:#1a1530;color:#d4c4ff
     return h||'<span class="muted">—</span>';
   }
 
-  function compose(r){
+  function applyComposeDraft(){
+    var r=COMPOSE_CTX.row; if(!r) return;
     var lane=r.lane||'Regional Enterprise';
-    var p=PITCH[lane]||PITCH['Regional Enterprise'];
+    var p;
+    if(lane==='EMBA on Call'){
+      p=EMBA_MODES[COMPOSE_CTX.mode]||EMBA_MODES.donation;
+    } else {
+      p=PITCH[lane]||PITCH['Regional Enterprise'];
+    }
     var name=(r.contact||'there').split(/\s+/)[0]||'there';
     var subj=p.subj.replace(/\{account\}/g,r.account||'').replace(/\{name\}/g,name);
     var body=p.body.replace(/\{name\}/g,name).replace(/\{account\}/g,r.account||'');
-    document.getElementById('compose-title').textContent='Compose · '+lane;
+    var modeLabel=lane==='EMBA on Call'?(p.label||COMPOSE_CTX.mode):'';
+    document.getElementById('compose-title').textContent='Compose · '+lane+(modeLabel?' · '+modeLabel:'');
     document.getElementById('compose-meta').textContent=(r.account||'')+(r.contact?' · '+r.contact:'')+(r.email?' · '+r.email:' · (no email on file)');
     document.getElementById('compose-subj').value=subj;
     document.getElementById('compose-body').textContent=body;
@@ -309,6 +331,27 @@ a.btn.vio,button.btn.vio{border-color:#a78bfa66;background:#1a1530;color:#d4c4ff
       mail.removeAttribute('href'); mail.style.display='none';
       warn.textContent='No usable email on file — copy the draft and use Open form / phone / LinkedIn. We do not invent addresses.';
     }
+  }
+  function renderComposeModes(lane){
+    var box=document.getElementById('compose-modes');
+    if(lane!=='EMBA on Call'){ box.style.display='none'; box.innerHTML=''; return; }
+    box.style.display='flex';
+    box.innerHTML='<span class="note" style="margin-right:4px">EMBA path:</span>';
+    ['donation','markup','idea'].forEach(function(m){
+      var b=document.createElement('button');
+      b.type='button';
+      b.textContent=EMBA_MODES[m].label;
+      b.className=COMPOSE_CTX.mode===m?'on':'';
+      b.onclick=function(){ COMPOSE_CTX.mode=m; renderComposeModes(lane); applyComposeDraft(); };
+      box.appendChild(b);
+    });
+  }
+  function compose(r){
+    COMPOSE_CTX.row=r;
+    COMPOSE_CTX.mode='donation';
+    var lane=r.lane||'Regional Enterprise';
+    renderComposeModes(lane);
+    applyComposeDraft();
     document.getElementById('compose-modal').classList.add('on');
   }
 
@@ -325,6 +368,7 @@ a.btn.vio,button.btn.vio{border-color:#a78bfa66;background:#1a1530;color:#d4c4ff
     document.getElementById('k-never').textContent=KPIS.never_hit!=null?KPIS.never_hit:'—';
     var by={}; LANES.forEach(function(l){by[l.id]=l.contacts;});
     document.getElementById('k-le').textContent=by['Regional Enterprise']!=null?by['Regional Enterprise']:'—';
+    var ksp=document.getElementById('k-lsp'); if(ksp) ksp.textContent=by['Sponsor']!=null?by['Sponsor']:'—';
     document.getElementById('k-ls').textContent=by['Regional Subscription']!=null?by['Regional Subscription']:'—';
     document.getElementById('k-lv').textContent=by['Regional Violet ~50%']!=null?by['Regional Violet ~50%']:'—';
     document.getElementById('k-lb').textContent=by['Regional Small Biz Programmer']!=null?by['Regional Small Biz Programmer']:'—';
@@ -372,7 +416,7 @@ a.btn.vio,button.btn.vio{border-color:#a78bfa66;background:#1a1530;color:#d4c4ff
     document.getElementById('view-note').textContent='Showing '+rows.length+' · customers '+custN+' · notes '+notesN+' · never-hit '+neverN+' · sort: '+F.sort;
     liveKpis(rows);
     var tb=document.getElementById('tbody');
-    if(!rows.length){ tb.innerHTML='<tr><td colspan="7" class="muted">No contacts in this filter.</td></tr>'; return; }
+    if(!rows.length){ var empty='No contacts in this filter.'; if(F.lane==='Sponsor') empty='Sponsor lane empty for this filter. Use festivals / foundations already on file, or climb the <b>EMBA on Call</b> ladder (donation · markup · idea). Season tip: festival lists + mini-zoo sponsor-in-name / goat-statue tour / shoutouts.'; tb.innerHTML='<tr><td colspan="7" class="muted">'+empty+'</td></tr>'; return; }
     var max=500, slice=rows.slice(0,max);
     tb.innerHTML=slice.map(function(r){
       var k=keyOf(r), cust=isCust(r), note=noteOf(r), tags=tagsOf(r), sc=r.score||0;
@@ -429,10 +473,26 @@ a.btn.vio,button.btn.vio{border-color:#a78bfa66;background:#1a1530;color:#d4c4ff
       }
       STORE={notes:load(K_NOTES),cust:load(K_CUST),tags:load(K_TAGS),done:load(K_DONE)};
       document.getElementById('asof').textContent=d.as_of||'';
-      document.getElementById('emba-note').textContent=d.emba_note||'EMBA on Call ladder: free homestead shout · goat-statue farm tour · mini-zoo sponsor-in-name · bigger donations · consulting. Targets are Michael’s stated goals, not proven metrics.';
+      document.getElementById('emba-note').textContent=d.emba_note||'EMBA on Call: donation ladder · markup · idea. Targets are Michael’s stated goals, not proven metrics.';
+      var sn=document.getElementById('sponsor-note');
+      if(sn){ sn.textContent=d.sponsor_note||'Sponsor = festivals / foundations / CVBs already on file. Compose: shoutouts · goat-statue tour · mini-zoo sponsor-in-name.'; sn.style.display='block'; }
+      try{
+        var qLane=(new URLSearchParams(location.search||'')).get('lane')||'';
+        if(qLane){ F.lane=qLane; }
+      }catch(e){}
       var sel=document.getElementById('f-seg');
       SEGS.forEach(function(s){ var o=document.createElement('option'); o.value=s.id; o.textContent=s.id+' ('+s.contacts+')'; sel.appendChild(o); });
       seed(); setKpis(); drawLanes(); draw();
+      try{
+        if(document.body && F.lane){
+          var chip='bdr-tam';
+          if(F.lane.indexOf('Enterprise')>=0) chip='big-enterprise';
+          else if(F.lane==='Sponsor') chip='sponsor';
+          else if(F.lane.indexOf('Subscription')>=0) chip='subscription';
+          else if(F.lane.indexOf('Violet')>=0) chip='violet';
+          document.body.setAttribute('data-flow-chip', chip);
+        }
+      }catch(e){}
       document.getElementById('src-note').textContent=
         'Data: data/bdr_tam_dialer.json v'+(d.version||'?')+' · '+(d.rule||'')+
         ' · fruit +'+((d.kpis||{}).fruit_added||0)+
@@ -446,4 +506,5 @@ a.btn.vio,button.btn.vio{border-color:#a78bfa66;background:#1a1530;color:#d4c4ff
 })();
 
 </script>
+<script src="shared/flow-spine.js" defer></script>
 </body></html>

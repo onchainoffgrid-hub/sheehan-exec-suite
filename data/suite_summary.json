@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-22 19:27 ET",
+  "as_of": "2026-09-22 20:54 ET",
   "bdr_spec_aligned": {
     "CALL_NOW": 138,
     "WARM": 232,
@@ -39,13 +39,57 @@
     "panel": "org-whitespace.html"
   },
   "bdr_tam": {
-    "contacts": 2592,
-    "accounts": 2290,
+    "contacts": 2694,
+    "accounts": 2385,
     "segments": 27,
-    "with_email": 772,
+    "with_email": 873,
     "with_phone": 1557,
-    "tier1": 860,
-    "tier1_with_email": 392,
-    "panel": "bdr-tam.html"
+    "tier1": 904,
+    "tier1_with_email": 435,
+    "lanes": {
+      "Regional Enterprise": 2130,
+      "Sponsor": 44,
+      "Regional Subscription": 302,
+      "Regional Violet ~50%": 188,
+      "Regional Small Biz Programmer": 19,
+      "EMBA on Call": 11
+    },
+    "panel": "bdr-tam.html",
+    "emba_compose_modes": [
+      "donation",
+      "markup",
+      "idea"
+    ]
+  },
+  "flow_spine": {
+    "faces": [
+      "Operations",
+      "Sales",
+      "Investors"
+    ],
+    "component": "shared/flow-spine.js",
+    "sales_subchips": [
+      "BDR TAM",
+      "Big Enterprise",
+      "Sponsor",
+      "Violet",
+      "Subscription"
+    ],
+    "pages_with_rail": [
+      "index.html",
+      "ann-marie-ops.html",
+      "money-cfo.html",
+      "bookings-dates.html",
+      "actions-overdue.html",
+      "bdr-tam.html",
+      "bdr-pipeline.html",
+      "crm-icp.html",
+      "consumer-inbound.html",
+      "org-whitespace.html",
+      "catalogue-close.html",
+      "investor-home.html",
+      "investor-capital.html",
+      "macro-radar.html"
+    ]
   }
 }

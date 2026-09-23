@@ -19,7 +19,7 @@ cd /workspace/dashboard/exec-suite && python3 -m http.server 8765
 | Consumer Inbound (Violet/B2C) | [consumer-inbound.html](consumer-inbound.html) | Interest **34** · GoDaddy pass **27** · waivers **GAP** · **4** forms missing sheets |
 | Bookings & Dates | [bookings-dates.html](bookings-dates.html) | Fall priority **129** real rows; $ booked **PLACEHOLDER** |
 | Money (CFO) | [money-cfo.html](money-cfo.html) | PayPal H2 **outside $15,408.66** · 42 customers · owner $4,254 separated |
-| BDR TAM Dialer v2 | [bdr-tam.html](bdr-tam.html) | **5 Michael lanes** · score 0–100 · notes/customer ticks (localStorage) · compose pitches · violet fruit · Patricia/Tasia seed · `data/bdr_tam_dialer.json` |
+| BDR TAM Dialer v2 | [bdr-tam.html](bdr-tam.html) | **Enterprise · Sponsor · Subscription · Violet · Small Biz · EMBA** · EMBA compose: donation / markup / idea · `data/bdr_tam_dialer.json` |
 | BDR Enterprise v1 | [bdr-pipeline.html](bdr-pipeline.html) | **REAL** CALL_NOW 138 · Warm 81 · Needs 140 · Later 11 · Red-tape 44 + filterable dialer |
 | RevOps TAM | [revops-tam.html](revops-tam.html) | Primary SAM **$572,873** · tier rollup · segment counts |
 | Social & Reach | [social-reach.html](social-reach.html) |
@@ -58,6 +58,16 @@ JSON exports under [`data/`](data/) for offline refresh:
 - Red-tape accounts are hold-only (not dial targets).
 - Bookings $ remains explicitly PLACEHOLDER until Michael confirms truth source.
 - Detail sheets (VESTA_ROSS, GOLF, LUXURY, CORP_FIELD_HR) are subsets of CALL_NOW/WARM — not double-counted in BDR KPIs.
+
+## Flow spine (Ops → Sales → Investors)
+
+Shared top rail: `shared/flow-spine.js` on Operator, Sales, and Investor pages.
+
+- **Operations** → `index.html` (money / bookings / actions / Ann-Marie)
+- **Sales** subchips: BDR TAM · Big Enterprise · Sponsor · Violet · Subscription
+- **Investors** → `investor-home.html` with links back to Sales proof (bookings/money) + Ops traction
+
+Inject/refresh: `python3 scripts/inject_flow_spine.py`
 
 ## Layout
 

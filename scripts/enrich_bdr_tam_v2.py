@@ -20,6 +20,7 @@ AS_OF = datetime.now(ET).strftime("%Y-%m-%d %H:%M ET")
 
 LANES = [
     "Regional Enterprise",
+    "Sponsor",
     "Regional Subscription",
     "Regional Violet ~50%",
     "Regional Small Biz Programmer",
@@ -65,6 +66,17 @@ EMBA_RE = re.compile(
     r"mini\s*zoo|farm\s*tour|philanthrop|underwriter)\b",
     re.I,
 )
+
+SPONSOR_RE = re.compile(
+    r"\b(sponsor|sponsorship|underwrit|festival|cvb|convention\s+and\s+visitors|"
+    r"visitors\s+bureau|foundation|philanthrop)\b",
+    re.I,
+)
+SPONSOR_SKIP_SEG = {
+    "Senior / IL-AL", "PPEC", "Adult Daycare", "Existing / Customer",
+    "B2C / Violet / Inbound", "Independent School", "PTA / PTO",
+    "Daycare / Childcare", "VPK / ELC", "Goddard / Fancy School",
+}
 HARD_FORM_RE = re.compile(
     r"(dealer|sales|buy.?now|schedule.?a.?tour|senior.?living.?portal|inventory|"
     r"finance.?app|credit.?app|sr\.?\s*portal)",
@@ -248,11 +260,23 @@ def assign_lane(row: dict) -> str:
         and seg in ("Other", "B2C / Violet / Inbound", "")
     ):
         return "Regional Violet ~50%"
+    # Sponsor: Festival segment + clear festival/foundation/CVB orgs already on file (no invented contacts)
+    acc = row.get("account") or ""
+    title = row.get("title") or ""
+    if seg == "Festival / Events" or (
+        seg not in SPONSOR_SKIP_SEG
+        and (SPONSOR_RE.search(acc) or SPONSOR_RE.search(title) or re.search(r"\bfestival\b", acc, re.I))
+        and seg not in {"Senior / IL-AL", "PPEC", "Adult Daycare", "Existing / Customer", "B2C / Violet / Inbound"}
+    ):
+        # Keep true EMBA person-founder rows out of Sponsor when clearly founder/consult
+        if not (seg == "Other" and EMBA_RE.search(blob) and not re.search(r"\bfestival\b|\bfoundation\b|\bcvb\b", acc, re.I)):
+            return "Sponsor"
+
     lane = SEG_TO_LANE.get(seg, "Regional Enterprise")
-    if SMALL_BIZ_RE.search(blob) and lane not in ("Regional Violet ~50%", "Regional Subscription"):
+    if SMALL_BIZ_RE.search(blob) and lane not in ("Regional Violet ~50%", "Regional Subscription", "Sponsor"):
         lane = "Regional Small Biz Programmer"
-    if EMBA_RE.search(blob) and lane not in ("Regional Violet ~50%", "Regional Subscription"):
-        if lane == "Regional Small Biz Programmer" or seg in ("Other", "Nonprofit", "Festival / Events"):
+    if EMBA_RE.search(blob) and lane not in ("Regional Violet ~50%", "Regional Subscription", "Sponsor"):
+        if lane == "Regional Small Biz Programmer" or seg in ("Other", "Nonprofit"):
             lane = "EMBA on Call"
         elif seg == "Other":
             lane = "EMBA on Call"
@@ -640,16 +664,25 @@ def main():
 
     payload = {
         "as_of": AS_OF,
-        "product": "Sheehan Homestead / Critters on Call — BDR TAM Dialer v2",
+        "product": "Sheehan Homestead / Critters on Call — BDR TAM Dialer v2.1 (Sponsor + EMBA modes)",
         "version": 2,
         "rule": "Real emails/phones only — never invented. Default sort: score desc within lane.",
         "dedupe": data.get("dedupe") or "email → phone → org+name",
         "emba_note": (
-            "EMBA on Call ladder (Michael stated targets, not proven metrics): "
-            "free homestead shout · small-donation goat-statue farm tour · mini-zoo sponsor-in-name · "
-            "bigger donations · consulting (BDR / convert old leads) for small biz + founder types. "
-            "Stated close-rate targets: 80%+ qualified software; ~100% transactional/meeting if qualified."
+            "EMBA on Call — three compose paths (Michael stated targets, not proven metrics): "
+            "(1) Donation ladder: free homestead shout → small-donation goat-statue farm tour → "
+            "mini-zoo sponsor-in-name → bigger donations → consulting. "
+            "(2) Markup: software / BDR / convert-old-leads engagement with stated close-rate targets "
+            "(80%+ qualified software; ~100% transactional/meeting if qualified). "
+            "(3) Idea: bring a business idea / wedge; we shape the next step together. "
+            "Sponsor sales chip uses festivals / foundations / CVBs already on file — empty state points here + festivals."
         ),
+        "sponsor_note": (
+            "Sponsor lane = festivals, foundations, CVBs already in dialer (no invented contacts). "
+            "Compose: shoutouts · goat-statue farm tour · mini-zoo sponsor-in-name. "
+            "If thin, climb EMBA ladder or work festival season list."
+        ),
+        "emba_compose_modes": ["donation", "markup", "idea"],
         "kpis": kpis,
         "lanes": lanes_meta,
         "segments": segments_meta,

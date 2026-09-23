@@ -52,7 +52,7 @@ input,select,textarea{background:var(--panel);border:1px solid var(--line);color
 .seat{border-left:3px solid var(--accent);padding-left:10px;margin:10px 0}
 .seat.live{border-color:var(--good)}.seat.next{border-color:var(--warn)}.seat.later{border-color:var(--violet)}
 </style></head>
-<body><div class="wrap">
+<body data-flow-face="ops"><div class="wrap">
 
 
 <!-- APP TOP LINKS (Michael) -->
@@ -141,4 +141,6 @@ new Chart(fallMonth,{type:'bar',data:{labels:Object.keys(byMonth),datasets:[{dat
 </script>
 
 <p class="note">Dump-home: Dashboard Bit · Built 2026-09-19 ET · JSON under data/ · file:// OK (data embedded)</p>
-</div></body></html>
+</div>
+<script src="shared/flow-spine.js" defer></script>
+</body></html>
