@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Team · Operations · Sheehan Homestead</title>
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--violet:#a78bfa;--bad:#ff5d6c}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.4}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1200px;margin:0 auto;padding:22px 18px 48px}
+.top{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 14px;padding:10px 14px;border:1px solid var(--line);border-radius:14px;background:#0f1728}
+.top .lbl{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-right:4px}
+.top a{background:var(--card);border:1px solid var(--line);color:var(--text);padding:7px 12px;border-radius:999px;font-size:.78rem;font-weight:600;text-decoration:none}
+.top a.on{border-color:#5b8cff88;background:#152238}
+.top a.sec{font-weight:500;font-size:.72rem;color:#c5d0e6}
+header{margin-bottom:10px}
+h1{font-size:clamp(1.35rem,2.6vw,1.75rem);margin:0 0 4px}
+.sub{color:var(--muted);font-size:.88rem}
+.priv{margin:10px 0 14px;padding:10px 12px;border:1px dashed #ffb02066;border-radius:10px;background:#16140f;font-size:.78rem;color:var(--muted)}
+.priv b{color:var(--warn)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:8px;margin:0 0 12px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px}
+.kpi .l{font-size:.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.kpi .v{font-size:1.2rem;font-weight:750;margin-top:2px}
+.controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 12px}
+.controls label{font-size:.75rem;color:var(--muted)}
+.controls select,.controls input{background:var(--panel);border:1px solid var(--line);color:var(--text);padding:7px 10px;border-radius:10px;font-size:.8rem}
+.filters{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px}
+.filters button{background:var(--panel);border:1px solid var(--line);color:var(--text);padding:6px 11px;border-radius:999px;font-size:.74rem;font-weight:600;cursor:pointer}
+.filters button.on{border-color:var(--good);background:#13281d}
+.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+table{width:100%;border-collapse:collapse;font-size:.82rem;min-width:860px}
+th,td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{position:sticky;top:0;background:#0f1728;color:var(--muted);font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;cursor:pointer;user-select:none;white-space:nowrap}
+th:hover{color:#fff}th .arrow{opacity:.45;margin-left:4px}
+tr:hover td{background:#15223855}
+.name{font-weight:700;font-size:.9rem}
+.tags{display:flex;flex-wrap:wrap;gap:4px}
+.tag{font-size:.65rem;padding:2px 7px;border-radius:999px;border:1px solid var(--line);background:var(--panel);color:#c5d0e6}
+.tag.good{border-color:#3dd68c55;color:var(--good)}
+.tag.warn{border-color:#ffb02066;color:var(--warn)}
+.tag.lane{border-color:#a78bfa55;color:#d4c4ff}
+.taps{display:flex;flex-wrap:wrap;gap:5px;margin-top:4px}
+.tap{display:inline-flex;padding:5px 9px;border-radius:999px;font-size:.7rem;font-weight:700;text-decoration:none;border:1px solid var(--line)}
+.tap.text{background:var(--good);color:#0b1220;border-color:transparent}
+.tap.call{background:#152238;color:var(--text)}
+.tap.email{background:#1a2030;color:var(--accent);border-color:#5b8cff55}
+.tap.disabled{opacity:.35;pointer-events:none}
+.gap{margin-top:14px;padding:12px;border:1px dashed #ffb02055;border-radius:12px;background:#16140f;font-size:.78rem;color:var(--muted)}
+.gap b{color:var(--warn)}
+.note{color:var(--muted);font-size:.75rem;margin-top:18px}
+.muted{color:var(--muted)}
+</style></head>
+<body data-flow-face="ops"><div class="wrap">
+
+<div class="top">
+  <span class="lbl">Ops</span>
+  <a href="ops.html">Operations</a>
+  <a href="ops-people.html">People</a>
+  <a class="on" href="ops-team.html">Team</a>
+  <a href="rvp-ops.html" class="sec">Franchise Hub</a>
+  <a href="index.html" class="sec">Layer Zero</a>
+</div>
+
+<header>
+  <h1>Team · workers</h1>
+  <div class="sub">Ann-Marie owns scheduling · Michael supports · list + light tags · no invented contacts</div>
+</header>
+
+<div class="priv"><b>PRIVATE operator page</b> — not on investor hub. Stage-only sms / mailto / tel. Gaps labeled TBD. No 1099 $ or essay notes.</div>
+
+<div class="kpis" id="kpis">
+  <div class="kpi"><div class="l">On list</div><div class="v" id="k-n">—</div></div>
+  <div class="kpi"><div class="l">Primary</div><div class="v" id="k-pri">—</div></div>
+  <div class="kpi"><div class="l">Secondary</div><div class="v" id="k-sec">—</div></div>
+  <div class="kpi"><div class="l">Need training</div><div class="v" id="k-train">—</div></div>
+  <div class="kpi"><div class="l">Phone gaps</div><div class="v" id="k-ph">—</div></div>
+  <div class="kpi"><div class="l">Email gaps</div><div class="v" id="k-em">—</div></div>
+</div>
+
+<div class="controls">
+  <label>Sort
+    <select id="sort">
+      <option value="name">Name</option>
+      <option value="tier">Tier</option>
+      <option value="area">Area</option>
+      <option value="status">Status</option>
+    </select>
+  </label>
+  <label>Search <input id="q" type="search" placeholder="name / area / tag" style="min-width:160px"/></label>
+</div>
+<div class="filters" id="filters">
+  <button type="button" class="on" data-f="all">All</button>
+  <button type="button" data-f="primary">Primary</button>
+  <button type="button" data-f="secondary">Secondary</button>
+  <button type="button" data-f="need_training">Need training</button>
+  <button type="button" data-f="third">Third</button>
+  <button type="button" data-f="partners">Partners</button>
+  <button type="button" data-f="owners">Owners</button>
+  <button type="button" data-f="backup_bench">Backup</button>
+</div>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr>
+      <th data-s="name">Name <span class="arrow">↕</span></th>
+      <th data-s="tier">Tier <span class="arrow">↕</span></th>
+      <th data-s="area">Area <span class="arrow">↕</span></th>
+      <th>Phone / Email</th>
+      <th>Car</th>
+      <th>Can-do</th>
+      <th>$-lane</th>
+      <th>Need help</th>
+    </tr>
+  </thead>
+  <tbody id="tbody"></tbody>
+</table>
+</div>
+
+<div class="gap" id="gaps"></div>
+<p class="note" id="foot">Source: TEAM_ROSTER / Helper list Drive · Gmail historical scrape = Phase C (deferred)</p>
+</div>
+<script>
+(function(){
+  function digits(p){ return (p||'').replace(/\D/g,''); }
+  function telHref(p){ var d=digits(p); return d ? 'tel:+1'+d : ''; }
+  function smsHref(p,name){ var d=digits(p); if(!d) return '';
+    var body=encodeURIComponent('Hi '+((name||'').split(' ')[0]||'')+' — Sheehan Homestead / Critters. Free to help on a gig?');
+    return 'sms:+1'+d+'?&body='+body;
+  }
+  function mailHref(e,name){ if(!e) return '';
+    var sub=encodeURIComponent('Sheehan Homestead · helper ping');
+    var body=encodeURIComponent('Hi '+((name||'').split(' ')[0]||'')+',\n\nQuick check — available to help on an upcoming gig?\n\nMichael / Ann-Marie');
+    return 'mailto:'+e+'?subject='+sub+'&body='+body;
+  }
+  function tags(arr, cls){
+    if(!arr||!arr.length) return '<span class="muted">—</span>';
+    return '<div class="tags">'+(arr||[]).map(function(t){ return '<span class="tag '+(cls||'')+'">'+t+'</span>'; }).join('')+'</div>';
+  }
+  function taps(p){
+    var parts=[];
+    var s=smsHref(p.phone,p.name); parts.push(s?'<a class="tap text" href="'+s+'">Text</a>':'<span class="tap text disabled">Text</span>');
+    var c=telHref(p.phone); parts.push(c?'<a class="tap call" href="'+c+'">Call</a>':'<span class="tap call disabled">Call</span>');
+    var m=mailHref(p.email,p.name); parts.push(m?'<a class="tap email" href="'+m+'">Email</a>':'<span class="tap email disabled">Email</span>');
+    return '<div class="taps">'+parts.join('')+'</div>';
+  }
+  var TIER_ORDER={owners:0,primary:1,secondary:2,need_training:3,third:4,partners:5,backup_bench:6};
+  var TIER_LABEL={owners:'Owners',primary:'Primary',secondary:'Secondary',need_training:'Need training',third:'Third',partners:'Partners',backup_bench:'Backup'};
+  var ALL=[], filter='all', sortKey='name', sortDir=1;
+
+  function flatten(d){
+    var out=[];
+    [['primary',d.primary],['secondary',d.secondary],['need_training',d.need_training],['third',d.third],['partners',d.partners],['owners',d.owners]].forEach(function(pair){
+      (pair[1]||[]).forEach(function(p){ out.push(Object.assign({},p,{_tier:pair[0],_status:p.confirmed_1024?'10/24':(p.status||'')})); });
+    });
+    ((d.backup_bench&&d.backup_bench.people)||[]).forEach(function(p){
+      out.push(Object.assign({},p,{_tier:'backup_bench',_status:p.status||'backup'}));
+    });
+    return out;
+  }
+  function render(){
+    var q=(document.getElementById('q').value||'').toLowerCase().trim();
+    var rows=ALL.filter(function(p){
+      if(filter!=='all' && p._tier!==filter) return false;
+      if(!q) return true;
+      var blob=[p.name,p.area,p._tier,p.notes,(p.can_do||[]).join(' '),(p.dollar_lanes||[]).join(' ')].join(' ').toLowerCase();
+      return blob.indexOf(q)>=0;
+    });
+    rows.sort(function(a,b){
+      var av,bv;
+      if(sortKey==='tier'){ av=TIER_ORDER[a._tier]||9; bv=TIER_ORDER[b._tier]||9; return (av-bv)*sortDir || a.name.localeCompare(b.name); }
+      if(sortKey==='area'){ av=(a.area||'ZZZ'); bv=(b.area||'ZZZ'); return av.localeCompare(bv)*sortDir || a.name.localeCompare(b.name); }
+      if(sortKey==='status'){ av=a._status||''; bv=b._status||''; return av.localeCompare(bv)*sortDir || a.name.localeCompare(b.name); }
+      return (a.name||'').localeCompare(b.name||'')*sortDir;
+    });
+    var tb=document.getElementById('tbody');
+    tb.innerHTML=rows.map(function(p){
+      var phone=p.phone||'—';
+      var email=p.email||'—';
+      var conf=p.confirmed_1024?' <span class="tag good">10/24</span>':'';
+      var note=p.confirmed_note?' <span class="tag warn">'+p.confirmed_note+'</span>':'';
+      return '<tr>'+
+        '<td><div class="name">'+p.name+conf+note+'</div>'+taps(p)+'</td>'+
+        '<td>'+(TIER_LABEL[p._tier]||p._tier)+'</td>'+
+        '<td>'+(p.area||'TBD')+'</td>'+
+        '<td><div>☎ '+phone+'</div><div class="muted">✉ '+email+'</div></td>'+
+        '<td>'+(p.car||'TBD')+'</td>'+
+        '<td>'+tags(p.can_do)+'</td>'+
+        '<td>'+tags(p.dollar_lanes,'lane')+'</td>'+
+        '<td>'+tags(p.need_help_at,'warn')+'</td>'+
+        '</tr>';
+    }).join('') || '<tr><td colspan="8" class="muted">No matches</td></tr>';
+  }
+
+  fetch('data/team_roster.json',{cache:'no-store'}).then(function(r){ if(!r.ok) throw new Error(r.status); return r.json(); })
+  .then(function(d){
+    ALL=flatten(d);
+    var c=d.counts||{};
+    document.getElementById('k-n').textContent=ALL.length;
+    document.getElementById('k-pri').textContent=c.primary!=null?c.primary:(d.primary||[]).length;
+    document.getElementById('k-sec').textContent=c.secondary!=null?c.secondary:(d.secondary||[]).length;
+    document.getElementById('k-train').textContent=c.need_training!=null?c.need_training:(d.need_training||[]).length;
+    document.getElementById('k-ph').textContent=ALL.filter(function(p){return !p.phone;}).length;
+    document.getElementById('k-em').textContent=ALL.filter(function(p){return !p.email;}).length;
+    var gaps=(d.ops_enrichment&&d.ops_enrichment.gaps)||[];
+    var gEl=document.getElementById('gaps');
+    gEl.innerHTML='<b>Gaps / TBD:</b> '+(gaps.join(' · ')||'none listed')+
+      ' · Seed geo: <b>Audrey = Riverside</b> · <b>Madison = Hilliard-ish</b>. Cars unknown = TBD.';
+    var foot=document.getElementById('foot');
+    foot.textContent='Sheehan Homestead · Team · as_of '+(d.as_of||'')+' · Helper list Drive · Phase C Gmail scrape deferred';
+    render();
+  }).catch(function(err){
+    document.getElementById('tbody').innerHTML='<tr><td colspan="8">Could not load data/team_roster.json — '+err+'</td></tr>';
+  });
+
+  document.getElementById('filters').addEventListener('click', function(e){
+    var btn=e.target.closest('button[data-f]'); if(!btn) return;
+    document.querySelectorAll('#filters button').forEach(function(b){ b.classList.toggle('on', b===btn); });
+    filter=btn.getAttribute('data-f'); render();
+  });
+  document.getElementById('sort').addEventListener('change', function(){ sortKey=this.value; render(); });
+  document.getElementById('q').addEventListener('input', render);
+  document.querySelectorAll('th[data-s]').forEach(function(th){
+    th.addEventListener('click', function(){
+      var k=th.getAttribute('data-s');
+      if(sortKey===k) sortDir*=-1; else { sortKey=k; sortDir=1; }
+      document.getElementById('sort').value = (k==='name'||k==='tier'||k==='area')?k:'name';
+      render();
+    });
+  });
+})();
+</script>
+<script src="shared/flow-spine.js" defer></script>
+</body></html>

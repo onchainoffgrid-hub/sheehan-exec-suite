@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-23 16:55 ET",
+  "as_of": "2026-09-23 17:50 ET",
   "brand": "Sheehan Homestead",
   "title": "Helper + Team roster",
   "scheduling_owner": "Ann-Marie Sheehan",
@@ -16,7 +16,7 @@
       "title": "Petting Zoo Engineer/Helper",
       "url": "https://docs.google.com/forms/d/15ODzGKLRyS-XLIO_nrSM33O1X-ud-oz2hKAk0jP9CsA/edit",
       "id": "15ODzGKLRyS-XLIO_nrSM33O1X-ud-oz2hKAk0jP9CsA",
-      "note": "No linked Responses Sheet found in Drive folder Petting Zoo Engineers — cannot parse no-hires yet"
+      "note": "No linked Responses Sheet found in Drive folder Petting Zoo Engineers \u2014 cannot parse no-hires yet"
     },
     "team_build_board": {
       "title": "Michael_Team_Build_Board (local)",
@@ -39,7 +39,7 @@
       },
       {
         "name": "Ann-Marie Sheehan",
-        "seat": "Co-owner · mid-senior ops · owns helper scheduling",
+        "seat": "Co-owner \u00b7 mid-senior ops \u00b7 owns helper scheduling",
         "status": "named"
       },
       {
@@ -50,7 +50,7 @@
     ]
   },
   "directors_target": {
-    "label": "Target director layer (vacant — future hire)",
+    "label": "Target director layer (vacant \u2014 future hire)",
     "note": "Franchise proof / investor path. Do not invent names. Link investor-checklist.",
     "investor_link": "investor-checklist.html",
     "seats": [
@@ -91,21 +91,52 @@
       "phone": "",
       "email": "failingforwardfarm@gmail.com",
       "notes": "Primary helper / ops; house-capable; junior-ops track",
-      "confirmed_1024": true
+      "confirmed_1024": true,
+      "area": "Hilliard-ish",
+      "car": "TBD",
+      "can_do": [
+        "helper",
+        "house-capable",
+        "junior-ops"
+      ],
+      "dollar_lanes": [
+        "ops"
+      ],
+      "need_help_at": []
     },
     {
       "name": "Joanna Pagel",
       "phone": "(904) 556-1252",
       "email": "pagelj4777@gmail.com",
       "notes": "Primary helper; part-time elsewhere",
-      "confirmed_1024": true
+      "confirmed_1024": true,
+      "area": "TBD",
+      "car": "TBD",
+      "can_do": [
+        "helper"
+      ],
+      "dollar_lanes": [
+        "ops"
+      ],
+      "need_help_at": []
     },
     {
       "name": "Malik Floyd",
       "phone": "(904) 554-7876",
       "email": "malikfloyd16@gmail.com",
       "notes": "Primary / lead candidate (foreman track)",
-      "confirmed_1024": false
+      "confirmed_1024": false,
+      "area": "TBD",
+      "car": "TBD",
+      "can_do": [
+        "helper",
+        "lead-candidate"
+      ],
+      "dollar_lanes": [
+        "ops",
+        "foreman-track"
+      ],
+      "need_help_at": []
     }
   ],
   "secondary": [
@@ -114,14 +145,34 @@
       "phone": "(904) 505-0783",
       "email": "",
       "notes": "Secondary; BD/BDR prospect",
-      "confirmed_1024": true
+      "confirmed_1024": true,
+      "area": "TBD",
+      "car": "TBD",
+      "can_do": [
+        "helper"
+      ],
+      "dollar_lanes": [
+        "ops",
+        "BD-prospect"
+      ],
+      "need_help_at": []
     },
     {
       "name": "Audrey",
       "phone": "(904) 891-1553",
       "email": "amollitt@yahoo.com",
       "notes": "Secondary helper; possible BD (shy)",
-      "confirmed_1024": true
+      "confirmed_1024": true,
+      "area": "Riverside",
+      "car": "TBD",
+      "can_do": [
+        "helper"
+      ],
+      "dollar_lanes": [
+        "ops",
+        "BD-possible"
+      ],
+      "need_help_at": []
     }
   ],
   "need_training": [
@@ -130,29 +181,73 @@
       "phone": "(904) 799-3833",
       "email": "",
       "notes": "Need training",
-      "confirmed_1024": false
+      "confirmed_1024": false,
+      "area": "TBD",
+      "car": "TBD",
+      "can_do": [
+        "need-training"
+      ],
+      "dollar_lanes": [
+        "TBD"
+      ],
+      "need_help_at": [
+        "training"
+      ]
     },
     {
       "name": "Zaylee Boronell",
       "phone": "(904) 704-0818",
       "email": "",
       "notes": "Need training",
-      "confirmed_1024": false
+      "confirmed_1024": false,
+      "area": "TBD",
+      "car": "TBD",
+      "can_do": [
+        "need-training"
+      ],
+      "dollar_lanes": [
+        "TBD"
+      ],
+      "need_help_at": [
+        "training"
+      ]
     },
     {
       "name": "Todd",
       "phone": "(904) 330-8041",
       "email": "",
       "notes": "Need training; sniff-test before handoff",
-      "confirmed_1024": false
+      "confirmed_1024": false,
+      "area": "TBD",
+      "car": "TBD",
+      "can_do": [
+        "need-training"
+      ],
+      "dollar_lanes": [
+        "TBD"
+      ],
+      "need_help_at": [
+        "sniff-test"
+      ]
     },
     {
       "name": "Stacy Addicott",
       "phone": "(904) 742-4603",
       "email": "",
-      "notes": "Need training — synced from live Helper list Drive 2026-09-23",
+      "notes": "Need training \u2014 synced from live Helper list Drive 2026-09-23",
       "confirmed_1024": false,
-      "synced_from_drive": true
+      "synced_from_drive": true,
+      "area": "TBD",
+      "car": "TBD",
+      "can_do": [
+        "need-training"
+      ],
+      "dollar_lanes": [
+        "TBD"
+      ],
+      "need_help_at": [
+        "training"
+      ]
     }
   ],
   "third": [
@@ -161,21 +256,50 @@
       "phone": "(904) 314-4214",
       "email": "",
       "notes": "Away at school / later",
-      "confirmed_1024": false
+      "confirmed_1024": false,
+      "area": "TBD",
+      "car": "TBD",
+      "can_do": [
+        "later"
+      ],
+      "dollar_lanes": [
+        "TBD"
+      ],
+      "need_help_at": [
+        "away-at-school"
+      ]
     },
     {
       "name": "Chris",
       "phone": "(904) 235-5665",
       "email": "",
       "notes": "Third tier",
-      "confirmed_1024": false
+      "confirmed_1024": false,
+      "area": "TBD",
+      "car": "TBD",
+      "can_do": [
+        "third"
+      ],
+      "dollar_lanes": [
+        "TBD"
+      ],
+      "need_help_at": []
     },
     {
       "name": "Jessica",
       "phone": "(901) 490-9093",
       "email": "",
       "notes": "Third tier",
-      "confirmed_1024": false
+      "confirmed_1024": false,
+      "area": "TBD",
+      "car": "TBD",
+      "can_do": [
+        "third"
+      ],
+      "dollar_lanes": [
+        "TBD"
+      ],
+      "need_help_at": []
     },
     {
       "name": "Melissa",
@@ -183,36 +307,83 @@
       "email": "",
       "notes": "Mobile bartending partner; 10/24 AM only",
       "confirmed_1024": true,
-      "confirmed_note": "AM only"
+      "confirmed_note": "AM only",
+      "area": "TBD",
+      "car": "TBD",
+      "can_do": [
+        "mobile-bartending"
+      ],
+      "dollar_lanes": [
+        "bartending"
+      ],
+      "need_help_at": []
     },
     {
       "name": "Kelly",
       "phone": "(912) 676-7051",
       "email": "",
       "notes": "In recovery",
-      "confirmed_1024": false
+      "confirmed_1024": false,
+      "area": "TBD",
+      "car": "TBD",
+      "can_do": [
+        "third"
+      ],
+      "dollar_lanes": [
+        "TBD"
+      ],
+      "need_help_at": [
+        "recovery"
+      ]
     },
     {
       "name": "Angie",
       "phone": "",
       "email": "",
       "notes": "Goat yoga partner (with Emmy)",
-      "confirmed_1024": false
+      "confirmed_1024": false,
+      "area": "TBD",
+      "car": "TBD",
+      "can_do": [
+        "goat-yoga"
+      ],
+      "dollar_lanes": [
+        "yoga"
+      ],
+      "need_help_at": []
     },
     {
       "name": "Melesia",
       "phone": "(904) 903-8755",
       "email": "",
       "notes": "Commercial RE grandma",
-      "confirmed_1024": false
+      "confirmed_1024": false,
+      "area": "TBD",
+      "car": "TBD",
+      "can_do": [
+        "commercial-RE"
+      ],
+      "dollar_lanes": [
+        "referrals"
+      ],
+      "need_help_at": []
     },
     {
       "name": "MariJay",
       "phone": "(561) 563-3388",
       "email": "",
-      "notes": "Volunteer kid — synced from live Helper list Drive 2026-09-23",
+      "notes": "Volunteer kid \u2014 synced from live Helper list Drive 2026-09-23",
       "confirmed_1024": false,
-      "synced_from_drive": true
+      "synced_from_drive": true,
+      "area": "TBD",
+      "car": "TBD",
+      "can_do": [
+        "volunteer"
+      ],
+      "dollar_lanes": [
+        "TBD"
+      ],
+      "need_help_at": []
     }
   ],
   "partners": [
@@ -220,31 +391,76 @@
       "name": "Emmy",
       "phone": "",
       "email": "",
-      "notes": "Goat yoga partner with Angie"
+      "notes": "Goat yoga partner with Angie",
+      "area": "TBD",
+      "car": "TBD",
+      "can_do": [
+        "goat-yoga"
+      ],
+      "dollar_lanes": [
+        "yoga"
+      ],
+      "need_help_at": []
     },
     {
       "name": "Dr. Tara",
       "phone": "",
       "email": "",
-      "notes": "Farm programming partner (Duval Teacher of the Year)"
+      "notes": "Farm programming partner (Duval Teacher of the Year)",
+      "area": "TBD",
+      "car": "TBD",
+      "can_do": [
+        "farm-programming"
+      ],
+      "dollar_lanes": [
+        "programs"
+      ],
+      "need_help_at": []
     },
     {
       "name": "Andrea",
       "phone": "",
       "email": "",
-      "notes": "Partner / referrals"
+      "notes": "Partner / referrals",
+      "area": "TBD",
+      "car": "TBD",
+      "can_do": [
+        "partner"
+      ],
+      "dollar_lanes": [
+        "referrals"
+      ],
+      "need_help_at": []
     },
     {
       "name": "Beatrix",
       "phone": "",
       "email": "",
-      "notes": "Partner / referrals (MaliVai Washington)"
+      "notes": "Partner / referrals (MaliVai Washington)",
+      "area": "TBD",
+      "car": "TBD",
+      "can_do": [
+        "partner"
+      ],
+      "dollar_lanes": [
+        "referrals"
+      ],
+      "need_help_at": []
     },
     {
       "name": "Raekwon",
       "phone": "",
       "email": "",
-      "notes": "Marketing/events link-up, not ops hire (spelling unverified)"
+      "notes": "Marketing/events link-up, not ops hire (spelling unverified)",
+      "area": "TBD",
+      "car": "TBD",
+      "can_do": [
+        "marketing-events"
+      ],
+      "dollar_lanes": [
+        "events"
+      ],
+      "need_help_at": []
     }
   ],
   "owners": [
@@ -252,17 +468,37 @@
       "name": "Ann-Marie Sheehan",
       "phone": "",
       "email": "",
-      "notes": "Co-owner · mid-senior ops · owns helper scheduling"
+      "notes": "Co-owner \u00b7 mid-senior ops \u00b7 owns helper scheduling",
+      "area": "TBD",
+      "car": "TBD",
+      "can_do": [
+        "ops-owner",
+        "scheduling"
+      ],
+      "dollar_lanes": [
+        "ops"
+      ],
+      "need_help_at": []
     },
     {
       "name": "Michael Sheehan",
       "phone": "",
       "email": "",
-      "notes": "Franchise Operator / Area VP / RVP"
+      "notes": "Franchise Operator / Area VP / RVP",
+      "area": "TBD",
+      "car": "TBD",
+      "can_do": [
+        "mentor-support",
+        "sales"
+      ],
+      "dollar_lanes": [
+        "sales"
+      ],
+      "need_help_at": []
     }
   ],
   "backup_bench": {
-    "label": "Backup bench — not trash, callable later",
+    "label": "Backup bench \u2014 not trash, callable later",
     "statuses": [
       "interview_no_hire",
       "interview_pending",
@@ -272,16 +508,27 @@
       {
         "name": "Lillie",
         "status": "interview_pending",
-        "when": "Thu Sep 24, 2026 · 2:00–3:00pm ET",
+        "when": "Thu Sep 24, 2026 \u00b7 2:00\u20133:00pm ET",
         "phone": "",
         "email": "",
-        "notes": "Interview prep on file. Not on Helper list yet. Michael runs interview. Fit likely trustworthy helper / need-training — not BDR.",
-        "source": "Lillie-interview-prep-Sep24.md"
+        "notes": "Interview prep on file. Not on Helper list yet. Michael runs interview. Fit likely trustworthy helper / need-training \u2014 not BDR.",
+        "source": "Lillie-interview-prep-Sep24.md",
+        "area": "TBD",
+        "car": "TBD",
+        "can_do": [
+          "interview-pending"
+        ],
+        "dollar_lanes": [
+          "TBD"
+        ],
+        "need_help_at": [
+          "interview"
+        ]
       }
     ],
     "gaps": [
-      "interview no-hires — add from Drive when located (Helper form Responses Sheet not found in Petting Zoo Engineers folder)",
-      "Team Build Board live Sheet not found on Drive; local docx/xlsx only — do not invent failed candidates"
+      "interview no-hires \u2014 add from Drive when located (Helper form Responses Sheet not found in Petting Zoo Engineers folder)",
+      "Team Build Board live Sheet not found on Drive; local docx/xlsx only \u2014 do not invent failed candidates"
     ]
   },
   "counts": {
@@ -299,14 +546,14 @@
     "sales_tree_vacant": 7
   },
   "gaps": [
-    "Madison — email only, no phone on roster",
-    "Angie / Emmy — no phone",
-    "Matt + Royce D'walton were on older TEAM_ROSTER need_training but NOT on live Helper list Drive 2026-09-23 — left off live tiers (not marked no-hire without evidence)",
+    "Madison \u2014 email only, no phone on roster",
+    "Angie / Emmy \u2014 no phone",
+    "Matt + Royce D'walton were on older TEAM_ROSTER need_training but NOT on live Helper list Drive 2026-09-23 \u2014 left off live tiers (not marked no-hire without evidence)",
     "No invented phones/emails"
   ],
   "sales_tree": {
-    "label": "Sales cascade · target org",
-    "note": "Under Director of Sales (vacant) → BDR Manager. BDR Manager reports to Michael only. Ann-Marie informs as co-founder catch-all — not line manager. No invented names.",
+    "label": "Sales cascade \u00b7 target org",
+    "note": "Under Director of Sales (vacant) \u2192 BDR Manager. BDR Manager reports to Michael only. Ann-Marie informs as co-founder catch-all \u2014 not line manager. No invented names.",
     "director_sales": {
       "id": "dir_sales",
       "title": "Director of Sales",
@@ -318,14 +565,14 @@
       "title": "BDR Manager",
       "status": "vacant",
       "reports_to": "Michael Sheehan only",
-      "informs": "Ann-Marie Sheehan (co-founder catch-all — not line manager)",
+      "informs": "Ann-Marie Sheehan (co-founder catch-all \u2014 not line manager)",
       "note": "Future outsource / hire. Michael filling seats today.",
       "reps": [
         {
           "id": "enterprise_bdr",
           "title": "Regional enterprise BDR",
           "status": "vacant",
-          "lane": "CDD/HOA · amenity · corp · golf · campus",
+          "lane": "CDD/HOA \u00b7 amenity \u00b7 corp \u00b7 golf \u00b7 campus",
           "tier": "mature_b2b"
         },
         {
@@ -339,52 +586,52 @@
           "id": "violet_50",
           "title": "Regional Violet ~50%",
           "status": "vacant",
-          "lane": "Schools / churches donation lane · PTA · indie · community programming",
+          "lane": "Schools / churches donation lane \u00b7 PTA \u00b7 indie \u00b7 community programming",
           "tier": "mature_b2b",
-          "note": "Donation / marketing framing ≈ ~50% off list for bigger schools/churches"
+          "note": "Donation / marketing framing \u2248 ~50% off list for bigger schools/churches"
         },
         {
           "id": "deep_violet",
           "title": "Regional small-biz / deep Violet",
           "status": "vacant",
-          "lane": "Gratis-to-cost · volunteer · giveaway-ish · cover cost+ · karma/marketing",
+          "lane": "Gratis-to-cost \u00b7 volunteer \u00b7 giveaway-ish \u00b7 cover cost+ \u00b7 karma/marketing",
           "tier": "also_run",
-          "note": "Still do if $1 over labor — not a mature money lane, still a real seat"
+          "note": "Still do if $1 over labor \u2014 not a mature money lane, still a real seat"
         },
         {
           "id": "consumer_conversion",
           "title": "Consumer conversion rep",
           "status": "vacant",
-          "lane": "Work consumer list · drive reviews · build new lists",
+          "lane": "Work consumer list \u00b7 drive reviews \u00b7 build new lists",
           "tier": "b2c"
         }
       ]
     }
   },
   "ann_marie_raci": {
-    "label": "Ann-Marie · day-to-day ops RACI",
+    "label": "Ann-Marie \u00b7 day-to-day ops RACI",
     "with": "Michael Sheehan",
-    "role_today": "Co-owner · mid-senior ops · owns helper scheduling",
+    "role_today": "Co-owner \u00b7 mid-senior ops \u00b7 owns helper scheduling",
     "owns": [
       "Animal well-being",
       "Facilities / buildings",
       "Event staffing",
       "Invoicing + scheduling",
-      "Farm tours / check-in / STEM moments / “cut the twine to feed the swine”",
+      "Farm tours / check-in / STEM moments / \u201ccut the twine to feed the swine\u201d",
       "Website quick updates",
       "FB / IG posts",
       "Blog (route publishing asks to her)",
-      "Goat 3D-print teaching track (taught; Michael now printing more — sticker cost only)"
+      "Goat 3D-print teaching track (taught; Michael now printing more \u2014 sticker cost only)"
     ],
     "escalates_to_michael": [
-      "Customer falls off schedule — ping Michael"
+      "Customer falls off schedule \u2014 ping Michael"
     ],
     "helpers_report_to": [
       "Ann-Marie Sheehan",
       "Michael Sheehan"
     ],
     "not_line_manager_of": [
-      "BDR Manager / BDR cascade — informs only as co-founder catch-all"
+      "BDR Manager / BDR cascade \u2014 informs only as co-founder catch-all"
     ]
   },
   "cash_reconciliation": {
@@ -392,12 +639,12 @@
     "label": "Cash reconciliation",
     "control_type": "open_control",
     "status": "needs_process",
-    "owner_today": "Ann-Marie Sheehan (day-to-day money handling) · Michael informed",
-    "note": "Neutral process control for cash count / money handling. Status: needs process. No blame language — define SOP later.",
-    "tone": "operator control — not interpersonal"
+    "owner_today": "Ann-Marie Sheehan (day-to-day money handling) \u00b7 Michael informed",
+    "note": "Neutral process control for cash count / money handling. Status: needs process. No blame language \u2014 define SOP later.",
+    "tone": "operator control \u2014 not interpersonal"
   },
   "franchise_kit_narrative": {
-    "label": "Franchise kit · founder vision (labeled as such)",
+    "label": "Franchise kit \u00b7 founder vision (labeled as such)",
     "selling": [
       "Operational know-how",
       "Field-marketing kit",
@@ -405,16 +652,26 @@
     ],
     "proof_posture": {
       "offer_label": "proof sprint",
-      "sketch": "Pay for a booking sprint → book more than the fee → then stop. Illustrative offer — not a live SKU price.",
+      "sketch": "Pay for a booking sprint \u2192 book more than the fee \u2192 then stop. Illustrative offer \u2014 not a live SKU price.",
       "not_a_sku": true
     },
     "city_entry": {
       "rule": "Jax-class / peer metros first",
       "peer_cities_link": "franchise-peer-cities.html",
       "not_first": "NYC",
-      "caution": "Founder caution: big-city park / red-tape enforcement risk (bunny-in-park anecdote). Build FOMO so peer metros and then bigger cities want it — Chick-fil-A line metaphor, short.",
-      "destination_thesis": "Shared homestead · strip-mall rethink · stackable mobile franchise Legos · free + prize + job paths · joy + community resilience.",
-      "economic_resilience_line": "One careful framing only: community economic resilience (soft Hooverville reference max one line — not doom porn)."
+      "caution": "Founder caution: big-city park / red-tape enforcement risk (bunny-in-park anecdote). Build FOMO so peer metros and then bigger cities want it \u2014 Chick-fil-A line metaphor, short.",
+      "destination_thesis": "Shared homestead \u00b7 strip-mall rethink \u00b7 stackable mobile franchise Legos \u00b7 free + prize + job paths \u00b7 joy + community resilience.",
+      "economic_resilience_line": "One careful framing only: community economic resilience (soft Hooverville reference max one line \u2014 not doom porn)."
     }
+  },
+  "ops_enrichment": {
+    "as_of": "2026-09-23 17:50 ET",
+    "note": "Geo seed from Ops IA: Audrey=Riverside, Madison=Hilliard-ish. Car unknown=TBD. Tags from existing notes only. No invented phones/emails.",
+    "gaps": [
+      "Most helpers: area TBD",
+      "Most helpers: car TBD",
+      "Historical Gmail calendar scrape = Phase C (deferred)",
+      "Interview no-hires: Drive Responses Sheet not located"
+    ]
   }
 }

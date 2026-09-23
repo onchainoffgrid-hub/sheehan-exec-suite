@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>People · Operations · Sheehan Homestead</title>
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--violet:#a78bfa}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:960px;margin:0 auto;padding:28px 22px 48px}
+.top{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 18px;padding:10px 14px;border:1px solid var(--line);border-radius:14px;background:#0f1728}
+.top .lbl{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-right:4px}
+.top a{background:var(--card);border:1px solid var(--line);color:var(--text);padding:7px 12px;border-radius:999px;font-size:.78rem;font-weight:600;text-decoration:none}
+.top a.on{border-color:#5b8cff88;background:#152238}
+.top a.sec{font-weight:500;font-size:.72rem;color:#c5d0e6}
+header{margin-bottom:12px}
+h1{font-size:clamp(1.45rem,2.8vw,1.9rem);margin:0 0 6px;letter-spacing:-.02em}
+.sub{color:var(--muted);font-size:.92rem}
+.org{margin:16px 0 22px;padding:18px 20px;border:1px solid #3dd68c66;border-radius:16px;background:linear-gradient(135deg,#13281d,#121a2b)}
+.org .lbl{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px}
+.org h2{margin:0 0 10px;font-size:1.15rem;color:#bbf7d0}
+.org .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:640px){.org .row{grid-template-columns:1fr}}
+.org .box{background:#0e1626;border:1px solid var(--line);border-radius:12px;padding:14px}
+.org .box .who{font-size:.72rem;color:var(--muted);margin-bottom:2px}
+.org .box h3{margin:0 0 4px;font-size:1.05rem}
+.org .box p{margin:0;font-size:.82rem;color:#c5d0e6}
+.team-door{display:flex;flex-direction:column;justify-content:space-between;min-height:140px;padding:24px 26px;border-radius:20px;border:1px solid #5b8cff99;background:linear-gradient(160deg,#152238,#121a2b 65%);color:inherit;text-decoration:none;transition:transform .12s,border-color .15s}
+.team-door:hover{transform:translateY(-2px);border-color:var(--accent);text-decoration:none}
+.team-door .kicker{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px}
+.team-door h3{margin:0 0 8px;font-size:1.65rem}
+.team-door p{margin:0;color:var(--muted);font-size:.92rem;max-width:40ch}
+.team-door .go{margin-top:18px;font-weight:800;color:#9ec1ff;font-size:1rem}
+.priv{margin-top:18px;padding:12px 14px;border:1px dashed #ffb02066;border-radius:12px;background:#16140f;font-size:.8rem;color:var(--muted)}
+.priv b{color:var(--warn)}
+.note{color:var(--muted);font-size:.78rem;margin-top:22px}
+</style></head>
+<body data-flow-face="ops"><div class="wrap">
+
+<div class="top">
+  <span class="lbl">Ops</span>
+  <a href="ops.html">Operations</a>
+  <a class="on" href="ops-people.html">People</a>
+  <a href="ops-team.html">Team</a>
+  <a href="rvp-ops.html" class="sec">Franchise Hub</a>
+  <a href="index.html" class="sec">Layer Zero</a>
+</div>
+
+<header>
+  <h1>People</h1>
+  <div class="sub">Operations · org truth first · Team is the main drill-in</div>
+</header>
+
+<div class="org">
+  <div class="lbl">Org truth · not ego chart</div>
+  <h2>Who owns Operations</h2>
+  <div class="row">
+    <div class="box">
+      <div class="who">Owns Operations</div>
+      <h3>Ann-Marie Sheehan</h3>
+      <p>Day-to-day ops · helper scheduling · Battle Row handoffs</p>
+    </div>
+    <div class="box">
+      <div class="who">Mentors / supports</div>
+      <h3>Michael Sheehan</h3>
+      <p>Supports Ann-Marie on ops · not “above” her on this face</p>
+    </div>
+  </div>
+</div>
+
+<a class="team-door" href="ops-team.html">
+  <div>
+    <div class="kicker">Main drill-in</div>
+    <h3>Team</h3>
+    <p>Sortable workers · name · phone · email · tier · area · car · can-do · $-lane tags · where we need help. Tap sms / mailto / tel.</p>
+  </div>
+  <span class="go">Open Team →</span>
+</a>
+
+<div class="priv"><b>PRIVATE:</b> Team is operator-only. Not linked from investor / franchise public tiles. No 1099 amounts or essay helper-notes on the Team page.</div>
+
+<p class="note">Also: <a href="ann-marie-ops.html">Ann-Marie RACI</a> · <a href="team-hire.html">Hire priorities</a> · legacy <a href="team.html">team.html</a> (org cascade still useful).</p>
+</div>
+<script src="shared/flow-spine.js" defer></script>
+</body></html>

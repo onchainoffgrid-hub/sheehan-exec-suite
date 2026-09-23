@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Booked gigs · Operations · Sheehan Homestead</title>
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--violet:#a78bfa;--bad:#ff5d6c}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.4}
+a{color:var(--accent);text-decoration:none}
+.wrap{max-width:1100px;margin:0 auto;padding:22px 18px 48px}
+.top{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 14px;padding:10px 14px;border:1px solid var(--line);border-radius:14px;background:#0f1728}
+.top .lbl{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-right:4px}
+.top a{background:var(--card);border:1px solid var(--line);color:var(--text);padding:7px 12px;border-radius:999px;font-size:.78rem;font-weight:600;text-decoration:none}
+.top a.on{border-color:#a78bfa88;background:#231530}
+.top a.sec{font-weight:500;font-size:.72rem;color:#c5d0e6}
+h1{font-size:1.45rem;margin:0 0 4px}.sub{color:var(--muted);font-size:.88rem;margin-bottom:12px}
+.banner{margin:0 0 14px;padding:11px 13px;border:1px dashed #ffb02066;border-radius:12px;background:#16140f;font-size:.8rem;color:var(--muted)}
+.banner b{color:var(--warn)}
+.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+table{width:100%;border-collapse:collapse;font-size:.82rem;min-width:720px}
+th,td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:#0f1728;color:var(--muted);font-size:.7rem;text-transform:uppercase;letter-spacing:.05em}
+.tag{display:inline-block;font-size:.65rem;padding:2px 7px;border-radius:999px;border:1px solid var(--line);background:var(--panel);margin:1px 2px 1px 0}
+.tag.good{border-color:#3dd68c55;color:var(--good)}.tag.warn{border-color:#ffb02066;color:var(--warn)}.tag.bad{border-color:#ff5d6c55;color:var(--bad)}.tag.muted{color:var(--muted)}
+.note{color:var(--muted);font-size:.75rem;margin-top:16px}
+.links a{font-size:.78rem;margin-right:10px}
+</style></head>
+<body data-flow-face="ops"><div class="wrap">
+<div class="top">
+  <span class="lbl">Ops</span>
+  <a href="ops.html">Operations</a>
+  <a class="on" href="ops-gigs.html">Booked gigs</a>
+  <a href="ops-pipeline.html">Pipeline</a>
+  <a href="bookings-dates.html" class="sec">Legacy bookings board</a>
+  <a href="rvp-ops.html" class="sec">Franchise Hub</a>
+</div>
+<header>
+  <h1>Booked gigs</h1>
+  <div class="sub">Date · offer · staffed? · deposit? · paid? · on GCal? · honest empties</div>
+</header>
+<div class="banner"><b>Stub:</b> Seeded from <code>bookings_pipeline.json</code>. Live GCal status = Phase B (deferred). Staffed who = TBD unless known. No invented $. <a href="ops-pipeline.html">Quotes with no answer → Pipeline</a>.</div>
+<div class="table-wrap"><table>
+  <thead><tr><th>Date</th><th>Offer / title</th><th>Staffed?</th><th>Deposit?</th><th>Paid?</th><th>On GCal?</th><th>Status tags</th></tr></thead>
+  <tbody id="tbody"><tr><td colspan="7" class="muted">Loading…</td></tr></tbody>
+</table></div>
+<p class="note links" id="foot">Also: <a href="bookings-dates.html">bookings-dates.html</a></p>
+</div>
+<script>
+(function(){
+  function tag(t, cls){ return '<span class="tag '+(cls||'')+'">'+(t||'—')+'</span>'; }
+  function depositLabel(d){
+    if(d==null||d===''||d===undefined) return tag('TBD','muted');
+    if(d==='accepted'||d===true||d==='yes') return tag(String(d),'good');
+    if(d==='incoming') return tag('incoming','warn');
+    return tag(String(d),'muted');
+  }
+  function paidLabel(p){
+    if(p==null||p===''||p==='unknown'||p==='n/a') return tag(p||'TBD','muted');
+    if(p==='deposit_incoming'||p==='partial_pitch') return tag(p,'warn');
+    if(p==='no_show_money'||p==='none') return tag(p,'bad');
+    return tag(String(p),'muted');
+  }
+  function statusCls(s){
+    s=(s||'').toUpperCase();
+    if(s==='LOCKED'||s==='ACCEPTED') return 'good';
+    if(s.indexOf('WAIT')>=0||s.indexOf('CONFIRM')>=0||s==='STUB') return 'warn';
+    if(s.indexOf('NO_PAY')>=0||s.indexOf('PAUSE')>=0||s.indexOf('MIA')>=0) return 'bad';
+    return 'muted';
+  }
+  fetch('data/bookings_pipeline.json',{cache:'no-store'}).then(function(r){if(!r.ok)throw new Error(r.status);return r.json();})
+  .then(function(d){
+    var rows=(d.bookings||[]).filter(function(b){
+      var s=(b.status||'').toUpperCase();
+      // Booked / near-booked face — pipeline MIA goes to pipeline page but show here with tag
+      return true;
+    });
+    var tb=document.getElementById('tbody');
+    if(!rows.length){ tb.innerHTML='<tr><td colspan="7">No bookings in seed file — empty honest.</td></tr>'; return; }
+    tb.innerHTML=rows.map(function(b){
+      var staffed = b.staff || b.staffed || null;
+      var gcal = b.calendar || b.on_gcal || null;
+      return '<tr>'+
+        '<td>'+(b.date||'<span class="tag muted">no date</span>')+(b.time?'<div style="color:var(--muted);font-size:.72rem">'+b.time+'</div>':'')+'</td>'+
+        '<td><b>'+(b.title||'—')+'</b>'+(b.offer?'<div style="color:var(--muted)">'+b.offer+'</div>':'')+'</td>'+
+        '<td>'+(staffed?tag(staffed,'good'):tag('TBD','muted'))+'</td>'+
+        '<td>'+depositLabel(b.deposit)+'</td>'+
+        '<td>'+paidLabel(b.paid)+'</td>'+
+        '<td>'+(gcal?tag(String(gcal),'good'):tag('TBD · Phase B','muted'))+'</td>'+
+        '<td>'+tag(b.status||'—', statusCls(b.status))+'</td>'+
+        '</tr>';
+    }).join('');
+    document.getElementById('foot').innerHTML='as_of '+(d.as_of||'')+' · source bookings_pipeline · live GCal scrape deferred · <a href="bookings-dates.html">legacy board</a>';
+  }).catch(function(e){
+    document.getElementById('tbody').innerHTML='<tr><td colspan="7">Could not load bookings_pipeline.json — '+e+'. Empty honest stub.</td></tr>';
+  });
+})();
+</script>
+<script src="shared/flow-spine.js" defer></script>
+</body></html>
