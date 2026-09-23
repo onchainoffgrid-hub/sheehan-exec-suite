@@ -21,7 +21,7 @@
     if (!document.body.getAttribute("data-flow-face") && !window.__FLOW_FACE__) {
       if (/^investor-/.test(path) || path === "macro-radar.html") FACE = "investor";
       else if (
-        /^(bdr-tam|bdr-pipeline|crm-icp|consumer-inbound|org-whitespace|catalogue-close|hail-mary)\.html$/.test(
+        /^(bdr-tam|bdr-pipeline|crm-icp|consumer-inbound|easy-attack|org-whitespace|catalogue-close|hail-mary)\.html$/.test(
           path
         )
       )
@@ -40,6 +40,7 @@
         else CHIP = "bdr-tam";
       } else if (path === "bdr-pipeline.html") CHIP = "big-enterprise";
       else if (path === "consumer-inbound.html") CHIP = "violet";
+      else if (path === "easy-attack.html") CHIP = "easy-attack";
       else if (path === "crm-icp.html") CHIP = "subscription";
       else if (path === "hail-mary.html") CHIP = "hail-mary";
       else if (path === "investor-checklist.html") CHIP = "checklist";
@@ -107,6 +108,7 @@
       CHIP === "sponsor"
     ) +
     a("consumer-inbound.html", "Violet", "vio", CHIP === "violet") +
+    a("easy-attack.html", "Easy attack", "sp", CHIP === "easy-attack") +
     a(
       "bdr-tam.html?lane=" + encodeURIComponent("Regional Subscription"),
       "Subscription",
@@ -145,7 +147,7 @@
     (FACE === "investor"
       ? '<div class="flow-hint">Investor face · <a href="investor-checklist.html">Seed / pre-seed checklist</a> (Assets · Proof · Founder · Co-founder · Ops) · hop to <a href="bookings-dates.html">bookings</a> / <a href="money-cfo.html">money</a> for Sales proof.</div>'
       : FACE === "sales"
-      ? '<div class="flow-hint">Sales face · Big Enterprise · Sponsor · Violet · Subscription · Hail Mary (Inspired · God-connected · Local celeb · Philanthropist · Local biz-sponsor · Bazillionaires — same GTM offers).</div>'
+      ? '<div class="flow-hint">Sales face · Big Enterprise · Sponsor · Violet · Easy attack (FB groups / social sell / cross-marketers / open calendar) · Subscription · Hail Mary (Inspired · God-connected · Local celeb · Philanthropist · Local biz-sponsor · Bazillionaires — same GTM offers).</div>'
       : '<div class="flow-hint">Operations face · Money · Bookings · Actions · Ann-Marie. Use Sales chips to dial without hunting.</div>') +
     "</nav>";
 

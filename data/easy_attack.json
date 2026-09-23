@@ -1,0 +1,765 @@
+{
+  "as_of": "2026-09-22 ET",
+  "tz": "America/New_York",
+  "title": "Easy shit to attack",
+  "face": "sales",
+  "chip": "easy-attack",
+  "rule": "No invented FB member counts, emails, or review totals. Sizes unknown unless disk-published. Calendar free-days only from live Google Calendar \u2014 if MCP auth fails, show connect gap. GTM language matches Sell lanes: Violet \u00b7 Subscription \u00b7 Sponsor \u00b7 Big Enterprise. Team-swingable = junior/commission can attack; founder-only = relationship/budget/org gate. Convert often includes Google/FB review ask (link on site) \u2014 do not invent review counts.",
+  "gtm_lanes": {
+    "Violet": "Consumer / mom / birthday / mobile \u2014 consumer-inbound + social soft invite",
+    "Subscription": "Recurring senior/campus/homeschool field-trip host",
+    "Sponsor": "Festivals / mom media / shoutouts / barter / paid spotlight",
+    "Big Enterprise": "Named regional orgs \u2014 founder rebook"
+  },
+  "google_review_link": "https://share.google/CbXwVQ7PiVNJgLFAa",
+  "google_review_note": "Site booking-help links this share URL. Aggregators have cited review counts \u2014 do not display a live count here (not re-verified this build).",
+  "sms": "914-263-1311",
+  "sms_keyword": "GOAT",
+  "sources": [
+    "jax-mom-homeschool-fb-groups.md",
+    "JAX-mom-homeschool-Facebook-groups.xlsx",
+    "Sheehan-Homestead-Facebook-groups-join-map.xlsx",
+    "jax-free-local-media.md",
+    "leads/brand-brief.md",
+    "farm-programming-guerrilla.md",
+    "bdr/scripts/04_partner_smb.md",
+    "Crash-Mob-Field-Marketing.md"
+  ],
+  "calendar": {
+    "status": "connect_gap",
+    "reason": "Google Calendar MCP list_calendars returned 403 (auth/upscope) on 2026-09-22 ET. No free days invented.",
+    "window": "Next 2\u20134 weeks",
+    "howto": "Reconnect user-Google-calendar in Cursor, then re-run Easy-attack calendar refresh.",
+    "snapshot_note": "data/calendar_attendees_snapshot.json is historical attendees only \u2014 not an open-day map.",
+    "run_surface": "bookings-dates.html (Run/Ops) links here for open-day attack when calendar is connected."
+  },
+  "groups": [
+    {
+      "id": "jm-callahan",
+      "name": "Callahan/Bryceville/Hilliard Moms (Jacksonville Mom)",
+      "size": "unknown",
+      "size_note": "Not published (JM closed network)",
+      "why": "Home turf \u2014 closest trust for farm mornings",
+      "fit": [
+        "Nassau",
+        "moms",
+        "neighborhood"
+      ],
+      "tags": [
+        "A",
+        "Violet"
+      ],
+      "link": "https://www.facebook.com/groups/1980241162206332/",
+      "notes": "Join as Ann-Marie. Comment first; soft invite after. No flyer dump.",
+      "who": "AM",
+      "swing": "team",
+      "gtm_lane": "Violet",
+      "sell_angle": "Soft invite to Mommy & Me / farm morning after 1\u20132 helpful comments. Text GOAT to 914-263-1311. Review ask at gate."
+    },
+    {
+      "id": "jm-fernandina",
+      "name": "Fernandina Beach / Amelia Island (Jacksonville Mom)",
+      "size": "unknown",
+      "size_note": "Not published",
+      "why": "Closest affluent Nassau zips",
+      "fit": [
+        "Nassau",
+        "moms",
+        "Amelia"
+      ],
+      "tags": [
+        "A",
+        "Violet"
+      ],
+      "link": "https://www.facebook.com/groups/691226694343262/",
+      "notes": "Beach-day alternative / rainy-day animals language.",
+      "who": "AM",
+      "swing": "team",
+      "gtm_lane": "Violet",
+      "sell_angle": "Weekend farm day as Amelia day-trip. Capture email + Google review after visit."
+    },
+    {
+      "id": "jm-homeschool",
+      "name": "JM Homeschool Moms",
+      "size": "unknown",
+      "size_note": "Not published",
+      "why": "Exact buyer \u2014 field-trip language allowed as events/recs",
+      "fit": [
+        "homeschool",
+        "First Coast",
+        "moms"
+      ],
+      "tags": [
+        "A",
+        "Subscription",
+        "Violet"
+      ],
+      "link": "https://www.facebook.com/groups/1016297715064503/",
+      "notes": "Field-trip host voice, not ads.",
+      "who": "AM",
+      "swing": "team",
+      "gtm_lane": "Subscription",
+      "sell_angle": "Anyone hunting a hands-on animal / STEM morning? Host offer. Booked field trip = Subscription lane."
+    },
+    {
+      "id": "jm-wahms",
+      "name": "JM WAHMs",
+      "size": "unknown",
+      "size_note": "Not published",
+      "why": "Momtrepreneur peers who reshare",
+      "fit": [
+        "WAHM",
+        "First Coast"
+      ],
+      "tags": [
+        "A",
+        "Violet",
+        "Sponsor"
+      ],
+      "link": "https://www.facebook.com/groups/829458660456533/",
+      "notes": "Peer story; lift Ann-Marie. Soft collab / shoutout.",
+      "who": "AM",
+      "swing": "team",
+      "gtm_lane": "Violet",
+      "sell_angle": "Peer post + collab ask. Cross-shoutout = Sponsor-lite. Ask partners for Google/FB review after farm visit."
+    },
+    {
+      "id": "wild-yulee",
+      "name": "Wild Homeschoolers Yulee & Fernandina Beach",
+      "size": "unknown",
+      "size_note": "Not published",
+      "why": "Nassau outdoor/homeschool \u2014 want hosts not vendors",
+      "fit": [
+        "Nassau",
+        "homeschool",
+        "nature"
+      ],
+      "tags": [
+        "A",
+        "Subscription"
+      ],
+      "link": "https://www.facebook.com/groups/1888353301389762",
+      "notes": "Participation required; local-only.",
+      "who": "AM",
+      "swing": "founder",
+      "gtm_lane": "Subscription",
+      "sell_angle": "Offer to host a nature/farm morning as member contribution \u2014 founder relationship first."
+    },
+    {
+      "id": "nefhh",
+      "name": "NorthEast Florida Homeschool Happenings (NEFHH)",
+      "size": "unknown",
+      "size_note": "Not published",
+      "why": "Regional happenings board \u2014 highest leverage event post",
+      "fit": [
+        "NEFL",
+        "homeschool",
+        "events"
+      ],
+      "tags": [
+        "A",
+        "Subscription",
+        "Violet"
+      ],
+      "link": "https://www.facebook.com/groups/nefhh/",
+      "notes": "Event post if rules allow; read pins after join.",
+      "who": "AM",
+      "swing": "team",
+      "gtm_lane": "Subscription",
+      "sell_angle": "Post dated farm field trip / open farm. RSVP \u2192 book \u2192 review at gate."
+    },
+    {
+      "id": "wildschooling",
+      "name": "Wildschooling & Nature Exploring in Jacksonville",
+      "size": "unknown",
+      "size_note": "Not published",
+      "why": "Outdoor park-day families \u2014 farm day is natural",
+      "fit": [
+        "Jax",
+        "nature",
+        "homeschool"
+      ],
+      "tags": [
+        "A",
+        "Subscription"
+      ],
+      "link": "https://www.facebook.com/groups/772250924026555/",
+      "notes": "Offer to host a Thursday meetup.",
+      "who": "AM",
+      "swing": "team",
+      "gtm_lane": "Subscription",
+      "sell_angle": "Host Thursday farm meetup. Review + Gold card after."
+    },
+    {
+      "id": "sunshine",
+      "name": "Sunshine Homeschoolers",
+      "size": "unknown",
+      "size_note": "Not published",
+      "why": "Broad Jax homeschool social net",
+      "fit": [
+        "Jax",
+        "homeschool"
+      ],
+      "tags": [
+        "A",
+        "Subscription"
+      ],
+      "link": "https://www.facebook.com/groups/SunshineHomeschoolers/",
+      "notes": "Lurk then invite.",
+      "who": "AM",
+      "swing": "team",
+      "gtm_lane": "Subscription",
+      "sell_angle": "Event invite after lurk. Text GOAT."
+    },
+    {
+      "id": "cotw",
+      "name": "Call of the Wild + Free",
+      "size": "unknown",
+      "size_note": "Not published",
+      "why": "Secular Wild+Free \u2014 nature-first mamas",
+      "fit": [
+        "Jax",
+        "nature",
+        "secular"
+      ],
+      "tags": [
+        "A",
+        "Subscription"
+      ],
+      "link": "https://www.facebook.com/groups/396918972800551/",
+      "notes": "Host a nature/farm morning.",
+      "who": "AM",
+      "swing": "team",
+      "gtm_lane": "Subscription",
+      "sell_angle": "Host nature morning. Review gate."
+    },
+    {
+      "id": "jm-northside",
+      "name": "JM Northside",
+      "size": "unknown",
+      "size_note": "Not published",
+      "why": "Closest Duval pocket to Callahan corridor",
+      "fit": [
+        "Northside",
+        "moms",
+        "Duval"
+      ],
+      "tags": [
+        "A",
+        "Violet"
+      ],
+      "link": "https://www.facebook.com/groups/1518410475108945/",
+      "notes": "Mom voice.",
+      "who": "AM",
+      "swing": "team",
+      "gtm_lane": "Violet",
+      "sell_angle": "Local farm morning invite. Review after."
+    },
+    {
+      "id": "adventures",
+      "name": "Adventures of a Homeschooler",
+      "size": "unknown",
+      "size_note": "Not published",
+      "why": "Built for outings \u2014 product match",
+      "fit": [
+        "Jax",
+        "field trips"
+      ],
+      "tags": [
+        "A",
+        "Subscription"
+      ],
+      "link": "https://www.facebook.com/groups/284165267677649/",
+      "notes": "Homestead day is the product.",
+      "who": "AM",
+      "swing": "team",
+      "gtm_lane": "Subscription",
+      "sell_angle": "Post field-trip date. Book group. Ask organizer for Google review."
+    },
+    {
+      "id": "jm-working",
+      "name": "JM Working Moms",
+      "size": "unknown",
+      "size_note": "Not published",
+      "why": "Birthday + mobile zoo (we come to you)",
+      "fit": [
+        "working moms",
+        "birthday",
+        "mobile"
+      ],
+      "tags": [
+        "B",
+        "Violet"
+      ],
+      "link": "https://www.facebook.com/groups/887008721355336/",
+      "notes": "After-work / weekend language.",
+      "who": "AM",
+      "swing": "team",
+      "gtm_lane": "Violet",
+      "sell_angle": "Mobile birthday / after-work language. Commission-friendly. Review after gig."
+    },
+    {
+      "id": "jm-op",
+      "name": "JM Orange Park / Fleming Island / Oakleaf",
+      "size": "unknown",
+      "size_note": "Not published",
+      "why": "Clay volume of young families",
+      "fit": [
+        "Clay",
+        "moms"
+      ],
+      "tags": [
+        "B",
+        "Violet"
+      ],
+      "link": "https://www.facebook.com/groups/775631662528036/",
+      "notes": "Weekend farm-day.",
+      "who": "AM",
+      "swing": "team",
+      "gtm_lane": "Violet",
+      "sell_angle": "Weekend farm day. Text GOAT. Review + Gold."
+    },
+    {
+      "id": "jm-nocatee",
+      "name": "JM Nocatee",
+      "size": "unknown",
+      "size_note": "Not published",
+      "why": "Affluent young families \u2014 weekend trip positioning",
+      "fit": [
+        "St Johns",
+        "Nocatee",
+        "moms"
+      ],
+      "tags": [
+        "B",
+        "Violet",
+        "Sponsor"
+      ],
+      "link": "https://www.facebook.com/groups/906848119326990/",
+      "notes": "Promo-sensitive; never flyer-dump.",
+      "who": "AM",
+      "swing": "team",
+      "gtm_lane": "Violet",
+      "sell_angle": "Weekend field-trip invite only. Paid SJM spotlight = Sponsor lane if budgeted."
+    },
+    {
+      "id": "clay-hs",
+      "name": "Clay County Homeschooling",
+      "size": "unknown",
+      "size_note": "Not published",
+      "why": "Clay homeschool hub",
+      "fit": [
+        "Clay",
+        "homeschool"
+      ],
+      "tags": [
+        "B",
+        "Subscription"
+      ],
+      "link": "https://www.facebook.com/groups/1458634547765483/",
+      "notes": "Field-trip host voice.",
+      "who": "AM",
+      "swing": "team",
+      "gtm_lane": "Subscription",
+      "sell_angle": "Field-trip host post. Book + review."
+    },
+    {
+      "id": "nche",
+      "name": "Nassau County Home Educators (NCHE)",
+      "size": "~150\u2013175 families (org FAQ; not a FB count)",
+      "size_note": "Homeschool-Life FAQ \u2014 org families, not FB members",
+      "why": "Nassau establishment \u2014 host their required field trip",
+      "fit": [
+        "Nassau",
+        "homeschool",
+        "Christian"
+      ],
+      "tags": [
+        "A",
+        "Subscription"
+      ],
+      "link": "https://www.homeschool-life.com/1045/signup",
+      "notes": "FB members-only after paid org join. Host field trip = the play.",
+      "who": "AM+Michael",
+      "swing": "founder",
+      "gtm_lane": "Subscription",
+      "sell_angle": "Join org; host farm field trip. Founder relationship. Reviews from families after."
+    },
+    {
+      "id": "stjohns-moms",
+      "name": "St. Johns Moms (SJM)",
+      "size": "20,000+ (stjohnsmoms.com/advertise)",
+      "size_note": "Published on advertise page \u2014 treat as media claim",
+      "why": "Huge affluent St. Johns reach \u2014 paid spotlight only",
+      "fit": [
+        "St Johns",
+        "moms",
+        "paid"
+      ],
+      "tags": [
+        "C",
+        "Sponsor"
+      ],
+      "link": "https://www.facebook.com/groups/stjohnsmoms",
+      "notes": "Organic wall is not the product. Spotlight $150 / Promo Thread $200 per their site.",
+      "who": "Michael",
+      "swing": "founder",
+      "gtm_lane": "Sponsor",
+      "sell_angle": "Budget spotlight if Nocatee math works \u2014 Sponsor GTM. Don\u2019t sneak flyers."
+    },
+    {
+      "id": "jax-moms-group",
+      "name": "Jacksonville Moms Group (pay-to-post)",
+      "size": "8,000 FB group (jacksonvillemomsgroup.com/list)",
+      "size_note": "Their list page claim \u2014 date not re-counted",
+      "why": "Sanctioned selling wall if sponsored",
+      "fit": [
+        "Jax",
+        "moms",
+        "paid"
+      ],
+      "tags": [
+        "C",
+        "Sponsor"
+      ],
+      "link": "https://jacksonvillemomsgroup.com/sponsorship",
+      "notes": "Must be Sponsor; posts start with Sponsor.",
+      "who": "Michael",
+      "swing": "founder",
+      "gtm_lane": "Sponsor",
+      "sell_angle": "Only if sponsorship budget \u2014 Sponsor lane."
+    },
+    {
+      "id": "playground",
+      "name": "Playground Talk Jax",
+      "size": "unknown",
+      "size_note": "Not published",
+      "why": "Kids activities / things-to-do \u2014 Page-friendly events",
+      "fit": [
+        "Jax",
+        "events",
+        "kids"
+      ],
+      "tags": [
+        "C",
+        "Violet"
+      ],
+      "link": "https://www.facebook.com/groups/playgroundtalkjax/",
+      "notes": "Confirm rules; good for dated public events.",
+      "who": "Page+AM",
+      "swing": "team",
+      "gtm_lane": "Violet",
+      "sell_angle": "Post dated public farm morning / birthday vendor. Review CTA on event."
+    },
+    {
+      "id": "jm-military",
+      "name": "JM Military Moms",
+      "size": "unknown",
+      "size_note": "Not published",
+      "why": "PCS families need local things to do",
+      "fit": [
+        "military",
+        "moms",
+        "mobile"
+      ],
+      "tags": [
+        "B",
+        "Violet"
+      ],
+      "link": "https://www.facebook.com/groups/721790877930979/",
+      "notes": "Welcome-to-Jax farm morning / mobile.",
+      "who": "AM",
+      "swing": "team",
+      "gtm_lane": "Violet",
+      "sell_angle": "Welcome + mobile zoo. Review after."
+    }
+  ],
+  "social_ops": [
+    {
+      "id": "op-host-fieldtrip",
+      "title": "Host one homeschool farm morning",
+      "gtm_lane": "Subscription",
+      "swing": "team",
+      "for_groups": [
+        "jm-homeschool",
+        "nefhh",
+        "wildschooling",
+        "adventures",
+        "clay-hs"
+      ],
+      "angle": "Post as field-trip host (not vendor). Dated Saturday AM. Text GOAT for RSVP. At gate: Google review \u2192 VIP/Gold card (per farm playbook). No invented review targets.",
+      "convert": "Book group deposit \u00b7 Google/FB review \u00b7 Gold card \u00b7 email"
+    },
+    {
+      "id": "op-mommy-me",
+      "title": "Mommy & Me soft invite in JM neighborhoods",
+      "gtm_lane": "Violet",
+      "swing": "team",
+      "for_groups": [
+        "jm-callahan",
+        "jm-fernandina",
+        "jm-northside",
+        "jm-op"
+      ],
+      "angle": "Comment helpful first. Soft invite: farm morning / rainy-day animals. AM voice. Review-gated first visit OK per guerrilla playbook.",
+      "convert": "Ticket or text GOAT \u00b7 review at gate \u00b7 Gold"
+    },
+    {
+      "id": "op-mobile-bday",
+      "title": "Working-mom mobile birthday DM/comment",
+      "gtm_lane": "Violet",
+      "swing": "team",
+      "for_groups": [
+        "jm-working",
+        "jm-op",
+        "jm-nocatee"
+      ],
+      "angle": "We come to you language. Helper can post with Goat [Name] SMS credit. After gig: ask host for Google review + FB tag.",
+      "convert": "Gig commission \u00b7 Google review \u00b7 FB tag \u00b7 next referral"
+    },
+    {
+      "id": "op-wahm-collab",
+      "title": "WAHM peer collab / shoutout",
+      "gtm_lane": "Sponsor",
+      "swing": "team",
+      "for_groups": [
+        "jm-wahms"
+      ],
+      "angle": "Peer story + mutual shoutout (Steadshout / Sponsor-lite). Farm guest visit \u2192 both leave Google reviews.",
+      "convert": "Cross-post \u00b7 review swap \u00b7 optional $25 named ticket sponsor"
+    },
+    {
+      "id": "op-calendar-dump",
+      "title": "Calendar dump every public farm morning",
+      "gtm_lane": "Violet",
+      "swing": "team",
+      "for_groups": [
+        "playground",
+        "nefhh"
+      ],
+      "angle": "Same flyer \u2192 Fun 4 First Coast Kids, Jacksonville Mom calendar, Action News Jax events@, News4JAX CitySpark, Folio. Free crawl = Violet demand.",
+      "convert": "Listings live \u00b7 inbound texts \u00b7 review after visit"
+    },
+    {
+      "id": "op-nche-host",
+      "title": "NCHE field-trip hosting (org path)",
+      "gtm_lane": "Subscription",
+      "swing": "founder",
+      "for_groups": [
+        "nche",
+        "wild-yulee"
+      ],
+      "angle": "Join org / participate; host required field trip at homestead. Founder-only until relationship exists.",
+      "convert": "Org trust \u00b7 booked families \u00b7 reviews"
+    },
+    {
+      "id": "op-sjm-spotlight",
+      "title": "St. Johns Moms paid spotlight (if budget)",
+      "gtm_lane": "Sponsor",
+      "swing": "founder",
+      "for_groups": [
+        "stjohns-moms",
+        "jax-moms-group"
+      ],
+      "angle": "Use published paid paths only. Same Sponsor compose language as BDR Sponsor lane.",
+      "convert": "Paid post \u00b7 tracked bookings \u00b7 review ask in follow-up"
+    },
+    {
+      "id": "op-guest-bartend",
+      "title": "Farm guest-bartend / brewery barter night",
+      "gtm_lane": "Sponsor",
+      "swing": "team",
+      "for_groups": [],
+      "angle": "From Partner SMB script: barter goat appearance \u2194 comps / family night. Team can pitch local same-audience SMBs (no invented brewery emails \u2014 use public contact forms). Convert includes Google/FB review + gig commission + farm time for helper.",
+      "convert": "Barter night booked \u00b7 Google/FB review \u00b7 helper commission/farm time \u00b7 shoutout"
+    }
+  ],
+  "cross_marketers": [
+    {
+      "id": "xm-fun4",
+      "name": "Fun 4 First Coast Kids",
+      "type": "kids calendar / page",
+      "why": "Free event listings \u2014 Duval/First Coast family crawl",
+      "link": "https://fun4firstcoastkids.com/calendar",
+      "path": "https://fun4firstcoastkids.com/add-camp-listing/",
+      "email": "",
+      "gtm_lane": "Violet",
+      "swing": "team",
+      "note": "Submit every public farm morning. No invented inbox.",
+      "sell": "Submit event + camp listing. After visits, ask guests to review Google (share.google link on site) + FB.",
+      "review_ask": true
+    },
+    {
+      "id": "xm-jaxmom",
+      "name": "Jacksonville Mom",
+      "type": "mom blog / network",
+      "why": "Guest essay + calendar + directory \u2014 #1 mommy collateral",
+      "link": "https://jacksonvillemom.com/",
+      "path": "https://jacksonvillemom.com/guest-blog-guidelines/",
+      "email": "info@jacksonvillemom.com",
+      "gtm_lane": "Violet",
+      "swing": "team",
+      "note": "AM guest essay (no sales). Calendar: jacksonvillemom.com/calendar-events/community/add. Paid ads separate.",
+      "sell": "Guest essay + event submit. Share JM post into groups. Review ask on farm visits from that traffic.",
+      "review_ask": true
+    },
+    {
+      "id": "xm-wildoak",
+      "name": "Wild Oak Explorers",
+      "type": "Nassau nature school",
+      "why": "Named on Who We Serve \u2014 Nassau partner path",
+      "link": "https://www.wildoakexplorers.com/",
+      "path": "https://www.wildoakexplorers.com/home-school-resources",
+      "email": "",
+      "gtm_lane": "Subscription",
+      "swing": "founder",
+      "note": "Founder Stacey Tappan (public). Relationship / field-trip collab \u2014 not cold spam.",
+      "sell": "Offer farm nature morning for their families. Ask for Google review after.",
+      "review_ask": true
+    },
+    {
+      "id": "xm-dnn",
+      "name": "DNN / Jacksonville Buzz",
+      "type": "house TV",
+      "why": "Already a rotation guest \u2014 reel factory for mom groups",
+      "link": "https://dailynewsnetwork.com/contact/request-an-interview/",
+      "path": "https://jacksonvillebuzz.com/show-info/",
+      "email": "",
+      "gtm_lane": "Sponsor",
+      "swing": "team",
+      "note": "Book Ask the Educator (AM) or Around Town. Share their post; ask viewers who visit to review.",
+      "sell": "Book next segment. Native-share clip into groups. Farm guests \u2192 Google review.",
+      "review_ask": true
+    },
+    {
+      "id": "xm-hipcamp",
+      "name": "Hipcamp (Sheehan listing)",
+      "type": "farm stay / discovery",
+      "why": "On-disk farm tour / stay discovery channel",
+      "link": "https://www.hipcamp.com/",
+      "path": "",
+      "email": "",
+      "gtm_lane": "Violet",
+      "swing": "team",
+      "note": "Public listing path. Don\u2019t invent listing URL if not on disk \u2014 use Hipcamp search for Sheehan Homestead. Reviews on Hipcamp + ask Google after stay.",
+      "sell": "Keep listing fresh. Message bookers: Google review after Visit Us.",
+      "review_ask": true
+    },
+    {
+      "id": "xm-momco",
+      "name": "MomCo Social Yulee",
+      "type": "Nassau mom community",
+      "why": "Directory: seeking local business community partners/sponsors",
+      "link": "https://www.themom.co/home",
+      "path": "",
+      "email": "",
+      "gtm_lane": "Sponsor",
+      "swing": "team",
+      "note": "Search MomCo Social Yulee / page id mentioned in jax-mom report. Tiny but wants partners.",
+      "sell": "Sponsor / host / speak. Guests review Google after farm morning.",
+      "review_ask": true
+    },
+    {
+      "id": "xm-nassau-chamber",
+      "name": "Nassau County FL Chamber",
+      "type": "chamber",
+      "why": "Hometown proof for Callahan events",
+      "link": "https://www.nassaucountyflchamber.com/",
+      "path": "",
+      "email": "info@NassauCountyFLChamber.com",
+      "gtm_lane": "Sponsor",
+      "swing": "team",
+      "note": "Email from chamber FAQ on disk (jax-free-local-media). Member events via Info Hub.",
+      "sell": "Submit events / member news. Ask attendees for Google review.",
+      "review_ask": true
+    },
+    {
+      "id": "xm-f4clay",
+      "name": "Fun 4 Clay Kids",
+      "type": "Clay kids calendar",
+      "why": "Clay family crawl \u2014 bowls/homeschool posts historically",
+      "link": "https://fun4claykids.com/",
+      "path": "",
+      "email": "",
+      "gtm_lane": "Violet",
+      "swing": "team",
+      "note": "Public calendar path. Submit Clay-relevant farm/mobile days.",
+      "sell": "Event listing. Review ask after bookings from Clay.",
+      "review_ask": true
+    },
+    {
+      "id": "xm-sjm",
+      "name": "St. Johns Moms (media)",
+      "type": "paid mom media",
+      "why": "Paid spotlight / partnerships \u2014 Sponsor GTM",
+      "link": "https://www.stjohnsmoms.com/advertise",
+      "path": "https://www.stjohnsmoms.com/advertise",
+      "email": "",
+      "gtm_lane": "Sponsor",
+      "swing": "founder",
+      "note": "Founder decides budget. Spotlight $150 published.",
+      "sell": "If bought: track bookings; every close gets review ask.",
+      "review_ask": true
+    },
+    {
+      "id": "xm-partner-smb",
+      "name": "Same-audience SMB / brewery barter (generic)",
+      "type": "cross-promo",
+      "why": "Partner SMB seat script \u2014 breweries/boutiques/Steadshout",
+      "link": "",
+      "path": "",
+      "email": "",
+      "gtm_lane": "Sponsor",
+      "swing": "team",
+      "note": "No invented brewery names or emails. Team uses public contact forms. Barter goat night \u2194 comps.",
+      "sell": "Pitch shoutout / $25 named ticket / barter night. Convert: Google/FB review + gig commission + farm time.",
+      "review_ask": true
+    },
+    {
+      "id": "xm-ymca",
+      "name": "YMCA (named client)",
+      "type": "enterprise / org",
+      "why": "Named on Who We Serve",
+      "link": "",
+      "path": "",
+      "email": "",
+      "gtm_lane": "Big Enterprise",
+      "swing": "founder",
+      "note": "Named client \u2014 founder/AM relationship. Not a cold FB group.",
+      "sell": "Renew / expand visit. Ask program lead for Google review after successful visit.",
+      "review_ask": true
+    },
+    {
+      "id": "xm-oxford",
+      "name": "Oxford Prep (named client)",
+      "type": "school",
+      "why": "Named on Who We Serve",
+      "link": "",
+      "path": "",
+      "email": "",
+      "gtm_lane": "Subscription",
+      "swing": "founder",
+      "note": "Named client \u2014 founder path for rebook.",
+      "sell": "Rebook field trip. Review from campus after.",
+      "review_ask": true
+    },
+    {
+      "id": "xm-aim",
+      "name": "Amelia Island Montessori (named client)",
+      "type": "school",
+      "why": "Named on Who We Serve",
+      "link": "",
+      "path": "",
+      "email": "",
+      "gtm_lane": "Subscription",
+      "swing": "founder",
+      "note": "Named client.",
+      "sell": "Rebook. Review ask.",
+      "review_ask": true
+    }
+  ],
+  "localStorage_keys": {
+    "done": "sheehan_easy_attack_done_v1",
+    "notes": "sheehan_easy_attack_notes_v1"
+  }
+}

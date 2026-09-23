@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Easy shit to attack · Sell · Sheehan Homestead</title>
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--bad:#ff5d6c;--violet:#a78bfa}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1100px;margin:0 auto;padding:16px}
+.apps{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 12px;padding:10px 12px;border:1px solid var(--line);border-radius:14px;background:#0f1728}
+.apps .lbl{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.apps a{background:var(--card);border:1px solid #3dd68c55;color:var(--text);padding:6px 10px;border-radius:999px;font-size:.78rem;text-decoration:none;font-weight:600}
+.apps a.sec{border-color:var(--line);color:#c5d0e6;font-weight:500;font-size:.72rem}
+header{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:10px}
+h1{font-size:1.28rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font-size:.84rem}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-bottom:14px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;position:relative;overflow:hidden}
+.kpi::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:linear-gradient(90deg,var(--warn),var(--accent));opacity:.55}
+.kpi .l{font-size:.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.kpi .v{font-size:1.2rem;font-weight:700;margin-top:3px}
+.kpi .s{font-size:.68rem;color:var(--muted);margin-top:2px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+.tabs button{appearance:none;border:1px solid var(--line);background:var(--panel);color:var(--muted);padding:10px 14px;border-radius:999px;font-size:.78rem;font-weight:700;cursor:pointer;min-height:44px}
+.tabs button.on{border-color:var(--warn);background:#2a2416;color:var(--warn)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:12px}
+.card h2{font-size:.95rem;margin:0 0 8px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between}
+.note{color:var(--muted);font-size:.76rem}
+.gapbox{border:1px solid #ffb02066;background:#2a2416;border-radius:12px;padding:12px;margin-bottom:12px}
+.gapbox b{color:var(--warn)}
+.row{border:1px solid var(--line);border-radius:12px;padding:12px;margin:0 0 10px;background:var(--panel)}
+.row.done{opacity:.62}
+.row h3{margin:0 0 6px;font-size:.92rem}
+.meta{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0}
+.badge{display:inline-block;padding:3px 8px;border-radius:999px;font-size:.68rem;border:1px solid var(--line);font-weight:600}
+.badge.swing{background:#13281d;color:var(--good);border-color:#3dd68c88}
+.badge.founder{background:#2a1619;color:#ff9aa5;border-color:#ff5d6c66}
+.badge.lane{background:#152238;color:#9ec1ff;border-color:#5b8cff55}
+.badge.vio{background:#1a1530;color:#d4c4ff;border-color:#a78bfa66}
+.badge.sp{background:#2a2416;color:var(--warn);border-color:#ffb02066}
+.badge.sub{background:#13281d;color:var(--good);border-color:#3dd68c55}
+.badge.ent{background:#152238;color:#9ec1ff;border-color:#5b8cff88}
+.badge.fit{background:#0e1626;color:#c5d0e6}
+.badge.rev{background:#1a1530;color:#d4c4ff;border-color:#a78bfa66}
+.angle{font-size:.82rem;margin:6px 0;color:var(--text)}
+.convert{font-size:.76rem;color:var(--muted);margin:4px 0 8px}
+.actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+button.btn,a.btn{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:8px 12px;border-radius:999px;background:#152238;border:1px solid #5b8cff88;color:#fff;font-weight:700;font-size:.74rem;text-decoration:none;cursor:pointer;font-family:inherit}
+button.btn.tick{border-color:var(--line);background:var(--card);color:var(--muted)}
+button.btn.tick.on{border-color:#3dd68c88;background:#13281d;color:var(--good)}
+button.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
+.notes{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
+.notes input{flex:1;min-width:140px;min-height:40px;padding:8px 10px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--text);font-size:.78rem}
+.notes .saved{font-size:.68rem;color:var(--good);opacity:0}.notes .saved.show{opacity:1}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 10px}
+.filters select,.filters input{background:var(--card);border:1px solid var(--line);color:var(--text);border-radius:8px;padding:8px 10px;font-size:.78rem;min-height:40px}
+.filters input{flex:1;min-width:140px}
+.section{display:none}.section.on{display:block}
+.size{font-size:.78rem;color:var(--muted)}
+.size b{color:var(--text)}
+@media(max-width:700px){.wrap{padding:12px}h1{font-size:1.15rem}}
+</style>
+</head>
+<body data-flow-face="sales" data-flow-chip="easy-attack"><div class="wrap">
+
+<div class="apps">
+  <span class="lbl">Apps</span>
+  <a href="https://onchainoffgrid-hub.github.io/critters-on-call/" target="_blank" rel="noopener">Critters <span style="color:#3dd68c;font-size:.65rem">LIVE</span></a>
+  <a href="https://onchainoffgrid-hub.github.io/critters-play/" target="_blank" rel="noopener" style="border-color:#a78bfa66">Play / Coins</a>
+  <a href="index.html" style="border-color:#5b8cff66">Dashboards</a>
+  <a href="link-tree.html" class="sec">All links</a>
+</div>
+
+<header>
+  <div>
+    <h1>Easy shit to attack</h1>
+    <div class="sub">Sell subchip · same GTM as BDR (Violet · Subscription · Sponsor · Big Enterprise) · team-swingable vs founder-only · review ask on convert · <span id="asof">—</span></div>
+  </div>
+  <div class="sub">Text <b>GOAT</b> → <a href="tel:9142631311">914-263-1311</a></div>
+</header>
+
+<div class="kpis">
+  <div class="kpi"><div class="l">FB groups</div><div class="v" id="k-g">—</div><div class="s">disk-sourced</div></div>
+  <div class="kpi"><div class="l">Social ops</div><div class="v" id="k-o">—</div><div class="s">concrete angles</div></div>
+  <div class="kpi"><div class="l">Cross-marketers</div><div class="v" id="k-x">—</div><div class="s">public pages only</div></div>
+  <div class="kpi"><div class="l">Team-swingable</div><div class="v" id="k-t">—</div><div class="s">open items</div></div>
+  <div class="kpi"><div class="l">Calendar</div><div class="v" id="k-c">GAP</div><div class="s" id="k-c-s">connect needed</div></div>
+  <div class="kpi"><div class="l">Done</div><div class="v" id="k-d">0</div><div class="s">local only</div></div>
+</div>
+
+<div class="tabs" id="tabs">
+  <button type="button" class="on" data-tab="groups">FB groups</button>
+  <button type="button" data-tab="ops">Social sell</button>
+  <button type="button" data-tab="cross">Cross-marketers</button>
+  <button type="button" data-tab="cal">Open calendar</button>
+</div>
+
+<div class="filters">
+  <input id="q" type="search" placeholder="Filter name / lane / fit…" aria-label="Filter"/>
+  <select id="f-swing"><option value="">Swing: all</option><option value="team">Team-swingable</option><option value="founder">Founder-only</option></select>
+  <select id="f-lane"><option value="">GTM lane: all</option><option>Violet</option><option>Subscription</option><option>Sponsor</option><option>Big Enterprise</option></select>
+  <select id="f-done"><option value="">Done: all</option><option value="open">Open</option><option value="done">Done</option></select>
+</div>
+
+<div id="sec-groups" class="section on"></div>
+<div id="sec-ops" class="section"></div>
+<div id="sec-cross" class="section"></div>
+<div id="sec-cal" class="section"></div>
+
+<p class="note" id="src-note" style="margin-top:16px">Loading…</p>
+</div>
+
+<script>
+(function(){
+  var DATA=null, TAB='groups';
+  var K_DONE='sheehan_easy_attack_done_v1', K_NOTES='sheehan_easy_attack_notes_v1';
+  var DONE={}, NOTES={};
+  function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];}); }
+  function load(k){ try{return JSON.parse(localStorage.getItem(k)||'{}')||{};}catch(e){return {};} }
+  function save(k,v){ try{localStorage.setItem(k,JSON.stringify(v));}catch(e){} }
+  function laneBadge(lane){
+    var cls='lane';
+    if(lane==='Violet') cls='vio';
+    else if(lane==='Sponsor') cls='sp';
+    else if(lane==='Subscription') cls='sub';
+    else if(lane==='Big Enterprise') cls='ent';
+    return '<span class="badge '+cls+'">'+esc(lane||'—')+'</span>';
+  }
+  function swingBadge(s){
+    if(s==='team') return '<span class="badge swing">team-swingable</span>';
+    return '<span class="badge founder">founder-only</span>';
+  }
+  function filters(){
+    return {
+      q:(document.getElementById('q').value||'').trim().toLowerCase(),
+      swing:document.getElementById('f-swing').value,
+      lane:document.getElementById('f-lane').value,
+      done:document.getElementById('f-done').value
+    };
+  }
+  function pass(item, f, hay){
+    if(f.swing && item.swing!==f.swing) return false;
+    if(f.lane && item.gtm_lane!==f.lane) return false;
+    var id=item.id;
+    var isDone=!!DONE[id];
+    if(f.done==='open' && isDone) return false;
+    if(f.done==='done' && !isDone) return false;
+    if(f.q && hay.indexOf(f.q)<0) return false;
+    return true;
+  }
+  function notesUI(id){
+    return '<div class="notes"><input type="text" data-note="'+esc(id)+'" placeholder="Notes (local)…" value="'+esc(NOTES[id]||'')+'"/><button type="button" class="btn sec" data-save="'+esc(id)+'">Save</button><span class="saved" data-saved="'+esc(id)+'">saved</span></div>';
+  }
+  function doneBtn(id){
+    var on=DONE[id]?' on':'';
+    return '<button type="button" class="btn tick'+on+'" data-done="'+esc(id)+">'+(DONE[id]?'✓ Done':'Mark done')+'</button>';
+  }
+  function linkBtn(url,label){
+    if(!url) return '';
+    return '<a class="btn" href="'+esc(url)+'" target="_blank" rel="noopener">'+esc(label||'Open')+'</a>';
+  }
+  function renderGroups(){
+    var f=filters(), list=(DATA.groups||[]).filter(function(g){
+      var hay=[g.name,g.why,g.sell_angle,g.gtm_lane,(g.fit||[]).join(' '),(g.tags||[]).join(' '),g.notes].join(' ').toLowerCase();
+      return pass(g,f,hay);
+    });
+    var html='<div class="card"><h2>Break down the big FB groups <span class="note">'+list.length+' shown · sizes unknown unless disk-published</span></h2>';
+    html+=list.map(function(g){
+      var fits=(g.fit||[]).map(function(t){return '<span class="badge fit">'+esc(t)+'</span>';}).join('');
+      return '<div class="row'+(DONE[g.id]?' done':'')+'" data-id="'+esc(g.id)+'">'+
+        '<h3>'+esc(g.name)+'</h3>'+
+        '<div class="meta">'+swingBadge(g.swing)+laneBadge(g.gtm_lane)+fits+
+          (g.who?'<span class="badge fit">who: '+esc(g.who)+'</span>':'')+
+        '</div>'+
+        '<div class="size">Approx size: <b>'+esc(g.size)+'</b>'+(g.size_note?' · '+esc(g.size_note):'')+'</div>'+
+        '<div class="angle"><b>Why it matters:</b> '+esc(g.why)+'</div>'+
+        '<div class="angle"><b>Social sell:</b> '+esc(g.sell_angle)+'</div>'+
+        (g.notes?'<div class="convert">'+esc(g.notes)+'</div>':'')+
+        '<div class="actions">'+doneBtn(g.id)+linkBtn(g.link,'Open group')+
+          (DATA.google_review_link?linkBtn(DATA.google_review_link,'Google review link'):'')+
+        '</div>'+notesUI(g.id)+
+      '</div>';
+    }).join('')||'<p class="note">No groups match filters.</p>';
+    html+='</div>';
+    document.getElementById('sec-groups').innerHTML=html;
+  }
+  function renderOps(){
+    var f=filters(), list=(DATA.social_ops||[]).filter(function(o){
+      var hay=[o.title,o.angle,o.convert,o.gtm_lane,(o.for_groups||[]).join(' ')].join(' ').toLowerCase();
+      return pass(o,f,hay);
+    });
+    var html='<div class="card"><h2>Opps to social sell <span class="note">same GTM lanes as BDR · review on convert</span></h2>';
+    html+=list.map(function(o){
+      return '<div class="row'+(DONE[o.id]?' done':'')+'">'+
+        '<h3>'+esc(o.title)+'</h3>'+
+        '<div class="meta">'+swingBadge(o.swing)+laneBadge(o.gtm_lane)+
+          '<span class="badge rev">review ask</span></div>'+
+        '<div class="angle">'+esc(o.angle)+'</div>'+
+        '<div class="convert"><b>Convert:</b> '+esc(o.convert)+'</div>'+
+        '<div class="actions">'+doneBtn(o.id)+
+          (DATA.google_review_link?linkBtn(DATA.google_review_link,'Google review link'):'')+
+        '</div>'+notesUI(o.id)+
+      '</div>';
+    }).join('')||'<p class="note">No ops match.</p>';
+    html+='</div>';
+    document.getElementById('sec-ops').innerHTML=html;
+  }
+  function renderCross(){
+    var f=filters(), list=(DATA.cross_marketers||[]).filter(function(x){
+      var hay=[x.name,x.type,x.why,x.sell,x.gtm_lane,x.note].join(' ').toLowerCase();
+      return pass(x,f,hay);
+    });
+    var html='<div class="card"><h2>Obvious great cross-marketers <span class="note">public pages · no invented emails</span></h2>';
+    html+=list.map(function(x){
+      var mail=x.email?'<a class="btn" href="mailto:'+esc(x.email)+'">'+esc(x.email)+'</a>':'';
+      return '<div class="row'+(DONE[x.id]?' done':'')+'">'+
+        '<h3>'+esc(x.name)+'</h3>'+
+        '<div class="meta">'+swingBadge(x.swing)+laneBadge(x.gtm_lane)+
+          '<span class="badge fit">'+esc(x.type)+'</span>'+
+          (x.review_ask?'<span class="badge rev">+ Google/FB review</span>':'')+
+        '</div>'+
+        '<div class="angle"><b>Why:</b> '+esc(x.why)+'</div>'+
+        '<div class="angle"><b>Attack:</b> '+esc(x.sell)+'</div>'+
+        (x.note?'<div class="convert">'+esc(x.note)+'</div>':'')+
+        '<div class="actions">'+doneBtn(x.id)+linkBtn(x.link||x.path,'Open page')+mail+
+          (DATA.google_review_link?linkBtn(DATA.google_review_link,'Google review link'):'')+
+        '</div>'+notesUI(x.id)+
+      '</div>';
+    }).join('')||'<p class="note">No partners match.</p>';
+    html+='</div>';
+    document.getElementById('sec-cross').innerHTML=html;
+  }
+  function renderCal(){
+    var c=DATA.calendar||{};
+    var html='';
+    if(c.status==='connect_gap'){
+      html+='<div class="gapbox"><b>Connect calendar</b> — '+esc(c.reason||'Calendar not connected.')+
+        '<div class="note" style="margin-top:8px">'+esc(c.howto||'')+'</div>'+
+        '<div class="note">'+esc(c.snapshot_note||'')+'</div>'+
+        '<div class="actions" style="margin-top:10px">'+
+          '<a class="btn" href="bookings-dates.html">Open Bookings (Run)</a>'+
+          '<a class="btn sec" href="https://calendar.google.com/" target="_blank" rel="noopener">Google Calendar</a>'+
+        '</div></div>';
+    } else {
+      html+='<div class="card"><h2>Open / lightly booked days</h2><p class="note">Live from Google Calendar.</p></div>';
+    }
+    html+='<div class="card"><h2>When calendar is live</h2>'+
+      '<p class="note">Show next 2–4 weeks of open / lightly booked days. Team-swingable: book a Mommy &amp; Me, review hour, or social push into those gaps (Violet / Subscription). Founder-only: NCHE / named-client rebooks on scarce days.</p>'+
+      '<p class="note">Convert on every farm visit: booking · <b>Google/FB review ask</b> · Gold/VIP · text GOAT. No invented free days or review counts.</p>'+
+      (DATA.google_review_link?'<p class="note">Review link on file: <a href="'+esc(DATA.google_review_link)+'" target="_blank" rel="noopener">'+esc(DATA.google_review_link)+'</a> — '+esc(DATA.google_review_note||'')+'</p>':'')+
+    '</div>';
+    document.getElementById('sec-cal').innerHTML=html;
+  }
+  function setKpis(){
+    if(!DATA) return;
+    document.getElementById('k-g').textContent=(DATA.groups||[]).length;
+    document.getElementById('k-o').textContent=(DATA.social_ops||[]).length;
+    document.getElementById('k-x').textContent=(DATA.cross_marketers||[]).length;
+    var all=[].concat(DATA.groups||[],DATA.social_ops||[],DATA.cross_marketers||[]);
+    var teamOpen=all.filter(function(x){return x.swing==='team' && !DONE[x.id];}).length;
+    document.getElementById('k-t').textContent=teamOpen;
+    var dn=Object.keys(DONE).filter(function(k){return DONE[k];}).length;
+    document.getElementById('k-d').textContent=dn;
+    var c=DATA.calendar||{};
+    if(c.status==='connect_gap'){ document.getElementById('k-c').textContent='GAP'; document.getElementById('k-c-s').textContent='connect calendar'; }
+    else { document.getElementById('k-c').textContent='LIVE'; document.getElementById('k-c-s').textContent=c.window||''; }
+  }
+  function draw(){
+    document.getElementById('sec-groups').className='section'+(TAB==='groups'?' on':'');
+    document.getElementById('sec-ops').className='section'+(TAB==='ops'?' on':'');
+    document.getElementById('sec-cross').className='section'+(TAB==='cross'?' on':'');
+    document.getElementById('sec-cal').className='section'+(TAB==='cal'?' on':'');
+    if(TAB==='groups') renderGroups();
+    if(TAB==='ops') renderOps();
+    if(TAB==='cross') renderCross();
+    if(TAB==='cal') renderCal();
+    setKpis();
+    bind();
+  }
+  function bind(){
+    document.querySelectorAll('[data-done]').forEach(function(b){
+      b.onclick=function(){
+        var id=b.getAttribute('data-done');
+        DONE[id]=!DONE[id];
+        save(K_DONE,DONE);
+        draw();
+      };
+    });
+    document.querySelectorAll('[data-save]').forEach(function(b){
+      b.onclick=function(){
+        var id=b.getAttribute('data-save');
+        var inp=document.querySelector('input[data-note="'+id+'"]');
+        NOTES[id]=inp?inp.value:'';
+        save(K_NOTES,NOTES);
+        var s=document.querySelector('[data-saved="'+id+'"]');
+        if(s){ s.classList.add('show'); setTimeout(function(){s.classList.remove('show');},900); }
+      };
+    });
+  }
+  document.getElementById('tabs').onclick=function(e){
+    var b=e.target.closest('button[data-tab]'); if(!b) return;
+    TAB=b.getAttribute('data-tab');
+    document.querySelectorAll('#tabs button').forEach(function(x){x.classList.toggle('on',x===b);});
+    draw();
+  };
+  ['q','f-swing','f-lane','f-done'].forEach(function(id){
+    document.getElementById(id).addEventListener('input',draw);
+    document.getElementById(id).addEventListener('change',draw);
+  });
+  async function boot(){
+    try{
+      var res=await fetch('data/easy_attack.json',{cache:'no-store'});
+      DATA=await res.json();
+      if(DATA.localStorage_keys){
+        K_DONE=DATA.localStorage_keys.done||K_DONE;
+        K_NOTES=DATA.localStorage_keys.notes||K_NOTES;
+      }
+      DONE=load(K_DONE); NOTES=load(K_NOTES);
+      document.getElementById('asof').textContent=DATA.as_of||'';
+      document.getElementById('src-note').textContent=
+        'Data: data/easy_attack.json · '+(DATA.rule||'')+' · Sources: '+(DATA.sources||[]).join(', ');
+      draw();
+    }catch(e){
+      document.getElementById('src-note').textContent='Load failed: '+e;
+    }
+  }
+  boot();
+})();
+</script>
+<script src="shared/flow-spine.js" defer></script>
+</body></html>
