@@ -1,0 +1,39 @@
+{
+  "as_of": "2026-09-23 16:38 ET",
+  "brand": "Sheehan Homestead / Critters on Call",
+  "rule": "Named truth from Michael. Do not invent emails. Do not fake Tasia referral onto other Brookdales.",
+  "overrides": [
+    {
+      "id": "brookdale_southpoint_tasia",
+      "match": {
+        "org_equals_ci": "Brookdale Southpoint"
+      },
+      "source_label": "customer_referral",
+      "referrer": {
+        "name": "Tasia",
+        "full_name": "Tasia Felix",
+        "org": "Discovery",
+        "role": "Director of Celebrations"
+      },
+      "notes_prepend": "REFERRAL from Tasia (Tasia Felix / Discovery) — Michael voice dump. NOT cold.",
+      "flag_hint": "warm_referral",
+      "not_cold": true
+    },
+    {
+      "id": "patricia_valenzuela_150",
+      "match": {
+        "email_in": [
+          "pvalenzuela@discoverymanagementgroup.com",
+          "pvalenzuela@discoveryvillages.com"
+        ]
+      },
+      "source_label": "customer",
+      "display_name": "Patricia Valenzuela",
+      "title": "Director of Celebrations",
+      "lifecycle": "Customer",
+      "views_force": ["customers"],
+      "notes_prepend": "CUSTOMER · Michael believes $150 visit sold. Only Patricia in CRM (Discovery). Confirm if another Patricia appears. Do not invent email.",
+      "sub_source": "prior"
+    }
+  ]
+}

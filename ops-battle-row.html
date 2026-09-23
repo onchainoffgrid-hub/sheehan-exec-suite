@@ -23,7 +23,7 @@ h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font
 .nav a.active{border-color:var(--accent);background:#152238;color:#fff}
 .tagline{margin:0 0 16px;padding:14px 16px;border:1px solid #fbbf2466;border-radius:14px;background:linear-gradient(135deg,#2a2210,#121a2b);font-size:.95rem;font-weight:600;color:#fde68a}
 .tagline span{color:var(--muted);font-weight:500;font-size:.72rem;display:block;margin-bottom:4px;text-transform:uppercase;letter-spacing:.06em}
-.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:11px;margin-bottom:16px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:11px;margin-bottom:16px}
 .kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px;position:relative;overflow:hidden}
 .kpi::after{content:"";position:absolute;inset:auto 0 0 0;height:2px;background:linear-gradient(90deg,var(--joy),var(--accent));opacity:.55}
 .kpi .l{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
@@ -31,11 +31,14 @@ h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font
 .kpi .s{font-size:.72rem;color:var(--muted);margin-top:3px}
 .dept-label{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin:18px 0 10px}
 .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
-.pen{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px;display:flex;flex-direction:column;gap:6px}
-.pen.active{border-color:#3dd68c55}
-.pen h3{margin:0;font-size:.95rem;display:flex;flex-wrap:wrap;align-items:center;gap:6px}
-.pen .kind{color:var(--muted);font-size:.78rem;margin:0}
-.pen .note{color:#c5d0e6;font-size:.78rem;margin:0}
+.pen,.asset{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px;display:flex;flex-direction:column;gap:6px}
+.pen.active,.asset.on{border-color:#3dd68c55}
+.asset.surplus{border-color:#ffb02066}
+.asset.grow{border-color:#3dd68c88}
+.asset.parked{border-color:#a78bfa44;opacity:.9}
+.pen h3,.asset h3{margin:0;font-size:.95rem;display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.pen .kind,.asset .kind{color:var(--muted);font-size:.78rem;margin:0}
+.pen .note,.asset .note{color:#c5d0e6;font-size:.78rem;margin:0}
 .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:14px}
 .card h2{font-size:1rem;margin:0 0 10px;display:flex;flex-wrap:wrap;align-items:center;gap:8px}
 .card p{margin:0 0 8px;color:#c5d0e6;font-size:.85rem}
@@ -43,7 +46,6 @@ h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font
 .ask{margin-top:10px;padding:12px 14px;border:1px solid #a78bfa55;border-radius:12px;background:#16141f;font-size:.82rem;color:#d4c4ff}
 .ask b{color:var(--violet)}
 .upsell{margin-top:10px;padding:12px 14px;border:1px solid #f0abfc66;border-radius:12px;background:#2a1530;font-size:.85rem;color:#f5d0fe}
-.upsell b{color:#f0abfc}
 .cap{margin-top:8px;padding:10px 12px;border:1px dashed #ffb02055;border-radius:10px;background:#16140f;font-size:.78rem;color:var(--warn)}
 .roster{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
 .seat{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px}
@@ -57,9 +59,10 @@ h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font
 .badge.vacant{background:#1a1f2e;color:var(--violet);border-color:#a78bfa55}
 .badge.warn{background:#2a2416;color:var(--warn);border-color:#ffb02066}
 .badge.stem{background:#1a1f2e;color:var(--violet);border-color:#a78bfa55}
+.badge.tbd{background:#2a2416;color:var(--warn);border-color:#ffb02066}
+.badge.parked{background:#1a1f2e;color:var(--violet);border-color:#a78bfa55}
 .links-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
 .links-row a{font-size:.72rem;padding:3px 9px;border-radius:999px;border:1px solid var(--line);background:#0e1626;color:#c5d0e6;text-decoration:none}
-.links-row a:hover{border-color:var(--accent);color:#fff}
 .truth{margin-top:16px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--panel);font-size:.8rem;color:var(--muted)}
 .truth b{color:var(--text)}
 .note-foot{color:var(--muted);font-size:.78rem;margin-top:22px}
@@ -70,6 +73,7 @@ h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font
 .franchise-strip a{font-size:.78rem;font-weight:700;color:var(--good);margin-right:12px}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 @media(max-width:900px){.grid2{grid-template-columns:1fr}}
+ul.clean{margin:8px 0 0;padding-left:18px;color:#c5d0e6;font-size:.82rem}
 </style></head>
 <body data-flow-face="ops" data-flow-chip="battle-row"><div class="wrap">
 
@@ -77,10 +81,10 @@ h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font
   <span class="lbl">Apps</span>
   <a class="money" href="one-touch.html">One-touch · money</a>
   <a href="rvp-ops.html">RVP Ops</a>
+  <a href="lead-sources.html">Lead sources</a>
   <a href="gtm-seats.html" style="border-color:#a78bfa66">GTM seats</a>
   <a href="https://onchainoffgrid-hub.github.io/critters-on-call/" target="_blank" rel="noopener">Critters <span style="color:#3dd68c;font-size:.65rem">LIVE</span></a>
   <a href="index.html" class="sec">Layer Zero hub</a>
-  <a href="link-tree.html" class="sec">All links</a>
 </div>
 
 <div class="cascade" aria-label="RVP ops cascade">
@@ -105,20 +109,17 @@ h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font
 <div class="nav">
   <a href="rvp-ops.html">RVP Ops</a>
   <a href="ops-battle-row.html" class="active">Battle Row</a>
+  <a href="lead-sources.html">Lead sources</a>
   <a href="gtm-seats.html" style="border-color:#a78bfa88;color:#c4b5fd">GTM seats</a>
   <a href="ann-marie-ops.html">Ann-Marie</a>
-  <a href="bookings-dates.html">Bookings</a>
-  <a href="programming.html">Programs</a>
-  <a href="team-hire.html">Team</a>
   <a href="one-touch.html" style="border-color:#a855f788;color:#f0abfc;font-weight:700">One-touch</a>
 </div>
-
 
 <div class="franchise-strip" id="why-franchisable">
   <div class="lbl">Franchise proof pillar · Battle Row</div>
   <p class="thesis">Physical ops = proof of franchisable system. Ops know-how is what Michael sells to investors &amp; franchisees.</p>
-  <p class="edge">Jax edge: farm ≈15 minutes from downtown · Pillar 7 of 7 (GTM · reporting · team · fences/care · risk · segmentation · Battle Row).</p>
-  <a href="rvp-ops.html#why-franchisable">→ Why franchisable (full strip)</a>
+  <p class="edge">Jax edge: farm ≈15 minutes from downtown · Current counts only — no death/trade ledger · no invented $.</p>
+  <a href="rvp-ops.html#why-franchisable">→ Why franchisable</a>
   <a href="investor-checklist.html">→ Investor checklist</a>
 </div>
 
@@ -126,97 +127,164 @@ h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font
 
 <div class="kpis">
   <div class="kpi"><div class="l">Active pens</div><div class="v" id="k-pens">5</div><div class="s">Battle Row enclosures</div></div>
-  <div class="kpi"><div class="l">Exhibits</div><div class="v" id="k-ex">1</div><div class="s">Hay frame · Ann-Marie</div></div>
-  <div class="kpi"><div class="l">Yoga tents</div><div class="v">On hand</div><div class="s">Covered runs possible</div></div>
-  <div class="kpi"><div class="l">Instructors named</div><div class="v" id="k-inst">2</div><div class="s">Angie · Emmy</div></div>
-  <div class="kpi"><div class="l">Instructor seats</div><div class="v" id="k-vac">2+</div><div class="s">vacant — need more</div></div>
+  <div class="kpi"><div class="l">Bunnies</div><div class="v" id="k-bunnies">20</div><div class="s">was 14 · need more for events</div></div>
+  <div class="kpi"><div class="l">Ducks</div><div class="v" id="k-ducks">12</div><div class="s">surplus · trading down</div></div>
+  <div class="kpi"><div class="l">Feed cost</div><div class="v">TBD</div><div class="s">unknown — no fake $</div></div>
+  <div class="kpi"><div class="l">Yoga tents</div><div class="v">On hand</div><div class="s">covered + netting tents</div></div>
+  <div class="kpi"><div class="l">Instructors</div><div class="v" id="k-inst">2</div><div class="s">Angie · Emmy</div></div>
 </div>
 
-<div class="dept-label">Enclosures · Battle Row (5 active)</div>
-<div class="tiles" id="pens">
-  <div class="pen active"><h3>1 · Petting-zoo chickens <span class="badge active">ACTIVE</span></h3><p class="kind">Chickens</p><p class="note">No headcount claimed</p></div>
-  <div class="pen active"><h3>2 · Petting-zoo chickens <span class="badge active">ACTIVE</span></h3><p class="kind">Chickens</p><p class="note">No headcount claimed</p></div>
-  <div class="pen active"><h3>3 · Half chicken / half bunny <span class="badge active">ACTIVE</span></h3><p class="kind">Mixed</p><p class="note">Split pen</p></div>
-  <div class="pen active"><h3>4 · Full bunny <span class="badge active">ACTIVE</span></h3><p class="kind">Bunny</p><p class="note">No headcount claimed</p></div>
-  <div class="pen active"><h3>5 · Junior-high birds <span class="badge active">ACTIVE</span></h3><p class="kind">Birds</p><p class="note">No headcount claimed</p></div>
+<div class="dept-label">Animal well-being · headcounts (2026-09-23)</div>
+<div class="tiles" id="animals">
+  <div class="asset grow"><h3>Bunnies <span class="badge active">20</span></h3><p class="kind">Was 14 · trading ducks→bunnies</p><p class="note">Needs more bunnies for events</p></div>
+  <div class="asset surplus"><h3>Ducks <span class="badge warn">12</span></h3><p class="kind">Too many · trading down</p><p class="note">Duck surplus</p></div>
 </div>
 
-<div class="dept-label">Exhibits / STEM ask</div>
-<div class="card" id="exhibit-card">
-  <h2>Hay frame <span class="badge stem">STEM</span> <span class="badge active">BUILT</span></h2>
-  <p>Cool exhibit built by <b>Ann-Marie</b>.</p>
-  <div class="ask"><b>STEM ask:</b> Ann-Marie films what she built (private) → drop into homeschool content.</div>
-  <div class="links-row">
-    <a href="ann-marie-ops.html" style="border-color:#a78bfa88;color:#c4b5fd">Ann-Marie ops</a>
-    <a href="programming.html">Programs / education</a>
+<div class="dept-label">Feed / systems</div>
+<div class="card" id="feed-card">
+  <h2>Weekly ops <span class="badge tbd">COST UNKNOWN</span></h2>
+  <ul class="clean" id="feed-list">
+    <li>Weekly feed run</li>
+    <li>Hay + greens</li>
+    <li>Hydroponic system</li>
+  </ul>
+  <div class="cap"><b>Cost:</b> unknown / TBD — do not invent dollars.</div>
+</div>
+
+<div class="dept-label">Enclosures · Battle Row (5 active) + A-frame</div>
+<div class="tiles" id="pens"></div>
+
+<div class="dept-label">Exhibits / STEM</div>
+<div class="tiles" id="exhibits"></div>
+
+<div class="dept-label">Assets · built environment</div>
+<div class="grid2">
+  <div class="card">
+    <h2>Structures</h2>
+    <ul class="clean" id="structures"></ul>
+  </div>
+  <div class="card">
+    <h2>Tents</h2>
+    <ul class="clean" id="tents"></ul>
+  </div>
+</div>
+<div class="grid2">
+  <div class="card">
+    <h2>Corrals</h2>
+    <ul class="clean" id="corrals"></ul>
+  </div>
+  <div class="card">
+    <h2>Equipment / vehicles</h2>
+    <ul class="clean" id="equip"></ul>
   </div>
 </div>
 
-<div class="dept-label">Goat yoga / tents</div>
+<div class="dept-label">Goat yoga / covered</div>
 <div class="grid2">
   <div class="card">
     <h2>Covered yoga <span class="badge active">TENTS ON HAND</span></h2>
-    <p>Tents now on hand → can run covered. Optional mosquito netting available.</p>
+    <p id="yoga-note">Tents on hand → covered runs. Optional mosquito netting on nicer tents.</p>
     <div class="upsell"><b>Upsell:</b> +$10–20 when cover / tent is in play.</div>
     <div class="cap"><b>Capacity:</b> unknown — TBD. Do not invent headcount.</div>
   </div>
   <div class="card">
-    <h2>Guest experience levers</h2>
-    <p class="meta">Wellness · FOMO · comfort</p>
-    <ul class="meta" style="margin:8px 0 0;padding-left:18px;color:#c5d0e6">
-      <li>Covered = weather + bug comfort</li>
-      <li>Netting = optional upsell layer</li>
-      <li>Price add-on stays in +$10–20 band until capacity known</li>
-    </ul>
+    <h2>Instructor roster</h2>
+    <div class="roster" id="roster"></div>
   </div>
 </div>
 
-<div class="dept-label">Instructor roster</div>
-<div class="roster" id="roster">
-  <div class="seat named"><div class="name">Angie <span class="badge named">NAMED</span></div><div class="role">Yoga instructor</div></div>
-  <div class="seat named"><div class="name">Emmy <span class="badge named">NAMED</span></div><div class="role">Yoga instructor</div></div>
-  <div class="seat vacant"><div class="name">Seat open <span class="badge vacant">VACANT</span></div><div class="role">Yoga instructor · need more</div></div>
-  <div class="seat vacant"><div class="name">Seat open <span class="badge vacant">VACANT</span></div><div class="role">Yoga instructor · need more</div></div>
+<div class="dept-label">Parked / not worth it yet</div>
+<div class="tiles" id="backlog"></div>
+
+<div class="dept-label">IP / playbook stub (vision — not a sold SKU yet)</div>
+<div class="card">
+  <h2>3D goats + cross-promo <span class="badge stem">STUB</span></h2>
+  <p>Current: small 3D-printed goats. Vision: chair-size vanity award (trademark candidate). Cross-promo idea: giant goat at partner checkout → review → their appetizer/freebie + Critters / Sheehan card.</p>
+  <p class="meta">Stub only — no invented revenue or trademark filing status.</p>
 </div>
 
-<div class="truth"><b>Truth rule:</b> No fake animal counts · no fake insurance · no auto-email. Capacity for goat yoga stays <b>unknown</b> until measured. Brand: Sheehan Homestead.</div>
-
-<p class="note-foot" id="load-note">Dump-home: Dashboard Bit · Brand: Sheehan Homestead · Face: Battle Row physical ops · data/battle_row.json · Built 2026-09-23 ET</p>
+<div class="truth"><b>Truth rule:</b> Current animal counts only (no death/trade ledger). No fake $. No auto-email. Capacity for goat yoga stays <b>unknown</b>. Brand: Sheehan Homestead.</div>
+<p class="note-foot" id="load-note">Dump-home: Dashboard Bit · Brand: Sheehan Homestead · data/battle_row.json · Built 2026-09-23 ET</p>
 </div>
 
 <script>
 (function(){
+  function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];}); }
   async function load(path){
     try{ var r=await fetch(path,{cache:'no-store'}); if(!r.ok) throw new Error(r.status); return await r.json(); }
     catch(e){ return null; }
   }
   function set(id,v){ var el=document.getElementById(id); if(el) el.textContent=(v==null||v==='')?'—':v; }
+  function list(id, items, mapFn){
+    var el=document.getElementById(id); if(!el) return;
+    el.innerHTML=(items||[]).map(mapFn).join('') || '<li class="meta">—</li>';
+  }
   load('data/battle_row.json').then(function(d){
     if(!d) return;
     var pens=d.enclosures||[];
     set('k-pens', pens.length||5);
-    set('k-ex', (d.exhibits||[]).length||1);
+    var animals=(d.animals&&d.animals.items)||[];
+    animals.forEach(function(a){
+      if(a.id==='bunnies') set('k-bunnies', a.count);
+      if(a.id==='ducks') set('k-ducks', a.count);
+    });
+    var anEl=document.getElementById('animals');
+    if(anEl && animals.length){
+      anEl.innerHTML=animals.map(function(a){
+        var cls=a.status==='surplus'?'surplus':(a.status==='grow'?'grow':'on');
+        var badge=a.status==='surplus'?'warn':'active';
+        return '<div class="asset '+cls+'"><h3>'+esc(a.label)+' <span class="badge '+badge+'">'+esc(a.count)+'</span></h3>'+
+          '<p class="kind">'+esc(a.note||'')+'</p></div>';
+      }).join('');
+    }
+    var feed=(d.feed_systems&&d.feed_systems.items)||[];
+    list('feed-list', feed, function(i){ return '<li>'+esc(i.label)+'</li>'; });
+    var pensEl=document.getElementById('pens');
+    if(pensEl){
+      var html=pens.map(function(p){
+        return '<div class="pen active"><h3>'+esc(p.row)+' · '+esc(p.label)+' <span class="badge active">ACTIVE</span></h3>'+
+          '<p class="kind">'+esc(p.kind||'')+'</p><p class="note">'+esc(p.note||'')+'</p></div>';
+      }).join('');
+      pensEl.innerHTML=html;
+    }
+    var exEl=document.getElementById('exhibits');
+    if(exEl){
+      exEl.innerHTML=(d.exhibits||[]).map(function(e){
+        return '<div class="asset on"><h3>'+esc(e.label)+' <span class="badge stem">'+(e.builder?esc(e.builder):'BUILT')+'</span></h3>'+
+          '<p class="note">'+esc(e.note||'')+'</p></div>';
+      }).join('');
+    }
+    var be=d.built_environment||{};
+    list('structures', be.structures, function(s){
+      return '<li><b>'+esc(s.label)+'</b>'+(s.builder?' · '+esc(s.builder):'')+(s.note?' — '+esc(s.note):'')+'</li>';
+    });
+    list('tents', be.tents, function(t){
+      return '<li><b>'+esc(t.label)+'</b>'+(t.count?' ×'+t.count:'')+(t.note?' — '+esc(t.note):'')+'</li>';
+    });
+    list('corrals', be.corrals, function(c){ return '<li>'+esc(c.label)+'</li>'; });
+    var eq=(be.equipment||[]).concat(be.vehicles||[]);
+    list('equip', eq, function(e){
+      return '<li><b>'+esc(e.label)+'</b>'+(e.note?' — '+esc(e.note):'')+'</li>';
+    });
     var named=(d.instructors&&d.instructors.named)||[];
     var vac=(d.instructors&&d.instructors.vacant_seats)||[];
     set('k-inst', named.length);
-    set('k-vac', vac.length? (vac.length+'+') : 'open');
-    var pensEl=document.getElementById('pens');
-    if(pensEl && pens.length){
-      pensEl.innerHTML=pens.map(function(p){
-        return '<div class="pen active"><h3>'+p.row+' · '+p.label+' <span class="badge active">ACTIVE</span></h3>'+
-          '<p class="kind">'+(p.kind||'')+'</p><p class="note">'+(p.note||'')+'</p></div>';
-      }).join('');
-    }
     var roster=document.getElementById('roster');
-    if(roster && (named.length||vac.length)){
-      var html=named.map(function(i){
-        return '<div class="seat named"><div class="name">'+i.name+' <span class="badge named">NAMED</span></div><div class="role">'+(i.role||'Yoga instructor')+'</div></div>';
-      }).join('');
-      html+=vac.map(function(){
+    if(roster){
+      roster.innerHTML=named.map(function(i){
+        return '<div class="seat named"><div class="name">'+esc(i.name)+' <span class="badge named">NAMED</span></div><div class="role">'+(esc(i.role)||'Yoga instructor')+'</div></div>';
+      }).join('')+vac.map(function(){
         return '<div class="seat vacant"><div class="name">Seat open <span class="badge vacant">VACANT</span></div><div class="role">Yoga instructor · need more</div></div>';
       }).join('');
-      roster.innerHTML=html;
     }
+    var bl=(d.backlog_low_priority&&d.backlog_low_priority.items)||[];
+    var blEl=document.getElementById('backlog');
+    if(blEl){
+      blEl.innerHTML=bl.map(function(b){
+        return '<div class="asset parked"><h3>'+esc(b.label)+' <span class="badge parked">PARKED</span></h3><p class="note">Not worth it yet</p></div>';
+      }).join('');
+    }
+    if(d.as_of) set('load-note', 'Dump-home: Dashboard Bit · Brand: Sheehan Homestead · data/battle_row.json · '+d.as_of);
   });
 })();
 </script>

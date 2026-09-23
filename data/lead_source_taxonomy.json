@@ -1,0 +1,201 @@
+{
+  "as_of": "2026-09-23 16:38 ET",
+  "brand": "Sheehan Homestead / Critters on Call",
+  "rule": "Never invent a source_label. Prefer unknown over a guess. Human-readable labels only — no raw MCP/file soup on the chip.",
+  "labels": {
+    "customer": {
+      "label": "Customer",
+      "blurb": "Already bought — invoice / calendar / prior customer file when known",
+      "chip": "customer",
+      "sub": ["invoice", "calendar", "prior"]
+    },
+    "customer_contact_form": {
+      "label": "Site / contact form",
+      "blurb": "Inbound site or contact-form lead",
+      "chip": "form"
+    },
+    "customer_referral": {
+      "label": "Referral",
+      "blurb": "Named referrer when known (use referrer field)",
+      "chip": "referral"
+    },
+    "copycat_list_cdd": {
+      "label": "CDD / HOA list",
+      "blurb": "CDD/HOA copycat lists",
+      "chip": "cdd"
+    },
+    "copycat_list": {
+      "label": "Copycat list",
+      "blurb": "Other copycat / buyer lists",
+      "chip": "list"
+    },
+    "university": {
+      "label": "University / PTA campus",
+      "blurb": "University / PTA / campus lists",
+      "chip": "uni"
+    },
+    "senior_form": {
+      "label": "Senior form",
+      "blurb": "Brookdale / senior public contact forms",
+      "chip": "senior"
+    },
+    "school_research": {
+      "label": "School research",
+      "blurb": "Montessori / co-op / campus research",
+      "chip": "school"
+    },
+    "gmail_harvest": {
+      "label": "Gmail harvest",
+      "blurb": "Only when that is all we know",
+      "chip": "gmail"
+    },
+    "calendar": {
+      "label": "Calendar",
+      "blurb": "Calendar attendee / invite — only when that is all we know",
+      "chip": "cal"
+    },
+    "drive_prior": {
+      "label": "Drive prior",
+      "blurb": "Drive / prior file — only when that is all we know",
+      "chip": "drive"
+    },
+    "unknown": {
+      "label": "Unknown",
+      "blurb": "Do not invent",
+      "chip": "unk"
+    }
+  },
+  "mapping_rules": [
+    {
+      "id": "override_first",
+      "note": "crm_source_overrides.json wins over heuristics"
+    },
+    {
+      "id": "customer_files",
+      "source_label": "customer",
+      "when": {
+        "source_contains_any": [
+          "Prior-Customers",
+          "P1_customers",
+          "paypal_customers",
+          "AnnMarie_Payments"
+        ],
+        "or_lifecycle_in": ["Customer", "customer", "Lapsed customer"]
+      }
+    },
+    {
+      "id": "inbound_godaddy_form",
+      "source_label": "customer_contact_form",
+      "when": {
+        "source_contains_any": ["GODADDY_CONTACTS", "godaddy", "contact form", "OTHER_INBOUND"],
+        "or_type_in": ["godaddy", "other_inbound", "customer_contact_form"]
+      }
+    },
+    {
+      "id": "referral_named",
+      "source_label": "customer_referral",
+      "when": {
+        "type_in": ["customer_referral", "referral"],
+        "or_has_referrer": true
+      }
+    },
+    {
+      "id": "cdd_hoa",
+      "source_label": "copycat_list_cdd",
+      "when": {
+        "source_contains_any": ["cdd-hoa", "cdd_hoa", "CDD"],
+        "or_type_in": ["cdd_hoa", "hoa"]
+      }
+    },
+    {
+      "id": "copycat_other",
+      "source_label": "copycat_list",
+      "when": {
+        "source_contains_any": [
+          "BUYER_CONTACTS_MONDAY",
+          "people-enterprise",
+          "Fall-Priority-Call-List",
+          "ross-vesta"
+        ],
+        "or_type_in": ["ross_peer", "ross_checkin", "corporate", "festival", "daycare"]
+      }
+    },
+    {
+      "id": "university",
+      "source_label": "university",
+      "when": {
+        "source_contains_any": ["JU_PEER", "university", "PTA campus"],
+        "or_type_in": ["university", "pta"]
+      }
+    },
+    {
+      "id": "senior_form",
+      "source_label": "senior_form",
+      "when": {
+        "source_contains_any": ["PHONE_TAP_URLS", "senior cold forms", "Brookdale"],
+        "or_type_in": ["senior_form", "senior"]
+      }
+    },
+    {
+      "id": "school_research",
+      "source_label": "school_research",
+      "when": {
+        "source_contains_any": [
+          "school-lane-research",
+          "expand-goddard",
+          "ivybrook",
+          "archive-schools",
+          "SUMMER_SCHOLARS"
+        ],
+        "or_type_in": [
+          "school",
+          "montessori",
+          "homeschool_coop",
+          "campus",
+          "goddard",
+          "ivybrook",
+          "summer_scholars"
+        ]
+      }
+    },
+    {
+      "id": "calendar_only",
+      "source_label": "calendar",
+      "when": {
+        "source_contains_any": ["calendar_attendee", "calendar", "CALENDAR"]
+      }
+    },
+    {
+      "id": "gmail_only",
+      "source_label": "gmail_harvest",
+      "when": {
+        "source_contains_any": ["gmail", "Gmail", "EMAIL_HARVEST"]
+      }
+    },
+    {
+      "id": "drive_only",
+      "source_label": "drive_prior",
+      "when": {
+        "source_contains_any": ["drive_prior", "Google Drive", "drive/"]
+      }
+    },
+    {
+      "id": "fallback",
+      "source_label": "unknown",
+      "when": {}
+    }
+  ],
+  "filter_chip_priority": [
+    "customer",
+    "customer_referral",
+    "customer_contact_form",
+    "copycat_list_cdd",
+    "copycat_list",
+    "senior_form",
+    "school_research",
+    "university",
+    "calendar",
+    "gmail_harvest",
+    "unknown"
+  ]
+}

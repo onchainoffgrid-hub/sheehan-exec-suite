@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-23 16:35 ET",
+  "as_of": "2026-09-23 16:42 ET",
   "title": "Franchise RVP \u00b7 Area Ops",
   "franchise": "#0",
   "brand": "Sheehan Homestead / Critters on Call",
@@ -199,7 +199,38 @@
       ]
     },
     "gtm_page": "gtm-seats.html",
-    "north_star": "2M in Jax \u2014 why not 100 \u00d7 $50 fall farm today?"
+    "north_star": "2M in Jax \u2014 why not 100 \u00d7 $50 fall farm today?",
+    "honesty": {
+      "named_seats": [
+        {
+          "name": "Michael Sheehan",
+          "seat": "RVP / Operator",
+          "status": "named",
+          "paid": true
+        },
+        {
+          "name": "Ann-Marie",
+          "seat": "Ops / AR / publishing",
+          "status": "named",
+          "paid": true
+        }
+      ],
+      "bots": {
+        "label": "Bots (not paid human seats)",
+        "roles": [
+          "RevOps populate",
+          "Marketing populate",
+          "Mass-touch staging (one-touch drafts / forms \u2014 Michael closes by hand)"
+        ],
+        "job": "Stage mass-touch so Michael closes. No auto-send.",
+        "pattern_cite": "Westminster CAP share yesterday \u2192 $700 call today (Michael)"
+      },
+      "helpers": {
+        "label": "Helpers / talent",
+        "status": "not_paid_seats_yet",
+        "note": "Talent, not paid seats yet \u2014 would pay if could. Do not invent salaries or headcount."
+      }
+    }
   },
   "widgets": [
     {
@@ -207,7 +238,18 @@
       "title": "One-touch \u00b7 money button",
       "href": "one-touch.html",
       "href_live": "https://onchainoffgrid-hub.github.io/critters-on-call/one-touch.html",
-      "primary": true
+      "primary": true,
+      "bot_job": "Mass-touch stage so Michael closes",
+      "pattern_cite": "Westminster CAP share \u2192 $700 call"
+    },
+    {
+      "id": "lead-sources",
+      "title": "Lead sources",
+      "href": "lead-sources.html",
+      "also": [
+        "one-touch.html"
+      ],
+      "note": "Human source_label chips \u2014 where each lead came from"
     },
     {
       "id": "team",
@@ -215,7 +257,8 @@
       "href": "team-hire.html",
       "also": [
         "ann-marie-ops.html"
-      ]
+      ],
+      "note": "Named: Michael + Ann-Marie only. Bots stage; helpers = talent not paid seats yet."
     },
     {
       "id": "gtm-seats",
@@ -228,9 +271,13 @@
       "title": "Operations \u00b7 Battle Row",
       "href": "ops-battle-row.html",
       "primary_ops": true,
-      "note": "Physical ops \u2014 enclosures \u00b7 hay-frame STEM \u00b7 goat yoga tents \u00b7 instructors",
+      "note": "Physical ops \u2014 bunnies 20 \u00b7 ducks 12 \u00b7 5 pens \u00b7 A-frame \u00b7 tents \u00b7 feed TBD$",
       "tagline": "logistics of joy \u00b7 wellness \u00b7 education \u00b7 FOMO",
-      "data": "battle_row.json"
+      "data": "battle_row.json",
+      "animals": {
+        "bunnies": 20,
+        "ducks": 12
+      }
     },
     {
       "id": "gigs",
@@ -272,6 +319,13 @@
         "easy-attack.html"
       ],
       "secondary": true
+    },
+    {
+      "id": "ip-playbook",
+      "title": "IP / playbook stub",
+      "href": "ops-battle-row.html#ip",
+      "note": "3D goats (small now; chair-size vanity award vision; TM candidate) \u00b7 cross-promo giant goat \u2192 review \u2192 partner freebie + Sheehan card",
+      "status": "stub"
     }
   ],
   "data_sources": [
@@ -282,7 +336,10 @@
     "bookings_pipeline.json",
     "calendar_ops_snapshot.json",
     "HIRE_PRIORITIES (team-hire.html)",
-    "battle_row.json"
+    "battle_row.json",
+    "lead_source_taxonomy.json",
+    "crm_source_overrides.json",
+    "lead_source_coverage.json"
   ],
   "localStorage_keys": {
     "rep_notes": "sheehan_bdr_rep_notes_v1",
@@ -308,5 +365,15 @@
     "battle_row": "ops-battle-row.html",
     "gtm_claim": "Michael rates GTM Series-D+ vs pets/mobile-zoo peers (cites Ardok / Orbis) \u2014 HIS claim.",
     "no_invented_financials": true
+  },
+  "recommend_pack": {
+    "label": "Recommend pack (public)",
+    "include": [
+      "Sheehan Homestead website / blog (not investor-only)",
+      "Critters on Call live apps",
+      "One-touch (stage only)",
+      "Battle Row / RVP ops"
+    ],
+    "note": "Public brand surface should include homestead website/blog \u2014 not only investor deck."
   }
 }

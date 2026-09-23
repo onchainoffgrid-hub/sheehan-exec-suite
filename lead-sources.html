@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Lead sources · Sheehan Homestead</title>
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--violet:#a78bfa;--money:#f0abfc}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1100px;margin:0 auto;padding:22px}
+.apps,.nav{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 14px}
+.apps{padding:10px 12px;border:1px solid var(--line);border-radius:14px;background:#0f1728}
+.apps .lbl{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.apps a,.nav a{background:var(--card);border:1px solid var(--line);color:var(--text);padding:6px 11px;border-radius:999px;font-size:.78rem;font-weight:600;text-decoration:none}
+.apps a.money{border-color:#a855f788}
+.nav a.active{border-color:var(--accent);background:#152238}
+h1{font-size:1.35rem;margin:0 0 4px}.sub{color:var(--muted);font-size:.88rem;margin-bottom:14px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:11px;margin-bottom:16px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px}
+.kpi .l{font-size:.72rem;color:var(--muted);text-transform:uppercase}.kpi .v{font-size:1.35rem;font-weight:700;margin-top:4px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:12px}
+table{width:100%;border-collapse:collapse;font-size:.85rem}
+th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.05em}
+.num{font-variant-numeric:tabular-nums;font-weight:700}
+.muted{color:var(--muted);font-size:.78rem}.code{font-family:ui-monospace,monospace;font-size:.65rem;color:var(--muted);margin-top:3px}
+.src{display:inline-block;padding:2px 8px;border-radius:999px;font-size:.72rem;border:1px solid var(--line);background:#0e1626}
+.src-customer{background:#13281d;color:var(--good);border-color:#3dd68c88}
+.src-customer_referral{background:#1a1530;color:var(--money);border-color:#a855f788}
+.src-customer_contact_form{background:#152238;color:#9ec1ff;border-color:#5b8cff88}
+.src-copycat_list_cdd{background:#1a2440;color:#93c5fd;border-color:#3b82f688}
+.src-copycat_list{background:#1a2440;color:#c5d0e6}
+.src-university{background:#13281d;color:#86efac;border-color:#3dd68c66}
+.src-senior_form{background:#2a2416;color:#fde68a;border-color:#fbbf2466}
+.src-school_research{background:#13281d;color:#9dffc0;border-color:#3dd68c66}
+.src-calendar,.src-gmail_harvest,.src-drive_prior{background:#1a1f2e;color:#a5b4fc}
+.src-unknown{color:var(--muted)}
+.truth{margin-top:16px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--panel);font-size:.8rem;color:var(--muted)}
+.dept{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin:18px 0 10px}
+</style></head>
+<body><div class="wrap">
+<div class="apps">
+  <span class="lbl">Apps</span>
+  <a class="money" href="one-touch.html">One-touch</a>
+  <a href="rvp-ops.html">RVP Ops</a>
+  <a href="ops-battle-row.html">Battle Row</a>
+  <a href="index.html">Layer Zero</a>
+</div>
+<div class="nav">
+  <a href="rvp-ops.html">RVP Ops</a>
+  <a href="one-touch.html">One-touch</a>
+  <a href="lead-sources.html" class="active">Lead sources</a>
+  <a href="ops-battle-row.html">Battle Row</a>
+</div>
+<header>
+  <h1>Lead sources · where leads came from</h1>
+  <div class="sub">Sheehan Homestead / Critters on Call · human chips · never invent · as of 2026-09-23 16:40 ET</div>
+</header>
+<div class="kpis">
+  <div class="kpi"><div class="l">One-touch rows</div><div class="v">471</div></div>
+  <div class="kpi"><div class="l">Labeled sources</div><div class="v">11</div></div>
+  <div class="kpi"><div class="l">Referrals tagged</div><div class="v">1</div></div>
+  <div class="kpi"><div class="l">Unknown</div><div class="v">1</div></div>
+</div>
+<div class="dept">Counts by source_label</div>
+<div class="card" style="overflow:auto">
+<table>
+<thead><tr><th>Source</th><th>Count</th><th>%</th><th>Meaning</th></tr></thead>
+<tbody>
+<tr>
+  <td><span class="src src-customer">Customer</span><div class="code">customer</div></td>
+  <td class="num">97</td>
+  <td class="num">20.6%</td>
+  <td class="muted">Already bought — invoice / calendar / prior customer file when known</td>
+</tr><tr>
+  <td><span class="src src-customer_referral">Referral</span><div class="code">customer_referral</div></td>
+  <td class="num">1</td>
+  <td class="num">0.2%</td>
+  <td class="muted">Named referrer when known (use referrer field)</td>
+</tr><tr>
+  <td><span class="src src-customer_contact_form">Site / contact form</span><div class="code">customer_contact_form</div></td>
+  <td class="num">76</td>
+  <td class="num">16.1%</td>
+  <td class="muted">Inbound site or contact-form lead</td>
+</tr><tr>
+  <td><span class="src src-copycat_list_cdd">CDD / HOA list</span><div class="code">copycat_list_cdd</div></td>
+  <td class="num">13</td>
+  <td class="num">2.8%</td>
+  <td class="muted">CDD/HOA copycat lists</td>
+</tr><tr>
+  <td><span class="src src-copycat_list">Copycat list</span><div class="code">copycat_list</div></td>
+  <td class="num">9</td>
+  <td class="num">1.9%</td>
+  <td class="muted">Other copycat / buyer lists</td>
+</tr><tr>
+  <td><span class="src src-senior_form">Senior form</span><div class="code">senior_form</div></td>
+  <td class="num">28</td>
+  <td class="num">5.9%</td>
+  <td class="muted">Brookdale / senior public contact forms</td>
+</tr><tr>
+  <td><span class="src src-school_research">School research</span><div class="code">school_research</div></td>
+  <td class="num">65</td>
+  <td class="num">13.8%</td>
+  <td class="muted">Montessori / co-op / campus research</td>
+</tr><tr>
+  <td><span class="src src-university">University / PTA campus</span><div class="code">university</div></td>
+  <td class="num">10</td>
+  <td class="num">2.1%</td>
+  <td class="muted">University / PTA / campus lists</td>
+</tr><tr>
+  <td><span class="src src-calendar">Calendar</span><div class="code">calendar</div></td>
+  <td class="num">166</td>
+  <td class="num">35.2%</td>
+  <td class="muted">Calendar attendee / invite — only when that is all we know</td>
+</tr><tr>
+  <td><span class="src src-gmail_harvest">Gmail harvest</span><div class="code">gmail_harvest</div></td>
+  <td class="num">5</td>
+  <td class="num">1.1%</td>
+  <td class="muted">Only when that is all we know</td>
+</tr><tr>
+  <td><span class="src src-unknown">Unknown</span><div class="code">unknown</div></td>
+  <td class="num">1</td>
+  <td class="num">0.2%</td>
+  <td class="muted">Do not invent</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="dept">Named truth overrides (Michael)</div>
+<div class="card"><b>brookdale_southpoint_tasia</b> → <span class="src src-customer_referral">customer_referral</span> · referrer Tasia Felix (Discovery)
+  <div class="muted" style="margin-top:6px">REFERRAL from Tasia (Tasia Felix / Discovery) — Michael voice dump. NOT cold.</div></div><div class="card"><b>patricia_valenzuela_150</b> → <span class="src src-customer">customer</span>
+  <div class="muted" style="margin-top:6px">CUSTOMER · Michael believes $150 visit sold. Only Patricia in CRM (Discovery). Confirm if another Patricia appears. Do not invent email.</div></div>
+<div class="truth"><b>Truth rule:</b> Prefer <b>unknown</b> over a guess. Raw MCP/file names stay in taxonomy mapping only — chips show human labels. No auto-email. Brand: Sheehan Homestead.</div>
+<p class="muted" style="margin-top:18px">data/lead_source_taxonomy.json · data/crm_source_overrides.json · data/lead_source_coverage.json · linked from RVP + one-touch</p>
+</div></body></html>

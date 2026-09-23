@@ -1,12 +1,12 @@
 {
-  "as_of": "2026-09-23 16:35 ET",
+  "as_of": "2026-09-23 16:38 ET",
   "title": "Battle Row \u00b7 Physical Ops",
   "brand": "Sheehan Homestead / Critters on Call",
   "location": "Callahan FL",
   "tagline": "logistics of joy \u00b7 wellness \u00b7 education \u00b7 FOMO",
   "primary_page": "ops-battle-row.html",
   "parent": "rvp-ops.html",
-  "rule": "No invented animal headcounts, insurance claims, or capacity numbers. Capacity for goat yoga = unknown until measured.",
+  "rule": "Current counts only \u2014 no death/trade ledger. No invented dollars. Cost fields unknown/TBD until known.",
   "enclosures": [
     {
       "id": "pen-1",
@@ -62,6 +62,13 @@
         "privacy": "private film first",
         "panel": "ann-marie-ops.html"
       }
+    },
+    {
+      "id": "a-frame",
+      "label": "A-frame",
+      "builder": "Ann-Marie",
+      "status": "built",
+      "note": "A-frame Ann-Marie built \u2014 in addition to 5 enclosures"
     }
   ],
   "goat_yoga": {
@@ -69,7 +76,12 @@
     "tents": {
       "status": "on_hand",
       "covered": true,
-      "note": "Tents now on hand \u2192 can run covered"
+      "inventory": [
+        "Double tent (no tarp; was triple; panels)",
+        "Permanent older vendor tent",
+        "Two nicer tents that accept netting"
+      ],
+      "note": "Tents on hand \u2192 covered runs possible; mosquito netting optional on nicer tents"
     },
     "mosquito_netting": {
       "status": "optional",
@@ -173,5 +185,191 @@
     ],
     "investor_link": "investor-checklist.html",
     "no_invented_financials": true
+  },
+  "ops_dump_date": "2026-09-23",
+  "animals": {
+    "label": "Animal well-being \u00b7 headcounts (stated 2026-09-23)",
+    "as_of": "2026-09-23",
+    "items": [
+      {
+        "id": "bunnies",
+        "label": "Bunnies",
+        "count": 20,
+        "prior_count": 14,
+        "note": "Was 14; trading ducks\u2192bunnies. Needs more bunnies for events.",
+        "status": "grow"
+      },
+      {
+        "id": "ducks",
+        "label": "Ducks",
+        "count": 12,
+        "note": "Too many; trading down (ducks\u2192bunnies). Duck surplus.",
+        "status": "surplus"
+      }
+    ],
+    "notes": [
+      "Needs more bunnies for events",
+      "Duck surplus \u2014 trading down",
+      "No death/trade ledger on this board \u2014 current counts only"
+    ]
+  },
+  "feed_systems": {
+    "label": "Feed / systems",
+    "cost_usd": null,
+    "cost_status": "unknown",
+    "cost_note": "TBD \u2014 do NOT invent dollars",
+    "items": [
+      {
+        "id": "weekly_feed",
+        "label": "Weekly feed run",
+        "status": "active"
+      },
+      {
+        "id": "hay_greens",
+        "label": "Hay + greens",
+        "status": "active"
+      },
+      {
+        "id": "hydroponic",
+        "label": "Hydroponic system",
+        "status": "active"
+      }
+    ]
+  },
+  "built_environment": {
+    "label": "Built environment / assets",
+    "enclosures_note": "5 enclosures (Battle Row) + A-frame (Ann-Marie)",
+    "structures": [
+      {
+        "id": "barn",
+        "label": "Barn",
+        "status": "on_hand"
+      },
+      {
+        "id": "shed",
+        "label": "Shed",
+        "status": "on_hand"
+      },
+      {
+        "id": "domicile",
+        "label": "Domicile",
+        "status": "on_hand"
+      },
+      {
+        "id": "checkin_kiosk",
+        "label": "Check-in kiosk",
+        "builder": "Ann-Marie",
+        "status": "built"
+      },
+      {
+        "id": "pallet_garage",
+        "label": "Pallet garage around garden",
+        "builder": "Ann-Marie",
+        "status": "built"
+      },
+      {
+        "id": "oak",
+        "label": "~250-year-old oak",
+        "status": "landmark"
+      }
+    ],
+    "tents": [
+      {
+        "id": "double_tent",
+        "label": "Double tent",
+        "note": "No tarp; was triple, still large; has panels",
+        "status": "on_hand"
+      },
+      {
+        "id": "vendor_tent",
+        "label": "Permanent older vendor tent",
+        "status": "on_hand"
+      },
+      {
+        "id": "netting_tents",
+        "label": "Two nicer tents that accept netting",
+        "count": 2,
+        "status": "on_hand"
+      }
+    ],
+    "corrals": [
+      {
+        "id": "boys",
+        "label": "Boys corral",
+        "status": "active"
+      },
+      {
+        "id": "rowdy_goats",
+        "label": "2\u00d7 rowdy goats corral",
+        "status": "active"
+      },
+      {
+        "id": "pig",
+        "label": "Pig corral",
+        "status": "active"
+      },
+      {
+        "id": "main_herd",
+        "label": "Main herd attached to barn",
+        "status": "active"
+      }
+    ],
+    "equipment": [
+      {
+        "id": "3d_printer",
+        "label": "3D printer",
+        "status": "on_hand"
+      },
+      {
+        "id": "incubator",
+        "label": "Incubator",
+        "status": "on_hand"
+      },
+      {
+        "id": "transporters",
+        "label": "Transporters",
+        "note": "Mostly larger",
+        "status": "on_hand"
+      },
+      {
+        "id": "tractor",
+        "label": "Tractor",
+        "status": "on_hand"
+      }
+    ],
+    "vehicles": [
+      {
+        "id": "santa_cruz",
+        "label": "Michael's Santa Cruz",
+        "note": "Dent, works",
+        "status": "works"
+      },
+      {
+        "id": "escape",
+        "label": "Ann-Marie's Escape",
+        "note": "Old, new battery, works",
+        "status": "works"
+      }
+    ]
+  },
+  "backlog_low_priority": {
+    "label": "Parked / not worth it yet",
+    "items": [
+      {
+        "id": "sell_plants",
+        "label": "Sell plants",
+        "status": "parked"
+      },
+      {
+        "id": "ebay_plants",
+        "label": "eBay plants",
+        "status": "parked"
+      },
+      {
+        "id": "lands_come_do",
+        "label": "Lands people can come do",
+        "status": "parked"
+      }
+    ]
   }
 }

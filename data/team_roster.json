@@ -1,0 +1,304 @@
+{
+  "as_of": "2026-09-23 16:40 ET",
+  "brand": "Sheehan Homestead",
+  "title": "Helper + Team roster",
+  "scheduling_owner": "Ann-Marie Sheehan",
+  "sources": {
+    "helper_list_drive": {
+      "title": "Helper list (Ann-Marie live)",
+      "url": "https://docs.google.com/document/d/1-AbJCTlMm-z_Z6f5-DJHoWoXo9CXPE6L_g8ytmkcRNo/edit",
+      "id": "1-AbJCTlMm-z_Z6f5-DJHoWoXo9CXPE6L_g8ytmkcRNo",
+      "pulled": "2026-09-23"
+    },
+    "helper_ops_local": "/workspace/deputy-outreach/team/HELPER_OPS.html",
+    "team_roster_md": "/workspace/deputy-outreach/team/TEAM_ROSTER.md",
+    "helper_form": {
+      "title": "Petting Zoo Engineer/Helper",
+      "url": "https://docs.google.com/forms/d/15ODzGKLRyS-XLIO_nrSM33O1X-ud-oz2hKAk0jP9CsA/edit",
+      "id": "15ODzGKLRyS-XLIO_nrSM33O1X-ud-oz2hKAk0jP9CsA",
+      "note": "No linked Responses Sheet found in Drive folder Petting Zoo Engineers — cannot parse no-hires yet"
+    },
+    "team_build_board": {
+      "title": "Michael_Team_Build_Board (local)",
+      "local": [
+        "/workspace/Michael_Team_Build_Board.docx",
+        "/workspace/Michael_Team_Build_Board.xlsx"
+      ],
+      "drive_search": "not found as live Sheet/Doc titled Team Build Board"
+    },
+    "lillie_prep": "/workspace/team-hire/Lillie-interview-prep-Sep24.md"
+  },
+  "org_today": {
+    "label": "Today's lean org",
+    "note": "Michael + Ann-Marie + bots + helper tiers + backup bench. No invented names.",
+    "named": [
+      {
+        "name": "Michael Sheehan",
+        "seat": "Franchise Operator / Area VP / RVP",
+        "status": "named"
+      },
+      {
+        "name": "Ann-Marie Sheehan",
+        "seat": "Co-owner · mid-senior ops · owns helper scheduling",
+        "status": "named"
+      },
+      {
+        "name": "Dashboard / exec bots",
+        "seat": "Ops automation (not people)",
+        "status": "bots"
+      }
+    ]
+  },
+  "directors_target": {
+    "label": "Target director layer (vacant — future hire)",
+    "note": "Franchise proof / investor path. Do not invent names. Link investor-checklist.",
+    "investor_link": "investor-checklist.html",
+    "seats": [
+      {
+        "id": "dir_ops",
+        "title": "Director of Operations",
+        "status": "vacant",
+        "owns": "Battle Row, helpers, gigs, animal/asset ops"
+      },
+      {
+        "id": "dir_sales",
+        "title": "Director of Sales",
+        "status": "vacant",
+        "owns": "BDR cascade, closes; Michael's high-value time today"
+      },
+      {
+        "id": "dir_tech_revops",
+        "title": "Director of Technology / RevOps",
+        "status": "vacant",
+        "owns": "Tech platforms + dashboards",
+        "mandate": [
+          "Operationalize day-to-day",
+          "Produce investor-grade inputs for market sizing / validation of work done"
+        ]
+      }
+    ]
+  },
+  "confirmed_1024": [
+    "Madison",
+    "Joanna",
+    "Melissa (AM only)",
+    "Audrey",
+    "Natalia"
+  ],
+  "primary": [
+    {
+      "name": "Madison Coker",
+      "phone": "",
+      "email": "failingforwardfarm@gmail.com",
+      "notes": "Primary helper / ops; house-capable; junior-ops track",
+      "confirmed_1024": true
+    },
+    {
+      "name": "Joanna Pagel",
+      "phone": "(904) 556-1252",
+      "email": "pagelj4777@gmail.com",
+      "notes": "Primary helper; part-time elsewhere",
+      "confirmed_1024": true
+    },
+    {
+      "name": "Malik Floyd",
+      "phone": "(904) 554-7876",
+      "email": "malikfloyd16@gmail.com",
+      "notes": "Primary / lead candidate (foreman track)",
+      "confirmed_1024": false
+    }
+  ],
+  "secondary": [
+    {
+      "name": "Natalia Matos",
+      "phone": "(904) 505-0783",
+      "email": "",
+      "notes": "Secondary; BD/BDR prospect",
+      "confirmed_1024": true
+    },
+    {
+      "name": "Audrey",
+      "phone": "(904) 891-1553",
+      "email": "amollitt@yahoo.com",
+      "notes": "Secondary helper; possible BD (shy)",
+      "confirmed_1024": true
+    }
+  ],
+  "need_training": [
+    {
+      "name": "Crystal Oliver",
+      "phone": "(904) 799-3833",
+      "email": "",
+      "notes": "Need training",
+      "confirmed_1024": false
+    },
+    {
+      "name": "Zaylee Boronell",
+      "phone": "(904) 704-0818",
+      "email": "",
+      "notes": "Need training",
+      "confirmed_1024": false
+    },
+    {
+      "name": "Todd",
+      "phone": "(904) 330-8041",
+      "email": "",
+      "notes": "Need training; sniff-test before handoff",
+      "confirmed_1024": false
+    },
+    {
+      "name": "Stacy Addicott",
+      "phone": "(904) 742-4603",
+      "email": "",
+      "notes": "Need training — synced from live Helper list Drive 2026-09-23",
+      "confirmed_1024": false,
+      "synced_from_drive": true
+    }
+  ],
+  "third": [
+    {
+      "name": "Taylor",
+      "phone": "(904) 314-4214",
+      "email": "",
+      "notes": "Away at school / later",
+      "confirmed_1024": false
+    },
+    {
+      "name": "Chris",
+      "phone": "(904) 235-5665",
+      "email": "",
+      "notes": "Third tier",
+      "confirmed_1024": false
+    },
+    {
+      "name": "Jessica",
+      "phone": "(901) 490-9093",
+      "email": "",
+      "notes": "Third tier",
+      "confirmed_1024": false
+    },
+    {
+      "name": "Melissa",
+      "phone": "(615) 606-5338",
+      "email": "",
+      "notes": "Mobile bartending partner; 10/24 AM only",
+      "confirmed_1024": true,
+      "confirmed_note": "AM only"
+    },
+    {
+      "name": "Kelly",
+      "phone": "(912) 676-7051",
+      "email": "",
+      "notes": "In recovery",
+      "confirmed_1024": false
+    },
+    {
+      "name": "Angie",
+      "phone": "",
+      "email": "",
+      "notes": "Goat yoga partner (with Emmy)",
+      "confirmed_1024": false
+    },
+    {
+      "name": "Melesia",
+      "phone": "(904) 903-8755",
+      "email": "",
+      "notes": "Commercial RE grandma",
+      "confirmed_1024": false
+    },
+    {
+      "name": "MariJay",
+      "phone": "(561) 563-3388",
+      "email": "",
+      "notes": "Volunteer kid — synced from live Helper list Drive 2026-09-23",
+      "confirmed_1024": false,
+      "synced_from_drive": true
+    }
+  ],
+  "partners": [
+    {
+      "name": "Emmy",
+      "phone": "",
+      "email": "",
+      "notes": "Goat yoga partner with Angie"
+    },
+    {
+      "name": "Dr. Tara",
+      "phone": "",
+      "email": "",
+      "notes": "Farm programming partner (Duval Teacher of the Year)"
+    },
+    {
+      "name": "Andrea",
+      "phone": "",
+      "email": "",
+      "notes": "Partner / referrals"
+    },
+    {
+      "name": "Beatrix",
+      "phone": "",
+      "email": "",
+      "notes": "Partner / referrals (MaliVai Washington)"
+    },
+    {
+      "name": "Raekwon",
+      "phone": "",
+      "email": "",
+      "notes": "Marketing/events link-up, not ops hire (spelling unverified)"
+    }
+  ],
+  "owners": [
+    {
+      "name": "Ann-Marie Sheehan",
+      "phone": "",
+      "email": "",
+      "notes": "Co-owner · mid-senior ops · owns helper scheduling"
+    },
+    {
+      "name": "Michael Sheehan",
+      "phone": "",
+      "email": "",
+      "notes": "Franchise Operator / Area VP / RVP"
+    }
+  ],
+  "backup_bench": {
+    "label": "Backup bench — not trash, callable later",
+    "statuses": [
+      "interview_no_hire",
+      "interview_pending",
+      "soft_exit"
+    ],
+    "people": [
+      {
+        "name": "Lillie",
+        "status": "interview_pending",
+        "when": "Thu Sep 24, 2026 · 2:00–3:00pm ET",
+        "phone": "",
+        "email": "",
+        "notes": "Interview prep on file. Not on Helper list yet. Michael runs interview. Fit likely trustworthy helper / need-training — not BDR.",
+        "source": "Lillie-interview-prep-Sep24.md"
+      }
+    ],
+    "gaps": [
+      "interview no-hires — add from Drive when located (Helper form Responses Sheet not found in Petting Zoo Engineers folder)",
+      "Team Build Board live Sheet not found on Drive; local docx/xlsx only — do not invent failed candidates"
+    ]
+  },
+  "counts": {
+    "primary": 3,
+    "secondary": 2,
+    "need_training": 4,
+    "third": 8,
+    "partners": 5,
+    "owners": 2,
+    "backup_bench": 1,
+    "directors_vacant": 3,
+    "helpers_total": 17
+  },
+  "gaps": [
+    "Madison — email only, no phone on roster",
+    "Angie / Emmy — no phone",
+    "Matt + Royce D'walton were on older TEAM_ROSTER need_training but NOT on live Helper list Drive 2026-09-23 — left off live tiers (not marked no-hire without evidence)",
+    "No invented phones/emails"
+  ]
+}
