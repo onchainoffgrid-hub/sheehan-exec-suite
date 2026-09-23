@@ -298,5 +298,15 @@
   "franchise_ops_gray": {
     "label": "Insurance / liability (gray \u2014 SOP later)",
     "note": "Franchise #0 currently operates under business insurance + personal liability. No dedicated petting-zoo / goat-yoga product policy claimed. Frame as documentation work later \u2014 do not invent carrier claims."
+  },
+  "franchise_validation": {
+    "label": "Why franchisable",
+    "thesis": "Ops know-how IS the product sold to investors / franchisees.",
+    "jax_edge": "Farm \u224815 minutes from downtown Jacksonville.",
+    "pillars_count": 7,
+    "href_strip": "investor-checklist.html",
+    "battle_row": "ops-battle-row.html",
+    "gtm_claim": "Michael rates GTM Series-D+ vs pets/mobile-zoo peers (cites Ardok / Orbis) \u2014 HIS claim.",
+    "no_invented_financials": true
   }
 }

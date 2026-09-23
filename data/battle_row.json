@@ -1,9 +1,9 @@
 {
-  "as_of": "2026-09-23 16:30 ET",
-  "title": "Battle Row · Physical Ops",
+  "as_of": "2026-09-23 16:35 ET",
+  "title": "Battle Row \u00b7 Physical Ops",
   "brand": "Sheehan Homestead / Critters on Call",
   "location": "Callahan FL",
-  "tagline": "logistics of joy · wellness · education · FOMO",
+  "tagline": "logistics of joy \u00b7 wellness \u00b7 education \u00b7 FOMO",
   "primary_page": "ops-battle-row.html",
   "parent": "rvp-ops.html",
   "rule": "No invented animal headcounts, insurance claims, or capacity numbers. Capacity for goat yoga = unknown until measured.",
@@ -14,7 +14,7 @@
       "label": "Petting-zoo chickens",
       "kind": "chickens",
       "status": "active",
-      "note": "Active enclosure — no headcount claimed"
+      "note": "Active enclosure \u2014 no headcount claimed"
     },
     {
       "id": "pen-2",
@@ -22,7 +22,7 @@
       "label": "Petting-zoo chickens",
       "kind": "chickens",
       "status": "active",
-      "note": "Active enclosure — no headcount claimed"
+      "note": "Active enclosure \u2014 no headcount claimed"
     },
     {
       "id": "pen-3",
@@ -30,7 +30,7 @@
       "label": "Half petting-zoo chicken / half bunny",
       "kind": "mixed",
       "status": "active",
-      "note": "Split pen — chicken + bunny"
+      "note": "Split pen \u2014 chicken + bunny"
     },
     {
       "id": "pen-4",
@@ -38,7 +38,7 @@
       "label": "Full bunny",
       "kind": "bunny",
       "status": "active",
-      "note": "Active enclosure — no headcount claimed"
+      "note": "Active enclosure \u2014 no headcount claimed"
     },
     {
       "id": "pen-5",
@@ -46,7 +46,7 @@
       "label": "Junior-high birds",
       "kind": "birds",
       "status": "active",
-      "note": "Active enclosure — no headcount claimed"
+      "note": "Active enclosure \u2014 no headcount claimed"
     }
   ],
   "exhibits": [
@@ -55,10 +55,10 @@
       "label": "Hay frame",
       "builder": "Ann-Marie",
       "status": "built",
-      "note": "Cool exhibit — STEM opportunity",
+      "note": "Cool exhibit \u2014 STEM opportunity",
       "stem_ask": {
         "owner": "Ann-Marie",
-        "action": "Film what she built (private) → drop into homeschool content",
+        "action": "Film what she built (private) \u2192 drop into homeschool content",
         "privacy": "private film first",
         "panel": "ann-marie-ops.html"
       }
@@ -69,33 +69,109 @@
     "tents": {
       "status": "on_hand",
       "covered": true,
-      "note": "Tents now on hand → can run covered"
+      "note": "Tents now on hand \u2192 can run covered"
     },
     "mosquito_netting": {
       "status": "optional",
       "note": "Optional mosquito netting"
     },
     "upsell": {
-      "amount_range_usd": [10, 20],
-      "label": "+$10–20 covered / tent upsell",
+      "amount_range_usd": [
+        10,
+        20
+      ],
+      "label": "+$10\u201320 covered / tent upsell",
       "note": "Upsell when tents / cover in play"
     },
     "capacity": {
       "status": "unknown",
       "headcount": null,
-      "note": "Capacity TBD — do not invent headcount"
+      "note": "Capacity TBD \u2014 do not invent headcount"
     }
   },
   "instructors": {
     "label": "Yoga instructor roster",
     "named": [
-      { "name": "Angie", "status": "named", "role": "Yoga instructor" },
-      { "name": "Emmy", "status": "named", "role": "Yoga instructor" }
+      {
+        "name": "Angie",
+        "status": "named",
+        "role": "Yoga instructor"
+      },
+      {
+        "name": "Emmy",
+        "status": "named",
+        "role": "Yoga instructor"
+      }
     ],
     "vacant_seats": [
-      { "id": "instructor-3", "status": "vacant", "role": "Yoga instructor", "note": "Need more instructors" },
-      { "id": "instructor-4", "status": "vacant", "role": "Yoga instructor", "note": "Need more instructors" }
+      {
+        "id": "instructor-3",
+        "status": "vacant",
+        "role": "Yoga instructor",
+        "note": "Need more instructors"
+      },
+      {
+        "id": "instructor-4",
+        "status": "vacant",
+        "role": "Yoga instructor",
+        "note": "Need more instructors"
+      }
     ],
-    "need": "More instructors — vacant seats open"
+    "need": "More instructors \u2014 vacant seats open"
+  },
+  "jax_edge": {
+    "label": "Jax edge",
+    "note": "Farm \u224815 minutes from downtown Jacksonville \u2014 metro access without downtown rent."
+  },
+  "franchise_proof": {
+    "label": "Why franchisable (Michael \u2014 ops know-how is the product)",
+    "thesis": "Ops know-how IS what he is selling to investors / franchisees. Battle Row is one proof pillar of a franchisable system.",
+    "pillars": [
+      {
+        "id": "gtm",
+        "label": "GTM sophistication",
+        "note": "Michael rates GTM Series-D+ vs pets / mobile-zoo peers \u2014 cites better than Ardok / Orbis (HIS claim, not an independent ranking).",
+        "claim_owner": "Michael Sheehan",
+        "href": "gtm-seats.html"
+      },
+      {
+        "id": "reporting",
+        "label": "Reporting stack",
+        "note": "Dark ops suite \u2014 RVP \u2192 sales \u2192 BDR cascade + live KPIs.",
+        "href": "rvp-ops.html"
+      },
+      {
+        "id": "team",
+        "label": "Team",
+        "note": "Named seats today + vacant franchise seat map (GTM).",
+        "href": "gtm-seats.html"
+      },
+      {
+        "id": "fences_care",
+        "label": "Fences + animal care SOPs",
+        "note": "Physical enclosure system (Battle Row) \u2014 SOP documentation ongoing; no invented insurance claims.",
+        "href": "ops-battle-row.html"
+      },
+      {
+        "id": "risk",
+        "label": "Risk awareness",
+        "note": "Gray insurance frame documented; capacity unknown marked; no fake carriers.",
+        "href": "rvp-ops.html"
+      },
+      {
+        "id": "segmentation",
+        "label": "Segmentation",
+        "note": "Locked GTM lanes \u2014 mature B2B / also-run / B2C.",
+        "href": "gtm-seats.html"
+      },
+      {
+        "id": "battle_row",
+        "label": "Battle Row physical ops",
+        "note": "Logistics of joy \u00b7 wellness \u00b7 education \u00b7 FOMO \u2014 pens, exhibits, goat yoga.",
+        "href": "ops-battle-row.html"
+      }
+    ],
+    "investor_link": "investor-checklist.html",
+    "no_invented_financials": true
   }
 }
