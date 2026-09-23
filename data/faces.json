@@ -44,6 +44,12 @@
         "label": "Hail Mary",
         "href": "bdr-tam.html?lane=Hail%20Mary",
         "note": "Inspired \u00b7 God-connected \u00b7 Local celeb \u00b7 Philanthropist \u00b7 Local biz-sponsor \u00b7 Bazillionaires \u2014 same BDR GTM offers; public paths only"
+      },
+      {
+        "id": "easy-attack",
+        "label": "Easy Attack",
+        "href": "easy-attack.html",
+        "note": "Mass-touch ideas \u00b7 offer picker \u00b7 manual/light only (no HubSpot)"
       }
     ],
     "investor_links_back": {

@@ -4,7 +4,7 @@
   "title": "Easy shit to attack",
   "face": "sales",
   "chip": "easy-attack",
-  "rule": "No invented FB member counts, emails, phones, titles, or review totals. Sizes unknown unless disk-published. Calendar free-days only from live Google Calendar \u2014 MCP 403 = connect gap. GTM = Violet \u00b7 Subscription \u00b7 Sponsor \u00b7 Big Enterprise (same as BDR). Team-swingable vs founder-only. Convert includes Google/FB review ask when fitting. Offers: LIVE catalogue SKUs + EMBA ladder + Sponsor motion; Franchise = not_ready (gray). No invented pricing. Contact fields only when known on disk. Manual/light plays only \u2014 no HubSpot, no semi-automation pitches.",
+  "rule": "No invented FB member counts, emails, phones, titles, or review totals. Sizes unknown unless disk-published. Calendar free-days only from live Google Calendar \u2014 MCP 403 = connect gap. GTM = Violet \u00b7 Subscription \u00b7 Sponsor \u00b7 Big Enterprise (same as BDR). Offers: Franchise + Consulting LIVE primary; catalogue SKUs + EMBA ladder + Sponsor live; other discussed offers gray. Contact fields only when known on disk \u2014 UI shows Unknown otherwise. Manual/light mass-touch only \u2014 no HubSpot sequences, no semi-automation.",
   "gtm_lanes": {
     "Violet": "Consumer / mom / birthday / mobile \u2014 consumer-inbound + social soft invite",
     "Subscription": "Recurring senior/campus/homeschool field-trip host",
@@ -1284,15 +1284,31 @@
       "id": "franchise",
       "name": "Franchise (Critters / Homestead)",
       "family": "Franchise",
-      "status": "not_ready",
+      "status": "live",
       "sku": "",
-      "price_ref": "\u2014 (no franchise price on disk)",
+      "price_ref": "Conversation / discovery \u2014 no invented franchise fee",
       "gtm_lanes": [],
       "team_swingable": false,
-      "note": "Franchise #0 operator layer exists; franchise-as-sellable-offer is NOT ready. Gray out in picker. Do not pitch."
+      "note": "LIVE primary \u2014 Franchise Layer Zero / regional operator chat. No invented pricing; conversation ask only."
+    },
+    {
+      "id": "consulting-emba",
+      "name": "Consulting (EMBA + homestead)",
+      "family": "Consulting (live)",
+      "status": "live",
+      "sku": "EMBA-CONSULT",
+      "price_ref": "Scoped sprint \u2014 state goals not invented $",
+      "gtm_lanes": [
+        "Big Enterprise",
+        "Sponsor",
+        "Subscription"
+      ],
+      "team_swingable": false,
+      "note": "LIVE primary \u2014 EMBA on Call + homestead ops consulting."
     }
   ],
-  "offers_rule": "Prices only from data/catalogue_close.json or published partner rates on disk. Franchise = not_ready (gray). EMBA consulting = ladder language only, no invented $. Offer picker filters social-sell angles.",
+  "offers_rule": "Prices only from data/catalogue_close.json or published partner rates on disk. LIVE primary: Franchise + Consulting (EMBA + homestead) + catalogue SKUs + EMBA ladder + Sponsor motion. Gray = not_ready (visible, no pitch). No invented pricing. Contact fields always shown \u2014 Unknown if missing. Manual/light plays only \u2014 no HubSpot, no semi-automation.",
   "play_style": "manual_light",
-  "play_style_note": "Manual / light plays only. No HubSpot wiring. No semi-automation / mass-touch sequences. Team uses open link, mailto, text GOAT, Done+notes localStorage."
+  "play_style_note": "Mailto \u00b7 FB posts \u00b7 co-posts \u00b7 calendar fill \u00b7 review asks \u00b7 LinkedIn paste. HubSpot automation parked TBD.",
+  "mass_touch": "data/mass_touch_ideas.json"
 }

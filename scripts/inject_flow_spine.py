@@ -21,6 +21,7 @@ PAGES = {
     "org-whitespace.html": ("sales", ""),
     "catalogue-close.html": ("sales", ""),
     "hail-mary.html": ("sales", "hail-mary"),
+    "easy-attack.html": ("sales", "easy-attack"),
     "investor-home.html": ("investor", "home"),
     "investor-checklist.html": ("investor", "checklist"),
     "investor-capital.html": ("investor", "capital"),

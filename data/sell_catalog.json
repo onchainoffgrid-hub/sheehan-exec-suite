@@ -1,0 +1,142 @@
+{
+  "as_of": "2026-09-22 ET",
+  "lock": "Michael sell-catalog \u2014 live chips compose; gray = visible not ready. Franchise + Consulting (EMBA + homestead) primary.",
+  "primary": [
+    "franchise",
+    "consulting"
+  ],
+  "offers": [
+    {
+      "id": "franchise",
+      "label": "Franchise",
+      "status": "live",
+      "primary": true,
+      "note": "Franchise Layer Zero / regional operator path",
+      "subj": "Franchise chat \u2014 Sheehan Homestead / Critters on Call (Callahan \u00b7 Jax)",
+      "body": "Hi {name},\n\nMichael Sheehan \u2014 founder, Sheehan Homestead / Critters on Call in Callahan (Jax metro). Real farm, hundreds of events, UNF EMBA as a living capstone. We are Franchise Layer Zero: proving the regional operator playbook in public.\n\nOne ask: 15 minutes on whether a franchise / regional operator conversation is useful for you (or who on your side owns that). No deck attached.\n\nLive GTM we already ship alongside: homestead shoutouts \u00b7 goat-statue farm tour \u00b7 mini-zoo sponsor-in-name \u00b7 recurring campus visits.\n\nMichael Sheehan\n914-263-1311 \u00b7 sheehanhomestead.com"
+    },
+    {
+      "id": "consulting",
+      "label": "Consulting (EMBA + homestead)",
+      "status": "live",
+      "primary": true,
+      "note": "EMBA on Call + homestead ops consulting",
+      "subj": "Consulting \u2014 EMBA on Call + homestead ops (quick scope)",
+      "body": "Hi {name},\n\nMichael Sheehan (Sheehan Homestead / Critters on Call). Two consulting doors that are live:\n\n1) EMBA on Call \u2014 BDR / lead reactivation / markup on systems that should already convert\n2) Homestead ops \u2014 events, sponsor packages, franchise-layer playbooks from a working farm\n\nStated targets (goals, not case studies): 80%+ on qualified software/BDR work; ~100% transactional/meeting when qualified.\n\nReply with what is stuck and I will say whether a short consulting sprint fits \u2014 or we start on the donation ladder (shout \u2192 goat-statue tour \u2192 mini-zoo sponsor-in-name).\n\nMichael \u00b7 914-263-1311 \u00b7 sheehanhomestead.com"
+    },
+    {
+      "id": "enterprise",
+      "label": "Enterprise / on-site events",
+      "status": "live",
+      "lanes": [
+        "Regional Enterprise"
+      ],
+      "note": "Mobile petting zoo for ERG / employee / campus",
+      "use_lane_pitch": "Regional Enterprise"
+    },
+    {
+      "id": "subscription",
+      "label": "Subscription (recurring)",
+      "status": "live",
+      "lanes": [
+        "Regional Subscription"
+      ],
+      "note": "Monthly / recurring campus visits",
+      "use_lane_pitch": "Regional Subscription"
+    },
+    {
+      "id": "violet",
+      "label": "Violet / consumer",
+      "status": "live",
+      "lanes": [
+        "Regional Violet ~50%"
+      ],
+      "note": "Birthday / farm visit B2C",
+      "use_lane_pitch": "Regional Violet ~50%"
+    },
+    {
+      "id": "sponsor",
+      "label": "Sponsor GTM",
+      "status": "live",
+      "lanes": [
+        "Sponsor",
+        "Hail Mary"
+      ],
+      "note": "Shoutouts \u00b7 goat-statue \u00b7 mini-zoo sponsor-in-name",
+      "use_lane_pitch": "Sponsor"
+    },
+    {
+      "id": "small-biz",
+      "label": "Small biz pop-up",
+      "status": "live",
+      "lanes": [
+        "Regional Small Biz Programmer"
+      ],
+      "note": "Brewery / indie venue animal pop-up",
+      "use_lane_pitch": "Regional Small Biz Programmer"
+    },
+    {
+      "id": "emba-ladder",
+      "label": "EMBA donation ladder",
+      "status": "live",
+      "lanes": [
+        "EMBA on Call"
+      ],
+      "note": "Shout \u2192 tour \u2192 sponsor \u2192 gift \u2192 consulting",
+      "subj": "EMBA on Call \u2014 shout \u2192 farm tour \u2192 sponsor \u2192 consulting",
+      "body": "Hi {name},\n\nMichael Sheehan (Sheehan Homestead). Sharing the EMBA on Call donation ladder \u2014 pick a rung, no packet required:\n\n1) Free homestead shout\n2) Small donation \u2192 goat-statue farm tour\n3) Mini-zoo sponsor-in-name\n4) Bigger donations\n5) Consulting (BDR / convert old leads)\n\nWhich rung fits you this month?\n\nMichael \u00b7 914-263-1311"
+    },
+    {
+      "id": "hail-row",
+      "label": "Hail Mary (row draft)",
+      "status": "live",
+      "lanes": [
+        "Hail Mary"
+      ],
+      "note": "Per-row inspired draft \u2014 still same GTM offers",
+      "use_hail_row": true
+    },
+    {
+      "id": "critter-coins",
+      "label": "Critter Coins / play-to-earn",
+      "status": "gray",
+      "note": "VISION \u2014 not launch-ready"
+    },
+    {
+      "id": "play-app",
+      "label": "Play app economy sell",
+      "status": "gray",
+      "note": "Curtain / vision \u2014 not ready"
+    },
+    {
+      "id": "saas-bdr-product",
+      "label": "Productized BDR/SaaS SKU",
+      "status": "gray",
+      "note": "Discussed \u2014 not launch-ready as standalone offer"
+    },
+    {
+      "id": "national-territory",
+      "label": "National territory pack",
+      "status": "gray",
+      "note": "Beyond first franchise chat \u2014 not ready"
+    },
+    {
+      "id": "celeb-dunk",
+      "label": "Celebrity dunk / paid booking product",
+      "status": "gray",
+      "note": "Hail Mary \u2260 paid dunk SKU yet"
+    },
+    {
+      "id": "groupon-deals",
+      "label": "Groupon / deal-site packs",
+      "status": "gray",
+      "note": "Hard no / not ready \u2014 protect pricing"
+    },
+    {
+      "id": "investor-cold-sell",
+      "label": "Cold investor deck sell",
+      "status": "gray",
+      "note": "Investor face is readiness \u2014 not a BDR compose SKU"
+    }
+  ]
+}

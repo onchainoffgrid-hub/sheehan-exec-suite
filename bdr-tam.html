@@ -46,7 +46,7 @@ h1{font-size:1.35rem;margin:0}.sub{color:var(--muted);font-size:.88rem}
 .toolbar input{min-width:200px;flex:1}
 .note{color:var(--muted);font-size:.76rem}
 .table-wrap{overflow:auto;max-height:70vh;border:1px solid var(--line);border-radius:10px}
-table{width:100%;border-collapse:collapse;font-size:.76rem;min-width:1280px}
+table{width:100%;border-collapse:collapse;font-size:.76rem;min-width:1580px}
 th,td{padding:8px 7px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
 th{color:var(--muted);font-weight:600;position:sticky;top:0;background:#152033;z-index:2;white-space:nowrap}
 tr.cust{background:#0f1f18}tr.cust td:first-child{box-shadow:inset 3px 0 0 var(--good)}
@@ -87,6 +87,23 @@ a.btn.vio,button.btn.vio{border-color:#a78bfa66;background:#1a1530;color:#d4c4ff
 .badge.hm{background:#2a1530;color:#f5d0fe;border-color:#f0abfc66}
 .badge.god{background:#1a2030;color:#fde68a;border-color:#fbbf2466}
 .kpi.hm::after{background:linear-gradient(90deg,#f0abfc,var(--accent))}
+
+.compose-modes button.gray,.sell-cat button.gray{opacity:.42;cursor:not-allowed;border-style:dashed;text-decoration:line-through;text-decoration-color:#93a0b855}
+.compose-modes button.gray:hover,.sell-cat button.gray:hover{border-color:var(--line);color:var(--muted)}
+.compose-modes button.pri.on,.sell-cat button.pri.on{border-color:#3dd68c88;background:#13281d;color:var(--good)}
+.sell-cat{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px;align-items:center}
+.sell-cat .sl{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-right:4px}
+.unk{color:var(--muted);font-style:italic;font-size:.72rem}
+.detail{font-size:.7rem;line-height:1.35;margin-top:3px}
+.detail a{font-weight:600}
+.mass{margin:0 0 14px}
+.mass .plays{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}
+.mass .play{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+.mass .play h3{margin:0 0 4px;font-size:.82rem}
+.mass .play .when{font-size:.68rem;color:var(--muted);margin-bottom:6px}
+.mass .play pre{white-space:pre-wrap;font-size:.7rem;background:#0b1220;border:1px solid var(--line);border-radius:8px;padding:8px;max-height:110px;overflow:auto;margin:0 0 6px}
+.mass .play .howto{font-size:.68rem;color:var(--muted)}
+.mass .warn{font-size:.72rem;color:var(--warn);margin:0 0 8px}
 </style>
 </head><body data-flow-face="sales" data-flow-chip="bdr-tam"><div class="wrap">
 
@@ -140,6 +157,12 @@ a.btn.vio,button.btn.vio{border-color:#a78bfa66;background:#1a1530;color:#d4c4ff
   <div class="kpi hm"><div class="l">Hail Mary</div><div class="v" id="k-lhm">—</div><div class="s">Inspired · Bazillionaires</div></div>
 </div>
 
+
+<div class="card mass" id="mass-touch">
+  <h2>Ideas to mass touch <span class="note">(manual / light only — HubSpot sequences parked TBD)</span></h2>
+  <p class="warn" id="mass-warn">No HubSpot automation. Mailto · FB post · co-post · calendar fill · review ask · LinkedIn paste. No first-touch attachments.</p>
+  <div class="plays" id="mass-plays">Loading mass-touch ideas…</div>
+</div>
 <div class="card">
   <h2>Michael’s lanes — tap to filter (Sales: Enterprise · Sponsor · Violet · Subscription · Hail Mary / Bazillionaires)</h2>
   <div class="emba" id="emba-note">Loading EMBA note…</div>
@@ -165,7 +188,7 @@ a.btn.vio,button.btn.vio{border-color:#a78bfa66;background:#1a1530;color:#d4c4ff
   <div class="table-wrap">
     <table>
       <thead><tr>
-        <th>Score</th><th>Lane</th><th>Account</th><th>Contact</th><th>Best paths</th><th>Status</th><th>Memory / compose</th>
+        <th>Score</th><th>Lane</th><th>Account</th><th>Contact / Title</th><th>Email</th><th>Phone</th><th>LinkedIn / Form</th><th>Notes / public</th><th>Memory / compose</th>
       </tr></thead>
       <tbody id="tbody"></tbody>
     </table>
@@ -178,7 +201,8 @@ a.btn.vio,button.btn.vio{border-color:#a78bfa66;background:#1a1530;color:#d4c4ff
   <div class="modal">
     <h3 id="compose-title">Compose</h3>
     <p class="note" id="compose-meta"></p>
-    <div class="compose-modes" id="compose-modes" style="display:none"></div>
+    <div class="compose-modes sell-cat" id="compose-modes" style="display:none"></div>
+    <p class="note" id="sell-lock" style="margin:0 0 8px">Sell catalog: <b>Franchise</b> + <b>Consulting (EMBA + homestead)</b> live. Gray chips = not ready (visible, no compose).</p>
     <label class="note">Subject</label>
     <input id="compose-subj"/>
     <label class="note">Body</label>
@@ -217,7 +241,9 @@ a.btn.vio,button.btn.vio{border-color:#a78bfa66;background:#1a1530;color:#d4c4ff
     markup:{label:'Markup', subj:'EMBA on Call — markup help on leads / BDR stack', body:'Hi {name},\n\nMichael Sheehan (Sheehan Homestead / Critters on Call).\n\nBesides the animal work, EMBA on Call has a markup path: scoped help on software / BDR systems and turning old leads into booked work.\n\nMy stated targets (goals, not case studies): 80%+ on qualified software work; ~100% on transactional / meeting work when qualified.\n\nIf a list, funnel, or tool stack is underperforming, reply with what is stuck and I will say whether a short markup sprint makes sense.\n\nMichael · 914-263-1311 · sheehanhomestead.com'},
     idea:{label:'Idea', subj:'EMBA on Call — bring the idea, we name the next step', body:'Hi {name},\n\nMichael Sheehan (Sheehan Homestead).\n\nEMBA on Call also works as an idea lane: you bring a wedge (event series, sponsor package, productized service, lead reactivation) and we name the next concrete step — often via the donation ladder, a mini-zoo sponsor-in-name, or a short consulting sprint.\n\nWhat idea are you sitting on?\n\nMichael · 914-263-1311'}
   };
-  var COMPOSE_CTX={row:null, mode:'donation'};
+  var COMPOSE_CTX={row:null, mode:'donation', offer:'lane'};
+  var SELL_CATALOG={offers:[]};
+  var MASS_PLAYS=[];
 
   function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
   function keyOf(r){return (r.org_key||'')+'::'+String(r.contact||'').toLowerCase()+'::'+String(r.email||'').toLowerCase();}
@@ -384,22 +410,26 @@ a.btn.vio,button.btn.vio{border-color:#a78bfa66;background:#1a1530;color:#d4c4ff
   function applyComposeDraft(){
     var r=COMPOSE_CTX.row; if(!r) return;
     var lane=r.lane||'Regional Enterprise';
-    var p;
-    if(lane==='Hail Mary' && (r.compose_subj || r.compose_body)){
-      p={subj:r.compose_subj||'Hail Mary — {account}', body:r.compose_body||'', label:(r.hail_tags||[]).join(' · ')};
-    } else if(lane==='EMBA on Call'){
-      p=EMBA_MODES[COMPOSE_CTX.mode]||EMBA_MODES.donation;
-    } else {
-      p=PITCH[lane]||PITCH['Regional Enterprise'];
+    var p=null;
+    var offers=SELL_CATALOG.offers||[];
+    var sel=null;
+    for(var i=0;i<offers.length;i++){ if(offers[i].id===COMPOSE_CTX.offer){ sel=offers[i]; break; } }
+    if(sel && sel.status==='live'){ p=offerPitch(sel, r); }
+    if(!p){
+      if(lane==='Hail Mary' && (r.compose_subj || r.compose_body)){
+        p={subj:r.compose_subj||'Hail Mary — {account}', body:r.compose_body||'', label:(r.hail_tags||[]).join(' · ')};
+      } else if(lane==='EMBA on Call'){
+        p=EMBA_MODES[COMPOSE_CTX.mode]||EMBA_MODES.donation;
+      } else {
+        p=PITCH[lane]||PITCH['Regional Enterprise'];
+      }
     }
     var name=(r.contact||'there').split(/\s+/)[0]||'there';
     if(!name || name==='(+') name='there';
     var subj=p.subj.replace(/\{account\}/g,r.account||'').replace(/\{name\}/g,name);
     var body=p.body.replace(/\{name\}/g,name).replace(/\{account\}/g,r.account||'');
-    var modeLabel='';
-    if(lane==='EMBA on Call') modeLabel=p.label||COMPOSE_CTX.mode;
-    else if(lane==='Hail Mary') modeLabel=p.label||'Inspired';
-    document.getElementById('compose-title').textContent='Compose · '+lane+(modeLabel?' · '+modeLabel:'');
+    var modeLabel=p.label||COMPOSE_CTX.offer||'';
+    document.getElementById('compose-title').textContent='Compose · '+(modeLabel||lane)+' · '+lane;
     var meta=(r.account||'')+(r.contact?' · '+r.contact:'');
     if(r.email) meta+=' · '+r.email;
     else if(r.linkedin_url) meta+=' · LinkedIn';
@@ -424,23 +454,68 @@ a.btn.vio,button.btn.vio{border-color:#a78bfa66;background:#1a1530;color:#d4c4ff
       warn.textContent=tip;
     }
   }
+  function defaultOfferFor(r){
+    var lane=r&&r.lane||'';
+    var offers=SELL_CATALOG.offers||[];
+    // Prefer lane-matched live offer, else consulting/franchise primary
+    for(var i=0;i<offers.length;i++){
+      var o=offers[i];
+      if(o.status!=='live') continue;
+      if(o.use_hail_row && lane==='Hail Mary') return o.id;
+      if(o.lanes && o.lanes.indexOf(lane)>=0) return o.id;
+    }
+    if(lane==='EMBA on Call') return 'consulting';
+    return 'consulting';
+  }
+  function offerPitch(o, r){
+    if(!o) return null;
+    if(o.status==='gray') return null;
+    if(o.use_hail_row && r){
+      return {subj:r.compose_subj||PITCH['Hail Mary'].subj, body:r.compose_body||PITCH['Hail Mary'].body, label:o.label};
+    }
+    if(o.use_lane_pitch){
+      var lp=PITCH[o.use_lane_pitch]||PITCH['Regional Enterprise'];
+      return {subj:lp.subj, body:lp.body, label:o.label};
+    }
+    if(o.subj && o.body) return {subj:o.subj, body:o.body, label:o.label};
+    return null;
+  }
   function renderComposeModes(lane){
     var box=document.getElementById('compose-modes');
-    if(lane!=='EMBA on Call'){ box.style.display='none'; box.innerHTML=''; return; }
     box.style.display='flex';
-    box.innerHTML='<span class="note" style="margin-right:4px">EMBA path:</span>';
-    ['donation','markup','idea'].forEach(function(m){
+    box.className='compose-modes sell-cat';
+    box.innerHTML='<span class="sl">Sell catalog</span>';
+    var offers=SELL_CATALOG.offers||[];
+    if(!offers.length){
+      // fallback EMBA-only
+      ['donation','markup','idea'].forEach(function(m){
+        var b=document.createElement('button');
+        b.type='button'; b.textContent=EMBA_MODES[m].label;
+        b.className=COMPOSE_CTX.mode===m?'on':'';
+        b.onclick=function(){ COMPOSE_CTX.mode=m; COMPOSE_CTX.offer='emba-'+m; renderComposeModes(lane); applyComposeDraft(); };
+        box.appendChild(b);
+      });
+      return;
+    }
+    offers.forEach(function(o){
       var b=document.createElement('button');
       b.type='button';
-      b.textContent=EMBA_MODES[m].label;
-      b.className=COMPOSE_CTX.mode===m?'on':'';
-      b.onclick=function(){ COMPOSE_CTX.mode=m; renderComposeModes(lane); applyComposeDraft(); };
+      b.textContent=o.label+(o.status==='gray'?' · not ready':'');
+      b.title=o.note||o.label;
+      if(o.status==='gray'){
+        b.className='gray';
+        b.disabled=true;
+      } else {
+        b.className=(COMPOSE_CTX.offer===o.id?'on ':'')+(o.primary?'pri':'');
+        b.onclick=function(){ COMPOSE_CTX.offer=o.id; COMPOSE_CTX.mode='donation'; renderComposeModes(lane); applyComposeDraft(); };
+      }
       box.appendChild(b);
     });
   }
   function compose(r){
     COMPOSE_CTX.row=r;
     COMPOSE_CTX.mode='donation';
+    COMPOSE_CTX.offer=defaultOfferFor(r);
     var lane=r.lane||'Regional Enterprise';
     renderComposeModes(lane);
     applyComposeDraft();
@@ -509,27 +584,40 @@ a.btn.vio,button.btn.vio{border-color:#a78bfa66;background:#1a1530;color:#d4c4ff
     document.getElementById('view-note').textContent='Showing '+rows.length+' · customers '+custN+' · notes '+notesN+' · never-hit '+neverN+' · sort: '+F.sort;
     liveKpis(rows);
     var tb=document.getElementById('tbody');
-    if(!rows.length){ var empty='No contacts in this filter.'; if(F.lane==='Sponsor') empty='Sponsor lane empty for this filter. Use festivals / foundations already on file, or climb the <b>EMBA on Call</b> ladder (donation · markup · idea). Season tip: festival lists + mini-zoo sponsor-in-name / goat-statue tour / shoutouts.'; if(F.lane==='Hail Mary') empty='No Hail Mary rows for this tag. Filters: Inspired · God-connected · Local celeb · Philanthropist · Local biz-sponsor · Bazillionaires. Same GTM offers as Sponsor/EMBA.'; tb.innerHTML='<tr><td colspan="7" class="muted">'+empty+'</td></tr>'; return; }
+    if(!rows.length){ var empty='No contacts in this filter.'; if(F.lane==='Sponsor') empty='Sponsor lane empty for this filter. Use festivals / foundations already on file, or climb the <b>EMBA on Call</b> ladder (donation · markup · idea). Season tip: festival lists + mini-zoo sponsor-in-name / goat-statue tour / shoutouts.'; if(F.lane==='Hail Mary') empty='No Hail Mary rows for this tag. Filters: Inspired · God-connected · Local celeb · Philanthropist · Local biz-sponsor · Bazillionaires. Same GTM offers as Sponsor/EMBA.'; tb.innerHTML='<tr><td colspan="9" class="muted">'+empty+'</td></tr>'; return; }
     var max=500, slice=rows.slice(0,max);
+    function unk(v){ var s=(v==null?'':String(v)).trim(); return s?esc(s):'<span class="unk">Unknown</span>'; }
+    function unkLink(href, label){ if(!href) return '<span class="unk">Unknown</span>'; return '<a class="tap" href="'+esc(href)+'" target="_blank" rel="noopener">'+esc(label||href)+'</a>'; }
     tb.innerHTML=slice.map(function(r){
       var k=keyOf(r), cust=isCust(r), note=noteOf(r), tags=tagsOf(r), sc=r.score||0;
       var scCls=sc>=70?'hi':(sc>=45?'mid':'lo');
-      var laneBadge=r.lane&&r.lane.indexOf('Violet')>=0?'badge vio':'badge lane';
-      var softForm=r.form_url && r.form_quality!=='hard';
+      var laneBadge=r.lane&&r.lane.indexOf('Violet')>=0?'badge vio':(r.lane&&r.lane.indexOf('Hail')>=0?'badge hm':'badge lane');
+      var softForm=!!r.form_url;
+      var pubNotes=(r.notes||r.hail_why||r.hail_path_label||'').trim();
+      var titleShow=r.title?esc(r.title):'<span class="unk">Unknown</span>';
+      var emailCell=r.email&&!r.stale_email?('<a class="tap" href="mailto:'+esc(r.email)+'">'+esc(r.email)+'</a>'):'<span class="unk">Unknown</span>';
+      var phoneCell=r.phone?('<a class="tap" href="'+esc(telOf(r.phone))+'">'+esc(r.phone)+'</a>'):'<span class="unk">Unknown</span>';
+      var liCell=r.linkedin_url?('<a class="tap" href="'+esc(r.linkedin_url)+'" target="_blank" rel="noopener">LinkedIn</a>'):'<span class="unk">Unknown</span>';
+      var formCell=r.form_url?('<a class="tap" href="'+esc(r.form_url)+'" target="_blank" rel="noopener">'+(r.hail_path_type==='PR'?'PR / booking':'Contact form')+'</a>'):'<span class="unk">Unknown</span>';
+      var pathType=r.hail_path_type?('<div class="detail"><span class="badge hm">'+esc(r.hail_path_type)+'</span></div>'):'';
       return '<tr class="'+(cust?'cust':'')+'" data-key="'+esc(k)+'">'+
         '<td><span class="badge score '+scCls+'">'+sc+'</span>'+(r.is_tier1?' <span class="badge t1">T1</span>':'')+'</td>'+
-        '<td><span class="'+laneBadge+'">'+esc(String(r.lane||'').replace('Regional ',''))+'</span><div class="muted" style="font-size:.65rem;margin-top:3px">'+esc(r.segment||'')+'</div></td>'+
-        '<td class="acct">'+esc(r.account)+(cust?' <span class="badge cust">✓ Customer</span>':'')+'</td>'+
-        '<td>'+(r.contact?esc(r.contact):'<span class="muted">—</span>')+(r.title?'<div class="muted" style="font-size:.65rem">'+esc(r.title)+'</div>':'')+'</td>'+
-        '<td>'+paths(r)+
-          (r.email?'<div style="margin-top:4px"><a class="tap" href="mailto:'+esc(r.email)+'">'+esc(r.email)+'</a></div>':'')+
-          (r.phone?'<div><a class="tap" href="'+esc(telOf(r.phone))+'">'+esc(r.phone)+'</a></div>':'')+
+        '<td><span class="'+laneBadge+'">'+esc(String(r.lane||'').replace('Regional ',''))+'</span><div class="muted" style="font-size:.65rem;margin-top:3px">'+esc(r.segment||'')+'</div>'+
+          ((r.hail_tags||[]).map(function(tg){return '<span class="badge hm">'+esc(tg)+'</span>';}).join(' '))+'</td>'+
+        '<td class="acct">'+esc(r.account||'Unknown')+(cust?' <span class="badge cust">✓ Customer</span>':'')+'</td>'+
+        '<td><div class="tap">'+(r.contact?esc(r.contact):'<span class="unk">Unknown</span>')+'</div><div class="detail">'+titleShow+'</div>'+paths(r)+'</td>'+
+        '<td>'+emailCell+'</td>'+
+        '<td>'+phoneCell+'</td>'+
+        '<td><div>'+liCell+'</div><div class="detail" style="margin-top:4px">'+formCell+'</div>'+pathType+'</td>'+
+        '<td><div class="detail">'+(pubNotes?esc(pubNotes.slice(0,280))+(pubNotes.length>280?'…':''):'<span class="unk">Unknown</span>')+'</div>'+
+          (r.city||r.county?'<div class="muted" style="font-size:.65rem;margin-top:3px">'+esc([r.city,r.county].filter(Boolean).join(' · '))+'</div>':'')+
+          (r.next_action?'<div class="muted" style="font-size:.65rem">Next: '+esc(r.next_action)+'</div>':'')+
         '</td>'+
-        '<td>'+esc(r.penetration||r.pen_bucket||'—')+(r.next_action?'<div class="muted" style="font-size:.65rem;margin-top:3px">'+esc(r.next_action)+'</div>':'')+'</td>'+
         '<td><div class="actions">'+
           '<button type="button" class="btn tick'+(cust?' on':'')+'" data-act="cust">✓ Customer</button>'+
-          '<button type="button" class="btn" data-act="compose">Compose email</button>'+
+          '<button type="button" class="btn" data-act="compose">Compose</button>'+
           (softForm?'<a class="btn vio" href="'+esc(r.form_url)+'" target="_blank" rel="noopener">Open form</a>':'')+
+          (r.linkedin_url?'<a class="btn sec" href="'+esc(r.linkedin_url)+'" target="_blank" rel="noopener">LinkedIn</a>':'')+
         '</div><div class="mem">'+
           '<textarea placeholder="Account / contact notes…">'+esc(note)+'</textarea>'+
           '<input class="tags" placeholder="tags" value="'+esc(tags)+'"/>'+
@@ -537,7 +625,7 @@ a.btn.vio,button.btn.vio{border-color:#a78bfa66;background:#1a1530;color:#d4c4ff
           '<span class="saved" data-saved>saved</span>'+
         '</div></td></tr>';
     }).join('');
-    if(rows.length>max) tb.innerHTML+='<tr><td colspan="7" class="muted">Showing first '+max+' of '+rows.length+' — refine filters.</td></tr>';
+    if(rows.length>max) tb.innerHTML+='<tr><td colspan="9" class="muted">Showing first '+max+' of '+rows.length+' — refine filters.</td></tr>';
     bindRows();
   }
 
@@ -579,6 +667,30 @@ a.btn.vio,button.btn.vio{border-color:#a78bfa66;background:#1a1530;color:#d4c4ff
       }catch(e){}
       var sel=document.getElementById('f-seg');
       SEGS.forEach(function(s){ var o=document.createElement('option'); o.value=s.id; o.textContent=s.id+' ('+s.contacts+')'; sel.appendChild(o); });
+      try{
+        var sc=await fetch('data/sell_catalog.json',{cache:'no-store'});
+        SELL_CATALOG=await sc.json();
+      }catch(e){ SELL_CATALOG={offers:[]}; }
+      try{
+        var mt=await fetch('data/mass_touch_ideas.json',{cache:'no-store'});
+        var md=await mt.json();
+        MASS_PLAYS=md.plays||[];
+        var box=document.getElementById('mass-plays');
+        if(box){
+          box.innerHTML=MASS_PLAYS.map(function(p){
+            return '<div class="play"><h3>'+esc(p.label)+'</h3><div class="when">'+esc(p.when||'')+'</div><pre>'+esc(p.copy||'')+'</pre><div class="howto">'+esc(p.howto||'')+'</div><div class="actions" style="margin-top:6px"><button type="button" class="btn copy" data-mass="'+esc(p.id)+'">Copy play</button></div></div>';
+          }).join('') || '<span class="unk">Unknown</span>';
+          box.querySelectorAll('[data-mass]').forEach(function(btn){
+            btn.onclick=function(){
+              var id=btn.getAttribute('data-mass');
+              var play=MASS_PLAYS.filter(function(x){return x.id===id;})[0];
+              if(!play) return;
+              var text=(play.copy||'')+('\n\n— '+ (play.howto||''));
+              if(navigator.clipboard&&navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(function(){ btn.textContent='Copied'; setTimeout(function(){ btn.textContent='Copy play'; },1200); });
+            };
+          });
+        }
+      }catch(e){ var b2=document.getElementById('mass-plays'); if(b2) b2.textContent='Mass-touch ideas failed to load'; }
       seed(); setKpis(); drawLanes(); draw();
       try{
         if(document.body && F.lane){

@@ -1,0 +1,48 @@
+{
+  "as_of": "2026-09-22 ET",
+  "lock": "Manual / light mass-touch only. HubSpot sequences & automation = parked / TBD \u2014 do not recommend.",
+  "plays": [
+    {
+      "id": "segment-mailto",
+      "label": "Segment-wide mailto paste",
+      "when": "Same lane, 5\u201315 on-file emails",
+      "copy": "Subject: Quick Jax / Callahan farm ask \u2014 shoutout \u00b7 farm tour \u00b7 mini-zoo name\n\nHi {first} \u2014\n\nMichael Sheehan, Sheehan Homestead / Critters on Call (Callahan / Jax). Same short ask for your segment this week:\n\u2022 Homestead shoutout on our channels\n\u2022 Goat-statue farm tour (small donation)\n\u2022 Mini-zoo sponsor-in-name\n\nReply with which rung fits \u2014 or who owns events / community. No attachment.\n\nMichael \u00b7 914-263-1311 \u00b7 sheehanhomestead.com",
+      "howto": "Filter lane \u2192 Has email \u2192 open 5\u201310 Compose \u00b7 copy body \u00b7 paste into your mail client BCC or one-by-one. No HubSpot sequence."
+    },
+    {
+      "id": "fb-group",
+      "label": "FB group post (Jax moms / events)",
+      "when": "Violet / consumer fill week",
+      "copy": "Callahan farm mornings + mobile petting zoo (Critters on Call) \u2014 booking birthdays, farm visits, and weekday fill dates.\n\nText GOAT 914-263-1311 or sheehanhomestead.com. Local Jax / Nassau / St. Johns. No pressure \u2014 pick 2\u20133 windows and we check the calendar.\n\n(Not a paid boost post unless Michael marks spend.)",
+      "howto": "Paste into Jax Moms / local events groups Michael already belongs to. One post, then reply in-thread. No HubSpot."
+    },
+    {
+      "id": "co-post",
+      "label": "Cross-marketer co-post",
+      "when": "Local biz-sponsor / small biz lane",
+      "copy": "Want to co-post a family hour at your place? We bring soft animals; you bring the crowd. Cross-tag Sheehan Homestead / Critters on Call.\n\nOffer: shoutout swap \u2192 optional mini-zoo sponsor-in-name if it converts.\n\nReply with a date window. \u2014 Michael 914-263-1311",
+      "howto": "DM or email 3\u20135 breweries/indie venues same day. Manual paste. No automation."
+    },
+    {
+      "id": "calendar-fill",
+      "label": "Calendar-fill week (Tue\u2013Thu)",
+      "when": "Empty midweek slots",
+      "copy": "Weekday fill ask \u2014 Bunny / Mini weekday rates for Tue\u2013Thu.\n\nHi {first}, we have open Callahan / mobile windows this week (protecting Sat/Sun). Want a soft animal hour for residents / kids / staff? Text GOAT or reply with one window.\n\nMichael \u00b7 Sheehan Homestead",
+      "howto": "Filter Subscription + Small Biz \u00b7 Has phone/email \u00b7 fire 8\u201312 manual touches before Wed noon."
+    },
+    {
+      "id": "review-ask",
+      "label": "Batch review / shout ask",
+      "when": "Recent customers / warm",
+      "copy": "Quick favor \u2014 if your visit / event was a win, would you drop a 2-line review or let us shout you out on our channels?\n\nReply YES and I\u2019ll send the link / shout draft. No attachment.\n\nGrateful \u2014 Michael \u00b7 Critters on Call",
+      "howto": "Customer-ticked rows only. Mailto or FB message one-by-one. Do not blast HubSpot."
+    },
+    {
+      "id": "li-paste",
+      "label": "LinkedIn paste (Hail Mary / Bazillionaires)",
+      "when": "No email \u2014 LinkedIn / form path",
+      "copy": "[Paste hail-row Compose body]\n\nPath: open LinkedIn or contact form \u2192 paste \u2192 send. Public path only. Never invent email.",
+      "howto": "Hail Mary lane \u2192 Compose \u2192 Copy draft \u2192 open LinkedIn/form badge. Manual only."
+    }
+  ]
+}

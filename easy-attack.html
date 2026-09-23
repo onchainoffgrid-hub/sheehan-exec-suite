@@ -71,6 +71,15 @@ button.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
 .contact a{font-weight:600}
 .offer-pills{display:flex;flex-wrap:wrap;gap:5px;margin:6px 0}
 @media(max-width:700px){.wrap{padding:12px}h1{font-size:1.15rem}}
+
+.mass .plays{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin-top:8px}
+.mass .play{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+.mass .play h3{margin:0 0 4px;font-size:.82rem}
+.mass .play .when{font-size:.68rem;color:var(--muted);margin-bottom:6px}
+.mass .play pre{white-space:pre-wrap;font-size:.7rem;background:#0b1220;border:1px solid var(--line);border-radius:8px;padding:8px;max-height:110px;overflow:auto;margin:0 0 6px}
+.mass .play .howto{font-size:.68rem;color:var(--muted)}
+.mass .warn{font-size:.72rem;color:var(--warn);margin:0 0 8px}
+
 </style>
 </head>
 <body data-flow-face="sales" data-flow-chip="easy-attack"><div class="wrap">
@@ -86,7 +95,7 @@ button.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
 <header>
   <div>
     <h1>Easy shit to attack</h1>
-    <div class="sub">Sell subchip · same GTM · offer picker (Franchise gray) · team-swingable · review ask · manual/light only · <span id="asof">—</span></div>
+    <div class="sub">Sell subchip · same GTM · offer picker (Franchise + Consulting LIVE) · team-swingable · review ask · manual/light only · <span id="asof">—</span></div>
   </div>
   <div class="sub">Text <b>GOAT</b> → <a href="tel:9142631311">914-263-1311</a></div>
 </header>
@@ -98,6 +107,13 @@ button.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
   <div class="kpi"><div class="l">Team-swingable</div><div class="v" id="k-t">—</div><div class="s">open items</div></div>
   <div class="kpi"><div class="l">Calendar</div><div class="v" id="k-c">GAP</div><div class="s" id="k-c-s">connect needed</div></div>
   <div class="kpi"><div class="l">Done</div><div class="v" id="k-d">0</div><div class="s">local only</div></div>
+</div>
+
+
+<div class="card mass" id="mass-touch">
+  <h2>Ideas to mass touch <span class="note">manual / light only</span></h2>
+  <p class="warn">No HubSpot sequences · no semi-automation. Mailto · FB post · co-post · calendar fill · review ask · LinkedIn paste. No first-touch attachments.</p>
+  <div class="plays" id="mass-plays">Loading…</div>
 </div>
 
 <div class="tabs" id="tabs">
@@ -114,7 +130,7 @@ button.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
   <select id="f-done"><option value="">Done: all</option><option value="open">Open</option><option value="done">Done</option></select>
 </div>
 <div class="offer-bar" id="offer-bar"><span class="olbl">Offers</span></div>
-<p class="note" id="offer-hint">Pick a LIVE offer to filter angles. Not-ready (Franchise) stays gray — no invent pricing. Manual/light only · no HubSpot · no semi-automation.</p>
+<p class="note" id="offer-hint">Pick a LIVE offer to filter angles. <b>Franchise</b> + <b>Consulting (EMBA + homestead)</b> are LIVE primary. Gray chips = not ready (visible, no pitch). Manual/light only · no HubSpot · no semi-automation.</p>
 
 <div id="sec-groups" class="section on"></div>
 <div id="sec-ops" class="section"></div>
@@ -155,14 +171,17 @@ button.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
   }
   function contactBlock(x){
     var bits=[];
-    if(x.title) bits.push('<div class="contact"><b>Title:</b> '+esc(x.title)+'</div>');
-    if(x.email) bits.push('<div class="contact"><b>Email:</b> <a href="mailto:'+esc(x.email)+'">'+esc(x.email)+'</a></div>');
-    if(x.phone) bits.push('<div class="contact"><b>Phone:</b> <a href="tel:'+esc(String(x.phone).replace(/[^\d+]/g,''))+'">'+esc(x.phone)+'</a></div>');
-    if(x.contacts_note) bits.push('<div class="contact">'+esc(x.contacts_note)+'</div>');
-    (x.extra_links||[]).forEach(function(l){
-      if(l&&l.url) bits.push('<div class="contact"><a href="'+esc(l.url)+'" target="_blank" rel="noopener">'+esc(l.label||l.url)+'</a></div>');
-    });
-    return bits.join('')||'<div class="contact">No public email/phone on disk — link/path only.</div>';
+    bits.push('<div class="contact"><b>Title:</b> '+(x.title?esc(x.title):'<span style="opacity:.6;font-style:italic">Unknown</span>')+'</div>');
+    bits.push('<div class="contact"><b>Email:</b> '+(x.email?('<a href="mailto:'+esc(x.email)+'">'+esc(x.email)+'</a>'):'<span style="opacity:.6;font-style:italic">Unknown</span>')+'</div>');
+    bits.push('<div class="contact"><b>Phone:</b> '+(x.phone?('<a href="tel:'+esc(String(x.phone).replace(/[^\d+]/g,''))+'">'+esc(x.phone)+'</a>'):'<span style="opacity:.6;font-style:italic">Unknown</span>')+'</div>');
+    var links=[];
+    (x.extra_links||[]).forEach(function(l){ if(l&&l.url) links.push('<a href="'+esc(l.url)+'" target="_blank" rel="noopener">'+esc(l.label||'Link')+'</a>'); });
+    if(x.url) links.push('<a href="'+esc(x.url)+'" target="_blank" rel="noopener">Page</a>');
+    if(x.linkedin_url) links.push('<a href="'+esc(x.linkedin_url)+'" target="_blank" rel="noopener">LinkedIn</a>');
+    if(x.form_url) links.push('<a href="'+esc(x.form_url)+'" target="_blank" rel="noopener">Contact form</a>');
+    bits.push('<div class="contact"><b>Links:</b> '+(links.length?links.join(' · '):'<span style="opacity:.6;font-style:italic">Unknown</span>')+'</div>');
+    bits.push('<div class="contact"><b>Notes:</b> '+(x.contacts_note||x.note||x.why?esc(x.contacts_note||x.note||x.why):'<span style="opacity:.6;font-style:italic">Unknown</span>')+'</div>');
+    return bits.join('');
   }
   function filters(){
     return {
@@ -315,7 +334,7 @@ button.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
       '<p class="note">Open / lightly booked days (2–4 weeks). Team-swingable: Mommy &amp; Me, review hour, or one manual social push (Violet / Subscription). Founder-only: NCHE / named-client rebooks.</p>'+
       '<p class="note">Convert: booking · <b>Google/FB review ask</b> · Gold/VIP · text GOAT. Manual only — no HubSpot sequences. No invented free days or review counts.</p>'+
       (DATA.google_review_link?'<p class="note">Review link on file: <a href="'+esc(DATA.google_review_link)+'" target="_blank" rel="noopener">'+esc(DATA.google_review_link)+'</a> — '+esc(DATA.google_review_note||'')+'</p>':'')+
-      '<p class="note">Offer filter above still applies — Franchise stays gray.</p>'+
+      '<p class="note">Offer filter above — Franchise + Consulting LIVE; gray = not ready.</p>'+
     '</div>';
     document.getElementById('sec-cal').innerHTML=html;
   }
@@ -381,6 +400,27 @@ button.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
       var res=await fetch('data/easy_attack.json',{cache:'no-store'});
       DATA=await res.json();
       (DATA.offers||[]).forEach(function(o){ OFFER_BY[o.id]=o; });
+      try{
+        var mt=await fetch('data/mass_touch_ideas.json',{cache:'no-store'});
+        var md=await mt.json();
+        var plays=md.plays||[];
+        var box=document.getElementById('mass-plays');
+        if(box){
+          box.innerHTML=plays.map(function(p){
+            return '<div class="play"><h3>'+esc(p.label)+'</h3><div class="when">'+esc(p.when||'')+'</div><pre>'+esc(p.copy||'')+'</pre><div class="howto">'+esc(p.howto||'')+'</div><div class="actions" style="margin-top:6px"><button type="button" class="btn sec" data-mass="'+esc(p.id)+'">Copy play</button></div></div>';
+          }).join('')||'<span class="note">Unknown</span>';
+          box.querySelectorAll('[data-mass]').forEach(function(btn){
+            btn.onclick=function(){
+              var id=btn.getAttribute('data-mass');
+              var play=plays.filter(function(x){return x.id===id;})[0];
+              if(!play) return;
+              var text=(play.copy||'')+'\n\n— '+(play.howto||'');
+              if(navigator.clipboard&&navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(function(){ btn.textContent='Copied'; setTimeout(function(){ btn.textContent='Copy play'; },1200); });
+            };
+          });
+        }
+      }catch(e){ var b=document.getElementById('mass-plays'); if(b) b.textContent='Mass-touch load failed'; }
+
       if(DATA.localStorage_keys){
         K_DONE=DATA.localStorage_keys.done||K_DONE;
         K_NOTES=DATA.localStorage_keys.notes||K_NOTES;

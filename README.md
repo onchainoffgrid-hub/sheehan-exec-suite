@@ -83,6 +83,8 @@ See [LAYOUT_CONTRACT.md](LAYOUT_CONTRACT.md) for shared visual tokens and Money 
 - BDR TAM: https://onchainoffgrid-hub.github.io/sheehan-exec-suite/bdr-tam.html
 - Hail Mary (TAM lane): https://onchainoffgrid-hub.github.io/sheehan-exec-suite/bdr-tam.html?lane=Hail%20Mary
 - Bazillionaires filter: https://onchainoffgrid-hub.github.io/sheehan-exec-suite/bdr-tam.html?lane=Hail%20Mary&hail=Bazillionaires
+- Easy Attack (mass-touch): https://onchainoffgrid-hub.github.io/sheehan-exec-suite/easy-attack.html
+- Sell catalog: Franchise + Consulting LIVE; gray = not ready · `data/sell_catalog.json` · mass plays `data/mass_touch_ideas.json` (no HubSpot)
 - Jax Buzz: https://onchainoffgrid-hub.github.io/sheehan-exec-suite/jax-local-buzz.html
 
 

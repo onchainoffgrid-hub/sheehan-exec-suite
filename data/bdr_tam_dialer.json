@@ -121396,5 +121396,7 @@
     "data": "data/hail_mary.json",
     "gtm": "same as BDR Sponsor/EMBA offer language"
   },
-  "hail_mary_note": "Hail Mary \u2014 inspired targets (national + Jax). Filters: Inspired \u00b7 God-connected \u00b7 Local celeb \u00b7 Philanthropist \u00b7 Local biz-sponsor \u00b7 Bazillionaires. Compose uses SAME BDR GTM offers (shoutouts \u00b7 goat-statue farm tour \u00b7 mini-zoo sponsor-in-name \u00b7 EMBA ladder). Faith-honest where authentic. Public paths only \u2014 never invent."
+  "hail_mary_note": "Hail Mary \u2014 inspired targets (national + Jax). Filters: Inspired \u00b7 God-connected \u00b7 Local celeb \u00b7 Philanthropist \u00b7 Local biz-sponsor \u00b7 Bazillionaires. Compose uses SAME BDR GTM offers (shoutouts \u00b7 goat-statue farm tour \u00b7 mini-zoo sponsor-in-name \u00b7 EMBA ladder). Faith-honest where authentic. Public paths only \u2014 never invent.",
+  "sell_catalog": "data/sell_catalog.json",
+  "mass_touch_ideas": "data/mass_touch_ideas.json"
 }
