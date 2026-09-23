@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Franchise Peer Cities · Sheehan Homestead</title>
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--bad:#ff5d6c;--violet:#a78bfa;--money:#f0abfc;--joy:#fbbf24}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1280px;margin:0 auto;padding:22px}
+.apps{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 12px;padding:10px 12px;border:1px solid var(--line);border-radius:14px;background:#0f1728}
+.apps .lbl{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-right:4px}
+.apps a{background:var(--card);border:1px solid #3dd68c55;color:var(--text);padding:6px 10px;border-radius:999px;font-size:.78rem;text-decoration:none;font-weight:600}
+.apps a.sec{border-color:var(--line);color:#c5d0e6;font-weight:500;font-size:.72rem}
+.apps a.money{border-color:#a855f788;background:linear-gradient(135deg,#2a1530,#121a2b);font-size:.88rem;padding:8px 16px}
+.cascade{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin:0 0 14px;padding:10px 12px;border:1px solid var(--line);border-radius:14px;background:#0f1728}
+.cascade .lbl{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-right:4px}
+.cascade a{padding:6px 12px;border-radius:999px;font-size:.76rem;font-weight:600;border:1px solid var(--line);background:var(--card);color:var(--text);text-decoration:none}
+.cascade a.on{border-color:var(--good);background:#13281d;color:#fff}
+.cascade .arr{color:var(--muted);opacity:.7}
+header{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:10px;flex-wrap:wrap}
+h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font-size:.88rem}
+.nav{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0 16px}
+.nav a{background:var(--card);border:1px solid var(--line);padding:6px 11px;border-radius:999px;font-size:.78rem;color:var(--text)}
+.nav a.active{border-color:var(--accent);background:#152238;color:#fff}
+.badge{font-size:.65rem;padding:2px 7px;border-radius:6px;background:#1a2440;color:var(--accent);border:1px solid var(--line);margin-left:6px;vertical-align:middle}
+.badge.research{background:#2a2416;color:var(--warn);border-color:#ffb02066}
+.badge.stretch{background:#1a1f2e;color:var(--violet);border-color:#a78bfa55}
+.badge.anchor{background:#13281d;color:var(--good);border-color:#3dd68c66}
+.badge.ent{background:#152238;color:#93c5fd;border-color:#5b8cff66}
+.badge.sub{background:#13281d;color:#86efac;border-color:#3dd68c66}
+.badge.vio{background:#1a1530;color:#c4b5fd;border-color:#a78bfa55}
+.franchise-strip{margin:0 0 16px;padding:14px 16px;border:1px solid #3dd68c66;border-radius:14px;background:linear-gradient(135deg,#13281d 0%,#121a2b 70%)}
+.franchise-strip .lbl{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-bottom:4px}
+.franchise-strip .thesis{font-size:.92rem;font-weight:600;color:#e8eefc;margin:0 0 8px}
+.franchise-strip .edge{font-size:.78rem;color:#86efac;margin:0 0 10px}
+.franchise-strip .pills{display:flex;flex-wrap:wrap;gap:6px}
+.franchise-strip .pill{font-size:.7rem;padding:3px 9px;border-radius:999px;border:1px solid #3dd68c44;background:#0e1626;color:#c5d0e6}
+.franchise-strip .pill a{color:inherit;text-decoration:none}
+.franchise-strip .pill a:hover{color:#fff;text-decoration:underline}
+.franchise-strip .claim{font-size:.72rem;color:var(--muted);margin-top:10px}
+.franchise-strip .claim b{color:var(--warn)}
+.franchise-strip .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+.franchise-strip a.inv{font-size:.78rem;font-weight:700;color:var(--good)}
+.anchor{margin:0 0 16px;padding:14px 16px;border:1px solid #5b8cff66;border-radius:14px;background:linear-gradient(135deg,#152238,#121a2b)}
+.anchor h2{margin:0 0 6px;font-size:1rem}
+.anchor p{margin:0;color:#c5d0e6;font-size:.84rem}
+.anchor .meta{margin-top:8px;font-size:.78rem;color:var(--muted)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:11px;margin-bottom:16px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px;position:relative;overflow:hidden}
+.kpi::after{content:"";position:absolute;inset:auto 0 0 0;height:2px;background:linear-gradient(90deg,var(--accent),var(--violet));opacity:.55}
+.kpi .l{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.kpi .v{font-size:1.35rem;font-weight:700;margin-top:4px}
+.kpi .s{font-size:.72rem;color:var(--muted);margin-top:3px}
+.rules{margin:0 0 16px;padding:12px 14px;border:1px dashed #1e2a44;border-radius:12px;background:var(--panel);font-size:.78rem;color:var(--muted)}
+.rules b{color:var(--text)}
+.rules ul{margin:8px 0 0;padding-left:18px}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+table{width:100%;border-collapse:collapse;font-size:.82rem;min-width:980px}
+th{text-align:left;padding:11px 12px;font-size:.68rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);border-bottom:1px solid var(--line);background:#0f1728;position:sticky;top:0}
+td{padding:12px;border-bottom:1px solid #1e2a4488;vertical-align:top;color:#c5d0e6}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:#15223855}
+td.city{color:var(--text);font-weight:700;white-space:nowrap}
+td.city .pop{display:block;font-weight:500;font-size:.72rem;color:var(--muted);margin-top:3px}
+.seg{display:flex;flex-wrap:wrap;gap:4px}
+.excluded{margin-top:16px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--panel);font-size:.78rem;color:var(--muted)}
+.excluded b{color:var(--text)}
+.note{color:var(--muted);font-size:.78rem;margin-top:22px}
+.truth{margin-top:14px;padding:12px 14px;border:1px dashed #ffb02055;border-radius:12px;background:#16140f;font-size:.78rem;color:var(--muted)}
+.truth b{color:var(--warn)}
+</style></head>
+<body data-flow-face="ops" data-flow-chip="peer-cities"><div class="wrap">
+
+<div class="apps">
+  <span class="lbl">Apps</span>
+  <a class="money" href="one-touch.html">One-touch · money</a>
+  <a href="rvp-ops.html">RVP Ops</a>
+  <a href="gtm-seats.html" style="border-color:#a78bfa66">GTM seats</a>
+  <a href="ops-battle-row.html" style="border-color:#fbbf2466">Battle Row</a>
+  <a href="investor-checklist.html" style="border-color:#a78bfa66">Investor checklist</a>
+  <a href="https://onchainoffgrid-hub.github.io/critters-on-call/" target="_blank" rel="noopener">Critters <span style="color:#3dd68c;font-size:.65rem">LIVE</span></a>
+  <a href="index.html" class="sec">Layer Zero hub</a>
+  <a href="link-tree.html" class="sec">All links</a>
+</div>
+
+<div class="cascade" aria-label="Franchise expansion cascade">
+  <span class="lbl">Cascade</span>
+  <a href="rvp-ops.html">RVP Ops</a>
+  <span class="arr">→</span>
+  <a href="franchise-peer-cities.html" class="on">Peer cities</a>
+  <span class="arr">·</span>
+  <a href="investor-checklist.html">Investor checklist</a>
+  <span class="arr">·</span>
+  <a href="gtm-seats.html">GTM seats</a>
+  <span class="arr">·</span>
+  <a href="ops-battle-row.html">Battle Row</a>
+</div>
+
+<header>
+  <div>
+    <h1>Franchise peer cities <span class="badge research">RESEARCH</span></h1>
+    <div class="sub">Sheehan Homestead / Critters on Call · 10 metros peer to Jacksonville for farm-near-downtown expansion — not NYC</div>
+  </div>
+  <div class="sub">Drill from <a href="rvp-ops.html">RVP Ops</a> · <a href="investor-home.html">Investor home</a></div>
+</header>
+
+<div class="nav">
+  <a href="rvp-ops.html">RVP Ops</a>
+  <a href="franchise-peer-cities.html" class="active">Peer cities</a>
+  <a href="investor-checklist.html" style="border-color:#a78bfa88;color:#c4b5fd">Investor checklist</a>
+  <a href="gtm-seats.html" style="border-color:#a78bfa88;color:#c4b5fd">GTM seats</a>
+  <a href="ops-battle-row.html" style="border-color:#fbbf2466;color:#fde68a">Battle Row</a>
+  <a href="investor-home.html">Investor home</a>
+  <a href="index.html">Layer Zero</a>
+</div>
+
+<div class="franchise-strip" id="why-franchisable">
+  <div class="lbl">Why franchisable · proof strip (Michael’s claims · labeled)</div>
+  <p class="thesis">Ops know-how <em>is</em> the product — what Michael sells to investors &amp; franchisees.</p>
+  <p class="edge">Jax edge: farm ≈15 minutes from downtown — peer screen = can a homestead sit ~15–30 min from core?</p>
+  <div class="pills" id="claim-pills"></div>
+  <p class="claim"><b>FOUNDER CLAIM:</b> GTM sophistication at Series-D+ belief vs pets peers; better-than-Ardok / Orbis = Michael’s claim, not an independent audit. No invented revenue or franchisees.</p>
+  <div class="links">
+    <a class="inv" href="investor-checklist.html">→ Investor checklist</a>
+    <a class="inv" href="rvp-ops.html">→ RVP Ops</a>
+    <a class="inv" href="gtm-seats.html" style="color:#c4b5fd">→ GTM seats</a>
+    <a class="inv" href="ops-battle-row.html" style="color:#fde68a">→ Battle Row</a>
+  </div>
+</div>
+
+<div class="anchor" id="anchor-box">
+  <h2>Anchor · Jacksonville FL <span class="badge anchor">FRANCHISE #0</span></h2>
+  <p id="anchor-edge">Loading…</p>
+  <div class="meta" id="anchor-meta"></div>
+</div>
+
+<div class="kpis">
+  <div class="kpi"><div class="l">Peer metros</div><div class="v" id="k-n">10</div><div class="s">research board</div></div>
+  <div class="kpi"><div class="l">Near twins</div><div class="v" id="k-twins">—</div><div class="s">no stretch flag</div></div>
+  <div class="kpi"><div class="l">Stretch picks</div><div class="v" id="k-stretch">—</div><div class="s">honest labels</div></div>
+  <div class="kpi"><div class="l">Status</div><div class="v" style="font-size:1.05rem">Research</div><div class="s">no LOIs · no fake franchisees</div></div>
+  <div class="kpi"><div class="l">Starter lanes</div><div class="v" style="font-size:1.05rem">E · S · V</div><div class="s">enterprise · sub · violet</div></div>
+</div>
+
+<div class="rules">
+  <b>Selection bias</b>
+  <ul id="rules-list"></ul>
+</div>
+
+<div class="dept-label" style="font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin:0 0 10px">Peer city board · qualitative only</div>
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>City</th>
+        <th>Metro vibe</th>
+        <th>Why peer to Jax</th>
+        <th>Farm-near-core</th>
+        <th>Starter segments</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody id="city-body">
+      <tr><td colspan="6" style="color:var(--muted)">Loading peer board…</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="excluded" id="excluded-box"></div>
+
+<div class="truth"><b>Truth rules:</b> No invented revenue. No fake franchisees. Pop figures ≈ Census 2025 MSA estimates for banding only. Stretch = honest smaller/larger vs Jax. Brand: Sheehan Homestead.</div>
+
+<p class="note">Dump-home: Dashboard Bit · Face: Ops / Investors · Parent: <a href="rvp-ops.html">rvp-ops.html</a> · Data: <code>data/franchise_peer_cities.json</code> · Built 2026-09-23 ET · Live also on Critters <code>/exec/</code> mirror</p>
+</div>
+<script>
+(function(){
+  function esc(s){
+    return String(s==null?'':s).replace(/[&<>"']/g,function(c){
+      return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c];
+    });
+  }
+  function segBadges(segs){
+    var map={enterprise:['ent','Enterprise'],subscription:['sub','Subscription'],violet:['vio','Violet']};
+    return (segs||[]).map(function(s){
+      var m=map[s]||['',' '+s];
+      return '<span class="badge '+m[0]+'">'+esc(m[1])+'</span>';
+    }).join(' ');
+  }
+  function render(D){
+    var A=D.anchor||{};
+    document.getElementById('anchor-edge').textContent=A.edge||'';
+    document.getElementById('anchor-meta').innerHTML=
+      esc(A.metro||'')+' · pop ≈ '+(A.metro_pop_approx?A.metro_pop_approx.toLocaleString():'—')+
+      ' · '+esc(A.pop_note||'')+' · model: '+esc(A.model||'');
+
+    var claims=(D.why_franchisable&&D.why_franchisable.claims)||[];
+    document.getElementById('claim-pills').innerHTML=claims.map(function(c,i){
+      var href=c.href||'#';
+      return '<span class="pill">'+(i+1)+' · <a href="'+esc(href)+'">'+esc(c.title)+'</a></span>';
+    }).join('');
+
+    var rules=D.selection_rules||[];
+    document.getElementById('rules-list').innerHTML=rules.map(function(r){return '<li>'+esc(r)+'</li>';}).join('');
+
+    var cities=D.cities||[];
+    var twins=cities.filter(function(c){return !c.stretch;}).length;
+    var stretch=cities.filter(function(c){return c.stretch;}).length;
+    document.getElementById('k-n').textContent=String(cities.length);
+    document.getElementById('k-twins').textContent=String(twins);
+    document.getElementById('k-stretch').textContent=String(stretch);
+
+    var body=document.getElementById('city-body');
+    body.innerHTML=cities.map(function(c){
+      var stretchTag=c.stretch?' <span class="badge stretch">STRETCH</span>':'';
+      var stretchNote=c.stretch_note?'<div style="margin-top:6px;font-size:.72rem;color:#c4b5fd">'+esc(c.stretch_note)+'</div>':'';
+      return '<tr>'+
+        '<td class="city">'+esc(c.city)+', '+esc(c.state)+stretchTag+
+          '<span class="pop">'+esc(c.metro)+' · ≈'+(c.metro_pop_approx?Math.round(c.metro_pop_approx/1000)+'k':'—')+
+          ' · '+esc(c.pop_band_vs_jax||'')+'</span></td>'+
+        '<td>'+esc(c.metro_vibe)+'</td>'+
+        '<td>'+esc(c.why_peer)+stretchNote+'</td>'+
+        '<td>'+esc(c.farm_near_core)+'</td>'+
+        '<td><div class="seg">'+segBadges(c.starter_segments)+'</div></td>'+
+        '<td><span class="badge research">'+esc(c.status||'research')+'</span></td>'+
+      '</tr>';
+    }).join('');
+
+    var ex=D.excluded_examples||[];
+    document.getElementById('excluded-box').innerHTML='<b>Why not coastal mega / densifying giants</b><ul style="margin:8px 0 0;padding-left:18px">'+
+      ex.map(function(e){return '<li><b>'+esc(e.city)+'</b> — '+esc(e.why)+'</li>';}).join('')+
+      '</ul>';
+  }
+  fetch('data/franchise_peer_cities.json').then(function(r){return r.json();}).then(render).catch(function(e){
+    document.getElementById('city-body').innerHTML='<tr><td colspan="6" style="color:var(--bad)">Failed to load data/franchise_peer_cities.json</td></tr>';
+  });
+})();
+</script>
+<script src="shared/flow-spine.js" defer></script>
+</body></html>

@@ -1,0 +1,245 @@
+{
+  "as_of": "2026-09-23 16:40 ET",
+  "title": "Franchise expansion · Peer cities",
+  "brand": "Sheehan Homestead / Critters on Call",
+  "anchor": {
+    "city": "Jacksonville",
+    "state": "FL",
+    "metro": "Jacksonville, FL MSA",
+    "metro_pop_approx": 1790000,
+    "pop_note": "Census-style MSA ~1.6M (2020) · ~1.79M (2025 est.) · ~38th US metro",
+    "edge": "Farm ~15 min from downtown (Callahan / NE FL fringe) — the model to clone",
+    "model": "Mobile petting zoo / farm-near-downtown — not coastal mega, not NYC",
+    "status": "franchise_0_live"
+  },
+  "selection_rules": [
+    "Prefer Sun Belt / Southeast / mid-size peers to Jax (~0.9M–2.2M MSA)",
+    "Rural-friendly fringe where a homestead can sit ~15–30 min from downtown",
+    "Event / HOA / school density as qualitative demand proxy — not invented revenue",
+    "Exclude coastal megas (NYC, Miami, etc.) and densifying megas where land near-core is unrealistic",
+    "Label stretch picks honestly"
+  ],
+  "excluded_examples": [
+    {"city": "New York", "why": "Coastal mega · land near-core impossible · not the Jax model"},
+    {"city": "Miami / South FL", "why": "Coastal mega · land cost / zoning crush farm-near-core"},
+    {"city": "Charlotte", "why": "Cited as size peer (~2.9M) but densifying fast — land near-core harder than Jax; keep as watchlist not board"}
+  ],
+  "why_franchisable": {
+    "label": "Why franchisable · founder claims (not independent audit)",
+    "thesis": "Ops know-how is the product — what Michael sells to investors and franchisees.",
+    "claims": [
+      {
+        "id": "gtm",
+        "title": "GTM sophistication",
+        "detail": "Michael's belief: Series-D+ caliber GTM vs typical pets / party peers. Better-than-Ardok / Orbis = founder claim, not our ranking.",
+        "href": "gtm-seats.html",
+        "claim_type": "founder"
+      },
+      {
+        "id": "reporting",
+        "title": "Reporting stack",
+        "detail": "Exec suite + bookings / money / dialer surfaces — operator visibility before scale.",
+        "href": "investor-checklist.html",
+        "claim_type": "ops"
+      },
+      {
+        "id": "team",
+        "title": "Team",
+        "detail": "Named seats (Michael · Ann-Marie) + vacant BDR lanes mapped — franchise SOPs can fill seats later.",
+        "href": "gtm-seats.html",
+        "claim_type": "ops"
+      },
+      {
+        "id": "fences_care",
+        "title": "Fences / animal care",
+        "detail": "Physical pens + care SOPs as transferable ops — Battle Row is the proof surface.",
+        "href": "ops-battle-row.html",
+        "claim_type": "ops"
+      },
+      {
+        "id": "risk",
+        "title": "Risk awareness",
+        "detail": "Insurance / liability / red-tape lanes acknowledged in GTM (not ignored).",
+        "href": "gtm-seats.html",
+        "claim_type": "ops"
+      },
+      {
+        "id": "segmentation",
+        "title": "Segmentation",
+        "detail": "Enterprise · Subscription · Violet (B2C) lanes locked on GTM seat map.",
+        "href": "gtm-seats.html",
+        "claim_type": "ops"
+      },
+      {
+        "id": "battle_row",
+        "title": "Battle Row ops",
+        "detail": "5 pens live · hay-frame STEM · goat yoga tents — logistics of joy as franchisable physical ops.",
+        "href": "ops-battle-row.html",
+        "claim_type": "ops"
+      },
+      {
+        "id": "jax_edge",
+        "title": "Jax 15-min-downtown edge",
+        "detail": "Homestead ~15 min from downtown — the peer-city screen: can a farm sit 15–30 min from core?",
+        "href": "rvp-ops.html",
+        "claim_type": "edge"
+      }
+    ],
+    "links": [
+      {"label": "Investor checklist", "href": "investor-checklist.html"},
+      {"label": "RVP Ops", "href": "rvp-ops.html"},
+      {"label": "GTM seats", "href": "gtm-seats.html"},
+      {"label": "Battle Row", "href": "ops-battle-row.html"}
+    ]
+  },
+  "cities": [
+    {
+      "id": "raleigh",
+      "city": "Raleigh",
+      "state": "NC",
+      "metro": "Raleigh–Cary, NC MSA",
+      "metro_pop_approx": 1600000,
+      "pop_band_vs_jax": "near twin (~1.6M vs Jax ~1.8M)",
+      "metro_vibe": "Sun Belt growth · Triangle suburbs · school/HOA dense",
+      "why_peer": "Closest Census-size peer with expandable rural fringe (Wake Forest, Clayton, Apex) and strong school/HOA event demand — not a coastal mega.",
+      "farm_near_core": "Strong — fringe still has acreage ~20–30 min from downtown; land cost higher than Jax (honest).",
+      "starter_segments": ["enterprise", "subscription", "violet"],
+      "stretch": false,
+      "status": "research"
+    },
+    {
+      "id": "oklahoma_city",
+      "city": "Oklahoma City",
+      "state": "OK",
+      "metro": "Oklahoma City, OK MSA",
+      "metro_pop_approx": 1510000,
+      "pop_band_vs_jax": "near twin (~1.5M)",
+      "metro_vibe": "Plains sprawl · cheap fringe land · family entertainment hungry",
+      "why_peer": "Pop-band twin with classic rural ring — farm-near-core economics often better than FL; mid-size Sun Belt without coastal mega pressure.",
+      "farm_near_core": "Excellent — acreage common within ~15–25 min of downtown corridors.",
+      "starter_segments": ["enterprise", "subscription", "violet"],
+      "stretch": false,
+      "status": "research"
+    },
+    {
+      "id": "louisville",
+      "city": "Louisville",
+      "state": "KY",
+      "metro": "Louisville/Jefferson County, KY–IN MSA",
+      "metro_pop_approx": 1400000,
+      "pop_band_vs_jax": "mid peer (~1.4M)",
+      "metro_vibe": "River city · horse-country fringe · strong schools/events",
+      "why_peer": "Mid-South size peer; Oldham / Bullitt / southern Indiana fringe fits mobile zoo + homestead-near-core; event/HOA density solid.",
+      "farm_near_core": "Strong — rural belts sit ~15–30 min from downtown without coastal land crush.",
+      "starter_segments": ["enterprise", "subscription", "violet"],
+      "stretch": false,
+      "status": "research"
+    },
+    {
+      "id": "richmond",
+      "city": "Richmond",
+      "state": "VA",
+      "metro": "Richmond, VA MSA",
+      "metro_pop_approx": 1390000,
+      "pop_band_vs_jax": "mid peer (~1.4M)",
+      "metro_vibe": "Capital suburbia · Chesterfield/Henrico/Hanover rings",
+      "why_peer": "Mid-size SE-adjacent peer with layered suburbs + school calendars; fringe still agrarian enough for a Callahan-style site.",
+      "farm_near_core": "Good — Hanover / Chesterfield west still support ~20–30 min farm-to-downtown runs.",
+      "starter_segments": ["enterprise", "subscription", "violet"],
+      "stretch": false,
+      "status": "research"
+    },
+    {
+      "id": "memphis",
+      "city": "Memphis",
+      "state": "TN",
+      "metro": "Memphis, TN–MS–AR MSA",
+      "metro_pop_approx": 1340000,
+      "pop_band_vs_jax": "mid peer (~1.3M) — Jax.gov cites as size peer",
+      "metro_vibe": "Delta hub · DeSoto MS / Fayette TN fringe farms",
+      "why_peer": "Official Jax size-peer cite; cross-state fringe (esp. DeSoto) keeps farm-near-core realistic; school + church event density is a workable starter proxy.",
+      "farm_near_core": "Strong — MS/TN fringe acreage often ~20–30 min from downtown cores.",
+      "starter_segments": ["enterprise", "subscription", "violet"],
+      "stretch": false,
+      "status": "research"
+    },
+    {
+      "id": "birmingham",
+      "city": "Birmingham",
+      "state": "AL",
+      "metro": "Birmingham, AL MSA",
+      "metro_pop_approx": 1200000,
+      "pop_band_vs_jax": "smaller peer (~1.2M)",
+      "metro_vibe": "SE inland · Shelby/St. Clair growth rings",
+      "why_peer": "Southeast climate/culture cousin; Shelby County fringe supports homestead + HOA/school density without coastal mega competition.",
+      "farm_near_core": "Strong — rural belts remain within ~15–30 min of downtown/southside corridors.",
+      "starter_segments": ["enterprise", "subscription", "violet"],
+      "stretch": false,
+      "status": "research"
+    },
+    {
+      "id": "nashville",
+      "city": "Nashville",
+      "state": "TN",
+      "metro": "Nashville–Davidson–Murfreesboro–Franklin, TN MSA",
+      "metro_pop_approx": 2200000,
+      "pop_band_vs_jax": "stretch UP (~2.2M) — Jax.gov cites as peer",
+      "metro_vibe": "Boomtown · tourism + suburbs · land heating",
+      "why_peer": "Jax's own peer cite and strong event/HOA/school demand — but larger and hotter land market than Callahan model.",
+      "farm_near_core": "Mixed / stretch — fringe still exists (Robertson, Rutherford west) but ~15-min downtown farms are rarer/costlier than Jax.",
+      "starter_segments": ["enterprise", "subscription", "violet"],
+      "stretch": true,
+      "stretch_note": "Larger boomtown; land near-core is the risk, not demand.",
+      "status": "research"
+    },
+    {
+      "id": "greenville",
+      "city": "Greenville",
+      "state": "SC",
+      "metro": "Greenville–Anderson–Greer, SC MSA",
+      "metro_pop_approx": 1010000,
+      "pop_band_vs_jax": "smaller peer (~1.0M)",
+      "metro_vibe": "Upstate growth · corporate + suburban HOAs",
+      "why_peer": "Fast SE mid-market with school/HOA density and rural fringe toward Anderson/Pickens — franchise ladder rung below Jax size.",
+      "farm_near_core": "Strong — acreage still available ~20–30 min from downtown Greenville.",
+      "starter_segments": ["enterprise", "subscription", "violet"],
+      "stretch": false,
+      "status": "research"
+    },
+    {
+      "id": "knoxville",
+      "city": "Knoxville",
+      "state": "TN",
+      "metro": "Knoxville, TN MSA",
+      "metro_pop_approx": 970000,
+      "pop_band_vs_jax": "stretch DOWN (~0.97M)",
+      "metro_vibe": "Valley city · family tourism spill · rural rings",
+      "why_peer": "Honest smaller SE market; farm-near-core is easy and family tourism helps Violet — demand density lower than Jax.",
+      "farm_near_core": "Excellent — rural fringe commonly ~15–25 min from downtown.",
+      "starter_segments": ["subscription", "violet", "enterprise"],
+      "stretch": true,
+      "stretch_note": "Smaller pop band; good ops fit, thinner enterprise density.",
+      "status": "research"
+    },
+    {
+      "id": "tulsa",
+      "city": "Tulsa",
+      "state": "OK",
+      "metro": "Tulsa, OK MSA",
+      "metro_pop_approx": 1060000,
+      "pop_band_vs_jax": "stretch DOWN (~1.06M)",
+      "metro_vibe": "Mid-size Sun Belt · cheap fringe · event calendar room",
+      "why_peer": "Farm-near-core economics mirror Jax edge better than coastal peers; size is smaller so treat as ladder market, not clone.",
+      "farm_near_core": "Excellent — homestead sites often ~15–25 min from downtown.",
+      "starter_segments": ["enterprise", "subscription", "violet"],
+      "stretch": true,
+      "stretch_note": "Smaller MSA; strong land fit, thinner absolute TAM.",
+      "status": "research"
+    }
+  ],
+  "notes": [
+    "No invented revenue, franchisees, or signed LOIs — status=research for all peers.",
+    "Starter segments map to GTM seats: enterprise · subscription · violet (B2C).",
+    "Pop figures are approximate Census 2025 MSA estimates for peer banding — not diligence-grade."
+  ]
+}
