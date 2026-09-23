@@ -1,44 +1,52 @@
 <!DOCTYPE html>
 <html lang="en"><head>
 <meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Quick pitches · Growth · Sheehan Homestead</title>
+<title>Quick pitches · by role · Sheehan Homestead</title>
 <style>
-:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--violet:#a78bfa;--money:#f0abfc}
+:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--violet:#a78bfa;--money:#f0abfc;--joy:#fbbf24}
 *{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
 a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
-.wrap{max-width:1100px;margin:0 auto;padding:22px 18px 56px}
+.wrap{max-width:920px;margin:0 auto;padding:22px 18px 64px}
 .top{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 16px;padding:10px 14px;border:1px solid var(--line);border-radius:14px;background:#0f1728}
 .top .lbl{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-right:4px}
 .top a{background:var(--card);border:1px solid var(--line);color:var(--text);padding:7px 12px;border-radius:999px;font-size:.78rem;font-weight:600;text-decoration:none}
 .top a.money{border-color:#a855f788;background:linear-gradient(135deg,#2a1530,#121a2b);color:#f0abfc}
 .top a.on{border-color:#5b8cff88;background:#152238}
 .crumb{font-size:.82rem;color:var(--muted);margin:0 0 12px}.crumb a{color:#9ec1ff;font-weight:600}
-h1{font-size:clamp(1.4rem,3vw,1.9rem);margin:0 0 6px;letter-spacing:-.02em}
+h1{font-size:clamp(1.4rem,3vw,1.85rem);margin:0 0 6px;letter-spacing:-.02em}
 .sub{color:var(--muted);font-size:.92rem;max-width:68ch}
 .banner{margin:14px 0 18px;padding:12px 14px;border:1px solid #ffb02088;border-radius:12px;background:#16140f;font-size:.84rem;color:#fde68a}
 .banner b{color:#fff}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:14px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px;display:flex;flex-direction:column;gap:10px}
-.card.senior{border-color:#3dd68c66}.card.cdd{border-color:#a78bfa66}.card.school{border-color:#5b8cff66}
-.card.ppec{border-color:#ffb02066}.card.auction{border-color:#f0abfc88}.card.xpromo{border-color:#fbbf2466}
-.seg{font-size:.65rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700}
-.card h2{margin:0;font-size:1.15rem;letter-spacing:-.01em}
-.angle{font-size:.8rem;color:#c5d0e6;margin:0}
-.lbl{font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:4px 0 0}
-.subj-opts{display:flex;flex-direction:column;gap:6px}
+.role-nav{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px;padding:12px;border:1px solid var(--line);border-radius:14px;background:#0f1728;position:sticky;top:8px;z-index:5}
+.role-nav a{font-size:.74rem;font-weight:700;padding:7px 12px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:#c5d0e6;text-decoration:none}
+.role-nav a:hover{border-color:var(--accent);color:#fff}
+.role{margin:0 0 28px;scroll-margin-top:72px}
+.role-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px;margin:0 0 10px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.role-head .num{font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700}
+.role-head h2{margin:0;font-size:1.2rem;letter-spacing:-.01em}
+.role-head .tag{font-size:.68rem;font-weight:700;padding:3px 9px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+.role-head .tag.call{color:#d4c4ff;border-color:#a78bfa88;background:#16101c}
+.role-head .tag.email{color:#9ec1ff;border-color:#5b8cff66;background:#152238}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+.card.senior{border-color:#3dd68c66}.card.ppec{border-color:#ffb02066}.card.school{border-color:#5b8cff66}
+.card.cdd{border-color:#a78bfa88;background:linear-gradient(160deg,#1a1530,#121a2b 78%)}
+.card.auction{border-color:#f0abfc88}.card.xpromo{border-color:#fbbf2466}
+.angle{font-size:.84rem;color:#c5d0e6;margin:0 0 12px}
+.lbl{font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:0 0 6px}
+.subj-opts{display:flex;flex-direction:column;gap:6px;margin:0 0 12px}
 .subj{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;padding:8px 10px;border-radius:10px;background:var(--panel);border:1px solid var(--line);font-size:.82rem}
 .subj span{flex:1}
-.body-box{white-space:pre-wrap;font-size:.82rem;color:#dce6f8;background:#0a1020;border:1px solid var(--line);border-radius:12px;padding:12px 14px;min-height:120px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;line-height:1.4}
-.price{font-size:.75rem;color:#bbf7d0;background:#13281d;border:1px solid #3dd68c44;border-radius:10px;padding:8px 10px}
-.price b{color:#fff}.price .ex{color:var(--warn)}
-.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:2px}
-button.btn,a.btn{appearance:none;display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:9px 14px;border-radius:999px;border:1px solid #5b8cff88;background:#152238;color:#fff;font-weight:800;font-size:.78rem;cursor:pointer;text-decoration:none}
-button.btn.sec,a.btn.sec{border-color:var(--line);background:var(--panel);color:#c5d0e6;font-weight:600}
-button.btn.ok{border-color:#3dd68c88;background:#13281d}
+.body-box{white-space:pre-wrap;font-size:.8rem;color:#dce6f8;background:#0a1020;border:1px solid var(--line);border-radius:12px;padding:12px 14px;min-height:100px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;line-height:1.4;margin:0 0 10px}
+.price{font-size:.75rem;color:#bbf7d0;background:#13281d;border:1px solid #3dd68c44;border-radius:10px;padding:8px 10px;margin:0 0 12px}
+.price b{color:#fff}.call-note{font-size:.78rem;color:#d4c4ff;background:#16101c;border:1px solid #a78bfa66;border-radius:10px;padding:10px 12px;margin:0 0 12px}
+.actions{display:flex;flex-wrap:wrap;gap:8px}
+button.btn,a.btn{appearance:none;display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 16px;border-radius:999px;border:1px solid #5b8cff88;background:#152238;color:#fff;font-weight:800;font-size:.8rem;cursor:pointer;text-decoration:none}
+a.btn.gmail{border-color:#3dd68c88;background:linear-gradient(135deg,#1a3a28,#152238);font-size:.85rem}
+button.btn.sec,a.btn.sec{border-color:var(--line);background:var(--panel);color:#c5d0e6;font-weight:600;font-size:.74rem}
 .toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#13281d;border:1px solid #3dd68c88;color:#bbf7d0;padding:10px 16px;border-radius:999px;font-size:.8rem;font-weight:700;opacity:0;pointer-events:none;transition:opacity .2s;z-index:40}
 .toast.show{opacity:1}
-.note{color:var(--muted);font-size:.76rem;margin-top:20px}
-.sources{margin-top:18px;padding:14px 16px;border:1px dashed #1e2a44;border-radius:14px;background:#0e1626;font-size:.76rem;color:var(--muted)}
+.note{color:var(--muted);font-size:.76rem;margin-top:8px}
+.sources{margin-top:10px;padding:14px 16px;border:1px dashed #1e2a44;border-radius:14px;background:#0e1626;font-size:.76rem;color:var(--muted)}
 .sources b{color:#c5d0e6}.sources ul{margin:8px 0 0;padding-left:18px}
 </style></head>
 <body data-flow-face="sales" data-flow-chip="quick-pitches"><div class="wrap">
@@ -48,35 +56,45 @@ button.btn.ok{border-color:#3dd68c88;background:#13281d}
   <a class="money" href="one-touch.html">One-touch · money</a>
   <a href="growth-home.html">Growth</a>
   <a class="on" href="quick-pitches.html">Quick pitches</a>
+  <a href="cdd-call-lane.html">CDD call lane</a>
   <a href="hot-links.html">Hot Links</a>
-  <a href="support-giveables.html">Giveables</a>
+  <a href="support-catalog.html">Support catalog</a>
   <a href="rvp-ops.html">RVP home</a>
 </div>
 
 <p class="crumb"><a href="rvp-ops.html">RVP</a> → <a href="growth-home.html">Growth</a> → <b>Quick pitches</b></p>
 
 <header>
-  <h1>Quick pitches</h1>
-  <div class="sub">Distilled from Michael’s real sent mail (Sheehan Homestead / Critters on Call). Stage only — copy or open mailto; <b>he sends</b>. Never auto-send.</div>
+  <h1>Quick pitches · by role</h1>
+  <div class="sub">Organized for the buyer seat. Distilled from Michael’s real sent mail. <b>Stage only</b> — Gmail opens prefilled; <b>he hits Send</b>. Never auto-send.</div>
 </header>
 
-<div class="banner"><b>Stage only.</b> Buttons copy subject/body or open a blank-to mailto with prefilled text. No Gmail API · no auto-send · pricing below = ranges he actually used in mail (or marked example).</div>
+<div class="banner"><b>Stage only · no auto-send.</b> Primary button opens Gmail compose with subject + full body already filled (<code>view=cm</code>). Copy / mailto are backups. No Gmail API. Pricing = ranges from his real mail (or marked example).</div>
 
-<div class="grid" id="grid"></div>
+<nav class="role-nav" aria-label="Jump by role">
+  <a href="#role-activity">Activity Director</a>
+  <a href="#role-ppec">PPEC director</a>
+  <a href="#role-pta">PTA / school</a>
+  <a href="#role-cdd">Amenity / CDD · call lane</a>
+  <a href="#role-auction">Silent auction</a>
+  <a href="#role-smb">Small-biz</a>
+</nav>
+
+<div id="roles"></div>
 
 <div class="sources">
   <b>Informed by real outbound subjects (dates ET):</b>
   <ul>
     <li>Activity Director — “Animal therapy visits for DLC — Critters on Call” (Sep 22, 2026); “Animal Wellness Visits/Event Petting Zoo” (Sep 15); “Petting Zoos/Animal Therapy Visits” (Sep 11)</li>
-    <li>CDD / HOA — “Mobile petting zoo- fall fest/trunk or treat?” (Sep 23); “Vesta preferred rates + the 20ish dates that actually matter” (Sep 17); “Petting Zoo/Goat Yoga/STEM Camp” (Sep 11)</li>
-    <li>School / PTA — “Your Oct-2 petting zoo…” Violet donation (Sep 18); “You 10-31 4-6 pm petting zoo” (Sep 10); “Estimate for fall festival 10-24…” (Aug 25); “Petting Zoos/Goat Yoga for PTAs” (Sep 11); “Petting zoo or STEM” (Sep 23)</li>
     <li>PPEC — “PPEC Mini Petting Zoo” (Jul 20, 2026)</li>
+    <li>School / PTA — “Your Oct-2 petting zoo…” Violet donation (Sep 18); “You 10-31 4-6 pm petting zoo” (Sep 10); “Estimate for fall festival 10-24…” (Aug 25); “Petting Zoos/Goat Yoga for PTAs” (Sep 11); “Petting zoo or STEM” (Sep 23)</li>
+    <li>Amenity / CDD (call/email lane — not Hot Links CAPTCHA) — “Mobile petting zoo- fall fest/trunk or treat?” (Sep 23); “Vesta preferred rates + the 20ish dates that actually matter” (Sep 17); “Petting Zoo/Goat Yoga/STEM Camp” (Sep 11)</li>
     <li>Silent auction — “Re: Homeschool Monday 8/24” raffle gift (Sep 10); silent-auction clarification thread (Oct 2024)</li>
-    <li>Cross-promo — “Petting Zoo/Goat Yoga - Employee Appreciation or festivals?” (Sep 23); “Free Membership/STEP UP” (Aug 13); “Thanks for reaching out — Sheehan Homestead” (Sep 22); farm-tour / Bunny Haven reply (Aug 25)</li>
+    <li>Small-biz — “Petting Zoo/Goat Yoga - Employee Appreciation or festivals?” (Sep 23); “Free Membership/STEP UP” (Aug 13); “Thanks for reaching out — Sheehan Homestead” (Sep 22); farm-tour / Bunny Haven reply (Aug 25)</li>
   </ul>
 </div>
 
-<p class="note">Brand: Sheehan Homestead · Critters on Call · 914-263-1311 · Built 2026-09-23 ET · Mirror: sheehan-exec-suite + critters-on-call/exec</p>
+<p class="note">Brand: Sheehan Homestead · Critters on Call · 914-263-1311 · Pitch bodies live <b>only</b> on this page (main hubs stay clean tiles). Built 2026-09-23 ET · Mirror: sheehan-exec-suite + critters-on-call/exec</p>
 </div>
 <div class="toast" id="toast">Copied</div>
 <script>
@@ -84,9 +102,12 @@ button.btn.ok{border-color:#3dd68c88;background:#13281d}
   var SIG = "\n\nCheers,\n\nAnn-Marie and Michael Sheehan\n914-263-1311\nsheehanhomestead.com";
   var PITCHES = [
     {
-      id:"senior",
+      id:"activity",
       cls:"senior",
-      seg:"Activity Director / Life Enrichment",
+      num:"01 · Role",
+      role:"Activity Director / Life Enrichment",
+      tag:"Email-first",
+      tagCls:"email",
       title:"Senior · recurring therapy + mini",
       angle:"Scheduled programming = affordable recurring. Mobile = convenience. One-off mini for events.",
       subjects:[
@@ -98,39 +119,14 @@ button.btn.ok{border-color:#3dd68c88;background:#13281d}
       price:"<b>From his mail:</b> recurring <b>$150/mo</b> or <b>$185 quarterly</b>; one-offs typically <b>$250–400</b>. Attach MiniZoo-Seniors / WHY DIRECTORS BOOK US when useful."
     },
     {
-      id:"cdd",
-      cls:"cdd",
-      seg:"CDD / HOA amenity",
-      title:"Fall fest / trunk-or-treat mobile",
-      angle:"Season urgency + peer social proof (HOA/CDD/golf already booking). Ask for a date.",
-      subjects:[
-        "Mobile petting zoo — fall fest / trunk or treat?",
-        "Petting Zoo / Goat Yoga / STEM Camp",
-        "Petting zoo or STEM?"
-      ],
-      body:"Hi —\nWe're currently scheduling petting zoos and goat yoga with our HOA, CDD, and golf club clients because trunk-or-treat and fall festival season is here.\nMost of them are booking petting zoos. Some want goat yoga, mommy-and-me, or farm camp — but about 70% of what's going on the books right now is petting zoos for fall festivals.\nDo you have a date in mind, or want to hear more?"+SIG,
-      price:"<b>Preferred / menu pricing:</b> discuss after reply. Vesta-style preferred (example from mail): ~25% off services + 50% off travel on a typical visit — confirm before quoting."
-    },
-    {
-      id:"school",
-      cls:"school",
-      seg:"School / PTA / good org",
-      title:"Violet partial donation · fall event",
-      angle:"Mission + partial donate for schools/good orgs. Name it Violet. Land a clear all-in number.",
-      subjects:[
-        "Petting Zoos / Goat Yoga for PTAs",
-        "Petting zoo or STEM",
-        "Estimate for fall festival — Violet donation"
-      ],
-      body:"Hi —\nReaching out because it's trunk-or-treat and fall festival season. Thought you might be planning events and programming for it.\nWe do mobile petting zoos in Metro Jacksonville, plus STEM enrichment, farm camp, and goat yoga.\nFor good orgs like schools we often offer the Violet donation (named for our daughter) — a partial donation of services/fees. Happy to send options for your date.\nDo you have a date where you'd want some bunnies or a little petting zoo?"+SIG,
-      price:"<b>Examples he used:</b> Violet ~50–59% partial → all-in around <b>$600</b> for a 3-hr standard (9+ animals) in Sep 2026 school/church quotes; another fall fest: list $1549 → their cost <b>$775</b> at 50% donate. Always confirm for the specific date."
-    },
-    {
       id:"ppec",
       cls:"ppec",
-      seg:"PPEC / pediatric day program",
+      num:"02 · Role",
+      role:"PPEC director",
+      tag:"Email-first",
+      tagCls:"email",
       title:"Mini petting zoo on-site",
-      angle:"Mobile convenience premium · short visits (60/90). Thank them for the chance to serve another PPEC.",
+      angle:"Mobile convenience · short 60/90 min mini · thank them for serving another PPEC.",
       subjects:[
         "PPEC Mini Petting Zoo",
         "Mobile petting zoo for your program",
@@ -140,32 +136,73 @@ button.btn.ok{border-color:#3dd68c88;background:#13281d}
       price:"<b>From his Jul 2026 PPEC mail (list):</b> 60 min <b>$335</b> · 90 min <b>$425</b> · travel &amp; fees <b>$180</b> (+ tax if applicable). Gold-card preferred lower — send card when offering."
     },
     {
+      id:"pta",
+      cls:"school",
+      num:"03 · Role",
+      role:"PTA / school / good org",
+      tag:"Email-first",
+      tagCls:"email",
+      title:"Violet partial donation · fall event",
+      angle:"Mission + Violet partial donation for schools/good orgs · clear all-in after chat.",
+      subjects:[
+        "Petting Zoos / Goat Yoga for PTAs",
+        "Petting zoo or STEM",
+        "Estimate for fall festival — Violet donation"
+      ],
+      body:"Hi —\nReaching out because it's trunk-or-treat and fall festival season. Thought you might be planning events and programming for it.\nWe do mobile petting zoos in Metro Jacksonville, plus STEM enrichment, farm camp, and goat yoga.\nFor good orgs like schools we often offer the Violet donation (named for our daughter) — a partial donation of services/fees. Happy to send options for your date.\nDo you have a date where you'd want some bunnies or a little petting zoo?"+SIG,
+      price:"<b>Examples he used:</b> Violet ~50–59% partial → all-in around <b>$600</b> for a 3-hr standard (9+ animals) in Sep 2026 school/church quotes; another fall fest: list $1549 → their cost <b>$775</b> at 50% donate. Always confirm for the specific date."
+    },
+    {
+      id:"cdd",
+      cls:"cdd",
+      num:"04 · Role · separate lane",
+      role:"Amenity / CDD · Call / email lane",
+      tag:"Higher touch · not Hot Links CAPTCHA",
+      tagCls:"call",
+      title:"Fall fest / trunk-or-treat · call or email",
+      angle:"Season urgency + peer proof (HOA/CDD/golf already booking). Prefer named amenity buyer — call or personal email. Do not treat as mindless form spam.",
+      callNote:"This is the <b>call / email lane</b> (higher touch). Forms on Hot Links are a different path. Prefer phone or a real inbox to the amenity / lifestyle director. See also <a href=\"cdd-call-lane.html\" style=\"color:#f0abfc;font-weight:700\">CDD call-lane stub</a>.",
+      subjects:[
+        "Mobile petting zoo — fall fest / trunk or treat?",
+        "Petting Zoo / Goat Yoga / STEM Camp",
+        "Petting zoo or STEM?"
+      ],
+      body:"Hi —\nWe're currently scheduling petting zoos and goat yoga with our HOA, CDD, and golf club clients because trunk-or-treat and fall festival season is here.\nMost of them are booking petting zoos. Some want goat yoga, mommy-and-me, or farm camp — but about 70% of what's going on the books right now is petting zoos for fall festivals.\nDo you have a date in mind, or want to hear more?"+SIG,
+      price:"<b>Preferred / menu pricing:</b> discuss after reply. Vesta-style preferred (example from mail): ~25% off services + 50% off travel on a typical visit — confirm before quoting."
+    },
+    {
       id:"auction",
       cls:"auction",
-      seg:"Silent auction / raffle giveaway",
+      num:"05 · Role",
+      role:"Silent auction / raffle",
+      tag:"Email-first",
+      tagCls:"email",
       title:"Gold membership + farm gift certificate",
-      angle:"Cheap/no-cost cross-promo · digital certificate they can print · sometimes a physical farm gift.",
+      angle:"Cheap/no-cost giveaway · digital Gold membership certificate · optional physical farm gift.",
       subjects:[
         "Raffle / silent auction item — Sheehan Homestead",
         "Happy to donate a Gold membership + farm gift",
         "Gift certificate for your fundraiser"
       ],
       body:"Hi —\nHappy to help with a raffle / silent auction item.\nWe usually give a Gold membership with a free farm gift and a free 2-person farm ticket — suggested value around $100. It's usually digital (you can print it). Sometimes folks want a physical plant/thrift gift for the table — we can do that too when we're not behind on raffle items.\nWant me to send the certificate PDF for your packet?"+SIG,
-      price:"<b>From his Sep 2026 raffle reply:</b> Gold membership + free farm gift + free 2-person farm ticket · suggested <b>~$100</b>. Full live petting-zoo donate = rarer; prefer certificate / Stead Talks / partial-donate path."
+      price:"<b>From his Sep 2026 raffle reply:</b> Gold membership + free farm gift + free 2-person farm ticket · suggested <b>~$100</b>. Prefer certificate over donating a full live zoo when capacity is tight."
     },
     {
-      id:"xpromo",
+      id:"smb",
       cls:"xpromo",
-      seg:"Small-biz / chamber / group cross-promo",
+      num:"06 · Role",
+      role:"Small-biz / chamber / group",
+      tag:"Email-first",
+      tagCls:"email",
       title:"Employee appreciation · free collab",
-      angle:"Cheap/no-cost: employee appreciation festivals, Free Membership/STEP UP for big groups, or come-to-farm cheap.",
+      angle:"Employee appreciation festivals · Free Membership/STEP UP for big groups · come-to-farm cheap.",
       subjects:[
         "Petting Zoo / Goat Yoga — Employee Appreciation or festivals?",
         "Free Membership / STEP UP",
         "Petting zoo or STEM?"
       ],
       body:"Hi there,\nDo you ever do employee appreciation or seasonal festivals?\nLet us know if you'd like to consider Critters on Call petting zoos, goat yoga, or STEM fun for your events.\n(If you're a big local group — happy to collaborate and offer membership benefits / STEP UP for your members too.)"+SIG,
-      price:"<b>Come-here cheap (example from mail):</b> Bunny Haven-style hour visit quoted around <b>$225 + tax + travel</b> in one Aug 2026 reply — or invite them to tour the farm before booking. Cross-promo Stead Talks = free commercial on homestead socials."
+      price:"<b>Come-here cheap (example from mail):</b> Bunny Haven-style hour visit quoted around <b>$225 + tax + travel</b> in one Aug 2026 reply. Cross-promo Stead Talks = free commercial on homestead socials."
     }
   ];
 
@@ -182,33 +219,40 @@ button.btn.ok{border-color:#3dd68c88;background:#13281d}
       document.body.removeChild(ta);
     }
   }
+  function gmailCompose(subj, body){
+    return 'https://mail.google.com/mail/?view=cm&fs=1&to=&su='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);
+  }
   function mailto(subj, body){
     return 'mailto:?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);
   }
 
-  var grid=document.getElementById('grid');
-  grid.innerHTML=PITCHES.map(function(p){
+  var root=document.getElementById('roles');
+  root.innerHTML=PITCHES.map(function(p){
     var subjs=p.subjects.map(function(s,i){
       return '<div class="subj"><span>'+esc(s)+'</span>'
         +'<button type="button" class="btn sec" data-act="copy-subj" data-p="'+p.id+'" data-i="'+i+'">Copy</button></div>';
     }).join('');
-    return '<article class="card '+p.cls+'" data-id="'+p.id+'">'
-      +'<div class="seg">'+esc(p.seg)+'</div>'
-      +'<h2>'+esc(p.title)+'</h2>'
-      +'<p class="angle">'+esc(p.angle)+'</p>'
+    var call=p.callNote?('<div class="call-note">'+p.callNote+'</div>'):'';
+    return '<section class="role" id="role-'+p.id+'">'
+      +'<div class="role-head"><div><div class="num">'+esc(p.num)+'</div><h2>'+esc(p.role)+'</h2></div>'
+      +'<span class="tag '+esc(p.tagCls)+'">'+esc(p.tag)+'</span></div>'
+      +'<article class="card '+p.cls+'" data-id="'+p.id+'">'
+      +'<p class="angle"><b>'+esc(p.title)+'</b> — '+esc(p.angle)+'</p>'
+      +call
       +'<div class="lbl">Subject options</div><div class="subj-opts">'+subjs+'</div>'
       +'<div class="lbl">Body (his voice · distilled)</div>'
       +'<div class="body-box" id="body-'+p.id+'">'+esc(p.body)+'</div>'
       +'<div class="price">'+p.price+'</div>'
       +'<div class="actions">'
-      +'<button type="button" class="btn" data-act="copy-body" data-p="'+p.id+'">Copy body</button>'
+      +'<a class="btn gmail" target="_blank" rel="noopener" href="'+gmailCompose(p.subjects[0], p.body)+'">Open in Gmail (prefilled)</a>'
       +'<button type="button" class="btn sec" data-act="copy-all" data-p="'+p.id+'">Copy subject + body</button>'
-      +'<a class="btn ok" data-act="mailto" data-p="'+p.id+'" href="'+mailto(p.subjects[0], p.body)+'">Open mailto</a>'
-      +'</div></article>';
+      +'<button type="button" class="btn sec" data-act="copy-body" data-p="'+p.id+'">Copy body</button>'
+      +'<a class="btn sec" data-act="mailto" data-p="'+p.id+'" href="'+mailto(p.subjects[0], p.body)+'">mailto fallback</a>'
+      +'</div></article></section>';
   }).join('');
 
   var byId={}; PITCHES.forEach(function(p){ byId[p.id]=p; });
-  grid.addEventListener('click', function(e){
+  root.addEventListener('click', function(e){
     var btn=e.target.closest('[data-act]'); if(!btn) return;
     var p=byId[btn.getAttribute('data-p')]; if(!p) return;
     var act=btn.getAttribute('data-act');
