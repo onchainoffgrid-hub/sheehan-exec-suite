@@ -57,6 +57,19 @@ button.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
 .section{display:none}.section.on{display:block}
 .size{font-size:.78rem;color:var(--muted)}
 .size b{color:var(--text)}
+
+.offer-bar{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px;align-items:center}
+.offer-bar .olbl{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-right:4px}
+.offer-chip{appearance:none;border:1px solid var(--line);background:var(--panel);color:var(--text);padding:8px 11px;border-radius:999px;font-size:.7rem;font-weight:700;cursor:pointer;min-height:40px}
+.offer-chip.on{border-color:var(--accent);background:#152238;color:#fff}
+.offer-chip.dead{opacity:.42;cursor:not-allowed;color:var(--muted);text-decoration:line-through;border-style:dashed}
+.offer-chip.dead:hover{border-color:var(--line);color:var(--muted)}
+.badge.manual{background:#1a2030;color:#9ec1ff;border-color:#5b8cff55}
+.badge.live{background:#13281d;color:var(--good);border-color:#3dd68c66}
+.badge.nr{background:#1a1f2e;color:#6b7a94;border-color:#2a3550}
+.contact{font-size:.78rem;margin:4px 0;color:var(--muted)}
+.contact a{font-weight:600}
+.offer-pills{display:flex;flex-wrap:wrap;gap:5px;margin:6px 0}
 @media(max-width:700px){.wrap{padding:12px}h1{font-size:1.15rem}}
 </style>
 </head>
@@ -73,7 +86,7 @@ button.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
 <header>
   <div>
     <h1>Easy shit to attack</h1>
-    <div class="sub">Sell subchip · same GTM as BDR (Violet · Subscription · Sponsor · Big Enterprise) · team-swingable vs founder-only · review ask on convert · <span id="asof">—</span></div>
+    <div class="sub">Sell subchip · same GTM · offer picker (Franchise gray) · team-swingable · review ask · manual/light only · <span id="asof">—</span></div>
   </div>
   <div class="sub">Text <b>GOAT</b> → <a href="tel:9142631311">914-263-1311</a></div>
 </header>
@@ -95,11 +108,13 @@ button.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
 </div>
 
 <div class="filters">
-  <input id="q" type="search" placeholder="Filter name / lane / fit…" aria-label="Filter"/>
+  <input id="q" type="search" placeholder="Filter name / lane / fit / contact…" aria-label="Filter"/>
   <select id="f-swing"><option value="">Swing: all</option><option value="team">Team-swingable</option><option value="founder">Founder-only</option></select>
   <select id="f-lane"><option value="">GTM lane: all</option><option>Violet</option><option>Subscription</option><option>Sponsor</option><option>Big Enterprise</option></select>
   <select id="f-done"><option value="">Done: all</option><option value="open">Open</option><option value="done">Done</option></select>
 </div>
+<div class="offer-bar" id="offer-bar"><span class="olbl">Offers</span></div>
+<p class="note" id="offer-hint">Pick a LIVE offer to filter angles. Not-ready (Franchise) stays gray — no invent pricing. Manual/light only · no HubSpot · no semi-automation.</p>
 
 <div id="sec-groups" class="section on"></div>
 <div id="sec-ops" class="section"></div>
@@ -111,9 +126,9 @@ button.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
 
 <script>
 (function(){
-  var DATA=null, TAB='groups';
+  var DATA=null, TAB='groups', OFFER='';
   var K_DONE='sheehan_easy_attack_done_v1', K_NOTES='sheehan_easy_attack_notes_v1';
-  var DONE={}, NOTES={};
+  var DONE={}, NOTES={}, OFFER_BY={};
   function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];}); }
   function load(k){ try{return JSON.parse(localStorage.getItem(k)||'{}')||{};}catch(e){return {};} }
   function save(k,v){ try{localStorage.setItem(k,JSON.stringify(v));}catch(e){} }
@@ -129,12 +144,33 @@ button.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
     if(s==='team') return '<span class="badge swing">team-swingable</span>';
     return '<span class="badge founder">founder-only</span>';
   }
+  function offerPills(ids){
+    ids=ids||[];
+    if(!ids.length) return '';
+    return '<div class="offer-pills">'+ids.map(function(id){
+      var o=OFFER_BY[id]; if(!o) return '';
+      var dead=o.status!=='live';
+      return '<span class="badge '+(dead?'nr':'live')+'" title="'+esc(o.price_ref||o.note||'')+'">'+esc(o.name)+(dead?' · not ready':'')+'</span>';
+    }).join('')+'</div>';
+  }
+  function contactBlock(x){
+    var bits=[];
+    if(x.title) bits.push('<div class="contact"><b>Title:</b> '+esc(x.title)+'</div>');
+    if(x.email) bits.push('<div class="contact"><b>Email:</b> <a href="mailto:'+esc(x.email)+'">'+esc(x.email)+'</a></div>');
+    if(x.phone) bits.push('<div class="contact"><b>Phone:</b> <a href="tel:'+esc(String(x.phone).replace(/[^\d+]/g,''))+'">'+esc(x.phone)+'</a></div>');
+    if(x.contacts_note) bits.push('<div class="contact">'+esc(x.contacts_note)+'</div>');
+    (x.extra_links||[]).forEach(function(l){
+      if(l&&l.url) bits.push('<div class="contact"><a href="'+esc(l.url)+'" target="_blank" rel="noopener">'+esc(l.label||l.url)+'</a></div>');
+    });
+    return bits.join('')||'<div class="contact">No public email/phone on disk — link/path only.</div>';
+  }
   function filters(){
     return {
       q:(document.getElementById('q').value||'').trim().toLowerCase(),
       swing:document.getElementById('f-swing').value,
       lane:document.getElementById('f-lane').value,
-      done:document.getElementById('f-done').value
+      done:document.getElementById('f-done').value,
+      offer:OFFER
     };
   }
   function pass(item, f, hay){
@@ -144,6 +180,10 @@ button.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
     var isDone=!!DONE[id];
     if(f.done==='open' && isDone) return false;
     if(f.done==='done' && !isDone) return false;
+    if(f.offer){
+      var offs=item.offers||[];
+      if(offs.indexOf(f.offer)<0) return false;
+    }
     if(f.q && hay.indexOf(f.q)<0) return false;
     return true;
   }
@@ -158,19 +198,44 @@ button.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
     if(!url) return '';
     return '<a class="btn" href="'+esc(url)+'" target="_blank" rel="noopener">'+esc(label||'Open')+'</a>';
   }
+  function mailBtn(email){
+    if(!email) return '';
+    return '<a class="btn" href="mailto:'+esc(email)+'">Email</a>';
+  }
+  function telBtn(phone){
+    if(!phone) return '';
+    return '<a class="btn sec" href="tel:'+esc(String(phone).replace(/[^\d+]/g,''))+'">Call</a>';
+  }
+  function renderOfferBar(){
+    var box=document.getElementById('offer-bar');
+    if(!box||!DATA) return;
+    var chips=['<span class="olbl">Offers</span>',
+      '<button type="button" class="offer-chip'+(OFFER===''?' on':'')+'" data-offer="">All LIVE angles</button>'];
+    (DATA.offers||[]).forEach(function(o){
+      var dead=o.status!=='live';
+      chips.push('<button type="button" class="offer-chip'+(dead?' dead':'')+(OFFER===o.id?' on':'')+'" data-offer="'+esc(o.id)+'" '+(dead?'disabled title="Not ready — do not pitch"':'title="'+esc(o.price_ref||'')+'"')+'>'+esc(o.name)+(dead?' · not ready':'')+'</button>');
+    });
+    box.innerHTML=chips.join('');
+    box.querySelectorAll('button[data-offer]').forEach(function(b){
+      if(b.disabled) return;
+      b.onclick=function(){ OFFER=b.getAttribute('data-offer')||''; draw(); };
+    });
+  }
   function renderGroups(){
     var f=filters(), list=(DATA.groups||[]).filter(function(g){
-      var hay=[g.name,g.why,g.sell_angle,g.gtm_lane,(g.fit||[]).join(' '),(g.tags||[]).join(' '),g.notes].join(' ').toLowerCase();
+      var hay=[g.name,g.why,g.sell_angle,g.gtm_lane,(g.fit||[]).join(' '),(g.tags||[]).join(' '),g.notes,(g.offers||[]).join(' ')].join(' ').toLowerCase();
       return pass(g,f,hay);
     });
-    var html='<div class="card"><h2>Break down the big FB groups <span class="note">'+list.length+' shown · sizes unknown unless disk-published</span></h2>';
+    var html='<div class="card"><h2>Break down the big FB groups <span class="note">'+list.length+' shown · sizes unknown unless disk-published · manual posts only</span></h2>';
     html+=list.map(function(g){
       var fits=(g.fit||[]).map(function(t){return '<span class="badge fit">'+esc(t)+'</span>';}).join('');
       return '<div class="row'+(DONE[g.id]?' done':'')+'" data-id="'+esc(g.id)+'">'+
         '<h3>'+esc(g.name)+'</h3>'+
-        '<div class="meta">'+swingBadge(g.swing)+laneBadge(g.gtm_lane)+fits+
+        '<div class="meta">'+swingBadge(g.swing)+laneBadge(g.gtm_lane)+
+          '<span class="badge manual">manual</span>'+fits+
           (g.who?'<span class="badge fit">who: '+esc(g.who)+'</span>':'')+
         '</div>'+
+        offerPills(g.offers)+
         '<div class="size">Approx size: <b>'+esc(g.size)+'</b>'+(g.size_note?' · '+esc(g.size_note):'')+'</div>'+
         '<div class="angle"><b>Why it matters:</b> '+esc(g.why)+'</div>'+
         '<div class="angle"><b>Social sell:</b> '+esc(g.sell_angle)+'</div>'+
@@ -185,19 +250,22 @@ button.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
   }
   function renderOps(){
     var f=filters(), list=(DATA.social_ops||[]).filter(function(o){
-      var hay=[o.title,o.angle,o.convert,o.gtm_lane,(o.for_groups||[]).join(' ')].join(' ').toLowerCase();
+      var hay=[o.title,o.angle,o.convert,o.gtm_lane,(o.for_groups||[]).join(' '),(o.offers||[]).join(' ')].join(' ').toLowerCase();
       return pass(o,f,hay);
     });
-    var html='<div class="card"><h2>Opps to social sell <span class="note">same GTM lanes as BDR · review on convert</span></h2>';
+    var html='<div class="card"><h2>Opps to social sell <span class="note">same GTM · review on convert · no HubSpot / no semi-automation</span></h2>';
     html+=list.map(function(o){
       return '<div class="row'+(DONE[o.id]?' done':'')+'">'+
         '<h3>'+esc(o.title)+'</h3>'+
         '<div class="meta">'+swingBadge(o.swing)+laneBadge(o.gtm_lane)+
+          '<span class="badge manual">manual / light</span>'+
           '<span class="badge rev">review ask</span></div>'+
+        offerPills(o.offers)+
         '<div class="angle">'+esc(o.angle)+'</div>'+
         '<div class="convert"><b>Convert:</b> '+esc(o.convert)+'</div>'+
         '<div class="actions">'+doneBtn(o.id)+
           (DATA.google_review_link?linkBtn(DATA.google_review_link,'Google review link'):'')+
+          linkBtn('catalogue-close.html','Catalogue (live $)')+
         '</div>'+notesUI(o.id)+
       '</div>';
     }).join('')||'<p class="note">No ops match.</p>';
@@ -206,22 +274,24 @@ button.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
   }
   function renderCross(){
     var f=filters(), list=(DATA.cross_marketers||[]).filter(function(x){
-      var hay=[x.name,x.type,x.why,x.sell,x.gtm_lane,x.note].join(' ').toLowerCase();
+      var hay=[x.name,x.type,x.why,x.sell,x.gtm_lane,x.note,x.email,x.phone,x.title,x.contacts_note,(x.offers||[]).join(' ')].join(' ').toLowerCase();
       return pass(x,f,hay);
     });
-    var html='<div class="card"><h2>Obvious great cross-marketers <span class="note">public pages · no invented emails</span></h2>';
+    var html='<div class="card"><h2>Obvious great cross-marketers <span class="note">public details when known · never invent · manual outreach</span></h2>';
     html+=list.map(function(x){
-      var mail=x.email?'<a class="btn" href="mailto:'+esc(x.email)+'">'+esc(x.email)+'</a>':'';
       return '<div class="row'+(DONE[x.id]?' done':'')+'">'+
         '<h3>'+esc(x.name)+'</h3>'+
         '<div class="meta">'+swingBadge(x.swing)+laneBadge(x.gtm_lane)+
           '<span class="badge fit">'+esc(x.type)+'</span>'+
+          '<span class="badge manual">manual</span>'+
           (x.review_ask?'<span class="badge rev">+ Google/FB review</span>':'')+
         '</div>'+
+        offerPills(x.offers)+
         '<div class="angle"><b>Why:</b> '+esc(x.why)+'</div>'+
         '<div class="angle"><b>Attack:</b> '+esc(x.sell)+'</div>'+
+        contactBlock(x)+
         (x.note?'<div class="convert">'+esc(x.note)+'</div>':'')+
-        '<div class="actions">'+doneBtn(x.id)+linkBtn(x.link||x.path,'Open page')+mail+
+        '<div class="actions">'+doneBtn(x.id)+linkBtn(x.link||x.path,'Open page')+mailBtn(x.email)+telBtn(x.phone)+
           (DATA.google_review_link?linkBtn(DATA.google_review_link,'Google review link'):'')+
         '</div>'+notesUI(x.id)+
       '</div>';
@@ -240,13 +310,12 @@ button.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
           '<a class="btn" href="bookings-dates.html">Open Bookings (Run)</a>'+
           '<a class="btn sec" href="https://calendar.google.com/" target="_blank" rel="noopener">Google Calendar</a>'+
         '</div></div>';
-    } else {
-      html+='<div class="card"><h2>Open / lightly booked days</h2><p class="note">Live from Google Calendar.</p></div>';
     }
     html+='<div class="card"><h2>When calendar is live</h2>'+
-      '<p class="note">Show next 2–4 weeks of open / lightly booked days. Team-swingable: book a Mommy &amp; Me, review hour, or social push into those gaps (Violet / Subscription). Founder-only: NCHE / named-client rebooks on scarce days.</p>'+
-      '<p class="note">Convert on every farm visit: booking · <b>Google/FB review ask</b> · Gold/VIP · text GOAT. No invented free days or review counts.</p>'+
+      '<p class="note">Open / lightly booked days (2–4 weeks). Team-swingable: Mommy &amp; Me, review hour, or one manual social push (Violet / Subscription). Founder-only: NCHE / named-client rebooks.</p>'+
+      '<p class="note">Convert: booking · <b>Google/FB review ask</b> · Gold/VIP · text GOAT. Manual only — no HubSpot sequences. No invented free days or review counts.</p>'+
       (DATA.google_review_link?'<p class="note">Review link on file: <a href="'+esc(DATA.google_review_link)+'" target="_blank" rel="noopener">'+esc(DATA.google_review_link)+'</a> — '+esc(DATA.google_review_note||'')+'</p>':'')+
+      '<p class="note">Offer filter above still applies — Franchise stays gray.</p>'+
     '</div>';
     document.getElementById('sec-cal').innerHTML=html;
   }
@@ -265,6 +334,7 @@ button.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
     else { document.getElementById('k-c').textContent='LIVE'; document.getElementById('k-c-s').textContent=c.window||''; }
   }
   function draw(){
+    renderOfferBar();
     document.getElementById('sec-groups').className='section'+(TAB==='groups'?' on':'');
     document.getElementById('sec-ops').className='section'+(TAB==='ops'?' on':'');
     document.getElementById('sec-cross').className='section'+(TAB==='cross'?' on':'');
@@ -310,6 +380,7 @@ button.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
     try{
       var res=await fetch('data/easy_attack.json',{cache:'no-store'});
       DATA=await res.json();
+      (DATA.offers||[]).forEach(function(o){ OFFER_BY[o.id]=o; });
       if(DATA.localStorage_keys){
         K_DONE=DATA.localStorage_keys.done||K_DONE;
         K_NOTES=DATA.localStorage_keys.notes||K_NOTES;
@@ -317,7 +388,7 @@ button.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
       DONE=load(K_DONE); NOTES=load(K_NOTES);
       document.getElementById('asof').textContent=DATA.as_of||'';
       document.getElementById('src-note').textContent=
-        'Data: data/easy_attack.json · '+(DATA.rule||'')+' · Sources: '+(DATA.sources||[]).join(', ');
+        'Data: data/easy_attack.json · '+(DATA.play_style_note||'Manual/light')+' · '+(DATA.rule||'')+' · Sources: '+(DATA.sources||[]).join(', ');
       draw();
     }catch(e){
       document.getElementById('src-note').textContent='Load failed: '+e;
@@ -325,6 +396,7 @@ button.btn.sec{border-color:#3dd68c66;background:#13281d;color:var(--good)}
   }
   boot();
 })();
+</script>
 </script>
 <script src="shared/flow-spine.js" defer></script>
 </body></html>

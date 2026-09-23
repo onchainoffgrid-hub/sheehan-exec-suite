@@ -4,7 +4,7 @@
   "title": "Easy shit to attack",
   "face": "sales",
   "chip": "easy-attack",
-  "rule": "No invented FB member counts, emails, or review totals. Sizes unknown unless disk-published. Calendar free-days only from live Google Calendar \u2014 if MCP auth fails, show connect gap. GTM language matches Sell lanes: Violet \u00b7 Subscription \u00b7 Sponsor \u00b7 Big Enterprise. Team-swingable = junior/commission can attack; founder-only = relationship/budget/org gate. Convert often includes Google/FB review ask (link on site) \u2014 do not invent review counts.",
+  "rule": "No invented FB member counts, emails, phones, titles, or review totals. Sizes unknown unless disk-published. Calendar free-days only from live Google Calendar \u2014 MCP 403 = connect gap. GTM = Violet \u00b7 Subscription \u00b7 Sponsor \u00b7 Big Enterprise (same as BDR). Team-swingable vs founder-only. Convert includes Google/FB review ask when fitting. Offers: LIVE catalogue SKUs + EMBA ladder + Sponsor motion; Franchise = not_ready (gray). No invented pricing. Contact fields only when known on disk. Manual/light plays only \u2014 no HubSpot, no semi-automation pitches.",
   "gtm_lanes": {
     "Violet": "Consumer / mom / birthday / mobile \u2014 consumer-inbound + social soft invite",
     "Subscription": "Recurring senior/campus/homeschool field-trip host",
@@ -54,7 +54,12 @@
       "who": "AM",
       "swing": "team",
       "gtm_lane": "Violet",
-      "sell_angle": "Soft invite to Mommy & Me / farm morning after 1\u20132 helpful comments. Text GOAT to 914-263-1311. Review ask at gate."
+      "sell_angle": "Soft invite to Mommy & Me / farm morning after 1\u20132 helpful comments. Text GOAT to 914-263-1311. Review ask at gate.",
+      "offers": [
+        "visit-farm-tour",
+        "visit-car",
+        "visit-gold"
+      ]
     },
     {
       "id": "jm-fernandina",
@@ -76,7 +81,12 @@
       "who": "AM",
       "swing": "team",
       "gtm_lane": "Violet",
-      "sell_angle": "Weekend farm day as Amelia day-trip. Capture email + Google review after visit."
+      "sell_angle": "Weekend farm day as Amelia day-trip. Capture email + Google review after visit.",
+      "offers": [
+        "visit-farm-tour",
+        "visit-car",
+        "visit-gold"
+      ]
     },
     {
       "id": "jm-homeschool",
@@ -99,7 +109,12 @@
       "who": "AM",
       "swing": "team",
       "gtm_lane": "Subscription",
-      "sell_angle": "Anyone hunting a hands-on animal / STEM morning? Host offer. Booked field trip = Subscription lane."
+      "sell_angle": "Anyone hunting a hands-on animal / STEM morning? Host offer. Booked field trip = Subscription lane.",
+      "offers": [
+        "visit-fieldtrip-299",
+        "visit-fieldtrip-499",
+        "visit-gold"
+      ]
     },
     {
       "id": "jm-wahms",
@@ -121,7 +136,12 @@
       "who": "AM",
       "swing": "team",
       "gtm_lane": "Violet",
-      "sell_angle": "Peer post + collab ask. Cross-shoutout = Sponsor-lite. Ask partners for Google/FB review after farm visit."
+      "sell_angle": "Peer post + collab ask. Cross-shoutout = Sponsor-lite. Ask partners for Google/FB review after farm visit.",
+      "offers": [
+        "visit-farm-tour",
+        "visit-car",
+        "visit-gold"
+      ]
     },
     {
       "id": "wild-yulee",
@@ -143,7 +163,12 @@
       "who": "AM",
       "swing": "founder",
       "gtm_lane": "Subscription",
-      "sell_angle": "Offer to host a nature/farm morning as member contribution \u2014 founder relationship first."
+      "sell_angle": "Offer to host a nature/farm morning as member contribution \u2014 founder relationship first.",
+      "offers": [
+        "visit-fieldtrip-299",
+        "visit-fieldtrip-499",
+        "visit-gold"
+      ]
     },
     {
       "id": "nefhh",
@@ -166,7 +191,12 @@
       "who": "AM",
       "swing": "team",
       "gtm_lane": "Subscription",
-      "sell_angle": "Post dated farm field trip / open farm. RSVP \u2192 book \u2192 review at gate."
+      "sell_angle": "Post dated farm field trip / open farm. RSVP \u2192 book \u2192 review at gate.",
+      "offers": [
+        "visit-fieldtrip-299",
+        "visit-fieldtrip-499",
+        "visit-gold"
+      ]
     },
     {
       "id": "wildschooling",
@@ -188,7 +218,12 @@
       "who": "AM",
       "swing": "team",
       "gtm_lane": "Subscription",
-      "sell_angle": "Host Thursday farm meetup. Review + Gold card after."
+      "sell_angle": "Host Thursday farm meetup. Review + Gold card after.",
+      "offers": [
+        "visit-fieldtrip-299",
+        "visit-fieldtrip-499",
+        "visit-gold"
+      ]
     },
     {
       "id": "sunshine",
@@ -209,7 +244,12 @@
       "who": "AM",
       "swing": "team",
       "gtm_lane": "Subscription",
-      "sell_angle": "Event invite after lurk. Text GOAT."
+      "sell_angle": "Event invite after lurk. Text GOAT.",
+      "offers": [
+        "visit-fieldtrip-299",
+        "visit-fieldtrip-499",
+        "visit-gold"
+      ]
     },
     {
       "id": "cotw",
@@ -231,7 +271,12 @@
       "who": "AM",
       "swing": "team",
       "gtm_lane": "Subscription",
-      "sell_angle": "Host nature morning. Review gate."
+      "sell_angle": "Host nature morning. Review gate.",
+      "offers": [
+        "visit-fieldtrip-299",
+        "visit-fieldtrip-499",
+        "visit-gold"
+      ]
     },
     {
       "id": "jm-northside",
@@ -253,7 +298,12 @@
       "who": "AM",
       "swing": "team",
       "gtm_lane": "Violet",
-      "sell_angle": "Local farm morning invite. Review after."
+      "sell_angle": "Local farm morning invite. Review after.",
+      "offers": [
+        "visit-farm-tour",
+        "visit-car",
+        "visit-gold"
+      ]
     },
     {
       "id": "adventures",
@@ -274,7 +324,12 @@
       "who": "AM",
       "swing": "team",
       "gtm_lane": "Subscription",
-      "sell_angle": "Post field-trip date. Book group. Ask organizer for Google review."
+      "sell_angle": "Post field-trip date. Book group. Ask organizer for Google review.",
+      "offers": [
+        "visit-fieldtrip-299",
+        "visit-fieldtrip-499",
+        "visit-gold"
+      ]
     },
     {
       "id": "jm-working",
@@ -296,7 +351,12 @@
       "who": "AM",
       "swing": "team",
       "gtm_lane": "Violet",
-      "sell_angle": "Mobile birthday / after-work language. Commission-friendly. Review after gig."
+      "sell_angle": "Mobile birthday / after-work language. Commission-friendly. Review after gig.",
+      "offers": [
+        "mobile-mini",
+        "mobile-bunny",
+        "visit-gold"
+      ]
     },
     {
       "id": "jm-op",
@@ -317,7 +377,12 @@
       "who": "AM",
       "swing": "team",
       "gtm_lane": "Violet",
-      "sell_angle": "Weekend farm day. Text GOAT. Review + Gold."
+      "sell_angle": "Weekend farm day. Text GOAT. Review + Gold.",
+      "offers": [
+        "visit-farm-tour",
+        "visit-car",
+        "visit-gold"
+      ]
     },
     {
       "id": "jm-nocatee",
@@ -340,7 +405,12 @@
       "who": "AM",
       "swing": "team",
       "gtm_lane": "Violet",
-      "sell_angle": "Weekend field-trip invite only. Paid SJM spotlight = Sponsor lane if budgeted."
+      "sell_angle": "Weekend field-trip invite only. Paid SJM spotlight = Sponsor lane if budgeted.",
+      "offers": [
+        "visit-farm-tour",
+        "visit-car",
+        "visit-gold"
+      ]
     },
     {
       "id": "clay-hs",
@@ -361,7 +431,12 @@
       "who": "AM",
       "swing": "team",
       "gtm_lane": "Subscription",
-      "sell_angle": "Field-trip host post. Book + review."
+      "sell_angle": "Field-trip host post. Book + review.",
+      "offers": [
+        "visit-fieldtrip-299",
+        "visit-fieldtrip-499",
+        "visit-gold"
+      ]
     },
     {
       "id": "nche",
@@ -383,7 +458,12 @@
       "who": "AM+Michael",
       "swing": "founder",
       "gtm_lane": "Subscription",
-      "sell_angle": "Join org; host farm field trip. Founder relationship. Reviews from families after."
+      "sell_angle": "Join org; host farm field trip. Founder relationship. Reviews from families after.",
+      "offers": [
+        "visit-fieldtrip-299",
+        "visit-fieldtrip-499",
+        "visit-gold"
+      ]
     },
     {
       "id": "stjohns-moms",
@@ -405,7 +485,12 @@
       "who": "Michael",
       "swing": "founder",
       "gtm_lane": "Sponsor",
-      "sell_angle": "Budget spotlight if Nocatee math works \u2014 Sponsor GTM. Don\u2019t sneak flyers."
+      "sell_angle": "Budget spotlight if Nocatee math works \u2014 Sponsor GTM. Don\u2019t sneak flyers.",
+      "offers": [
+        "sponsor-shout",
+        "visit-car",
+        "emba-ladder"
+      ]
     },
     {
       "id": "jax-moms-group",
@@ -427,7 +512,12 @@
       "who": "Michael",
       "swing": "founder",
       "gtm_lane": "Sponsor",
-      "sell_angle": "Only if sponsorship budget \u2014 Sponsor lane."
+      "sell_angle": "Only if sponsorship budget \u2014 Sponsor lane.",
+      "offers": [
+        "sponsor-shout",
+        "visit-car",
+        "emba-ladder"
+      ]
     },
     {
       "id": "playground",
@@ -449,7 +539,12 @@
       "who": "Page+AM",
       "swing": "team",
       "gtm_lane": "Violet",
-      "sell_angle": "Post dated public farm morning / birthday vendor. Review CTA on event."
+      "sell_angle": "Post dated public farm morning / birthday vendor. Review CTA on event.",
+      "offers": [
+        "visit-farm-tour",
+        "visit-car",
+        "visit-gold"
+      ]
     },
     {
       "id": "jm-military",
@@ -471,7 +566,12 @@
       "who": "AM",
       "swing": "team",
       "gtm_lane": "Violet",
-      "sell_angle": "Welcome + mobile zoo. Review after."
+      "sell_angle": "Welcome + mobile zoo. Review after.",
+      "offers": [
+        "mobile-mini",
+        "mobile-bunny",
+        "visit-gold"
+      ]
     }
   ],
   "social_ops": [
@@ -487,8 +587,14 @@
         "adventures",
         "clay-hs"
       ],
-      "angle": "Post as field-trip host (not vendor). Dated Saturday AM. Text GOAT for RSVP. At gate: Google review \u2192 VIP/Gold card (per farm playbook). No invented review targets.",
-      "convert": "Book group deposit \u00b7 Google/FB review \u00b7 Gold card \u00b7 email"
+      "angle": "Post as field-trip host (not vendor). Dated Saturday AM. Text GOAT for RSVP. At gate: Google review \u2192 VIP/Gold card (per farm playbook). No invented review targets. Manual one-off posts/DMs only \u2014 no HubSpot sequence, no mass-touch tools.",
+      "convert": "Book group deposit \u00b7 Google/FB review \u00b7 Gold card \u00b7 email",
+      "offers": [
+        "visit-fieldtrip-299",
+        "visit-fieldtrip-499",
+        "visit-gold"
+      ],
+      "play": "manual_light"
     },
     {
       "id": "op-mommy-me",
@@ -501,8 +607,14 @@
         "jm-northside",
         "jm-op"
       ],
-      "angle": "Comment helpful first. Soft invite: farm morning / rainy-day animals. AM voice. Review-gated first visit OK per guerrilla playbook.",
-      "convert": "Ticket or text GOAT \u00b7 review at gate \u00b7 Gold"
+      "angle": "Comment helpful first. Soft invite: farm morning / rainy-day animals. AM voice. Review-gated first visit OK per guerrilla playbook. Manual one-off posts/DMs only \u2014 no HubSpot sequence, no mass-touch tools.",
+      "convert": "Ticket or text GOAT \u00b7 review at gate \u00b7 Gold",
+      "offers": [
+        "visit-farm-tour",
+        "visit-car",
+        "visit-gold"
+      ],
+      "play": "manual_light"
     },
     {
       "id": "op-mobile-bday",
@@ -514,8 +626,15 @@
         "jm-op",
         "jm-nocatee"
       ],
-      "angle": "We come to you language. Helper can post with Goat [Name] SMS credit. After gig: ask host for Google review + FB tag.",
-      "convert": "Gig commission \u00b7 Google review \u00b7 FB tag \u00b7 next referral"
+      "angle": "We come to you language. Helper can post with Goat [Name] SMS credit. After gig: ask host for Google review + FB tag. Manual one-off posts/DMs only \u2014 no HubSpot sequence, no mass-touch tools.",
+      "convert": "Gig commission \u00b7 Google review \u00b7 FB tag \u00b7 next referral",
+      "offers": [
+        "mobile-mini",
+        "mobile-standard",
+        "mobile-bunny",
+        "visit-gold"
+      ],
+      "play": "manual_light"
     },
     {
       "id": "op-wahm-collab",
@@ -525,8 +644,14 @@
       "for_groups": [
         "jm-wahms"
       ],
-      "angle": "Peer story + mutual shoutout (Steadshout / Sponsor-lite). Farm guest visit \u2192 both leave Google reviews.",
-      "convert": "Cross-post \u00b7 review swap \u00b7 optional $25 named ticket sponsor"
+      "angle": "Peer story + mutual shoutout (Steadshout / Sponsor-lite). Farm guest visit \u2192 both leave Google reviews. Manual one-off posts/DMs only \u2014 no HubSpot sequence, no mass-touch tools.",
+      "convert": "Cross-post \u00b7 review swap \u00b7 optional $25 named ticket sponsor",
+      "offers": [
+        "sponsor-shout",
+        "visit-farm-tour",
+        "visit-gold"
+      ],
+      "play": "manual_light"
     },
     {
       "id": "op-calendar-dump",
@@ -537,8 +662,14 @@
         "playground",
         "nefhh"
       ],
-      "angle": "Same flyer \u2192 Fun 4 First Coast Kids, Jacksonville Mom calendar, Action News Jax events@, News4JAX CitySpark, Folio. Free crawl = Violet demand.",
-      "convert": "Listings live \u00b7 inbound texts \u00b7 review after visit"
+      "angle": "Same flyer \u2192 Fun 4 First Coast Kids, Jacksonville Mom calendar, Action News Jax events@, News4JAX CitySpark, Folio. Free crawl = Violet demand. Manual one-off posts/DMs only \u2014 no HubSpot sequence, no mass-touch tools.",
+      "convert": "Listings live \u00b7 inbound texts \u00b7 review after visit",
+      "offers": [
+        "visit-farm-tour",
+        "visit-car",
+        "visit-fieldtrip-299"
+      ],
+      "play": "manual_light"
     },
     {
       "id": "op-nche-host",
@@ -549,8 +680,13 @@
         "nche",
         "wild-yulee"
       ],
-      "angle": "Join org / participate; host required field trip at homestead. Founder-only until relationship exists.",
-      "convert": "Org trust \u00b7 booked families \u00b7 reviews"
+      "angle": "Join org / participate; host required field trip at homestead. Founder-only until relationship exists. Manual one-off posts/DMs only \u2014 no HubSpot sequence, no mass-touch tools.",
+      "convert": "Org trust \u00b7 booked families \u00b7 reviews",
+      "offers": [
+        "visit-fieldtrip-299",
+        "visit-fieldtrip-499"
+      ],
+      "play": "manual_light"
     },
     {
       "id": "op-sjm-spotlight",
@@ -561,8 +697,14 @@
         "stjohns-moms",
         "jax-moms-group"
       ],
-      "angle": "Use published paid paths only. Same Sponsor compose language as BDR Sponsor lane.",
-      "convert": "Paid post \u00b7 tracked bookings \u00b7 review ask in follow-up"
+      "angle": "Use published paid paths only. Same Sponsor compose language as BDR Sponsor lane. Manual one-off posts/DMs only \u2014 no HubSpot sequence, no mass-touch tools.",
+      "convert": "Paid post \u00b7 tracked bookings \u00b7 review ask in follow-up",
+      "offers": [
+        "sponsor-shout",
+        "visit-car",
+        "mobile-mini"
+      ],
+      "play": "manual_light"
     },
     {
       "id": "op-guest-bartend",
@@ -570,8 +712,14 @@
       "gtm_lane": "Sponsor",
       "swing": "team",
       "for_groups": [],
-      "angle": "From Partner SMB script: barter goat appearance \u2194 comps / family night. Team can pitch local same-audience SMBs (no invented brewery emails \u2014 use public contact forms). Convert includes Google/FB review + gig commission + farm time for helper.",
-      "convert": "Barter night booked \u00b7 Google/FB review \u00b7 helper commission/farm time \u00b7 shoutout"
+      "angle": "From Partner SMB script: barter goat appearance \u2194 comps / family night. Team can pitch local same-audience SMBs (no invented brewery emails \u2014 use public contact forms). Convert includes Google/FB review + gig commission + farm time for helper. Manual one-off posts/DMs only \u2014 no HubSpot sequence, no mass-touch tools.",
+      "convert": "Barter night booked \u00b7 Google/FB review \u00b7 helper commission/farm time \u00b7 shoutout",
+      "offers": [
+        "sponsor-shout",
+        "mobile-mini",
+        "visit-gold"
+      ],
+      "play": "manual_light"
     }
   ],
   "cross_marketers": [
@@ -587,7 +735,24 @@
       "swing": "team",
       "note": "Submit every public farm morning. No invented inbox.",
       "sell": "Submit event + camp listing. After visits, ask guests to review Google (share.google link on site) + FB.",
-      "review_ask": true
+      "review_ask": true,
+      "offers": [
+        "visit-farm-tour",
+        "visit-car",
+        "visit-gold"
+      ],
+      "phone": "",
+      "contacts_note": "Form/listing paths only \u2014 no email on disk.",
+      "extra_links": [
+        {
+          "label": "Calendar",
+          "url": "https://fun4firstcoastkids.com/calendar"
+        },
+        {
+          "label": "Add camp listing",
+          "url": "https://fun4firstcoastkids.com/add-camp-listing/"
+        }
+      ]
     },
     {
       "id": "xm-jaxmom",
@@ -601,7 +766,24 @@
       "swing": "team",
       "note": "AM guest essay (no sales). Calendar: jacksonvillemom.com/calendar-events/community/add. Paid ads separate.",
       "sell": "Guest essay + event submit. Share JM post into groups. Review ask on farm visits from that traffic.",
-      "review_ask": true
+      "review_ask": true,
+      "offers": [
+        "visit-farm-tour",
+        "visit-car",
+        "visit-gold"
+      ],
+      "phone": "",
+      "contacts_note": "Guest guidelines + calendar + free listing. AM voice. Source: jax-free-local-media / jax_local_buzz.",
+      "extra_links": [
+        {
+          "label": "Submit event",
+          "url": "https://jacksonvillemom.com/calendar-events/community/add"
+        },
+        {
+          "label": "Free listing",
+          "url": "https://jacksonvillemom.com/add-directory-listing/"
+        }
+      ]
     },
     {
       "id": "xm-wildoak",
@@ -615,7 +797,20 @@
       "swing": "founder",
       "note": "Founder Stacey Tappan (public). Relationship / field-trip collab \u2014 not cold spam.",
       "sell": "Offer farm nature morning for their families. Ask for Google review after.",
-      "review_ask": true
+      "review_ask": true,
+      "offers": [
+        "visit-fieldtrip-299",
+        "visit-gold"
+      ],
+      "title": "Founder (public): Stacey Tappan",
+      "phone": "",
+      "contacts_note": "Named on Who We Serve. No public email on disk \u2014 use site contact. Do not invent inbox.",
+      "extra_links": [
+        {
+          "label": "Wild Oak site",
+          "url": "https://www.wildoakexplorers.com/"
+        }
+      ]
     },
     {
       "id": "xm-dnn",
@@ -629,7 +824,24 @@
       "swing": "team",
       "note": "Book Ask the Educator (AM) or Around Town. Share their post; ask viewers who visit to review.",
       "sell": "Book next segment. Native-share clip into groups. Farm guests \u2192 Google review.",
-      "review_ask": true
+      "review_ask": true,
+      "offers": [
+        "sponsor-shout",
+        "emba-ladder",
+        "visit-gold"
+      ],
+      "phone": "",
+      "contacts_note": "Form-only interview request (no public booking inbox on disk). Source: jax_local_buzz.",
+      "extra_links": [
+        {
+          "label": "Interview form",
+          "url": "https://dailynewsnetwork.com/contact/request-an-interview/"
+        },
+        {
+          "label": "Show info",
+          "url": "https://jacksonvillebuzz.com/show-info/"
+        }
+      ]
     },
     {
       "id": "xm-hipcamp",
@@ -643,7 +855,20 @@
       "swing": "team",
       "note": "Public listing path. Don\u2019t invent listing URL if not on disk \u2014 use Hipcamp search for Sheehan Homestead. Reviews on Hipcamp + ask Google after stay.",
       "sell": "Keep listing fresh. Message bookers: Google review after Visit Us.",
-      "review_ask": true
+      "review_ask": true,
+      "offers": [
+        "visit-farm-tour",
+        "visit-car",
+        "visit-gold"
+      ],
+      "phone": "",
+      "contacts_note": "Discovery channel. Exact listing URL not pinned on disk \u2014 search Sheehan Homestead on Hipcamp. No invented host inbox.",
+      "extra_links": [
+        {
+          "label": "Hipcamp",
+          "url": "https://www.hipcamp.com/"
+        }
+      ]
     },
     {
       "id": "xm-momco",
@@ -657,7 +882,20 @@
       "swing": "team",
       "note": "Search MomCo Social Yulee / page id mentioned in jax-mom report. Tiny but wants partners.",
       "sell": "Sponsor / host / speak. Guests review Google after farm morning.",
-      "review_ask": true
+      "review_ask": true,
+      "offers": [
+        "sponsor-shout",
+        "emba-ladder",
+        "visit-gold"
+      ],
+      "phone": "",
+      "contacts_note": "Directory mentions MomCo Social Yulee seeking community partners. No verified chapter email on disk \u2014 search/public page only.",
+      "extra_links": [
+        {
+          "label": "The MomCo",
+          "url": "https://www.themom.co/home"
+        }
+      ]
     },
     {
       "id": "xm-nassau-chamber",
@@ -671,7 +909,20 @@
       "swing": "team",
       "note": "Email from chamber FAQ on disk (jax-free-local-media). Member events via Info Hub.",
       "sell": "Submit events / member news. Ask attendees for Google review.",
-      "review_ask": true
+      "review_ask": true,
+      "offers": [
+        "sponsor-shout",
+        "emba-ladder",
+        "visit-gold"
+      ],
+      "phone": "",
+      "contacts_note": "Chamber FAQ path. Members: Info Hub events. Source: jax-free-local-media.",
+      "extra_links": [
+        {
+          "label": "Chamber FAQ",
+          "url": "https://www.nassaucountyflchamber.com/chamber-frequently-asked-questions/"
+        }
+      ]
     },
     {
       "id": "xm-f4clay",
@@ -685,7 +936,20 @@
       "swing": "team",
       "note": "Public calendar path. Submit Clay-relevant farm/mobile days.",
       "sell": "Event listing. Review ask after bookings from Clay.",
-      "review_ask": true
+      "review_ask": true,
+      "offers": [
+        "visit-farm-tour",
+        "visit-car",
+        "visit-gold"
+      ],
+      "phone": "",
+      "contacts_note": "Public site only \u2014 no email on disk.",
+      "extra_links": [
+        {
+          "label": "Fun 4 Clay Kids",
+          "url": "https://fun4claykids.com/"
+        }
+      ]
     },
     {
       "id": "xm-sjm",
@@ -699,7 +963,20 @@
       "swing": "founder",
       "note": "Founder decides budget. Spotlight $150 published.",
       "sell": "If bought: track bookings; every close gets review ask.",
-      "review_ask": true
+      "review_ask": true,
+      "offers": [
+        "sponsor-shout",
+        "emba-ladder",
+        "visit-gold"
+      ],
+      "phone": "",
+      "contacts_note": "Advertise page only. Spotlight $150 published on their site \u2014 founder budget. No invented sales inbox.",
+      "extra_links": [
+        {
+          "label": "Advertise",
+          "url": "https://www.stjohnsmoms.com/advertise"
+        }
+      ]
     },
     {
       "id": "xm-partner-smb",
@@ -713,7 +990,15 @@
       "swing": "team",
       "note": "No invented brewery names or emails. Team uses public contact forms. Barter goat night \u2194 comps.",
       "sell": "Pitch shoutout / $25 named ticket / barter night. Convert: Google/FB review + gig commission + farm time.",
-      "review_ask": true
+      "review_ask": true,
+      "offers": [
+        "sponsor-shout",
+        "emba-ladder",
+        "visit-gold"
+      ],
+      "phone": "",
+      "contacts_note": "Generic Partner SMB seat \u2014 no invented brewery names/emails. Use each venue\u2019s public contact form. Manual one-offs only.",
+      "extra_links": []
     },
     {
       "id": "xm-ymca",
@@ -727,7 +1012,15 @@
       "swing": "founder",
       "note": "Named client \u2014 founder/AM relationship. Not a cold FB group.",
       "sell": "Renew / expand visit. Ask program lead for Google review after successful visit.",
-      "review_ask": true
+      "review_ask": true,
+      "offers": [
+        "mobile-mini",
+        "mobile-standard",
+        "emba-ladder"
+      ],
+      "phone": "",
+      "contacts_note": "Named on Who We Serve only. No decision-maker email/phone on that page \u2014 founder rebook path. Do not invent.",
+      "extra_links": []
     },
     {
       "id": "xm-oxford",
@@ -741,7 +1034,14 @@
       "swing": "founder",
       "note": "Named client \u2014 founder path for rebook.",
       "sell": "Rebook field trip. Review from campus after.",
-      "review_ask": true
+      "review_ask": true,
+      "offers": [
+        "visit-fieldtrip-299",
+        "visit-gold"
+      ],
+      "phone": "",
+      "contacts_note": "Named on Who We Serve only. No contact invented.",
+      "extra_links": []
     },
     {
       "id": "xm-aim",
@@ -755,11 +1055,244 @@
       "swing": "founder",
       "note": "Named client.",
       "sell": "Rebook. Review ask.",
-      "review_ask": true
+      "review_ask": true,
+      "offers": [
+        "visit-fieldtrip-299",
+        "visit-gold"
+      ],
+      "phone": "",
+      "contacts_note": "Named on Who We Serve only. No contact invented.",
+      "extra_links": []
+    },
+    {
+      "id": "xm-iknowjax",
+      "name": "I Know Jax (CW17)",
+      "type": "local-fun TV \u00b7 press",
+      "why": "Open press inbox; Amelia/Fernandina footprint includes Callahan",
+      "link": "https://iknowjax.com/tvshow/",
+      "path": "https://iknowjax.com/tvshow/",
+      "email": "info@iknowjax.com",
+      "phone": "904-345-0755",
+      "title": "Joe Talentino (public show contact)",
+      "gtm_lane": "Violet",
+      "swing": "team",
+      "note": "Press + photos. joe@iknowjax.com also published. Manual email \u2014 no automation.",
+      "contacts_note": "Source: jax-free-local-media / jax_local_buzz.",
+      "sell": "Email press + 3 photos for Visit Us / fall morning. Guests \u2192 Google review.",
+      "review_ask": true,
+      "offers": [
+        "visit-farm-tour",
+        "visit-car",
+        "visit-gold"
+      ],
+      "extra_links": [
+        {
+          "label": "TV show page",
+          "url": "https://iknowjax.com/tvshow/"
+        }
+      ]
+    },
+    {
+      "id": "xm-newsleader",
+      "name": "Fernandina News-Leader",
+      "type": "hometown print",
+      "why": "Nassau weekly \u2014 easiest local proof",
+      "link": "https://www.fbnewsleader.com/about",
+      "path": "https://www.fbnewsleader.com/local-regional-columns/letters-editor-policy",
+      "email": "tdishman@fbnewsleader.com",
+      "phone": "904-261-3696",
+      "title": "Editor (published)",
+      "gtm_lane": "Sponsor",
+      "swing": "team",
+      "note": "Pitch Callahan homestead / homeschool field-trip feature. Manual.",
+      "contacts_note": "Source: jax-free-local-media.",
+      "sell": "Feature pitch. Clip into groups. Review ask after farm visits from that traffic.",
+      "review_ask": true,
+      "offers": [
+        "sponsor-shout",
+        "visit-fieldtrip-299",
+        "visit-gold"
+      ],
+      "extra_links": []
+    },
+    {
+      "id": "xm-observer",
+      "name": "Fernandina Observer",
+      "type": "hometown digital",
+      "why": "Nassau reader submissions",
+      "link": "https://www.fernandinaobserver.org/reader-submissions/",
+      "path": "https://www.fernandinaobserver.org/reader-submissions/",
+      "email": "hello@fernandinaobserver.org",
+      "phone": "",
+      "title": "Publisher inbox (published)",
+      "gtm_lane": "Violet",
+      "swing": "team",
+      "note": "Reader submissions path. Manual.",
+      "contacts_note": "Source: jax-free-local-media / jax_local_buzz.",
+      "sell": "Submit homestead / open farm story. Share URL into groups. Review ask on visits.",
+      "review_ask": true,
+      "offers": [
+        "visit-farm-tour",
+        "visit-car",
+        "visit-gold"
+      ],
+      "extra_links": []
     }
   ],
   "localStorage_keys": {
     "done": "sheehan_easy_attack_done_v1",
     "notes": "sheehan_easy_attack_notes_v1"
-  }
+  },
+  "offers": [
+    {
+      "id": "visit-farm-tour",
+      "name": "Farm tour \u2014 2 people",
+      "family": "Visit Us (live)",
+      "status": "live",
+      "sku": "C-FT25",
+      "price_ref": "$25 pay-ahead (catalogue_close)",
+      "gtm_lanes": [
+        "Violet"
+      ],
+      "team_swingable": true,
+      "note": "LIVE consumer SKU from SHARE menu lock."
+    },
+    {
+      "id": "visit-car",
+      "name": "Whole car \u2014 up to 5",
+      "family": "Visit Us (live)",
+      "status": "live",
+      "sku": "C-CAR50",
+      "price_ref": "$50 pay-ahead (catalogue_close)",
+      "gtm_lanes": [
+        "Violet"
+      ],
+      "team_swingable": true,
+      "note": "LIVE."
+    },
+    {
+      "id": "visit-gold",
+      "name": "Gold / Critter Club",
+      "family": "Visit Us (live)",
+      "status": "live",
+      "sku": "C-CLUB50",
+      "price_ref": "$50 microdeposit \u2192 future mobile (catalogue_close)",
+      "gtm_lanes": [
+        "Violet",
+        "Subscription"
+      ],
+      "team_swingable": true,
+      "note": "Review \u2192 VIP/Gold path in farm playbook."
+    },
+    {
+      "id": "visit-fieldtrip-299",
+      "name": "Field trip \u2014 \u22645 cars / 20 \u00b7 75 min",
+      "family": "Visit Us (live)",
+      "status": "live",
+      "sku": "C-GRP299",
+      "price_ref": "$299 \u00b7 ~50% lock (catalogue_close)",
+      "gtm_lanes": [
+        "Subscription",
+        "Violet"
+      ],
+      "team_swingable": true,
+      "note": "Homeschool / group host close."
+    },
+    {
+      "id": "visit-fieldtrip-499",
+      "name": "Field trip \u2014 \u226410 cars / 40 \u00b7 ~90 min",
+      "family": "Visit Us (live)",
+      "status": "live",
+      "sku": "C-GRP499",
+      "price_ref": "$499 \u00b7 ~50% lock (catalogue_close)",
+      "gtm_lanes": [
+        "Subscription"
+      ],
+      "team_swingable": true,
+      "note": "Larger group."
+    },
+    {
+      "id": "mobile-bunny",
+      "name": "Bunny Haven (mobile)",
+      "family": "Mobile (live)",
+      "status": "live",
+      "sku": "C-BH",
+      "price_ref": "WD $150 / WE $235 + travel (catalogue_close)",
+      "gtm_lanes": [
+        "Violet",
+        "Big Enterprise"
+      ],
+      "team_swingable": true,
+      "note": "Weekday fill."
+    },
+    {
+      "id": "mobile-mini",
+      "name": "Mini petting zoo (mobile)",
+      "family": "Mobile (live)",
+      "status": "live",
+      "sku": "C-MPZ",
+      "price_ref": "WD $299 / WE $359 + travel (catalogue_close)",
+      "gtm_lanes": [
+        "Violet",
+        "Big Enterprise"
+      ],
+      "team_swingable": true,
+      "note": "Birthday / working-mom angle."
+    },
+    {
+      "id": "mobile-standard",
+      "name": "Standard petting zoo (mobile)",
+      "family": "Mobile (live)",
+      "status": "live",
+      "sku": "C-SPZ",
+      "price_ref": "WD $359 / WE $549 + travel (catalogue_close)",
+      "gtm_lanes": [
+        "Violet",
+        "Sponsor"
+      ],
+      "team_swingable": true,
+      "note": "Protect weekend list."
+    },
+    {
+      "id": "sponsor-shout",
+      "name": "Shoutout / Steadshout / named ticket",
+      "family": "Sponsor (live motion)",
+      "status": "live",
+      "sku": "",
+      "price_ref": "No fixed price here \u2014 $25 named farm ticket mentioned in Partner SMB script; paid mom-media rates only from their sites",
+      "gtm_lanes": [
+        "Sponsor"
+      ],
+      "team_swingable": true,
+      "note": "Same Sponsor compose as BDR. Don't invent package menus."
+    },
+    {
+      "id": "emba-ladder",
+      "name": "EMBA on Call \u2014 donation ladder / markup / idea",
+      "family": "EMBA / homestead consulting",
+      "status": "live",
+      "sku": "",
+      "price_ref": "No price board \u2014 use BDR EMBA compose modes (donation \u2192 goat-statue \u2192 mini-zoo sponsor \u2192 consulting). Targets are Michael's goals, not proven metrics.",
+      "gtm_lanes": [
+        "Sponsor",
+        "Big Enterprise"
+      ],
+      "team_swingable": false,
+      "note": "Founder-led. Consulting is top rung \u2014 no invented consulting rate."
+    },
+    {
+      "id": "franchise",
+      "name": "Franchise (Critters / Homestead)",
+      "family": "Franchise",
+      "status": "not_ready",
+      "sku": "",
+      "price_ref": "\u2014 (no franchise price on disk)",
+      "gtm_lanes": [],
+      "team_swingable": false,
+      "note": "Franchise #0 operator layer exists; franchise-as-sellable-offer is NOT ready. Gray out in picker. Do not pitch."
+    }
+  ],
+  "offers_rule": "Prices only from data/catalogue_close.json or published partner rates on disk. Franchise = not_ready (gray). EMBA consulting = ladder language only, no invented $. Offer picker filters social-sell angles.",
+  "play_style": "manual_light",
+  "play_style_note": "Manual / light plays only. No HubSpot wiring. No semi-automation / mass-touch sequences. Team uses open link, mailto, text GOAT, Done+notes localStorage."
 }
