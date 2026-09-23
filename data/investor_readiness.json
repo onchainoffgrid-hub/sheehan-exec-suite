@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-22 ET",
+  "as_of": "2026-09-23 16:55 ET",
   "label": "Seed / pre-seed readiness",
   "stage_note": "Light label — seed vs pre-money still open. Frame is readiness, not a declared round.",
   "dump_home": "Dashboard Bit",
@@ -77,6 +77,20 @@
           "detail": "Done at a high level to facilitate rapid scaling. Live: RevOps SAM, ICP boards, GTM Manager, Interactive GTM.",
           "default": "have",
           "link": "revops-tam.html"
+        },
+        {
+          "id": "proof-live-os",
+          "title": "Live OS · cultivation / bona fide operating system",
+          "detail": "Operator diligence surface: RVP Ops, GTM seats, one-touch sources, Battle Row, Team+directors, peer cities. Franchise kit / city entry (Jax-class first, not NYC). Revenue motion pattern: Westminster CAP → $700 call (not audited financials). Capital/partner ask TBD — no invented valuation.",
+          "default": "have",
+          "link": "investor-home.html#proof-bona-fide"
+        },
+        {
+          "id": "proof-franchise-kit",
+          "title": "Franchise kit narrative (founder vision · labeled)",
+          "detail": "Selling: ops know-how + field-marketing kit + segmented BD. Proof sprint (illustrative, not live SKU). City entry: peer metros first — FOMO destination thesis.",
+          "default": "have",
+          "link": "rvp-ops.html#franchise-kit"
         }
       ]
     },

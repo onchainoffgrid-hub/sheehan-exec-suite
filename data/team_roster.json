@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-23 16:40 ET",
+  "as_of": "2026-09-23 16:55 ET",
   "brand": "Sheehan Homestead",
   "title": "Helper + Team roster",
   "scheduling_owner": "Ann-Marie Sheehan",
@@ -293,12 +293,128 @@
     "owners": 2,
     "backup_bench": 1,
     "directors_vacant": 3,
-    "helpers_total": 17
+    "helpers_total": 17,
+    "bdr_manager_vacant": 1,
+    "bdr_reps_vacant": 5,
+    "sales_tree_vacant": 7
   },
   "gaps": [
     "Madison — email only, no phone on roster",
     "Angie / Emmy — no phone",
     "Matt + Royce D'walton were on older TEAM_ROSTER need_training but NOT on live Helper list Drive 2026-09-23 — left off live tiers (not marked no-hire without evidence)",
     "No invented phones/emails"
-  ]
+  ],
+  "sales_tree": {
+    "label": "Sales cascade · target org",
+    "note": "Under Director of Sales (vacant) → BDR Manager. BDR Manager reports to Michael only. Ann-Marie informs as co-founder catch-all — not line manager. No invented names.",
+    "director_sales": {
+      "id": "dir_sales",
+      "title": "Director of Sales",
+      "status": "vacant",
+      "reports_to": "Michael Sheehan (RVP)"
+    },
+    "bdr_manager": {
+      "id": "bdr_manager",
+      "title": "BDR Manager",
+      "status": "vacant",
+      "reports_to": "Michael Sheehan only",
+      "informs": "Ann-Marie Sheehan (co-founder catch-all — not line manager)",
+      "note": "Future outsource / hire. Michael filling seats today.",
+      "reps": [
+        {
+          "id": "enterprise_bdr",
+          "title": "Regional enterprise BDR",
+          "status": "vacant",
+          "lane": "CDD/HOA · amenity · corp · golf · campus",
+          "tier": "mature_b2b"
+        },
+        {
+          "id": "subscription_bdr",
+          "title": "Regional subscription BDR",
+          "status": "vacant",
+          "lane": "Sr / PPEC / ADC / AL",
+          "tier": "mature_b2b"
+        },
+        {
+          "id": "violet_50",
+          "title": "Regional Violet ~50%",
+          "status": "vacant",
+          "lane": "Schools / churches donation lane · PTA · indie · community programming",
+          "tier": "mature_b2b",
+          "note": "Donation / marketing framing ≈ ~50% off list for bigger schools/churches"
+        },
+        {
+          "id": "deep_violet",
+          "title": "Regional small-biz / deep Violet",
+          "status": "vacant",
+          "lane": "Gratis-to-cost · volunteer · giveaway-ish · cover cost+ · karma/marketing",
+          "tier": "also_run",
+          "note": "Still do if $1 over labor — not a mature money lane, still a real seat"
+        },
+        {
+          "id": "consumer_conversion",
+          "title": "Consumer conversion rep",
+          "status": "vacant",
+          "lane": "Work consumer list · drive reviews · build new lists",
+          "tier": "b2c"
+        }
+      ]
+    }
+  },
+  "ann_marie_raci": {
+    "label": "Ann-Marie · day-to-day ops RACI",
+    "with": "Michael Sheehan",
+    "role_today": "Co-owner · mid-senior ops · owns helper scheduling",
+    "owns": [
+      "Animal well-being",
+      "Facilities / buildings",
+      "Event staffing",
+      "Invoicing + scheduling",
+      "Farm tours / check-in / STEM moments / “cut the twine to feed the swine”",
+      "Website quick updates",
+      "FB / IG posts",
+      "Blog (route publishing asks to her)",
+      "Goat 3D-print teaching track (taught; Michael now printing more — sticker cost only)"
+    ],
+    "escalates_to_michael": [
+      "Customer falls off schedule — ping Michael"
+    ],
+    "helpers_report_to": [
+      "Ann-Marie Sheehan",
+      "Michael Sheehan"
+    ],
+    "not_line_manager_of": [
+      "BDR Manager / BDR cascade — informs only as co-founder catch-all"
+    ]
+  },
+  "cash_reconciliation": {
+    "id": "cash_reconciliation",
+    "label": "Cash reconciliation",
+    "control_type": "open_control",
+    "status": "needs_process",
+    "owner_today": "Ann-Marie Sheehan (day-to-day money handling) · Michael informed",
+    "note": "Neutral process control for cash count / money handling. Status: needs process. No blame language — define SOP later.",
+    "tone": "operator control — not interpersonal"
+  },
+  "franchise_kit_narrative": {
+    "label": "Franchise kit · founder vision (labeled as such)",
+    "selling": [
+      "Operational know-how",
+      "Field-marketing kit",
+      "Segmented BD"
+    ],
+    "proof_posture": {
+      "offer_label": "proof sprint",
+      "sketch": "Pay for a booking sprint → book more than the fee → then stop. Illustrative offer — not a live SKU price.",
+      "not_a_sku": true
+    },
+    "city_entry": {
+      "rule": "Jax-class / peer metros first",
+      "peer_cities_link": "franchise-peer-cities.html",
+      "not_first": "NYC",
+      "caution": "Founder caution: big-city park / red-tape enforcement risk (bunny-in-park anecdote). Build FOMO so peer metros and then bigger cities want it — Chick-fil-A line metaphor, short.",
+      "destination_thesis": "Shared homestead · strip-mall rethink · stackable mobile franchise Legos · free + prize + job paths · joy + community resilience.",
+      "economic_resilience_line": "One careful framing only: community economic resilience (soft Hooverville reference max one line — not doom porn)."
+    }
+  }
 }

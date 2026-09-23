@@ -62,6 +62,26 @@ h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font
 .links-row a:hover{border-color:var(--accent);color:#fff}
 .hidden{display:none!important}
 .footer{color:var(--muted);font-size:.75rem;margin-top:22px}
+
+.org-tree{display:flex;flex-direction:column;gap:14px;align-items:stretch}
+.org-row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;align-items:stretch}
+.org-node{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px;min-width:160px;max-width:240px;flex:1 1 160px;text-align:center}
+.org-node.named{border-color:#3dd68c66}
+.org-node.vacant{border-color:#a78bfa55;border-style:dashed}
+.org-node.mgr{border-color:#5b8cff88}
+.org-node .who{font-size:.72rem;color:var(--muted);margin-bottom:2px}
+.org-node h3{margin:0 0 4px;font-size:.88rem}
+.org-node .lane{font-size:.72rem;color:var(--muted)}
+.org-conn{text-align:center;color:var(--muted);font-size:.78rem;letter-spacing:.04em}
+.raci-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.raci-box{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px}
+.raci-box h3{margin:0 0 6px;font-size:.85rem;color:#c4b5fd}
+.raci-box ul{margin:0;padding-left:1.1em;font-size:.78rem;color:var(--muted)}
+.raci-box ul li{margin:3px 0}
+.control{margin-top:10px;padding:11px 13px;border:1px dashed #ffb02066;border-radius:12px;background:#16140f}
+.control .ttl{font-size:.82rem;font-weight:700;color:var(--warn)}
+.control .st{font-size:.72rem;color:var(--muted);margin-top:3px}
+.bdr-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px;margin-top:8px}
 </style></head>
 <body><div class="wrap">
 
@@ -101,6 +121,7 @@ h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font
   <div class="kpi"><div class="l">Partners</div><div class="v" id="k-part">—</div></div>
   <div class="kpi"><div class="l">Backup bench</div><div class="v" id="k-bench">—</div><div class="s">callable · not trash</div></div>
   <div class="kpi"><div class="l">Directors</div><div class="v" id="k-dir">3 vacant</div><div class="s">target layer</div></div>
+  <div class="kpi"><div class="l">BDR seats</div><div class="v" id="k-bdr">5 vacant</div><div class="s">under BDR Mgr</div></div>
 </div>
 
 <div class="card">
@@ -124,6 +145,33 @@ h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font
     <a href="ops-battle-row.html" style="color:#fde68a">→ Battle Row (ops scope)</a>
     <a href="sales-review.html">→ Sales cascade</a>
     <a href="gtm-seats.html" style="color:#c4b5fd">→ GTM seats</a>
+  </div>
+</div>
+
+
+<div class="card" id="org-cascade">
+  <h2>Org cascade <span class="badge vacant">TARGET · vacant seats OK</span></h2>
+  <p class="note">Directors → BDR Manager → BDRs. Named today: Michael + Ann-Marie only. BDR Manager reports to <b>Michael only</b>; Ann-Marie informs as co-founder catch-all — not line manager. Helpers under Ops report to Ann-Marie + Michael.</p>
+  <div class="org-tree" id="org-tree"></div>
+  <div class="links-row">
+    <a href="gtm-seats.html" style="color:#c4b5fd">→ GTM seats (lane detail)</a>
+    <a href="sales-review.html">→ Sales review</a>
+    <a href="bdr-manager-review.html">→ BDR Manager desk</a>
+    <a href="investor-checklist.html">→ Investor checklist</a>
+  </div>
+</div>
+
+<div class="card" id="am-raci" style="border-color:#a78bfa66">
+  <h2>Ann-Marie · day-to-day ops RACI <span class="badge good">LIVE OWNER</span></h2>
+  <p class="note">With Michael. Day-to-day ops RACI — not BDR line management. Website / FB / IG / blog should be routed to her.</p>
+  <div class="raci-grid" id="raci-root"></div>
+  <div class="control" id="cash-recon">
+    <div class="ttl">Cash reconciliation <span class="badge warn">NEEDS PROCESS</span></div>
+    <div class="st">Open control for cash count / money handling. Neutral process status — define SOP later. No blame language.</div>
+  </div>
+  <div class="links-row">
+    <a href="ann-marie-ops.html" style="color:#c4b5fd">→ Ann-Marie Ops</a>
+    <a href="ops-battle-row.html" style="color:#fde68a">→ Battle Row</a>
   </div>
 </div>
 
@@ -200,6 +248,7 @@ h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font
     set('k-part', c.partners!=null?c.partners:'—');
     set('k-bench', c.backup_bench!=null?c.backup_bench:'—');
     set('k-dir', (c.directors_vacant||3)+' vacant');
+    set('k-bdr', (c.bdr_reps_vacant||5)+' vacant');
 
     var lean=document.getElementById('lean-pills');
     (d.org_today&&d.org_today.named||[]).forEach(function(n){
@@ -252,6 +301,54 @@ h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font
     var gEl=document.getElementById('bench-gaps');
     if(gaps.length){
       gEl.innerHTML='<b>GAP:</b> '+gaps.map(function(g){ return g; }).join(' · ');
+    }
+
+
+    // Org cascade tree
+    var tree = document.getElementById('org-tree');
+    if (tree && d.sales_tree) {
+      var st = d.sales_tree;
+      var bm = st.bdr_manager || {};
+      var dirs = (d.directors_target && d.directors_target.seats) || [];
+      var dirHtml = '<div class="org-row">';
+      dirs.forEach(function(s){
+        dirHtml += '<div class="org-node vacant"><div class="who">Director</div><h3>'+s.title+'</h3><div class="lane"><span class="badge vacant">VACANT</span></div><div class="lane">'+s.owns+'</div></div>';
+      });
+      dirHtml += '</div>';
+      dirHtml += '<div class="org-conn">↓ under Sales Director</div>';
+      dirHtml += '<div class="org-row"><div class="org-node mgr vacant"><div class="who">Reports to Michael only · Ann-Marie informs</div><h3>'+bm.title+'</h3><div class="lane"><span class="badge vacant">VACANT</span></div><div class="lane">'+(bm.note||'')+'</div></div></div>';
+      dirHtml += '<div class="org-conn">↓ BDR seats</div><div class="bdr-grid">';
+      (bm.reps||[]).forEach(function(r){
+        dirHtml += '<div class="org-node vacant"><div class="who">'+(r.tier||'')+'</div><h3>'+r.title+'</h3><div class="lane"><span class="badge vacant">VACANT</span></div><div class="lane">'+(r.lane||'')+'</div></div>';
+      });
+      dirHtml += '</div>';
+      // Ops reality named row
+      dirHtml += '<div class="org-conn" style="margin-top:12px">Ops reality today (not vacant)</div><div class="org-row">';
+      dirHtml += '<div class="org-node named"><div class="who">RVP / Operator</div><h3>Michael Sheehan</h3><div class="lane">Owns Sales + high-value closes today</div></div>';
+      dirHtml += '<div class="org-node named"><div class="who">Co-owner · mid-senior ops</div><h3>Ann-Marie Sheehan</h3><div class="lane">Day-to-day ops RACI · scheduling</div></div>';
+      dirHtml += '<div class="org-node named"><div class="who">Helpers</div><h3>Report to AM + Michael</h3><div class="lane">'+(c.helpers_total||0)+' on roster tiers</div></div>';
+      dirHtml += '</div>';
+      tree.innerHTML = dirHtml;
+    }
+
+    // Ann-Marie RACI
+    var raci = document.getElementById('raci-root');
+    if (raci && d.ann_marie_raci) {
+      var am = d.ann_marie_raci;
+      function lis(arr){ return '<ul>'+(arr||[]).map(function(x){ return '<li>'+x+'</li>'; }).join('')+'</ul>'; }
+      raci.innerHTML =
+        '<div class="raci-box"><h3>Owns (day-to-day)</h3>'+lis(am.owns)+'</div>'+
+        '<div class="raci-box"><h3>Escalates to Michael</h3>'+lis(am.escalates_to_michael)+'</div>'+
+        '<div class="raci-box"><h3>Helpers report to</h3>'+lis(am.helpers_report_to)+'</div>'+
+        '<div class="raci-box"><h3>Not line manager of</h3>'+lis(am.not_line_manager_of)+'</div>';
+    }
+    if (d.cash_reconciliation) {
+      var cr = d.cash_reconciliation;
+      var cel = document.getElementById('cash-recon');
+      if (cel) {
+        cel.innerHTML = '<div class="ttl">'+cr.label+' <span class="badge warn">'+(cr.status||'').replace(/_/g,' ').toUpperCase()+'</span></div>'+
+          '<div class="st">'+(cr.note||'')+' · Owner today: '+(cr.owner_today||'')+'</div>';
+      }
     }
 
     var foot=document.getElementById('foot');

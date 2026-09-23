@@ -68,6 +68,17 @@ h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font
 .franchise-strip .claim b{color:var(--warn)}
 .franchise-strip a.inv{display:inline-block;margin-top:10px;font-size:.78rem;font-weight:700;color:var(--good)}
 @media(max-width:700px){.tile.primary{grid-column:span 1}}
+
+.kit-strip{margin:0 0 16px;padding:16px 18px;border:1px solid #a78bfa66;border-radius:14px;background:linear-gradient(135deg,#1a1530 0%,#121a2b 65%)}
+.kit-strip .lbl{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-bottom:4px}
+.kit-strip h2{margin:0 0 8px;font-size:1.05rem;color:#e9d5ff}
+.kit-strip .sell{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px}
+.kit-strip .sell span{font-size:.72rem;padding:4px 10px;border-radius:999px;border:1px solid #a78bfa55;background:#0e1626;color:#c4b5fd}
+.kit-strip p{margin:0 0 8px;font-size:.84rem;color:#c5d0e6}
+.kit-strip .founder{font-size:.72rem;color:var(--muted);margin-top:8px}
+.kit-strip .founder b{color:var(--violet)}
+.kit-strip .caution{margin-top:8px;padding:9px 11px;border:1px dashed #ffb02055;border-radius:10px;background:#16140f;font-size:.76rem;color:var(--muted)}
+.kit-strip .caution b{color:var(--warn)}
 </style></head>
 <body data-flow-face="ops" data-flow-chip="rvp"><div class="wrap">
 
@@ -144,6 +155,29 @@ h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font
   <a class="inv" href="gtm-seats.html" style="margin-left:14px;color:#c4b5fd">→ GTM seats</a>
 </div>
 
+
+<div class="kit-strip" id="franchise-kit">
+  <div class="lbl">Franchise kit / city entry · founder vision (labeled)</div>
+  <h2>What you’re selling · Sheehan Homestead</h2>
+  <div class="sell">
+    <span>Operational know-how</span>
+    <span>Field-marketing kit</span>
+    <span>Segmented BD</span>
+  </div>
+  <p><b style="color:#e9d5ff">Proof posture:</b> pay for a <b>proof sprint</b> (booking sprint) → book more than the fee → then stop. Illustrative offer — not a live SKU price.</p>
+  <p><b style="color:#9dffc5">City entry rule:</b> Jax-class / peer metros first → <a href="franchise-peer-cities.html" style="color:#9dffc5;font-weight:700">peer cities board</a>. <b>Not NYC first</b> — red tape / park enforcement risk.</p>
+  <div class="caution"><b>Founder caution:</b> bunny-in-park anecdote — big-city park rules can kill the field motion. Build FOMO so peer metros (then bigger cities) want the line — short Chick-fil-A line metaphor: people queue where the system already works.</div>
+  <p style="margin-top:10px"><b style="color:#c4b5fd">Destination thesis (tasteful):</b> shared homestead · strip-mall rethink · stackable mobile franchise Legos · free + prize + job paths · joy + community resilience. Soft framing only: community economic resilience (one careful Hooverville line max — not doom porn).</p>
+  <p class="founder"><b>Labeled:</b> founder vision for investors / franchisees — cultivation of a bona fide operating system, not a manifesto.</p>
+  <div class="links-row" style="margin-top:10px">
+    <a href="franchise-peer-cities.html" style="border-color:#3dd68c66;color:#9dffc5;font-weight:700">Peer cities</a>
+    <a href="gtm-seats.html" style="border-color:#a78bfa88;color:#c4b5fd">GTM seats</a>
+    <a href="team.html" style="border-color:#5b8cff88;color:#9ec1ff">Team + directors</a>
+    <a href="investor-home.html" style="border-color:#a78bfa88;color:#e9d5ff">Investor home · Proof</a>
+    <a href="investor-checklist.html">Investor checklist</a>
+  </div>
+</div>
+
 <div class="kpis" id="kpi-strip">
   <div class="kpi"><div class="l">Money (outside)</div><div class="v" id="k-pay">—</div><div class="s" id="k-pay-s">customer $</div></div>
   <div class="kpi"><div class="l">Upcoming gigs</div><div class="v" id="k-gigs">—</div><div class="s" id="k-gigs-s">from bookings</div></div>
@@ -180,6 +214,7 @@ h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font
     <span class="chipk">Partners <b id="w-t-part">—</b></span>
     <span class="chipk" style="border-color:#5b8cff55;color:#9ec1ff">Bench <b id="w-t-bench">—</b></span>
     <span class="chipk" style="border-color:#a78bfa55;color:#c4b5fd">Directors <b>3 vacant</b></span>
+    <span class="chipk" style="border-color:#a78bfa55;color:#c4b5fd">BDR Mgr + 5 reps <b>vacant</b></span>
   </div>
   <div class="seat-row" style="margin-top:10px">
     <span class="seat-pill named">Michael · RVP</span>
