@@ -116,7 +116,7 @@ h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font
   <a href="index.html">Layer Zero</a>
   <a href="bookings-dates.html">Bookings</a>
   <a href="money-cfo.html">Money</a>
-  <a href="team-hire.html">Team</a>
+  <a href="team.html">Team</a>
   <a href="actions-overdue.html">Actions</a>
   <a href="bdr-tam.html" style="border-color:#3dd68c88">BDR TAM</a>
   <a href="programming.html">Programs</a>
@@ -169,8 +169,38 @@ h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font
   <span class="open">Open →</span>
 </a>
 
+<a class="tile" href="team.html" style="border-color:#5b8cff99;background:linear-gradient(160deg,#152238 0%,#121a2b 55%,#0e1626 100%);grid-column:1/-1;min-height:130px;padding:18px">
+  <h3>Team · helpers &amp; org <span class="badge" style="background:#1a2440;color:#9ec1ff;border-color:#5b8cff66">LIVE ROSTER</span></h3>
+  <p><b style="color:#c5d0e6">Today’s lean:</b> Michael + Ann-Marie + bots + helper tiers + backup bench. <b style="color:#c4b5fd">Target directors (vacant):</b> Ops · Sales · Tech/RevOps. Ann-Marie owns scheduling. Helpers = talent (would pay if could) — no invented pay.</p>
+  <div class="chips" id="team-chips">
+    <span class="chipk">Primary <b id="w-t-pri">—</b></span>
+    <span class="chipk">Secondary <b id="w-t-sec">—</b></span>
+    <span class="chipk">Training <b id="w-t-train">—</b></span>
+    <span class="chipk">Third <b id="w-t-third">—</b></span>
+    <span class="chipk">Partners <b id="w-t-part">—</b></span>
+    <span class="chipk" style="border-color:#5b8cff55;color:#9ec1ff">Bench <b id="w-t-bench">—</b></span>
+    <span class="chipk" style="border-color:#a78bfa55;color:#c4b5fd">Directors <b>3 vacant</b></span>
+  </div>
+  <div class="seat-row" style="margin-top:10px">
+    <span class="seat-pill named">Michael · RVP</span>
+    <span class="seat-pill named">Ann-Marie · scheduling</span>
+    <span class="seat-pill vacant">Dir Ops</span>
+    <span class="seat-pill vacant">Dir Sales</span>
+    <span class="seat-pill vacant">Dir Tech/RevOps</span>
+  </div>
+  <div class="links-row">
+    <a href="team.html" style="border-color:#5b8cff88;color:#9ec1ff;font-weight:700">Open Team roster</a>
+    <a href="https://docs.google.com/document/d/1-AbJCTlMm-z_Z6f5-DJHoWoXo9CXPE6L_g8ytmkcRNo/edit" target="_blank" rel="noopener" style="border-color:#3dd68c66;color:#9dffc5">Helper list Drive</a>
+    <a href="gtm-seats.html" style="border-color:#a78bfa88;color:#c4b5fd">GTM seats</a>
+    <a href="team-hire.html">Hire priorities</a>
+    <a href="investor-checklist.html">Investor checklist</a>
+    <a href="ann-marie-ops.html">Ann-Marie ops</a>
+  </div>
+  <span class="open" style="color:#9ec1ff">Open →</span>
+</a>
+
 <a class="tile" href="gtm-seats.html">
-  <h3>Team &amp; GTM seats</h3>
+  <h3>GTM seats</h3>
   <p><b>Named seats today:</b> Michael + Ann-Marie only. <b>Bots</b> = RevOps / marketing populate + mass-touch staging (Michael closes). <b>Helpers</b> = talent, not paid seats yet (“would pay if could”) — no invented pay. Locked GTM map — vacant BDR seats = future SOP outsource.</p>
   <div class="seat-row" id="seat-pills">
     <span class="seat-pill named">Michael · RVP</span>
@@ -188,6 +218,12 @@ h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font
   </div>
   <div class="links-row">
     <a href="gtm-seats.html" style="border-color:#a78bfa88;color:#c4b5fd;font-weight:700">GTM seat map</a>
+    <a href="team.html">Team roster</a>
+    <a href="team-hire.html">Hire priorities</a>
+    <a href="ann-marie-ops.html">Ann-Marie ops</a>
+  </div>
+  <span class="open">Open →</span>
+</a>
     <a href="team-hire.html">Hire priorities</a>
     <a href="ann-marie-ops.html">Ann-Marie ops</a>
   </div>
@@ -332,9 +368,10 @@ h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font
     load('data/overdue_kpis.json'),
     load('data/bookings_pipeline.json'),
     load('data/calendar_ops_snapshot.json'),
-    load('data/rvp_ops.json')
+    load('data/rvp_ops.json'),
+    load('data/team_roster.json')
   ]).then(function(arr){
-    var sum=arr[0]||{}, kpis=arr[1]||{}, pay=arr[2]||{}, od=arr[3]||{}, book=arr[4]||{}, cal=arr[5]||{}, rvp=arr[6]||{};
+    var sum=arr[0]||{}, kpis=arr[1]||{}, pay=arr[2]||{}, od=arr[3]||{}, book=arr[4]||{}, cal=arr[5]||{}, rvp=arr[6]||{}, team=arr[7]||{};
     var outside=pay.combined_outside_gross!=null?pay.combined_outside_gross:sum.paypal_h2_outside_gross;
     set('k-pay', fmt$(outside));
     set('k-pay-s', pay.combined_window||'Outside customer');

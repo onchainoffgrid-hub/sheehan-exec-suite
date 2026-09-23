@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Team · Helpers &amp; Org · Sheehan Homestead</title>
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--bad:#ff5d6c;--violet:#a78bfa;--gold:#c9a227;--money:#f0abfc}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1280px;margin:0 auto;padding:22px}
+.apps{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 12px;padding:10px 12px;border:1px solid var(--line);border-radius:14px;background:#0f1728}
+.apps .lbl{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-right:4px}
+.apps a{background:var(--card);border:1px solid #3dd68c55;color:var(--text);padding:6px 10px;border-radius:999px;font-size:.78rem;text-decoration:none;font-weight:600}
+.apps a.sec{border-color:var(--line);color:#c5d0e6;font-weight:500;font-size:.72rem}
+header{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:10px;flex-wrap:wrap}
+h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font-size:.88rem}
+.nav{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0 16px}
+.nav a{background:var(--card);border:1px solid var(--line);padding:6px 11px;border-radius:999px;font-size:.78rem;color:var(--text)}
+.nav a.active{border-color:var(--accent);background:#152238;color:#fff}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:10px;margin-bottom:16px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px}
+.kpi .l{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.kpi .v{font-size:1.25rem;font-weight:700;margin-top:3px}
+.kpi .s{font-size:.7rem;color:var(--muted);margin-top:2px}
+.badge{font-size:.65rem;padding:2px 7px;border-radius:6px;background:#1a2440;color:var(--accent);border:1px solid var(--line);margin-left:6px;vertical-align:middle}
+.badge.vacant{background:#1a1f2e;color:var(--violet);border-color:#a78bfa55}
+.badge.good{background:#13281d;color:var(--good);border-color:#3dd68c55}
+.badge.warn{background:#2a2416;color:var(--warn);border-color:#ffb02066}
+.badge.bench{background:#1a2030;color:#9ec1ff;border-color:#5b8cff55}
+.section{margin:18px 0 10px;font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:14px}
+.card h2{font-size:.98rem;margin:0 0 8px}
+.card p.note{margin:0 0 10px;color:var(--muted);font-size:.82rem}
+.filters{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 14px}
+.filters button{background:var(--panel);border:1px solid var(--line);color:var(--text);padding:7px 12px;border-radius:999px;font-size:.76rem;font-weight:600;cursor:pointer}
+.filters button.on{border-color:var(--good);background:#13281d;color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:11px}
+.person{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px;display:flex;flex-direction:column;gap:8px}
+.person h3{margin:0;font-size:.92rem}
+.person .meta{font-size:.78rem;color:var(--muted)}
+.person .tier{font-size:.65rem;text-transform:uppercase;letter-spacing:.06em;color:var(--accent);font-weight:700}
+.person.bench{border-color:#5b8cff66;background:linear-gradient(160deg,#152238 0%,#0e1626 100%)}
+.person.vacant{border-color:#a78bfa55;border-style:dashed}
+.person.owner{border-color:#3dd68c55}
+.taps{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+.tap{display:inline-flex;align-items:center;justify-content:center;padding:7px 11px;border-radius:999px;font-size:.74rem;font-weight:700;text-decoration:none;border:1px solid var(--line)}
+.tap.text{background:var(--good);color:#0b1220;border-color:transparent}
+.tap.call{background:#152238;color:var(--text)}
+.tap.email{background:#1a2030;color:var(--accent);border-color:#5b8cff55}
+.tap.disabled{opacity:.35;pointer-events:none;cursor:default}
+.dir-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.dir{background:var(--panel);border:1px dashed #a78bfa66;border-radius:12px;padding:13px}
+.dir h3{margin:0 0 4px;font-size:.9rem;color:#c4b5fd}
+.dir p{margin:0;font-size:.78rem;color:var(--muted)}
+.lean{display:flex;flex-wrap:wrap;gap:8px}
+.pill{font-size:.74rem;padding:5px 11px;border-radius:999px;border:1px solid var(--line);background:var(--panel)}
+.pill.named{border-color:#3dd68c66;color:var(--good)}
+.pill.bots{border-color:#5b8cff55;color:#9ec1ff}
+.pill.vacant{border-color:#a78bfa55;color:var(--violet)}
+.gap-box{margin-top:10px;padding:10px 12px;border:1px dashed #ffb02055;border-radius:10px;background:#16140f;font-size:.78rem;color:var(--muted)}
+.gap-box b{color:var(--warn)}
+.links-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.links-row a{font-size:.72rem;padding:4px 10px;border-radius:999px;border:1px solid var(--line);background:#0e1626;color:#c5d0e6;text-decoration:none}
+.links-row a:hover{border-color:var(--accent);color:#fff}
+.hidden{display:none!important}
+.footer{color:var(--muted);font-size:.75rem;margin-top:22px}
+</style></head>
+<body><div class="wrap">
+
+<div class="apps">
+  <span class="lbl">Apps</span>
+  <a href="https://onchainoffgrid-hub.github.io/critters-on-call/" target="_blank" rel="noopener">Critters <span style="color:#3dd68c;font-size:.65rem">LIVE</span></a>
+  <a href="https://onchainoffgrid-hub.github.io/critters-play/" target="_blank" rel="noopener" style="border-color:#a78bfa66">Play / Coins</a>
+  <a href="rvp-ops.html" style="border-color:#5b8cff88">RVP Ops</a>
+  <a href="index.html" class="sec">Layer Zero</a>
+  <a href="link-tree.html" class="sec">All links</a>
+</div>
+
+<header>
+  <div>
+    <h1>Team · Helpers &amp; Org <span class="badge">Sheehan Homestead</span></h1>
+    <div class="sub">Live roster from Ann-Marie Helper list · Ann-Marie owns scheduling · no invented contacts</div>
+  </div>
+  <div class="sub">North star: <b>bookings</b> · goal <b>$250k</b> by 2026-12-23</div>
+</header>
+
+<div class="nav">
+  <a href="rvp-ops.html">RVP Ops</a>
+  <a href="team.html" class="active">Team</a>
+  <a href="team-hire.html">Hire priorities</a>
+  <a href="gtm-seats.html" style="border-color:#a78bfa88;color:#c4b5fd">GTM seats</a>
+  <a href="ops-battle-row.html" style="border-color:#fbbf2466;color:#fde68a">Battle Row</a>
+  <a href="investor-checklist.html">Investor checklist</a>
+  <a href="ann-marie-ops.html">Ann-Marie</a>
+  <a href="index.html">Hub</a>
+</div>
+
+<div class="kpis" id="kpis">
+  <div class="kpi"><div class="l">Primary</div><div class="v" id="k-pri">—</div><div class="s">live helpers</div></div>
+  <div class="kpi"><div class="l">Secondary</div><div class="v" id="k-sec">—</div></div>
+  <div class="kpi"><div class="l">Need training</div><div class="v" id="k-train">—</div></div>
+  <div class="kpi"><div class="l">Third</div><div class="v" id="k-third">—</div></div>
+  <div class="kpi"><div class="l">Partners</div><div class="v" id="k-part">—</div></div>
+  <div class="kpi"><div class="l">Backup bench</div><div class="v" id="k-bench">—</div><div class="s">callable · not trash</div></div>
+  <div class="kpi"><div class="l">Directors</div><div class="v" id="k-dir">3 vacant</div><div class="s">target layer</div></div>
+</div>
+
+<div class="card">
+  <h2>Today’s lean org <span class="badge good">LIVE</span></h2>
+  <p class="note">Michael + Ann-Marie + bots + helper tiers + backup bench. Directors below are vacant future hires — not people today.</p>
+  <div class="lean" id="lean-pills"></div>
+  <div class="links-row">
+    <a href="https://docs.google.com/document/d/1-AbJCTlMm-z_Z6f5-DJHoWoXo9CXPE6L_g8ytmkcRNo/edit" target="_blank" rel="noopener" style="border-color:#3dd68c66;color:#9dffc5;font-weight:700">Google Doc · Helper list</a>
+    <a href="https://docs.google.com/forms/d/15ODzGKLRyS-XLIO_nrSM33O1X-ud-oz2hKAk0jP9CsA/edit" target="_blank" rel="noopener">Helper application form</a>
+    <a href="investor-checklist.html" style="border-color:#a78bfa88;color:#c4b5fd">Investor checklist · franchise proof</a>
+    <a href="team-hire.html">Hire priorities (BDR seats)</a>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Target director layer <span class="badge vacant">VACANT · future hire</span></h2>
+  <p class="note">Franchise / investor path. Do not invent names. Michael covers Sales today; Ann-Marie + helpers cover Ops; bots cover Tech/RevOps scaffolding.</p>
+  <div class="dir-grid" id="directors"></div>
+  <div class="links-row">
+    <a href="investor-checklist.html">→ Investor checklist</a>
+    <a href="ops-battle-row.html" style="color:#fde68a">→ Battle Row (ops scope)</a>
+    <a href="sales-review.html">→ Sales cascade</a>
+    <a href="gtm-seats.html" style="color:#c4b5fd">→ GTM seats</a>
+  </div>
+</div>
+
+<div class="section">Helper roster · filter by tier</div>
+<div class="filters" id="filters" role="tablist">
+  <button type="button" class="on" data-f="all">All helpers</button>
+  <button type="button" data-f="primary">Primary</button>
+  <button type="button" data-f="secondary">Secondary</button>
+  <button type="button" data-f="need_training">Need training</button>
+  <button type="button" data-f="third">Third</button>
+  <button type="button" data-f="partners">Partners</button>
+  <button type="button" data-f="owners">Owners</button>
+  <button type="button" data-f="backup_bench">Backup bench</button>
+</div>
+
+<div id="roster-root"></div>
+
+<div class="card" id="bench-card" style="border-color:#5b8cff66">
+  <h2>Backup bench <span class="badge bench">NOT TRASH — CALLABLE</span></h2>
+  <p class="note">People who didn’t work out / not hired / interview pending. Keep warm for later — do not delete.</p>
+  <div class="grid" id="bench-root"></div>
+  <div class="gap-box" id="bench-gaps"></div>
+</div>
+
+<p class="footer" id="foot">Sheehan Homestead · Team · sources: Helper list Drive + TEAM_ROSTER · built 2026-09-23 ET</p>
+</div>
+
+<script>
+(function(){
+  function digits(p){ return (p||'').replace(/\D/g,''); }
+  function telHref(p){ var d=digits(p); return d ? 'tel:+1'+d : ''; }
+  function smsHref(p,name){ var d=digits(p); if(!d) return '';
+    var body=encodeURIComponent('Hi '+((name||'').split(' ')[0]||'')+' — Sheehan Homestead / Critters on Call. Are you free to help on a gig?');
+    return 'sms:+1'+d+'?&body='+body;
+  }
+  function mailHref(e,name){ if(!e) return '';
+    var sub=encodeURIComponent('Sheehan Homestead · helper ping');
+    var body=encodeURIComponent('Hi '+((name||'').split(' ')[0]||'')+',\n\nQuick check from Sheehan Homestead / Critters on Call — are you available to help on an upcoming gig?\n\nThanks,\nAnn-Marie / Michael');
+    return 'mailto:'+e+'?subject='+sub+'&body='+body;
+  }
+  function taps(p){
+    var parts=[];
+    var s=smsHref(p.phone,p.name); if(s) parts.push('<a class="tap text" href="'+s+'">Text</a>');
+    else parts.push('<span class="tap text disabled">Text</span>');
+    var c=telHref(p.phone); if(c) parts.push('<a class="tap call" href="'+c+'">Call</a>');
+    else parts.push('<span class="tap call disabled">Call</span>');
+    var m=mailHref(p.email,p.name); if(m) parts.push('<a class="tap email" href="'+m+'">Email</a>');
+    else parts.push('<span class="tap email disabled">Email</span>');
+    return '<div class="taps">'+parts.join('')+'</div>';
+  }
+  function card(p, tierLabel, extraClass){
+    var conf=p.confirmed_1024?' <span class="badge good">10/24</span>':'';
+    var note=p.confirmed_note?' <span class="badge warn">'+p.confirmed_note+'</span>':'';
+    var sync=p.synced_from_drive?' <span class="badge">Drive sync</span>':'';
+    var phone=p.phone||'—';
+    var email=p.email||'—';
+    return '<article class="person '+(extraClass||'')+'" data-tier="'+(p._tier||'')+'">'+
+      '<div class="tier">'+tierLabel+conf+note+sync+'</div>'+
+      '<h3>'+p.name+'</h3>'+
+      '<div class="meta">'+(p.notes||p.role||'')+'</div>'+
+      '<div class="meta">☎ '+phone+' · ✉ '+email+'</div>'+
+      taps(p)+
+      '</article>';
+  }
+  function set(id,v){ var el=document.getElementById(id); if(el) el.textContent=v; }
+
+  fetch('data/team_roster.json',{cache:'no-store'}).then(function(r){ if(!r.ok) throw new Error(r.status); return r.json(); })
+  .then(function(d){
+    var c=d.counts||{};
+    set('k-pri', c.primary!=null?c.primary:'—');
+    set('k-sec', c.secondary!=null?c.secondary:'—');
+    set('k-train', c.need_training!=null?c.need_training:'—');
+    set('k-third', c.third!=null?c.third:'—');
+    set('k-part', c.partners!=null?c.partners:'—');
+    set('k-bench', c.backup_bench!=null?c.backup_bench:'—');
+    set('k-dir', (c.directors_vacant||3)+' vacant');
+
+    var lean=document.getElementById('lean-pills');
+    (d.org_today&&d.org_today.named||[]).forEach(function(n){
+      var cls=n.status==='bots'?'bots':'named';
+      lean.innerHTML+='<span class="pill '+cls+'">'+n.name+' · '+n.seat+'</span>';
+    });
+    lean.innerHTML+='<span class="pill named">Helpers · '+(c.helpers_total||0)+'</span>';
+    lean.innerHTML+='<span class="pill bots">Backup bench · '+(c.backup_bench||0)+'</span>';
+    lean.innerHTML+='<span class="pill vacant">Directors · 3 vacant</span>';
+
+    var dir=document.getElementById('directors');
+    (d.directors_target&&d.directors_target.seats||[]).forEach(function(s){
+      var mand=(s.mandate||[]).map(function(m){ return '<li>'+m+'</li>'; }).join('');
+      dir.innerHTML+='<div class="dir"><h3>'+s.title+' <span class="badge vacant">VACANT</span></h3>'+
+        '<p>'+s.owns+'</p>'+(mand?'<ul style="margin:8px 0 0;padding-left:1.1em;font-size:.74rem;color:var(--muted)">'+mand+'</ul>':'')+
+        '</div>';
+    });
+
+    var tiers=[
+      ['primary','Primary',d.primary],
+      ['secondary','Secondary',d.secondary],
+      ['need_training','Need training',d.need_training],
+      ['third','Third',d.third],
+      ['partners','Partners',d.partners],
+      ['owners','Owners',d.owners]
+    ];
+    var root=document.getElementById('roster-root');
+    var html='';
+    tiers.forEach(function(t){
+      var id=t[0], label=t[1], arr=t[2]||[];
+      html+='<div class="section" data-sec="'+id+'">'+label+' · '+arr.length+'</div><div class="grid" data-sec="'+id+'">';
+      arr.forEach(function(p){ p._tier=id; html+=card(p,label,id==='owners'?'owner':''); });
+      html+='</div>';
+    });
+    root.innerHTML=html;
+
+    var bench=document.getElementById('bench-root');
+    var people=(d.backup_bench&&d.backup_bench.people)||[];
+    if(!people.length){
+      bench.innerHTML='<div class="person bench"><h3>Empty (for now)</h3><div class="meta">Add interview no-hires when Drive Responses Sheet is located.</div></div>';
+    } else {
+      people.forEach(function(p){
+        p._tier='backup_bench';
+        var status=p.status||'';
+        var when=p.when?' · '+p.when:'';
+        bench.innerHTML+=card(Object.assign({},p,{notes:(p.notes||'')+when+' · status: '+status}), 'Backup · '+status.replace(/_/g,' '), 'bench');
+      });
+    }
+    var gaps=(d.backup_bench&&d.backup_bench.gaps)||[];
+    var gEl=document.getElementById('bench-gaps');
+    if(gaps.length){
+      gEl.innerHTML='<b>GAP:</b> '+gaps.map(function(g){ return g; }).join(' · ');
+    }
+
+    var foot=document.getElementById('foot');
+    var src=d.sources&&d.sources.helper_list_drive;
+    if(src) foot.textContent='Sheehan Homestead · as_of '+(d.as_of||'')+' · Helper list Drive pulled '+(src.pulled||'')+' · Ann-Marie owns scheduling';
+
+    document.getElementById('filters').addEventListener('click', function(e){
+      var btn=e.target.closest('button[data-f]'); if(!btn) return;
+      document.querySelectorAll('#filters button').forEach(function(b){ b.classList.toggle('on', b===btn); });
+      var f=btn.getAttribute('data-f');
+      document.querySelectorAll('[data-sec]').forEach(function(el){
+        if(f==='all'){ el.classList.remove('hidden'); return; }
+        if(f==='backup_bench'){ el.classList.add('hidden'); return; }
+        el.classList.toggle('hidden', el.getAttribute('data-sec')!==f);
+      });
+      var bc=document.getElementById('bench-card');
+      if(f==='all'||f==='backup_bench') bc.classList.remove('hidden');
+      else bc.classList.add('hidden');
+      if(f==='backup_bench'){ document.querySelectorAll('[data-sec]').forEach(function(el){ el.classList.add('hidden'); }); }
+    });
+  }).catch(function(err){
+    document.getElementById('roster-root').innerHTML='<div class="gap-box"><b>Could not load</b> data/team_roster.json — '+err+'</div>';
+  });
+})();
+</script>
+<script src="shared/flow-spine.js" defer></script>
+</body></html>
