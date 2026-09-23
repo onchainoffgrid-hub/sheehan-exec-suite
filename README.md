@@ -101,3 +101,6 @@ localStorage keys: `sheehan_bdr_v2_notes`, `sheehan_bdr_v2_customers`, `sheehan_
 - Checklist: https://onchainoffgrid-hub.github.io/sheehan-exec-suite/investor-checklist.html
 - Data: `data/investor_readiness.json` · localStorage `sheehan_investor_readiness`
 - Critters mirror: https://onchainoffgrid-hub.github.io/critters-on-call/exec/investor-checklist.html
+
+## One-touch outreach
+Stage-only mailto board (Talk-Deputy CRM views). Primary: https://onchainoffgrid-hub.github.io/critters-on-call/one-touch.html — Ross/Vesta is row #1. Never auto-sends.
