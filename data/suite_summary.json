@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-22 23:50 ET",
+  "as_of": "2026-09-23 16:25 ET",
   "bdr_spec_aligned": {
     "CALL_NOW": 138,
     "WARM": 232,
@@ -106,12 +106,24 @@
       "investor-capital.html",
       "macro-radar.html",
       "investor-checklist.html",
-      "hail-mary.html"
+      "hail-mary.html",
+      "rvp-ops.html",
+      "sales-review.html",
+      "bdr-manager-review.html",
+      "bdr-rep-review.html",
+      "one-touch.html"
     ],
     "investor_subchips": [
       "Checklist",
       "Home",
       "Capital"
+    ],
+    "ops_home": "rvp-ops.html",
+    "cascade": [
+      "rvp-ops.html",
+      "sales-review.html",
+      "bdr-manager-review.html",
+      "bdr-rep-review.html"
     ]
   },
   "investor_readiness": {
@@ -126,5 +138,11 @@
     ],
     "data": "data/investor_readiness.json",
     "localStorage_key": "sheehan_investor_readiness"
+  },
+  "one_touch": {
+    "panel": "one-touch.html",
+    "live": "https://onchainoffgrid-hub.github.io/critters-on-call/one-touch.html",
+    "priority": 1,
+    "label": "One-touch \u00b7 money button"
   }
 }

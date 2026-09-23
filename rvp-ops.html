@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Franchise RVP · Area Ops · Sheehan Homestead</title>
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--bad:#ff5d6c;--violet:#a78bfa;--money:#f0abfc}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1280px;margin:0 auto;padding:22px}
+.apps{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 12px;padding:10px 12px;border:1px solid var(--line);border-radius:14px;background:#0f1728}
+.apps .lbl{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-right:4px}
+.apps a{background:var(--card);border:1px solid #3dd68c55;color:var(--text);padding:6px 10px;border-radius:999px;font-size:.78rem;text-decoration:none;font-weight:600}
+.apps a.sec{border-color:var(--line);color:#c5d0e6;font-weight:500;font-size:.72rem}
+.apps a.money{border-color:#a855f788;background:linear-gradient(135deg,#2a1530,#121a2b);font-size:.88rem;padding:8px 16px}
+header{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:10px;flex-wrap:wrap}
+h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}.sub{color:var(--muted);font-size:.88rem}
+.cascade{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin:0 0 14px;padding:10px 12px;border:1px solid var(--line);border-radius:14px;background:#0f1728}
+.cascade .lbl{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-right:4px}
+.cascade a{padding:6px 12px;border-radius:999px;font-size:.76rem;font-weight:600;border:1px solid var(--line);background:var(--card);color:var(--text);text-decoration:none}
+.cascade a.on{border-color:var(--good);background:#13281d;color:#fff}
+.cascade a:hover{border-color:var(--accent);text-decoration:none}
+.cascade .arr{color:var(--muted);opacity:.7}
+.nav{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0 16px}
+.nav a{background:var(--card);border:1px solid var(--line);padding:6px 11px;border-radius:999px;font-size:.78rem;color:var(--text)}
+.nav a.active{border-color:var(--accent);background:#152238;color:#fff}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:11px;margin-bottom:16px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px;position:relative;overflow:hidden}
+.kpi::after{content:"";position:absolute;inset:auto 0 0 0;height:2px;background:linear-gradient(90deg,var(--accent),var(--violet));opacity:.55}
+.kpi .l{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.kpi .v{font-size:1.35rem;font-weight:700;margin-top:4px}
+.kpi .s{font-size:.72rem;color:var(--muted);margin-top:3px}
+.dept-label{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin:18px 0 10px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px;display:block;color:inherit;transition:border-color .15s}
+.tile:hover{border-color:var(--accent);text-decoration:none}
+.tile h3{margin:0 0 5px;font-size:.95rem}
+.tile p{margin:0;color:var(--muted);font-size:.82rem}
+.tile .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.tile .chipk{font-size:.7rem;padding:3px 8px;border-radius:999px;background:var(--panel);border:1px solid var(--line);color:var(--text)}
+.tile .chipk b{color:var(--good)}
+.tile .open{display:inline-block;margin-top:12px;font-size:.78rem;font-weight:700;color:var(--accent)}
+.tile.primary{grid-column:1/-1;border-color:#a855f799;background:linear-gradient(160deg,#2a1530 0%,#152238 45%,#121a2b 100%);min-height:120px;padding:20px}
+.tile.primary h3{font-size:1.25rem;color:#f5d0fe}
+.tile.primary p{font-size:.9rem;color:#d4c4ff}
+.tile.primary .open{color:#f0abfc;font-size:.92rem}
+.tile.sales{border-color:#5b8cff88;background:linear-gradient(160deg,#152238 0%,#121a2b 60%)}
+.tile.secondary{opacity:.92}
+.badge{font-size:.65rem;padding:2px 7px;border-radius:6px;background:#1a2440;color:var(--accent);border:1px solid var(--line);margin-left:6px;vertical-align:middle}
+.badge.money{background:#2a1530;color:#f0abfc;border-color:#a855f766}
+.badge.gap{background:#2a2416;color:var(--warn);border-color:#ffb02066}
+.badge.vacant{background:#1a1f2e;color:var(--violet);border-color:#a78bfa55}
+.seat-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.seat-pill{font-size:.72rem;padding:4px 10px;border-radius:999px;border:1px solid var(--line);background:var(--panel)}
+.seat-pill.named{border-color:#3dd68c66;color:var(--good)}
+.seat-pill.vacant{border-color:#a78bfa55;color:var(--violet)}
+.note{color:var(--muted);font-size:.78rem;margin-top:22px}
+.gray-note{margin-top:14px;padding:12px 14px;border:1px dashed #ffb02055;border-radius:12px;background:#16140f;font-size:.78rem;color:var(--muted)}
+.gray-note b{color:var(--warn)}
+.links-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.links-row a{font-size:.72rem;padding:3px 9px;border-radius:999px;border:1px solid var(--line);background:#0e1626;color:#c5d0e6;text-decoration:none}
+.links-row a:hover{border-color:var(--accent);color:#fff}
+@media(max-width:700px){.tile.primary{grid-column:span 1}}
+</style></head>
+<body data-flow-face="ops" data-flow-chip="rvp"><div class="wrap">
+
+<div class="apps">
+  <span class="lbl">Apps</span>
+  <a class="money" href="one-touch.html">One-touch · money</a>
+  <a href="https://onchainoffgrid-hub.github.io/critters-on-call/" target="_blank" rel="noopener">Critters <span style="color:#3dd68c;font-size:.65rem">LIVE</span></a>
+  <a href="https://onchainoffgrid-hub.github.io/critters-play/" target="_blank" rel="noopener" style="border-color:#a78bfa66">Play / Coins</a>
+  <a href="index.html" class="sec">Layer Zero hub</a>
+  <a href="link-tree.html" class="sec">All links</a>
+</div>
+
+<div class="cascade" aria-label="RVP sales cascade">
+  <span class="lbl">Cascade</span>
+  <a href="rvp-ops.html" class="on">RVP Ops</a>
+  <span class="arr">→</span>
+  <a href="sales-review.html">Sales review</a>
+  <span class="arr">→</span>
+  <a href="bdr-manager-review.html">BDR Manager</a>
+  <span class="arr">→</span>
+  <a href="bdr-rep-review.html">Rep desk</a>
+</div>
+
+<header>
+  <div>
+    <h1>Franchise RVP · Area Ops <span class="badge">Franchise #0</span></h1>
+    <div class="sub">Sheehan Homestead / Critters on Call · Callahan FL · Michael Sheehan · Area VP / Operator</div>
+  </div>
+  <div class="sub">North star: <b>bookings</b> · goal <b>$250k</b> by 2026-12-23</div>
+</header>
+
+<div class="nav">
+  <a href="rvp-ops.html" class="active">RVP Ops</a>
+  <a href="one-touch.html" style="border-color:#a855f788;color:#f0abfc;font-weight:700">One-touch</a>
+  <a href="sales-review.html" style="border-color:#5b8cff88">Sales review</a>
+  <a href="index.html">Layer Zero</a>
+  <a href="bookings-dates.html">Bookings</a>
+  <a href="money-cfo.html">Money</a>
+  <a href="team-hire.html">Team</a>
+  <a href="actions-overdue.html">Actions</a>
+  <a href="bdr-tam.html" style="border-color:#3dd68c88">BDR TAM</a>
+  <a href="programming.html">Programs</a>
+  <a href="ann-marie-ops.html">Ann-Marie</a>
+</div>
+
+<div class="kpis" id="kpi-strip">
+  <div class="kpi"><div class="l">Money (outside)</div><div class="v" id="k-pay">—</div><div class="s" id="k-pay-s">customer $</div></div>
+  <div class="kpi"><div class="l">Upcoming gigs</div><div class="v" id="k-gigs">—</div><div class="s" id="k-gigs-s">from bookings</div></div>
+  <div class="kpi"><div class="l">Overdue actions</div><div class="v" id="k-p0">—</div><div class="s" id="k-p0-s">P0 open</div></div>
+  <div class="kpi"><div class="l">Open seats</div><div class="v" id="k-seats">4</div><div class="s">vacant · outsource later</div></div>
+  <div class="kpi"><div class="l">BDR CALL_NOW</div><div class="v" id="k-call">—</div><div class="s">dialer queue</div></div>
+</div>
+
+<div class="dept-label">Command widgets · drill → next level</div>
+<div class="tiles">
+
+<a class="tile primary" href="one-touch.html">
+  <h3>One-touch · money button <span class="badge money">#1 · PRIMARY</span></h3>
+  <p>Tap board → compose → send. Yesterday ~10 taps → ~$700 verbal today · River City $600 already invoiced. This is the money motion.</p>
+  <div class="chips">
+    <span class="chipk">Surface <b>one-touch</b></span>
+    <span class="chipk">Live <b>critters-on-call</b></span>
+  </div>
+  <div class="links-row">
+    <a href="one-touch.html" style="border-color:#a855f788;color:#f0abfc;font-weight:700">Open suite one-touch</a>
+    <a href="https://onchainoffgrid-hub.github.io/critters-on-call/one-touch.html" target="_blank" rel="noopener" style="border-color:#a855f788;color:#f0abfc">Live Critters one-touch</a>
+  </div>
+  <span class="open">Open →</span>
+</a>
+
+<a class="tile" href="team-hire.html">
+  <h3>Team &amp; ownership</h3>
+  <p>Who owns what today. RVP = Michael. Under that seat: Michael + Ann-Marie. Vacant seats = future SOP outsource — no invented hires.</p>
+  <div class="seat-row" id="seat-pills">
+    <span class="seat-pill named">Michael · RVP</span>
+    <span class="seat-pill named">Ann-Marie · Ops/AR</span>
+    <span class="seat-pill vacant">Enterprise · vacant</span>
+    <span class="seat-pill vacant">Subscription · vacant</span>
+    <span class="seat-pill vacant">Violet · vacant</span>
+    <span class="seat-pill vacant">B2C · vacant</span>
+  </div>
+  <div class="links-row">
+    <a href="team-hire.html">Hire priorities</a>
+    <a href="ann-marie-ops.html">Ann-Marie ops</a>
+  </div>
+  <span class="open">Open →</span>
+</a>
+
+<a class="tile" href="bookings-dates.html">
+  <h3>Upcoming gigs</h3>
+  <p>Ops truth from bookings pipeline — not invented free days.</p>
+  <div class="chips"><span class="chipk">Count <b id="w-gigs">—</b></span><span class="chipk">Next <b id="w-next">—</b></span></div>
+  <span class="open">Open →</span>
+</a>
+
+<a class="tile" href="money-cfo.html">
+  <h3>Money</h3>
+  <p>Outside customer gross · owner separated · CFO view.</p>
+  <div class="chips"><span class="chipk">Outside <b id="w-money">—</b></span></div>
+  <span class="open">Open →</span>
+</a>
+
+<a class="tile" href="bookings-dates.html">
+  <h3>Calendar / programming</h3>
+  <p>Gigs from bookings + programs heat. Live Cal reachable in Cursor; suite does not invent free days.</p>
+  <div class="chips">
+    <span class="chipk" id="w-cal-status">Cal …</span>
+    <span class="chipk">Programs →</span>
+  </div>
+  <div class="links-row">
+    <a href="bookings-dates.html">Bookings / dates</a>
+    <a href="programming.html">Programming</a>
+  </div>
+  <span class="open">Open →</span>
+</a>
+
+<a class="tile" href="actions-overdue.html">
+  <h3>Actions &amp; overdue</h3>
+  <p>P0 open · not started · execution debt.</p>
+  <div class="chips"><span class="chipk">P0 <b id="w-p0">—</b></span><span class="chipk">Not started <b id="w-ns">—</b></span></div>
+  <span class="open">Open →</span>
+</a>
+
+<a class="tile sales" href="sales-review.html">
+  <h3>Sales (review desk) <span class="badge">CASCADE</span></h3>
+  <p>Michael reviews with BDR Manager seat (vacant). Pipeline KPIs · CALL_NOW · hire seats · drill to manager → rep.</p>
+  <div class="chips">
+    <span class="chipk">CALL_NOW <b id="w-call">—</b></span>
+    <span class="chipk">Warm <b id="w-warm">—</b></span>
+  </div>
+  <div class="links-row">
+    <a href="sales-review.html">Sales review</a>
+    <a href="bdr-manager-review.html">BDR Manager desk</a>
+    <a href="one-touch.html" style="border-color:#a855f788;color:#f0abfc">One-touch</a>
+  </div>
+  <span class="open">Open →</span>
+</a>
+
+<a class="tile secondary" href="bdr-tam.html">
+  <h3>BDR TAM / attack</h3>
+  <p>Secondary dialer boards — TAM + Easy attack. Hard-link from review cascade too.</p>
+  <div class="chips"><span class="chipk">Contacts <b id="w-tam">—</b></span></div>
+  <div class="links-row">
+    <a href="bdr-tam.html">BDR TAM</a>
+    <a href="easy-attack.html">Easy attack</a>
+    <a href="bdr-pipeline.html">Pipeline</a>
+  </div>
+  <span class="open">Open →</span>
+</a>
+
+</div>
+
+<div class="gray-note"><b>Franchise ops gray (SOP later):</b> Franchise #0 currently runs on general business insurance + personal liability. No dedicated petting-zoo / goat-yoga product policy is claimed here. Document carrier / product coverage as SOP later — do not invent carriers.</div>
+
+<p class="note" id="load-note">Dump-home: Dashboard Bit · Brand: Sheehan Homestead · Face: Franchise RVP / Area Ops · KPIs from data/*.json · Built 2026-09-23 ET</p>
+</div>
+
+<script>
+(function(){
+  function fmt$(n){ if(n==null||n==='') return '—'; var x=Number(n); if(isNaN(x)) return '—'; return '$'+Math.round(x).toLocaleString('en-US'); }
+  function set(id,v){ var el=document.getElementById(id); if(el) el.textContent=(v==null||v==='')?'—':v; }
+  async function load(path){
+    try{ var r=await fetch(path,{cache:'no-store'}); if(!r.ok) throw new Error(r.status); return await r.json(); }
+    catch(e){ return null; }
+  }
+  var today='2026-09-23';
+  Promise.all([
+    load('data/suite_summary.json'),
+    load('data/suite_kpis.json'),
+    load('data/paypal_kpis.json'),
+    load('data/overdue_kpis.json'),
+    load('data/bookings_pipeline.json'),
+    load('data/calendar_ops_snapshot.json'),
+    load('data/rvp_ops.json')
+  ]).then(function(arr){
+    var sum=arr[0]||{}, kpis=arr[1]||{}, pay=arr[2]||{}, od=arr[3]||{}, book=arr[4]||{}, cal=arr[5]||{}, rvp=arr[6]||{};
+    var outside=pay.combined_outside_gross!=null?pay.combined_outside_gross:sum.paypal_h2_outside_gross;
+    set('k-pay', fmt$(outside));
+    set('k-pay-s', pay.combined_window||'Outside customer');
+    set('w-money', fmt$(outside));
+    var call=sum.bdr_spec_aligned && sum.bdr_spec_aligned.CALL_NOW;
+    if(call==null) call=kpis.call_now;
+    var warm=sum.bdr_spec_aligned && sum.bdr_spec_aligned.Warm;
+    if(warm==null) warm=kpis.warm;
+    set('k-call', call!=null?call:'—');
+    set('w-call', call);
+    set('w-warm', warm);
+    var p0=od.p0_open!=null?od.p0_open:sum.overdue_p0;
+    var ns=od.not_started!=null?od.not_started:kpis.overdue_not_started;
+    set('k-p0', p0!=null?p0:'—');
+    set('k-p0-s', ns!=null?(ns+' not started'):'P0 open');
+    set('w-p0', p0);
+    set('w-ns', ns);
+    var rows=Array.isArray(book.bookings)?book.bookings:[];
+    var skip={'NO_PAY':1,'PIPELINE_MIA':1,'STUB':1};
+    var upcoming=rows.filter(function(b){ return b.date && b.date>=today && !skip[b.status]; })
+      .sort(function(a,c){ return (a.date||'').localeCompare(c.date||''); });
+    set('k-gigs', upcoming.length);
+    set('w-gigs', upcoming.length);
+    if(upcoming.length){
+      var n=upcoming[0];
+      set('k-gigs-s', 'Next '+n.date);
+      set('w-next', n.date+' · '+(n.title||'').slice(0,36));
+    } else {
+      set('k-gigs-s', 'from bookings_pipeline');
+      set('w-next', '—');
+    }
+    var seats=(rvp.ownership&&rvp.ownership.seats)||[];
+    var vacant=seats.filter(function(s){ return s.status==='vacant'; }).length;
+    if(vacant) set('k-seats', vacant);
+    var tam=sum.bdr_tam && sum.bdr_tam.contacts;
+    set('w-tam', tam!=null?tam:'—');
+    var calEl=document.getElementById('w-cal-status');
+    if(calEl){
+      if(cal.status==='live'){
+        calEl.innerHTML='Cal <b style="color:var(--good)">LIVE</b> (Cursor) · gigs=bookings';
+      } else {
+        calEl.innerHTML='Cal <span class="badge gap">GAP</span> · gigs=bookings';
+      }
+    }
+  });
+})();
+</script>
+<script src="shared/flow-spine.js" defer></script>
+</body></html>

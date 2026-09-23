@@ -1,0 +1,177 @@
+{
+  "as_of": "2026-09-23 16:25 ET",
+  "title": "Franchise RVP \u00b7 Area Ops",
+  "franchise": "#0",
+  "brand": "Sheehan Homestead / Critters on Call",
+  "role": "Franchise Operator / Area VP",
+  "primary_page": "rvp-ops.html",
+  "cascade": [
+    {
+      "id": "rvp",
+      "label": "RVP Ops",
+      "href": "rvp-ops.html"
+    },
+    {
+      "id": "sales-review",
+      "label": "Sales review",
+      "href": "sales-review.html"
+    },
+    {
+      "id": "bdr-manager",
+      "label": "BDR Manager",
+      "href": "bdr-manager-review.html"
+    },
+    {
+      "id": "bdr-rep",
+      "label": "Rep desk",
+      "href": "bdr-rep-review.html"
+    }
+  ],
+  "ownership": {
+    "rvp": {
+      "name": "Michael Sheehan",
+      "seat": "Franchise Operator / Area VP / RVP",
+      "status": "named"
+    },
+    "reporting_today": [
+      {
+        "name": "Michael Sheehan",
+        "seat": "RVP / Operator \u2014 owns almost everything today",
+        "status": "named"
+      },
+      {
+        "name": "Ann-Marie",
+        "seat": "Ops / AR / publishing",
+        "status": "named",
+        "panel": "ann-marie-ops.html"
+      }
+    ],
+    "bdr_manager": {
+      "name": null,
+      "seat": "BDR Manager",
+      "status": "vacant",
+      "note": "Future outsource target \u2014 no named hire yet; Michael still filling seats"
+    },
+    "seats": [
+      {
+        "id": "enterprise",
+        "label": "Regional enterprise",
+        "priority": 1,
+        "owner": null,
+        "status": "vacant",
+        "lane": "CDD/HOA \u00b7 amenity \u00b7 corp \u00b7 golf \u00b7 campus",
+        "note": "Outsource target \u2014 SOP later"
+      },
+      {
+        "id": "subscription",
+        "label": "Regional subscription",
+        "priority": 2,
+        "owner": null,
+        "status": "vacant",
+        "lane": "Sr / PPEC / ADC / AL",
+        "note": "Outsource target \u2014 SOP later"
+      },
+      {
+        "id": "violet",
+        "label": "Violet / events",
+        "priority": 3,
+        "owner": null,
+        "status": "vacant",
+        "lane": "PTA \u00b7 church \u00b7 indie",
+        "note": "Outsource target \u2014 SOP later"
+      },
+      {
+        "id": "b2c",
+        "label": "B2C conversion",
+        "priority": 4,
+        "owner": null,
+        "status": "vacant",
+        "lane": "Inbound \u2192 site buy",
+        "note": "Outsource target \u2014 SOP later"
+      }
+    ],
+    "rule": "Do not invent named BDR hires. Vacant = future outsource, document via SOPs later."
+  },
+  "widgets": [
+    {
+      "id": "one-touch",
+      "title": "One-touch \u00b7 money button",
+      "href": "one-touch.html",
+      "href_live": "https://onchainoffgrid-hub.github.io/critters-on-call/one-touch.html",
+      "primary": true
+    },
+    {
+      "id": "team",
+      "title": "Team & ownership",
+      "href": "team-hire.html",
+      "also": [
+        "ann-marie-ops.html"
+      ]
+    },
+    {
+      "id": "gigs",
+      "title": "Upcoming gigs",
+      "href": "bookings-dates.html",
+      "data": "bookings_pipeline.json"
+    },
+    {
+      "id": "money",
+      "title": "Money",
+      "href": "money-cfo.html",
+      "data": "paypal_kpis.json"
+    },
+    {
+      "id": "calendar",
+      "title": "Calendar / programming",
+      "href": "bookings-dates.html",
+      "also": [
+        "programming.html"
+      ],
+      "calendar_snapshot": "calendar_ops_snapshot.json"
+    },
+    {
+      "id": "actions",
+      "title": "Actions & overdue",
+      "href": "actions-overdue.html",
+      "data": "overdue_kpis.json"
+    },
+    {
+      "id": "sales",
+      "title": "Sales (review desk)",
+      "href": "sales-review.html"
+    },
+    {
+      "id": "bdr-attack",
+      "title": "BDR TAM / attack",
+      "href": "bdr-tam.html",
+      "also": [
+        "easy-attack.html"
+      ],
+      "secondary": true
+    }
+  ],
+  "data_sources": [
+    "suite_summary.json",
+    "suite_kpis.json",
+    "paypal_kpis.json",
+    "overdue_kpis.json",
+    "bookings_pipeline.json",
+    "calendar_ops_snapshot.json",
+    "HIRE_PRIORITIES (team-hire.html)"
+  ],
+  "localStorage_keys": {
+    "rep_notes": "sheehan_bdr_rep_notes_v1",
+    "rep_dials": "sheehan_bdr_rep_dials_v1"
+  },
+  "one_touch": {
+    "label": "One-touch \u00b7 money button",
+    "priority": 1,
+    "href_suite": "one-touch.html",
+    "href_live": "https://onchainoffgrid-hub.github.io/critters-on-call/one-touch.html",
+    "note": "#1 money motion \u2014 Michael tapped ~10 from board \u2192 ~$700 verbal; River City $600 invoiced"
+  },
+  "franchise_ops_gray": {
+    "label": "Insurance / liability (gray \u2014 SOP later)",
+    "note": "Franchise #0 currently operates under business insurance + personal liability. No dedicated petting-zoo / goat-yoga product policy claimed. Frame as documentation work later \u2014 do not invent carrier claims."
+  }
+}

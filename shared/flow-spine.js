@@ -21,7 +21,7 @@
     if (!document.body.getAttribute("data-flow-face") && !window.__FLOW_FACE__) {
       if (/^investor-/.test(path) || path === "macro-radar.html") FACE = "investor";
       else if (
-        /^(bdr-tam|bdr-pipeline|crm-icp|consumer-inbound|easy-attack|org-whitespace|catalogue-close|hail-mary)\.html$/.test(
+        /^(bdr-tam|bdr-pipeline|crm-icp|consumer-inbound|easy-attack|org-whitespace|catalogue-close|hail-mary|sales-review|bdr-manager-review|bdr-rep-review)\.html$/.test(
           path
         )
       )
@@ -41,6 +41,11 @@
       } else if (path === "bdr-pipeline.html") CHIP = "big-enterprise";
       else if (path === "consumer-inbound.html") CHIP = "violet";
       else if (path === "easy-attack.html") CHIP = "easy-attack";
+      else if (path === "sales-review.html") CHIP = "sales-review";
+      else if (path === "bdr-manager-review.html") CHIP = "bdr-manager";
+      else if (path === "bdr-rep-review.html") CHIP = "bdr-rep";
+      else if (path === "one-touch.html") CHIP = "one-touch";
+      else if (path === "rvp-ops.html") CHIP = "rvp";
       else if (path === "crm-icp.html") CHIP = "subscription";
       else if (path === "hail-mary.html") CHIP = "hail-mary";
       else if (path === "investor-checklist.html") CHIP = "checklist";
@@ -94,6 +99,8 @@
   var salesSubs =
     '<div class="flow-sub" id="flow-sales-sub">' +
     '<span class="sl">Sales</span>' +
+    a("sales-review.html", "Sales review", "", CHIP === "sales-review") +
+    a("one-touch.html", "One-touch", "hm", CHIP === "one-touch") +
     a("bdr-tam.html", "BDR TAM", "", CHIP === "bdr-tam") +
     a(
       "bdr-tam.html?lane=" + encodeURIComponent("Regional Enterprise"),
@@ -136,7 +143,7 @@
     '">' +
     '<div class="flow-lbl">Flow spine</div>' +
     '<div class="flow-faces">' +
-    a("index.html", "Operations", "ops", FACE === "ops") +
+    a("rvp-ops.html", "Operations", "ops", FACE === "ops") +
     '<span class="flow-arrow" aria-hidden="true">→</span>' +
     a("bdr-tam.html", "Sales", "sales", FACE === "sales") +
     '<span class="flow-arrow" aria-hidden="true">→</span>' +
@@ -148,7 +155,7 @@
       ? '<div class="flow-hint">Investor face · <a href="investor-checklist.html">Seed / pre-seed checklist</a> (Assets · Proof · Founder · Co-founder · Ops) · hop to <a href="bookings-dates.html">bookings</a> / <a href="money-cfo.html">money</a> for Sales proof.</div>'
       : FACE === "sales"
       ? '<div class="flow-hint">Sales face · Big Enterprise · Sponsor · Violet · Easy attack (FB groups / social sell / cross-marketers / open calendar) · Subscription · Hail Mary (Inspired · God-connected · Local celeb · Philanthropist · Local biz-sponsor · Bazillionaires — same GTM offers).</div>'
-      : '<div class="flow-hint">Operations face · Money · Bookings · Actions · Ann-Marie. Use Sales chips to dial without hunting.</div>') +
+      : '<div class="flow-hint">Operations face · <a href="rvp-ops.html">RVP Command</a> · <a href="one-touch.html">One-touch money</a> · Bookings · Actions · Ann-Marie. Cascade: RVP → Sales review → BDR Manager → Rep.</div>') +
     "</nav>";
 
   function mount() {

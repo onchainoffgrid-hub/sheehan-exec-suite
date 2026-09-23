@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sales review · BDR Manager · Sheehan Homestead</title>
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--bad:#ff5d6c;--violet:#a78bfa}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1280px;margin:0 auto;padding:22px}
+.apps{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 12px;padding:10px 12px;border:1px solid var(--line);border-radius:14px;background:#0f1728}
+.apps .lbl{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-right:4px}
+.apps a{background:var(--card);border:1px solid #3dd68c55;color:var(--text);padding:6px 10px;border-radius:999px;font-size:.78rem;text-decoration:none;font-weight:600}
+.apps a.money{border-color:#a855f788;background:linear-gradient(135deg,#2a1530,#121a2b);font-size:.88rem;padding:8px 16px}
+.cascade{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin:0 0 14px;padding:10px 12px;border:1px solid var(--line);border-radius:14px;background:#0f1728}
+.cascade .lbl{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-right:4px}
+.cascade a{padding:6px 12px;border-radius:999px;font-size:.76rem;font-weight:600;border:1px solid var(--line);background:var(--card);color:var(--text);text-decoration:none}
+.cascade a.on{border-color:var(--accent);background:#152238;color:#fff}
+.cascade .arr{color:var(--muted);opacity:.7}
+header{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:10px;flex-wrap:wrap}
+h1{font-size:1.35rem;margin:0}.sub{color:var(--muted);font-size:.88rem}
+.nav{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0 16px}
+.nav a{background:var(--card);border:1px solid var(--line);padding:6px 11px;border-radius:999px;font-size:.78rem;color:var(--text)}
+.nav a.active{border-color:var(--accent);background:#152238;color:#fff}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:11px;margin-bottom:16px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px;position:relative;overflow:hidden}
+.kpi::after{content:"";position:absolute;inset:auto 0 0 0;height:2px;background:linear-gradient(90deg,var(--accent),var(--violet));opacity:.55}
+.kpi .l{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.kpi .v{font-size:1.35rem;font-weight:700;margin-top:4px}
+.kpi .s{font-size:.72rem;color:var(--muted);margin-top:3px}
+.dept-label{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin:18px 0 10px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px;display:block;color:inherit}
+.tile:hover{border-color:var(--accent);text-decoration:none}
+.tile.primary{grid-column:1/-1;border-color:#5b8cff99;background:linear-gradient(160deg,#152238,#121a2b);min-height:100px}
+.tile.money{border-color:#a855f799;background:linear-gradient(160deg,#2a1530,#121a2b)}
+.tile h3{margin:0 0 5px;font-size:.95rem}.tile p{margin:0;color:var(--muted);font-size:.82rem}
+.tile .open{display:inline-block;margin-top:12px;font-size:.78rem;font-weight:700;color:var(--accent)}
+.tile .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.chipk{font-size:.7rem;padding:3px 8px;border-radius:999px;background:var(--panel);border:1px solid var(--line)}
+.chipk b{color:var(--good)}
+.badge{font-size:.65rem;padding:2px 7px;border-radius:6px;background:#1a2440;color:var(--accent);border:1px solid var(--line);margin-left:6px}
+.badge.vacant{background:#1a1f2e;color:var(--violet);border-color:#a78bfa55}
+.seat{border-left:3px solid var(--violet);padding:8px 12px;margin:8px 0;background:var(--panel);border-radius:0 8px 8px 0;font-size:.82rem}
+.seat.named{border-color:var(--good)}
+.note{color:var(--muted);font-size:.78rem;margin-top:22px}
+.links-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.links-row a{font-size:.72rem;padding:3px 9px;border-radius:999px;border:1px solid var(--line);background:#0e1626;color:#c5d0e6;text-decoration:none}
+</style></head>
+<body data-flow-face="sales" data-flow-chip="sales-review"><div class="wrap">
+
+<div class="apps">
+  <span class="lbl">Apps</span>
+  <a class="money" href="one-touch.html">One-touch · money</a>
+  <a href="rvp-ops.html">RVP Ops</a>
+  <a href="index.html" style="border-color:var(--line);font-weight:500;font-size:.72rem">Layer Zero</a>
+</div>
+
+<div class="cascade">
+  <span class="lbl">Cascade</span>
+  <a href="rvp-ops.html">RVP Ops</a><span class="arr">→</span>
+  <a href="sales-review.html" class="on">Sales review</a><span class="arr">→</span>
+  <a href="bdr-manager-review.html">BDR Manager</a><span class="arr">→</span>
+  <a href="bdr-rep-review.html">Rep desk</a>
+</div>
+
+<header>
+  <div>
+    <h1>Sales review · with BDR Manager <span class="badge vacant">Manager seat vacant</span></h1>
+    <div class="sub">Michael reviews pipeline · hire seats · boards. No invented BDR names — vacant seats are future SOP outsource.</div>
+  </div>
+  <div class="sub">Reviewer: <b>Michael Sheehan</b> (RVP)</div>
+</header>
+
+<div class="nav">
+  <a href="rvp-ops.html">RVP Ops</a>
+  <a href="sales-review.html" class="active">Sales review</a>
+  <a href="one-touch.html" style="border-color:#a855f788;color:#f0abfc">One-touch</a>
+  <a href="bdr-tam.html">BDR TAM</a>
+  <a href="bdr-pipeline.html">Pipeline</a>
+  <a href="easy-attack.html">Easy attack</a>
+  <a href="team-hire.html">Team</a>
+</div>
+
+<div class="kpis">
+  <div class="kpi"><div class="l">CALL_NOW</div><div class="v" id="k-call">—</div><div class="s">dialer</div></div>
+  <div class="kpi"><div class="l">Warm</div><div class="v" id="k-warm">—</div><div class="s">warm band</div></div>
+  <div class="kpi"><div class="l">Needs contact</div><div class="v" id="k-needs">—</div><div class="s">WARM_NEEDS</div></div>
+  <div class="kpi"><div class="l">BDR seats open</div><div class="v">4</div><div class="s">vacant · outsource later</div></div>
+  <div class="kpi"><div class="l">TAM contacts</div><div class="v" id="k-tam">—</div><div class="s">bdr_tam</div></div>
+</div>
+
+<div class="dept-label">Ownership (honest)</div>
+<div class="seat named"><b>Michael Sheehan</b> — RVP / Operator · owns sales motion today</div>
+<div class="seat named"><b>Ann-Marie</b> — Ops / AR · supports invoices &amp; handoffs (not BDR dialer)</div>
+<div class="seat"><b>BDR Manager</b> — <span style="color:var(--violet)">vacant</span> · future outsource · SOP later · no named hire</div>
+<div class="seat"><b>Enterprise / Subscription / Violet / B2C seats</b> — <span style="color:var(--violet)">vacant</span> · outsource targets</div>
+
+<div class="dept-label">Drill</div>
+<div class="tiles">
+<a class="tile money" href="one-touch.html">
+  <h3>One-touch · money button</h3>
+  <p>#1 money motion — hard link from every sales desk.</p>
+  <span class="open">Open →</span>
+</a>
+<a class="tile primary" href="bdr-manager-review.html">
+  <h3>BDR Manager desk → <span class="badge vacant">VACANT SEAT</span></h3>
+  <p>Template desk for reviewing a BDR / setter under the manager seat. Queue slices · easy-attack · inbound · personal actions. Seat empty until hired / outsourced.</p>
+  <span class="open">Open →</span>
+</a>
+<a class="tile" href="bdr-tam.html">
+  <h3>BDR TAM</h3>
+  <p>Primary dialer board · lanes · compose.</p>
+  <div class="chips"><span class="chipk">Contacts <b id="w-tam">—</b></span></div>
+  <span class="open">Open →</span>
+</a>
+<a class="tile" href="bdr-pipeline.html">
+  <h3>BDR Pipeline</h3>
+  <p>Enterprise bands · Call now · Warm · Needs.</p>
+  <div class="chips"><span class="chipk">CALL_NOW <b id="w-call">—</b></span></div>
+  <span class="open">Open →</span>
+</a>
+<a class="tile" href="easy-attack.html">
+  <h3>Easy attack</h3>
+  <p>Mass-touch ideas · manual/light only.</p>
+  <span class="open">Open →</span>
+</a>
+<a class="tile" href="team-hire.html">
+  <h3>Hire seats</h3>
+  <p>Four distinct jobs · vacant until filled.</p>
+  <span class="open">Open →</span>
+</a>
+</div>
+
+<p class="note">Cascade: RVP → Sales review → BDR Manager → Rep · Brand: Sheehan Homestead · Built 2026-09-23 ET</p>
+</div>
+<script>
+(function(){
+  function set(id,v){ var el=document.getElementById(id); if(el) el.textContent=(v==null||v==='')?'—':v; }
+  async function load(p){ try{ var r=await fetch(p,{cache:'no-store'}); if(!r.ok) throw 0; return await r.json(); }catch(e){ return null; } }
+  Promise.all([load('data/suite_summary.json'),load('data/suite_kpis.json')]).then(function(a){
+    var sum=a[0]||{}, k=a[1]||{};
+    var call=(sum.bdr_spec_aligned&&sum.bdr_spec_aligned.CALL_NOW)!=null?sum.bdr_spec_aligned.CALL_NOW:k.call_now;
+    var warm=(sum.bdr_spec_aligned&&sum.bdr_spec_aligned.Warm)!=null?sum.bdr_spec_aligned.Warm:k.warm;
+    var needs=(sum.bdr_spec_aligned&&sum.bdr_spec_aligned.WARM_NEEDS_CONTACT)!=null?sum.bdr_spec_aligned.WARM_NEEDS_CONTACT:k.needs_contact;
+    set('k-call',call); set('w-call',call); set('k-warm',warm); set('k-needs',needs);
+    var tam=sum.bdr_tam&&sum.bdr_tam.contacts; set('k-tam',tam); set('w-tam',tam);
+  });
+})();
+</script>
+<script src="shared/flow-spine.js" defer></script>
+</body></html>

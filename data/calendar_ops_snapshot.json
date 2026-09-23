@@ -1,0 +1,60 @@
+{
+  "as_of": "2026-09-23 16:21 ET",
+  "tz": "America/New_York",
+  "status": "live",
+  "source": "user-Google-calendar list_events (primary)",
+  "note": "Live Calendar reachable in Cursor. Suite primary upcoming-gigs KPI still uses bookings_pipeline.json (ops truth). Free/open days are NOT invented here.",
+  "free_days": {
+    "status": "not_computed",
+    "reason": "No free-busy inventing in suite \u2014 use live Calendar in Cursor or bookings gaps"
+  },
+  "next_events_sample": [
+    {
+      "start": "2026-09-24T12:00:00-04:00",
+      "summary": "Dryer repair"
+    },
+    {
+      "start": "2026-09-24T14:00:00-04:00",
+      "summary": "Lillie interview"
+    },
+    {
+      "start": "2026-09-26T10:00:00-04:00",
+      "summary": "Mommy & Me on the Farm",
+      "location": "Sheehan Homestead"
+    },
+    {
+      "start": "2026-09-26T13:00:00-04:00",
+      "summary": "Mini petting zoo",
+      "location": "Chets Creek"
+    },
+    {
+      "start": "2026-09-27T10:00:00-04:00",
+      "summary": "Mobile PZ + CoT",
+      "location": "Durbin Crossing"
+    },
+    {
+      "start": "2026-10-01T10:00:00-04:00",
+      "summary": "Mommy & Me Class"
+    },
+    {
+      "start": "2026-10-02T08:20:00-04:00",
+      "summary": "Mobile PZ",
+      "location": "River City Science Academy Innovations"
+    },
+    {
+      "start": "2026-10-03T12:00:00-04:00",
+      "summary": "Mobile PZ - BDay Party",
+      "location": "JU area"
+    },
+    {
+      "start": "2026-10-23",
+      "summary": "Goddard Trunk or Treat (from bookings)",
+      "via": "bookings"
+    },
+    {
+      "start": "2026-10-29",
+      "summary": "Goddard Trunk or Treat (from bookings)",
+      "via": "bookings"
+    }
+  ]
+}

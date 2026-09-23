@@ -1,17 +1,29 @@
 {
   "product": "Sheehan Homestead / Critters on Call \u2014 Ops \u2192 Sales \u2192 Investors spine",
   "dump_home": "Dashboard Bit",
-  "as_of": "2026-09-22 ET",
+  "as_of": "2026-09-23 ET",
   "flow_spine": {
     "order": [
       "Operations",
       "Sales",
       "Investors"
     ],
-    "ops_home": "index.html",
+    "ops_home": "rvp-ops.html",
     "sales_home": "bdr-tam.html",
     "investor_home": "investor-home.html",
     "sales_subchips": [
+      {
+        "id": "one-touch",
+        "label": "One-touch",
+        "href": "one-touch.html",
+        "note": "#1 money button"
+      },
+      {
+        "id": "sales-review",
+        "label": "Sales review",
+        "href": "sales-review.html",
+        "note": "RVP \u2192 Manager \u2192 Rep cascade"
+      },
       {
         "id": "bdr-tam",
         "label": "BDR TAM",
@@ -87,8 +99,8 @@
     {
       "id": "ops",
       "label": "Operations",
-      "path": "index.html",
-      "role": "Franchise Layer Zero \u2014 Regional VP operator home. Money \u00b7 Bookings \u00b7 Actions \u00b7 Ann-Marie.",
+      "path": "rvp-ops.html",
+      "role": "Franchise RVP Area Ops \u2014 One-touch money \u00b7 Team \u00b7 Gigs \u00b7 Money \u00b7 Calendar \u00b7 Actions \u00b7 Sales cascade.",
       "departments": [
         "Sales",
         "Consumer Inbound",
