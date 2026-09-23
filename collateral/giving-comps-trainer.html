@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sheehan Homestead — What We Can Give (Without Pain)</title>
+<style>
+@font-face {
+  font-family: "Great Vibes";
+  src: url("fonts/GreatVibes-Regular.ttf") format("truetype");
+  font-weight: 400; font-style: normal;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src: url("fonts/PlayfairDisplay-Variable.ttf") format("truetype");
+  font-weight: 400 900; font-style: normal;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src: url("fonts/PlayfairDisplay-Italic-Variable.ttf") format("truetype");
+  font-weight: 400 900; font-style: italic;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("fonts/SourceSans3-Variable.ttf") format("truetype");
+  font-weight: 200 900; font-style: normal;
+}
+@font-face {
+  font-family: "Cinzel";
+  src: url("fonts/Cinzel-Variable.ttf") format("truetype");
+  font-weight: 400 900; font-style: normal;
+}
+
+:root {
+  --sage: #4F6559;
+  --accent: #2F4F3E;
+  --cream: #F3EEE4;
+  --gold: #D4B45A;
+  --gold-deep: #B8923A;
+  --ink: #1a241c;
+  --muted: rgba(26,36,28,0.62);
+  --line: rgba(47,79,62,0.16);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  width: 8.5in;
+  height: 11in;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: "Source Sans 3", "Liberation Sans", sans-serif;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+@page { size: 8.5in 11in; margin: 0; }
+
+.page {
+  width: 8.5in;
+  height: 11in;
+  background: var(--cream);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.goat-banner {
+  flex: 0 0 auto;
+  background: var(--accent);
+  text-align: center;
+  padding: 0.08in 0.3in 0.075in;
+  border-bottom: 2.5px solid var(--gold);
+  font-size: 8.5pt;
+  font-weight: 750;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  line-height: 1.25;
+}
+.goat-banner .phone {
+  font-size: 8.5pt;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.92);
+  text-transform: none;
+  margin-left: 0.1in;
+}
+
+.main {
+  flex: 1 1 auto;
+  padding: 0.2in 0.46in 0.1in;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  gap: 0.12in;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.2in;
+  padding-bottom: 0.1in;
+  border-bottom: 1.5px solid rgba(47,79,62,0.18);
+}
+.kicker {
+  font-family: "Cinzel", serif;
+  font-size: 7.5pt;
+  letter-spacing: 0.18em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 0.04in;
+}
+h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 650;
+  font-size: 24pt;
+  line-height: 1.05;
+  color: var(--accent);
+  letter-spacing: -0.015em;
+}
+.sub {
+  margin-top: 0.04in;
+  font-size: 10.5pt;
+  color: var(--muted);
+  line-height: 1.3;
+  max-width: 5.5in;
+}
+.logo img { width: 1.15in; height: auto; display: block; }
+
+.rule-banner {
+  background: var(--accent);
+  color: #fff;
+  border-radius: 9px;
+  padding: 0.12in 0.18in;
+  border: 1.5px solid var(--gold);
+  display: flex;
+  align-items: center;
+  gap: 0.16in;
+}
+.rule-banner .seal {
+  flex: 0 0 auto;
+  width: 0.72in;
+  height: 0.72in;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #E8D48C, var(--gold-deep));
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Playfair Display", serif;
+  font-size: 11pt;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.05;
+}
+.rule-banner .copy strong {
+  display: block;
+  font-family: "Playfair Display", serif;
+  font-size: 13.5pt;
+  font-weight: 650;
+  color: #F5E6B8;
+  margin-bottom: 0.02in;
+}
+.rule-banner .copy span {
+  font-size: 10pt;
+  color: rgba(255,255,255,0.88);
+  line-height: 1.3;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.12in;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.12in 0.14in 0.13in;
+  display: flex;
+  flex-direction: column;
+  gap: 0.06in;
+}
+.card.wide { grid-column: 1 / -1; }
+.card h2 {
+  font-size: 8pt;
+  font-weight: 750;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sage);
+  padding-bottom: 0.05in;
+  border-bottom: 1px solid rgba(212,180,90,0.55);
+}
+.card .lead {
+  font-family: "Playfair Display", serif;
+  font-size: 13.5pt;
+  font-weight: 650;
+  color: var(--accent);
+  line-height: 1.15;
+}
+.card p {
+  font-size: 10pt;
+  color: var(--muted);
+  line-height: 1.35;
+}
+.card ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.06in;
+}
+.card li {
+  font-size: 10pt;
+  color: var(--ink);
+  line-height: 1.3;
+  padding-left: 0.16in;
+  position: relative;
+}
+.card li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.28em;
+  width: 0.08in;
+  height: 0.08in;
+  border-radius: 50%;
+  background: var(--gold);
+}
+.card li strong { color: var(--accent); font-weight: 700; }
+
+.do-dont {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.1in;
+}
+.col {
+  border-radius: 7px;
+  padding: 0.1in 0.12in;
+}
+.col.do {
+  background: rgba(79,101,89,0.1);
+  border: 1px solid rgba(79,101,89,0.28);
+}
+.col.dont {
+  background: rgba(26,36,28,0.04);
+  border: 1px solid rgba(47,79,62,0.14);
+}
+.col .lab {
+  font-size: 7.5pt;
+  font-weight: 750;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 0.05in;
+}
+.col.do .lab { color: var(--accent); }
+.col.dont .lab { color: var(--sage); }
+.col p {
+  font-size: 9.5pt;
+  color: var(--ink);
+  line-height: 1.3;
+}
+
+.violet {
+  background: linear-gradient(135deg, #5B4B6E 0%, #3D3348 100%);
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.12in 0.16in;
+  border: 1.5px solid rgba(212,180,90,0.45);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.16in;
+}
+.violet .l .t {
+  font-size: 7.5pt;
+  font-weight: 750;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.03in;
+}
+.violet .l .h {
+  font-family: "Playfair Display", serif;
+  font-size: 14pt;
+  font-weight: 650;
+  color: #F5E6B8;
+  line-height: 1.15;
+}
+.violet .l p {
+  margin-top: 0.03in;
+  font-size: 9.5pt;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.3;
+}
+.violet .badge {
+  flex: 0 0 auto;
+  text-align: center;
+  background: rgba(0,0,0,0.22);
+  border: 1px solid rgba(212,180,90,0.5);
+  border-radius: 8px;
+  padding: 0.08in 0.14in;
+}
+.violet .badge .pct {
+  font-family: "Playfair Display", serif;
+  font-size: 22pt;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+}
+.violet .badge .lbl {
+  font-size: 7.5pt;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.85);
+}
+
+.footer-cta {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.16in;
+  background: linear-gradient(90deg, rgba(212,180,90,0.2), rgba(212,180,90,0.08));
+  border: 1px solid rgba(212,180,90,0.55);
+  border-radius: 8px;
+  padding: 0.1in 0.14in;
+}
+.footer-cta .msg {
+  font-size: 10pt;
+  color: var(--accent);
+  line-height: 1.3;
+}
+.footer-cta .msg strong {
+  font-family: "Playfair Display", serif;
+  font-size: 12pt;
+  font-weight: 650;
+}
+.footer-cta .right {
+  text-align: right;
+  flex: 0 0 auto;
+  font-size: 9pt;
+  font-weight: 650;
+  color: var(--sage);
+}
+.footer-cta .right .phone {
+  font-family: "Playfair Display", serif;
+  font-size: 14pt;
+  font-weight: 650;
+  color: var(--accent);
+  line-height: 1.1;
+}
+
+.page-foot {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.08in 0.46in 0.14in;
+  font-size: 7.5pt;
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(47,79,62,0.5);
+}
+.page-foot .chip {
+  border: 1px solid rgba(47,79,62,0.28);
+  border-radius: 999px;
+  padding: 0.03in 0.1in;
+  color: var(--accent);
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="goat-banner">
+    Text GOAT <span class="phone">914-263-1311</span>
+    &nbsp;·&nbsp; sheehanhomestead.com
+  </div>
+
+  <div class="main">
+    <div class="header">
+      <div>
+        <div class="kicker">BDR trainer · leave-behind</div>
+        <h1>What we can give<br>(without pain)</h1>
+        <div class="sub">Short rules for comps &amp; extras. Prefer paid. Free is strategic — not the default.</div>
+      </div>
+      <div class="logo">
+        <img src="logo-wordmark.png" alt="Sheehan Homestead">
+      </div>
+    </div>
+
+    <div class="rule-banner">
+      <div class="seal">Pay<br>1st</div>
+      <div class="copy">
+        <strong>He’d rather get paid than free come-here.</strong>
+        <span>Comp only for a reason: review, Gold Club, or charity — never because “come to the farm” is easier to pitch.</span>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h2>Prefer this</h2>
+        <div class="lead">Extras on something already bought</div>
+        <ul>
+          <li><strong>Full Side of Critters</strong> when animals are already on the job — low incremental cost</li>
+          <li>Add-ons already on the truck / in the yard</li>
+          <li>Gold card on a locked date (often COMP) — see Gold brochure</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Come-here / farm visits</h2>
+        <div class="lead">Useful — not the long-term model</div>
+        <ul>
+          <li>Great for <strong>reviews</strong> + proof / volume story</li>
+          <li><strong>Not</strong> preferred long-term — push <strong>off-site / mobile</strong></li>
+          <li>Free farm visit = strategic tool, not the menu</li>
+        </ul>
+      </div>
+
+      <div class="card wide">
+        <h2>Do / don’t · 10-second check</h2>
+        <div class="do-dont">
+          <div class="col do">
+            <div class="lab">Do</div>
+            <p>Comp an extra already staged · COMP Gold when date is locked · Point charity to Violet · Ask for the review when you give</p>
+          </div>
+          <div class="col dont">
+            <div class="lab">Don’t</div>
+            <p>Default to free come-here · Dump Violet pricing in the middle of a consumer close · Comp with no ask (review / next book / Gold)</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card wide" style="padding:0; border:none; background:transparent;">
+        <div class="violet">
+          <div class="l">
+            <div class="t">Separate class</div>
+            <div class="h">Violet / charity = 50% posture</div>
+            <p>Point them there — don’t dump the full charity playbook into a Gold or mobile close. Different lane.</p>
+          </div>
+          <div class="badge">
+            <div class="pct">50%</div>
+            <div class="lbl">posture</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-cta">
+      <div class="msg">
+        <strong>Trainable in one pass.</strong><br>
+        Prefer extras · prefer mobile · free is strategic only.
+      </div>
+      <div class="right">
+        <div class="phone">914-263-1311</div>
+        Text GOAT · sheehanhomestead.com
+      </div>
+    </div>
+  </div>
+
+  <div class="page-foot">
+    <span>Sheehan Homestead · Critters On-Call</span>
+    <span class="chip">BDR · Giving / comps</span>
+    <span>No ops essays</span>
+  </div>
+</div>
+</body>
+</html>

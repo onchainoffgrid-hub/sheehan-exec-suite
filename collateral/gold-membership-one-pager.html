@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sheehan Homestead — Gold Membership Card</title>
+<style>
+@font-face {
+  font-family: "Playfair Display";
+  src: url("fonts/PlayfairDisplay-Variable.ttf") format("truetype");
+  font-weight: 400 900; font-style: normal;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src: url("fonts/PlayfairDisplay-Italic-Variable.ttf") format("truetype");
+  font-weight: 400 900; font-style: italic;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("fonts/SourceSans3-Variable.ttf") format("truetype");
+  font-weight: 200 900; font-style: normal;
+}
+@font-face {
+  font-family: "Cinzel";
+  src: url("fonts/Cinzel-Variable.ttf") format("truetype");
+  font-weight: 400 900; font-style: normal;
+}
+@font-face {
+  font-family: "Great Vibes";
+  src: url("fonts/GreatVibes-Regular.ttf") format("truetype");
+  font-weight: 400; font-style: normal;
+}
+
+:root {
+  --cream: #F7F3EB;
+  --forest: #2F4F3E;
+  --sage: #4F6559;
+  --gold: #D4B45A;
+  --gold-deep: #B8923A;
+  --gold-light: #E8D48C;
+  --ink: #1a241c;
+  --muted: rgba(26, 36, 28, 0.62);
+  --line: rgba(47, 79, 62, 0.16);
+  --card: #FFFcf7;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: "Source Sans 3", "Liberation Sans", sans-serif;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+@page { size: Letter; margin: 0; }
+
+.page {
+  width: 8.5in;
+  height: 11in;
+  background:
+    radial-gradient(ellipse at 88% 8%, rgba(212,180,90,0.26) 0%, transparent 40%),
+    radial-gradient(ellipse at 6% 92%, rgba(47,79,62,0.12) 0%, transparent 42%),
+    linear-gradient(180deg, #F9F5ED 0%, var(--cream) 50%, #EFE8DA 100%);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.page::before,
+.page::after {
+  content: "";
+  position: absolute;
+  width: 0.5in;
+  height: 0.5in;
+  border: 1.5px solid rgba(212, 180, 90, 0.55);
+  pointer-events: none;
+  z-index: 2;
+}
+.page::before { top: 0.26in; left: 0.26in; border-right: none; border-bottom: none; }
+.page::after { top: 0.26in; right: 0.26in; border-left: none; border-bottom: none; }
+.corner-bl, .corner-br {
+  position: absolute;
+  width: 0.5in;
+  height: 0.5in;
+  border: 1.5px solid rgba(212, 180, 90, 0.55);
+  pointer-events: none;
+  z-index: 2;
+}
+.corner-bl { bottom: 0.26in; left: 0.26in; border-right: none; border-top: none; }
+.corner-br { bottom: 0.26in; right: 0.26in; border-left: none; border-top: none; }
+
+.banner {
+  flex: 0 0 auto;
+  background: var(--forest);
+  text-align: center;
+  padding: 0.09in 0.35in 0.085in;
+  border-bottom: 2.5px solid var(--gold);
+  font-size: 8.5pt;
+  font-weight: 750;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  line-height: 1.25;
+}
+.banner .phone {
+  font-size: 8.5pt;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.92);
+  text-transform: none;
+  margin-left: 0.12in;
+}
+
+.main {
+  flex: 1 1 auto;
+  padding: 0.22in 0.48in 0.12in;
+  display: flex;
+  flex-direction: column;
+  gap: 0.13in;
+  min-height: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.2in;
+}
+.kicker {
+  font-family: "Cinzel", serif;
+  font-size: 8pt;
+  letter-spacing: 0.22em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 0.04in;
+}
+.header h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 30pt;
+  line-height: 0.98;
+  color: var(--forest);
+  letter-spacing: -0.02em;
+}
+.header h1 .g { color: var(--gold-deep); }
+.script {
+  font-family: "Great Vibes", cursive;
+  font-size: 18pt;
+  color: var(--sage);
+  margin-top: 0.02in;
+}
+.logo img {
+  width: 1.05in;
+  height: auto;
+  display: block;
+}
+
+.free-band {
+  background: var(--forest);
+  color: #fff;
+  border-radius: 10px;
+  padding: 0.13in 0.2in;
+  text-align: center;
+  border: 1.5px solid var(--gold);
+  box-shadow: 0 6px 18px rgba(47,79,62,0.16);
+}
+.free-band .eye {
+  font-size: 7.5pt;
+  font-weight: 750;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.035in;
+}
+.free-band .line {
+  font-family: "Playfair Display", serif;
+  font-size: 15.5pt;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.25;
+  color: #F5E6B8;
+}
+.free-band .sub {
+  margin-top: 0.05in;
+  font-size: 9.5pt;
+  font-weight: 550;
+  color: rgba(255,255,255,0.88);
+  line-height: 1.3;
+}
+
+.hero-row {
+  display: grid;
+  grid-template-columns: 1.45fr 1fr;
+  gap: 0.16in;
+  align-items: stretch;
+  flex: 0 0 auto;
+}
+.card-wrap {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.12in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(26,36,28,0.08);
+}
+.card-wrap img {
+  width: 100%;
+  max-height: 2.55in;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  border-radius: 8px;
+}
+
+.msrp-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1in;
+}
+.msrp {
+  background: linear-gradient(145deg, #E8D48C 0%, var(--gold) 45%, var(--gold-deep) 100%);
+  border-radius: 10px;
+  padding: 0.14in 0.12in;
+  text-align: center;
+  color: var(--forest);
+  box-shadow: 0 4px 12px rgba(184,146,58,0.28);
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.msrp .lbl {
+  font-size: 7.5pt;
+  font-weight: 750;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.msrp .amt {
+  font-family: "Playfair Display", serif;
+  font-size: 42pt;
+  font-weight: 700;
+  line-height: 0.92;
+  margin: 0.02in 0;
+}
+.msrp .note {
+  font-size: 8.5pt;
+  font-weight: 650;
+  line-height: 1.25;
+  opacity: 0.9;
+}
+.credit-note {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-left: 3.5px solid var(--gold);
+  border-radius: 8px;
+  padding: 0.1in 0.12in;
+  font-size: 9.5pt;
+  line-height: 1.35;
+  color: var(--ink);
+  font-weight: 550;
+}
+.credit-note strong { color: var(--forest); font-weight: 750; }
+
+.section-title {
+  font-family: "Cinzel", serif;
+  font-size: 8.5pt;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--sage);
+  font-weight: 650;
+  margin-top: 0.02in;
+}
+
+.perks {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0.09in;
+}
+.perk {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--gold);
+  border-radius: 8px;
+  padding: 0.1in 0.08in 0.11in;
+  text-align: center;
+}
+.perk .big {
+  font-family: "Playfair Display", serif;
+  font-size: 20pt;
+  font-weight: 700;
+  color: var(--forest);
+  line-height: 1;
+}
+.perk .sub {
+  margin-top: 0.035in;
+  font-size: 8pt;
+  font-weight: 650;
+  color: var(--sage);
+  line-height: 1.2;
+}
+
+.extras {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.1in;
+}
+.extra {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.11in 0.13in;
+  display: flex;
+  gap: 0.1in;
+  align-items: flex-start;
+}
+.extra .icon {
+  flex: 0 0 auto;
+  width: 0.38in;
+  height: 0.38in;
+  border-radius: 999px;
+  background: linear-gradient(145deg, var(--gold-light), var(--gold));
+  color: var(--forest);
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 12pt;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.extra .t {
+  font-size: 10.5pt;
+  font-weight: 750;
+  color: var(--forest);
+  line-height: 1.15;
+}
+.extra .d {
+  margin-top: 0.02in;
+  font-size: 8.5pt;
+  color: var(--muted);
+  line-height: 1.3;
+  font-weight: 500;
+}
+
+.proof {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.14in;
+  background: rgba(47,79,62,0.06);
+  border: 1px solid rgba(47,79,62,0.12);
+  border-radius: 10px;
+  padding: 0.11in 0.16in;
+}
+.proof .nums {
+  display: flex;
+  gap: 0.22in;
+  align-items: baseline;
+}
+.proof .n {
+  font-family: "Playfair Display", serif;
+  font-size: 22pt;
+  font-weight: 700;
+  color: var(--gold-deep);
+  line-height: 1;
+}
+.proof .nl {
+  font-size: 8.5pt;
+  font-weight: 650;
+  color: var(--sage);
+  margin-left: 0.04in;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.proof .blurb {
+  flex: 1 1 auto;
+  font-size: 9.5pt;
+  color: var(--ink);
+  line-height: 1.35;
+  font-weight: 550;
+  text-align: right;
+  max-width: 3.6in;
+}
+
+.footer {
+  flex: 0 0 auto;
+  margin: 0.06in 0.48in 0.22in;
+  padding: 0.12in 0.16in;
+  background: var(--forest);
+  border-radius: 10px;
+  border: 1.5px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.16in;
+  color: #fff;
+}
+.footer .cta-text .top {
+  font-size: 7.5pt;
+  font-weight: 750;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.footer .cta-text .phone {
+  font-family: "Playfair Display", serif;
+  font-size: 20pt;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.1;
+  margin-top: 0.02in;
+}
+.footer .cta-text .web {
+  font-size: 9pt;
+  font-weight: 550;
+  color: rgba(255,255,255,0.85);
+  margin-top: 0.02in;
+}
+.footer .qr {
+  display: flex;
+  align-items: center;
+  gap: 0.1in;
+}
+.footer .qr img {
+  width: 0.72in;
+  height: 0.72in;
+  background: #fff;
+  border-radius: 6px;
+  padding: 0.03in;
+}
+.footer .qr .ql {
+  font-size: 7.5pt;
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.25;
+  max-width: 0.9in;
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="corner-bl"></div>
+  <div class="corner-br"></div>
+
+  <div class="banner">
+    Sheehan Homestead · Critters On Call
+    <span class="phone">914-263-1311</span>
+  </div>
+
+  <div class="main">
+    <div class="header">
+      <div>
+        <div class="kicker">Membership · Critter Club</div>
+        <h1>The <span class="g">Gold</span> Card</h1>
+        <div class="script">In Critters We Trust</div>
+      </div>
+      <div class="logo">
+        <img src="hen-logo-flyer-gold-tight.png" alt="Sheehan Homestead">
+      </div>
+    </div>
+
+    <div class="free-band">
+      <div class="eye">How you get yours</div>
+      <div class="line">Free to anyone who has ever spent a dollar with us.</div>
+      <div class="sub">Already a guest, birthday, farm visit, or mobile booking? You’re in. New friends can join for $50 — and that $50 never disappears.</div>
+    </div>
+
+    <div class="hero-row">
+      <div class="card-wrap">
+        <img src="gold-card.jpg" alt="Gold membership card">
+      </div>
+      <div class="msrp-col">
+        <div class="msrp">
+          <div class="lbl">Stated value</div>
+          <div class="amt">$50</div>
+          <div class="note">MSRP · Critter Club Gold</div>
+        </div>
+        <div class="credit-note">
+          <strong>Pay $50?</strong> It applies straight to your event deposit. You don’t lose it — it rolls into your mobile or farm booking.
+        </div>
+      </div>
+    </div>
+
+    <div class="section-title">What’s on the card</div>
+    <div class="perks">
+      <div class="perk">
+        <div class="big">25%</div>
+        <div class="sub">off mobile<br>services</div>
+      </div>
+      <div class="perk">
+        <div class="big">50%</div>
+        <div class="sub">off travel<br>fees</div>
+      </div>
+      <div class="perk">
+        <div class="big">~40%</div>
+        <div class="sub">typical savings<br>on mobile</div>
+      </div>
+      <div class="perk">
+        <div class="big">$25</div>
+        <div class="sub">free farm<br>gift credit</div>
+      </div>
+    </div>
+
+    <div class="extras">
+      <div class="extra">
+        <div class="icon">2</div>
+        <div>
+          <div class="t">Free 2-person farm visit</div>
+          <div class="d">Come see the homestead — two guests on us with your Gold card.</div>
+        </div>
+      </div>
+      <div class="extra">
+        <div class="icon">$</div>
+        <div>
+          <div class="t">Deposit that sticks</div>
+          <div class="d">Whatever you put down for Gold credits toward your next paid event invoice.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="proof">
+      <div class="nums">
+        <div><span class="n">~600</span><span class="nl">members</span></div>
+        <div><span class="n">1,000</span><span class="nl">goal</span></div>
+      </div>
+      <div class="blurb">A growing Critter Club across Metro Jacksonville — families, partners, and friends who’ve already spent a dollar with Sheehan Homestead.</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="cta-text">
+      <div class="top">Ask for your Gold card</div>
+      <div class="phone">914-263-1311</div>
+      <div class="web">sheehanhomestead.com · Callahan, FL · Metro Jax</div>
+    </div>
+    <div class="qr">
+      <img src="qr-sheehanhomestead.png" alt="QR code">
+      <div class="ql">Scan · visit · book</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

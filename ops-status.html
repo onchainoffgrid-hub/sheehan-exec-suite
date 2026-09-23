@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Ops status · RYG · Sheehan Homestead</title>
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--bad:#ff5d6c;--check:#e8eefc}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:980px;margin:0 auto;padding:28px 22px 56px}
+.top{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 18px;padding:10px 14px;border:1px solid var(--line);border-radius:14px;background:#0f1728}
+.top .lbl{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-right:4px}
+.top a{background:var(--card);border:1px solid var(--line);color:var(--text);padding:7px 12px;border-radius:999px;font-size:.78rem;font-weight:600;text-decoration:none}
+.top a.money{border-color:#a855f788;background:linear-gradient(135deg,#2a1530,#121a2b);color:#f0abfc}
+.crumb{font-size:.82rem;color:var(--muted);margin:0 0 12px}.crumb a{color:#fde68a;font-weight:600}
+h1{font-size:clamp(1.5rem,3vw,2rem);margin:0 0 6px;letter-spacing:-.02em;font-weight:750}
+.sub{color:var(--muted);font-size:.95rem}
+.q{margin:14px 0 18px;padding:16px 18px;border-radius:16px;border:1px solid #fbbf2466;background:linear-gradient(160deg,#2a2210,#121a2b);font-size:1.05rem}
+.q b{color:#fff}
+.overall{display:flex;flex-wrap:wrap;gap:18px;align-items:stretch;margin:0 0 22px;padding:22px;border-radius:20px;border:2px solid var(--line);background:var(--card)}
+.light{width:110px;height:110px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.95rem;letter-spacing:.04em;text-transform:uppercase;flex-shrink:0;border:4px solid #0006;box-shadow:inset 0 0 30px #0005}
+.light.green{background:var(--good);color:#062016}.light.yellow{background:var(--warn);color:#2a1a00}.light.red{background:var(--bad);color:#2a0508}.light.checkered{background:repeating-conic-gradient(#111 0% 25%,#eee 0% 50%) 50%/18px 18px;color:#111;text-shadow:0 0 4px #fff}
+.overall .body{flex:1;min-width:220px}
+.overall .body h2{margin:0 0 6px;font-size:1.25rem}
+.overall .body p{margin:0;color:#c5d0e6;font-size:.92rem}
+.overall .meta{margin-top:10px;font-size:.75rem;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:0 0 22px}
+.card{padding:16px 18px;border-radius:16px;border:1px solid var(--line);background:var(--card);display:flex;flex-direction:column;gap:8px}
+.card .row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.card h3{margin:0;font-size:1.05rem}
+.pill{font-size:.68rem;font-weight:800;padding:3px 9px;border-radius:999px;text-transform:uppercase;letter-spacing:.05em}
+.pill.green{background:#13281d;color:var(--good);border:1px solid #3dd68c66}
+.pill.yellow{background:#2a2416;color:var(--warn);border:1px solid #ffb02066}
+.pill.red{background:#2a1619;color:var(--bad);border:1px solid #ff5d6c66}
+.pill.checkered{background:#1a1f2e;color:#fff;border:1px dashed #93a0b8}
+.card p{margin:0;color:var(--muted);font-size:.84rem;flex:1}
+.card .src{font-size:.7rem;color:#7a879e}
+.card .src .kind{font-weight:700}
+.kind.real{color:var(--good)}.kind.real_stale{color:var(--warn)}.kind.stub_free_busy{color:#a78bfa}
+.card .links{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.card .links a{font-size:.78rem;font-weight:700;padding:5px 10px;border-radius:999px;border:1px solid var(--line);background:var(--panel);color:#c5d0e6;text-decoration:none}
+.card .links a:hover{border-color:var(--accent);color:#fff}
+.rules{margin:0 0 18px;padding:14px 16px;border-radius:14px;border:1px dashed var(--line);background:var(--panel);font-size:.82rem;color:#c5d0e6}
+.rules b{color:#fff}
+.deeper{margin-top:8px}
+.deeper a{display:inline-block;margin:4px 6px 4px 0;font-size:.78rem;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:#c5d0e6;text-decoration:none}
+.note{color:var(--muted);font-size:.78rem;margin-top:18px}
+.badge{font-size:.65rem;padding:2px 8px;border-radius:6px;background:#2a2416;color:var(--warn);border:1px solid #ffb02066;margin-left:6px}
+</style></head>
+<body data-flow-face="ops" data-flow-chip="ops-status"><div class="wrap">
+
+<div class="top">
+  <span class="lbl">Apps</span>
+  <a class="money" href="one-touch.html">One-touch</a>
+  <a href="rvp-ops.html">RVP home</a>
+  <a href="growth-home.html">Growth</a>
+  <a href="support-catalog.html">Support catalog</a>
+  <a href="ops.html">Ops deeper</a>
+</div>
+
+<p class="crumb"><a href="rvp-ops.html">RVP</a> → <a href="ops.html">Operations</a> → <b>Status (RYG)</b></p>
+
+<header>
+  <h1>Ops status <span class="badge">traffic light</span></h1>
+  <div class="sub">Simple only · HAVE vs opportunity · not a mega dashboard</div>
+</header>
+
+<div class="q">Question: <b>Can I operate the business today?</b> If green → shut up and operate.</div>
+
+<section class="overall" id="overall" aria-live="polite">
+  <div class="light yellow" id="overall-light">Yellow</div>
+  <div class="body">
+    <h2 id="overall-label">Loading…</h2>
+    <p id="overall-why"></p>
+    <div class="meta" id="overall-meta"></div>
+  </div>
+</section>
+
+<div class="cards" id="cards"></div>
+
+<aside class="rules" id="rules"></aside>
+
+<div class="deeper">
+  <span style="font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em">Deeper ops (only if needed)</span><br/>
+  <a href="ops.html">Operations doors</a>
+  <a href="ops-people.html">Team</a>
+  <a href="ops-animals.html">Animals</a>
+  <a href="ops-daily-run.html">Daily run</a>
+  <a href="ops-gigs.html">Booked gigs</a>
+  <a href="ops-products.html">Products</a>
+  <a href="growth-home.html">Handoff → Growth</a>
+  <a href="date-liquidation.html">Date liquidation</a>
+</div>
+
+<p class="note">Sources: <code>data/ops_status.json</code> + live fetches of battle_row / team_roster / bookings_pipeline / calendar_ops_snapshot. Stub vs real labeled on each card. Built 2026-09-23 ET.</p>
+</div>
+<script>
+(function(){
+  function pill(g){ return '<span class="pill '+g+'">'+(g==='checkered'?'Checkered':g)+'</span>'; }
+  function kindLabel(k){
+    if(k==='real') return 'real data';
+    if(k==='real_stale') return 'real · stale snapshot';
+    if(k==='stub_free_busy') return 'stub · wire GCal';
+    return k||'—';
+  }
+  fetch('data/ops_status.json',{cache:'no-store'}).then(function(r){return r.json()}).then(function(d){
+    var o=d.overall||{};
+    var g=o.grade||'yellow';
+    var light=document.getElementById('overall-light');
+    light.className='light '+g;
+    light.textContent=g==='checkered'?'Checkered':(g.charAt(0).toUpperCase()+g.slice(1));
+    document.getElementById('overall-label').textContent=o.label||g;
+    document.getElementById('overall-why').textContent=o.why||'';
+    document.getElementById('overall-meta').textContent='as_of '+(d.as_of||'—')+(o.checkered_eligible?'':' · '+ (o.checkered_note||''));
+    var html='';
+    (d.cards||[]).forEach(function(c){
+      html+='<article class="card"><div class="row"><h3>'+c.title+'</h3>'+pill(c.grade)+'</div>';
+      html+='<p>'+c.why+'</p>';
+      html+='<div class="src">Source: <code>'+c.source+'</code> · <span class="kind '+(c.source_kind||'')+'">'+kindLabel(c.source_kind)+'</span></div>';
+      html+='<div class="links">';
+      if(c.deeper) html+='<a href="'+c.deeper+'">Deeper →</a>';
+      if(c.handoff) html+='<a href="'+c.handoff+'">Handoff Growth →</a>';
+      html+='</div></article>';
+    });
+    document.getElementById('cards').innerHTML=html;
+    var rules=(d.rules||[]).map(function(r){return '· '+r;}).join('<br/>');
+    document.getElementById('rules').innerHTML='<b>Rules</b><br/>'+rules;
+  }).catch(function(e){
+    document.getElementById('overall-label').textContent='Could not load ops_status.json';
+    document.getElementById('overall-why').textContent=String(e);
+  });
+})();
+</script>
+<script src="shared/flow-spine.js" defer></script>
+</body></html>

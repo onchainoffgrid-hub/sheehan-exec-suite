@@ -1,0 +1,30 @@
+{
+  "as_of": "2026-09-23 18:50 ET",
+  "status": "scaffold",
+  "note": "Available calendar dates = perishable inventory. Free-busy NOT computed from GCal. EXAMPLE slots below are labeled — never invent booked $. Wire: Ann-Marie + primary GCal free-busy → replace EXAMPLES.",
+  "source_docs": [
+    "/workspace/date-liquidation/Rapid_Liquidation_Price_Board.md",
+    "data/calendar_ops_snapshot.json",
+    "data/bookings_pipeline.json"
+  ],
+  "known_blocked": [
+    {"date": "2026-09-26", "title": "Mommy & Me on the Farm", "via": "calendar_ops_snapshot", "kind": "blocked"},
+    {"date": "2026-09-26", "title": "Mini petting zoo · Chets Creek", "via": "calendar_ops_snapshot", "kind": "blocked"},
+    {"date": "2026-09-27", "title": "Vesta Durbin · Mobile PZ + CoT", "via": "bookings_pipeline LOCKED", "kind": "blocked"},
+    {"date": "2026-10-01", "title": "Mommy & Me Class", "via": "calendar_ops_snapshot", "kind": "blocked"},
+    {"date": "2026-10-02", "title": "River City Science (WAITING_YES)", "via": "bookings_pipeline", "kind": "soft_hold"},
+    {"date": "2026-10-03", "title": "JU birthday / Madelyn / market stubs", "via": "bookings_pipeline", "kind": "messy"},
+    {"date": "2026-10-23", "title": "Goddard Trunk or Treat", "via": "bookings ACCEPTED", "kind": "blocked"},
+    {"date": "2026-10-29", "title": "Goddard Trunk or Treat", "via": "bookings ACCEPTED", "kind": "blocked"}
+  ],
+  "example_open_slots": [
+    {"id": "ex-tue-am", "label": "EXAMPLE · Tue morning farm", "window": "Tue · 10:00–12:00", "sku_hint": "C-CAR50 / C-FT25 / Mommy & Me", "price_band": "collateral range $25–$50 come-here", "status": "EXAMPLE", "fill_role": "Preferred fill + review"},
+    {"id": "ex-wed-mid", "label": "EXAMPLE · Wed midday mobile hole", "window": "Wed · 11:00–13:00", "sku_hint": "Bunny mystery / soft mobile (NOT Sat)", "price_band": "collateral range ~$189–$249 weekday", "status": "EXAMPLE", "fill_role": "Off-peak mobile"},
+    {"id": "ex-thu-pm", "label": "EXAMPLE · Thu afternoon programming", "window": "Thu · 14:00–16:00", "sku_hint": "Homeschool 90 / group farm", "price_band": "collateral range $40–$299", "status": "EXAMPLE", "fill_role": "Weekday programming"},
+    {"id": "ex-fri-am", "label": "EXAMPLE · Fri morning senior/PPEC lane", "window": "Fri · 09:30–11:00", "sku_hint": "B-BH / subscription visit", "price_band": "collateral range ~$175/mo · ~$215/visit (one-pagers)", "status": "EXAMPLE", "fill_role": "Recurring B2B fill"}
+  ],
+  "wire_gcal": {
+    "owner": "Ann-Marie (ops) + Cursor GCal read",
+    "need": "Compute free days / open minutes from primary calendar; replace EXAMPLE slots; never invent $ on blocked dates"
+  }
+}

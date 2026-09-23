@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Support catalog · by role · Sheehan Homestead</title>
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--violet:#a78bfa;--joy:#fbbf24}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1100px;margin:0 auto;padding:28px 22px 64px}
+.top{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 18px;padding:10px 14px;border:1px solid var(--line);border-radius:14px;background:#0f1728}
+.top .lbl{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-right:4px}
+.top a{background:var(--card);border:1px solid var(--line);color:var(--text);padding:7px 12px;border-radius:999px;font-size:.78rem;font-weight:600;text-decoration:none}
+.crumb{font-size:.82rem;color:var(--muted);margin:0 0 12px}.crumb a{color:#9dffc5;font-weight:600}
+h1{font-size:clamp(1.5rem,3vw,2rem);margin:0 0 6px;letter-spacing:-.02em;font-weight:750}
+.sub{color:var(--muted);font-size:.95rem}
+.lead{margin:12px 0 18px;padding:14px 16px;border-radius:14px;border:1px solid #3dd68c55;background:#0e1626;font-size:.88rem;color:#c5d0e6}
+.lead b{color:#9dffc5}
+.seg-label{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 10px}
+.segs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px}
+.segs button{appearance:none;cursor:pointer;border:1px solid var(--line);background:var(--card);color:var(--text);padding:9px 14px;border-radius:999px;font-size:.8rem;font-weight:650}
+.segs button:hover{border-color:var(--accent)}
+.segs button.active{border-color:var(--good);background:#13281d;color:#9dffc5}
+.segs button.gray{opacity:.55;border-style:dashed}
+.segs button.gray.active{opacity:.9;border-color:#93a0b8;background:#1a1f2e;color:#c5d0e6}
+.panel{display:none;margin:0 0 18px;padding:20px;border-radius:18px;border:1px solid var(--line);background:var(--card)}
+.panel.show{display:block}
+.panel h2{margin:0 0 4px;font-size:1.2rem}
+.panel .who{color:var(--muted);font-size:.86rem;margin:0 0 14px}
+.offers{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.offer{padding:14px 16px;border-radius:14px;border:1px solid var(--line);background:var(--panel)}
+.offer .tag{font-size:.65rem;text-transform:uppercase;letter-spacing:.06em;color:var(--joy);margin-bottom:6px}
+.offer h3{margin:0 0 6px;font-size:1.02rem}
+.offer .blurb{margin:0 0 8px;color:var(--muted);font-size:.82rem}
+.offer .price{font-size:.78rem;color:#f5d0fe;margin:0 0 10px}
+.offer .price span{color:var(--muted)}
+.offer .links{display:flex;flex-wrap:wrap;gap:6px}
+.offer .links a{font-size:.74rem;padding:5px 10px;border-radius:999px;border:1px solid #5b8cff66;background:#152238;color:#9ec1ff;text-decoration:none;font-weight:650}
+.offer .links a.compose{border-color:#3dd68c66;background:#13281d;color:#9dffc5}
+.offer .links a.muted{border-color:var(--line);color:#c5d0e6;background:var(--card)}
+.doors{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:8px 0 22px}
+.door{display:block;padding:14px 16px;border-radius:14px;border:1px solid var(--line);background:var(--card);color:inherit;text-decoration:none}
+.door:hover{border-color:var(--accent);text-decoration:none}
+.door h3{margin:0 0 4px;font-size:1rem}.door p{margin:0;color:var(--muted);font-size:.8rem}
+.badge{font-size:.65rem;padding:2px 8px;border-radius:6px;background:#13281d;color:var(--good);border:1px solid #3dd68c66;margin-left:6px}
+.note{color:var(--muted);font-size:.78rem;margin-top:18px}
+</style></head>
+<body data-flow-face="ops" data-flow-chip="support-catalog"><div class="wrap">
+
+<div class="top">
+  <span class="lbl">Apps</span>
+  <a href="rvp-ops.html">RVP home</a>
+  <a href="ops-status.html">Ops RYG</a>
+  <a href="growth-home.html">Growth</a>
+  <a href="support.html">Support home</a>
+</div>
+
+<p class="crumb"><a href="rvp-ops.html">RVP</a> → <a href="support.html">Support</a> → <b>Catalog by role</b></p>
+
+<header>
+  <h1>Support catalog <span class="badge">by role</span></h1>
+  <div class="sub">Pick the buyer role · open HTML one-pagers · Gmail compose prefill (you hit send)</div>
+</header>
+
+<div class="lead"><b>Give-first voice:</b> free / donate / giveaways / silent auction → cheap cross-promo → come-here cheap → affordable programming → mobile = convenience premium. ICP Connect (come-here · go-there · B2B/B2C) lives as links here — not a PDF dump on the hub. Print any HTML if you want a PDF.</div>
+
+<div class="seg-label">Other Support doors (own pages)</div>
+<nav class="doors" aria-label="Support doors">
+  <a class="door" href="date-liquidation.html"><h3>Date liquidation</h3><p>Perishable open dates · EXAMPLE until GCal wire</p></a>
+  <a class="door" href="support-giveables.html"><h3>Giveables / auction</h3><p>Donate · silent auction kit</p></a>
+  <a class="door" href="support-reviews.html"><h3>Reviews</h3><p>Journey · pace to 555</p></a>
+  <a class="door" href="connect.html"><h3>Connect</h3><p>Wheel · book · gold</p></a>
+</nav>
+
+<div class="seg-label">Buyer role</div>
+<div class="segs" id="segs" role="tablist" aria-label="Buyer roles"></div>
+<div id="panels"></div>
+
+<p class="note">Prices = labeled ranges from <code>collateral/*.html</code> — never invent hard $. Compose = Gmail prefill only · never auto-send. Built 2026-09-23 ET.</p>
+</div>
+<script>
+(function(){
+  function enc(s){ return encodeURIComponent(s||''); }
+  function gmail(subject, body){
+    return 'https://mail.google.com/mail/?view=cm&fs=1&su='+enc(subject)+'&body='+enc(body);
+  }
+  function mailto(subject, body){
+    return 'mailto:?subject='+enc(subject)+'&body='+enc(body);
+  }
+  function linksHtml(links){
+    return '<div class="links">'+links.map(function(l){
+      var cls=l.cls?(' '+l.cls):'';
+      return '<a class="'+cls.trim()+'" href="'+l.h+'" target="_blank" rel="noopener">'+l.t+' →</a>';
+    }).join('')+'</div>';
+  }
+
+  var SEGMENTS = [
+    {id:'ppec', label:'PPEC Director', ready:true, who:'PPEC / pediatric extended care — director or therapy lead.',
+      offers:[
+        {tag:'Recurring mobile', title:'Monthly / visit path', blurb:'We show up so your team keeps working.', price:'Labeled · ~$175/mo · ~$215/visit (PPEC one-pager)',
+          compose:{su:'Critters visit for your PPEC · Sheehan Homestead', body:'Hi —\n\nWe bring a calm mobile petting experience to PPECs so staff can keep working while kids get hands-on joy.\n\nHappy to send the one-pager or hold a weekday slot.\n\n— Michael\nSheehan Homestead / Critters on Call\n914-263-1311'},
+          links:[{h:'collateral/ppec-one-pager.html',t:'PPEC HTML'},{h:'collateral/ppec-minizoo-one-pager.html',t:'Mini zoo'}]},
+        {tag:'Give-first', title:'Intro / donate visit', blurb:'Open the door with give · then rebook.', price:'$0 entry · then collateral ranges',
+          compose:{su:'Complimentary critter visit · Sheehan Homestead', body:'Hi —\n\nWe often start with a complimentary / donate visit for the right fit — educate or entertain, no hard sell.\n\nIf useful, I can hold a weekday.\n\n— Michael\n914-263-1311'},
+          links:[{h:'support-giveables.html',t:'Giveables',cls:'muted'}]}
+      ]},
+    {id:'senior', label:'Activity Director', ready:true, who:'Senior / AL / IL — Activity Director seat.',
+      offers:[
+        {tag:'Mobile premium', title:'Senior center visit', blurb:'Bunny / mini / standard — we come to you.', price:'Labeled · ~$175/mo · ~$215/visit · business menu ladder',
+          compose:{su:'Animal visit for your activity calendar', body:'Hi —\n\nWe bring a mobile petting experience to senior communities — soft animals, short set, staff can keep working.\n\nWant the one-pager or a midweek hold?\n\n— Michael\nSheehan Homestead / Critters on Call\n914-263-1311'},
+          links:[{h:'collateral/sr-center-one-pager.html',t:'SR center'},{h:'collateral/sr-minizoo-one-pager.html',t:'SR mini'},{h:'collateral/business-menu-one-pager.html',t:'Business menu'}]},
+        {tag:'Auction', title:'Silent auction Critter Club', blurb:'They raise money · we get buzz.', price:'Auction card · Club $50 path (labeled)',
+          compose:{su:'Silent auction donation · Critter Club', body:'Hi —\n\nHappy to donate a Critter Club silent-auction package for your fundraiser.\n\nI can email the card / terms.\n\n— Michael\n914-263-1311'},
+          links:[{h:'collateral/auction-critter-club-card.html',t:'Auction card'},{h:'support-giveables.html',t:'Giveables',cls:'muted'}]}
+      ]},
+    {id:'pta', label:'PTA / school', ready:true, who:'PTA · VPK · independent school · Montessori after-school.',
+      offers:[
+        {tag:'School visit', title:'VPK / classroom visit', blurb:'Educate or entertain on campus.', price:'Labeled · ~$175/mo · ~$215/visit · fest menus separate',
+          compose:{su:'Critters visit for your school / PTA', body:'Hi —\n\nWe do affordable school / VPK visits and festival add-ons — educate or entertain.\n\nHappy to share the one-pager.\n\n— Michael\nSheehan Homestead / Critters on Call\n914-263-1311'},
+          links:[{h:'collateral/vpk-one-pager.html',t:'VPK'},{h:'collateral/independent-school-festival.html',t:'School fest'},{h:'collateral/montessori-afterschool-leavebehind.html',t:'Montessori'}]},
+        {tag:'Come-here', title:'Field trip / farm day', blurb:'Come-here cheap · reviews live here.', price:'Consumer menu · groups $299–$499 · cars $25–$50 (labeled)',
+          compose:{su:'Farm field trip · Sheehan Homestead', body:'Hi —\n\nCome-here farm days are our affordable lane for groups — cars / tickets / Gold path.\n\nWant options for a date?\n\n— Michael\n914-263-1311'},
+          links:[{h:'collateral/homeschool-field-trip.html',t:'Field trip'},{h:'collateral/consumer-menu-one-pager.html',t:'Consumer menu'}]}
+      ]},
+    {id:'amenity', label:'Amenity Director', ready:true, who:'CDD / HOA amenity or lifestyle director.',
+      offers:[
+        {tag:'Protect mobile', title:'Amenity event / festival', blurb:'Standard+ · protect Saturday list.', price:'Amenity menu · $235→$1,349 ladder (labeled)',
+          compose:{su:'Amenity event · Critters on Call', body:'Hi —\n\nWe run mobile petting / festival sets for CDD & HOA amenity calendars — convenience premium so residents show up and staff can work the event.\n\nI can send the amenity menu.\n\n— Michael\nSheehan Homestead / Critters on Call\n914-263-1311'},
+          links:[{h:'collateral/amenity-cdd-menu.html',t:'Amenity menu'},{h:'collateral/vesta-amenity-menu.html',t:'Vesta'},{h:'growth-cdd-hoa.html',t:'Growth CDD/HOA',cls:'muted'}]},
+        {tag:'Recurring', title:'Midweek subscription', blurb:'Fill empty weekdays.', price:'Rapid board · ~$175/mo · ~$225/qtr (labeled)',
+          compose:{su:'Recurring midweek amenity visits', body:'Hi —\n\nIf you want a steady midweek animal program (not just festivals), we do recurring visits.\n\nHappy to sketch a calendar around your open days.\n\n— Michael\n914-263-1311'},
+          links:[{h:'collateral/icp-subscription-one-pager.html',t:'ICP subscription'},{h:'date-liquidation.html',t:'Open dates',cls:'muted'}]}
+      ]},
+    {id:'smb', label:'Small-biz owner', ready:true, who:'Local shop / cross-promo partner.',
+      offers:[
+        {tag:'Cheap / barter', title:'Cross-promo package', blurb:'Cheap or no-cost when it fills a hole.', price:'Local packages · Bunny $235–$285 · Mini $549 (labeled) · barter OK',
+          compose:{su:'Cross-promo · Critters + your shop', body:'Hi —\n\nWe do cheap / barter cross-promos with local shops when it fills an open date — shout for shout or a soft package.\n\nOpen to a quick swap?\n\n— Michael\n914-263-1311'},
+          links:[{h:'collateral/local-business-packages.html',t:'Local packages'},{h:'collateral/business-menu-one-pager.html',t:'Business menu'}]}
+      ]},
+    {id:'charity', label:'Charity / auction chair', ready:true, who:'Fundraiser · PTA auction · dugout give.',
+      offers:[
+        {tag:'Give 2×', title:'Silent auction Critter Club', blurb:'Donate package · they raise $.', price:'Bid-up labeled $100 · Club $50 (collateral)',
+          compose:{su:'Donation for your silent auction', body:'Hi —\n\nGlad to donate a Critter Club silent-auction package.\n\nI can send the card and how winners redeem.\n\n— Michael\nSheehan Homestead / Critters on Call\n914-263-1311'},
+          links:[{h:'collateral/auction-critter-club-card.html',t:'Auction card'},{h:'collateral/giving-comps-trainer.html',t:'Giving comps'},{h:'support-giveables.html',t:'Giveables',cls:'muted'}]},
+        {tag:'Gold', title:'Gold / Golden Ticket', blurb:'Microdeposit toward experience.', price:'Gold $50 · gift $25 path (labeled)',
+          links:[{h:'collateral/gold-membership-one-pager.html',t:'Gold'},{h:'collateral/golden-ticket-card.html',t:'Golden Ticket'}]}
+      ]},
+    {id:'b2c', label:'Birthday / family', ready:true, who:'B2C birthday · come-here family · Visit Us.',
+      offers:[
+        {tag:'Come-here', title:'Farm visit / cars', blurb:'Cheap come-here · review machine.', price:'Consumer · $25 / $50 cars · groups $299–$499 (labeled)',
+          compose:{su:'Farm visit · Sheehan Homestead', body:'Hi —\n\nCome-here farm visits are our affordable family lane — cars, tickets, Gold.\n\nWant a date?\n\n— Michael\n914-263-1311'},
+          links:[{h:'collateral/consumer-menu-one-pager.html',t:'Consumer menu'},{h:'collateral/gold-membership-one-pager.html',t:'Gold'}]},
+        {tag:'Mobile premium', title:'Birthday mobile', blurb:'We come so you can host.', price:'Birthday · Standard from $499 · Bunny/Mini smaller (labeled)',
+          compose:{su:'Birthday mobile petting zoo', body:'Hi —\n\nWe bring the mobile petting zoo to birthday parties — convenience premium so you can host.\n\nI can send packages / hold a slot.\n\n— Michael\nSheehan Homestead / Critters on Call\n914-263-1311'},
+          links:[{h:'collateral/birthday-one-pager.html',t:'Birthday'},{h:'collateral/mobile-consumer.html',t:'Mobile consumer'}]}
+      ]},
+    {id:'franchise', label:'Franchise / consulting', ready:false, who:'Peer cities · consulting — gray / not-ready.',
+      offers:[
+        {tag:'Gray', title:'Parked — not a live push', blurb:'Leavebehind exists · investor timing owns this.', price:'No live price as fact',
+          links:[{h:'collateral/local-consulting-leavebehind.html',t:'Leavebehind'},{h:'franchise-peer-cities.html',t:'Peer cities',cls:'muted'},{h:'investor-home.html',t:'Investor',cls:'muted'}]}
+      ]}
+  ];
+
+  var segs=document.getElementById('segs');
+  var panels=document.getElementById('panels');
+  SEGMENTS.forEach(function(s,i){
+    var b=document.createElement('button');
+    b.type='button';
+    b.textContent=s.ready?s.label:(s.label+' · gray');
+    b.className=(s.ready?'':'gray')+(i===0?' active':'');
+    b.dataset.id=s.id;
+    b.onclick=function(){ activate(s.id); };
+    segs.appendChild(b);
+
+    var p=document.createElement('section');
+    p.className='panel'+(i===0?' show':'');
+    p.id='seg-'+s.id;
+    var html='<h2>'+s.label+'</h2><p class="who">'+s.who+'</p><div class="offers">';
+    s.offers.forEach(function(o){
+      var L=o.links.slice();
+      if(o.compose){
+        L.unshift({h:gmail(o.compose.su,o.compose.body),t:'Gmail compose',cls:'compose'});
+        L.push({h:mailto(o.compose.su,o.compose.body),t:'mailto',cls:'muted'});
+      }
+      html+='<article class="offer"><div class="tag">'+o.tag+'</div><h3>'+o.title+'</h3><p class="blurb">'+o.blurb+'</p><div class="price">'+o.price+' <span>· HTML > PDF</span></div>'+linksHtml(L)+'</article>';
+    });
+    html+='</div>';
+    p.innerHTML=html;
+    panels.appendChild(p);
+  });
+
+  function activate(id){
+    document.querySelectorAll('.segs button').forEach(function(b){
+      var on=b.dataset.id===id; b.classList.toggle('active',on);
+    });
+    document.querySelectorAll('.panel').forEach(function(p){ p.classList.toggle('show', p.id==='seg-'+id); });
+    if(history.replaceState) history.replaceState(null,'','#'+id);
+  }
+  var hid=(location.hash||'').replace(/^#/,'').split('&')[0];
+  if(hid && SEGMENTS.some(function(s){return s.id===hid;})) activate(hid);
+})();
+</script>
+<script src="shared/flow-spine.js" defer></script>
+</body></html>

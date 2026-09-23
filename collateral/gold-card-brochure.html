@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sheehan Homestead — Gold Critter Club Brochure</title>
+<style>
+@font-face {
+  font-family: "Great Vibes";
+  src: url("fonts/GreatVibes-Regular.ttf") format("truetype");
+  font-weight: 400; font-style: normal;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src: url("fonts/PlayfairDisplay-Variable.ttf") format("truetype");
+  font-weight: 400 900; font-style: normal;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src: url("fonts/PlayfairDisplay-Italic-Variable.ttf") format("truetype");
+  font-weight: 400 900; font-style: italic;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("fonts/SourceSans3-Variable.ttf") format("truetype");
+  font-weight: 200 900; font-style: normal;
+}
+@font-face {
+  font-family: "Cinzel";
+  src: url("fonts/Cinzel-Variable.ttf") format("truetype");
+  font-weight: 400 900; font-style: normal;
+}
+
+:root {
+  --sage: #4F6559;
+  --accent: #2F4F3E;
+  --cream: #F3EEE4;
+  --gold: #D4B45A;
+  --gold-deep: #B8923A;
+  --gold-light: #E8D48C;
+  --ink: #1a241c;
+  --muted: rgba(26,36,28,0.62);
+  --line: rgba(47,79,62,0.16);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: "Source Sans 3", "Liberation Sans", sans-serif;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+@page { size: 8.5in 11in; margin: 0; }
+
+.page {
+  width: 8.5in;
+  height: 11in;
+  background: var(--cream);
+  position: relative;
+  overflow: hidden;
+  page-break-after: always;
+  break-after: page;
+  display: flex;
+  flex-direction: column;
+}
+.page:last-child { page-break-after: auto; break-after: auto; }
+
+/* ===== PAGE 1 — COVER ===== */
+.cover {
+  background:
+    radial-gradient(ellipse at 85% 12%, rgba(212,180,90,0.28) 0%, transparent 42%),
+    radial-gradient(ellipse at 8% 90%, rgba(79,101,89,0.18) 0%, transparent 45%),
+    linear-gradient(180deg, #F7F2E8 0%, var(--cream) 55%, #EDE6D8 100%);
+}
+
+.goat-banner {
+  flex: 0 0 auto;
+  background: var(--accent);
+  text-align: center;
+  padding: 0.08in 0.3in 0.075in;
+  border-bottom: 2.5px solid var(--gold);
+  font-size: 8.5pt;
+  font-weight: 750;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  line-height: 1.25;
+}
+.goat-banner .phone {
+  font-size: 8.5pt;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.92);
+  text-transform: none;
+  margin-left: 0.1in;
+}
+
+.cover-main {
+  flex: 1 1 auto;
+  padding: 0.28in 0.48in 0.18in;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  gap: 0.14in;
+}
+
+.cover-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.2in;
+}
+.cover-kicker {
+  font-family: "Cinzel", serif;
+  font-size: 8pt;
+  letter-spacing: 0.22em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 0.05in;
+}
+.cover-header h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 34pt;
+  line-height: 0.98;
+  color: var(--accent);
+  letter-spacing: -0.02em;
+}
+.cover-header h1 .gold {
+  color: var(--gold-deep);
+}
+.cover-script {
+  font-family: "Great Vibes", cursive;
+  font-size: 20pt;
+  color: var(--sage);
+  margin-top: 0.02in;
+}
+.logo img {
+  width: 1.2in;
+  height: auto;
+  display: block;
+}
+
+.pitch-band {
+  background: var(--accent);
+  color: #fff;
+  border-radius: 10px;
+  padding: 0.14in 0.22in;
+  text-align: center;
+  border: 1.5px solid var(--gold);
+  box-shadow: 0 6px 18px rgba(47,79,62,0.18);
+}
+.pitch-band .eyebrow {
+  font-size: 7.5pt;
+  font-weight: 750;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.04in;
+}
+.pitch-band .line {
+  font-family: "Playfair Display", serif;
+  font-size: 16.5pt;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.25;
+  color: #F5E6B8;
+}
+
+.card-hero {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  padding: 0.06in 0;
+}
+.card-hero img {
+  width: 6.6in;
+  max-height: 4.2in;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  border-radius: 12px;
+  box-shadow:
+    0 16px 36px rgba(26,36,28,0.22),
+    0 0 0 1px rgba(212,180,90,0.45);
+}
+
+.price-row {
+  display: grid;
+  grid-template-columns: 1.35in 1fr;
+  gap: 0.14in;
+  align-items: stretch;
+}
+.price-seal {
+  background:
+    linear-gradient(145deg, #E8D48C 0%, var(--gold) 45%, var(--gold-deep) 100%);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.12in 0.08in;
+  color: var(--accent);
+  box-shadow: 0 4px 12px rgba(184,146,58,0.3);
+}
+.price-seal .amt {
+  font-family: "Playfair Display", serif;
+  font-size: 36pt;
+  font-weight: 700;
+  line-height: 0.9;
+}
+.price-seal .lbl {
+  margin-top: 0.04in;
+  font-size: 8pt;
+  font-weight: 750;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.perk-strip {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.1in;
+}
+.perk-pill {
+  background: #fff;
+  border: 1px solid rgba(47,79,62,0.16);
+  border-top: 3px solid var(--gold);
+  border-radius: 8px;
+  padding: 0.1in 0.1in 0.11in;
+  text-align: center;
+}
+.perk-pill .big {
+  font-family: "Playfair Display", serif;
+  font-size: 22pt;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+.perk-pill .sub {
+  margin-top: 0.03in;
+  font-size: 8.5pt;
+  font-weight: 650;
+  color: var(--sage);
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+.cover-footer {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.1in 0.48in 0.16in;
+  font-size: 8pt;
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(47,79,62,0.55);
+}
+.cover-footer .chip {
+  border: 1px solid rgba(47,79,62,0.28);
+  border-radius: 999px;
+  padding: 0.035in 0.12in;
+  color: var(--accent);
+}
+
+/* ===== PAGE 2 — DETAILS ===== */
+.inside .goat-banner { /* shared */ }
+
+.inside-main {
+  flex: 1 1 auto;
+  padding: 0.2in 0.46in 0.1in;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  gap: 0.14in;
+}
+
+.inside-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.2in;
+  padding-bottom: 0.1in;
+  border-bottom: 1.5px solid rgba(47,79,62,0.18);
+}
+.inside-header h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 650;
+  font-size: 22pt;
+  line-height: 1.05;
+  color: var(--accent);
+}
+.inside-header .sub {
+  margin-top: 0.04in;
+  font-size: 10pt;
+  color: var(--muted);
+  max-width: 5.2in;
+  line-height: 1.3;
+}
+
+.benefits {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.12in;
+}
+.benefit {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.12in 0.14in 0.13in;
+  position: relative;
+  overflow: hidden;
+}
+.benefit::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 4px;
+  background: var(--gold);
+}
+.benefit h3 {
+  font-size: 8pt;
+  font-weight: 750;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 0.04in;
+}
+.benefit .lead {
+  font-family: "Playfair Display", serif;
+  font-size: 16pt;
+  font-weight: 650;
+  color: var(--accent);
+  line-height: 1.15;
+}
+.benefit p {
+  margin-top: 0.04in;
+  font-size: 9.5pt;
+  color: var(--muted);
+  line-height: 1.3;
+}
+.benefit.wide { grid-column: 1 / -1; }
+.benefit .overall {
+  display: inline-block;
+  margin-top: 0.06in;
+  background: rgba(212,180,90,0.22);
+  border: 1px solid rgba(212,180,90,0.55);
+  border-radius: 999px;
+  padding: 0.03in 0.12in;
+  font-size: 8.5pt;
+  font-weight: 750;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+}
+
+.membership {
+  background: var(--accent);
+  color: #fff;
+  border-radius: 10px;
+  padding: 0.14in 0.18in 0.15in;
+  border: 1.5px solid var(--gold);
+}
+.membership h2 {
+  font-size: 8pt;
+  font-weight: 750;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.1in;
+}
+.mem-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.1in 0.14in;
+}
+.mem-item {
+  background: rgba(26,36,28,0.28);
+  border: 1px solid rgba(212,180,90,0.35);
+  border-radius: 7px;
+  padding: 0.09in 0.11in;
+}
+.mem-item .t {
+  font-size: 9.5pt;
+  font-weight: 700;
+  color: #F5E6B8;
+  margin-bottom: 0.02in;
+}
+.mem-item .d {
+  font-size: 9pt;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.3;
+}
+.mem-item strong { color: #fff; font-weight: 700; }
+
+.path-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.12in;
+}
+.path {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.12in 0.14in;
+}
+.path .tag {
+  display: inline-block;
+  font-size: 7.5pt;
+  font-weight: 750;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  background: rgba(212,180,90,0.18);
+  border-radius: 999px;
+  padding: 0.025in 0.1in;
+  margin-bottom: 0.06in;
+}
+.path h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 14pt;
+  font-weight: 650;
+  color: var(--accent);
+  line-height: 1.15;
+}
+.path p {
+  margin-top: 0.04in;
+  font-size: 9.5pt;
+  color: var(--muted);
+  line-height: 1.3;
+}
+
+.cta {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.2in;
+  background: linear-gradient(90deg, rgba(212,180,90,0.2), rgba(212,180,90,0.08));
+  border: 1px solid rgba(212,180,90,0.55);
+  border-radius: 8px;
+  padding: 0.11in 0.16in;
+}
+.cta .left {
+  font-size: 10.5pt;
+  color: var(--accent);
+  line-height: 1.3;
+}
+.cta .left strong {
+  font-family: "Playfair Display", serif;
+  font-size: 13pt;
+  font-weight: 650;
+}
+.cta .right {
+  text-align: right;
+  flex: 0 0 auto;
+}
+.cta .right .phone {
+  font-family: "Playfair Display", serif;
+  font-size: 16pt;
+  font-weight: 650;
+  color: var(--accent);
+  line-height: 1.1;
+}
+.cta .right .web {
+  font-size: 9.5pt;
+  font-weight: 650;
+  color: var(--sage);
+}
+
+.page-foot {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.08in 0.46in 0.14in;
+  font-size: 7.5pt;
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(47,79,62,0.5);
+}
+
+.say-strip {
+  background: #fff;
+  border: 1px solid rgba(47,79,62,0.16);
+  border-left: 4px solid var(--gold);
+  border-radius: 8px;
+  padding: 0.12in 0.16in;
+}
+.say-strip .say-lab {
+  font-size: 7.5pt;
+  font-weight: 750;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 0.04in;
+}
+.say-strip .say-line {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 11.5pt;
+  color: var(--accent);
+  line-height: 1.35;
+}
+
+.page-foot .chip {
+  border: 1px solid rgba(47,79,62,0.28);
+  border-radius: 999px;
+  padding: 0.03in 0.1in;
+  color: var(--accent);
+}
+</style>
+</head>
+<body>
+
+<!-- ========== PAGE 1: COVER ========== -->
+<div class="page cover">
+  <div class="goat-banner">
+    Text GOAT <span class="phone">914-263-1311</span>
+    &nbsp;·&nbsp; sheehanhomestead.com
+  </div>
+
+  <div class="cover-main">
+    <div class="cover-header">
+      <div>
+        <div class="cover-kicker">Consumer · Critter Club</div>
+        <h1>Gold <span class="gold">Critter Club</span></h1>
+        <div class="cover-script">Your farm family membership</div>
+      </div>
+      <div class="logo">
+        <img src="logo-wordmark.png" alt="Sheehan Homestead">
+      </div>
+    </div>
+
+    <div class="pitch-band">
+      <div class="eyebrow">Ask on every warm call</div>
+      <div class="line">“Did you know we have over 400 gold card members?”</div>
+    </div>
+
+    <div class="card-hero">
+      <img src="gold-card.jpg" alt="Gold Member Critter Club card">
+    </div>
+
+    <div class="price-row">
+      <div class="price-seal">
+        <div class="amt">$50</div>
+        <div class="lbl">Gold Card</div>
+      </div>
+      <div class="perk-strip">
+        <div class="perk-pill">
+          <div class="big">25%</div>
+          <div class="sub">off mobile<br>services</div>
+        </div>
+        <div class="perk-pill">
+          <div class="big">50%</div>
+          <div class="sub">off travel<br>~40% overall</div>
+        </div>
+        <div class="perk-pill">
+          <div class="big">Free</div>
+          <div class="sub">2-person ticket<br>+ $25 farm gift</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cover-footer">
+    <span>Sheehan Homestead · Critters On-Call</span>
+    <span class="chip">Gold Club · not Golden Ticket</span>
+    <span>Page 1 of 2</span>
+  </div>
+</div>
+
+<!-- ========== PAGE 2: INSIDE ========== -->
+<div class="page inside">
+  <div class="goat-banner">
+    Text GOAT <span class="phone">914-263-1311</span>
+    &nbsp;·&nbsp; sheehanhomestead.com
+  </div>
+
+  <div class="inside-main">
+    <div class="inside-header">
+      <div>
+        <div class="cover-kicker">What’s in it · how it works</div>
+        <h1>Gold Critter Club benefits</h1>
+        <div class="sub">Mom-friendly membership. BDR-ready talk track. Deposit applies to a future mobile invoice.</div>
+      </div>
+      <div class="logo">
+        <img src="logo-wordmark.png" alt="Sheehan Homestead">
+      </div>
+    </div>
+
+    <div class="benefits">
+      <div class="benefit">
+        <h3>Mobile services</h3>
+        <div class="lead">25% off</div>
+        <p>Backyard parties, mystery dates, and on-site critter visits.</p>
+      </div>
+      <div class="benefit">
+        <h3>Travel</h3>
+        <div class="lead">50% off</div>
+        <p>Cuts the distance fee — that’s where the savings stack.</p>
+      </div>
+      <div class="benefit wide">
+        <h3>Included with the $50 card</h3>
+        <div class="lead">Free 2-person farm ticket + $25 farm gift</div>
+        <p>Walk the farm, meet the animals, and leave with a gift credit — then use your Gold rate when you book mobile later.</p>
+        <span class="overall">Talk track: “around 40% off overall”</span>
+      </div>
+      <div class="benefit wide">
+        <h3>The sweet part</h3>
+        <div class="lead">Your $50 deposit applies to a future mobile invoice</div>
+        <p>Not a sunk fee — it rolls into the party when you’re ready.</p>
+      </div>
+    </div>
+
+    <div class="membership">
+      <h2>Membership reality · train this</h2>
+      <div class="mem-grid">
+        <div class="mem-item">
+          <div class="t">400+ members</div>
+          <div class="d">Lead with: <strong>“Did you know we have over 400 gold card members?”</strong></div>
+        </div>
+        <div class="mem-item">
+          <div class="t">Past customers</div>
+          <div class="d">Every past paying customer is an <strong>automatic</strong> gold member — mostly <strong>COMP’d</strong>.</div>
+        </div>
+        <div class="mem-item">
+          <div class="t">Charity / giving</div>
+          <div class="d">Also issued in some <strong>charity</strong> situations — strategic, not default.</div>
+        </div>
+        <div class="mem-item">
+          <div class="t">Not Golden Ticket</div>
+          <div class="d">This is <strong>consumer Gold Club</strong>. B2B partner ticket is a different card.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="path-row">
+      <div class="path">
+        <div class="tag">Know-date path</div>
+        <h3>Often COMP the Gold</h3>
+        <p>When a date is locked and they’re on the visit path — gold membership is frequently complimentary.</p>
+      </div>
+      <div class="path">
+        <div class="tag">No-date / new</div>
+        <h3>SELL the $50</h3>
+        <p>No date yet? Offer the card. Deposit credits later mobile — easy soft close after farm interest.</p>
+      </div>
+    </div>
+
+    
+    <div class="say-strip">
+      <div class="say-lab">Say this</div>
+      <div class="say-line">“The gold card usually works out to around forty percent off — twenty-five off mobile, fifty off travel. It comes with a free two-person farm ticket and a twenty-five dollar farm gift. And whatever you put down goes toward your mobile invoice.”</div>
+    </div>
+
+    <div class="cta">
+      <div class="left">
+        <strong>Ready for Gold?</strong><br>
+        Text GOAT · book farm or mobile · sheehanhomestead.com
+      </div>
+      <div class="right">
+        <div class="phone">914-263-1311</div>
+        <div class="web">sheehanhomestead.com</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-foot">
+    <span>Sheehan Homestead · Critters On-Call</span>
+    <span class="chip">Mom / BDR leave-behind</span>
+    <span>Page 2 of 2</span>
+  </div>
+</div>
+
+</body>
+</html>

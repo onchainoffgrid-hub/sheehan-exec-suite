@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sheehan Homestead — Violet · PTA / Indie / Church</title>
+<style>
+
+@font-face {
+  font-family: "Great Vibes";
+  src: url("fonts/GreatVibes-Regular.ttf") format("truetype");
+  font-weight: 400; font-style: normal;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src: url("fonts/PlayfairDisplay-Variable.ttf") format("truetype");
+  font-weight: 400 900; font-style: normal;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src: url("fonts/PlayfairDisplay-Italic-Variable.ttf") format("truetype");
+  font-weight: 400 900; font-style: italic;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("fonts/SourceSans3-Variable.ttf") format("truetype");
+  font-weight: 200 900; font-style: normal;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("fonts/SourceSans3-Italic-Variable.ttf") format("truetype");
+  font-weight: 200 900; font-style: italic;
+}
+@font-face {
+  font-family: "Cinzel";
+  src: url("fonts/Cinzel-Variable.ttf") format("truetype");
+  font-weight: 400 900; font-style: normal;
+}
+
+
+:root {
+  --sage: #4F6559;
+  --accent: #2F4F3E;
+  --cream: #F3EEE4;
+  --gold: #D4B45A;
+  --gold-deep: #B8923A;
+  --white: #FFFFFF;
+  --ink: #1a241c;
+  --muted: rgba(255,255,255,0.78);
+  --line: rgba(255,255,255,0.18);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  width: 8.5in; height: 11in;
+  background: var(--sage); color: var(--white);
+  font-family: "Source Sans 3", "Liberation Sans", sans-serif;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+@page { size: 8.5in 11in; margin: 0; }
+.page {
+  width: 8.5in; height: 11in; background: var(--sage);
+  display: flex; flex-direction: column; overflow: hidden; position: relative;
+}
+.goat-banner {
+  flex: 0 0 auto; background: var(--accent);
+  text-align: center; padding: 0.07in 0.3in 0.065in;
+  border-bottom: 1px solid rgba(212,180,90,0.4);
+  font-size: 8.5pt; font-weight: 750; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--gold); line-height: 1.25;
+}
+.goat-banner .phone {
+  font-size: 8.5pt; font-weight: 650; letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.9); text-transform: none; margin-left: 0.08in;
+}
+.main {
+  flex: 1 1 auto; padding: 0.2in 0.42in 0.1in;
+  display: flex; flex-direction: column; min-height: 0; gap: 0.11in;
+}
+.header {
+  display: flex; justify-content: space-between; align-items: flex-start; gap: 0.22in;
+}
+.kicker {
+  font-size: 8pt; letter-spacing: 0.16em; font-weight: 650;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 0.05in;
+}
+.kicker .chip {
+  display: inline-block; border: 1px solid rgba(212,180,90,0.65);
+  border-radius: 999px; padding: 0.02in 0.1in; margin-right: 0.06in;
+  font-size: 7pt; letter-spacing: 0.12em;
+}
+h1 {
+  font-family: "Playfair Display", serif; font-weight: 600;
+  font-size: 26pt; line-height: 1.05; letter-spacing: -0.015em; max-width: 5.5in;
+}
+.sub {
+  margin-top: 0.05in; font-size: 11pt; font-style: italic;
+  color: var(--muted); max-width: 5.3in; line-height: 1.3;
+}
+.logo { flex: 0 0 1.2in; width: 1.2in; text-align: center; }
+.logo img { width: 1.16in; height: auto; display: block; margin: 0 auto; }
+.violet-seal {
+  margin-top: 0.06in; border: 1px solid rgba(212,180,90,0.55);
+  border-radius: 6px; background: rgba(47,79,62,0.45);
+  padding: 0.05in 0.06in; text-align: center;
+}
+.violet-seal img { width: 1.05in; height: auto; display: block; margin: 0 auto 0.03in; border-radius: 4px; }
+.violet-seal .vl {
+  font-size: 6.5pt; font-weight: 750; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--gold);
+}
+h2 {
+  font-size: 7.5pt; font-weight: 750; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 0.06in;
+}
+.who-row {
+  display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.09in;
+}
+.who {
+  background: rgba(47,79,62,0.38); border: 1px solid rgba(212,180,90,0.45);
+  border-radius: 6px; padding: 0.08in 0.1in 0.09in;
+}
+.who .wt { font-size: 11pt; font-weight: 750; line-height: 1.15; }
+.who .ws { margin-top: 0.02in; font-size: 8.5pt; color: var(--muted); line-height: 1.25; }
+.who.charity { border-color: var(--gold); background: rgba(47,79,62,0.55); }
+.body {
+  display: grid; grid-template-columns: 1fr 2.35in; gap: 0.2in;
+  flex: 1 1 auto; min-height: 0; align-items: stretch;
+}
+.left { display: flex; flex-direction: column; gap: 0.1in; min-height: 0; }
+.paths {
+  display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.08in;
+}
+.path {
+  border: 1.25px solid rgba(255,255,255,0.28); border-radius: 7px;
+  padding: 0.09in 0.1in 0.1in; background: rgba(47,79,62,0.32);
+}
+.path.feat { border-color: var(--gold); background: rgba(47,79,62,0.52); }
+.path .sku {
+  font-size: 7pt; font-weight: 750; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 0.03in;
+}
+.path .name { font-size: 12pt; font-weight: 750; line-height: 1.15; }
+.path .meta { margin-top: 0.03in; font-size: 8.5pt; color: var(--muted); line-height: 1.3; }
+.path .amt {
+  font-family: "Playfair Display", serif; font-weight: 600;
+  font-size: 16pt; color: var(--gold); line-height: 1; margin-top: 0.04in;
+}
+.floor-box {
+  border: 1.25px solid rgba(212,180,90,0.7); border-radius: 6px;
+  background: rgba(47,79,62,0.45); padding: 0.09in 0.12in 0.1in;
+  display: grid; grid-template-columns: 0.95in 1fr; gap: 0.1in; align-items: center;
+}
+.floor-box .amt {
+  font-family: "Playfair Display", serif; font-weight: 600;
+  font-size: 22pt; color: var(--gold); line-height: 1;
+}
+.floor-box .sku {
+  font-size: 7pt; font-weight: 750; letter-spacing: 0.1em;
+  text-transform: uppercase; color: rgba(212,180,90,0.85); margin-bottom: 0.02in;
+}
+.floor-box .txt { font-size: 9.5pt; color: var(--muted); line-height: 1.35; }
+.floor-box .txt strong { color: var(--white); font-weight: 700; }
+.two-col {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0.09in;
+}
+.panel {
+  border: 1px solid rgba(255,255,255,0.22); border-radius: 6px;
+  background: rgba(47,79,62,0.28); padding: 0.08in 0.1in 0.09in;
+}
+.panel .pl {
+  font-size: 7pt; font-weight: 750; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 0.04in;
+}
+.panel p { font-size: 9pt; color: var(--muted); line-height: 1.3; }
+.panel p strong { color: var(--white); }
+.panel .sku { color: var(--gold); font-weight: 700; }
+.anchors {
+  border: 1px solid rgba(255,255,255,0.18); border-radius: 6px;
+  background: rgba(47,79,62,0.18); padding: 0.07in 0.1in 0.08in;
+}
+.anchors .al {
+  font-size: 7pt; font-weight: 750; letter-spacing: 0.12em;
+  text-transform: uppercase; color: rgba(212,180,90,0.75); margin-bottom: 0.04in;
+}
+.anchor-row {
+  display: flex; flex-wrap: wrap; gap: 0.06in 0.18in; align-items: baseline;
+  font-size: 9.5pt; color: var(--muted); line-height: 1.3;
+}
+.anchor-row .item strong { color: var(--white); font-weight: 700; }
+.anchor-row .code { color: var(--gold); font-weight: 700; font-size: 8.5pt; }
+.bundle {
+  border-top: 1px solid rgba(255,255,255,0.16); padding-top: 0.07in;
+  font-size: 9.5pt; color: var(--muted); line-height: 1.35;
+}
+.bundle strong { color: var(--white); }
+.visual { display: flex; flex-direction: column; gap: 0.08in; }
+.photo-frame {
+  background: var(--cream); border-radius: 8px; padding: 0.05in;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.16);
+}
+.photo-wrap {
+  height: 2.55in; overflow: hidden; border-radius: 5px; background: var(--sage);
+}
+.photo-wrap img {
+  width: 120%; max-width: none; height: 120%; object-fit: cover;
+  object-position: center 40%; display: block; margin: -8% 0 0 -10%;
+}
+.caption {
+  color: var(--cream); font-size: 7.5pt; font-weight: 600;
+  letter-spacing: 0.06em; text-align: center; text-transform: uppercase;
+  margin-top: 0.04in;
+}
+.mini-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.06in; }
+.mini-frame {
+  background: var(--cream); border-radius: 6px; padding: 0.035in;
+}
+.mini-wrap { height: 1.15in; overflow: hidden; border-radius: 4px; }
+.mini-wrap img {
+  width: 130%; height: 130%; object-fit: cover; object-position: center 35%;
+  display: block; margin: -12% 0 0 -15%;
+}
+.side-note {
+  border: 1px solid rgba(212,180,90,0.55); border-radius: 6px;
+  background: rgba(47,79,62,0.4); padding: 0.08in 0.1in 0.09in;
+}
+.side-note .sl {
+  font-size: 7pt; font-weight: 750; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 0.04in;
+}
+.side-note p { font-size: 9pt; color: var(--muted); line-height: 1.3; }
+.side-note p strong { color: var(--white); }
+.footer {
+  flex: 0 0 auto; background: var(--accent);
+  padding: 0.11in 0.36in 0.11in 0.42in;
+  display: grid; grid-template-columns: 1fr auto auto; gap: 0.14in; align-items: center;
+}
+.cta-kicker {
+  font-size: 7pt; letter-spacing: 0.14em; text-transform: uppercase;
+  font-weight: 750; color: var(--gold); margin-bottom: 0.03in;
+}
+.phone-lg {
+  font-family: "Playfair Display", serif; font-size: 15pt; font-weight: 600; line-height: 1.1;
+}
+.contacts { font-size: 9pt; margin-top: 0.03in; color: rgba(255,255,255,0.9); }
+.badge {
+  background: #fff; color: #1a1a1a; border-radius: 6px;
+  padding: 0.07in 0.11in 0.08in; text-align: center; min-width: 1.35in;
+}
+.badge .b-name {
+  font-family: "Great Vibes", cursive; font-size: 12pt; line-height: 1; color: var(--accent);
+}
+.badge .stars { color: #C9A227; font-size: 9pt; letter-spacing: 0.04em; margin-top: 0.01in; }
+.badge .b-meta { font-size: 6.5pt; font-weight: 650; color: #333; }
+.qr-pad {
+  width: 0.95in; height: 0.95in; background: #fff; border-radius: 7px;
+  padding: 0.05in 0.05in 0.04in; display: flex; flex-direction: column;
+  align-items: stretch; justify-content: flex-start;
+}
+.qr-slot {
+  flex: 1 1 auto; min-height: 0; border: 1.25px dashed rgba(47,79,62,0.42);
+  border-radius: 4px; background: #fff;
+}
+.qr-cap {
+  flex: 0 0 auto; font-size: 5.5pt; font-weight: 700; color: var(--accent);
+  margin-top: 0.025in; letter-spacing: 0.02em; text-align: center;
+  line-height: 1; text-transform: uppercase;
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="goat-banner">Text GOAT for discounts <span class="phone">914-263-1311</span></div>
+  <div class="main">
+    <div class="header">
+      <div>
+        <div class="kicker">
+          <span class="chip">Violet</span>
+          PTA &nbsp;·&nbsp; Indie schools &nbsp;·&nbsp; Churches
+        </div>
+        <h1>Donation-class nights that still feel fair</h1>
+        <p class="sub">Start at a 50% donation feel — then pick the path that fits your board, your parents, and your cause.</p>
+      </div>
+      <div class="logo">
+        <img src="logo-wordmark.png" alt="Sheehan Homestead">
+        <div class="violet-seal">
+          <img src="violet-card.jpg" alt="Violet card">
+          <div class="vl">Violet posture</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h2>Who this is for</h2>
+      <div class="who-row">
+        <div class="who">
+          <div class="wt">PTA / PTO</div>
+          <div class="ws">In-between — fundraise, sponsor, or split the night with parents.</div>
+        </div>
+        <div class="who">
+          <div class="wt">Indie schools</div>
+          <div class="ws">In-between — school-funded, class fee, or partial donate.</div>
+        </div>
+        <div class="who charity">
+          <div class="wt">Churches</div>
+          <div class="ws">Charity lane — Violet donation posture for the right cause.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="body">
+      <div class="left">
+        <div>
+          <h2>Three paths · V-50 start</h2>
+          <div class="paths">
+            <div class="path feat">
+              <div class="sku">V-50 · funded</div>
+              <div class="name">Funded</div>
+              <div class="meta">School, church, or sponsor covers the visit. Cleanest for the board.</div>
+              <div class="amt">Full cover</div>
+            </div>
+            <div class="path">
+              <div class="sku">V-2PP</div>
+              <div class="name">$2 / person</div>
+              <div class="meta">Class or congregation fundraises the fee. Easy parent ask.</div>
+              <div class="amt">$2 pp</div>
+            </div>
+            <div class="path">
+              <div class="sku">Partial</div>
+              <div class="name">Partial donate</div>
+              <div class="meta">Split the difference — donation credit + cash that fits the cause.</div>
+              <div class="amt">Split</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="floor-box">
+          <div>
+            <div class="sku">V-FLOOR</div>
+            <div class="amt">~$400</div>
+          </div>
+          <div class="txt">
+            <strong>Big or far nights</strong> — floor ~$400 (≥2× labor). We don’t habit-discount below this on large / distant Violet events.
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div class="panel">
+            <div class="pl">Auction gift · point here</div>
+            <p><span class="sku">V-AUC100</span> · Critter Club auction card — <strong>$100</strong> suggested retail / bid-up. Gifted for silent auctions.</p>
+          </div>
+          <div class="panel">
+            <div class="pl">List anchors · quiet</div>
+            <p>Before Violet: <span class="sku">B-SPZ3</span> <strong>$1,049</strong> · <span class="sku">B-SPZ2</span> <strong>$749</strong>. Use as list — not a printed close number.</p>
+          </div>
+        </div>
+
+        <div class="anchors">
+          <div class="al">How we talk about it</div>
+          <div class="anchor-row">
+            <div class="item"><span class="code">V-50</span> · start at <strong>50% donation feel</strong></div>
+            <div class="item">Churches = <strong>charity</strong></div>
+            <div class="item">PTA / indie = <strong>in-between</strong></div>
+          </div>
+        </div>
+
+        <p class="bundle"><strong>Every Violet booking includes the bundle:</strong> petting zoo + <strong>STEM leave-behind</strong> (Ann-Marie) — Critters On-Call with a classroom takeaway.</p>
+      </div>
+
+      <div class="visual">
+        <div class="photo-frame">
+          <div class="photo-wrap">
+            <img src="pta-fall-festival-cartoon.jpg" alt="PTA fall festival petting zoo">
+          </div>
+          <div class="caption">PTA · fall festival &amp; trunk-or-treat</div>
+        </div>
+        <div class="mini-row">
+          <div class="mini-frame">
+            <div class="mini-wrap">
+              <img src="faith-school-cartoon.jpg" alt="Faith school festival">
+            </div>
+          </div>
+          <div class="mini-frame">
+            <div class="mini-wrap">
+              <img src="independent-school-cartoon.jpg" alt="Independent school festival">
+            </div>
+          </div>
+        </div>
+        <div class="side-note">
+          <div class="sl">Next step</div>
+          <p>Text <strong>GOAT</strong> · say Violet, PTA, church, or indie.</p>
+          <p style="margin-top:0.035in;"><strong>914-263-1311</strong><br>sheehanhomestead.com</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div>
+      <div class="cta-kicker">Violet · Callahan, FL · Critters On-Call</div>
+      <div class="phone-lg">Call or text 914-263-1311</div>
+      <div class="contacts">sheehanhomestead.com &nbsp;·&nbsp; Text GOAT for discounts</div>
+    </div>
+    <div class="badge">
+      <div class="b-name">Sheehan Homestead</div>
+      <div class="stars">★★★★★</div>
+      <div class="b-meta">5.0 · Google reviews</div>
+    </div>
+    <div class="qr-pad" aria-label="QR drop zone">
+      <div class="qr-slot"></div>
+      <div class="qr-cap">QR — drop yours here</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

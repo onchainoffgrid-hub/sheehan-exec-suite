@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sheehan Homestead — Mobile Petting Zoo · Weekday &amp; Weekend</title>
+<style>
+@font-face {
+  font-family: "Great Vibes";
+  src: url("fonts/GreatVibes-Regular.ttf") format("truetype");
+  font-weight: 400; font-style: normal;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src: url("fonts/PlayfairDisplay-Variable.ttf") format("truetype");
+  font-weight: 400 900; font-style: normal;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src: url("fonts/PlayfairDisplay-Italic-Variable.ttf") format("truetype");
+  font-weight: 400 900; font-style: italic;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("fonts/SourceSans3-Variable.ttf") format("truetype");
+  font-weight: 200 900; font-style: normal;
+}
+@font-face {
+  font-family: "Cinzel";
+  src: url("fonts/Cinzel-Variable.ttf") format("truetype");
+  font-weight: 400 900; font-style: normal;
+}
+
+:root {
+  --sage: #4F6559;
+  --accent: #2F4F3E;
+  --cream: #F3EEE4;
+  --gold: #D4B45A;
+  --white: #FFFFFF;
+  --muted: rgba(255,255,255,0.78);
+  --line: rgba(255,255,255,0.18);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  width: 8.5in; height: 11in;
+  background: var(--sage); color: var(--white);
+  font-family: "Source Sans 3", "Liberation Sans", sans-serif;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+@page { size: 8.5in 11in; margin: 0; }
+.page {
+  width: 8.5in; height: 11in; background: var(--sage);
+  display: flex; flex-direction: column; overflow: hidden; position: relative;
+}
+.goat-banner {
+  flex: 0 0 auto; background: var(--accent);
+  text-align: center; padding: 0.07in 0.3in 0.065in;
+  border-bottom: 1px solid rgba(212,180,90,0.4);
+  font-size: 8.5pt; font-weight: 750; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--gold); line-height: 1.25;
+}
+.goat-banner .phone {
+  font-size: 8.5pt; font-weight: 650; letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.9); text-transform: none; margin-left: 0.08in;
+}
+.main {
+  flex: 1 1 auto; padding: 0.24in 0.48in 0.14in;
+  display: flex; flex-direction: column; min-height: 0; gap: 0.14in;
+}
+.header {
+  display: flex; justify-content: space-between; align-items: flex-start; gap: 0.28in;
+}
+.kicker {
+  font-size: 8.5pt; letter-spacing: 0.2em; font-weight: 600;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 0.08in;
+}
+h1 {
+  font-family: "Playfair Display", serif; font-weight: 600;
+  font-size: 26pt; line-height: 1.06; letter-spacing: -0.015em; max-width: 5.6in;
+}
+.sub {
+  margin-top: 0.08in; font-size: 11.5pt; font-style: italic;
+  color: var(--muted); max-width: 5.3in; line-height: 1.35;
+}
+.logo { flex: 0 0 1.3in; width: 1.3in; padding-top: 0.02in; }
+.logo img { width: 1.26in; height: auto; display: block; margin: 0 auto; }
+
+.body {
+  display: grid; grid-template-columns: 1fr 2.55in; gap: 0.28in;
+  flex: 1 1 auto; min-height: 0; align-items: stretch;
+}
+.left { display: flex; flex-direction: column; gap: 0.12in; min-height: 0; }
+
+h2 {
+  font-size: 8pt; font-weight: 750; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 0.08in;
+}
+
+.ladder-card {
+  background: rgba(47,79,62,0.42);
+  border: 1.25px solid rgba(212,180,90,0.55);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.ladder-head {
+  display: grid; grid-template-columns: 1fr 0.95in 0.95in;
+  background: rgba(47,79,62,0.55);
+  border-bottom: 1px solid rgba(212,180,90,0.45);
+  padding: 0.07in 0.12in;
+  font-size: 7pt; font-weight: 750; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--gold);
+}
+.ladder-head .r { text-align: right; }
+.ladder-head .we { color: #E8D48A; }
+.row {
+  display: grid; grid-template-columns: 1fr 0.95in 0.95in;
+  padding: 0.09in 0.12in;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  align-items: center;
+}
+.row:last-child { border-bottom: none; }
+.row.feat { background: rgba(47,79,62,0.35); }
+.row .name { font-size: 12pt; font-weight: 750; line-height: 1.15; }
+.row .meta { font-size: 8.5pt; color: var(--muted); margin-top: 0.015in; line-height: 1.25; }
+.row .p {
+  font-family: "Playfair Display", serif; font-weight: 600;
+  font-size: 15pt; color: var(--gold); text-align: right; line-height: 1;
+}
+.row .p.we { color: #E8D48A; }
+
+.add-on {
+  padding: 0.09in 0.13in 0.1in;
+  border-left: 2.5px solid var(--gold);
+  background: rgba(47,79,62,0.32);
+  border-radius: 0 6px 6px 0;
+}
+.add-on .an { font-size: 11pt; font-weight: 750; line-height: 1.2; }
+.add-on .an em { font-style: normal; color: var(--gold); }
+.add-on .ad { font-size: 9pt; color: var(--muted); line-height: 1.3; margin-top: 0.02in; }
+
+.checkout {
+  background: rgba(47,79,62,0.46);
+  border: 1px solid rgba(212,180,90,0.5);
+  border-radius: 6px;
+  padding: 0.1in 0.13in 0.11in;
+}
+.checkout .cl {
+  font-size: 7.5pt; font-weight: 750; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 0.05in;
+}
+.checkout p { font-size: 10pt; font-weight: 600; line-height: 1.35; }
+.checkout p + p { margin-top: 0.04in; }
+.checkout .gold { color: var(--gold); font-weight: 750; }
+.checkout span { color: var(--muted); font-weight: 500; }
+
+.why { display: flex; flex-direction: column; gap: 0.07in; }
+.why h3 { font-size: 11pt; font-weight: 700; margin-bottom: 0.01in; }
+.why p { font-size: 9.5pt; line-height: 1.3; color: var(--muted); }
+
+.visual { display: flex; flex-direction: column; gap: 0.1in; }
+.photo-frame {
+  background: var(--cream); border-radius: 8px; padding: 0.055in;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.16);
+}
+.photo-wrap {
+  height: 2.55in; overflow: hidden; border-radius: 5px; background: #fff;
+}
+.photo-wrap img {
+  width: 100%; height: 100%; object-fit: contain; object-position: center 55%; display: block;
+}
+.caption {
+  color: var(--cream); font-size: 8pt; font-weight: 600;
+  letter-spacing: 0.06em; text-align: center; text-transform: uppercase;
+}
+.side-note {
+  background: rgba(47,79,62,0.4);
+  border: 1px solid rgba(212,180,90,0.45);
+  border-radius: 6px;
+  padding: 0.1in 0.12in 0.11in;
+  flex: 1 1 auto;
+}
+.side-note .sl {
+  font-size: 7.5pt; font-weight: 750; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 0.05in;
+}
+.side-note p { font-size: 9.5pt; font-weight: 600; line-height: 1.35; }
+.side-note p + p { margin-top: 0.05in; }
+.side-note span { color: var(--muted); font-weight: 500; }
+
+.proof {
+  flex: 0 0 auto; padding-top: 0.04in;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  display: flex; justify-content: space-between; align-items: flex-end; gap: 0.2in;
+}
+.proof-line { font-size: 10pt; line-height: 1.35; color: var(--muted); font-style: italic; }
+.proof-gold {
+  margin-top: 0.04in; font-size: 9.5pt; font-weight: 650;
+  color: var(--gold); line-height: 1.3;
+}
+.panel-chip {
+  flex: 0 0 auto; font-size: 7pt; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--gold);
+  border: 1px solid rgba(212,180,90,0.65); border-radius: 999px;
+  padding: 0.05in 0.12in 0.045in; white-space: nowrap;
+}
+
+.footer {
+  flex: 0 0 auto; background: var(--accent);
+  padding: 0.12in 0.4in 0.12in 0.48in;
+  display: grid; grid-template-columns: 1fr auto auto; gap: 0.16in; align-items: center;
+}
+.cta-kicker {
+  font-size: 7.5pt; letter-spacing: 0.14em; text-transform: uppercase;
+  font-weight: 750; color: var(--gold); margin-bottom: 0.04in;
+}
+.phone-lg {
+  font-family: "Playfair Display", serif; font-size: 16pt; font-weight: 600; line-height: 1.1;
+}
+.contacts { font-size: 9.5pt; margin-top: 0.04in; color: rgba(255,255,255,0.9); }
+.badge {
+  background: #fff; color: #1a1a1a; border-radius: 6px;
+  padding: 0.08in 0.13in 0.09in; text-align: center; min-width: 1.5in;
+}
+.badge .b-name {
+  font-family: "Great Vibes", cursive; font-size: 13.5pt; line-height: 1; color: var(--accent);
+}
+.badge .stars { color: #C9A227; font-size: 10.5pt; margin-top: 0.015in; }
+.badge .b-meta { font-size: 7.2pt; font-weight: 650; color: #333; }
+.qr-pad {
+  width: 1.05in; height: 1.05in; background: #fff; border-radius: 7px;
+  padding: 0.065in 0.065in 0.05in; display: flex; flex-direction: column;
+}
+.qr-slot {
+  flex: 1 1 auto; min-height: 0;
+  border: 1.25px dashed rgba(47,79,62,0.42); border-radius: 4px; background: #fff;
+}
+.qr-cap {
+  flex: 0 0 auto; font-size: 6pt; font-weight: 700; color: var(--accent);
+  margin-top: 0.035in; text-align: center; text-transform: uppercase; line-height: 1;
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="goat-banner">Text GOAT for discounts <span class="phone">914-263-1311</span></div>
+  <div class="main">
+    <div class="header">
+      <div>
+        <div class="kicker">Mobile &nbsp;·&nbsp; Backyard petting zoo</div>
+        <h1>Bunny, Mini, or Standard</h1>
+        <p class="sub">We come to you. Weekday &amp; weekend rates. Travel is always a line item. Step Up LIVE.</p>
+      </div>
+      <div class="logo">
+        <img src="logo-wordmark.png" alt="Sheehan Homestead">
+      </div>
+    </div>
+
+    <div class="body">
+      <div class="left">
+        <div>
+          <h2>Pick your zoo</h2>
+          <div class="ladder-card">
+            <div class="ladder-head">
+              <div>Package</div>
+              <div class="r">Weekday</div>
+              <div class="r we">Weekend</div>
+            </div>
+            <div class="row feat">
+              <div>
+                <div class="name">Bunny Haven</div>
+                <div class="meta">60 min · bunnies, goats &amp; friends</div>
+              </div>
+              <div class="p">$150</div>
+              <div class="p we">$235</div>
+            </div>
+            <div class="row">
+              <div>
+                <div class="name">Mini</div>
+                <div class="meta">75 min · ≥6 animals</div>
+              </div>
+              <div class="p">$299</div>
+              <div class="p we">$359</div>
+            </div>
+            <div class="row">
+              <div>
+                <div class="name">Standard</div>
+                <div class="meta">90 min · full backyard package</div>
+              </div>
+              <div class="p">$359</div>
+              <div class="p we">$549</div>
+            </div>
+            <div class="row">
+              <div>
+                <div class="name">Standard + Full Side</div>
+                <div class="meta">Extra critters for a bigger party</div>
+              </div>
+              <div class="p">$499</div>
+              <div class="p we">$699</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="add-on">
+          <div class="an">Full Side add-on &nbsp;<em>$150</em></div>
+          <div class="ad">Add more animals to your Standard visit. Travel always quoted separately.</div>
+        </div>
+
+        <div class="checkout">
+          <div class="cl">Book it</div>
+          <p>Travel from Callahan is <strong>always a line item</strong> — quoted before you book.</p>
+          <p>Text <span class="gold">GOAT</span> to 914-263-1311 — or scan to book.</p>
+          <p><span>Step Up LIVE on mobile.</span></p>
+        </div>
+
+        <div>
+          <h2>Why families book us</h2>
+          <div class="why">
+            <div>
+              <h3>Birthday-ready</h3>
+              <p>The backyard party your kid will talk about.</p>
+            </div>
+            <div>
+              <h3>Your yard — we bring the animals</h3>
+              <p>Quick setup. You host. We pack it out.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="visual">
+        <div class="photo-frame">
+          <div class="photo-wrap">
+            <img src="mobile-backyard-cartoon.jpg" alt="Mom, kids, and a handler with goats, bunnies, and chickens in the backyard">
+          </div>
+        </div>
+        <div class="caption">Mobile petting zoo — we come to you</div>
+        <div class="side-note">
+          <div class="sl">Travel · Callahan</div>
+          <p>Travel always quoted from Callahan <strong>before you book</strong>.</p>
+          <p><span>Gold $50 · deposit toward your mobile visit. Then text GOAT to book.</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="proof">
+      <div>
+        <p class="proof-line">Already bringing the farm to backyards across Metro Jax.</p>
+        <p class="proof-gold">Text GOAT to 914-263-1311 for discounts &amp; booking help</p>
+      </div>
+      <div class="panel-chip">Mobile · Family</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div>
+      <div class="cta-kicker">Book a date — Callahan, FL &amp; Metro Jax</div>
+      <div class="phone-lg">Call or text 914-263-1311</div>
+      <div class="contacts">sheehanhomestead.com &nbsp;·&nbsp; Text GOAT for discounts</div>
+    </div>
+    <div class="badge">
+      <div class="b-name">Sheehan Homestead</div>
+      <div class="stars">★★★★★</div>
+      <div class="b-meta">5.0 &nbsp;·&nbsp; Google reviews</div>
+    </div>
+    <div class="qr-pad" aria-label="Scan to book">
+      <div class="qr-slot"></div>
+      <div class="qr-cap">Scan to book</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

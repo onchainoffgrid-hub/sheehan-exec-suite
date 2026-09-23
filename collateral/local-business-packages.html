@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sheehan Homestead — Local Partner Packages · Steadshout</title>
+<style>
+@font-face {
+  font-family: "Playfair Display";
+  src: url("fonts/PlayfairDisplay-Variable.ttf") format("truetype");
+  font-weight: 400 900; font-style: normal;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src: url("fonts/PlayfairDisplay-Italic-Variable.ttf") format("truetype");
+  font-weight: 400 900; font-style: italic;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("fonts/SourceSans3-Variable.ttf") format("truetype");
+  font-weight: 200 900; font-style: normal;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("fonts/SourceSans3-Italic-Variable.ttf") format("truetype");
+  font-weight: 200 900; font-style: italic;
+}
+@font-face {
+  font-family: "Cinzel";
+  src: url("fonts/Cinzel-Variable.ttf") format("truetype");
+  font-weight: 400 900; font-style: normal;
+}
+
+:root {
+  --cream: #F7F3EB;
+  --forest: #2F4F3E;
+  --sage: #4F6559;
+  --gold: #D4B45A;
+  --white: #FFFFFF;
+  --ink: #1a241c;
+  --muted: rgba(26, 36, 28, 0.62);
+  --line: rgba(47, 79, 62, 0.16);
+  --card: #FFFcf7;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: "Source Sans 3", "Liberation Sans", sans-serif;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+@page { size: Letter; margin: 0; }
+
+.page {
+  width: 8.5in;
+  height: 11in;
+  background: var(--cream);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.page::before,
+.page::after {
+  content: "";
+  position: absolute;
+  width: 0.55in;
+  height: 0.55in;
+  border: 1.5px solid rgba(212, 180, 90, 0.55);
+  pointer-events: none;
+  z-index: 2;
+}
+.page::before { top: 0.28in; left: 0.28in; border-right: none; border-bottom: none; }
+.page::after { top: 0.28in; right: 0.28in; border-left: none; border-bottom: none; }
+
+.goat-banner {
+  flex: 0 0 auto;
+  background: var(--forest);
+  text-align: center;
+  padding: 0.07in 0.35in 0.065in;
+  border-bottom: 2.5px solid var(--gold);
+  font-size: 8.5pt;
+  font-weight: 750;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  line-height: 1.25;
+}
+.goat-banner .phone {
+  font-size: 8.5pt;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.92);
+  text-transform: none;
+  margin-left: 0.1in;
+}
+
+.main {
+  flex: 1 1 auto;
+  padding: 0.14in 0.42in 0.06in;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  gap: 0.085in;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.2in;
+  padding-bottom: 0.08in;
+  border-bottom: 1.5px solid rgba(47, 79, 62, 0.18);
+}
+
+.kicker {
+  font-family: "Cinzel", serif;
+  font-size: 7pt;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 0.03in;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 20pt;
+  line-height: 1.05;
+  color: var(--forest);
+  letter-spacing: -0.015em;
+}
+h1 em {
+  font-style: italic;
+  color: var(--sage);
+  font-weight: 500;
+}
+
+.sub {
+  margin-top: 0.035in;
+  font-size: 9pt;
+  color: var(--muted);
+  line-height: 1.35;
+  max-width: 5.7in;
+}
+
+.logo img {
+  width: 1.05in;
+  height: auto;
+  display: block;
+}
+
+.pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.05in;
+}
+.pill {
+  font-size: 6.8pt;
+  font-weight: 750;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--forest);
+  background: rgba(212, 180, 90, 0.22);
+  border: 1px solid rgba(212, 180, 90, 0.55);
+  border-radius: 999px;
+  padding: 0.025in 0.09in;
+}
+
+.lede-box {
+  background: linear-gradient(105deg, rgba(212, 180, 90, 0.22) 0%, rgba(247, 243, 235, 0.4) 45%, #fff 100%);
+  border: 1.5px solid rgba(212, 180, 90, 0.65);
+  border-radius: 9px;
+  padding: 0.075in 0.12in;
+}
+.lede-box p {
+  font-size: 9.2pt;
+  line-height: 1.35;
+  color: var(--ink);
+}
+.lede-box strong { color: var(--forest); }
+
+.section-label {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.section-label h2 {
+  font-size: 7.8pt;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sage);
+}
+.section-label .tag {
+  font-size: 6.8pt;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #8a6a1e;
+  background: rgba(212, 180, 90, 0.22);
+  border-radius: 999px;
+  padding: 0.015in 0.075in;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.085in;
+  flex: 0 0 auto;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  padding: 0.09in 0.11in 0.09in;
+  display: flex;
+  flex-direction: column;
+  gap: 0.04in;
+  box-shadow: 0 1px 0 rgba(47, 79, 62, 0.04);
+  position: relative;
+  overflow: hidden;
+}
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), rgba(212, 180, 90, 0.25));
+}
+
+.card .num {
+  font-family: "Cinzel", serif;
+  font-size: 6.5pt;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.card h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 12pt;
+  color: var(--forest);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.card .sku {
+  font-size: 7pt;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sage);
+}
+
+.card .wiifm {
+  font-size: 7.8pt;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--sage);
+}
+
+.card .body {
+  font-size: 8.6pt;
+  line-height: 1.32;
+  color: var(--ink);
+  flex: 1 1 auto;
+}
+
+.card .price-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.06in;
+  margin-top: 0.02in;
+  padding-top: 0.055in;
+  border-top: 1px dashed rgba(47, 79, 62, 0.18);
+}
+
+.card .price {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 14pt;
+  color: var(--forest);
+  line-height: 1;
+}
+.card .price small {
+  display: block;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 6.8pt;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-top: 0.015in;
+}
+.card .price .upgrade {
+  display: block;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 7.5pt;
+  font-weight: 650;
+  color: var(--sage);
+  margin-top: 0.02in;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+.card .hint {
+  font-size: 7.4pt;
+  color: var(--muted);
+  line-height: 1.25;
+  text-align: right;
+  max-width: 1.75in;
+}
+
+.card.wide {
+  grid-column: 1 / -1;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 0.14in;
+  padding: 0.1in 0.14in;
+}
+.card.wide .wide-main {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.035in;
+  min-width: 0;
+}
+.card.wide .price-row {
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  border-top: none;
+  border-left: 1px dashed rgba(47, 79, 62, 0.18);
+  padding-top: 0;
+  padding-left: 0.12in;
+  margin-top: 0;
+  min-width: 1.55in;
+  text-align: right;
+}
+.card.wide .hint {
+  text-align: right;
+  max-width: none;
+  margin-top: 0.04in;
+}
+
+.travel-bar {
+  background: rgba(255, 252, 247, 0.9);
+  border: 1px solid rgba(212, 180, 90, 0.45);
+  border-radius: 8px;
+  padding: 0.065in 0.12in;
+  font-size: 8.4pt;
+  line-height: 1.35;
+  color: var(--ink);
+}
+.travel-bar strong { color: var(--forest); }
+.travel-bar .area {
+  display: block;
+  margin-top: 0.02in;
+  font-size: 7.5pt;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--sage);
+}
+
+.cta-strip {
+  background: var(--forest);
+  border-radius: 9px;
+  padding: 0.085in 0.14in;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.15in;
+  border: 1.5px solid rgba(212, 180, 90, 0.7);
+}
+.cta-strip .cta-lab {
+  font-size: 6.8pt;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.01in;
+}
+.cta-strip .cta-txt {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 12.5pt;
+  color: #fff;
+  line-height: 1.15;
+}
+.cta-strip .cta-txt span {
+  color: rgba(255, 255, 255, 0.78);
+  font-weight: 500;
+  font-size: 9.5pt;
+}
+.cta-strip .cta-amt {
+  text-align: right;
+  white-space: nowrap;
+}
+.cta-strip .cta-amt .big {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 14.5pt;
+  color: var(--gold);
+  line-height: 1;
+}
+.cta-strip .cta-amt .sm {
+  font-size: 7.2pt;
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 0.015in;
+}
+
+.foot {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.15in;
+  padding: 0.09in 0.42in 0.13in;
+  border-top: 1.5px solid rgba(47, 79, 62, 0.14);
+  background: rgba(255, 255, 255, 0.35);
+}
+.foot .ck {
+  font-size: 7.2pt;
+  font-weight: 750;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sage);
+}
+.foot .ph {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 11.5pt;
+  color: var(--forest);
+  margin-top: 0.01in;
+}
+.foot .ct {
+  font-size: 8pt;
+  color: var(--muted);
+  margin-top: 0.008in;
+}
+.badge { text-align: center; }
+.badge .bn {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 9.5pt;
+  color: var(--forest);
+}
+.badge .st {
+  color: var(--gold);
+  font-size: 9.5pt;
+  letter-spacing: 0.06em;
+  margin-top: 0.008in;
+}
+.badge .bm {
+  font-size: 7pt;
+  color: var(--muted);
+  margin-top: 0.008in;
+}
+.qr { text-align: center; }
+.qr-slot {
+  width: 0.68in;
+  height: 0.68in;
+  border: 1.5px dashed rgba(47, 79, 62, 0.35);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.65);
+  margin: 0 auto;
+}
+.qr-cap {
+  font-size: 6.2pt;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-top: 0.025in;
+}
+
+.corner-bl,
+.corner-br {
+  position: absolute;
+  width: 0.55in;
+  height: 0.55in;
+  border: 1.5px solid rgba(212, 180, 90, 0.55);
+  pointer-events: none;
+  z-index: 2;
+  bottom: 0.28in;
+}
+.corner-bl { left: 0.28in; border-right: none; border-top: none; }
+.corner-br { right: 0.28in; border-left: none; border-top: none; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="corner-bl"></div>
+  <div class="corner-br"></div>
+
+  <div class="goat-banner">
+    Text GOAT for discounts
+    <span class="phone">914-263-1311</span>
+  </div>
+
+  <div class="main">
+    <div class="header">
+      <div>
+        <div class="kicker">Local partners · Steadshout · Callahan · Nassau · west Duval</div>
+        <h1>Partner packages for<br><em>your shop &amp; your street</em></h1>
+        <p class="sub">Boutiques, breweries, coffee shops, small employers &amp; neighborhood churches — farm moments that fill your sidewalk, lunch hour &amp; fellowship time.</p>
+      </div>
+      <div class="logo">
+        <img src="hen-logo-flyer-gold.png" alt="Sheehan Homestead">
+      </div>
+    </div>
+
+    <div class="pill-row">
+      <div class="pill">Foot traffic</div>
+      <div class="pill">Photo moments</div>
+      <div class="pill">Weekday fill</div>
+      <div class="pill">Barter shout OK</div>
+    </div>
+
+    <div class="lede-box">
+      <p><strong>Down-the-street energy.</strong> We bring farm moments to your customers — you get a reason to come in, stay longer, and share the day. Clear face prices. No enterprise decks — just a short text to start.</p>
+    </div>
+
+    <div class="section-label">
+      <h2>Five partner packages · locked face prices</h2>
+      <span class="tag">Pick one · mix · text GOAT</span>
+    </div>
+
+    <div class="grid">
+      <!-- 1 Sidewalk Saturday Mini -->
+      <div class="card">
+        <div class="num">Package 01</div>
+        <h3>Sidewalk Saturday Mini</h3>
+        <div class="sku">SKU P-SWSAT</div>
+        <div class="wiifm">Boutiques · Main Street Saturday</div>
+        <p class="body">Mini ≤6 animals · 2 hours · sidewalk-friendly for Saturday foot traffic. Perfect for Main Street boutiques that want a stop-and-stay moment out front.</p>
+        <div class="price-row">
+          <div class="price">$549<small>Mini · 2 hours</small></div>
+          <div class="hint">Saturday foot traffic · sidewalk-ready</div>
+        </div>
+      </div>
+
+      <!-- 2 Steadshout + Animals Hour -->
+      <div class="card">
+        <div class="num">Package 02</div>
+        <h3>Steadshout + Animals Hour</h3>
+        <div class="sku">SKU P-SHOUT60</div>
+        <div class="wiifm">Breweries · coffee · boutiques</div>
+        <p class="body">Bunny Haven 60 min + social shout. Barter shout OK — or add a $50 suggested shout to land at $285.</p>
+        <div class="price-row">
+          <div class="price">$235–$285<small>Bunny Haven · 60 min</small></div>
+          <div class="hint">Barter shout OK · $50 shout → $285</div>
+        </div>
+      </div>
+
+      <!-- 3 Employee Appreciation Lunch -->
+      <div class="card">
+        <div class="num">Package 03</div>
+        <h3>Employee Appreciation Lunch</h3>
+        <div class="sku">SKU B-EALUNCH</div>
+        <div class="wiifm">Small employers · lunch-break</div>
+        <p class="body">Mini 60 min on a weekday lunch break — a soft thank-you for your team without booking a full night.</p>
+        <div class="price-row">
+          <div class="price">$335<small>Mini · 60 min weekday</small></div>
+          <div class="hint">Lunch-break friendly · small teams</div>
+        </div>
+      </div>
+
+      <!-- 4 Soft-Open / Ribbon -->
+      <div class="card">
+        <div class="num">Package 04</div>
+        <h3>Soft-Open / Ribbon</h3>
+        <div class="sku">SKU B-SOFTOPEN</div>
+        <div class="wiifm">New shop soft-open</div>
+        <p class="body">Mini 2 hr default for your soft-open or ribbon moment — animals that fill the feed and the first-day photos.</p>
+        <div class="price-row">
+          <div class="price">$549<span class="upgrade">Upgrade Standard · $749</span></div>
+          <div class="hint">Mini 2 hr default · new shop</div>
+        </div>
+      </div>
+
+      <!-- 5 Church Fellowship Hour -->
+      <div class="card wide">
+        <div class="wide-main">
+          <div class="num">Package 05</div>
+          <h3>Church Fellowship Hour</h3>
+          <div class="sku">SKU B-FELLOW</div>
+          <div class="wiifm">Neighborhood church · family hour</div>
+          <p class="body">Bunny Haven 60 for fellowship &amp; family hour. Optional Violet donation path available — just ask when you book.</p>
+        </div>
+        <div class="price-row">
+          <div class="price">$235<small>Bunny Haven · 60 min</small></div>
+          <div class="hint">Ask about Violet donation path</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="travel-bar">
+      <strong>Travel:</strong> Local neighbor Callahan / nearby Nassau / west Duval often <strong>$0</strong> travel; otherwise from <strong>$50</strong>.
+      <span class="area">Callahan · Nassau · west Duval — local neighbor path (not CDD / enterprise)</span>
+    </div>
+
+    <div class="cta-strip">
+      <div>
+        <div class="cta-lab">Ready when you are</div>
+        <div class="cta-txt">Text <strong>GOAT</strong> · say partner <span>or call 914-263-1311</span></div>
+      </div>
+      <div class="cta-amt">
+        <div class="big">Let’s book</div>
+        <div class="sm">sheehanhomestead.com</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <div>
+      <div class="ck">Local partners · Callahan · Nassau · west Duval</div>
+      <div class="ph">Call or text 914-263-1311</div>
+      <div class="ct">sheehanhomestead.com &nbsp;·&nbsp; Text GOAT for discounts</div>
+    </div>
+    <div class="badge">
+      <div class="bn">Sheehan Homestead</div>
+      <div class="st">★★★★★</div>
+      <div class="bm">5.0 · Google reviews</div>
+    </div>
+    <div class="qr" aria-label="QR pad for Ann-Marie">
+      <div class="qr-slot"></div>
+      <div class="qr-cap">QR — drop yours here</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

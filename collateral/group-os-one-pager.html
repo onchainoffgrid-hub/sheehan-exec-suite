@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sheehan Homestead — Group & Homeschool OS</title>
+<style>
+@font-face {
+  font-family: "Great Vibes";
+  src: url("fonts/GreatVibes-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src: url("fonts/PlayfairDisplay-Variable.ttf") format("truetype");
+  font-weight: 400 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src: url("fonts/PlayfairDisplay-Italic-Variable.ttf") format("truetype");
+  font-weight: 400 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("fonts/SourceSans3-Variable.ttf") format("truetype");
+  font-weight: 200 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("fonts/SourceSans3-Italic-Variable.ttf") format("truetype");
+  font-weight: 200 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Cinzel";
+  src: url("fonts/Cinzel-Variable.ttf") format("truetype");
+  font-weight: 400 900;
+  font-style: normal;
+}
+
+:root {
+  --sage: #4F6559;
+  --accent: #2F4F3E;
+  --cream: #F3EEE4;
+  --gold: #D4B45A;
+  --white: #FFFFFF;
+  --muted: rgba(255,255,255,0.78);
+  --line: rgba(255,255,255,0.18);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  width: 8.5in;
+  height: 11in;
+  background: var(--sage);
+  color: var(--white);
+  font-family: "Source Sans 3", "Liberation Sans", sans-serif;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+@page {
+  size: 8.5in 11in;
+  margin: 0;
+}
+
+.page {
+  width: 8.5in;
+  height: 11in;
+  background: var(--sage);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.topbar {
+  height: 0.08in;
+  background: var(--accent);
+  flex: 0 0 auto;
+}
+
+.main {
+  flex: 1 1 auto;
+  padding: 0.24in 0.46in 0.12in;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  gap: 0.11in;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.28in;
+  flex: 0 0 auto;
+}
+
+.kicker-row {
+  display: flex;
+  align-items: center;
+  gap: 0.12in;
+  margin-bottom: 0.08in;
+  flex-wrap: wrap;
+}
+
+.kicker {
+  font-size: 8.5pt;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--gold);
+  line-height: 1.2;
+}
+
+.os-chip {
+  flex: 0 0 auto;
+  font-size: 7pt;
+  font-weight: 750;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--gold);
+  border-radius: 999px;
+  padding: 0.04in 0.11in 0.035in;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+
+h1 {
+  font-family: "Playfair Display", "Nimbus Roman", serif;
+  font-weight: 600;
+  font-size: 28pt;
+  line-height: 1.06;
+  letter-spacing: -0.015em;
+}
+
+.sub {
+  margin-top: 0.07in;
+  font-size: 12pt;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--muted);
+  line-height: 1.3;
+}
+
+.logo {
+  flex: 0 0 1.38in;
+  width: 1.38in;
+  text-align: center;
+  padding-top: 0.02in;
+}
+.logo img {
+  width: 1.34in;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.h2 {
+  font-size: 8pt;
+  font-weight: 750;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.08in;
+}
+
+/* OPEN — 3 beats */
+.open {
+  flex: 0 0 auto;
+}
+.beats {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.1in;
+}
+.beat {
+  background: rgba(47,79,62,0.46);
+  border: 1.25px solid rgba(212,180,90,0.7);
+  border-radius: 6px;
+  padding: 0.1in 0.12in 0.11in;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.1in;
+  align-items: center;
+}
+.beat .n {
+  font-family: "Playfair Display", serif;
+  font-size: 20pt;
+  font-weight: 600;
+  color: var(--gold);
+  line-height: 1;
+  min-width: 0.28in;
+}
+.beat .ask {
+  font-size: 6.5pt;
+  font-weight: 750;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.02in;
+}
+.beat .q {
+  font-size: 11pt;
+  font-weight: 700;
+  line-height: 1.22;
+  letter-spacing: 0.005em;
+}
+
+/* Two package columns */
+.cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.14in;
+  flex: 1 1 auto;
+  min-height: 0;
+  align-items: stretch;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  background: rgba(47,79,62,0.28);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.col-head {
+  background: var(--accent);
+  padding: 0.08in 0.13in 0.075in;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.08in;
+}
+.col-head .who {
+  font-family: "Playfair Display", serif;
+  font-size: 14pt;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+.col-head .tag {
+  font-size: 7.5pt;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.col-note {
+  font-size: 8pt;
+  line-height: 1.3;
+  color: var(--muted);
+  padding: 0.055in 0.13in 0.05in;
+  border-bottom: 1px solid var(--line);
+  font-weight: 500;
+}
+.ticket {
+  display: grid;
+  grid-template-columns: 0.82in 1fr;
+  gap: 0.01in 0.09in;
+  padding: 0.07in 0.13in 0.075in;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  align-items: center;
+  align-content: center;
+  flex: 0 0 auto;
+}
+.ticket.ft {
+  flex: 1 1 auto;
+  padding: 0.085in 0.13in 0.09in;
+  background: rgba(47,79,62,0.42);
+}
+.ticket.ft .amt { font-size: 17pt; }
+.ft-label {
+  font-size: 7pt;
+  font-weight: 750;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  padding: 0.055in 0.13in 0.02in 0.13in;
+  flex: 0 0 auto;
+}
+.ticket.hard {
+  background: rgba(47,79,62,0.38);
+}
+.ticket .amt {
+  font-family: "Playfair Display", serif;
+  font-size: 18pt;
+  font-weight: 600;
+  color: var(--gold);
+  line-height: 1;
+  padding-top: 0.01in;
+}
+.ticket .name {
+  font-size: 11pt;
+  font-weight: 750;
+  line-height: 1.15;
+  letter-spacing: 0.005em;
+}
+.ticket .meta {
+  grid-column: 2;
+  font-size: 8.2pt;
+  line-height: 1.28;
+  color: var(--muted);
+  margin-top: 0.01in;
+}
+.gold-box {
+  margin: 0.07in 0.12in 0.05in;
+  border: 1.25px solid rgba(212,180,90,0.7);
+  border-radius: 5px;
+  background: rgba(47,79,62,0.4);
+  padding: 0.07in 0.11in 0.075in;
+}
+.gold-box .gl {
+  font-size: 7.5pt;
+  font-weight: 750;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.05in;
+}
+.gold-row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.06in 0.08in;
+  align-items: baseline;
+  padding: 0.025in 0;
+}
+.gold-row .when {
+  font-size: 8.5pt;
+  font-weight: 750;
+  color: var(--gold);
+  white-space: nowrap;
+}
+.gold-row .do {
+  font-size: 9.5pt;
+  font-weight: 600;
+  line-height: 1.25;
+}
+.gold-row .do span {
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.pkg {
+  display: grid;
+  grid-template-columns: 0.95in 1fr;
+  gap: 0.02in 0.1in;
+  padding: 0.085in 0.13in 0.085in;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  align-items: center;
+  align-content: center;
+  flex: 1 1 auto;
+}
+.pkg.feat {
+  background: rgba(47,79,62,0.38);
+}
+.pkg .amt {
+  font-family: "Playfair Display", serif;
+  font-size: 15pt;
+  font-weight: 600;
+  color: var(--gold);
+  line-height: 1.05;
+  padding-top: 0.02in;
+}
+.pkg .amt.range { font-size: 13pt; letter-spacing: -0.02em; }
+.pkg .name {
+  font-size: 11.5pt;
+  font-weight: 750;
+  line-height: 1.15;
+}
+.pkg .meta {
+  grid-column: 2;
+  font-size: 8.6pt;
+  line-height: 1.3;
+  color: var(--muted);
+  margin-top: 0.015in;
+}
+.add-on {
+  margin: 0.08in 0.12in 0;
+  padding: 0.07in 0.1in 0.075in;
+  border-left: 2.5px solid var(--gold);
+  background: rgba(47,79,62,0.32);
+  border-radius: 0 5px 5px 0;
+}
+.add-on .an {
+  font-size: 9.5pt;
+  font-weight: 750;
+  line-height: 1.2;
+}
+.add-on .an em {
+  font-style: normal;
+  color: var(--gold);
+}
+.add-on .ad {
+  font-size: 8.2pt;
+  color: var(--muted);
+  line-height: 1.3;
+  margin-top: 0.015in;
+}
+.close {
+  margin: 0.09in 0.13in 0.11in;
+  font-size: 8.6pt;
+  line-height: 1.35;
+  color: var(--muted);
+}
+.close strong {
+  color: var(--white);
+  font-weight: 700;
+}
+.close .gold {
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.say {
+  margin-top: 0.05in;
+  margin-left: 0.12in;
+  margin-right: 0.12in;
+  margin-bottom: 0.1in;
+  padding: 0.075in 0.11in 0.08in;
+  background: rgba(47,79,62,0.5);
+  border: 1px solid rgba(212,180,90,0.45);
+  border-radius: 5px;
+}
+.say .sl {
+  font-size: 7.2pt;
+  font-weight: 750;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.045in;
+}
+.say p {
+  font-size: 8.8pt;
+  font-weight: 650;
+  line-height: 1.28;
+  letter-spacing: 0.005em;
+}
+.say p + p { margin-top: 0.04in; }
+.say span { color: var(--muted); font-weight: 500; }
+
+/* HARD RULES */
+.rules {
+  flex: 0 0 auto;
+  background: var(--accent);
+  border: 1.5px solid var(--gold);
+  border-radius: 6px;
+  padding: 0.09in 0.16in 0.1in;
+}
+.rules .rh {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.08in;
+}
+.rules .rt {
+  font-size: 8pt;
+  font-weight: 750;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.rules .hold {
+  font-size: 7.5pt;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--gold);
+  border-radius: 999px;
+  padding: 0.025in 0.09in 0.02in;
+}
+.rules ol {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.055in 0.16in;
+  counter-reset: r;
+}
+.rules li {
+  font-size: 9.1pt;
+  font-weight: 600;
+  line-height: 1.28;
+  padding-left: 0.26in;
+  position: relative;
+  counter-increment: r;
+}
+.rules li::before {
+  content: counter(r);
+  position: absolute;
+  left: 0;
+  top: 0.01in;
+  font-family: "Playfair Display", serif;
+  font-size: 12pt;
+  font-weight: 600;
+  color: var(--gold);
+  line-height: 1;
+}
+.rules li:last-child {
+  grid-column: 1 / -1;
+}
+.rules li span {
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.quiet {
+  flex: 0 0 auto;
+  font-size: 8.2pt;
+  font-style: italic;
+  color: var(--muted);
+  line-height: 1.3;
+  letter-spacing: 0.01em;
+}
+
+.footer {
+  flex: 0 0 auto;
+  background: var(--accent);
+  padding: 0.14in 0.42in 0.14in 0.46in;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 0.18in;
+  align-items: center;
+}
+.cta-kicker {
+  font-size: 7.5pt;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 750;
+  color: var(--gold);
+  margin-bottom: 0.04in;
+}
+.phone {
+  font-family: "Playfair Display", serif;
+  font-size: 16.5pt;
+  font-weight: 600;
+  line-height: 1.1;
+}
+.contacts {
+  font-size: 9.5pt;
+  margin-top: 0.04in;
+  color: rgba(255,255,255,0.9);
+}
+.badge {
+  background: #fff;
+  color: #1a1a1a;
+  border-radius: 6px;
+  padding: 0.08in 0.13in 0.09in;
+  text-align: center;
+  min-width: 1.5in;
+}
+.badge .b-name {
+  font-family: "Great Vibes", cursive;
+  font-size: 13.5pt;
+  line-height: 1;
+  color: var(--accent);
+}
+.badge .stars {
+  color: #C9A227;
+  font-size: 10.5pt;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  margin-top: 0.015in;
+}
+.badge .b-meta {
+  font-size: 7.2pt;
+  font-weight: 650;
+  color: #333;
+  letter-spacing: 0.02em;
+}
+.qr-pad {
+  width: 1.05in;
+  height: 1.05in;
+  background: #fff;
+  border-radius: 7px;
+  padding: 0.065in 0.065in 0.05in;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+.qr-slot {
+  flex: 1 1 auto;
+  min-height: 0;
+  border: 1.25px dashed rgba(47,79,62,0.42);
+  border-radius: 4px;
+  background: #fff;
+}
+.qr-cap {
+  flex: 0 0 auto;
+  font-size: 6pt;
+  font-weight: 700;
+  color: var(--accent);
+  margin-top: 0.035in;
+  letter-spacing: 0.02em;
+  text-align: center;
+  line-height: 1;
+  text-transform: uppercase;
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="topbar"></div>
+  <div class="main">
+
+    <div class="header">
+      <div>
+        <div class="kicker-row">
+          <div class="kicker">Phone script &nbsp;·&nbsp; Groups &amp; homeschool</div>
+          <div class="os-chip">Group OS · no negotiate</div>
+        </div>
+        <h1>Group &amp; Homeschool OS</h1>
+        <p class="sub">Package only. No further negotiation.</p>
+      </div>
+      <div class="logo">
+        <img src="logo-wordmark.png" alt="Sheehan Homestead">
+      </div>
+    </div>
+
+    <div class="open">
+      <div class="h2">Open — three beats. Ask these first.</div>
+      <div class="beats">
+        <div class="beat">
+          <div class="n">1</div>
+          <div>
+            <div class="ask">Ask</div>
+            <div class="q">Come here, or we come to you?</div>
+          </div>
+        </div>
+        <div class="beat">
+          <div class="n">2</div>
+          <div>
+            <div class="ask">Ask</div>
+            <div class="q">Do you know the date?</div>
+          </div>
+        </div>
+        <div class="beat">
+          <div class="n">3</div>
+          <div>
+            <div class="ask">Ask</div>
+            <div class="q">How many heads / cars?</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cols">
+      <div class="col">
+        <div class="col-head">
+          <div class="who">Come here</div>
+          <div class="tag">Callahan farm</div>
+        </div>
+        <div class="col-note">Tickets or a locked field-trip package. Headcount and cars lock before the day.</div>
+        <div class="ticket">
+          <div class="amt">$25</div>
+          <div>
+            <div class="name">2 people</div>
+            <div class="meta">That’s the pair ticket. Not per head. Not a group rate.</div>
+          </div>
+        </div>
+        <div class="ticket hard">
+          <div class="amt">$50</div>
+          <div>
+            <div class="name">Whole car</div>
+            <div class="meta">Up to 5 people <strong style="color:#fff;font-weight:700;">IN ONE CAR</strong>. Hard line for Step Up (approved — reimbursement live). Extra car = another $50.</div>
+          </div>
+        </div>
+        <div class="ft-label">Field trip · group package</div>
+        <div class="ticket ft">
+          <div class="amt">$299</div>
+          <div>
+            <div class="name">Small · 5-car / ≤20 · 75 min</div>
+            <div class="meta">Homeschool / group. Step Up OK on field trips.</div>
+          </div>
+        </div>
+        <div class="ticket ft">
+          <div class="amt">$499</div>
+          <div>
+            <div class="name">Large · 10-car / ≤40 · ~90 min</div>
+            <div class="meta">Homeschool / group. <strong style="color:#fff;font-weight:700;">MAX 10 cars.</strong></div>
+          </div>
+        </div>
+        <div class="gold-box">
+          <div class="gl">Gold card · $50</div>
+          <div class="gold-row">
+            <div class="when">Savings →</div>
+            <div class="do">25% services / 50% travel <span>(~40% blended)</span></div>
+          </div>
+          <div class="gold-row">
+            <div class="when">Includes →</div>
+            <div class="do">Free 2-person farm + $25 gift <span>· deposit toward mobile</span></div>
+          </div>
+        </div>
+        <div class="say">
+          <div class="sl">If they push</div>
+          <p>$25 is two. $50 is the car. A group is <em style="font-style:normal;color:#fff;font-weight:750;">$299 or $499</em>.</p>
+          <p><span>Individuals: Step Up approved — book now, get reimbursed. Or the website. No phone custom.</span></p>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="col-head">
+          <div class="who">We come to you</div>
+          <div class="tag">Mobile packages</div>
+        </div>
+        <div class="col-note">Travel always a line item. Quote from Callahan before book. Then checkout.</div>
+        <div class="pkg feat">
+          <div class="amt">$235</div>
+          <div>
+            <div class="name">Bunny Haven</div>
+            <div class="meta">+ travel · ≥3 rabbits <em>or</em> ≥2 goats / ≥3 fowl. Same WE/WD.</div>
+          </div>
+        </div>
+        <div class="pkg">
+          <div class="amt">$359</div>
+          <div>
+            <div class="name">Mini · 75 min</div>
+            <div class="meta">+ travel · ≥6 animals — goats / bunnies / fowl. Same WE/WD.</div>
+          </div>
+        </div>
+        <div class="pkg">
+          <div class="amt">$499</div>
+          <div>
+            <div class="name">Standard · 90 min</div>
+            <div class="meta">+ travel · ≥9 animals. The full backyard package.</div>
+          </div>
+        </div>
+        <div class="add-on">
+          <div class="an">Critters on Top / full side of critters &nbsp;<em>ask / add-on</em></div>
+          <div class="ad">Optional upgrade on bigger packages. Price up. Don’t invent a dollar.</div>
+        </div>
+        <p class="close">Travel <strong>always a line item</strong> — quoted before book. Step Up LIVE on mobile. After quote: checkout link — or text <span class="gold">GOAT</span>.</p>
+        <div class="say">
+          <div class="sl">If they push</div>
+          <p>Name the package. Quote travel. Then send checkout.</p>
+          <p><span>Stay longer = pay more time. Critters on Top is ask / add-on.</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="rules">
+      <div class="rh">
+        <div class="rt">Hard rules · non-negotiable</div>
+        <div class="hold">Hold the line</div>
+      </div>
+      <ol>
+        <li>You buy a package. Time ends when the package ends. <span>Stay longer = pay more time.</span></li>
+        <li>Step Up reimbursement is live for eligible families. <span>Free extras / overage NOT OK.</span></li>
+        <li>Headcount and cars are the package — <span>not figured out on the day.</span></li>
+        <li>Deviation only with a reason <span>(Violet, grandpa, empty-date fill). Otherwise no.</span></li>
+        <li>Individuals: Step Up (live / approved) or the website only. <span>No phone custom.</span></li>
+      </ol>
+    </div>
+
+    <p class="quiet">New work: keep packages firm. ≥50% profit above labor — don’t run the math on the call.</p>
+
+  </div>
+
+  <div class="footer">
+    <div>
+      <div class="cta-kicker">Internal · leave-behind ok</div>
+      <div class="phone">Call or text 914-263-1311</div>
+      <div class="contacts">sheehanhomestead@gmail.com &nbsp;·&nbsp; sheehanhomestead.com</div>
+    </div>
+    <div class="badge">
+      <div class="b-name">Sheehan Homestead</div>
+      <div class="stars">★★★★★</div>
+      <div class="b-meta">5.0 &nbsp;·&nbsp; Google reviews</div>
+    </div>
+    <div class="qr-pad" aria-label="QR drop zone">
+      <div class="qr-slot"></div>
+      <div class="qr-cap">QR — drop yours here</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

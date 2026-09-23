@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Date liquidation · perishable inventory · Sheehan Homestead</title>
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--bad:#ff5d6c;--violet:#a78bfa}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
+a{color:var(--accent);text-decoration:none}
+.wrap{max-width:1000px;margin:0 auto;padding:28px 22px 56px}
+.top{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 18px;padding:10px 14px;border:1px solid var(--line);border-radius:14px;background:#0f1728}
+.top .lbl{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-right:4px}
+.top a{background:var(--card);border:1px solid var(--line);color:var(--text);padding:7px 12px;border-radius:999px;font-size:.78rem;font-weight:600;text-decoration:none}
+.crumb{font-size:.82rem;color:var(--muted);margin:0 0 12px}.crumb a{color:#d4c4ff;font-weight:600}
+h1{font-size:clamp(1.45rem,3vw,1.9rem);margin:0 0 6px;font-weight:750}
+.sub{color:var(--muted);font-size:.92rem}
+.wire{margin:14px 0 18px;padding:12px 14px;border-radius:12px;border:1px dashed #ffb02088;background:#16140f;font-size:.84rem;color:#fde68a}
+.seg-label{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:12px 0 8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.card{padding:14px;border-radius:14px;border:1px solid var(--line);background:var(--card)}
+.card.example{border-style:dashed;border-color:#a78bfa88}
+.card.blocked{border-color:#ff5d6c55}
+.card.soft{border-color:#ffb02066}
+.card .k{font-size:.65rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:4px}
+.card h3{margin:0 0 4px;font-size:.95rem}
+.card p{margin:0;font-size:.8rem;color:var(--muted)}
+.card .compose{margin-top:10px;display:inline-block;font-size:.75rem;padding:5px 10px;border-radius:999px;border:1px solid #5b8cff66;background:#152238;color:#9ec1ff;text-decoration:none;font-weight:650}
+.note{color:var(--muted);font-size:.78rem;margin-top:20px}
+</style></head>
+<body data-flow-face="ops"><div class="wrap">
+<div class="top">
+  <span class="lbl">Apps</span>
+  <a href="rvp-ops.html">RVP home</a>
+  <a href="ops-status.html">Ops RYG</a>
+  <a href="support-catalog.html">Support catalog</a>
+  <a href="growth-home.html">Growth</a>
+</div>
+<p class="crumb"><a href="support-catalog.html">Support catalog</a> → <b>Date liquidation</b></p>
+<header>
+  <h1>Date liquidation marketplace</h1>
+  <div class="sub">Available calendar dates = perishable sellable inventory · never invent booked $</div>
+</header>
+<div class="wire" id="wire">Loading…</div>
+<div class="seg-label">Known blocked / soft (real crumbs)</div>
+<div class="grid" id="blocked"></div>
+<div class="seg-label">EXAMPLE open slots (scaffold)</div>
+<div class="grid" id="examples"></div>
+<p class="note">Data: <code>data/date_liquidation.json</code> · Compose opens Gmail prefilled — Michael hits send. Built 2026-09-23 ET.</p>
+</div>
+<script>
+(function(){
+  function enc(s){ return encodeURIComponent(s||''); }
+  function gmailCompose(subject, body){
+    return 'https://mail.google.com/mail/?view=cm&fs=1&su='+enc(subject)+'&body='+enc(body);
+  }
+  fetch('data/date_liquidation.json',{cache:'no-store'}).then(function(r){return r.json()}).then(function(d){
+    document.getElementById('wire').innerHTML='<b>Wire GCal:</b> '+(d.wire_gcal&&d.wire_gcal.need||'')+' · <b>'+(d.wire_gcal&&d.wire_gcal.owner||'')+'</b> · status '+d.status+' · as_of '+d.as_of;
+    var blk=document.getElementById('blocked');
+    (d.known_blocked||[]).forEach(function(x){
+      var cls=x.kind==='blocked'?'blocked':(x.kind==='soft_hold'||x.kind==='messy'?'soft':'');
+      blk.innerHTML+='<article class="card '+cls+'"><div class="k">'+x.kind+' · '+x.date+'</div><h3>'+x.title+'</h3><p>via '+x.via+' · no $ invented</p></article>';
+    });
+    var ex=document.getElementById('examples');
+    (d.example_open_slots||[]).forEach(function(x){
+      var sub='Open '+x.window+' · Critters on Call / Sheehan Homestead';
+      var body='Hi —\\n\\nWe have an open window ('+x.window+') that fits '+x.sku_hint+'.\\n\\nHappy to hold it for you or send options.\\n\\n— Michael\\nSheehan Homestead / Critters on Call\\n914-263-1311\\n\\n(EXAMPLE slot — confirm live calendar before sending)';
+      var href=gmailCompose(sub, body.replace(/\\n/g,'\n'));
+      ex.innerHTML+='<article class="card example"><div class="k">'+x.status+' · '+x.window+'</div><h3>'+x.label+'</h3><p>'+x.sku_hint+' · '+x.fill_role+'</p><p style="margin-top:6px;color:#f5d0fe">'+x.price_band+'</p><a class="compose" href="'+href+'" target="_blank" rel="noopener">Gmail compose (prefill) →</a></article>';
+    });
+  }).catch(function(e){ document.getElementById('wire').textContent=String(e); });
+})();
+</script>
+<script src="shared/flow-spine.js" defer></script>
+</body></html>

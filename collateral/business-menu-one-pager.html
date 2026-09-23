@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sheehan Homestead — Large Event &amp; Festival Menu</title>
+<style>
+@font-face {
+  font-family: "Great Vibes";
+  src: url("fonts/GreatVibes-Regular.ttf") format("truetype");
+  font-weight: 400; font-style: normal;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src: url("fonts/PlayfairDisplay-Variable.ttf") format("truetype");
+  font-weight: 400 900; font-style: normal;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src: url("fonts/PlayfairDisplay-Italic-Variable.ttf") format("truetype");
+  font-weight: 400 900; font-style: italic;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("fonts/SourceSans3-Variable.ttf") format("truetype");
+  font-weight: 200 900; font-style: normal;
+}
+@font-face {
+  font-family: "Cinzel";
+  src: url("fonts/Cinzel-Variable.ttf") format("truetype");
+  font-weight: 400 900; font-style: normal;
+}
+
+:root {
+  --sage: #4F6559;
+  --accent: #2F4F3E;
+  --cream: #F3EEE4;
+  --gold: #D4B45A;
+  --white: #FFFFFF;
+  --ink: #1a241c;
+  --muted: rgba(26,36,28,0.62);
+  --line: rgba(47,79,62,0.18);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  background: var(--cream); color: var(--ink);
+  font-family: "Source Sans 3", "Liberation Sans", sans-serif;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+@page { size: Letter; margin: 0; }
+.page {
+  width: 8.5in; height: 11in; background: var(--cream);
+  display: flex; flex-direction: column; overflow: hidden; position: relative;
+  page-break-after: always; break-after: page;
+}
+.page:last-child { page-break-after: auto; break-after: auto; }
+
+.goat-banner {
+  flex: 0 0 auto; background: var(--accent);
+  text-align: center; padding: 0.065in 0.3in 0.06in;
+  border-bottom: 2.5px solid var(--gold);
+  font-size: 8.5pt; font-weight: 750; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--gold); line-height: 1.25;
+}
+.goat-banner .phone {
+  font-size: 8.5pt; font-weight: 650; letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.92); text-transform: none; margin-left: 0.08in;
+}
+.main {
+  flex: 1 1 auto; padding: 0.16in 0.4in 0.1in;
+  display: flex; flex-direction: column; min-height: 0; gap: 0.1in;
+}
+.header {
+  display: flex; justify-content: space-between; align-items: flex-start; gap: 0.2in;
+  padding-bottom: 0.08in; border-bottom: 1.5px solid rgba(47,79,62,0.2);
+}
+.kicker {
+  font-family: "Cinzel", serif; font-size: 7.5pt; letter-spacing: 0.18em;
+  font-weight: 600; text-transform: uppercase; color: var(--sage); margin-bottom: 0.03in;
+}
+h1 {
+  font-family: "Playfair Display", serif; font-weight: 600;
+  font-size: 22pt; line-height: 1.05; color: var(--accent); letter-spacing: -0.015em;
+}
+.sub {
+  margin-top: 0.035in; font-size: 9.5pt; color: var(--muted); line-height: 1.35; max-width: 5.6in;
+}
+.logo img { width: 1.1in; height: auto; display: block; }
+
+.callout {
+  background: linear-gradient(100deg, rgba(212,180,90,0.3) 0%, rgba(212,180,90,0.08) 55%, #fff 100%);
+  border: 1.5px solid rgba(212,180,90,0.75);
+  border-radius: 8px;
+  padding: 0.08in 0.15in;
+  display: flex; align-items: center; justify-content: space-between; gap: 0.12in;
+}
+.callout .lab {
+  font-size: 7pt; font-weight: 800; letter-spacing: 0.14em;
+  text-transform: uppercase; color: #8a6a1e; margin-bottom: 0.015in;
+}
+.callout .txt {
+  font-family: "Playfair Display", serif; font-weight: 600;
+  font-size: 13pt; color: var(--accent); line-height: 1.15;
+}
+.callout .txt span { color: var(--sage); font-weight: 500; font-size: 10pt; }
+.callout .amt {
+  font-family: "Playfair Display", serif; font-weight: 700;
+  font-size: 20pt; color: var(--accent); white-space: nowrap; line-height: 1;
+}
+.callout .amt small {
+  display: block; font-family: "Source Sans 3", sans-serif;
+  font-size: 7.5pt; font-weight: 700; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--sage); margin-top: 0.02in;
+}
+
+.included {
+  background: #fff; border: 1px solid rgba(47,79,62,0.16);
+  border-radius: 8px; padding: 0.09in 0.12in;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.08in;
+}
+.inc h3 {
+  font-size: 8pt; font-weight: 800; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--sage); margin-bottom: 0.02in;
+}
+.inc p { font-size: 8.5pt; color: var(--ink); line-height: 1.3; }
+.inc .price-tag {
+  font-family: "Playfair Display", serif; font-weight: 600;
+  font-size: 11pt; color: var(--accent); margin-top: 0.015in;
+}
+
+.section-label {
+  display: flex; align-items: baseline; justify-content: space-between;
+  margin-top: 0.02in;
+}
+.section-label h2 {
+  font-size: 8.5pt; font-weight: 800; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--sage);
+}
+.section-label .tag {
+  font-size: 7pt; font-weight: 700; letter-spacing: 0.06em;
+  text-transform: uppercase; color: #8a6a1e;
+  background: rgba(212,180,90,0.22); border-radius: 999px;
+  padding: 0.02in 0.08in;
+}
+
+.price-card {
+  background: #fff; border: 1px solid rgba(47,79,62,0.16);
+  border-radius: 8px; padding: 0.1in 0.12in 0.11in;
+  box-shadow: 0 1px 0 rgba(47,79,62,0.04);
+}
+.price-row {
+  display: grid; grid-template-columns: 2.1fr 1fr 1fr 1fr;
+  gap: 0.06in; align-items: center;
+  padding: 0.055in 0;
+  border-bottom: 1px solid rgba(47,79,62,0.08);
+}
+.price-row.head {
+  padding-bottom: 0.05in; margin-bottom: 0.02in;
+  border-bottom: 1.5px solid rgba(212,180,90,0.65);
+}
+.price-row.head span {
+  font-size: 7pt; font-weight: 800; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--sage); text-align: right;
+}
+.price-row.head span:first-child { text-align: left; }
+.price-row .name {
+  font-weight: 700; font-size: 10.5pt; color: var(--ink); line-height: 1.15;
+}
+.price-row .meta {
+  font-size: 7.5pt; color: var(--muted); margin-top: 0.01in; line-height: 1.25;
+}
+.price-row .p {
+  font-family: "Playfair Display", serif; font-weight: 600;
+  font-size: 12pt; color: var(--accent); text-align: right; line-height: 1.2;
+}
+.price-row.featured {
+  background: rgba(212,180,90,0.12);
+  margin: 0 -0.06in; padding-left: 0.06in; padding-right: 0.06in;
+  border-radius: 5px; border-bottom: none;
+}
+.price-row:last-child { border-bottom: none; }
+
+.addons-bar {
+  display: flex; flex-wrap: wrap; gap: 0.08in 0.22in;
+  margin-top: 0.08in; padding-top: 0.07in;
+  border-top: 1px dashed rgba(47,79,62,0.2);
+}
+.addon { font-size: 9pt; color: var(--ink); font-weight: 600; }
+.addon span {
+  font-family: "Playfair Display", serif; font-weight: 600;
+  color: var(--accent); font-size: 11pt; margin-left: 0.04in;
+}
+
+.yoga-row {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0.1in; margin-top: 0.02in;
+}
+.yoga-card {
+  background: #fff; border: 1px solid rgba(47,79,62,0.16);
+  border-radius: 8px; padding: 0.09in 0.12in;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.yoga-card .name { font-weight: 700; font-size: 11pt; color: var(--ink); }
+.yoga-card .meta { font-size: 7.5pt; color: var(--muted); margin-top: 0.01in; }
+.yoga-card .amt {
+  font-family: "Playfair Display", serif; font-weight: 700;
+  font-size: 16pt; color: var(--accent); white-space: nowrap;
+}
+
+.footer {
+  flex: 0 0 auto; background: var(--accent);
+  padding: 0.085in 0.36in 0.085in 0.4in;
+  display: grid; grid-template-columns: 1fr auto; gap: 0.14in; align-items: center;
+}
+.cta-kicker {
+  font-size: 6.5pt; letter-spacing: 0.14em; text-transform: uppercase;
+  font-weight: 750; color: var(--gold); margin-bottom: 0.015in;
+}
+.phone-lg {
+  font-family: "Playfair Display", serif; font-size: 14pt; font-weight: 600;
+  line-height: 1.1; color: #fff;
+}
+.contacts { font-size: 8.5pt; margin-top: 0.015in; color: rgba(255,255,255,0.9); }
+.badge {
+  background: #fff; color: #1a1a1a; border-radius: 6px;
+  padding: 0.05in 0.11in 0.055in; text-align: center; min-width: 1.4in;
+}
+.badge .b-name {
+  font-family: "Great Vibes", cursive; font-size: 12pt; line-height: 1; color: var(--accent);
+}
+.badge .stars { color: #C9A227; font-size: 8pt; margin-top: 0.01in; }
+.badge .b-meta { font-size: 6pt; font-weight: 650; color: #333; }
+.tiny {
+  position: absolute; bottom: 0.015in; right: 0.12in;
+  font-size: 5pt; color: rgba(255,255,255,0.4); letter-spacing: 0.04em;
+}
+
+/* —— Page 2 —— */
+.cols2 {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0.12in;
+}
+.col-card {
+  background: #fff; border: 1px solid rgba(47,79,62,0.16);
+  border-radius: 8px; padding: 0.1in 0.12in;
+  box-shadow: 0 1px 0 rgba(47,79,62,0.04);
+}
+.col-card h2 {
+  font-size: 8pt; font-weight: 800; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--sage);
+  padding-bottom: 0.045in; margin-bottom: 0.06in;
+  border-bottom: 1.5px solid rgba(212,180,90,0.65);
+}
+.item {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  gap: 0.08in; padding: 0.05in 0;
+  border-bottom: 1px solid rgba(47,79,62,0.07);
+}
+.item:last-child { border-bottom: none; }
+.item .name { font-weight: 700; font-size: 10.5pt; color: var(--ink); line-height: 1.2; }
+.item .meta { font-size: 7.5pt; color: var(--muted); margin-top: 0.01in; line-height: 1.25; }
+.prices { text-align: right; white-space: nowrap; flex: 0 0 auto; }
+.prices .p {
+  font-family: "Playfair Display", serif; font-weight: 600;
+  font-size: 11pt; color: var(--accent); line-height: 1.3;
+}
+.prices .dur {
+  font-family: "Source Sans 3", sans-serif; font-size: 7pt;
+  font-weight: 700; letter-spacing: 0.04em; color: var(--sage);
+  margin-right: 0.04in;
+}
+
+.lower2 {
+  display: grid; grid-template-columns: 1.05fr 1.2fr; gap: 0.12in;
+  flex: 1 1 auto; min-height: 0;
+}
+.card {
+  background: #fff; border: 1px solid rgba(47,79,62,0.16);
+  border-radius: 8px; padding: 0.1in 0.12in;
+  box-shadow: 0 1px 0 rgba(47,79,62,0.04);
+  display: flex; flex-direction: column;
+}
+.card h2 {
+  font-size: 8pt; font-weight: 800; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--sage);
+  padding-bottom: 0.045in; margin-bottom: 0.06in;
+  border-bottom: 1.5px solid rgba(212,180,90,0.65);
+}
+.sla-list { list-style: none; display: flex; flex-direction: column; gap: 0.07in; }
+.sla-list li {
+  font-size: 9pt; color: var(--ink); line-height: 1.4;
+  padding-left: 0.14in; position: relative;
+}
+.sla-list li::before {
+  content: ""; position: absolute; left: 0; top: 0.28em;
+  width: 0.07in; height: 0.07in; border-radius: 50%;
+  background: var(--gold);
+}
+.sla-list strong { color: var(--accent); font-weight: 700; }
+
+.ticket {
+  background: linear-gradient(165deg, rgba(212,180,90,0.24) 0%, #fff 42%);
+  border: 1.75px solid rgba(212,180,90,0.8);
+}
+.ticket .hero {
+  font-family: "Playfair Display", serif; font-weight: 600;
+  font-size: 14pt; color: var(--accent); line-height: 1.15; margin-bottom: 0.02in;
+}
+.ticket .blurb {
+  font-size: 8.5pt; color: var(--muted); line-height: 1.35; margin-bottom: 0.07in;
+}
+.perks {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0.07in;
+  margin-bottom: 0.07in;
+}
+.perk {
+  background: rgba(47,79,62,0.07); border-radius: 6px;
+  padding: 0.06in 0.06in; text-align: center;
+}
+.perk .big {
+  font-family: "Playfair Display", serif; font-weight: 700;
+  font-size: 18pt; color: var(--accent); line-height: 1;
+}
+.perk .lab {
+  font-size: 7pt; font-weight: 750; letter-spacing: 0.05em;
+  text-transform: uppercase; color: var(--sage); margin-top: 0.02in; line-height: 1.2;
+}
+.around40 {
+  text-align: center; font-size: 8.5pt; color: var(--sage);
+  font-style: italic; margin-bottom: 0.07in; line-height: 1.3;
+}
+.around40 strong { color: var(--accent); font-style: normal; font-weight: 700; }
+.example {
+  background: rgba(47,79,62,0.05); border-radius: 6px;
+  padding: 0.07in 0.09in; font-size: 8.5pt; color: var(--ink); line-height: 1.4;
+}
+.example strong { color: var(--accent); }
+.example .ex-lab {
+  font-size: 6.5pt; font-weight: 800; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--sage); margin-bottom: 0.025in;
+}
+.ticket .who {
+  margin-top: 0.06in; font-size: 8pt; color: var(--muted); line-height: 1.3;
+  text-align: center;
+}
+.page-note {
+  text-align: center; font-size: 7pt; color: rgba(26,36,28,0.45);
+  letter-spacing: 0.04em; margin-top: auto; padding-top: 0.04in;
+}
+</style>
+</head>
+<body>
+
+<!-- ===================== PAGE 1 — Weekend / Premium ===================== -->
+<div class="page">
+  <div class="goat-banner">Text GOAT for discounts <span class="phone">914-263-1311</span></div>
+  <div class="main">
+    <div class="header">
+      <div>
+        <div class="kicker">Critters on Call &nbsp;·&nbsp; Large Events · Festivals · Community · Corporate</div>
+        <h1>Large Event &amp; Festival Menu</h1>
+        <p class="sub">Trunk-or-treats, community festivals, corporate appreciation, HOA nights — year-round large events.<br>Mobile petting zoo, Bunny Haven &amp; goat yoga. Weekend / premium rates.</p>
+      </div>
+      <div class="logo"><img src="logo-wordmark.png" alt="Sheehan Homestead"></div>
+    </div>
+
+    <div class="callout">
+      <div>
+        <div class="lab">Biggest package</div>
+        <div class="txt">Standard 3-hour + Full Side <span>+ travel</span></div>
+      </div>
+      <div class="amt">$1,298<small>list · services</small></div>
+    </div>
+
+    <div class="included">
+      <div class="inc">
+        <h3>Bunny Haven</h3>
+        <p>Bunnies (substitutes OK)</p>
+      </div>
+      <div class="inc">
+        <h3>Mini</h3>
+        <p>≈ 6 animals — goats, bunnies &amp; fowl</p>
+      </div>
+      <div class="inc">
+        <h3>Standard</h3>
+        <p>At least 9 animals</p>
+      </div>
+      <div class="inc">
+        <h3>Full Side</h3>
+        <p>Seasonal chicks / babies / ducks</p>
+        <div class="price-tag">$249</div>
+      </div>
+    </div>
+
+    <div class="section-label">
+      <h2>Weekend · Premium &nbsp;·&nbsp; Fri eve – Sun</h2>
+      <span class="tag">Community Saturday</span>
+    </div>
+
+    <div class="price-card">
+      <div class="price-row head">
+        <span>Service</span>
+        <span>2 hr</span>
+        <span>3 hr</span>
+        <span>4 hr</span>
+      </div>
+      <div class="price-row">
+        <div>
+          <div class="name">Standard Petting Zoo</div>
+          <div class="meta">Festival &amp; community favorite</div>
+        </div>
+        <div class="p">$749</div>
+        <div class="p">$1,049</div>
+        <div class="p">$1,349</div>
+      </div>
+      <div class="price-row featured">
+        <div>
+          <div class="name">Standard + Full Side</div>
+          <div class="meta">Signature build · biggest package at 3 hr</div>
+        </div>
+        <div class="p">$998</div>
+        <div class="p">$1,298</div>
+        <div class="p">$1,598</div>
+      </div>
+      <div class="price-row">
+        <div>
+          <div class="name">Mini Petting Zoo</div>
+          <div class="meta">A taste of the farm</div>
+        </div>
+        <div class="p">$549</div>
+        <div class="p">$749</div>
+        <div class="p">$949</div>
+      </div>
+      <div class="price-row" style="grid-template-columns: 2.1fr 1fr 1fr 1fr;">
+        <div>
+          <div class="name">Bunny Haven</div>
+          <div class="meta">Soft &amp; sweet · little ones · 60 / 90 / 2hr</div>
+        </div>
+        <div class="p">$235</div>
+        <div class="p">$315</div>
+        <div class="p">$399</div>
+      </div>
+      <div class="addons-bar">
+        <div class="addon">Full Side of Critters<span>$249</span></div>
+      </div>
+    </div>
+
+    <div class="yoga-row">
+      <div class="yoga-card">
+        <div>
+          <div class="name">Goat Yoga</div>
+          <div class="meta">Weekend · unforgettable guest experience</div>
+        </div>
+        <div class="amt">$749</div>
+      </div>
+      <div class="yoga-card">
+        <div>
+          <div class="name">Boozy Goat Yoga</div>
+          <div class="meta">Weekend · adult-friendly twist</div>
+        </div>
+        <div class="amt">~$949</div>
+      </div>
+    </div>
+
+    <p class="page-note">Page 1 of 2 &nbsp;·&nbsp; Weekday rates &amp; Golden Ticket on reverse</p>
+  </div>
+
+  <div class="footer">
+    <div>
+      <div class="cta-kicker">Large events · Festivals · Forward as-is</div>
+      <div class="phone-lg">Call or text 914-263-1311</div>
+      <div class="contacts">sheehanhomestead.com &nbsp;·&nbsp; Text GOAT for discounts</div>
+    </div>
+    <div class="badge">
+      <div class="b-name">Sheehan Homestead</div>
+      <div class="stars">★★★★★</div>
+      <div class="b-meta">5.0 · Google reviews</div>
+    </div>
+  </div>
+  <div class="tiny">Large event & festival menu · weekend · 2026</div>
+</div>
+
+<!-- ===================== PAGE 2 — Weekday + GT + SLA ===================== -->
+<div class="page">
+  <div class="goat-banner">Text GOAT for discounts <span class="phone">914-263-1311</span></div>
+  <div class="main">
+    <div class="header">
+      <div>
+        <div class="kicker">Critters on Call &nbsp;·&nbsp; Weekday · Non-premium</div>
+        <h1>Weekday Menu &amp; Partners</h1>
+        <p class="sub">Best-value daytime rates · Golden Ticket for existing partners · simple arrival &amp; travel notes.</p>
+      </div>
+      <div class="logo"><img src="logo-wordmark.png" alt="Sheehan Homestead"></div>
+    </div>
+
+    <div class="section-label">
+      <h2>Weekday · Non-premium</h2>
+      <span class="tag">Best value</span>
+    </div>
+
+    <div class="cols2">
+      <div class="col-card">
+        <h2>Bunny &amp; Mini</h2>
+        <div class="item">
+          <div>
+            <div class="name">Bunny Haven</div>
+            <div class="meta">Soft &amp; sweet · little ones</div>
+          </div>
+          <div class="prices">
+            <div class="p"><span class="dur">60</span>$235</div>
+            <div class="p"><span class="dur">90</span>$315</div>
+            <div class="p"><span class="dur">2hr</span>$399</div>
+          </div>
+        </div>
+        <div class="item">
+          <div>
+            <div class="name">Mini Petting Zoo</div>
+            <div class="meta">≈ 6 animals</div>
+          </div>
+          <div class="prices">
+            <div class="p"><span class="dur">60</span>$335</div>
+            <div class="p"><span class="dur">90</span>$425</div>
+            <div class="p"><span class="dur">2hr</span>$549</div>
+            <div class="p"><span class="dur">3hr</span>$649</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-card">
+        <h2>Standard &amp; Yoga</h2>
+        <div class="item">
+          <div>
+            <div class="name">Standard Petting Zoo</div>
+            <div class="meta">Full experience · weekday</div>
+          </div>
+          <div class="prices">
+            <div class="p"><span class="dur">2hr</span>$549</div>
+            <div class="p"><span class="dur">3hr</span>$749</div>
+            <div class="p"><span class="dur">4hr</span>$949</div>
+          </div>
+        </div>
+        <div class="item">
+          <div>
+            <div class="name">Goat Yoga</div>
+            <div class="meta">Weekday session</div>
+          </div>
+          <div class="prices">
+            <div class="p">$499–$599</div>
+          </div>
+        </div>
+        <div class="item">
+          <div>
+            <div class="name">Add-ons</div>
+            <div class="meta">Same as weekend</div>
+          </div>
+          <div class="prices">
+            <div class="p" style="font-size:9.5pt;">Full Side $249</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lower2">
+      <div class="card">
+        <h2>Arrival &amp; travel</h2>
+        <ul class="sla-list">
+          <li>We aim to arrive <strong>30 minutes early</strong>; setup usually takes <strong>10–15 minutes</strong>.</li>
+          <li>Need us earlier? An <strong>early-arrival fee</strong> applies.</li>
+          <li><strong>Travel</strong> is a delivery fee by distance — furthest typically ~1 hour each way.</li>
+        </ul>
+        <p class="page-note" style="text-align:left;padding-top:0.1in;">St. Augustine-class travel list ~$300 · CDDs typically no tax</p>
+      </div>
+
+      <div class="card ticket">
+        <h2>Golden Ticket</h2>
+        <div class="hero">For existing partners</div>
+        <p class="blurb"><strong style="color:var(--accent);font-style:normal;">25% off services</strong> · <strong style="color:var(--accent);font-style:normal;">50% off travel</strong></p>
+        <div class="perks">
+          <div class="perk">
+            <div class="big">25%</div>
+            <div class="lab">off services</div>
+          </div>
+          <div class="perk">
+            <div class="big">50%</div>
+            <div class="lab">off travel</div>
+          </div>
+        </div>
+        <p class="around40">Together, that <strong>works out to around 40%</strong> off a typical all-in.</p>
+        <div class="example">
+          <div class="ex-lab">Example · Standard 3hr + Full Side</div>
+          <strong>$1,298</strong> → <strong>$973.50</strong> services<br>
+          St. Augustine travel list ~$300 → partner <strong>~$150–175</strong><br>
+          All-in often <strong>~$1,200</strong> · CDDs typically no tax
+        </div>
+        <p class="who">Ask when you book — we’ll apply it for you.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div>
+      <div class="cta-kicker">Large events · Festivals · Forward as-is</div>
+      <div class="phone-lg">Call or text 914-263-1311</div>
+      <div class="contacts">sheehanhomestead.com &nbsp;·&nbsp; Text GOAT for discounts</div>
+    </div>
+    <div class="badge">
+      <div class="b-name">Sheehan Homestead</div>
+      <div class="stars">★★★★★</div>
+      <div class="b-meta">5.0 · Google reviews</div>
+    </div>
+  </div>
+  <div class="tiny">Large event & festival menu · weekday · 2026</div>
+</div>
+
+</body>
+</html>

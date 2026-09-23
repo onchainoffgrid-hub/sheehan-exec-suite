@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sheehan Homestead — Mini Petting Zoo for PPEC Medical Daycares</title>
+<style>
+@font-face {
+  font-family: "Great Vibes";
+  src: url("fonts/GreatVibes-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src: url("fonts/PlayfairDisplay-Variable.ttf") format("truetype");
+  font-weight: 400 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src: url("fonts/PlayfairDisplay-Italic-Variable.ttf") format("truetype");
+  font-weight: 400 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("fonts/SourceSans3-Variable.ttf") format("truetype");
+  font-weight: 200 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("fonts/SourceSans3-Italic-Variable.ttf") format("truetype");
+  font-weight: 200 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Cinzel";
+  src: url("fonts/Cinzel-Variable.ttf") format("truetype");
+  font-weight: 400 900;
+  font-style: normal;
+}
+
+:root {
+  --sage: #4F6559;
+  --accent: #2F4F3E;
+  --cream: #F3EEE4;
+  --gold: #D4B45A;
+  --white: #FFFFFF;
+  --muted: rgba(255,255,255,0.78);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  width: 8.5in;
+  height: 11in;
+  background: var(--sage);
+  color: var(--white);
+  font-family: "Source Sans 3", "Liberation Sans", sans-serif;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+@page {
+  size: 8.5in 11in;
+  margin: 0;
+}
+
+.page {
+  width: 8.5in;
+  height: 11in;
+  background: var(--sage);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.topbar {
+  height: 0.1in;
+  background: var(--accent);
+  flex: 0 0 auto;
+}
+
+.main {
+  flex: 1 1 auto;
+  padding: 0.48in 0.56in 0.28in;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.32in;
+  margin-bottom: 0.42in;
+}
+
+.kicker {
+  font-size: 9pt;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.12in;
+}
+
+h1 {
+  font-family: "Playfair Display", "Nimbus Roman", serif;
+  font-weight: 600;
+  font-size: 30pt;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  max-width: 5.5in;
+}
+
+.sub {
+  margin-top: 0.14in;
+  font-size: 12pt;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--muted);
+  max-width: 4.8in;
+  line-height: 1.4;
+}
+
+.logo {
+  flex: 0 0 1.48in;
+  width: 1.48in;
+  text-align: center;
+  padding-top: 0.04in;
+}
+.logo img {
+  width: 1.42in;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Body two-col — left breathes; visual is compact, not a tall cream slab */
+.body {
+  display: grid;
+  grid-template-columns: 1fr 2.72in;
+  gap: 0.5in;
+  flex: 1 1 auto;
+  min-height: 0;
+  align-items: start;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.36in;
+  padding-top: 0.04in;
+}
+
+h2 {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 9pt;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.12in;
+}
+
+.visit-list {
+  list-style: none;
+}
+.visit-list li {
+  font-size: 11.5pt;
+  line-height: 1.42;
+  padding: 0.055in 0 0.055in 0.18in;
+  position: relative;
+}
+.visit-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.155in;
+  width: 0.07in;
+  height: 0.07in;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+/* Pricing — two end cards of the $275–$400 range */
+.prices {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.16in;
+}
+.price-card {
+  border: 1.25px solid rgba(255,255,255,0.38);
+  border-radius: 6px;
+  padding: 0.16in 0.16in 0.17in;
+  background: rgba(47,79,62,0.28);
+}
+.price-card.featured {
+  background: rgba(47,79,62,0.46);
+  border-color: var(--gold);
+}
+.price-card .label {
+  font-size: 8pt;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.price-card .amt {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 26pt;
+  line-height: 1.05;
+  margin: 0.04in 0 0;
+}
+.price-card .amt span {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 10pt;
+  font-weight: 500;
+  letter-spacing: 0;
+  opacity: 0.85;
+}
+.price-card .note {
+  font-size: 9.5pt;
+  color: var(--muted);
+  margin-top: 0.03in;
+  line-height: 1.3;
+}
+
+.promo {
+  margin-top: 0.14in;
+  font-size: 10.5pt;
+  font-weight: 650;
+  color: var(--gold);
+  letter-spacing: 0.01em;
+  line-height: 1.35;
+}
+
+.travel {
+  margin-top: 0.1in;
+  font-size: 9.5pt;
+  line-height: 1.4;
+  color: var(--muted);
+}
+
+/* Benefits */
+.benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 0.18in;
+}
+.benefit h3 {
+  font-size: 11.5pt;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  margin-bottom: 0.03in;
+}
+.benefit p {
+  font-size: 10.5pt;
+  line-height: 1.38;
+  color: var(--muted);
+}
+
+/* Right visual — compact cream frame on sage */
+.visual {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding-top: 0.1in;
+}
+.photo-frame {
+  background: var(--cream);
+  border-radius: 8px;
+  padding: 0.055in;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.16);
+  flex: 0 0 auto;
+}
+.photo-wrap {
+  height: 2.08in;
+  overflow: hidden;
+  border-radius: 5px;
+  background: var(--sage);
+}
+.photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 48%;
+  display: block;
+}
+.caption {
+  color: var(--cream);
+  font-size: 8pt;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-align: center;
+  padding: 0.12in 0.06in 0;
+  text-transform: uppercase;
+}
+
+/* Proof */
+.proof {
+  margin-top: 0.4in;
+  padding-top: 0.2in;
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+.proof-line {
+  font-size: 10.5pt;
+  line-height: 1.4;
+  color: var(--muted);
+  font-style: italic;
+  letter-spacing: 0.01em;
+}
+.proof-gold {
+  margin-top: 0.06in;
+  font-size: 10pt;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.015em;
+  line-height: 1.35;
+}
+
+/* Footer */
+.footer {
+  flex: 0 0 auto;
+  background: var(--accent);
+  padding: 0.16in 0.48in 0.16in 0.56in;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 0.2in;
+  align-items: center;
+}
+.cta-kicker {
+  font-size: 8pt;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 0.05in;
+}
+.phone {
+  font-family: "Playfair Display", serif;
+  font-size: 17.5pt;
+  font-weight: 600;
+  line-height: 1.1;
+}
+.contacts {
+  font-size: 10pt;
+  margin-top: 0.05in;
+  color: rgba(255,255,255,0.9);
+}
+.contacts a { color: inherit; text-decoration: none; }
+
+.badge {
+  background: #fff;
+  color: #1a1a1a;
+  border-radius: 6px;
+  padding: 0.09in 0.14in 0.1in;
+  text-align: center;
+  min-width: 1.55in;
+}
+.badge .b-name {
+  font-family: "Great Vibes", cursive;
+  font-size: 14pt;
+  line-height: 1;
+  color: var(--accent);
+}
+.badge .stars {
+  color: #C9A227;
+  font-size: 11pt;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  margin-top: 0.02in;
+}
+.badge .b-meta {
+  font-size: 7.5pt;
+  font-weight: 650;
+  color: #333;
+  letter-spacing: 0.02em;
+}
+
+/* Blank QR drop-pad — wife pastes a real code. No generated QR. */
+.qr-pad {
+  width: 1.1in;
+  height: 1.1in;
+  background: #fff;
+  border-radius: 7px;
+  padding: 0.07in 0.07in 0.055in;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+.qr-slot {
+  flex: 1 1 auto;
+  min-height: 0;
+  border: 1.25px dashed rgba(47,79,62,0.42);
+  border-radius: 4px;
+  background: #fff;
+}
+.qr-cap {
+  flex: 0 0 auto;
+  font-size: 6pt;
+  font-weight: 700;
+  color: var(--accent);
+  margin-top: 0.04in;
+  letter-spacing: 0.02em;
+  text-align: center;
+  line-height: 1;
+  text-transform: uppercase;
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="topbar"></div>
+  <div class="main">
+    <div class="header">
+      <div>
+        <div class="kicker">PPEC Medical Daycares &nbsp;·&nbsp; Metro Jacksonville</div>
+        <h1>A Mini Petting Zoo That<br>Lights Up Their Day</h1>
+        <p class="sub">75–120 minutes. We come to you.</p>
+      </div>
+      <div class="logo">
+        <img src="logo-wordmark.png" alt="Sheehan Homestead">
+      </div>
+    </div>
+
+    <div class="body">
+      <div class="left">
+        <div>
+          <h2>The Visit</h2>
+          <ul class="visit-list">
+            <li>75–120 minute mini petting zoo — we come to you, quick setup</li>
+            <li>At least 2 dwarf goats, 2 bunnies, and 2 specialty fowl</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2>Simple Pricing</h2>
+          <div class="prices">
+            <div class="price-card featured">
+              <div class="label">From 75 minutes</div>
+              <div class="amt">$275</div>
+              <div class="note">Mini petting zoo</div>
+            </div>
+            <div class="price-card">
+              <div class="label">Up to 120 minutes</div>
+              <div class="amt">$400</div>
+              <div class="note">Longer visit, same crew</div>
+            </div>
+          </div>
+          <p class="promo">Free Critters on Top upgrade if you book by Sept 15, 2026.</p>
+          <p class="travel">Most Metro Jax trips are included. Farther communities add a modest travel fee from Callahan — we quote it before you book.</p>
+        </div>
+
+        <div>
+          <h2>Why Staff Book Us</h2>
+          <div class="benefits">
+            <div class="benefit">
+              <h3>Joy for kids who need it most</h3>
+              <p>Gentle animals, big smiles, a break in a medical day.</p>
+            </div>
+            <div class="benefit">
+              <h3>Low-lift for nurses and staff</h3>
+              <p>We bring the animals and run the visit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="visual">
+        <div class="photo-frame">
+          <div class="photo-wrap">
+            <img src="ppec-minizoo-cartoon.jpg" alt="Child in adaptive chair, helper, goats, bunnies, and chickens">
+          </div>
+        </div>
+        <div class="caption">Mini petting zoo — goats, bunnies &amp; fowl</div>
+      </div>
+    </div>
+
+    <div class="proof">
+      <p class="proof-line">Already visiting PPECs, senior centers, and adult daycares across Metro Jax.</p>
+      <p class="proof-gold">Gold membership included — 1,000 members and counting.</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div>
+      <div class="cta-kicker">Book a visit — Callahan, FL &amp; Metro Jax</div>
+      <div class="phone">Call or text 914-263-1311</div>
+      <div class="contacts">sheehanhomestead@gmail.com &nbsp;·&nbsp; sheehanhomestead.com</div>
+    </div>
+    <div class="badge">
+      <div class="b-name">Sheehan Homestead</div>
+      <div class="stars">★★★★★</div>
+      <div class="b-meta">5.0 &nbsp;·&nbsp; Google reviews</div>
+    </div>
+    <div class="qr-pad" aria-label="QR drop zone">
+      <div class="qr-slot"></div>
+      <div class="qr-cap">QR — drop yours here</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

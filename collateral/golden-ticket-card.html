@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sheehan Homestead — Golden Ticket Card</title>
+<style>
+@font-face {
+  font-family: "Great Vibes";
+  src: url("fonts/GreatVibes-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src: url("fonts/PlayfairDisplay-Variable.ttf") format("truetype");
+  font-weight: 400 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src: url("fonts/PlayfairDisplay-Italic-Variable.ttf") format("truetype");
+  font-weight: 400 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("fonts/SourceSans3-Variable.ttf") format("truetype");
+  font-weight: 200 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cinzel";
+  src: url("fonts/Cinzel-Variable.ttf") format("truetype");
+  font-weight: 400 900;
+  font-style: normal;
+}
+
+:root {
+  --sage: #4F6559;
+  --accent: #2F4F3E;
+  --cream: #F3EEE4;
+  --gold: #D4B45A;
+  --gold-deep: #B8923A;
+  --gold-light: #E8D48C;
+  --ink: #1a241c;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  width: 8.5in;
+  height: 11in;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: "Source Sans 3", "Liberation Sans", sans-serif;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+@page {
+  size: 8.5in 11in;
+  margin: 0;
+}
+
+.sheet {
+  width: 8.5in;
+  height: 11in;
+  background: var(--cream);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Print / crop guides around the card */
+.guides {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.guide-label {
+  position: absolute;
+  top: 0.38in;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 8pt;
+  font-weight: 650;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(47,79,62,0.55);
+}
+.guide-sub {
+  position: absolute;
+  top: 0.58in;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 8.5pt;
+  color: rgba(47,79,62,0.45);
+  font-style: italic;
+}
+.meta-bar {
+  position: absolute;
+  bottom: 0.42in;
+  left: 0.55in;
+  right: 0.55in;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 7.5pt;
+  color: rgba(47,79,62,0.5);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 650;
+}
+.meta-bar .chip {
+  border: 1px solid rgba(47,79,62,0.28);
+  border-radius: 999px;
+  padding: 0.04in 0.12in;
+  color: var(--accent);
+}
+
+/* CR80 × ~2 for mock readability: 6.75" × 4.25" */
+.card-stage {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -52%);
+  width: 6.75in;
+  height: 4.25in;
+}
+
+/* Crop marks */
+.crop {
+  position: absolute;
+  width: 0.22in;
+  height: 0.22in;
+  border-color: rgba(47,79,62,0.55);
+  border-style: solid;
+  border-width: 0;
+}
+.crop.tl { top: -0.28in; left: -0.28in; border-top-width: 1px; border-left-width: 1px; }
+.crop.tr { top: -0.28in; right: -0.28in; border-top-width: 1px; border-right-width: 1px; }
+.crop.bl { bottom: -0.28in; left: -0.28in; border-bottom-width: 1px; border-left-width: 1px; }
+.crop.br { bottom: -0.28in; right: -0.28in; border-bottom-width: 1px; border-right-width: 1px; }
+
+.bleed-note {
+  position: absolute;
+  top: -0.55in;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 7pt;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(47,79,62,0.4);
+  font-weight: 650;
+}
+
+.card {
+  width: 6.75in;
+  height: 4.25in;
+  border-radius: 0.22in;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 18% 20%, rgba(232,212,140,0.35) 0%, transparent 45%),
+    radial-gradient(ellipse at 88% 80%, rgba(47,79,62,0.55) 0%, transparent 50%),
+    linear-gradient(145deg, #3a5a48 0%, #2F4F3E 38%, #243d30 72%, #1c3227 100%);
+  box-shadow:
+    0 18px 40px rgba(26,36,28,0.28),
+    0 2px 0 rgba(255,255,255,0.08) inset,
+    0 0 0 1.5px rgba(212,180,90,0.55);
+  color: #fff;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0.1in;
+  border-radius: 0.14in;
+  border: 1.25px solid rgba(212,180,90,0.55);
+  pointer-events: none;
+  z-index: 2;
+}
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0.16in;
+  border-radius: 0.1in;
+  border: 0.5px solid rgba(212,180,90,0.22);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.foil {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(115deg, transparent 0%, rgba(212,180,90,0.08) 35%, rgba(232,212,140,0.18) 48%, rgba(212,180,90,0.07) 58%, transparent 75%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.inner {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  padding: 0.28in 0.34in 0.26in;
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.2in;
+}
+
+.brand-mark {
+  display: flex;
+  align-items: center;
+  gap: 0.12in;
+}
+.brand-mark img {
+  width: 0.72in;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.25));
+}
+.brand-text .who {
+  font-size: 8pt;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  line-height: 1.2;
+}
+.brand-text .sub {
+  margin-top: 0.02in;
+  font-size: 8.5pt;
+  color: rgba(255,255,255,0.72);
+  font-weight: 500;
+}
+
+.seal {
+  text-align: right;
+  flex: 0 0 auto;
+}
+.seal .tag {
+  display: inline-block;
+  border: 1px solid rgba(212,180,90,0.7);
+  border-radius: 999px;
+  padding: 0.045in 0.12in 0.04in;
+  font-size: 7pt;
+  font-weight: 750;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: rgba(26,36,28,0.25);
+}
+
+.hero {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.08in 0 0.06in;
+}
+
+.hero .eyebrow {
+  font-family: "Cinzel", "Playfair Display", serif;
+  font-size: 9pt;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(212,180,90,0.9);
+  margin-bottom: 0.06in;
+}
+
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 42pt;
+  line-height: 0.95;
+  letter-spacing: 0.02em;
+  color: #F5E6B8;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.25);
+}
+
+.hero .script {
+  font-family: "Great Vibes", cursive;
+  font-size: 18pt;
+  color: rgba(243,238,228,0.9);
+  margin-top: 0.04in;
+  margin-left: 0.02in;
+}
+
+.perks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.12in;
+  margin-top: 0.16in;
+  max-width: 5.2in;
+}
+.perk {
+  background: rgba(26,36,28,0.35);
+  border: 1px solid rgba(212,180,90,0.45);
+  border-radius: 7px;
+  padding: 0.1in 0.14in 0.11in;
+}
+.perk .pct {
+  font-family: "Playfair Display", serif;
+  font-size: 26pt;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+}
+.perk .lbl {
+  margin-top: 0.02in;
+  font-size: 10pt;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.92);
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 0.2in;
+  margin-top: 0.14in;
+  padding-top: 0.12in;
+  border-top: 1px solid rgba(212,180,90,0.35);
+}
+
+.name-block {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.name-block .nl {
+  font-size: 7pt;
+  font-weight: 750;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(212,180,90,0.85);
+  margin-bottom: 0.04in;
+}
+.name-line {
+  border-bottom: 1.25px solid rgba(212,180,90,0.55);
+  min-height: 0.28in;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 0.03in;
+}
+.name-line .placeholder {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 14pt;
+  color: rgba(243,238,228,0.55);
+  font-weight: 500;
+}
+
+.contact {
+  text-align: right;
+  flex: 0 0 auto;
+}
+.contact .phone {
+  font-family: "Playfair Display", serif;
+  font-size: 14pt;
+  font-weight: 600;
+  color: #F5E6B8;
+  line-height: 1.15;
+}
+.contact .web {
+  margin-top: 0.025in;
+  font-size: 9.5pt;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  letter-spacing: 0.02em;
+}
+.contact .co {
+  margin-top: 0.03in;
+  font-size: 7.5pt;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(212,180,90,0.75);
+}
+
+.size-callout {
+  position: absolute;
+  left: 50%;
+  bottom: 1.05in;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 8pt;
+  color: rgba(47,79,62,0.48);
+  line-height: 1.4;
+}
+.size-callout strong {
+  color: rgba(47,79,62,0.7);
+  font-weight: 700;
+}
+</style>
+</head>
+<body>
+<div class="sheet">
+  <div class="guides">
+    <div class="guide-label">Sheehan Homestead · Golden Ticket · print mock</div>
+    <div class="guide-sub">B2B partner discount ticket — not Critter Club Gold</div>
+  </div>
+
+  <div class="card-stage">
+    <div class="bleed-note">Crop · trim to card edge &nbsp;·&nbsp; mock ≈ 2× CR80 (6.75 × 4.25 in)</div>
+    <div class="crop tl"></div>
+    <div class="crop tr"></div>
+    <div class="crop bl"></div>
+    <div class="crop br"></div>
+
+    <div class="card">
+      <div class="foil"></div>
+      <div class="inner">
+        <div class="top">
+          <div class="brand-mark">
+            <img src="logo-wordmark.png" alt="Sheehan Homestead">
+            <div class="brand-text">
+              <div class="who">Sheehan Homestead</div>
+              <div class="sub">Critters On-Call</div>
+            </div>
+          </div>
+          <div class="seal">
+            <div class="tag">Partner issue</div>
+          </div>
+        </div>
+
+        <div class="hero">
+          <div class="eyebrow">Present this ticket</div>
+          <h1>GOLDEN TICKET</h1>
+          <div class="script">Your partner discount</div>
+
+          <div class="perks">
+            <div class="perk">
+              <div class="pct">25%</div>
+              <div class="lbl">off services</div>
+            </div>
+            <div class="perk">
+              <div class="pct">50%</div>
+              <div class="lbl">off fees</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bottom">
+          <div class="name-block">
+            <div class="nl">Issued to</div>
+            <div class="name-line">
+              <span class="placeholder">Partner</span>
+            </div>
+          </div>
+          <div class="contact">
+            <div class="phone">914-263-1311</div>
+            <div class="web">sheehanhomestead.com</div>
+            <div class="co">Sheehan Homestead / Critters On-Call</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="size-callout">
+    Physical finish: print on heavy stock · gold foil optional · <strong>no list prices on card</strong><br>
+    Trim size target CR80 (3.375 × 2.125 in) — this sheet is a large centered mock for handoff
+  </div>
+
+  <div class="meta-bar">
+    <span>Text GOAT · 914-263-1311</span>
+    <span class="chip">B2B · Golden Ticket</span>
+    <span>sheehanhomestead.com</span>
+  </div>
+</div>
+</body>
+</html>

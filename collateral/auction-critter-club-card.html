@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sheehan Homestead — Critter Club · Auction / Fundraiser</title>
+<style>
+@font-face {
+  font-family: "Great Vibes";
+  src: url("fonts/GreatVibes-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src: url("fonts/PlayfairDisplay-Variable.ttf") format("truetype");
+  font-weight: 400 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src: url("fonts/PlayfairDisplay-Italic-Variable.ttf") format("truetype");
+  font-weight: 400 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("fonts/SourceSans3-Variable.ttf") format("truetype");
+  font-weight: 200 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cinzel";
+  src: url("fonts/Cinzel-Variable.ttf") format("truetype");
+  font-weight: 400 900;
+  font-style: normal;
+}
+
+:root {
+  --sage: #4F6559;
+  --accent: #2F4F3E;
+  --cream: #F3EEE4;
+  --gold: #D4B45A;
+  --gold-deep: #B8923A;
+  --gold-light: #E8D48C;
+  --ink: #1a241c;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  width: 8.5in;
+  height: 11in;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: "Source Sans 3", "Liberation Sans", sans-serif;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+@page {
+  size: 8.5in 11in;
+  margin: 0;
+}
+
+.sheet {
+  width: 8.5in;
+  height: 11in;
+  background: var(--cream);
+  position: relative;
+  overflow: hidden;
+}
+
+.guides {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.guide-label {
+  position: absolute;
+  top: 0.38in;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 8pt;
+  font-weight: 650;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(47,79,62,0.55);
+}
+.guide-sub {
+  position: absolute;
+  top: 0.58in;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 8.5pt;
+  color: rgba(47,79,62,0.45);
+  font-style: italic;
+}
+.meta-bar {
+  position: absolute;
+  bottom: 0.42in;
+  left: 0.55in;
+  right: 0.55in;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 7.5pt;
+  color: rgba(47,79,62,0.5);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 650;
+}
+.meta-bar .chip {
+  border: 1px solid rgba(47,79,62,0.28);
+  border-radius: 999px;
+  padding: 0.04in 0.12in;
+  color: var(--accent);
+}
+
+/* CR80 × ~2 for mock readability: 6.75" × 4.25" */
+.card-stage {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -52%);
+  width: 6.75in;
+  height: 4.25in;
+}
+
+.crop {
+  position: absolute;
+  width: 0.22in;
+  height: 0.22in;
+  border-color: rgba(47,79,62,0.55);
+  border-style: solid;
+  border-width: 0;
+}
+.crop.tl { top: -0.28in; left: -0.28in; border-top-width: 1px; border-left-width: 1px; }
+.crop.tr { top: -0.28in; right: -0.28in; border-top-width: 1px; border-right-width: 1px; }
+.crop.bl { bottom: -0.28in; left: -0.28in; border-bottom-width: 1px; border-left-width: 1px; }
+.crop.br { bottom: -0.28in; right: -0.28in; border-bottom-width: 1px; border-right-width: 1px; }
+
+.bleed-note {
+  position: absolute;
+  top: -0.55in;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 7pt;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(47,79,62,0.4);
+  font-weight: 650;
+}
+
+.card {
+  width: 6.75in;
+  height: 4.25in;
+  border-radius: 0.22in;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 14% 12%, rgba(232,212,140,0.38) 0%, transparent 42%),
+    radial-gradient(ellipse at 92% 88%, rgba(47,79,62,0.5) 0%, transparent 48%),
+    linear-gradient(145deg, #4F6559 0%, #3d5548 28%, #2F4F3E 58%, #243d30 100%);
+  box-shadow:
+    0 18px 40px rgba(26,36,28,0.28),
+    0 2px 0 rgba(255,255,255,0.08) inset,
+    0 0 0 1.5px rgba(212,180,90,0.55);
+  color: #fff;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0.1in;
+  border-radius: 0.14in;
+  border: 1.25px solid rgba(212,180,90,0.55);
+  pointer-events: none;
+  z-index: 2;
+}
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0.16in;
+  border-radius: 0.1in;
+  border: 0.5px solid rgba(212,180,90,0.22);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.foil {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(115deg, transparent 0%, rgba(212,180,90,0.08) 35%, rgba(232,212,140,0.18) 48%, rgba(212,180,90,0.07) 58%, transparent 75%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.inner {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  padding: 0.24in 0.32in 0.22in;
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.2in;
+}
+
+.brand-mark {
+  display: flex;
+  align-items: center;
+  gap: 0.12in;
+}
+.brand-mark img {
+  width: 0.68in;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.25));
+}
+.brand-text .who {
+  font-size: 8pt;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  line-height: 1.2;
+}
+.brand-text .sub {
+  margin-top: 0.02in;
+  font-size: 8.5pt;
+  color: rgba(255,255,255,0.72);
+  font-weight: 500;
+}
+
+.seal {
+  text-align: right;
+  flex: 0 0 auto;
+}
+.seal .tag {
+  display: inline-block;
+  border: 1px solid rgba(212,180,90,0.7);
+  border-radius: 999px;
+  padding: 0.045in 0.12in 0.04in;
+  font-size: 7pt;
+  font-weight: 750;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: rgba(26,36,28,0.25);
+}
+.seal .value {
+  margin-top: 0.08in;
+  font-family: "Playfair Display", serif;
+  font-size: 22pt;
+  font-weight: 700;
+  color: #F5E6B8;
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+.seal .value-lbl {
+  margin-top: 0.02in;
+  font-size: 6.5pt;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(212,180,90,0.85);
+}
+
+.hero {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.04in 0 0.04in;
+}
+
+.hero .eyebrow {
+  font-family: "Cinzel", "Playfair Display", serif;
+  font-size: 8.5pt;
+  font-weight: 600;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: rgba(212,180,90,0.9);
+  margin-bottom: 0.04in;
+}
+
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 28pt;
+  line-height: 1.02;
+  letter-spacing: 0.01em;
+  color: #F5E6B8;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.25);
+}
+.hero h1 .dot {
+  color: rgba(212,180,90,0.85);
+  font-weight: 500;
+  padding: 0 0.06em;
+}
+
+.hero .script {
+  font-family: "Great Vibes", cursive;
+  font-size: 16pt;
+  color: rgba(243,238,228,0.9);
+  margin-top: 0.02in;
+  margin-left: 0.02in;
+}
+
+.includes {
+  margin-top: 0.12in;
+  background: rgba(26,36,28,0.32);
+  border: 1px solid rgba(212,180,90,0.4);
+  border-radius: 8px;
+  padding: 0.1in 0.14in 0.1in;
+  max-width: 5.6in;
+}
+.includes .ilbl {
+  font-size: 7pt;
+  font-weight: 750;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(212,180,90,0.9);
+  margin-bottom: 0.05in;
+}
+.includes ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.035in;
+}
+.includes li {
+  font-size: 10pt;
+  font-weight: 550;
+  color: rgba(255,255,255,0.92);
+  line-height: 1.25;
+  padding-left: 0.16in;
+  position: relative;
+}
+.includes li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.28em;
+  width: 0.07in;
+  height: 0.07in;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 0 2px rgba(212,180,90,0.25);
+}
+.includes li strong {
+  font-weight: 700;
+  color: #F5E6B8;
+}
+
+.note-line {
+  margin-top: 0.1in;
+  font-size: 9pt;
+  font-style: italic;
+  color: rgba(243,238,228,0.78);
+  line-height: 1.3;
+  max-width: 5.6in;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 0.2in;
+  margin-top: 0.1in;
+  padding-top: 0.1in;
+  border-top: 1px solid rgba(212,180,90,0.35);
+}
+
+.redeem {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.redeem .nl {
+  font-size: 7pt;
+  font-weight: 750;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(212,180,90,0.85);
+  margin-bottom: 0.03in;
+}
+.redeem .cta {
+  font-size: 11pt;
+  font-weight: 600;
+  color: rgba(255,255,255,0.92);
+  line-height: 1.25;
+}
+.redeem .cta em {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 600;
+  color: #F5E6B8;
+}
+
+.contact {
+  text-align: right;
+  flex: 0 0 auto;
+}
+.contact .phone {
+  font-family: "Playfair Display", serif;
+  font-size: 14pt;
+  font-weight: 600;
+  color: #F5E6B8;
+  line-height: 1.15;
+}
+.contact .web {
+  margin-top: 0.025in;
+  font-size: 9.5pt;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  letter-spacing: 0.02em;
+}
+.contact .co {
+  margin-top: 0.03in;
+  font-size: 7.5pt;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(212,180,90,0.75);
+}
+
+.size-callout {
+  position: absolute;
+  left: 50%;
+  bottom: 1.05in;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 8pt;
+  color: rgba(47,79,62,0.48);
+  line-height: 1.4;
+}
+.size-callout strong {
+  color: rgba(47,79,62,0.7);
+  font-weight: 700;
+}
+</style>
+</head>
+<body>
+<div class="sheet">
+  <div class="guides">
+    <div class="guide-label">Sheehan Homestead · Critter Club · Auction / Fundraiser · print mock</div>
+    <div class="guide-sub">Gifted to organizations for silent auctions — suggested bid-up value $100</div>
+  </div>
+
+  <div class="card-stage">
+    <div class="bleed-note">Crop · trim to card edge &nbsp;·&nbsp; mock ≈ 2× CR80 (6.75 × 4.25 in)</div>
+    <div class="crop tl"></div>
+    <div class="crop tr"></div>
+    <div class="crop bl"></div>
+    <div class="crop br"></div>
+
+    <div class="card">
+      <div class="foil"></div>
+      <div class="inner">
+        <div class="top">
+          <div class="brand-mark">
+            <img src="logo-wordmark.png" alt="Sheehan Homestead">
+            <div class="brand-text">
+              <div class="who">Sheehan Homestead</div>
+              <div class="sub">Critters On-Call</div>
+            </div>
+          </div>
+          <div class="seal">
+            <div class="tag">Auction gift</div>
+            <div class="value">$100</div>
+            <div class="value-lbl">Suggested retail / bid-up</div>
+          </div>
+        </div>
+
+        <div class="hero">
+          <div class="eyebrow">Critter Club</div>
+          <h1>Auction <span class="dot">·</span> Fundraiser</h1>
+          <div class="script">A farm gift for your highest bidder</div>
+
+          <div class="includes">
+            <div class="ilbl">Includes</div>
+            <ul>
+              <li><strong>$50 Critter Club card</strong></li>
+              <li><strong>Free 2-person farm ticket</strong> <span style="opacity:0.85">($25 value)</span></li>
+              <li><strong>Farm gift</strong></li>
+            </ul>
+          </div>
+
+          <div class="note-line">Gifted to organizations for silent auctions — happy if they raise $50+</div>
+        </div>
+
+        <div class="bottom">
+          <div class="redeem">
+            <div class="nl">Redeem</div>
+            <div class="cta">Text <em>GOAT</em> to 914-263-1311 to redeem / learn more</div>
+          </div>
+          <div class="contact">
+            <div class="phone">914-263-1311</div>
+            <div class="web">sheehanhomestead.com</div>
+            <div class="co">Sheehan Homestead / Critters On-Call</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="size-callout">
+    Physical finish: print on heavy stock · gold foil optional · <strong>no Violet / charity floors or cost math on card</strong><br>
+    Trim size target CR80 (3.375 × 2.125 in) — this sheet is a large centered mock for handoff
+  </div>
+
+  <div class="meta-bar">
+    <span>Text GOAT · 914-263-1311</span>
+    <span class="chip">Auction · Critter Club</span>
+    <span>sheehanhomestead.com</span>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sheehan Homestead — Critters on Call · Community Amenity Menu</title>
+<style>
+@font-face {
+  font-family: "Great Vibes";
+  src: url("fonts/GreatVibes-Regular.ttf") format("truetype");
+  font-weight: 400; font-style: normal;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src: url("fonts/PlayfairDisplay-Variable.ttf") format("truetype");
+  font-weight: 400 900; font-style: normal;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src: url("fonts/PlayfairDisplay-Italic-Variable.ttf") format("truetype");
+  font-weight: 400 900; font-style: italic;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("fonts/SourceSans3-Variable.ttf") format("truetype");
+  font-weight: 200 900; font-style: normal;
+}
+@font-face {
+  font-family: "Cinzel";
+  src: url("fonts/Cinzel-Variable.ttf") format("truetype");
+  font-weight: 400 900; font-style: normal;
+}
+
+:root {
+  --sage: #4F6559;
+  --accent: #2F4F3E;
+  --cream: #F3EEE4;
+  --gold: #D4B45A;
+  --white: #FFFFFF;
+  --ink: #1a241c;
+  --muted: rgba(26,36,28,0.62);
+  --line: rgba(47,79,62,0.18);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  width: 8.5in; height: 11in;
+  background: var(--cream); color: var(--ink);
+  font-family: "Source Sans 3", "Liberation Sans", sans-serif;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+@page { size: Letter; margin: 0; }
+.page {
+  width: 8.5in; height: 11in; background: var(--cream);
+  display: flex; flex-direction: column; overflow: hidden; position: relative;
+}
+.goat-banner {
+  flex: 0 0 auto; background: var(--accent);
+  text-align: center; padding: 0.065in 0.3in 0.06in;
+  border-bottom: 2.5px solid var(--gold);
+  font-size: 8.5pt; font-weight: 750; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--gold); line-height: 1.25;
+}
+.goat-banner .phone {
+  font-size: 8.5pt; font-weight: 650; letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.92); text-transform: none; margin-left: 0.08in;
+}
+.main {
+  flex: 1 1 auto; padding: 0.14in 0.38in 0.07in;
+  display: flex; flex-direction: column; min-height: 0; gap: 0.09in;
+}
+.header {
+  display: flex; justify-content: space-between; align-items: flex-start; gap: 0.2in;
+  padding-bottom: 0.07in; border-bottom: 1.5px solid rgba(47,79,62,0.2);
+}
+.kicker {
+  font-family: "Cinzel", serif; font-size: 7.5pt; letter-spacing: 0.18em;
+  font-weight: 600; text-transform: uppercase; color: var(--sage); margin-bottom: 0.03in;
+}
+h1 {
+  font-family: "Playfair Display", serif; font-weight: 600;
+  font-size: 21pt; line-height: 1.05; color: var(--accent); letter-spacing: -0.015em;
+}
+.sub {
+  margin-top: 0.03in; font-size: 9pt; color: var(--muted); line-height: 1.3; max-width: 5.5in;
+}
+.logo img { width: 1.05in; height: auto; display: block; }
+
+.callout {
+  background: linear-gradient(100deg, rgba(212,180,90,0.28) 0%, rgba(212,180,90,0.08) 55%, #fff 100%);
+  border: 1.5px solid rgba(212,180,90,0.75);
+  border-radius: 8px;
+  padding: 0.07in 0.14in;
+  display: flex; align-items: center; justify-content: space-between; gap: 0.12in;
+}
+.callout .lab {
+  font-size: 7pt; font-weight: 800; letter-spacing: 0.14em;
+  text-transform: uppercase; color: #8a6a1e; margin-bottom: 0.015in;
+}
+.callout .txt {
+  font-family: "Playfair Display", serif; font-weight: 600;
+  font-size: 12.5pt; color: var(--accent); line-height: 1.15;
+}
+.callout .txt span { color: var(--sage); font-weight: 500; font-size: 10pt; }
+.callout .amt {
+  font-family: "Playfair Display", serif; font-weight: 700;
+  font-size: 18pt; color: var(--accent); white-space: nowrap; line-height: 1;
+}
+.callout .amt small {
+  display: block; font-family: "Source Sans 3", sans-serif;
+  font-size: 7.5pt; font-weight: 700; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--sage); margin-top: 0.02in;
+}
+
+.cols {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0.11in;
+  flex: 0 0 auto;
+}
+.col {
+  background: #fff; border: 1px solid rgba(47,79,62,0.16);
+  border-radius: 8px; padding: 0.09in 0.11in 0.1in;
+  box-shadow: 0 1px 0 rgba(47,79,62,0.04);
+}
+.col-head {
+  display: flex; align-items: baseline; justify-content: space-between;
+  padding-bottom: 0.045in; margin-bottom: 0.05in;
+  border-bottom: 1.5px solid rgba(212,180,90,0.65);
+}
+.col-head h2 {
+  font-size: 8pt; font-weight: 800; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--sage);
+}
+.col-head .tag {
+  font-size: 6.5pt; font-weight: 700; letter-spacing: 0.06em;
+  text-transform: uppercase; color: #8a6a1e;
+  background: rgba(212,180,90,0.22); border-radius: 999px;
+  padding: 0.015in 0.07in;
+}
+.item {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  gap: 0.08in; padding: 0.045in 0;
+  border-bottom: 1px solid rgba(47,79,62,0.07);
+}
+.item:last-child { border-bottom: none; }
+.item .name {
+  font-weight: 700; font-size: 10pt; color: var(--ink); line-height: 1.2;
+}
+.item .meta {
+  font-size: 7.5pt; color: var(--muted); margin-top: 0.01in; line-height: 1.25;
+}
+.prices { text-align: right; white-space: nowrap; flex: 0 0 auto; }
+.prices .p {
+  font-family: "Playfair Display", serif; font-weight: 600;
+  font-size: 11pt; color: var(--accent); line-height: 1.25;
+}
+.prices .dur {
+  font-family: "Source Sans 3", sans-serif; font-size: 7pt;
+  font-weight: 700; letter-spacing: 0.04em; color: var(--sage);
+  margin-right: 0.04in;
+}
+.addons {
+  margin-top: 0.05in; padding-top: 0.045in;
+  border-top: 1px dashed rgba(47,79,62,0.18);
+  display: flex; flex-wrap: wrap; gap: 0.04in 0.12in;
+}
+.addon { font-size: 8pt; color: var(--ink); font-weight: 600; }
+.addon span {
+  font-family: "Playfair Display", serif; font-weight: 600;
+  color: var(--accent); font-size: 9.5pt; margin-left: 0.03in;
+}
+
+.lower {
+  display: grid; grid-template-columns: 1fr 1.15fr; gap: 0.11in;
+  flex: 1 1 auto; min-height: 0;
+}
+.card {
+  background: #fff; border: 1px solid rgba(47,79,62,0.16);
+  border-radius: 8px; padding: 0.09in 0.11in 0.1in;
+  box-shadow: 0 1px 0 rgba(47,79,62,0.04);
+  display: flex; flex-direction: column;
+}
+.card h2 {
+  font-size: 7.5pt; font-weight: 800; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--sage);
+  padding-bottom: 0.04in; margin-bottom: 0.05in;
+  border-bottom: 1.5px solid rgba(212,180,90,0.65);
+}
+.pkg {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  gap: 0.08in; padding: 0.04in 0;
+  border-bottom: 1px solid rgba(47,79,62,0.07);
+}
+.pkg:last-of-type { border-bottom: none; }
+.pkg .label { font-weight: 700; font-size: 9pt; color: var(--ink); line-height: 1.2; }
+.pkg .hint { font-size: 7pt; color: var(--muted); margin-top: 0.01in; line-height: 1.25; }
+.pkg .amt {
+  font-family: "Playfair Display", serif; font-weight: 600;
+  font-size: 10.5pt; color: var(--accent); white-space: nowrap; text-align: right;
+}
+.soft {
+  margin-top: auto; padding-top: 0.05in;
+  font-size: 7.5pt; color: var(--muted); font-style: italic; line-height: 1.3;
+}
+.soft strong { color: var(--accent); font-style: normal; font-weight: 700; }
+
+.ticket {
+  background: linear-gradient(165deg, rgba(212,180,90,0.22) 0%, #fff 42%);
+  border: 1.75px solid rgba(212,180,90,0.8);
+}
+.ticket .hero {
+  font-family: "Playfair Display", serif; font-weight: 600;
+  font-size: 13.5pt; color: var(--accent); line-height: 1.15; margin-bottom: 0.02in;
+}
+.ticket .blurb {
+  font-size: 8pt; color: var(--muted); line-height: 1.3; margin-bottom: 0.06in;
+}
+.perks {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0.06in;
+  margin-bottom: 0.06in;
+}
+.perk {
+  background: rgba(47,79,62,0.07); border-radius: 6px;
+  padding: 0.055in 0.06in; text-align: center;
+}
+.perk .big {
+  font-family: "Playfair Display", serif; font-weight: 700;
+  font-size: 16pt; color: var(--accent); line-height: 1;
+}
+.perk .lab {
+  font-size: 6.5pt; font-weight: 750; letter-spacing: 0.05em;
+  text-transform: uppercase; color: var(--sage); margin-top: 0.02in; line-height: 1.2;
+}
+.example {
+  background: rgba(47,79,62,0.05); border-radius: 6px;
+  padding: 0.06in 0.08in; font-size: 8pt; color: var(--ink); line-height: 1.35;
+}
+.example strong { color: var(--accent); }
+.example .ex-lab {
+  font-size: 6.5pt; font-weight: 800; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--sage); margin-bottom: 0.02in;
+}
+.ticket .who {
+  margin-top: 0.05in; font-size: 7.5pt; color: var(--muted); line-height: 1.3;
+  text-align: center;
+}
+
+.footer {
+  flex: 0 0 auto; background: var(--accent);
+  padding: 0.08in 0.34in 0.08in 0.38in;
+  display: grid; grid-template-columns: 1fr auto; gap: 0.14in; align-items: center;
+}
+.cta-kicker {
+  font-size: 6.5pt; letter-spacing: 0.14em; text-transform: uppercase;
+  font-weight: 750; color: var(--gold); margin-bottom: 0.015in;
+}
+.phone-lg {
+  font-family: "Playfair Display", serif; font-size: 13.5pt; font-weight: 600;
+  line-height: 1.1; color: #fff;
+}
+.contacts { font-size: 8pt; margin-top: 0.015in; color: rgba(255,255,255,0.9); }
+.badge {
+  background: #fff; color: #1a1a1a; border-radius: 6px;
+  padding: 0.05in 0.11in 0.055in; text-align: center; min-width: 1.4in;
+}
+.badge .b-name {
+  font-family: "Great Vibes", cursive; font-size: 11.5pt; line-height: 1; color: var(--accent);
+}
+.badge .stars { color: #C9A227; font-size: 8pt; margin-top: 0.01in; }
+.badge .b-meta { font-size: 6pt; font-weight: 650; color: #333; }
+.tiny {
+  position: absolute; bottom: 0.015in; right: 0.12in;
+  font-size: 5pt; color: rgba(255,255,255,0.4); letter-spacing: 0.04em;
+}
+.other {
+  text-align: center; font-size: 6.5pt; color: rgba(26,36,28,0.45);
+  letter-spacing: 0.02em; margin-top: -0.02in;
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="goat-banner">Text GOAT for discounts <span class="phone">914-263-1311</span></div>
+  <div class="main">
+    <div class="header">
+      <div>
+        <div class="kicker">Critters on Call &nbsp;·&nbsp; CDD &amp; community partners</div>
+        <h1>Community Amenity Menu</h1>
+        <p class="sub">Mobile petting zoo, Bunny Haven &amp; goat yoga — brought to your community.<br>Sparse, bookable amenities your residents will love.</p>
+      </div>
+      <div class="logo"><img src="logo-wordmark.png" alt="Sheehan Homestead"></div>
+    </div>
+
+    <div class="callout">
+      <div>
+        <div class="lab">Biggest community event</div>
+        <div class="txt">Standard 3-hour + Full Side <span>+ travel</span></div>
+      </div>
+      <div class="amt">$1,298<small>list · services</small></div>
+    </div>
+
+    <div class="cols">
+      <div class="col">
+        <div class="col-head">
+          <h2>Weekday · Non-premium</h2>
+          <span class="tag">Best value</span>
+        </div>
+
+        <div class="item">
+          <div>
+            <div class="name">Bunny Haven</div>
+            <div class="meta">Soft &amp; sweet · perfect for little ones</div>
+          </div>
+          <div class="prices">
+            <div class="p"><span class="dur">60</span>$235</div>
+            <div class="p"><span class="dur">90</span>$315</div>
+            <div class="p"><span class="dur">2hr</span>$399</div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div>
+            <div class="name">Mini Petting Zoo</div>
+            <div class="meta">≈ 6 animals</div>
+          </div>
+          <div class="prices">
+            <div class="p"><span class="dur">60</span>$335</div>
+            <div class="p"><span class="dur">90</span>$425</div>
+            <div class="p"><span class="dur">2hr</span>$549</div>
+            <div class="p"><span class="dur">3hr</span>$649</div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div>
+            <div class="name">Standard Petting Zoo</div>
+            <div class="meta">Full experience · weekday</div>
+          </div>
+          <div class="prices">
+            <div class="p"><span class="dur">2hr</span>$549</div>
+            <div class="p"><span class="dur">3hr</span>$749</div>
+            <div class="p"><span class="dur">4hr</span>$949</div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div>
+            <div class="name">Goat Yoga</div>
+            <div class="meta">Weekday session</div>
+          </div>
+          <div class="prices">
+            <div class="p">$499–$599</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="col-head">
+          <h2>Weekend · Premium</h2>
+          <span class="tag">Fri eve–Sun</span>
+        </div>
+
+        <div class="item">
+          <div>
+            <div class="name">Standard Petting Zoo</div>
+            <div class="meta">The community favorite</div>
+          </div>
+          <div class="prices">
+            <div class="p"><span class="dur">2hr</span>$749</div>
+            <div class="p"><span class="dur">3hr</span>$1,049</div>
+            <div class="p"><span class="dur">4hr</span>$1,349</div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div>
+            <div class="name">Standard + Full Side</div>
+            <div class="meta">Signature build</div>
+          </div>
+          <div class="prices">
+            <div class="p"><span class="dur">2hr</span>$998</div>
+            <div class="p"><span class="dur">3hr</span>$1,298</div>
+            <div class="p"><span class="dur">4hr</span>$1,598</div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div>
+            <div class="name">Mini Petting Zoo</div>
+            <div class="meta">Weekend stretch</div>
+          </div>
+          <div class="prices">
+            <div class="p"><span class="dur">2hr</span>$549</div>
+            <div class="p"><span class="dur">3hr</span>$749</div>
+            <div class="p"><span class="dur">4hr</span>$949</div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div>
+            <div class="name">Goat Yoga</div>
+            <div class="meta">Weekend · unforgettable resident event</div>
+          </div>
+          <div class="prices">
+            <div class="p">$749</div>
+          </div>
+        </div>
+
+        <div class="addons">
+          <div class="addon">Full Side<span>$249</span></div>
+          <div class="addon">Critters on Top<span>$99</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lower">
+      <div class="card">
+        <h2>Arrival · travel · popular builds</h2>
+        <div class="pkg">
+          <div>
+            <div class="label">Signature Weekend</div>
+            <div class="hint">Standard 3hr + Full Side</div>
+          </div>
+          <div class="amt">$1,298</div>
+        </div>
+        <div class="pkg">
+          <div>
+            <div class="label">Community Weekend</div>
+            <div class="hint">Standard petting zoo · 2 hours</div>
+          </div>
+          <div class="amt">$749</div>
+        </div>
+        <div class="pkg">
+          <div>
+            <div class="label">Weekend Goat Yoga</div>
+            <div class="hint">Stand-alone resident / guest event</div>
+          </div>
+          <div class="amt">$749</div>
+        </div>
+        <p class="soft"><strong>Arrive 30 min early</strong> · setup 10–15 min · early-arrival fee if needed.<br>
+        <strong>Travel</strong> by distance · St. Augustine-class ~$300 list · furthest ~1 hr each way.</p>
+      </div>
+
+      <div class="card ticket">
+        <h2>Golden Ticket</h2>
+        <div class="hero">For existing partners</div>
+        <p class="blurb"><strong style="color:var(--accent);font-style:normal;">25% off services</strong> · <strong style="color:var(--accent);font-style:normal;">50% off travel</strong></p>
+        <div class="perks">
+          <div class="perk">
+            <div class="big">25%</div>
+            <div class="lab">off services</div>
+          </div>
+          <div class="perk">
+            <div class="big">50%</div>
+            <div class="lab">off travel</div>
+          </div>
+        </div>
+        <p class="blurb" style="text-align:center;font-style:italic;margin-bottom:0.05in;">Together, that <strong style="color:var(--accent);font-style:normal;">works out to around 40%</strong> off a typical all-in.</p>
+        <div class="example">
+          <div class="ex-lab">Example · Signature Weekend</div>
+          <strong>$1,298</strong> → <strong>$973.50</strong> services<br>
+          St. Augustine travel list ~$300 → partner <strong>~$150–175</strong><br>
+          All-in often <strong>~$1,200</strong> · CDDs typically no tax
+        </div>
+        <p class="who">Ask when you book — we’ll apply it for you.</p>
+      </div>
+    </div>
+    <p class="other">Other programming available upon request.</p>
+  </div>
+
+  <div class="footer">
+    <div>
+      <div class="cta-kicker">Amenity director · Forward as-is</div>
+      <div class="phone-lg">Call or text 914-263-1311</div>
+      <div class="contacts">sheehanhomestead.com &nbsp;·&nbsp; Text GOAT for discounts</div>
+    </div>
+    <div class="badge">
+      <div class="b-name">Sheehan Homestead</div>
+      <div class="stars">★★★★★</div>
+      <div class="b-meta">5.0 · Google reviews</div>
+    </div>
+  </div>
+  <div class="tiny">CDD amenity menu · 2026</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sheehan Homestead · Local Growth — Down the Street</title>
+<style>
+@font-face {
+  font-family: "Playfair Display";
+  src: url("fonts/PlayfairDisplay-Variable.ttf") format("truetype");
+  font-weight: 400 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src: url("fonts/PlayfairDisplay-Italic-Variable.ttf") format("truetype");
+  font-weight: 400 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("fonts/SourceSans3-Variable.ttf") format("truetype");
+  font-weight: 200 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("fonts/SourceSans3-Italic-Variable.ttf") format("truetype");
+  font-weight: 200 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Cinzel";
+  src: url("fonts/Cinzel-Variable.ttf") format("truetype");
+  font-weight: 400 900;
+  font-style: normal;
+}
+
+:root {
+  --sage: #4F6559;
+  --accent: #2F4F3E;
+  --cream: #F3EEE4;
+  --gold: #D4B45A;
+  --gold-deep: #B8923A;
+  --ink: #1a241c;
+  --muted: rgba(26,36,28,0.58);
+  --line: rgba(47,79,62,0.14);
+  --soft: rgba(47,79,62,0.06);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  width: 8.5in;
+  height: 11in;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: "Source Sans 3", "Liberation Sans", sans-serif;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+@page { size: letter; margin: 0; }
+
+.page {
+  width: 8.5in;
+  height: 11in;
+  background: var(--cream);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+/* thin chrome bars */
+.top-rule {
+  flex: 0 0 auto;
+  height: 0.085in;
+  background: var(--accent);
+}
+.gold-rule {
+  flex: 0 0 auto;
+  height: 0.028in;
+  background: linear-gradient(90deg, var(--gold-deep), var(--gold), var(--gold-deep));
+}
+
+.main {
+  flex: 1 1 auto;
+  padding: 0.42in 0.62in 0.22in;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  gap: 0.22in;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.28in;
+  padding-bottom: 0.18in;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand-block { max-width: 5.6in; }
+
+.brand-line {
+  font-family: "Cinzel", serif;
+  font-size: 8pt;
+  letter-spacing: 0.22em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 0.12in;
+}
+
+.brand-line .sep {
+  color: var(--gold-deep);
+  letter-spacing: 0.08em;
+  margin: 0 0.06in;
+  font-weight: 500;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 36pt;
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  color: var(--accent);
+}
+
+h1 .gold { color: var(--gold-deep); font-style: italic; font-weight: 500; }
+
+.sub {
+  margin-top: 0.1in;
+  font-size: 12.5pt;
+  font-style: italic;
+  color: var(--muted);
+  line-height: 1.4;
+  max-width: 5.3in;
+}
+
+.logo { flex: 0 0 1.2in; width: 1.2in; padding-top: 0.02in; }
+.logo img { width: 1.15in; height: auto; display: block; }
+
+/* concept chip */
+.chip-row {
+  display: flex;
+  align-items: center;
+  gap: 0.14in;
+  flex-wrap: wrap;
+}
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.08in;
+  background: var(--accent);
+  color: var(--cream);
+  font-weight: 700;
+  font-size: 8pt;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 0.055in 0.15in 0.05in;
+}
+.chip .dot {
+  width: 0.08in;
+  height: 0.08in;
+  border-radius: 50%;
+  background: var(--gold);
+}
+.chip-note {
+  font-size: 10pt;
+  color: var(--muted);
+  line-height: 1.3;
+}
+
+/* three soft pillars */
+.pillars {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.14in;
+}
+.pillar {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.16in 0.16in 0.18in;
+  min-height: 1.55in;
+}
+.pillar .lab {
+  font-family: "Cinzel", serif;
+  font-size: 7.5pt;
+  font-weight: 650;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  margin-bottom: 0.08in;
+  padding-bottom: 0.06in;
+  border-bottom: 1px solid rgba(212,180,90,0.45);
+}
+.pillar .val {
+  font-family: "Playfair Display", serif;
+  font-size: 14.5pt;
+  font-weight: 600;
+  color: var(--accent);
+  line-height: 1.2;
+  margin-bottom: 0.07in;
+}
+.pillar .desc {
+  font-size: 10pt;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+/* center story */
+.story {
+  background: var(--accent);
+  color: #fff;
+  border-radius: 12px;
+  padding: 0.26in 0.28in 0.24in;
+  border: 1.5px solid rgba(212,180,90,0.55);
+  position: relative;
+}
+.story .eyebrow {
+  font-family: "Cinzel", serif;
+  font-size: 7.5pt;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 650;
+  margin-bottom: 0.08in;
+}
+.story .title {
+  font-family: "Playfair Display", serif;
+  font-size: 20pt;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 0.12in;
+  max-width: 6.4in;
+}
+.story .title em {
+  font-style: italic;
+  color: #F5E6B8;
+  font-weight: 500;
+}
+.story .body {
+  font-size: 11.5pt;
+  line-height: 1.45;
+  color: rgba(255,255,255,0.86);
+  max-width: 6.5in;
+}
+.story .body strong { color: #fff; font-weight: 650; }
+
+.blend {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  gap: 0.1in;
+  align-items: center;
+  margin-top: 0.18in;
+}
+.blend .cell {
+  background: rgba(243,238,228,0.08);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 8px;
+  padding: 0.1in 0.12in;
+  text-align: center;
+}
+.blend .cell .n {
+  font-family: "Playfair Display", serif;
+  font-size: 13pt;
+  font-weight: 600;
+  color: var(--gold);
+  line-height: 1.15;
+}
+.blend .cell .d {
+  font-size: 8.5pt;
+  color: rgba(255,255,255,0.7);
+  margin-top: 0.03in;
+  line-height: 1.25;
+}
+.blend .x {
+  font-family: "Playfair Display", serif;
+  font-size: 16pt;
+  color: rgba(212,180,90,0.85);
+  font-weight: 500;
+}
+
+/* soft invite */
+.invite {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 0.16in;
+}
+.invite .panel {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.16in 0.18in;
+}
+.invite .h2 {
+  font-size: 7.5pt;
+  font-weight: 750;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 0.08in;
+}
+.invite ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.07in;
+}
+.invite li {
+  font-size: 10.5pt;
+  color: var(--ink);
+  line-height: 1.35;
+  padding-left: 0.16in;
+  position: relative;
+}
+.invite li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.28em;
+  width: 0.07in;
+  height: 0.07in;
+  border-radius: 50%;
+  background: var(--gold);
+}
+.invite li span {
+  color: var(--muted);
+}
+
+/* CTA */
+.cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.22in;
+  background: var(--soft);
+  border: 1px solid rgba(212,180,90,0.5);
+  border-radius: 12px;
+  padding: 0.18in 0.22in;
+  margin-top: auto;
+}
+.cta .ask {
+  font-size: 11pt;
+  line-height: 1.35;
+  color: var(--muted);
+}
+.cta .ask strong { color: var(--accent); font-weight: 700; }
+.cta .name {
+  font-family: "Playfair Display", serif;
+  font-size: 15pt;
+  font-weight: 600;
+  color: var(--accent);
+  line-height: 1.1;
+  margin-bottom: 0.04in;
+}
+.cta .phone {
+  font-family: "Playfair Display", serif;
+  font-size: 22pt;
+  font-weight: 600;
+  color: var(--gold-deep);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+.cta .meta {
+  margin-top: 0.05in;
+  font-size: 10pt;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+.cta .meta strong { color: var(--accent); font-weight: 650; }
+
+.qr-empty {
+  width: 1.12in;
+  height: 1.2in;
+  background: #fff;
+  border: 1.5px dashed rgba(47,79,62,0.35);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.06in;
+  flex: 0 0 auto;
+}
+.qr-empty .t1 {
+  font-size: 7.5pt;
+  font-weight: 750;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.qr-empty .t2 {
+  font-size: 8pt;
+  color: var(--muted);
+  margin-top: 0.04in;
+  line-height: 1.25;
+}
+
+.footer {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.1in 0.62in 0.14in;
+  border-top: 1px solid var(--line);
+  font-size: 7.5pt;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+.footer .mark {
+  color: var(--sage);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 7pt;
+}
+.footer .also {
+  font-size: 7pt;
+  color: rgba(26,36,28,0.42);
+  letter-spacing: 0.03em;
+  max-width: 3.6in;
+  text-align: right;
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="top-rule"></div>
+  <div class="gold-rule"></div>
+
+  <div class="main">
+    <div class="header">
+      <div class="brand-block">
+        <div class="brand-line">Sheehan Homestead <span class="sep">·</span> Local Growth</div>
+        <h1>Down the <span class="gold">Street</span></h1>
+        <p class="sub">Consulting for nearby businesses — a soft blend of philanthropy and marketing that brings people through the door.</p>
+      </div>
+      <div class="logo"><img src="logo-wordmark-raw.png" alt="Sheehan Homestead"></div>
+    </div>
+
+    <div class="chip-row">
+      <div class="chip"><span class="dot"></span> Soft concept · talk first</div>
+      <div class="chip-note">Not a Critters On-Call zoo menu — a separate lane for local owners.</div>
+    </div>
+
+    <div class="pillars">
+      <div class="pillar">
+        <div class="lab">Who</div>
+        <div class="val">Local businesses</div>
+        <div class="desc">Owners who need foot traffic, goodwill, and something neighbors actually remember.</div>
+      </div>
+      <div class="pillar">
+        <div class="lab">What</div>
+        <div class="val">A blended play</div>
+        <div class="desc">Charity posture × event-style marketing — designed together, not bolted on.</div>
+      </div>
+      <div class="pillar">
+        <div class="lab">How</div>
+        <div class="val">A short consult</div>
+        <div class="desc">We talk. We shape what fits your corner. No packaged price list on this page.</div>
+      </div>
+    </div>
+
+    <div class="story">
+      <div class="eyebrow">The idea</div>
+      <div class="title">Goodwill that <em>moves</em> people — and marketing that feels like a gift.</div>
+      <p class="body">Nearby shops, studios, cafés, and service businesses often want more than ads. They want <strong>presence</strong>, <strong>community warmth</strong>, and a reason for families to stop by. This lane pairs philanthropic framing with practical, event-style marketing — so giving and growth pull in the same direction.</p>
+      <div class="blend">
+        <div class="cell">
+          <div class="n">Philanthropy</div>
+          <div class="d">Goodwill · cause · care</div>
+        </div>
+        <div class="x">×</div>
+        <div class="cell">
+          <div class="n">Marketing</div>
+          <div class="d">Foot traffic · story</div>
+        </div>
+        <div class="x">→</div>
+        <div class="cell">
+          <div class="n">Your door</div>
+          <div class="d">Neighbors show up</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="invite">
+      <div class="panel">
+        <div class="h2">A fit if you want</div>
+        <ul>
+          <li>More walk-ins without sounding like a coupon <span></span></li>
+          <li>Event energy that feels local, not loud <span></span></li>
+          <li>A giving story that still grows the register <span></span></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <div class="h2">What this is not</div>
+        <ul>
+          <li>A petting-zoo rate card or package menu</li>
+          <li>A franchise pitch or “close my deals” lane</li>
+          <li>Hard quotes before we’ve talked</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cta">
+      <div>
+        <div class="name">Michael</div>
+        <div class="ask"><strong>Book a consult</strong> · talk it through · refine together</div>
+        <div class="phone">914-263-1311</div>
+        <div class="meta"><strong>Text GOAT</strong> &nbsp;·&nbsp; sheehanhomestead.com</div>
+      </div>
+      <div class="qr-empty" aria-label="Scan to talk">
+        <div class="t1">Scan to talk</div>
+        <div class="t2">Empty QR<br>drop yours</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="mark">Local Growth</div>
+    <div>Callahan · Metro Jacksonville · sheehanhomestead.com</div>
+    <div class="also">Also coming later: homestead consulting for other farms — not on this sheet.</div>
+  </div>
+</div>
+</body>
+</html>

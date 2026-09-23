@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sheehan Homestead — Homeschool Co-op Field Trips · Callahan</title>
+<style>
+@font-face {
+  font-family: "Great Vibes";
+  src: url("fonts/GreatVibes-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src: url("fonts/PlayfairDisplay-Variable.ttf") format("truetype");
+  font-weight: 400 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src: url("fonts/PlayfairDisplay-Italic-Variable.ttf") format("truetype");
+  font-weight: 400 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("fonts/SourceSans3-Variable.ttf") format("truetype");
+  font-weight: 200 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("fonts/SourceSans3-Italic-Variable.ttf") format("truetype");
+  font-weight: 200 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Cinzel";
+  src: url("fonts/Cinzel-Variable.ttf") format("truetype");
+  font-weight: 400 900;
+  font-style: normal;
+}
+
+:root {
+  --sage: #4F6559;
+  --accent: #2F4F3E;
+  --cream: #F3EEE4;
+  --gold: #D4B45A;
+  --white: #FFFFFF;
+  --muted: rgba(255,255,255,0.78);
+  --line: rgba(255,255,255,0.18);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  width: 8.5in;
+  height: 11in;
+  background: var(--sage);
+  color: var(--white);
+  font-family: "Source Sans 3", "Liberation Sans", sans-serif;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+@page {
+  size: 8.5in 11in;
+  margin: 0;
+}
+
+.page {
+  width: 8.5in;
+  height: 11in;
+  background: var(--sage);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.goat-banner {
+  flex: 0 0 auto;
+  background: var(--accent);
+  text-align: center;
+  padding: 0.07in 0.3in 0.065in;
+  border-bottom: 1px solid rgba(212,180,90,0.4);
+  font-size: 8.5pt;
+  font-weight: 750;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  line-height: 1.25;
+}
+.goat-banner .phone {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 8.5pt;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.9);
+  text-transform: none;
+  margin-left: 0.08in;
+}
+
+.main {
+  flex: 1 1 auto;
+  padding: 0.28in 0.52in 0.16in;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  gap: 0.16in;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.28in;
+  flex: 0 0 auto;
+}
+
+.kicker {
+  font-size: 8.5pt;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.08in;
+  line-height: 1.2;
+}
+
+h1 {
+  font-family: "Playfair Display", "Nimbus Roman", serif;
+  font-weight: 600;
+  font-size: 28pt;
+  line-height: 1.06;
+  letter-spacing: -0.015em;
+  max-width: 5.6in;
+}
+
+.sub {
+  margin-top: 0.08in;
+  font-size: 12pt;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--muted);
+  max-width: 5.2in;
+  line-height: 1.35;
+}
+
+.logo {
+  flex: 0 0 1.38in;
+  width: 1.38in;
+  text-align: center;
+  padding-top: 0.02in;
+}
+.logo img {
+  width: 1.34in;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.body {
+  display: grid;
+  grid-template-columns: 1fr 2.65in;
+  gap: 0.32in;
+  flex: 1 1 auto;
+  min-height: 0;
+  align-items: stretch;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.16in;
+  min-height: 0;
+}
+
+h2 {
+  font-size: 8.5pt;
+  font-weight: 750;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.09in;
+}
+
+.pkgs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.12in;
+}
+
+.pkg {
+  border: 1.25px solid rgba(255,255,255,0.32);
+  border-radius: 7px;
+  padding: 0.14in 0.16in 0.15in;
+  background: rgba(47,79,62,0.32);
+  display: grid;
+  grid-template-columns: 1.05in 1fr;
+  gap: 0.04in 0.14in;
+  align-items: center;
+}
+.pkg.feat {
+  background: rgba(47,79,62,0.52);
+  border-color: var(--gold);
+}
+.pkg .amt {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 28pt;
+  color: var(--gold);
+  line-height: 1;
+}
+.pkg .name {
+  font-size: 14pt;
+  font-weight: 750;
+  line-height: 1.15;
+  letter-spacing: 0.005em;
+}
+.pkg .meta {
+  grid-column: 2;
+  font-size: 10pt;
+  color: var(--muted);
+  line-height: 1.32;
+  margin-top: 0.02in;
+}
+.pkg .meta strong {
+  color: var(--white);
+  font-weight: 700;
+}
+
+.hard {
+  background: var(--accent);
+  border: 1.5px solid var(--gold);
+  border-radius: 7px;
+  padding: 0.12in 0.15in 0.13in;
+}
+.hard .rh {
+  font-size: 8pt;
+  font-weight: 750;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.07in;
+}
+.hard ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.055in;
+}
+.hard li {
+  font-size: 10pt;
+  font-weight: 600;
+  line-height: 1.3;
+  padding-left: 0.16in;
+  position: relative;
+}
+.hard li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.12in;
+  width: 0.07in;
+  height: 0.07in;
+  border-radius: 50%;
+  background: var(--gold);
+}
+.hard li span {
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.why {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1in;
+}
+.why h3 {
+  font-size: 11.5pt;
+  font-weight: 700;
+  margin-bottom: 0.02in;
+}
+.why p {
+  font-size: 10pt;
+  line-height: 1.35;
+  color: var(--muted);
+}
+
+.visual {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.12in;
+}
+.photo-frame {
+  background: var(--cream);
+  border-radius: 8px;
+  padding: 0.055in;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.16);
+  flex: 0 0 auto;
+}
+.photo-wrap {
+  height: 2.55in;
+  overflow: hidden;
+  border-radius: 5px;
+  background: var(--sage);
+}
+.photo-wrap img {
+  width: 118%;
+  max-width: none;
+  height: 118%;
+  object-fit: cover;
+  object-position: center 46%;
+  display: block;
+  margin: -6% 0 0 -9%;
+}
+.caption {
+  color: var(--cream);
+  font-size: 8pt;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.side-note {
+  background: rgba(47,79,62,0.4);
+  border: 1px solid rgba(212,180,90,0.45);
+  border-radius: 6px;
+  padding: 0.11in 0.13in 0.12in;
+  flex: 1 1 auto;
+}
+.side-note .sl {
+  font-size: 7.5pt;
+  font-weight: 750;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.05in;
+}
+.side-note p {
+  font-size: 9.5pt;
+  font-weight: 600;
+  line-height: 1.32;
+}
+.side-note p + p { margin-top: 0.05in; }
+.side-note span { color: var(--muted); font-weight: 500; }
+
+.proof {
+  flex: 0 0 auto;
+  padding-top: 0.04in;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 0.2in;
+}
+.proof-line {
+  font-size: 10pt;
+  line-height: 1.35;
+  color: var(--muted);
+  font-style: italic;
+}
+.proof-gold {
+  margin-top: 0.04in;
+  font-size: 9.5pt;
+  font-weight: 650;
+  color: var(--gold);
+  line-height: 1.3;
+}
+.panel-chip {
+  flex: 0 0 auto;
+  font-size: 7pt;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid rgba(212,180,90,0.65);
+  border-radius: 999px;
+  padding: 0.05in 0.12in 0.045in;
+  white-space: nowrap;
+}
+
+.footer {
+  flex: 0 0 auto;
+  background: var(--accent);
+  padding: 0.14in 0.42in 0.14in 0.52in;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 0.18in;
+  align-items: center;
+}
+.cta-kicker {
+  font-size: 7.5pt;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 750;
+  color: var(--gold);
+  margin-bottom: 0.04in;
+}
+.phone-lg {
+  font-family: "Playfair Display", serif;
+  font-size: 16.5pt;
+  font-weight: 600;
+  line-height: 1.1;
+}
+.contacts {
+  font-size: 9.5pt;
+  margin-top: 0.04in;
+  color: rgba(255,255,255,0.9);
+}
+.badge {
+  background: #fff;
+  color: #1a1a1a;
+  border-radius: 6px;
+  padding: 0.08in 0.13in 0.09in;
+  text-align: center;
+  min-width: 1.5in;
+}
+.badge .b-name {
+  font-family: "Great Vibes", cursive;
+  font-size: 13.5pt;
+  line-height: 1;
+  color: var(--accent);
+}
+.badge .stars {
+  color: #C9A227;
+  font-size: 10.5pt;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  margin-top: 0.015in;
+}
+.badge .b-meta {
+  font-size: 7.2pt;
+  font-weight: 650;
+  color: #333;
+  letter-spacing: 0.02em;
+}
+.qr-pad {
+  width: 1.05in;
+  height: 1.05in;
+  background: #fff;
+  border-radius: 7px;
+  padding: 0.065in 0.065in 0.05in;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+.qr-slot {
+  flex: 1 1 auto;
+  min-height: 0;
+  border: 1.25px dashed rgba(47,79,62,0.42);
+  border-radius: 4px;
+  background: #fff;
+}
+.qr-cap {
+  flex: 0 0 auto;
+  font-size: 6pt;
+  font-weight: 700;
+  color: var(--accent);
+  margin-top: 0.035in;
+  letter-spacing: 0.02em;
+  text-align: center;
+  line-height: 1;
+  text-transform: uppercase;
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="goat-banner">Text GOAT for discounts <span class="phone">914-263-1311</span></div>
+  <div class="main">
+
+    <div class="header">
+      <div>
+        <div class="kicker">Homeschool co-ops &nbsp;·&nbsp; Field trips · Callahan farm</div>
+        <h1>Book the co-op field trip</h1>
+        <p class="sub">Two locked packages. Cars and time are the deal — not figured out on the day.</p>
+      </div>
+      <div class="logo">
+        <img src="logo-wordmark.png" alt="Sheehan Homestead">
+      </div>
+    </div>
+
+    <div class="body">
+      <div class="left">
+        <div>
+          <h2>Field-trip packages</h2>
+          <div class="pkgs">
+            <div class="pkg feat">
+              <div class="amt">$250</div>
+              <div>
+                <div class="name">5 cars · 60 min</div>
+                <div class="meta">~25 people. Same $50/car math, locked as a group package.</div>
+              </div>
+            </div>
+            <div class="pkg">
+              <div class="amt">$500</div>
+              <div>
+                <div class="name">10 cars · 90 min</div>
+                <div class="meta">~50 people. <strong>MAX 10 cars.</strong> Longer visit, fuller farm morning.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hard">
+          <div class="rh">Hard lines · hold these</div>
+          <ul>
+            <li>Packages only — <span>$250 or $500. No custom phone quotes.</span></li>
+            <li>Individuals: Step Up approved — book now, get reimbursed. <span>Or the website. No phone custom for singles.</span></li>
+            <li>Stay longer = pay more time. <span>Time ends when the package ends.</span></li>
+            <li>Headcount and cars lock before the day. <span>Not on arrival.</span></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2>Why co-ops book</h2>
+          <div class="why">
+            <div>
+              <h3>A real farm morning</h3>
+              <p>Goats, bunnies, chickens — hands-on for the kids, low lift for organizers.</p>
+            </div>
+            <div>
+              <h3>Easy organizer yes</h3>
+              <p>Two prices. One car rule. Eligible families: Step Up reimbursement is live; free extras not OK.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="visual">
+        <div class="photo-frame">
+          <div class="photo-wrap">
+            <img src="homeschool-farm-cartoon.jpg" alt="Homeschool family visiting goats, bunnies, and chickens on the Callahan farm">
+          </div>
+        </div>
+        <div class="caption">Homeschool field trip — Callahan farm</div>
+        <div class="side-note">
+          <div class="sl">Gold · $50 list</div>
+          <p>Know the date → <strong>COMP</strong> Gold <span>($50 list)</span></p>
+          <p>No date yet → <strong>SELL</strong> Gold $50 <span>(deposit on the visit)</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="proof">
+      <div>
+        <p class="proof-line">Already hosting co-ops and field trips on the Callahan farm.</p>
+        <p class="proof-gold">Text GOAT to 914-263-1311 — or book at sheehanhomestead.com</p>
+      </div>
+      <div class="panel-chip">Homeschool · Field trip</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div>
+      <div class="cta-kicker">Book a co-op morning — Callahan, FL</div>
+      <div class="phone-lg">Call or text 914-263-1311</div>
+      <div class="contacts">sheehanhomestead@gmail.com &nbsp;·&nbsp; sheehanhomestead.com</div>
+    </div>
+    <div class="badge">
+      <div class="b-name">Sheehan Homestead</div>
+      <div class="stars">★★★★★</div>
+      <div class="b-meta">5.0 &nbsp;·&nbsp; Google reviews</div>
+    </div>
+    <div class="qr-pad" aria-label="QR drop zone">
+      <div class="qr-slot"></div>
+      <div class="qr-cap">QR — drop yours here</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

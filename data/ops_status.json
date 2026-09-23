@@ -1,0 +1,57 @@
+{
+  "as_of": "2026-09-23 18:50 ET",
+  "question": "Can I operate the business today?",
+  "overall": {
+    "grade": "yellow",
+    "label": "Yellow \u2014 operate with eyes open",
+    "why": "Animals + kit ready. Helpers named. Near-term sold gigs have deposit / confirm gaps (paid_verified = 0). Idle calendar free-busy NOT computed \u2014 wire GCal before calling white space 'green'.",
+    "checkered_eligible": false,
+    "checkered_note": "Checkered = crushing it. Not today \u2014 do not invent."
+  },
+  "cards": [
+    {
+      "id": "animals",
+      "title": "Animals ready",
+      "grade": "green",
+      "why": "Battle Row: 5/5 enclosures active \u00b7 tents on hand \u00b7 no death/trade ledger claimed.",
+      "source": "data/battle_row.json",
+      "source_kind": "real",
+      "deeper": "ops-animals.html"
+    },
+    {
+      "id": "staffing",
+      "title": "Staffing",
+      "grade": "yellow",
+      "why": "17 helpers on roster \u00b7 primary 3 \u00b7 confirmed_1024 names exist \u00b7 phone gaps on several \u00b7 directors vacant \u00b7 Ann-Marie owns scheduling.",
+      "source": "data/team_roster.json",
+      "source_kind": "real",
+      "deeper": "ops-people.html"
+    },
+    {
+      "id": "sold_gigs",
+      "title": "Sold-gigs delivery risk",
+      "grade": "yellow",
+      "why": "bookings_pipeline: 9 rows \u00b7 LOCKED 1 \u00b7 ACCEPTED 2 \u00b7 WAITING_YES/NEEDS_CONFIRM/STUB present \u00b7 paid_verified 0 \u00b7 as_of Sep 20 (stale vs today).",
+      "source": "data/bookings_pipeline.json",
+      "source_kind": "real_stale",
+      "deeper": "ops-gigs.html"
+    },
+    {
+      "id": "idle_calendar",
+      "title": "Idle calendar \u2192 Growth",
+      "grade": "yellow",
+      "why": "calendar_ops_snapshot.free_days = not_computed. Live upcoming sample exists; white-space inventory is EXAMPLE-only until GCal free-busy wire.",
+      "source": "data/calendar_ops_snapshot.json",
+      "source_kind": "stub_free_busy",
+      "deeper": "date-liquidation.html",
+      "handoff": "growth-home.html"
+    }
+  ],
+  "rules": [
+    "Green = shut up and operate",
+    "Yellow = operate + fix the named gap",
+    "Red = do not take new delivery until gap closed",
+    "Checkered = optional crush signal \u2014 never invent",
+    "Grade = HAVE vs opportunity \u2014 not a mega dashboard"
+  ]
+}

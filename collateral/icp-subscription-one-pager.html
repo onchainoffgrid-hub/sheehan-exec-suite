@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sheehan Homestead — Regional Subscription One-Pager</title>
+<style>
+
+@font-face {
+  font-family: "Great Vibes";
+  src: url("fonts/GreatVibes-Regular.ttf") format("truetype");
+  font-weight: 400; font-style: normal;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src: url("fonts/PlayfairDisplay-Variable.ttf") format("truetype");
+  font-weight: 400 900; font-style: normal;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src: url("fonts/PlayfairDisplay-Italic-Variable.ttf") format("truetype");
+  font-weight: 400 900; font-style: italic;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("fonts/SourceSans3-Variable.ttf") format("truetype");
+  font-weight: 200 900; font-style: normal;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("fonts/SourceSans3-Italic-Variable.ttf") format("truetype");
+  font-weight: 400 900; font-style: italic;
+}
+@font-face {
+  font-family: "Cinzel";
+  src: url("fonts/Cinzel-Variable.ttf") format("truetype");
+  font-weight: 400 900; font-style: normal;
+}
+
+:root {
+  --sage: #4F6559;
+  --accent: #2F4F3E;
+  --cream: #F3EEE4;
+  --gold: #D4B45A;
+  --white: #FFFFFF;
+  --muted: rgba(255,255,255,0.78);
+  --line: rgba(255,255,255,0.18);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  width: 8.5in; height: 11in;
+  background: var(--sage); color: var(--white);
+  font-family: "Source Sans 3", "Liberation Sans", sans-serif;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+@page { size: letter; margin: 0; }
+.page {
+  width: 8.5in; height: 11in; background: var(--sage);
+  display: flex; flex-direction: column; overflow: hidden; position: relative;
+}
+.goat-banner {
+  flex: 0 0 auto; background: var(--gold); color: var(--accent);
+  text-align: center; padding: 0.055in 0.3in 0.05in;
+  font-size: 9.5pt; font-weight: 750; letter-spacing: 0.14em;
+  text-transform: uppercase; line-height: 1.2;
+}
+.goat-banner strong { font-weight: 800; letter-spacing: 0.18em; }
+.goat-banner span {
+  font-weight: 650; letter-spacing: 0.06em; text-transform: none; font-size: 9pt;
+}
+.topbar { height: 0.06in; background: var(--accent); flex: 0 0 auto; }
+.main {
+  flex: 1 1 auto; padding: 0.16in 0.4in 0.08in;
+  display: flex; flex-direction: column; min-height: 0; gap: 0.1in;
+}
+.header {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  gap: 0.2in; flex: 0 0 auto;
+}
+.kicker {
+  font-size: 8pt; letter-spacing: 0.18em; font-weight: 600;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 0.04in; line-height: 1.2;
+}
+h1 {
+  font-family: "Playfair Display", serif; font-weight: 600;
+  font-size: 26pt; line-height: 1.05; letter-spacing: -0.015em;
+}
+.sub {
+  margin-top: 0.04in; font-size: 10.5pt; font-style: italic;
+  font-weight: 400; color: var(--muted); line-height: 1.3; max-width: 5.5in;
+}
+.logo { flex: 0 0 1.2in; width: 1.2in; }
+.logo img { width: 1.16in; height: auto; display: block; }
+.audience { display: flex; flex-wrap: wrap; gap: 0.06in; flex: 0 0 auto; }
+.pill {
+  background: rgba(47,79,62,0.5); border: 1px solid rgba(212,180,90,0.45);
+  border-radius: 999px; padding: 0.04in 0.11in;
+  font-size: 8pt; font-weight: 650;
+}
+.price-row {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0.11in; flex: 0 0 auto;
+}
+.ticket {
+  background: rgba(47,79,62,0.45); border: 1px solid rgba(212,180,90,0.55);
+  border-radius: 8px; padding: 0.12in 0.14in 0.13in;
+  display: flex; flex-direction: column; gap: 0.04in;
+}
+.ticket.feat { background: rgba(47,79,62,0.62); border-width: 1.5px; }
+.ticket .chip {
+  align-self: flex-start; font-size: 6.5pt; font-weight: 750;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent);
+  background: var(--gold); border-radius: 3px; padding: 0.02in 0.07in;
+}
+.ticket .sku {
+  font-size: 8pt; font-weight: 750; letter-spacing: 0.08em; color: var(--gold);
+  margin-top: 0.02in;
+}
+.ticket .name {
+  font-family: "Playfair Display", serif; font-size: 15pt; font-weight: 600; line-height: 1.1;
+}
+.ticket .amt {
+  font-family: "Playfair Display", serif; font-size: 28pt; font-weight: 600;
+  color: var(--gold); line-height: 1;
+}
+.ticket .amt span {
+  font-family: "Source Sans 3", sans-serif; font-size: 11pt;
+  font-weight: 500; color: var(--muted); margin-left: 0.04in;
+}
+.ticket .desc { font-size: 9pt; color: var(--muted); line-height: 1.3; margin-top: 0.02in; }
+.benefits {
+  display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 0.08in; flex: 0 0 auto;
+}
+.benefit {
+  background: rgba(47,79,62,0.35); border: 1px solid var(--line);
+  border-radius: 6px; padding: 0.08in 0.09in;
+}
+.benefit .bl {
+  font-size: 7pt; font-weight: 750; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 0.03in;
+}
+.benefit .bs { font-size: 9pt; font-weight: 650; line-height: 1.25; }
+.mid {
+  display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 0.11in;
+  flex: 1 1 auto; min-height: 0;
+}
+.panel {
+  background: rgba(47,79,62,0.28); border: 1px solid var(--line);
+  border-radius: 7px; overflow: hidden; display: flex; flex-direction: column;
+}
+.panel-head {
+  background: var(--accent); padding: 0.06in 0.12in 0.055in;
+  display: flex; justify-content: space-between; align-items: baseline;
+}
+.panel-head .who {
+  font-family: "Playfair Display", serif; font-size: 13pt; font-weight: 600;
+}
+.panel-head .tag {
+  font-size: 6.5pt; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--gold);
+}
+.panel-body { padding: 0.09in 0.12in 0.1in; flex: 1; display: flex; flex-direction: column; gap: 0.07in; }
+.panel-body p { font-size: 9.5pt; line-height: 1.35; color: var(--muted); }
+.panel-body strong { color: var(--white); font-weight: 700; }
+.visit-steps { list-style: none; display: flex; flex-direction: column; gap: 0.05in; }
+.visit-steps li {
+  font-size: 9.5pt; line-height: 1.3; padding-left: 0.22in; position: relative; color: var(--muted);
+}
+.visit-steps li::before {
+  content: attr(data-n); position: absolute; left: 0; color: var(--gold);
+  font-weight: 750; font-family: "Playfair Display", serif;
+}
+.visit-steps li strong { color: var(--white); }
+.optional {
+  border: 1px solid rgba(212,180,90,0.5); border-radius: 6px;
+  background: rgba(47,79,62,0.4); padding: 0.07in 0.1in;
+}
+.optional .ol {
+  font-size: 7pt; font-weight: 750; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 0.03in;
+}
+.optional .orow {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 0.08in;
+}
+.optional .oname { font-size: 11pt; font-weight: 700; }
+.optional .oprice {
+  font-family: "Playfair Display", serif; font-size: 16pt; font-weight: 600; color: var(--gold);
+}
+.optional .ometa { font-size: 8pt; color: var(--muted); margin-top: 0.02in; }
+.open-chip {
+  display: inline-block; margin-left: 0.04in;
+  font-size: 6pt; font-weight: 800; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--accent);
+  background: var(--gold); border-radius: 999px;
+  padding: 0.015in 0.055in 0.012in; vertical-align: middle;
+}
+.cartoon-wrap {
+  border-radius: 7px; overflow: hidden; border: 1px solid var(--line);
+  flex: 1; min-height: 0; display: flex; flex-direction: column;
+}
+.cartoon-wrap img {
+  width: 100%; flex: 1; object-fit: cover; object-position: center 30%; display: block; min-height: 0;
+}
+.cartoon-cap {
+  background: var(--accent); padding: 0.045in 0.1in;
+  font-size: 7.5pt; color: var(--muted); text-align: center;
+}
+.proof {
+  flex: 0 0 auto;
+  background: rgba(212,180,90,0.12); border-left: 3px solid var(--gold);
+  border-radius: 0 6px 6px 0; padding: 0.08in 0.12in;
+  font-size: 9.5pt; line-height: 1.35; color: var(--muted);
+}
+.proof strong { color: var(--white); }
+.bundle {
+  flex: 0 0 auto;
+  background: rgba(212,180,90,0.12); border: 1px dashed rgba(212,180,90,0.55);
+  border-radius: 6px; padding: 0.07in 0.12in;
+  font-size: 9pt; line-height: 1.3; color: var(--muted);
+}
+.bundle strong { color: var(--gold); font-weight: 750; }
+.bundle .sku { color: var(--white); font-weight: 700; }
+.honesty {
+  font-size: 8pt; color: var(--muted); font-style: italic; line-height: 1.3;
+}
+.footer {
+  flex: 0 0 auto; display: flex; justify-content: space-between; align-items: center;
+  gap: 0.14in; padding: 0.09in 0.36in 0.12in; border-top: 1px solid var(--line);
+  background: rgba(47,79,62,0.35);
+}
+.cta-kicker {
+  font-size: 7pt; font-weight: 750; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--gold);
+}
+.phone-lg {
+  font-family: "Playfair Display", serif; font-size: 15pt; font-weight: 600;
+  color: var(--gold); line-height: 1.15; margin-top: 0.015in;
+}
+.contacts { font-size: 8.5pt; color: var(--muted); margin-top: 0.02in; }
+.badge {
+  background: #fff; color: #1a1a1a; border-radius: 6px;
+  padding: 0.06in 0.1in 0.07in; text-align: center; min-width: 1.35in;
+}
+.badge .b-name {
+  font-family: "Great Vibes", cursive; font-size: 12pt; line-height: 1; color: var(--accent);
+}
+.badge .stars { color: #C9A227; font-size: 9pt; letter-spacing: 0.04em; margin-top: 0.01in; }
+.badge .b-meta { font-size: 6.5pt; font-weight: 650; color: #333; }
+.qr-pad {
+  width: 0.95in; height: 0.95in; background: #fff; border-radius: 7px;
+  padding: 0.05in 0.05in 0.04in; display: flex; flex-direction: column;
+  align-items: stretch; justify-content: flex-start; flex: 0 0 auto;
+}
+.qr-slot {
+  flex: 1 1 auto; min-height: 0; border: 1.25px dashed rgba(47,79,62,0.42);
+  border-radius: 4px; background: #fff;
+}
+.qr-cap {
+  flex: 0 0 auto; font-size: 5.5pt; font-weight: 700; color: var(--accent);
+  margin-top: 0.025in; letter-spacing: 0.02em; text-align: center;
+  line-height: 1; text-transform: uppercase;
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="goat-banner">Text <strong>GOAT</strong> for discounts &nbsp;·&nbsp; <span>914-263-1311</span></div>
+  <div class="topbar"></div>
+  <div class="main">
+    <div class="header">
+      <div>
+        <div class="kicker">Regional subscription &nbsp;·&nbsp; Seniors · PPEC · Adult day</div>
+        <h1>A calmer hour,<br>on the calendar</h1>
+        <p class="sub">Gentle animal visits for activity directors, nurses, and PPEC teams — standing monthly or quarterly cadence.</p>
+      </div>
+      <div class="logo"><img src="logo-wordmark.png" alt="Sheehan Homestead"></div>
+    </div>
+
+    <div class="audience">
+      <div class="pill">Senior communities</div>
+      <div class="pill">PPEC</div>
+      <div class="pill">Adult day care</div>
+      <div class="pill">Memory / AL / IL</div>
+    </div>
+
+    <div class="price-row">
+      <div class="ticket feat">
+        <span class="chip">Standing calendar</span>
+        <div class="sku">B-SUB-MO</div>
+        <div class="name">Monthly subscription</div>
+        <div class="amt">$175<span>/mo</span></div>
+        <div class="desc">A standing 60-minute visit locked on your calendar. Predictable for staff and families.</div>
+      </div>
+      <div class="ticket">
+        <span class="chip">Lighter cadence</span>
+        <div class="sku">B-SUB-Q</div>
+        <div class="name">Quarterly visit</div>
+        <div class="amt">$225<span>/visit</span></div>
+        <div class="desc">Seasonal or quarterly schedule. Same gentle hour, booked as needed.</div>
+      </div>
+    </div>
+
+    <div class="benefits">
+      <div class="benefit"><div class="bl">Calmer visits</div><div class="bs">Soft animals, soft voices, room to breathe</div></div>
+      <div class="benefit"><div class="bl">Engagement</div><div class="bs">Curiosity and connection residents notice</div></div>
+      <div class="benefit"><div class="bl">Joy</div><div class="bs">Moments families share and remember</div></div>
+      <div class="benefit"><div class="bl">Easier programming</div><div class="bs">Staff-reported: we run the hour</div></div>
+    </div>
+
+    <div class="mid">
+      <div class="panel">
+        <div class="panel-head">
+          <div class="who">Visit shape · optional one-off</div>
+          <div class="tag">Honest evidence</div>
+        </div>
+        <div class="panel-body">
+          <ul class="visit-steps">
+            <li data-n="1"><strong>We come to you</strong> — Metro Jax delivery from Callahan</li>
+            <li data-n="2"><strong>~60 minutes</strong> — bunnies usually best; goats &amp; chickens available</li>
+            <li data-n="3"><strong>Low lift</strong> — we set, run, and load out</li>
+          </ul>
+          <div class="optional">
+            <div class="ol">Optional one-off · Bunny Haven</div>
+            <div class="orow">
+              <div>
+                <div class="oname">B-BH1 · 60 min <span class="open-chip">OPEN</span></div>
+                <div class="ometa">OPEN vs consumer C-BH60 $249 — business list $235</div>
+              </div>
+              <div class="oprice">$235</div>
+            </div>
+          </div>
+          <p class="honesty">Soft benefits only — calmer visits, engagement, joy, easier programming. We do <strong style="color:#fff;font-style:normal;">not</strong> claim clinically proven lucidity or medical outcomes.</p>
+        </div>
+      </div>
+      <div class="cartoon-wrap">
+        <img src="sr-visit-cartoon.jpg" alt="Senior visit with gentle animals">
+        <div class="cartoon-cap">Senior · PPEC · adult day — Metro Jax</div>
+      </div>
+    </div>
+
+    <div class="proof">
+      <strong>Proof:</strong> Already visiting <strong>dozens to 100+ institutions</strong> across Metro Jacksonville — senior centers, PPECs, memory care, and adult day programs. Ask for current community names when you text.
+    </div>
+
+    <div class="bundle">
+      <strong>Default bundle:</strong> <span class="sku">petting zoo + STEM leave-behind</span> — soft animal hour plus a simple STEM / nature take-home for activities teams. Ask when you text GOAT.
+    </div>
+  </div>
+
+  <div class="footer">
+    <div>
+      <div class="cta-kicker">Lock a standing day · Activities / nursing</div>
+      <div class="phone-lg">Call or text 914-263-1311</div>
+      <div class="contacts">sheehanhomestead.com &nbsp;·&nbsp; Text GOAT for discounts</div>
+    </div>
+    <div class="badge">
+      <div class="b-name">Sheehan Homestead</div>
+      <div class="stars">★★★★★</div>
+      <div class="b-meta">5.0 · Google reviews</div>
+    </div>
+    <div class="qr-pad" aria-label="QR drop zone">
+      <div class="qr-slot"></div>
+      <div class="qr-cap">QR — drop yours here</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -62,3 +62,8 @@ Everything else that isn’t Ops or Growth lives here as partner, not a fourth e
 
 ## Money labels
 PayPal outside YTD ~$20.5k proven · ops book ~$42k unaudited · never invent.
+
+## Patch — Ops RYG + Support catalog (Sep 23 2026 ~6:50pm ET)
+- Operations hub tile → `ops-status.html` (RYG traffic light only).
+- Support hub tile → `support-catalog.html` (segments + date liquidation + collateral HTML links).
+- Deeper ops doors remain on `ops.html`.
