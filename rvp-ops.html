@@ -115,7 +115,7 @@ h1{font-size:clamp(1.6rem,3.2vw,2.15rem);margin:0 0 6px;letter-spacing:-.02em;fo
     <div>
       <div class="kicker">03 · Drill</div>
       <h3>RevOps / Leading–Lagging</h3>
-      <p>Today’s 11 · One-touch · lead sources · GTM seats · actions · mass-touch</p>
+      <p>GBP receipts · Today’s 11 · One-touch · seats · actions · mass-touch</p>
     </div>
     <span class="go">Open RevOps →</span>
   </a>
@@ -154,7 +154,24 @@ h1{font-size:clamp(1.6rem,3.2vw,2.15rem);margin:0 0 6px;letter-spacing:-.02em;fo
 
 <section class="drill" id="revops">
   <h2>RevOps / Leading–Lagging</h2>
-  <p class="blurb">Leading = lists &amp; seats · Lagging = overdue &amp; cash. One-touch stays the money accent.</p>
+  <p class="blurb">Leading = lists &amp; seats · Lagging = overdue &amp; cash · GBP discovery vs calls. One-touch stays the money accent.</p>
+
+  <div id="gbp-receipts" style="margin:0 0 14px;padding:16px 18px;border:1px solid #a855f788;border-radius:14px;background:linear-gradient(135deg,#2a1530,#121a2b)">
+    <div style="font-size:.68rem;color:#93a0b8;text-transform:uppercase;letter-spacing:.07em;margin-bottom:4px">GBP receipts · not audited $</div>
+    <h3 style="margin:0 0 8px;font-size:1.15rem;color:#f5d0fe">Google Business Profile · Sheehan Homestead</h3>
+    <p style="margin:0 0 10px;font-size:.88rem;color:#d4c4ff">Leading–lagging tension: Aug calls/interactions <b style="color:#3dd68c">up YoY</b>; discovery (views/search) <b style="color:#ffb020">down YoY</b>. Website in ads: <a href="https://sheehanhomestead.com/" target="_blank" rel="noopener" style="color:#f0abfc">sheehanhomestead.com</a> · kids party angle.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin:0 0 10px">
+      <div style="background:#0e1626;border:1px solid #1e2a44;border-radius:12px;padding:10px 12px"><div style="font-size:.65rem;color:#93a0b8;text-transform:uppercase">Apr–Sep interactions</div><div style="font-size:1.35rem;font-weight:800" id="gbp-int">1,258</div></div>
+      <div style="background:#0e1626;border:1px solid #1e2a44;border-radius:12px;padding:10px 12px"><div style="font-size:.65rem;color:#93a0b8;text-transform:uppercase">Website clicks</div><div style="font-size:1.35rem;font-weight:800" id="gbp-web">814</div></div>
+      <div style="background:#0e1626;border:1px solid #1e2a44;border-radius:12px;padding:10px 12px"><div style="font-size:.65rem;color:#93a0b8;text-transform:uppercase">Calls (Apr–Sep)</div><div style="font-size:1.35rem;font-weight:800" id="gbp-calls">68</div></div>
+      <div style="background:#0e1626;border:1px solid #1e2a44;border-radius:12px;padding:10px 12px"><div style="font-size:.65rem;color:#93a0b8;text-transform:uppercase">Aug interactions</div><div style="font-size:1.35rem;font-weight:800" id="gbp-aug-int">213 <span style="font-size:.75rem;color:#3dd68c">+4.4%</span></div></div>
+      <div style="background:#0e1626;border:1px solid #1e2a44;border-radius:12px;padding:10px 12px"><div style="font-size:.65rem;color:#93a0b8;text-transform:uppercase">Aug calls</div><div style="font-size:1.35rem;font-weight:800" id="gbp-aug-calls">12 <span style="font-size:.75rem;color:#3dd68c">+9.1%</span></div></div>
+      <div style="background:#0e1626;border:1px solid #1e2a44;border-radius:12px;padding:10px 12px"><div style="font-size:.65rem;color:#93a0b8;text-transform:uppercase">Aug views</div><div style="font-size:1.35rem;font-weight:800" id="gbp-aug-views">2,086 <span style="font-size:.75rem;color:#ffb020">−19.3%</span></div></div>
+      <div style="background:#0e1626;border:1px solid #1e2a44;border-radius:12px;padding:10px 12px"><div style="font-size:.65rem;color:#93a0b8;text-transform:uppercase">Aug search</div><div style="font-size:1.35rem;font-weight:800" id="gbp-aug-search">665 <span style="font-size:.75rem;color:#ffb020">−18.0%</span></div></div>
+    </div>
+    <p style="margin:0;font-size:.78rem;color:#93a0b8">Source: GBP Performance screenshots (Michael 2026-09-23) · <a href="assets/gbp/interactions-apr-sep.jpg" target="_blank" rel="noopener">receipts</a> · <span id="gbp-read">calls/interactions YoY up; discovery down</span></p>
+  </div>
+
   <div class="doors">
         <a class="door" href="todays-11.html" style="border-color:#a855f788"><h3>Today’s 11</h3><p>Per mature GTM seat · mailto + form only · NO auto-send.</p><span class="open" style="color:#f0abfc">Open play →</span></a>
 <a class="door" href="one-touch.html" style="border-color:#a855f788"><h3>One-touch</h3><p>#1 money motion · stage only.</p><span class="open" style="color:#f0abfc">Open →</span></a>
@@ -245,6 +262,22 @@ h1{font-size:clamp(1.6rem,3.2vw,2.15rem);margin:0 0 6px;letter-spacing:-.02em;fo
       var n=upcoming[0];
       set('k-gigs-s', 'Next '+n.date+' · '+(n.title||'').slice(0,28));
     }
+  });
+
+  load('data/gbp_performance.json').then(function(gbp){
+    if(!gbp||!gbp.windows) return;
+    var a=gbp.windows.apr_sep_2026||{}, u=gbp.windows.aug_2026||{};
+    function n(x){ return x==null?'—':Number(x).toLocaleString('en-US'); }
+    function yoy(p){ if(p==null) return ''; var s=p>0?'+':''; var col=p>=0?'#3dd68c':'#ffb020'; return ' <span style="font-size:.75rem;color:'+col+'">'+s+p+'%</span>'; }
+    var el;
+    if(el=document.getElementById('gbp-int')) el.textContent=n(a.profile_interactions);
+    if(el=document.getElementById('gbp-web')) el.textContent=n(a.website_clicks);
+    if(el=document.getElementById('gbp-calls')) el.textContent=n(a.calls);
+    if(el=document.getElementById('gbp-aug-int')) el.innerHTML=n(u.profile_interactions)+yoy(u.profile_interactions_yoy_pct);
+    if(el=document.getElementById('gbp-aug-calls')) el.innerHTML=n(u.calls)+yoy(u.calls_yoy_pct);
+    if(el=document.getElementById('gbp-aug-views')) el.innerHTML=n(u.profile_views)+yoy(u.profile_views_yoy_pct);
+    if(el=document.getElementById('gbp-aug-search')) el.innerHTML=n(u.search_appearances)+yoy(u.search_appearances_yoy_pct);
+    if(el=document.getElementById('gbp-read')) el.textContent=gbp.read||'';
   });
 })();
 </script>

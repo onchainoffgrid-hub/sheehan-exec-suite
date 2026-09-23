@@ -86,6 +86,8 @@ h1{font-size:1.55rem;margin:0 0 6px;letter-spacing:-.02em;font-weight:700}
   <ul>
     <li><b>Live OS:</b> RVP Ops · GTM seats · one-touch sources · Battle Row · Team + directors · peer cities</li>
     <li><b>Revenue motion proof (pattern, not audited financials):</b> Westminster CAP share → <b>$700 call</b> (recent pattern also cited on RVP / one-touch)</li>
+    <li id="gbp-proof"><b>GBP receipts (not audited $):</b> Apr–Sep 2026 — interactions <b>1,258</b> · website clicks <b>814</b> · calls <b>68</b>. Aug 2026 — interactions <b>213 (+4.4% YoY)</b> · calls <b>12 (+9.1%)</b> · views <b>2,086 (−19.3%)</b> · search <b>665 (−18.0%)</b>. Read: calls/interactions up YoY; discovery down. Ads point at <a href="https://sheehanhomestead.com/" target="_blank" rel="noopener">sheehanhomestead.com</a> (kids party angle). <a href="rvp-ops.html#revops">→ RevOps receipts</a></li>
+
     <li><b>Franchise thesis:</b> Jax-class / peer metros first — <b>not NYC first</b>; FOMO destination; field-marketing kit + segmented BD + ops know-how</li>
   </ul>
   <div class="ask"><b>Next ask (placeholder):</b> capital / partner ask TBD — do not invent valuation or round size here.</div>
@@ -226,4 +228,16 @@ h1{font-size:1.55rem;margin:0 0 6px;letter-spacing:-.02em;font-weight:700}
 <p class="note">Dump-home: Dashboard Bit · Brand: Sheehan Homestead / Critters on Call · Face: Investor · Frame: Assets / Proof / Founder / Co-founder / Ops · Switch to <a href="index.html">Operator / Franchise #0</a> for daily departments · Built 2026-09-22 ET</p>
 </div>
 <script src="shared/flow-spine.js" defer></script>
+
+<script>
+fetch('data/gbp_performance.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():null}).then(function(g){
+  if(!g||!g.windows) return;
+  var a=g.windows.apr_sep_2026||{}, u=g.windows.aug_2026||{};
+  var el=document.getElementById('gbp-proof');
+  if(!el) return;
+  function n(x){ return x==null?'—':Number(x).toLocaleString('en-US'); }
+  function y(p){ if(p==null) return ''; return (p>0?'+':'')+p+'% YoY'; }
+  el.innerHTML='<b>GBP receipts (not audited $):</b> Apr–Sep 2026 — interactions <b>'+n(a.profile_interactions)+'</b> · website clicks <b>'+n(a.website_clicks)+'</b> · calls <b>'+n(a.calls)+'</b>. Aug 2026 — interactions <b>'+n(u.profile_interactions)+' ('+y(u.profile_interactions_yoy_pct)+')</b> · calls <b>'+n(u.calls)+' ('+y(u.calls_yoy_pct)+')</b> · views <b>'+n(u.profile_views)+' ('+y(u.profile_views_yoy_pct)+')</b> · search <b>'+n(u.search_appearances)+' ('+y(u.search_appearances_yoy_pct)+')</b>. Read: calls/interactions up YoY; discovery down. Ads → <a href="https://sheehanhomestead.com/" target="_blank" rel="noopener">sheehanhomestead.com</a>. <a href="rvp-ops.html#revops">→ RevOps receipts</a>';
+}).catch(function(){});
+</script>
 </body></html>
