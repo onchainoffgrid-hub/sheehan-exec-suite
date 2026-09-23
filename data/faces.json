@@ -1,5 +1,5 @@
 {
-  "product": "Sheehan Homestead / Critters on Call — Ops → Sales → Investors spine",
+  "product": "Sheehan Homestead / Critters on Call \u2014 Ops \u2192 Sales \u2192 Investors spine",
   "dump_home": "Dashboard Bit",
   "as_of": "2026-09-22 ET",
   "flow_spine": {
@@ -27,7 +27,7 @@
         "id": "sponsor",
         "label": "Sponsor",
         "href": "bdr-tam.html?lane=Sponsor",
-        "note": "Festivals / foundations / CVBs already on file; compose shoutouts · goat-statue · mini-zoo sponsor-in-name"
+        "note": "Festivals / foundations / CVBs already on file; compose shoutouts \u00b7 goat-statue \u00b7 mini-zoo sponsor-in-name"
       },
       {
         "id": "violet",
@@ -38,6 +38,12 @@
         "id": "subscription",
         "label": "Subscription",
         "href": "bdr-tam.html?lane=Regional%20Subscription"
+      },
+      {
+        "id": "hail-mary",
+        "label": "Hail Mary",
+        "href": "bdr-tam.html?lane=Hail%20Mary",
+        "note": "Inspired \u00b7 God-connected \u00b7 Local celeb \u00b7 Philanthropist \u00b7 Local biz-sponsor \u00b7 Bazillionaires \u2014 same BDR GTM offers; public paths only"
       }
     ],
     "investor_links_back": {
@@ -57,7 +63,7 @@
         "id": "checklist",
         "label": "Checklist",
         "href": "investor-checklist.html",
-        "note": "Seed / pre-seed readiness — Assets · Proof · Founder · Co-founder · Ops"
+        "note": "Seed / pre-seed readiness \u2014 Assets \u00b7 Proof \u00b7 Founder \u00b7 Co-founder \u00b7 Ops"
       },
       {
         "id": "home",
@@ -76,7 +82,7 @@
       "id": "ops",
       "label": "Operations",
       "path": "index.html",
-      "role": "Franchise Layer Zero — Regional VP operator home. Money · Bookings · Actions · Ann-Marie.",
+      "role": "Franchise Layer Zero \u2014 Regional VP operator home. Money \u00b7 Bookings \u00b7 Actions \u00b7 Ann-Marie.",
       "departments": [
         "Sales",
         "Consumer Inbound",
@@ -99,21 +105,22 @@
       "id": "sales",
       "label": "Sales",
       "path": "bdr-tam.html",
-      "role": "Dialer face — Big Enterprise · Sponsor · Violet · Subscription · EMBA compose (donation / markup / idea).",
+      "role": "Dialer face \u2014 Big Enterprise \u00b7 Sponsor \u00b7 Violet \u00b7 Subscription \u00b7 Hail Mary (Inspired / Bazillionaires) \u00b7 EMBA compose.",
       "lanes": [
         "Regional Enterprise",
         "Sponsor",
         "Regional Subscription",
         "Regional Violet ~50%",
         "Regional Small Biz Programmer",
-        "EMBA on Call"
+        "EMBA on Call",
+        "Hail Mary"
       ]
     },
     {
       "id": "investor",
       "label": "Investors",
       "path": "investor-home.html",
-      "role": "Seed / pre-seed readiness frame — Assets · Proof · Founder · Co-founder · Ops. Capital & traction nested under checklist.",
+      "role": "Seed / pre-seed readiness frame \u2014 Assets \u00b7 Proof \u00b7 Founder \u00b7 Co-founder \u00b7 Ops. Capital & traction nested under checklist.",
       "groups": [
         "Frame spine (checklist)",
         "Traction",
@@ -132,5 +139,5 @@
     "interactive_gtm": "https://onchainoffgrid-hub.github.io/interactive-gtm/"
   },
   "local_base": "http://127.0.0.1:8765/",
-  "local_note": "http.server cwd = exec-suite → open /index.html, /bdr-tam.html, /investor-home.html"
+  "local_note": "http.server cwd = exec-suite \u2192 open /index.html, /bdr-tam.html, /investor-home.html"
 }

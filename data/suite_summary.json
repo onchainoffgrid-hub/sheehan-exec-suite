@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-22 21:45 ET",
+  "as_of": "2026-09-22 23:50 ET",
   "bdr_spec_aligned": {
     "CALL_NOW": 138,
     "WARM": 232,
@@ -39,7 +39,7 @@
     "panel": "org-whitespace.html"
   },
   "bdr_tam": {
-    "contacts": 2694,
+    "contacts": 2720,
     "accounts": 2385,
     "segments": 27,
     "with_email": 873,
@@ -52,14 +52,28 @@
       "Regional Subscription": 302,
       "Regional Violet ~50%": 188,
       "Regional Small Biz Programmer": 19,
-      "EMBA on Call": 11
+      "EMBA on Call": 11,
+      "Hail Mary": 26
     },
     "panel": "bdr-tam.html",
     "emba_compose_modes": [
       "donation",
       "markup",
       "idea"
-    ]
+    ],
+    "hail_mary": {
+      "panel": "bdr-tam.html?lane=Hail%20Mary",
+      "tags": [
+        "Inspired",
+        "God-connected",
+        "Local celeb",
+        "Philanthropist",
+        "Local biz-sponsor",
+        "Bazillionaires"
+      ],
+      "gtm": "same Sponsor/EMBA offer language",
+      "rows": 26
+    }
   },
   "flow_spine": {
     "faces": [
@@ -73,7 +87,8 @@
       "Big Enterprise",
       "Sponsor",
       "Violet",
-      "Subscription"
+      "Subscription",
+      "Hail Mary"
     ],
     "pages_with_rail": [
       "index.html",
@@ -90,7 +105,8 @@
       "investor-home.html",
       "investor-capital.html",
       "macro-radar.html",
-      "investor-checklist.html"
+      "investor-checklist.html",
+      "hail-mary.html"
     ],
     "investor_subchips": [
       "Checklist",

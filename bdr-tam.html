@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head>
 <meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>BDR TAM Dialer v2 · Lanes + Sponsor · Sheehan Homestead</title>
+<title>BDR TAM Dialer v2 · Lanes · Hail Mary · Sheehan Homestead</title>
 <style>
 :root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--bad:#ff5d6c;--violet:#a78bfa}
 *{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
@@ -78,6 +78,15 @@ a.btn.vio,button.btn.vio{border-color:#a78bfa66;background:#1a1530;color:#d4c4ff
 .modal h3{margin:0 0 8px}.modal pre{white-space:pre-wrap;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px;font-size:.78rem}
 .modal input{width:100%;margin:4px 0 8px;padding:8px;border-radius:8px;border:1px solid var(--line);background:var(--panel);color:var(--text)}
 .modal .row{margin-top:10px}
+
+.lanes button.hm.on{border-color:#f0abfc88;background:#2a1530;color:#f5d0fe}
+.hail-tags{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0;align-items:center}
+.hail-tags .sl{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-right:4px}
+.hail-tags button{appearance:none;border:1px solid var(--line);background:var(--panel);color:var(--muted);padding:6px 11px;border-radius:999px;font-size:.7rem;font-weight:700;cursor:pointer;min-height:34px}
+.hail-tags button.on{border-color:#f0abfc99;background:#2a1530;color:#f5d0fe}
+.badge.hm{background:#2a1530;color:#f5d0fe;border-color:#f0abfc66}
+.badge.god{background:#1a2030;color:#fde68a;border-color:#fbbf2466}
+.kpi.hm::after{background:linear-gradient(90deg,#f0abfc,var(--accent))}
 </style>
 </head><body data-flow-face="sales" data-flow-chip="bdr-tam"><div class="wrap">
 
@@ -96,7 +105,7 @@ a.btn.vio,button.btn.vio{border-color:#a78bfa66;background:#1a1530;color:#d4c4ff
 
 <header>
   <div>
-    <h1>BDR TAM Dialer v2 · Enterprise · Sponsor · EMBA</h1>
+    <h1>BDR TAM Dialer v2 · Enterprise · Sponsor · EMBA · Hail Mary</h1>
     <div class="sub">Score · notes · customer ticks · compose · violet fruit · real contacts only · <span id="asof">—</span></div>
   </div>
   <div class="sub">North star: <b>bookings</b> · <a href="index.html">Operator hub</a></div>
@@ -108,6 +117,7 @@ a.btn.vio,button.btn.vio{border-color:#a78bfa66;background:#1a1530;color:#d4c4ff
   <a href="consumer-inbound.html">Consumer / Violet</a>
   <a href="org-whitespace.html">Org white space</a>
   <a href="bdr-tam.html" class="active">BDR TAM v2</a>
+  <a href="bdr-tam.html?lane=Hail%20Mary">Hail Mary</a>
   <a href="bdr-pipeline.html">BDR Enterprise</a>
   <a href="revops-tam.html">RevOps</a>
   <a href="bookings-dates.html">Bookings</a>
@@ -127,13 +137,16 @@ a.btn.vio,button.btn.vio{border-color:#a78bfa66;background:#1a1530;color:#d4c4ff
   <div class="kpi violet"><div class="l">Violet ~50%</div><div class="v" id="k-lv">—</div><div class="s">lane</div></div>
   <div class="kpi warn"><div class="l">Small Biz Prog</div><div class="v" id="k-lb">—</div><div class="s">lane</div></div>
   <div class="kpi"><div class="l">EMBA on Call</div><div class="v" id="k-lm">—</div><div class="s">lane</div></div>
+  <div class="kpi hm"><div class="l">Hail Mary</div><div class="v" id="k-lhm">—</div><div class="s">Inspired · Bazillionaires</div></div>
 </div>
 
 <div class="card">
-  <h2>Michael’s lanes — tap to filter (Sales chips: Big Enterprise · Sponsor · Violet · Subscription)</h2>
+  <h2>Michael’s lanes — tap to filter (Sales: Enterprise · Sponsor · Violet · Subscription · Hail Mary / Bazillionaires)</h2>
   <div class="emba" id="emba-note">Loading EMBA note…</div>
   <div class="emba" id="sponsor-note" style="display:none;border-color:#ffb02044;color:var(--warn)">Loading sponsor note…</div>
+  <div class="emba" id="hail-note" style="display:none;border-color:#f0abfc55;color:#f5d0fe">Loading Hail Mary note…</div>
   <div class="lanes" id="lane-chips"></div>
+  <div class="hail-tags" id="hail-tags" style="display:none"></div>
   <div class="toolbar">
     <input id="q" type="search" placeholder="Search account / contact / email / phone / city / notes…" autocomplete="off"/>
     <select id="f-seg"><option value="">Fine segment: all</option></select>
@@ -184,7 +197,8 @@ a.btn.vio,button.btn.vio{border-color:#a78bfa66;background:#1a1530;color:#d4c4ff
 
 (function(){
   var ALL=[], LANES=[], SEGS=[], KPIS={};
-  var F={lane:'',seg:'',tier:'',mail:'',phone:'',cust:'',never:'',q:'',sort:'score'};
+  var F={lane:'',hailTag:'',seg:'',tier:'',mail:'',phone:'',cust:'',never:'',q:'',sort:'score'};
+  var HAIL_TAGS=['Inspired','God-connected','Local celeb','Philanthropist','Local biz-sponsor','Bazillionaires'];
   var K_NOTES='sheehan_bdr_v2_notes', K_CUST='sheehan_bdr_v2_customers', K_TAGS='sheehan_bdr_v2_tags', K_DONE='sheehan_bdr_v2_done', K_SEED='sheehan_bdr_v2_seeded';
   var STORE={notes:{},cust:{},tags:{},done:{}};
 
@@ -195,6 +209,7 @@ a.btn.vio,button.btn.vio{border-color:#a78bfa66;background:#1a1530;color:#d4c4ff
     'Regional Subscription':{subj:'Monthly mobile zoo for your residents — Callahan / Jax', body:'Hi {name},\n\nMichael Sheehan here — Sheehan Homestead / Critters on Call. We run recurring mobile petting-zoo visits for senior campuses and similar (monthly or occasional).\n\nActivity directors like it because we handle the animals and the flow; your team mostly needs a room or courtyard and a time slot. We are local to Callahan / Jax metro, so logistics stay easy.\n\nOpen to putting one visit on the calendar as a trial?\n\nMichael Sheehan\n914-263-1311 · sheehanhomestead.com'},
     'Regional Violet ~50%':{subj:'Birthday / farm visit dates — Sheehan Homestead (Callahan)', body:'Hi {name},\n\nMichael at Sheehan Homestead / Critters on Call — the Callahan farm and mobile petting zoo Jax families use for birthdays, farm mornings, and small gatherings.\n\nIf you are still hunting a date, reply with 2–3 windows (or age range + backyard vs farm visit) and I will check the calendar. Or text 914-263-1311.\n\nPublic info: sheehanhomestead.com\n\nMichael'},
     'Regional Small Biz Programmer':{subj:'Animal pop-up / family night at {account}?', body:'Hi {name},\n\nMichael Sheehan — fellow Jax small-biz operator (Sheehan Homestead / Critters on Call in Callahan).\n\nWe do soft animal pop-ups with breweries, bookstores, coffee shops, and indie venues — family hour, weekend porch set, goat-yoga night, cross-promo. Low production, high smiles.\n\nWant to try one date and see how it feels for your crowd?\n\nMichael\n914-263-1311 · sheehanhomestead.com'},
+    'Hail Mary':{subj:'Hail Mary — {account}', body:'{name} —\n\nMichael Sheehan, Sheehan Homestead / Critters on Call (Callahan / Jax). Inspired-by note — fill from row draft.\n\nOne ask: 15 minutes / farm visit / intro. No attachment.\n\nMichael'},
     'EMBA on Call':{subj:'EMBA on Call — donation ladder (quick ask)', body:'Hi {name},\n\nMichael Sheehan (Sheehan Homestead). EMBA on Call is a short ladder for founders / small biz who want to help or get help without a long sales cycle:\n\n1) Free homestead shout\n2) Small donation → goat-statue farm tour\n3) Mini-zoo sponsor-in-name\n4) Bigger donations\n5) Consulting (BDR / convert old leads)\n\nWhich rung is closest to where you are?\n\nMichael · 914-263-1311'}
   };
   var EMBA_MODES={
@@ -227,6 +242,10 @@ a.btn.vio,button.btn.vio{border-color:#a78bfa66;background:#1a1530;color:#d4c4ff
 
   function ok(r){
     if(F.lane && r.lane!==F.lane) return false;
+    if(F.hailTag){
+      var tags=r.hail_tags||[];
+      if(tags.indexOf(F.hailTag)<0) return false;
+    }
     if(F.seg && r.segment!==F.seg) return false;
     if(F.tier==='t1' && !r.is_tier1) return false;
     if(F.tier==='not' && r.is_tier1) return false;
@@ -238,7 +257,7 @@ a.btn.vio,button.btn.vio{border-color:#a78bfa66;background:#1a1530;color:#d4c4ff
     if(F.cust==='no' && isCust(r)) return false;
     if(F.never==='yes' && !r.never_hit) return false;
     if(F.q){
-      var hay=[r.lane,r.segment,r.account,r.contact,r.title,r.email,r.phone,r.city,r.county,r.penetration,r.notes,r.seed_note,noteOf(r),tagsOf(r),(r.related_accounts||[]).join(' ')].join(' ').toLowerCase();
+      var hay=[r.lane,r.segment,r.account,r.contact,r.title,r.email,r.phone,r.city,r.county,r.penetration,r.notes,r.seed_note,noteOf(r),tagsOf(r),(r.related_accounts||[]).join(' '),(r.hail_tags||[]).join(' '),r.hail_path_type||'',r.hail_why||''].join(' ').toLowerCase();
       if(hay.indexOf(F.q)<0) return false;
     }
     return true;
@@ -274,9 +293,45 @@ a.btn.vio,button.btn.vio{border-color:#a78bfa66;background:#1a1530;color:#d4c4ff
     if(id.indexOf('Small Biz')>=0) return 'smb';
     if(id.indexOf('EMBA')>=0) return 'emba';
     if(id==='Sponsor' || id.indexOf('Sponsor')>=0) return 'sp';
+    if(id.indexOf('Hail')>=0) return 'hm';
     return '';
   }
 
+  function syncHailNote(){
+    var hn=document.getElementById('hail-note');
+    var ht=document.getElementById('hail-tags');
+    var sn=document.getElementById('sponsor-note');
+    var en=document.getElementById('emba-note');
+    if(hn){
+      if(F.lane==='Hail Mary'){
+        hn.style.display='block';
+        hn.textContent=window.__HAIL_NOTE__||'Hail Mary — Inspired · God-connected · Local celeb · Philanthropist · Local biz-sponsor · Bazillionaires. Same BDR GTM: shoutouts · goat-statue · mini-zoo · EMBA ladder. Faith-honest where authentic. Public paths only.';
+      } else hn.style.display='none';
+    }
+    if(ht){
+      if(F.lane==='Hail Mary'){
+        ht.style.display='flex';
+        var hh='<span class="sl">Hail filters</span>';
+        hh+='<button type="button" data-ht="" class="'+(F.hailTag===''?'on':'')+'">All Hail</button>';
+        HAIL_TAGS.forEach(function(tag){
+          var n=ALL.filter(function(r){return r.lane==='Hail Mary' && (r.hail_tags||[]).indexOf(tag)>=0;}).length;
+          hh+='<button type="button" data-ht="'+esc(tag)+'" class="'+(F.hailTag===tag?'on':'')+'">'+esc(tag)+' <span class="n">'+n+'</span></button>';
+        });
+        ht.innerHTML=hh;
+        ht.querySelectorAll('button').forEach(function(b){
+          b.onclick=function(){
+            F.hailTag=b.getAttribute('data-ht')||'';
+            try{ var u=new URL(location.href); if(F.hailTag) u.searchParams.set('hail',F.hailTag); else u.searchParams.delete('hail'); history.replaceState(null,'',u);}catch(e){}
+            drawLanes(); draw();
+          };
+        });
+      } else {
+        ht.style.display='none'; ht.innerHTML='';
+        if(F.hailTag){ F.hailTag=''; try{ var u2=new URL(location.href); u2.searchParams.delete('hail'); history.replaceState(null,'',u2);}catch(e){} }
+      }
+    }
+    if(sn) sn.style.display=(F.lane==='Sponsor')?'block':'none';
+  }
   function drawLanes(){
     var h='<button type="button" data-lane="" class="'+(F.lane===''?'on':'')+'">All <span class="n">'+ALL.length+'</span></button>';
     LANES.forEach(function(l){
@@ -285,8 +340,28 @@ a.btn.vio,button.btn.vio{border-color:#a78bfa66;background:#1a1530;color:#d4c4ff
     });
     document.getElementById('lane-chips').innerHTML=h;
     document.querySelectorAll('#lane-chips button').forEach(function(b){
-      b.onclick=function(){ F.lane=b.getAttribute('data-lane')||''; try{ var u=new URL(location.href); if(F.lane) u.searchParams.set('lane',F.lane); else u.searchParams.delete('lane'); history.replaceState(null,'',u); if(document.body){ var chip='bdr-tam'; if(F.lane.indexOf('Enterprise')>=0) chip='big-enterprise'; else if(F.lane==='Sponsor') chip='sponsor'; else if(F.lane.indexOf('Subscription')>=0) chip='subscription'; else if(F.lane.indexOf('Violet')>=0) chip='violet'; document.body.setAttribute('data-flow-chip', chip);} }catch(e){} drawLanes(); draw(); };
+      b.onclick=function(){
+        F.lane=b.getAttribute('data-lane')||'';
+        if(F.lane!=='Hail Mary') F.hailTag='';
+        try{
+          var u=new URL(location.href);
+          if(F.lane) u.searchParams.set('lane',F.lane); else u.searchParams.delete('lane');
+          if(F.hailTag) u.searchParams.set('hail',F.hailTag); else u.searchParams.delete('hail');
+          history.replaceState(null,'',u);
+          if(document.body){
+            var chip='bdr-tam';
+            if(F.lane.indexOf('Enterprise')>=0) chip='big-enterprise';
+            else if(F.lane==='Sponsor') chip='sponsor';
+            else if(F.lane.indexOf('Subscription')>=0) chip='subscription';
+            else if(F.lane.indexOf('Violet')>=0) chip='violet';
+            else if(F.lane.indexOf('Hail')>=0) chip='hail-mary';
+            document.body.setAttribute('data-flow-chip', chip);
+          }
+        }catch(e){}
+        drawLanes(); draw();
+      };
     });
+    syncHailNote();
   }
 
   function paths(r){
@@ -310,17 +385,28 @@ a.btn.vio,button.btn.vio{border-color:#a78bfa66;background:#1a1530;color:#d4c4ff
     var r=COMPOSE_CTX.row; if(!r) return;
     var lane=r.lane||'Regional Enterprise';
     var p;
-    if(lane==='EMBA on Call'){
+    if(lane==='Hail Mary' && (r.compose_subj || r.compose_body)){
+      p={subj:r.compose_subj||'Hail Mary — {account}', body:r.compose_body||'', label:(r.hail_tags||[]).join(' · ')};
+    } else if(lane==='EMBA on Call'){
       p=EMBA_MODES[COMPOSE_CTX.mode]||EMBA_MODES.donation;
     } else {
       p=PITCH[lane]||PITCH['Regional Enterprise'];
     }
     var name=(r.contact||'there').split(/\s+/)[0]||'there';
+    if(!name || name==='(+') name='there';
     var subj=p.subj.replace(/\{account\}/g,r.account||'').replace(/\{name\}/g,name);
     var body=p.body.replace(/\{name\}/g,name).replace(/\{account\}/g,r.account||'');
-    var modeLabel=lane==='EMBA on Call'?(p.label||COMPOSE_CTX.mode):'';
+    var modeLabel='';
+    if(lane==='EMBA on Call') modeLabel=p.label||COMPOSE_CTX.mode;
+    else if(lane==='Hail Mary') modeLabel=p.label||'Inspired';
     document.getElementById('compose-title').textContent='Compose · '+lane+(modeLabel?' · '+modeLabel:'');
-    document.getElementById('compose-meta').textContent=(r.account||'')+(r.contact?' · '+r.contact:'')+(r.email?' · '+r.email:' · (no email on file)');
+    var meta=(r.account||'')+(r.contact?' · '+r.contact:'');
+    if(r.email) meta+=' · '+r.email;
+    else if(r.linkedin_url) meta+=' · LinkedIn';
+    else if(r.form_url) meta+=' · form/PR';
+    else meta+=' · (no email on file)';
+    if(r.hail_path_type) meta+=' · path: '+r.hail_path_type;
+    document.getElementById('compose-meta').textContent=meta;
     document.getElementById('compose-subj').value=subj;
     document.getElementById('compose-body').textContent=body;
     var mail=document.getElementById('compose-mailto');
@@ -328,10 +414,14 @@ a.btn.vio,button.btn.vio{border-color:#a78bfa66;background:#1a1530;color:#d4c4ff
     if(r.email && !r.stale_email){
       mail.href='mailto:'+encodeURIComponent(r.email).replace(/%40/g,'@')+'?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);
       mail.style.display='';
-      warn.textContent='Mailto / local compose only (HubSpot sync TBD). On-file email only — never invented. No attachments on first email.';
+      warn.textContent='Mailto / local compose only (HubSpot sync TBD). On-file / published org email only — never invented. No attachments on first email.';
     } else {
       mail.removeAttribute('href'); mail.style.display='none';
-      warn.textContent='No usable email on file — copy the draft and use Open form / phone / LinkedIn. Mailto / local only (HubSpot sync TBD). We do not invent addresses.';
+      var tip='No usable email on file — copy the draft and open LinkedIn / form / PR page. We do not invent addresses.';
+      if(r.linkedin_url) tip+=' LinkedIn: '+r.linkedin_url;
+      else if(r.form_url) tip+=' Path: '+r.form_url;
+      if(r.hail_path_label) tip+=' ('+r.hail_path_label+')';
+      warn.textContent=tip;
     }
   }
   function renderComposeModes(lane){
@@ -375,6 +465,7 @@ a.btn.vio,button.btn.vio{border-color:#a78bfa66;background:#1a1530;color:#d4c4ff
     document.getElementById('k-lv').textContent=by['Regional Violet ~50%']!=null?by['Regional Violet ~50%']:'—';
     document.getElementById('k-lb').textContent=by['Regional Small Biz Programmer']!=null?by['Regional Small Biz Programmer']:'—';
     document.getElementById('k-lm').textContent=by['EMBA on Call']!=null?by['EMBA on Call']:'—';
+    var khm=document.getElementById('k-lhm'); if(khm) khm.textContent=by['Hail Mary']!=null?by['Hail Mary']:'—';
     liveKpis(ALL);
   }
 
@@ -418,7 +509,7 @@ a.btn.vio,button.btn.vio{border-color:#a78bfa66;background:#1a1530;color:#d4c4ff
     document.getElementById('view-note').textContent='Showing '+rows.length+' · customers '+custN+' · notes '+notesN+' · never-hit '+neverN+' · sort: '+F.sort;
     liveKpis(rows);
     var tb=document.getElementById('tbody');
-    if(!rows.length){ var empty='No contacts in this filter.'; if(F.lane==='Sponsor') empty='Sponsor lane empty for this filter. Use festivals / foundations already on file, or climb the <b>EMBA on Call</b> ladder (donation · markup · idea). Season tip: festival lists + mini-zoo sponsor-in-name / goat-statue tour / shoutouts.'; tb.innerHTML='<tr><td colspan="7" class="muted">'+empty+'</td></tr>'; return; }
+    if(!rows.length){ var empty='No contacts in this filter.'; if(F.lane==='Sponsor') empty='Sponsor lane empty for this filter. Use festivals / foundations already on file, or climb the <b>EMBA on Call</b> ladder (donation · markup · idea). Season tip: festival lists + mini-zoo sponsor-in-name / goat-statue tour / shoutouts.'; if(F.lane==='Hail Mary') empty='No Hail Mary rows for this tag. Filters: Inspired · God-connected · Local celeb · Philanthropist · Local biz-sponsor · Bazillionaires. Same GTM offers as Sponsor/EMBA.'; tb.innerHTML='<tr><td colspan="7" class="muted">'+empty+'</td></tr>'; return; }
     var max=500, slice=rows.slice(0,max);
     tb.innerHTML=slice.map(function(r){
       var k=keyOf(r), cust=isCust(r), note=noteOf(r), tags=tagsOf(r), sc=r.score||0;
@@ -477,10 +568,14 @@ a.btn.vio,button.btn.vio{border-color:#a78bfa66;background:#1a1530;color:#d4c4ff
       document.getElementById('asof').textContent=d.as_of||'';
       document.getElementById('emba-note').textContent=d.emba_note||'EMBA on Call: donation ladder · markup · idea. Targets are Michael’s stated goals, not proven metrics.';
       var sn=document.getElementById('sponsor-note');
-      if(sn){ sn.textContent=d.sponsor_note||'Sponsor = festivals / foundations / CVBs already on file. Compose: shoutouts · goat-statue tour · mini-zoo sponsor-in-name.'; sn.style.display='block'; }
+      if(sn){ sn.textContent=d.sponsor_note||'Sponsor = festivals / foundations / CVBs already on file. Compose: shoutouts · goat-statue tour · mini-zoo sponsor-in-name.'; sn.style.display=( (new URLSearchParams(location.search||'')).get('lane')==='Sponsor' )?'block':'none'; }
+      window.__HAIL_NOTE__=d.hail_mary_note||'Hail Mary — Inspired · God-connected · Local celeb · Philanthropist · Local biz-sponsor · Bazillionaires. Same BDR GTM offers (shoutouts · goat-statue · mini-zoo · EMBA ladder). Public paths only.';
       try{
-        var qLane=(new URLSearchParams(location.search||'')).get('lane')||'';
+        var qs=new URLSearchParams(location.search||'');
+        var qLane=qs.get('lane')||'';
+        var qHail=qs.get('hail')||'';
         if(qLane){ F.lane=qLane; }
+        if(qHail){ F.hailTag=qHail; F.lane=F.lane||'Hail Mary'; }
       }catch(e){}
       var sel=document.getElementById('f-seg');
       SEGS.forEach(function(s){ var o=document.createElement('option'); o.value=s.id; o.textContent=s.id+' ('+s.contacts+')'; sel.appendChild(o); });
@@ -492,11 +587,13 @@ a.btn.vio,button.btn.vio{border-color:#a78bfa66;background:#1a1530;color:#d4c4ff
           else if(F.lane==='Sponsor') chip='sponsor';
           else if(F.lane.indexOf('Subscription')>=0) chip='subscription';
           else if(F.lane.indexOf('Violet')>=0) chip='violet';
+          else if(F.lane.indexOf('Hail')>=0) chip='hail-mary';
           document.body.setAttribute('data-flow-chip', chip);
         }
       }catch(e){}
       document.getElementById('src-note').textContent=
         'Data: data/bdr_tam_dialer.json v'+(d.version||'?')+' · '+(d.rule||'')+
+        ' · Hail Mary '+(d.kpis&&d.kpis.hail_mary!=null?d.kpis.hail_mary:((d.hail_mary||{}).targets||0))+
         ' · fruit +'+((d.kpis||{}).fruit_added||0)+
         ' · Patricia/Tasia seed: '+((d.kpis||{}).patricia_tasia_seed?'YES':'no')+
         ' · LS: '+K_NOTES;

@@ -21,7 +21,7 @@
     if (!document.body.getAttribute("data-flow-face") && !window.__FLOW_FACE__) {
       if (/^investor-/.test(path) || path === "macro-radar.html") FACE = "investor";
       else if (
-        /^(bdr-tam|bdr-pipeline|crm-icp|consumer-inbound|org-whitespace|catalogue-close)\.html$/.test(
+        /^(bdr-tam|bdr-pipeline|crm-icp|consumer-inbound|org-whitespace|catalogue-close|hail-mary)\.html$/.test(
           path
         )
       )
@@ -36,10 +36,12 @@
         else if (lane.indexOf("Sponsor") >= 0) CHIP = "sponsor";
         else if (lane.indexOf("Subscription") >= 0) CHIP = "subscription";
         else if (lane.indexOf("Violet") >= 0) CHIP = "violet";
+        else if (lane.indexOf("Hail") >= 0) CHIP = "hail-mary";
         else CHIP = "bdr-tam";
       } else if (path === "bdr-pipeline.html") CHIP = "big-enterprise";
       else if (path === "consumer-inbound.html") CHIP = "violet";
       else if (path === "crm-icp.html") CHIP = "subscription";
+      else if (path === "hail-mary.html") CHIP = "hail-mary";
       else if (path === "investor-checklist.html") CHIP = "checklist";
       else if (path === "investor-capital.html") CHIP = "capital";
       else if (path === "investor-home.html") CHIP = "home";
@@ -64,7 +66,7 @@
     ".flow-spine .flow-sub a.vio{border-color:#a78bfa55}" +
     ".flow-spine .flow-sub a.vio.on{border-color:#a78bfa99;background:#1a1530;color:#d4c4ff}" +
     ".flow-spine .flow-sub a.sp{border-color:#ffb02055}" +
-    ".flow-spine .flow-sub a.sp.on{border-color:#ffb02099;background:#2a2416;color:var(--warn,#ffb020)}" +
+    ".flow-spine .flow-sub a.sp.on{border-color:#ffb02099;background:#2a2416;color:var(--warn,#ffb020)}.flow-spine .flow-sub a.hm{border-color:#f0abfc55}.flow-spine .flow-sub a.hm.on{border-color:#f0abfc99;background:#2a1530;color:#f5d0fe}" +
     ".flow-spine .flow-hint{font-size:.72rem;color:var(--muted,#93a0b8);margin-top:8px;line-height:1.4}" +
     ".flow-spine .flow-hint a{color:var(--accent,#5b8cff)}" +
     /* hide legacy two-chip faces when spine present */
@@ -112,6 +114,7 @@
       CHIP === "subscription"
     ) +
     a("bdr-pipeline.html", "Pipeline", "", CHIP === "pipeline" || (CHIP === "big-enterprise" && /bdr-pipeline/.test(location.pathname || ""))) +
+    a("bdr-tam.html?lane=" + encodeURIComponent("Hail Mary"), "Hail Mary", "hm", CHIP === "hail-mary") +
     "</div>";
 
   var investorSubs =
@@ -142,7 +145,7 @@
     (FACE === "investor"
       ? '<div class="flow-hint">Investor face · <a href="investor-checklist.html">Seed / pre-seed checklist</a> (Assets · Proof · Founder · Co-founder · Ops) · hop to <a href="bookings-dates.html">bookings</a> / <a href="money-cfo.html">money</a> for Sales proof.</div>'
       : FACE === "sales"
-      ? '<div class="flow-hint">Sales face · Big Enterprise = Regional Enterprise lane · Sponsor = festivals / foundations already on file · Violet = consumer inbound · Subscription = recurring senior / campus.</div>'
+      ? '<div class="flow-hint">Sales face · Big Enterprise · Sponsor · Violet · Subscription · Hail Mary (Inspired · God-connected · Local celeb · Philanthropist · Local biz-sponsor · Bazillionaires — same GTM offers).</div>'
       : '<div class="flow-hint">Operations face · Money · Bookings · Actions · Ann-Marie. Use Sales chips to dial without hunting.</div>') +
     "</nav>";
 

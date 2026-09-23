@@ -19,7 +19,7 @@ cd /workspace/dashboard/exec-suite && python3 -m http.server 8765
 | Consumer Inbound (Violet/B2C) | [consumer-inbound.html](consumer-inbound.html) | Interest **34** · GoDaddy pass **27** · waivers **GAP** · **4** forms missing sheets |
 | Bookings & Dates | [bookings-dates.html](bookings-dates.html) | Fall priority **129** real rows; $ booked **PLACEHOLDER** |
 | Money (CFO) | [money-cfo.html](money-cfo.html) | PayPal H2 **outside $15,408.66** · 42 customers · owner $4,254 separated |
-| BDR TAM Dialer v2 | [bdr-tam.html](bdr-tam.html) | **Enterprise · Sponsor · Subscription · Violet · Small Biz · EMBA** · EMBA compose: donation / markup / idea · `data/bdr_tam_dialer.json` |
+| BDR TAM Dialer v2 | [bdr-tam.html](bdr-tam.html) | **Enterprise · Sponsor · Subscription · Violet · Small Biz · EMBA · Hail Mary** · Hail filters: Inspired · God-connected · Local celeb · Philanthropist · Local biz-sponsor · Bazillionaires · same GTM offers · `data/hail_mary.json` |
 | BDR Enterprise v1 | [bdr-pipeline.html](bdr-pipeline.html) | **REAL** CALL_NOW 138 · Warm 81 · Needs 140 · Later 11 · Red-tape 44 + filterable dialer |
 | RevOps TAM | [revops-tam.html](revops-tam.html) | Primary SAM **$572,873** · tier rollup · segment counts |
 | Social & Reach | [social-reach.html](social-reach.html) |
@@ -66,7 +66,7 @@ JSON exports under [`data/`](data/) for offline refresh:
 Shared top rail: `shared/flow-spine.js` on Operator, Sales, and Investor pages.
 
 - **Operations** → `index.html` (money / bookings / actions / Ann-Marie)
-- **Sales** subchips: BDR TAM · Big Enterprise · Sponsor · Violet · Subscription
+- **Sales** subchips: BDR TAM · Big Enterprise · Sponsor · Violet · Subscription · Hail Mary
 - **Investors** → `investor-checklist.html` (Seed / pre-seed: Assets · Proof · Founder · Co-founder · Ops) · `investor-home.html` · capital nested · Sales proof (bookings/money)
 
 Inject/refresh: `python3 scripts/inject_flow_spine.py`
@@ -81,6 +81,8 @@ See [LAYOUT_CONTRACT.md](LAYOUT_CONTRACT.md) for shared visual tokens and Money 
 - Pages: https://onchainoffgrid-hub.github.io/sheehan-exec-suite/
 - Consumer: https://onchainoffgrid-hub.github.io/sheehan-exec-suite/consumer-inbound.html
 - BDR TAM: https://onchainoffgrid-hub.github.io/sheehan-exec-suite/bdr-tam.html
+- Hail Mary (TAM lane): https://onchainoffgrid-hub.github.io/sheehan-exec-suite/bdr-tam.html?lane=Hail%20Mary
+- Bazillionaires filter: https://onchainoffgrid-hub.github.io/sheehan-exec-suite/bdr-tam.html?lane=Hail%20Mary&hail=Bazillionaires
 - Jax Buzz: https://onchainoffgrid-hub.github.io/sheehan-exec-suite/jax-local-buzz.html
 
 
