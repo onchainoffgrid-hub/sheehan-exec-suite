@@ -325,8 +325,10 @@ tr.done-row{opacity:.72}
     });
     document.getElementById('tag-people').textContent = list.length+' contacts';
     document.getElementById('tb-people').innerHTML = list.map(function(c){
-      var subj = c.subject || 'Sheehan Homestead / Critters follow-up';
-      var body = 'Hi '+(c.name||'').split(/[\/(]/)[0].trim()+',\n\n';
+            var first = (c.name||'').split(/[\/(]/)[0].trim() || 'there';
+      var subj = c.subject || ('Farm visit / birthday dates — Sheehan Homestead');
+      // Mailto / local only. HubSpot sync TBD. No attachments on first email.
+      var body = 'Hi '+first+',\n\nMichael at Sheehan Homestead / Critters on Call — Callahan farm + mobile petting zoo for Jax families (birthdays, farm mornings, small gatherings).\n\nIf you still want a date, reply with 2–3 windows (or age range + backyard vs farm visit) and I will check the calendar. Or text 914-263-1311.\n\nPublic info: sheehanhomestead.com\n\nMichael';
       var mail = c.email ? mailtoHref(c.email, subj, body) : '';
       var tel = c.phone ? telHref(c.phone) : '';
       var contactBits = '';
