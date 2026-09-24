@@ -23,6 +23,17 @@ h1{font-size:1.45rem;margin:0 0 4px}.sub{color:var(--muted);font-size:.88rem;mar
 .tag.warn{border-color:#ffb02066;color:var(--warn)}.tag.bad{border-color:#ff5d6c55;color:var(--bad)}.tag.good{border-color:#3dd68c55;color:var(--good)}
 .section{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin:18px 0 8px}
 .note{color:var(--muted);font-size:.75rem;margin-top:18px}
+.donow-wrap{margin:0 0 16px;padding:14px;border-radius:14px;border:2px solid #c9a22788;background:linear-gradient(135deg,#2a2210,#121a2b)}
+.donow-wrap h2{margin:0 0 8px;font-size:1.05rem;color:#fde68a}
+.donow-wrap .hint{font-size:.78rem;color:#9dffc5;margin:0 0 10px}
+.card.donow{border-color:#a78bfa88;background:#14101f}
+.card .actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+a.btn-open,button.btn-done{display:inline-block;padding:8px 14px;border-radius:10px;font-weight:700;font-size:.82rem;text-decoration:none;border:0;cursor:pointer;font-family:inherit}
+a.btn-open{background:#22c55e;color:#052e16}
+a.btn-gmail{background:#38bdf8;color:#0c4a6e}
+button.btn-done{background:#a78bfa;color:#1e1b4b}
+button.btn-done.is-done{background:#13281d;color:#3dd68c}
+.card.is-done-visual{opacity:.55;border-color:#3dd68c55}
 </style></head>
 <body data-flow-face="ops"><div class="wrap">
 <div class="top">
@@ -38,6 +49,11 @@ h1{font-size:1.45rem;margin:0 0 4px}.sub{color:var(--muted);font-size:.88rem;mar
 </header>
 <div class="banner"><b>Stub:</b> Seeded from known bookings statuses (WAITING / MIA / NO_PAY / STUB). Full closed-lost call-sheet scrape = Phase D (deferred). No invented phones or $.</div>
 
+<div class="donow-wrap">
+  <h2>Do now</h2>
+  <p class="hint">Open mail → you edit &amp; send → Done. Bot never sends.</p>
+  <div class="grid" id="donow"></div>
+</div>
 <div class="section">Open · awaiting reply</div>
 <div class="grid" id="open"></div>
 <div class="section">Closed-lost / messy / pause</div>
@@ -52,20 +68,66 @@ h1{font-size:1.45rem;margin:0 0 4px}.sub{color:var(--muted);font-size:.88rem;mar
 </div>
 <script>
 (function(){
-  function card(b, extraTags){
-    var tags=['<span class="tag">'+(b.status||'—')+'</span>'];
-    (extraTags||[]).forEach(function(t){ tags.push('<span class="tag '+t[1]+'">'+t[0]+'</span>'); });
-    if(b.date) tags.push('<span class="tag">'+b.date+'</span>');
-    return '<div class="card"><h3>'+(b.title||'Untitled')+'</h3><p>'+(b.notes||b.next_action||'No note on file')+'</p><div class="tags">'+tags.join('')+'</div></div>';
+  function esc(s){return String(s||'').replace(/[&<>"']/g,function(c){return({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]);});}
+  function doneKey(id){return 'ops_pipeline_done_'+id;}
+  function isDone(id){return localStorage.getItem(doneKey(id))==='1';}
+  function setDone(id,on){localStorage.setItem(doneKey(id),on?'1':'0');}
+  function openHref(b){
+    if(b.open_email_href) return b.open_email_href;
+    if(b.email) return 'mailto:'+b.email;
+    return null;
+  }
+  function card(b, extraTags, opts){
+    opts=opts||{};
+    var tags=['<span class="tag">'+(esc(b.status)||'—')+'</span>'];
+    (extraTags||[]).forEach(function(t){ tags.push('<span class="tag '+t[1]+'">'+esc(t[0])+'</span>'); });
+    if(b.date) tags.push('<span class="tag">'+esc(b.date)+'</span>');
+    if(b.quoted_mid!=null) tags.push('<span class="tag warn">$'+esc(b.quoted_mid)+'</span>');
+    if(b.weighted_value!=null) tags.push('<span class="tag good">weighted $'+esc(b.weighted_value)+'</span>');
+    if(b.violet) tags.push('<span class="tag">Violet</span>');
+    var actions='';
+    if(opts.donow){
+      var href=openHref(b);
+      var openBtn=href?('<a class="btn-open" href="'+esc(href)+'">Open email</a>'):'';
+      var gmail=(href&&href.indexOf('brooks-click')>=0)?'<a class="btn-open btn-gmail" href="brooks-click.html">Mail / Gmail / Done page</a>':'';
+      actions='<div class="actions">'+openBtn+gmail+
+        '<button type="button" class="btn-done'+(isDone(b.id)?' is-done':'')+'" data-done-id="'+esc(b.id)+'">'+(isDone(b.id)?'Done ✓':'Done')+'</button></div>';
+    }
+    var cls='card'+(opts.donow?' donow':'')+(opts.donow&&isDone(b.id)?' is-done-visual':'');
+    return '<div class="'+cls+'" data-booking="'+(esc(b.id)||'')+'"><h3>'+esc(b.title||'Untitled')+'</h3><p>'+esc(b.notes||b.next_action||'No note on file')+'</p><div class="tags">'+tags.join('')+'</div>'+actions+'</div>';
+  }
+  function paintDoneButtons(root){
+    (root||document).querySelectorAll('button[data-done-id]').forEach(function(btn){
+      btn.onclick=function(){
+        var id=btn.getAttribute('data-done-id');
+        var on=!isDone(id);
+        setDone(id,on);
+        btn.classList.toggle('is-done',on);
+        btn.textContent=on?'Done ✓':'Done';
+        var card=btn.closest('.card');
+        if(card) card.classList.toggle('is-done-visual',on);
+      };
+    });
   }
   fetch('data/bookings_pipeline.json',{cache:'no-store'}).then(function(r){if(!r.ok)throw new Error(r.status);return r.json();})
   .then(function(d){
-    var open=[], closed=[];
+    var open=[], closed=[], donow=[];
     (d.bookings||[]).forEach(function(b){
       var s=(b.status||'').toUpperCase();
-      if(s==='WAITING_YES'||s==='NEEDS_CONFIRM'||s==='PIPELINE_MIA'||s==='STUB') open.push(b);
+      var awaitingSend = b.do_now===true || s==='QUOTE_DRAFT' || s==='QUOTE_SENT' || s.indexOf('QUOTE_SENT')===0;
+      if(awaitingSend) donow.push(b);
+      else if(s==='WAITING_YES'||s==='NEEDS_CONFIRM'||s==='PIPELINE_MIA'||s==='STUB') open.push(b);
       else if(s==='NO_PAY'||s.indexOf('PAUSE')>=0) closed.push(b);
     });
+    var donowEl=document.getElementById('donow');
+    if(donowEl){
+      donowEl.innerHTML = donow.length ? donow.map(function(b){
+        var tags=[['Do now','warn']];
+        if((b.status||'').toUpperCase().indexOf('QUOTE')>=0) tags.push(['you send','good']);
+        return card(b, tags, {donow:true});
+      }).join('') : '<div class="card"><h3>Nothing queued</h3><p>No do_now / QUOTE_DRAFT rows.</p></div>';
+      paintDoneButtons(donowEl);
+    }
     document.getElementById('open').innerHTML = open.length ? open.map(function(b){
       var tags=[];
       if((b.status||'').toUpperCase()==='PIPELINE_MIA') tags.push(['MIA','bad']);
@@ -75,7 +137,7 @@ h1{font-size:1.45rem;margin:0 0 4px}.sub{color:var(--muted);font-size:.88rem;mar
     document.getElementById('closed').innerHTML = closed.length ? closed.map(function(b){
       return card(b, [['closed-ish','bad']]);
     }).join('') : '<div class="card"><h3>None in seed</h3><p>Empty honest.</p></div>';
-    document.getElementById('foot').textContent='as_of '+(d.as_of||'')+' · bookings_pipeline seed · Phase D deferred';
+    document.getElementById('foot').textContent='as_of '+(d.as_of||'')+' · bookings_pipeline · Do now open-in-mail only · Phase D deferred';
   }).catch(function(e){
     document.getElementById('open').innerHTML='<div class="card"><h3>Load failed</h3><p>'+e+'</p></div>';
   });

@@ -40,6 +40,9 @@ h1{font-size:clamp(1.5rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;font
 .note{color:var(--muted);font-size:.75rem;margin-top:18px}
 .chip{display:inline-block;margin:0 0 16px;padding:8px 14px;border-radius:999px;border:1px solid #fbbf2466;background:#2a2210;color:#fde68a;font-size:.8rem;font-weight:650;text-decoration:none}
 .chip:hover{text-decoration:none;border-color:#fbbf24}
+.chip.donow{display:block;width:fit-content;max-width:100%;margin:0 0 14px;padding:12px 16px;border-radius:14px;border:2px solid #fbbf24;background:linear-gradient(135deg,#2a2210,#13281d);color:#fde68a;font-size:.92rem;font-weight:750;line-height:1.35;box-shadow:0 0 0 1px #3dd68c44}
+.chip.donow:hover{border-color:#fbbf24;text-decoration:none}
+.chip.donow .one{display:block;font-size:.78rem;font-weight:600;color:#9dffc5;margin-top:4px}
 .bar{height:10px;background:var(--panel);border-radius:99px;overflow:hidden;border:1px solid var(--line);margin:8px 0 0}
 .bar>i{display:block;height:100%;background:linear-gradient(90deg,var(--brand-green),var(--brand-gold-bright));width:15%}
 .hair{height:2px;border:0;margin:0 0 14px;background:linear-gradient(90deg,transparent,var(--brand-gold),transparent);opacity:.55}
@@ -70,6 +73,9 @@ h1{font-size:clamp(1.5rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;font
 
 <a class="chip" href="ops-delivery.html">← Ops calendar (idle capacity)</a>
 <a class="chip" href="ops-capacity.html">Ops capacity · 18 months</a>
+<a class="chip donow" href="brooks-click.html" id="donow-brooks">Do now · Brooks Violet · Nov 21 · $629
+  <span class="one">Open mail → you send → Done</span>
+</a>
 <a class="chip" href="growth-pipeline.html#clone" id="clone-chip">Clone last year · loading…</a>
 
 <div class="cols" aria-label="Pipeline bookings AR">

@@ -46,6 +46,9 @@ tr:hover td{background:#0f1728}
 .note{color:var(--muted);font-size:.75rem;margin-top:16px}
 .empty{color:var(--muted);padding:16px}
 .hair{height:2px;background:linear-gradient(90deg,transparent,var(--brand-gold),transparent);opacity:.55;margin:0 0 14px;border:0}
+button.btn-done-row{appearance:none;margin-top:6px;padding:4px 10px;border-radius:8px;border:1px solid #a78bfa66;background:#1e1b4b;color:#c4b5fd;font-size:.68rem;font-weight:700;cursor:pointer;display:block}
+button.btn-done-row.is-done{background:#13281d;border-color:#3dd68c66;color:#3dd68c}
+a.open-email-label{font-weight:700}
 </style></head>
 <body><div class="wrap">
 <p class="crumb"><a href="index.html">Operator</a> → <a href="growth-simple.html">Growth</a> → <b>Weighted pipeline</b></p>
@@ -110,16 +113,32 @@ tr:hover td{background:#0f1728}
     const cls=s==='michael_specified'?'michael':s==='placeholder_standard'?'placeholder':s==='unknown'?'unknown':'';
     return `<span class="src ${cls}">${esc(s||'unknown')}</span>`;
   }
-  function mailto(email, account){
+  function doneKey(id){return 'growth_pipeline_done_'+(id||'');}
+  function isDone(id){return !!id && localStorage.getItem(doneKey(id))==='1';}
+  function mailto(email, account, rowId){
     if(!email) return '—';
     const sub=encodeURIComponent('Sheehan Homestead · next step — '+(account||''));
-    return `<a href="mailto:${esc(email)}?subject=${sub}">${esc(email)}</a>`;
+    const id=rowId||email||account||'';
+    const on=isDone(id);
+    return `<a class="open-email-label" href="mailto:${esc(email)}?subject=${sub}">Open email</a><div class="muted">${esc(email)}</div>`+
+      `<button type="button" class="btn-done-row${on?' is-done':''}" data-done-id="${esc(id)}">${on?'Done ✓':'Done'}</button>`;
+  }
+  function wireDone(root){
+    (root||document).querySelectorAll('button[data-done-id]').forEach(btn=>{
+      btn.onclick=()=>{
+        const id=btn.getAttribute('data-done-id');
+        const on=!isDone(id);
+        localStorage.setItem(doneKey(id), on?'1':'0');
+        btn.classList.toggle('is-done', on);
+        btn.textContent=on?'Done ✓':'Done';
+      };
+    });
   }
 
   function render(){
     const list=rows();
     let html='<table><thead><tr>';
-    [['account','Account'],['contact_name','Contact'],['mid_dollar','Mid $'],['win_pct','Win %'],['weighted_dollar','Weighted $'],['close_date','Close'],['status','Status'],['next_step','Next'],['email','Mailto']].forEach(([k,lab])=>{
+    [['account','Account'],['contact_name','Contact'],['mid_dollar','Mid $'],['win_pct','Win %'],['weighted_dollar','Weighted $'],['close_date','Close'],['status','Status'],['next_step','Next'],['email','Open email']].forEach(([k,lab])=>{
       html+=`<th data-k="${k}">${lab}${SORT.key===k?(SORT.dir>0?' ↑':' ↓'):''}</th>`;
     });
     html+='</tr></thead><tbody>';
@@ -136,11 +155,12 @@ tr:hover td{background:#0f1728}
         <td>${esc(o.close_date||'—')}</td>
         <td><span class="tag st">${esc(o.status||'')}</span></td>
         <td>${esc(o.next_step||'—')}</td>
-        <td>${mailto(o.email,o.account)}</td>
+        <td>${mailto(o.email,o.account,o.id||o.email||o.account)}</td>
       </tr>`;
     });
     html+='</tbody></table>';
     document.getElementById('table-wrap').innerHTML=html;
+    wireDone(document.getElementById('table-wrap'));
     document.querySelectorAll('th[data-k]').forEach(th=>{
       th.onclick=()=>{
         const k=th.getAttribute('data-k');
@@ -177,11 +197,12 @@ tr:hover td{background:#0f1728}
         <td>${winTag(o.win_pct)}</td>
         <td class="money">${money(o.weighted_dollar)}</td>
         <td>${esc(o.next_step||'Dunk: CAPTCHA or call')}</td>
-        <td>${o.email?mailto(o.email,o.account):'<span class="muted">null — dunk by name</span>'}</td>
+        <td>${o.email?mailto(o.email,o.account,o.id||o.email||o.account):'<span class="muted">null — dunk by name</span>'}</td>
       </tr>`;
     });
     html+='</tbody></table>';
     document.getElementById('clone-table').innerHTML=html;
+    wireDone(document.getElementById('clone-table'));
     const sk=cd.skipped_deduped||[];
     document.getElementById('clone-skipped').innerHTML=sk.length?('<ul style="margin:0;padding-left:18px">'+sk.map(s=>
       `<li><b>${esc(s.contact_name||s.account)}</b> — ${esc(s.reason||'')} · ${esc(s.dedupe_note||'')}</li>`
@@ -216,7 +237,7 @@ tr:hover td{background:#0f1728}
       <div class="watch" style="border-color:#3dd68c55;background:#0e1626">
         <div class="t">${esc(o.account)} · ${esc(o.contact_name||'')}</div>
         <div class="m">${money(o.mid_dollar)} · ${o.win_pct}% · weighted ${money(o.weighted_dollar)} · ${esc(o.dollar_source)} · next: ${esc(o.next_step||'')}</div>
-        <div class="m">${o.email?mailto(o.email,o.account):'no email invented'} · ${esc(o.probability_note||'')}</div>
+        <div class="m">${o.email?mailto(o.email,o.account,o.id||o.email||o.account):'no email invented'} · ${esc(o.probability_note||'')}</div>
       </div>`).join(''):'<div class="empty">No voice-named rows</div>';
     const watches=d.ar_watches||[];
     document.getElementById('watches').innerHTML=watches.length?watches.map(w=>`
