@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Growth · Aug 12–Dec 23 sprint (share face) · Sheehan Homestead</title>
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#3dd68c;--brand-green:#3dd68c;--brand-gold:#c9a227;--brand-gold-bright:#fbbf24;--good:#3dd68c}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:980px;margin:0 auto;padding:28px 22px 64px}
+.crumb{font-size:.82rem;color:var(--muted);margin:0 0 12px}.crumb a{color:#9ec1ff;font-weight:600}
+h1{font-size:clamp(1.4rem,3vw,1.95rem);margin:0 0 6px;letter-spacing:-.02em;font-weight:750}
+.sub{color:var(--muted);font-size:.92rem;margin:0 0 14px;max-width:54ch}
+.banner{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:0 0 14px;padding:14px 16px;border-radius:14px;border:1px solid #c9a22788;background:linear-gradient(135deg,#2a2210,#13281d);font-size:.88rem;font-weight:650;color:#fde68a}
+.banner .lbl{font-size:.68rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:600;margin-right:4px}
+.pace{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:0 0 14px}
+.pace .kpi{border:1px solid var(--line);border-radius:14px;background:var(--card);padding:12px 14px}
+.pace .l{font-size:.65rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.pace .v{font-size:1.12rem;font-weight:750;margin-top:4px;color:var(--brand-gold-bright)}
+.pace .s{font-size:.72rem;color:var(--muted);margin-top:3px}
+.thesis{margin:0 0 16px;padding:12px 14px;border:1px dashed #a78bfa66;border-radius:12px;background:#14101f;font-size:.84rem;color:#c5d0e6}
+.thesis b{color:#d4c4ff}
+.sec{margin:18px 0 10px;font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted)}
+.card-row{padding:12px 12px;border-radius:12px;background:var(--panel);border:1px solid #1a2438;margin:0 0 8px}
+.card-row .name{font-weight:700;font-size:.92rem}
+.card-row .meta{font-size:.75rem;color:var(--muted);margin-top:3px;line-height:1.4}
+.card-row .tag{display:inline-block;margin-top:6px;margin-right:4px;font-size:.65rem;padding:2px 7px;border-radius:6px;border:1px solid var(--line);color:var(--muted)}
+.card-row .tag.ok{border-color:#3dd68c55;color:var(--good)}
+.card-row .tag.win{border-color:#fbbf2466;color:#fde68a}
+.empty{color:var(--muted);font-size:.82rem;padding:8px 0}
+.soft{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 10px}
+.soft a{font-size:.78rem;padding:7px 12px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:#c5d0e6;text-decoration:none;font-weight:650}
+.soft a:hover{border-color:var(--accent);text-decoration:none}
+.soft a.gold{border-color:#c9a22788;color:#fde68a}
+.bar{height:10px;background:var(--panel);border-radius:99px;overflow:hidden;border:1px solid var(--line);margin:8px 0 0}
+.bar>i{display:block;height:100%;background:linear-gradient(90deg,var(--brand-green),var(--brand-gold-bright));width:15%}
+.hair{height:2px;border:0;margin:0 0 14px;background:linear-gradient(90deg,transparent,var(--brand-gold),transparent);opacity:.55}
+.note{color:var(--muted);font-size:.75rem;margin-top:18px}
+.foot-lock{margin-top:22px;padding:12px 14px;border-radius:12px;border:1px solid #c9a22755;background:#1a160c;font-size:.78rem;color:#fde68a}
+</style></head>
+<body><div class="wrap">
+
+<p class="crumb"><a href="investor-home.html">Investor</a> · <a href="link-tree.html">Link tree</a> → <b>Growth sprint (share face)</b></p>
+<header>
+  <h1>Growth · Aug 12–Dec 23 sprint</h1>
+  <p class="sub">Investor / franchise share face. Sprint window only — pipeline + bookings pace to <b>$250k</b>. Operator living Growth is separate.</p>
+</header>
+
+<hr class="hair"/>
+<div class="banner" id="banner"><span class="lbl">Sprint</span> Running start Aug 12 → Dec 23 2026 · goal $250k bookings · thesis loading…</div>
+
+<div class="pace" id="pace" aria-label="Sprint pace">
+  <div class="kpi"><div class="l">Booked so far</div><div class="v" id="p-booked">—</div><div class="s" id="p-booked-s">loading</div></div>
+  <div class="kpi"><div class="l">Target</div><div class="v">$250,000</div><div class="s">by 2026-12-23</div></div>
+  <div class="kpi"><div class="l">Days left</div><div class="v" id="p-days">—</div><div class="s">to Dec 23</div></div>
+  <div class="kpi"><div class="l">Pace %</div><div class="v" id="p-pct">—</div><div class="s" id="p-pct-s">vs $250k</div>
+    <div class="bar" id="p-bar" title="pace"><i></i></div>
+  </div>
+  <div class="kpi"><div class="l">Reviews</div><div class="v" id="p-rev-v">84 / 555</div><div class="s" id="p-rev">showing 84 · goal 555 by Dec 23</div></div>
+</div>
+
+<div class="thesis" id="thesis">Thesis loading…</div>
+<div class="thesis" id="milestones" style="border-color:#c9a22766;background:#1a160c"><b>Milestones</b> · loading…</div>
+
+<div class="sec">This sprint · pipeline strip (cap ~12)</div>
+<div id="pipe"><div class="empty">Loading sprint opportunities…</div></div>
+
+<nav class="soft" aria-label="Soft links">
+  <a class="gold" href="ops-today.html">Operate today</a>
+  <a href="support-home.html">Support enablement</a>
+  <a href="investor-home.html">Investor home</a>
+  <a href="link-tree.html">Link tree</a>
+</nav>
+
+<p class="note" id="source-note">Sources: growth_campaign.json · growth_reply_pipeline.json · bookings_pipeline.json. Estimates labeled when present. Never invent $.</p>
+<div class="foot-lock">Investor / franchise share face · sprint window only · operator living Growth is separate</div>
+</div>
+<script>
+(function(){
+  function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]))}
+  function money(n){
+    if(n==null||n==='') return null;
+    return '$'+Number(n).toLocaleString('en-US');
+  }
+  function card(name, meta, tags){
+    const t=(tags||[]).map(x=>{
+      const cls=x.cls?` ${x.cls}`:'';
+      return `<span class="tag${cls}">${esc(x.label||x)}</span>`;
+    }).join('');
+    return `<div class="card-row"><div class="name">${esc(name)}</div><div class="meta">${meta}</div>${t}</div>`;
+  }
+  function parseDay(s){
+    if(!s) return null;
+    const m=String(s).slice(0,10).match(/^(\d{4})-(\d{2})-(\d{2})/);
+    if(!m) return null;
+    return new Date(+m[1], +m[2]-1, +m[3]);
+  }
+  const SPRINT_START = parseDay('2026-08-12');
+  const SPRINT_END = parseDay('2026-12-23');
+  const REPLY_KEEP = new Set(['qualified','soft_yes','booked','replied','QUOTE_DRAFT']);
+  const BOOK_KEEP = new Set(['QUOTE_DRAFT','LOCKED','ACCEPTED','BOOKED','WAITING_YES']);
+
+  Promise.all([
+    fetch('data/growth_campaign.json').then(r=>r.json()),
+    fetch('data/bookings_pipeline.json').then(r=>r.json()).catch(()=>({bookings:[]})),
+    fetch('data/growth_reply_pipeline.json').then(r=>r.json()).catch(()=>({opportunities:[]})),
+  ]).then(([gc, bp, rp])=>{
+    const camp=gc.campaign||{};
+    const invBanner = camp.investor_banner
+      || 'Running start Aug 12 → Dec 23 2026 · goal $250k bookings · thesis book $250k → hold ≥$100k (belief, not forecast)';
+    document.getElementById('banner').innerHTML=
+      `<span class="lbl">Sprint</span> ${esc(invBanner)}`
+      + (gc.as_of_label?` <span class="lbl" style="margin-left:8px">as of</span> ${esc(gc.as_of_label)}`:'');
+
+    const pace=gc.pace||{};
+    const booked=gc.booked_so_far||{};
+    document.getElementById('p-booked').textContent=booked.display||(money(booked.usd_low)+'–'+money(booked.usd_high));
+    const srcBits=[booked.source||'source TBD'];
+    if(booked.reconciled===false) srcBits.push('not bank-reconciled');
+    if(booked.window_note) srcBits.push(booked.window_note);
+    else if(pace.window_start && pace.window_start < '2026-08-12')
+      srcBits.push('pace JSON window includes Jul 1 operator running start · share face frames Aug 12→Dec 23');
+    document.getElementById('p-booked-s').textContent=srcBits.join(' · ');
+
+    // Prefer live days-left to Dec 23 when possible
+    let daysLeft = pace.days_left;
+    const today = new Date(); today.setHours(0,0,0,0);
+    if(SPRINT_END){
+      const ms = SPRINT_END - today;
+      const calc = Math.ceil(ms/86400000);
+      if(calc>=0) daysLeft = calc;
+    }
+    document.getElementById('p-days').textContent=daysLeft!=null?String(daysLeft):'—';
+
+    const pl=pace.pct_low, ph=pace.pct_high;
+    document.getElementById('p-pct').textContent=(pl!=null&&ph!=null)?(pl+'–'+ph+'%'):'—';
+    document.getElementById('p-pct-s').textContent='booked vs $250k (sprint goal)';
+    const mid=((pl||0)+(ph||0))/2;
+    const bar=document.querySelector('#p-bar i');
+    if(bar) bar.style.width=Math.max(2,Math.min(100,mid))+'%';
+
+    const rev=gc.reviews||{};
+    const rc=rev.current!=null?rev.current:84;
+    const rg=rev.goal!=null?rev.goal:555;
+    document.getElementById('p-rev-v').textContent=rc+' / '+rg;
+    document.getElementById('p-rev').textContent=
+      (rev.current_label||('showing '+rc))+' · goal '+rg+' by '+(rev.by||'2026-12-23');
+
+    const th=gc.thesis||{};
+    document.getElementById('thesis').innerHTML=
+      `<b>Thesis</b> (belief, not a forecast): ${esc(th.text||'Book $250k → expected hold ≥$100k')} · ${esc(th.source||'Michael belief')}`;
+
+    const ms=gc.milestones||camp.milestones||[];
+    const msEl=document.getElementById('milestones');
+    if(Array.isArray(ms) && ms.length){
+      msEl.innerHTML='<b>Milestones</b> · '+ms.map(m=>{
+        if(typeof m==='string') return esc(m);
+        return esc(m.label||m.name||m.title||'')+(m.date?(' · '+esc(m.date)):'')+(m.by?(' by '+esc(m.by)):'');
+      }).filter(Boolean).join(' · ');
+    } else {
+      msEl.innerHTML='<b>Milestones</b> · Campaign push <b>Aug 12</b> · <b>$250k by Dec 23 2026</b> · reviews 84→555';
+    }
+
+    // --- Sprint pipeline strip (sanitized) ---
+    const rows = [];
+    const seen = new Set();
+
+    function pushRow(key, row){
+      if(!key || seen.has(key) || rows.length>=12) return;
+      seen.add(key);
+      rows.push(row);
+    }
+
+    // 1) Bookings do_now / QUOTE_DRAFT / sprint commitments first
+    (bp.bookings||[]).forEach(b=>{
+      const st=String(b.status||'');
+      if(!BOOK_KEEP.has(st)) return;
+      const d=parseDay(b.date);
+      // Prefer in-window dates; allow undated QUOTE_DRAFT / WAITING
+      if(d && SPRINT_START && d < SPRINT_START) return;
+      if(d && SPRINT_END && d > SPRINT_END) return;
+      const bits=[b.date||'date TBD', st];
+      if(b.next_action) bits.push(String(b.next_action).slice(0,90));
+      // No mailto / dunk language — strip common dunk cues from next_action display already capped
+      pushRow('bk:'+(b.id||b.title), {
+        name: b.title,
+        meta: bits.join(' · '),
+        tags: [
+          {label: st, cls: (st==='LOCKED'||st==='ACCEPTED'||st==='BOOKED')?'ok':(st==='QUOTE_DRAFT'?'win':'')},
+          {label: 'bookings_pipeline'},
+        ],
+      });
+    });
+
+    // 2) Qualified replies since Aug 12 (no emails / mailto)
+    const replyRows=(rp&&rp.opportunities)||[];
+    replyRows.forEach(r=>{
+      const st=String(r.status||'');
+      if(!REPLY_KEEP.has(st)) return;
+      let dStr=null;
+      if(r.evidence && typeof r.evidence==='object') dStr=r.evidence.date;
+      dStr=dStr||r.thread_date||r.date;
+      const d=parseDay(dStr);
+      if(d && SPRINT_START && d < SPRINT_START) return;
+      const parts=[dStr||'in sprint', st, r.source_campaign||r.offer||''].filter(Boolean);
+      const mid=r.mid_dollar!=null?money(r.mid_dollar):null;
+      const wt=r.weighted_dollar!=null?('weighted '+money(r.weighted_dollar)):null;
+      const src=r.dollar_source?String(r.dollar_source):null;
+      [mid, wt, src].filter(Boolean).forEach(x=>parts.push(x));
+      if(r.next_step) parts.push('next: '+String(r.next_step).slice(0,80));
+      // Intentionally omit contact emails / mailto dunks
+      pushRow('rp:'+(r.id||r.account)+(r.gmail_thread||(r.evidence&&r.evidence.thread_id)||dStr||''), {
+        name: r.account,
+        meta: parts.join(' · '),
+        tags: [
+          {label: st, cls: (st==='booked'||st==='qualified')?'ok':''},
+          r.customer_or_winback?{label:String(r.customer_or_winback), cls:r.customer_or_winback==='winback'?'win':''}:null,
+          {label: 'gmail reply'},
+        ].filter(Boolean),
+      });
+    });
+
+    const pipeEl=document.getElementById('pipe');
+    if(!rows.length){
+      pipeEl.innerHTML='<div class="empty">No sprint-scoped opportunities loaded yet.</div>';
+    } else {
+      pipeEl.innerHTML=rows.map(r=>card(r.name, esc(r.meta), r.tags)).join('')
+        + `<div class="empty" style="margin-top:8px">${rows.length} sprint rows · no clone dunk · no Doer CRM · no mailto dunks · capped at 12</div>`;
+    }
+
+    document.getElementById('source-note').textContent=
+      'Sources: growth_campaign.json (KPIs) · bookings_pipeline.json (QUOTE_DRAFT / LOCKED / ACCEPTED / BOOKED / WAITING_YES) · growth_reply_pipeline.json (qualified replies since Aug 12). Booked-so-far is voice-sourced range — not a full-year YTD sold total. Never invent $.';
+  }).catch(err=>{
+    document.getElementById('pipe').innerHTML='<div class="empty">Could not load campaign / pipeline JSON</div>';
+    console.error(err);
+  });
+})();
+</script>
+</body></html>
