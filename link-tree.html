@@ -1,82 +1,114 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Link Tree · Sheehan Exec</title><style>
-:root{--bg:#0b1220;--card:#121a2b;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--bad:#ff5d6c;--violet:#a78bfa}
-*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text)}
-.wrap{max-width:1100px;margin:0 auto;padding:20px}
-h1{margin:0 0 4px;font-size:1.35rem}.sub{color:var(--muted);font-size:.88rem;margin-bottom:14px}
-.nav{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 18px}
-.nav a{background:var(--card);border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:.78rem;color:var(--text);text-decoration:none}
-.nav a.active{border-color:var(--accent)}
-.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:14px}
+<title>Investor / Franchise link tree · Sheehan Homestead</title>
+<style>
+:root{--brand-green:#3dd68c;--brand-gold:#c9a227;--brand-gold-bright:#fbbf24;--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#3dd68c;--good:#3dd68c;--warn:#ffb020;--violet:#a78bfa}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:900px;margin:0 auto;padding:24px 18px 64px}
+.crumb{font-size:.82rem;color:var(--muted);margin:0 0 10px}.crumb a{color:#d4c4ff;font-weight:600}
+h1{margin:0 0 6px;font-size:clamp(1.4rem,3vw,1.85rem);letter-spacing:-.02em;font-weight:750}
+.sub{color:var(--muted);font-size:.9rem;margin:0 0 14px;max-width:52ch}
+.hair{height:2px;border:0;margin:0 0 16px;background:linear-gradient(90deg,transparent,var(--brand-gold),transparent);opacity:.55}
+.sell{margin:0 0 18px;padding:14px 16px;border-radius:14px;border:1px solid #c9a22788;background:linear-gradient(160deg,#2a2210,#121a2b);font-size:.95rem}
+.sell b{color:#fde68a}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px;margin:0 0 14px}
 .card h2{margin:0 0 10px;font-size:1.05rem}
-.badge{display:inline-block;font-size:.68rem;font-weight:700;padding:3px 8px;border-radius:999px;margin-left:6px;vertical-align:middle}
+.badge{display:inline-block;font-size:.65rem;font-weight:800;padding:2px 8px;border-radius:999px;margin-left:6px;vertical-align:middle;text-transform:uppercase;letter-spacing:.04em}
 .badge.live{background:rgba(61,214,140,.15);color:var(--good);border:1px solid rgba(61,214,140,.4)}
 .badge.vision{background:rgba(167,139,250,.15);color:var(--violet);border:1px solid rgba(167,139,250,.4)}
-.badge.ship{background:rgba(255,176,32,.12);color:var(--warn);border:1px solid rgba(255,176,32,.4)}
-.badge.internal{background:rgba(255,93,108,.12);color:var(--bad);border:1px solid rgba(255,93,108,.4)}
-a.link{color:var(--accent);font-weight:600}
-ul{margin:8px 0 0;padding-left:18px;line-height:1.55}
-li{margin:6px 0}.note{color:var(--muted);font-size:.82rem}
-.warnbox{border:1px solid rgba(255,93,108,.35);background:rgba(255,93,108,.08);border-radius:12px;padding:10px 12px;font-size:.85rem;margin-top:10px}
+.badge.deep{background:rgba(255,176,32,.12);color:var(--warn);border:1px solid rgba(255,176,32,.4)}
+ul{margin:6px 0 0;padding-left:18px}
+li{margin:8px 0;font-size:.9rem}
+.note{color:var(--muted);font-size:.78rem;margin-top:6px}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.links a{font-size:.78rem;padding:7px 12px;border-radius:999px;border:1px solid var(--line);background:var(--panel);color:#c5d0e6;text-decoration:none;font-weight:650}
+.links a:hover{border-color:var(--accent);color:#fff;text-decoration:none}
+.links a.gold{border-color:#c9a22788;color:#fde68a}
+.foot{margin-top:22px;padding-top:14px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:10px 16px}
+.foot a{font-size:.75rem;color:var(--muted)}
+code{font-size:.85em}
 </style></head>
 <body><div class="wrap">
 
+<p class="crumb"><a href="investor-home.html">Investor</a> · <a href="index.html">Operator</a> → <b>Link tree</b></p>
+<header>
+  <h1>Investor / Franchise link tree</h1>
+  <p class="sub">Same underlying Ops + Growth URLs as the operator hub — framed for investors and franchisees. No loopback hosts. No invented $.</p>
+</header>
+<hr class="hair"/>
 
-<!-- APP TOP LINKS (Michael) -->
-<div class="app-top" style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 10px;padding:10px 12px;border:1px solid #1e2a44;border-radius:14px;background:#0f1728">
-  <span style="font-size:.72rem;color:#93a0b8;text-transform:uppercase;letter-spacing:.06em;margin-right:4px">Apps</span>
-  <a href="https://onchainoffgrid-hub.github.io/critters-on-call/" target="_blank" rel="noopener" style="background:#121a2b;border:1px solid #3dd68c55;color:#e8eefc;padding:6px 10px;border-radius:999px;font-size:.78rem;text-decoration:none;font-weight:600">Critters <span style="color:#3dd68c;font-size:.65rem">LIVE</span></a>
-  <a href="https://onchainoffgrid-hub.github.io/critters-play/" target="_blank" rel="noopener" title="Play games LIVE (curtain-closed). Critter Coins economy = VISION" style="background:#121a2b;border:1px solid #a78bfa66;color:#e8eefc;padding:6px 10px;border-radius:999px;font-size:.78rem;text-decoration:none;font-weight:600">Play / Coins <span style="color:#3dd68c;font-size:.65rem">LIVE</span></a>
-  <a href="index.html" style="background:#121a2b;border:1px solid #5b8cff66;color:#e8eefc;padding:6px 10px;border-radius:999px;font-size:.78rem;text-decoration:none;font-weight:600">Dashboards</a>
-  <a href="link-tree.html" style="background:#121a2b;border:1px solid #1e2a44;color:#c5d0e6;padding:5px 9px;border-radius:999px;font-size:.72rem;text-decoration:none">All links</a>
-</div>
-<div class="apps-top" style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 12px;padding:10px 12px;background:#121a2b;border:1px solid #1e2a44;border-radius:12px">
-<span style="font-size:.72rem;color:#93a0b8;text-transform:uppercase;letter-spacing:.06em;margin-right:4px">Apps</span>
-<a href="https://onchainoffgrid-hub.github.io/critters-on-call/" target="_blank" rel="noopener" style="background:#152238;border:1px solid #5b8cff;padding:6px 12px;border-radius:999px;font-size:.78rem;color:#e8eefc;text-decoration:none;font-weight:600">Critters app</a>
-<a href="https://onchainoffgrid-hub.github.io/critters-play/" target="_blank" rel="noopener" style="background:#1a1628;border:1px solid #a78bfa;padding:6px 12px;border-radius:999px;font-size:.78rem;color:#e8eefc;text-decoration:none;font-weight:600">Play / Critter Coins</a>
-<a href="index.html" style="background:#13281d;border:1px solid #3dd68c;padding:6px 12px;border-radius:999px;font-size:.78rem;color:#e8eefc;text-decoration:none;font-weight:600">Dashboards</a>
-<a href="link-tree.html" style="border:1px solid #1e2a44;padding:6px 12px;border-radius:999px;font-size:.78rem;color:#93a0b8;text-decoration:none">All links</a>
+<div class="sell"><b>Franchise sell line:</b> “You get this operator view.” Franchisees inherit Operate today · Delivery · Growth sprint · Support enablement.</div>
+
+<div class="card">
+  <h2>Live operator surfaces <span class="badge live">LIVE</span></h2>
+  <p class="note">Public GitHub Pages · green + gold · three-tile operator landing.</p>
+  <ul>
+    <li><a href="index.html"><b>Operator hub</b></a> — Ops · Growth · Support (three tiles only)</li>
+    <li><a href="ops-today.html"><b>Operate today</b></a> — daily tip-of-sword bootstrap</li>
+    <li><a href="ops-delivery.html"><b>Ops delivery</b></a> — fulfillment calendar MVP</li>
+    <li><a href="growth-simple.html"><b>Growth sprint</b></a> — $250k bookings by Dec 23 2026 · reviews 84/555</li>
+    <li><a href="support-home.html"><b>Support enablement</b></a> — Support Ops + Support Growth only</li>
+  </ul>
+  <div class="links">
+    <a class="gold" href="ops-today.html">Operate today</a>
+    <a href="growth-simple.html">Growth sprint</a>
+    <a href="ops-status.html">Ops RYG</a>
+    <a href="doer-crm.html">Doer CRM (deep)</a>
+  </div>
 </div>
 
-<header><h1>Link tree</h1>
-<div class="sub">Ops apps live · Play/Critter Coins = VISION · Dump-home: Dashboard Bit · as of 2026-09-20 · Apps strip on every page</div></header>
-<div class="nav">
-<a href="index.html">Hub</a>
-<a href="link-tree.html" class="active">Links</a>
-<a href="macro-radar.html">Macro</a>
-<a href="money-cfo.html">Money</a>
-<a href="bdr-pipeline.html">BDR</a><a href="crm-icp.html">CRM ICP</a>
-<a href="investor-checklist.html">Checklist</a><a href="investor-capital.html">Investor</a>
-<a href="platform-map.html">Platform</a>
-</div>
 <div class="card">
-<h2>A · No-frills web apps <span class="badge live">LIVE</span></h2>
-<p class="note">Curtain closed ops / sales aids from App Builder.</p>
-<ul>
-<li><a class="link" href="https://onchainoffgrid-hub.github.io/critters-on-call/" target="_blank" rel="noopener">Critters Book/Track/Spin/Gold</a><span class="badge live">LIVE</span> · <a class="link" href="https://github.com/onchainoffgrid-hub/critters-on-call">repo</a></li>
-<li><a class="link" href="https://onchainoffgrid-hub.github.io/gtm-business-manager/" target="_blank" rel="noopener">GTM Business Manager</a><span class="badge live">LIVE</span> — <span class="note">TAM / pipeline / traction ops board</span></li>
-<li><a class="link" href="https://onchainoffgrid-hub.github.io/interactive-gtm/" target="_blank" rel="noopener">Interactive GTM</a><span class="badge live">LIVE</span> — <span class="note">Investor sales-rigor tour</span></li>
-</ul>
+  <h2>Investor diligence <span class="badge live">LIVE</span></h2>
+  <ul>
+    <li><a href="investor-home.html">Investor home</a> — strategy face · checklist · peer cities</li>
+    <li><a href="investor-checklist.html">Seed / pre-seed checklist</a></li>
+    <li><a href="franchise-peer-cities.html">Peer cities board</a> — Jax-class metros first</li>
+    <li><a href="investor-capital.html">Capital nest</a></li>
+  </ul>
 </div>
+
 <div class="card">
-<h2>B · Play / Critter Coins <span class="badge vision">VISION</span></h2>
-<p class="note">Critter Coins / play-to-earn = vision layer (route play rewards → farm visits / Gold / experiences). Not live currency. Mark VISION on exec/investor pages.</p>
-<ul>
-<li><a class="link" href="https://onchainoffgrid-hub.github.io/critters-play/" target="_blank" rel="noopener">Curtain-closed Play (GitHub Pages)</a><span class="badge live">LIVE</span><span class="badge vision">VISION</span> — <span class="note">App Builder pinging when Pages live</span></li>
-<li><a class="link" href="https://crittersoncallprototype.grok.me/play" target="_blank" rel="noopener">Build prototype (grok.me)</a><span class="badge internal">INTERNAL — NOT FOR INVESTORS</span> — <span class="note">Curtain risk — DO NOT put in investor-facing trees. Games: Evade Elon, Barn Cat Defender, Pyrenees Guard, Critter Match</span></li>
-</ul>
-<div class="warnbox"><b>Curtain rule:</b> grok.me Build prototype stays internal — never in investor-facing trees.</div>
+  <h2>Collateral (leave-behinds) <span class="badge live">LIVE files</span></h2>
+  <p class="note">HTML one-pagers under <code>collateral/</code>. Growth / Support enablement — no invented pricing.</p>
+  <div class="links">
+    <a href="collateral/business-menu-one-pager.html">Business menu</a>
+    <a href="collateral/consumer-menu-one-pager.html">Consumer menu</a>
+    <a href="collateral/b2b-os-one-pager.html">B2B OS</a>
+    <a href="collateral/gold-membership-one-pager.html">Gold membership</a>
+    <a href="collateral/birthday-one-pager.html">Birthday</a>
+    <a href="collateral/hoa-cdd-festival.html">HOA / CDD festival</a>
+    <a href="collateral/icp-violet-one-pager.html">Violet ICP</a>
+    <a href="collateral.html">Collateral index</a>
+  </div>
 </div>
+
 <div class="card">
-<h2>This box · Exec suite</h2>
-<ul>
-<li><a class="link" href="http://127.0.0.1:8765/index.html">Hub</a></li>
-<li><a class="link" href="http://127.0.0.1:8765/macro-radar.html">Macro Radar</a></li>
-<li><a class="link" href="http://127.0.0.1:8765/money-cfo.html">Money CFO</a></li>
-<li><a class="link" href="http://127.0.0.1:8765/bdr-pipeline.html">BDR Pipeline</a></li>
-<li><a class="link" href="http://127.0.0.1:8765/link-tree.html">Link Tree page</a></li>
-</ul>
+  <h2>Critters apps <span class="badge live">LIVE</span> · Play <span class="badge vision">VISION economy</span></h2>
+  <ul>
+    <li><a href="https://onchainoffgrid-hub.github.io/critters-on-call/" target="_blank" rel="noopener">Critters on Call</a> <span class="badge live">LIVE</span> — book / track / spin / gold</li>
+    <li><a href="https://onchainoffgrid-hub.github.io/critters-play/" target="_blank" rel="noopener">Critters Play</a> <span class="badge live">LIVE games</span> <span class="badge vision">VISION coins</span> — curtain-closed play; Critter Coins = vision, not live currency</li>
+    <li><a href="https://onchainoffgrid-hub.github.io/gtm-business-manager/" target="_blank" rel="noopener">GTM Business Manager</a> <span class="badge live">LIVE</span></li>
+  </ul>
+  <p class="note">No grok.me or loopback links in this investor-facing tree.</p>
 </div>
-<p class="note">Source JSON: data/link_tree.json · Pages Play URL will swap from LIVE → LIVE when App Builder pings.</p>
+
+<div class="card">
+  <h2>Quiet / deep (operator) <span class="badge deep">deep</span></h2>
+  <div class="links">
+    <a href="ops-team.html">Team</a>
+    <a href="ops-animals.html">Animals</a>
+    <a href="ops-capacity.html">Capacity 18 mo</a>
+    <a href="market-tampa.html">Tampa template</a>
+    <a href="market-orlando.html">Orlando template</a>
+    <a href="layer-zero-archive.html">Legacy archive</a>
+  </div>
+</div>
+
+<nav class="foot">
+  <a href="index.html">Operator hub</a>
+  <a href="investor-home.html">Investor home</a>
+  <a href="https://onchainoffgrid-hub.github.io/sheehan-exec-suite/">Live base</a>
+</nav>
+<p class="note">Rewritten 2026-09-24 ET · removed loopback links · franchise line locked · same ops/growth URLs as operator.</p>
 </div></body></html>

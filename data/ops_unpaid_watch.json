@@ -1,0 +1,40 @@
+{
+  "as_of": "2026-09-24 15:50 ET",
+  "source_kind": "curated_operator_flag",
+  "rules": [
+    "Curated operator flags only \u2014 NOT bank-reconciled dollar amounts.",
+    "Never invent unpaid balances.",
+    "Emails only from existing customers_no_next_date.json.",
+    "Pause further bookings until digital pay clears (operator judgment)."
+  ],
+  "accounts": [
+    {
+      "id": "amelia-springs-alf",
+      "name": "Amelia Springs Assisted Living",
+      "city": "Fernandina Beach",
+      "flag": "unpaid_pattern",
+      "action": "Pause further bookings until digital pay. Prefer digital pay going forward.",
+      "emails": [
+        "admin@ameliaspringsalf.com"
+      ],
+      "email_source": "data/customers_no_next_date.json",
+      "source_kind": "curated_operator_flag",
+      "note": "Michael named unpaid pattern 2026-09-24. No $ balance invented."
+    },
+    {
+      "id": "gardens-memory-care",
+      "name": "Gardens Memory Care",
+      "city": "Ponte Vedra / Jacksonville",
+      "flag": "late_arrears_pattern",
+      "action": "Prefer digital pay. Watch late arrears before adding more dates.",
+      "emails": [
+        "dee.stanziano@gardensmemorycare.com",
+        "tracy.levanich@gardensmemorycare.com",
+        "christina.dutcher@gardensmemorycare.com"
+      ],
+      "email_source": "data/customers_no_next_date.json",
+      "source_kind": "curated_operator_flag",
+      "note": "Michael named late arrears pattern 2026-09-24. Emails from known customer rows only. No $ balance invented."
+    }
+  ]
+}

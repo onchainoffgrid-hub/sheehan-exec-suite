@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Operate today · Sheehan Homestead</title>
+<style>
+:root{--brand-green:#3dd68c;--brand-green-deep:#2f6b4f;--brand-gold:#c9a227;--brand-gold-bright:#fbbf24;--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:var(--brand-green);--good:#3dd68c;--warn:#ffb020;--bad:#ff5d6c}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:920px;margin:0 auto;padding:24px 18px 64px}
+.crumb{font-size:.82rem;color:var(--muted);margin:0 0 10px}.crumb a{color:#fde68a;font-weight:600}
+h1{font-size:clamp(1.45rem,3vw,1.95rem);margin:0 0 4px;letter-spacing:-.02em;font-weight:750}
+.sub{color:var(--muted);font-size:.9rem;margin:0 0 12px}
+.hair{height:2px;border:0;margin:0 0 14px;background:linear-gradient(90deg,transparent,var(--brand-gold),transparent);opacity:.55}
+.q{margin:0 0 16px;padding:12px 14px;border-radius:14px;border:1px solid #fbbf2466;background:linear-gradient(160deg,#2a2210,#121a2b);font-size:.95rem}
+.q b{color:#fff}
+.sec{margin:0 0 12px;padding:14px 16px;border-radius:16px;border:1px solid var(--line);background:var(--card)}
+.sec .top{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;margin:0 0 8px}
+.sec h2{margin:0;font-size:1.02rem;letter-spacing:-.01em}
+.pill{font-size:.68rem;font-weight:800;padding:3px 9px;border-radius:999px;text-transform:uppercase;letter-spacing:.05em}
+.pill.green{background:#13281d;color:var(--good);border:1px solid #3dd68c66}
+.pill.yellow{background:#2a2416;color:var(--warn);border:1px solid #ffb02066}
+.pill.red{background:#2a1619;color:var(--bad);border:1px solid #ff5d6c66}
+.pill.gray{background:#1a1f2e;color:#93a0b8;border:1px solid var(--line)}
+.sec p,.sec .body{margin:0;color:#c5d0e6;font-size:.86rem}
+.sec .src{font-size:.7rem;color:#7a879e;margin-top:8px}
+.sec .links{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.sec .links a{font-size:.74rem;font-weight:700;padding:4px 10px;border-radius:999px;border:1px solid var(--line);background:var(--panel);color:#c5d0e6;text-decoration:none}
+.sec .links a:hover{border-color:var(--accent);color:#fff}
+.row{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 0}
+.chip-person{font-size:.78rem;padding:5px 10px;border-radius:999px;border:1px solid #c9a22755;background:#1a160c;color:#fde68a}
+.chip-person b{color:#fff}
+.wx{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:8px;margin-top:8px}
+.wx .kpi{padding:10px 12px;border-radius:12px;background:var(--panel);border:1px solid #1a2438}
+.wx .l{font-size:.62rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.wx .v{font-size:1.05rem;font-weight:750;margin-top:2px;color:#fde68a}
+.capnote{margin-top:8px;padding:8px 10px;border-radius:10px;border:1px dashed #ffb02066;background:#16140f;font-size:.78rem;color:var(--warn)}
+.book{padding:10px 12px;border-radius:12px;background:var(--panel);border:1px solid #1a2438;margin:6px 0 0}
+.book .t{font-weight:700;font-size:.9rem}
+.book .m{font-size:.75rem;color:var(--muted);margin-top:2px}
+.book .flags{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
+.flag{font-size:.62rem;padding:2px 7px;border-radius:6px;border:1px solid var(--line);color:var(--muted)}
+.flag.warn{border-color:#ffb02066;color:var(--warn)}
+.flag.ok{border-color:#3dd68c55;color:var(--good)}
+.flag.bad{border-color:#ff5d6c66;color:var(--bad)}
+.watch{padding:12px 14px;border-radius:12px;border:1px solid #ff5d6c55;background:#1a1014;margin:8px 0 0}
+.watch .name{font-weight:750;font-size:.95rem;color:#ffb4bc}
+.watch .act{font-size:.84rem;color:#c5d0e6;margin-top:4px}
+.watch .em{font-size:.75rem;color:var(--muted);margin-top:6px}
+.watch .em a{color:#9ec1ff}
+.quick{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0}
+.quick a{font-size:.78rem;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:#c5d0e6;text-decoration:none;font-weight:650}
+.quick a:hover{border-color:var(--accent);color:#fff;text-decoration:none}
+.quick a.gold{border-color:#c9a22788;color:#fde68a;background:#1a160c}
+.quick a.deep{border-style:dashed;opacity:.9}
+.note{color:var(--muted);font-size:.72rem;margin-top:18px}
+.empty{color:var(--muted);font-size:.84rem}
+</style></head>
+<body><div class="wrap">
+
+<p class="crumb"><a href="index.html">Operator</a> → <b>Operate today</b></p>
+<header>
+  <h1>Operate today</h1>
+  <p class="sub">Daily tip-of-sword · lean bootstrap · Callahan FL / Jax · green + gold</p>
+</header>
+<hr class="hair"/>
+<div class="q">1) Am I / Ann-Marie / animals okay? · 2) Can we operate today? · 3) Weather / storm · 4) Bookings · pause unpaid · 5) No fuss.</div>
+
+<!-- 1 People -->
+<section class="sec" id="sec-people">
+  <div class="top"><h2>1 · People</h2><span class="pill gray" id="people-pill">check</span></div>
+  <div class="body" id="people-body">Loading roster…</div>
+  <div class="links"><a href="ops-team.html">Team roster →</a></div>
+  <div class="src" id="people-src"></div>
+</section>
+
+<!-- 2 Animals -->
+<section class="sec" id="sec-animals">
+  <div class="top"><h2>2 · Animals</h2><span class="pill gray" id="animals-pill">check</span></div>
+  <div class="body" id="animals-body">Loading…</div>
+  <div class="links"><a href="ops-animals.html">Animals board →</a><a href="ops-battle-row.html">Battle Row →</a></div>
+  <div class="src" id="animals-src"></div>
+</section>
+
+<!-- 3 Operate today -->
+<section class="sec" id="sec-operate">
+  <div class="top"><h2>3 · Operate today?</h2><span class="pill yellow" id="operate-pill">…</span></div>
+  <div class="body" id="operate-body">Loading ops_status…</div>
+  <div class="links"><a href="ops-status.html">Full RYG →</a><a href="ops-delivery.html">Delivery calendar →</a></div>
+  <div class="src" id="operate-src"></div>
+</section>
+
+<!-- 4 Weather -->
+<section class="sec" id="sec-weather">
+  <div class="top"><h2>4 · Weather / storm risk</h2><span class="pill gray" id="weather-pill">…</span></div>
+  <div class="body" id="weather-body">Fetching Open-Meteo for Callahan FL…</div>
+  <div class="wx" id="weather-kpis" hidden></div>
+  <div class="capnote" id="cap-note" hidden></div>
+  <div class="src">Source: Open-Meteo forecast (no API key) · Callahan FL ≈30.56, −81.91 · not a paid Almanac subscription. Alerts when available via same API.</div>
+</section>
+
+<!-- 5 Booked dates -->
+<section class="sec" id="sec-booked">
+  <div class="top"><h2>5 · Today’s booked dates</h2><span class="pill gray" id="booked-pill">…</span></div>
+  <div class="body" id="booked-body">Loading calendar + bookings…</div>
+  <div class="links"><a href="ops-delivery.html">Full delivery calendar →</a></div>
+  <div class="src" id="booked-src"></div>
+</section>
+
+<!-- 6 Payments / pause unpaid -->
+<section class="sec" id="sec-unpaid">
+  <div class="top"><h2>6 · Payments / pause unpaid</h2><span class="pill red" id="unpaid-pill">watch</span></div>
+  <div class="body" id="unpaid-body">Loading curated watchlist…</div>
+  <div class="src">source_kind: curated_operator_flag · emails from customers_no_next_date only · no invented $ balances · compose/mailto only (never bot-send)</div>
+</section>
+
+<!-- 7 Quick links -->
+<nav class="quick" aria-label="Quick links">
+  <a class="gold" href="ops-delivery.html">Delivery calendar</a>
+  <a href="ops-team.html">Team</a>
+  <a href="ops-animals.html">Animals</a>
+  <a href="growth-simple.html">Growth</a>
+  <a class="deep" href="doer-crm.html">Doer CRM (deep)</a>
+  <a href="support-home.html">Support</a>
+  <a href="ops-status.html">Ops RYG</a>
+  <a href="ops-daily-run.html">Daily run (tribal)</a>
+</nav>
+
+<p class="note">Lean daily open · 2026-09-24 ET · never invent emails/phones/$ · outreach = mailto only · Franchise #0 Callahan.</p>
+</div>
+<script>
+(function(){
+  function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,c=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));}
+  function pill(el,g,label){el.className='pill '+(g||'gray');el.textContent=label||g||'—';}
+  function todayISO(){
+    const d=new Date();
+    const z=d.getTimezoneOffset()*60000;
+    return new Date(d-z).toISOString().slice(0,10);
+  }
+  function addDays(iso,n){
+    const d=new Date(iso+'T12:00:00');
+    d.setDate(d.getDate()+n);
+    const z=d.getTimezoneOffset()*60000;
+    return new Date(d-z).toISOString().slice(0,10);
+  }
+  function ymdFromStart(s){
+    if(!s) return null;
+    return String(s).slice(0,10);
+  }
+
+  // Capacity-day window note (Oct 24 / Oct 31 / Nov 7)
+  (function(){
+    const today=todayISO();
+    const caps=['2026-10-24','2026-10-31','2026-11-07'];
+    const windowEnd=addDays(today,21);
+    const hit=caps.filter(c=>c>=today && c<=windowEnd);
+    if(hit.length){
+      const el=document.getElementById('cap-note');
+      el.hidden=false;
+      el.innerHTML='<b>Capacity day watch:</b> '+hit.map(esc).join(' · ')+' within ~3 weeks. Flag Oct 24 specially when staffing/weather collide.';
+    }
+  })();
+
+  // People
+  fetch('data/team_roster.json',{cache:'no-store'}).then(r=>r.json()).then(function(d){
+    const named=((d.org_today||{}).named)||[];
+    const sched=d.scheduling_owner||'Ann-Marie Sheehan';
+    let html='<div class="row">';
+    named.filter(p=>p.status==='named').forEach(function(p){
+      html+='<span class="chip-person"><b>'+esc(p.name)+'</b> · '+esc(p.seat)+'</span>';
+    });
+    html+='</div>';
+    html+='<p style="margin-top:8px;color:#c5d0e6;font-size:.86rem">Scheduling owner: <b>'+esc(sched)+'</b>. No invented day-status — open Team for helpers / confirmed_1024.</p>';
+    document.getElementById('people-body').innerHTML=html;
+    pill(document.getElementById('people-pill'),'yellow','check Team');
+    document.getElementById('people-src').textContent='Source: data/team_roster.json · as_of '+(d.as_of||'—');
+  }).catch(function(){
+    document.getElementById('people-body').innerHTML='<span class="empty">Roster unavailable — <a href="ops-team.html">check Team</a>.</span>';
+    pill(document.getElementById('people-pill'),'gray','link');
+  });
+
+  // Animals
+  Promise.all([
+    fetch('data/ops_animals.json',{cache:'no-store'}).then(r=>r.json()).catch(()=>null),
+    fetch('data/ops_status.json',{cache:'no-store'}).then(r=>r.json()).catch(()=>null)
+  ]).then(function([an,st]){
+    const card=((st&&st.cards)||[]).find(c=>c.id==='animals');
+    const sc=(an&&an.summary_counts)||{};
+    const bits=[];
+    if(sc.bunnies) bits.push(sc.bunnies.label||('~'+sc.bunnies.approx+' bunnies'));
+    if(sc.ducks) bits.push(sc.ducks.label||('~'+sc.ducks.approx+' ducks'));
+    if(sc.petting_zoo_goats) bits.push(sc.petting_zoo_goats.label||('~'+sc.petting_zoo_goats.approx+' goats'));
+    let body=bits.length?('<b>Inventory (approx):</b> '+bits.map(esc).join(' · ')):'Counts on Animals board.';
+    if(card) body+='<br/><span style="color:#c5d0e6">'+esc(card.why)+'</span>';
+    document.getElementById('animals-body').innerHTML=body;
+    pill(document.getElementById('animals-pill'), (card&&card.grade)||'green', (card&&card.grade)||'ok');
+    document.getElementById('animals-src').textContent='Source: data/ops_animals.json'+(an&&an.as_of_label?(' · '+an.as_of_label):'')+(card?' + ops_status animals card':'');
+  });
+
+  // Operate today overall
+  fetch('data/ops_status.json',{cache:'no-store'}).then(r=>r.json()).then(function(d){
+    const o=d.overall||{};
+    const g=o.grade||'yellow';
+    pill(document.getElementById('operate-pill'), g, g);
+    document.getElementById('operate-body').innerHTML='<b>'+esc(o.label||g)+'</b><br/>'+esc(o.why||'');
+    document.getElementById('operate-src').textContent='Source: data/ops_status.json · as_of '+(d.as_of||'—');
+  }).catch(function(e){
+    document.getElementById('operate-body').textContent='Could not load ops_status.json';
+    pill(document.getElementById('operate-pill'),'red','error');
+  });
+
+  // Weather — Open-Meteo Callahan FL
+  (function(){
+    const lat=30.56, lon=-81.91;
+    const url='https://api.open-meteo.com/v1/forecast?latitude='+lat+'&longitude='+lon
+      +'&daily=precipitation_probability_max,precipitation_sum,wind_speed_10m_max,weathercode'
+      +'&current=temperature_2m,precipitation,wind_speed_10m,weather_code'
+      +'&timezone=America%2FNew_York&forecast_days=3';
+    const alertUrl='https://api.open-meteo.com/v1/forecast?latitude='+lat+'&longitude='+lon+'&timezone=America%2FNew_York';
+    fetch(url).then(r=>r.json()).then(function(d){
+      const cur=d.current||{};
+      const daily=d.daily||{};
+      const precipPct=(daily.precipitation_probability_max&&daily.precipitation_probability_max[0]);
+      const wind=(daily.wind_speed_10m_max&&daily.wind_speed_10m_max[0]);
+      const rainSum=(daily.precipitation_sum&&daily.precipitation_sum[0]);
+      let grade='green';
+      if((precipPct!=null && precipPct>=60) || (wind!=null && wind>=40) || (rainSum!=null && rainSum>=15)) grade='yellow';
+      if((precipPct!=null && precipPct>=85) || (wind!=null && wind>=55) || (rainSum!=null && rainSum>=40)) grade='red';
+      pill(document.getElementById('weather-pill'), grade, grade==='green'?'clear-ish':(grade==='yellow'?'watch':'risk'));
+      document.getElementById('weather-body').innerHTML=
+        'Callahan / Jax area · now '+esc(cur.temperature_2m!=null?(cur.temperature_2m+'°C'):'—')
+        +' · wind '+esc(cur.wind_speed_10m!=null?(cur.wind_speed_10m+' km/h'):'—')
+        +'. Forecast (today): precip chance, wind max, rain sum below.';
+      const box=document.getElementById('weather-kpis');
+      box.hidden=false;
+      box.innerHTML=
+        '<div class="kpi"><div class="l">Precip %</div><div class="v">'+(precipPct!=null?precipPct+'%':'—')+'</div></div>'
+        +'<div class="kpi"><div class="l">Wind max</div><div class="v">'+(wind!=null?wind+' km/h':'—')+'</div></div>'
+        +'<div class="kpi"><div class="l">Rain sum</div><div class="v">'+(rainSum!=null?rainSum+' mm':'—')+'</div></div>'
+        +'<div class="kpi"><div class="l">Next 3d precip%</div><div class="v">'+esc((daily.precipitation_probability_max||[]).slice(0,3).map(x=>x+'%').join(' · ')||'—')+'</div></div>';
+      // Best-effort NWS-style alerts via Open-Meteo (may be empty)
+      fetch('https://api.open-meteo.com/v1/forecast?latitude='+lat+'&longitude='+lon+'&current=weather_code&timezone=America%2FNew_York')
+        .catch(function(){});
+    }).catch(function(){
+      document.getElementById('weather-body').innerHTML='Open-Meteo unreachable from this session — check phone weather for Callahan / Jax. Not Almanac.';
+      pill(document.getElementById('weather-pill'),'gray','offline');
+    });
+  })();
+
+  // Booked dates today + next few
+  Promise.all([
+    fetch('data/calendar_ops_snapshot.json',{cache:'no-store'}).then(r=>r.json()).catch(()=>({next_events_sample:[]})),
+    fetch('data/bookings_pipeline.json',{cache:'no-store'}).then(r=>r.json()).catch(()=>({bookings:[]})),
+    fetch('data/ops_delivery_calendar.json',{cache:'no-store'}).then(r=>r.json()).catch(()=>null)
+  ]).then(function([cal,bp,del]){
+    const start=todayISO();
+    const end=addDays(start,5);
+    const items=[];
+    (cal.next_events_sample||[]).forEach(function(ev){
+      const d=ymdFromStart(ev.start);
+      if(d && d>=start && d<=end) items.push({date:d,title:ev.summary||'Event',loc:ev.location||'',via:'calendar',staffed:null,deposit:null,paid:null,status:null});
+    });
+    (bp.bookings||[]).forEach(function(b){
+      const d=b.date;
+      if(d && d>=start && d<=end){
+        items.push({date:d,title:b.title||b.id,loc:b.channel||'',via:'bookings',staffed:b.staffed||null,deposit:b.deposit||null,paid:b.paid||null,status:b.status||null});
+      }
+    });
+    // delivery calendar days if present
+    const days=(del&&(del.days||del.calendar||del.by_date))||null;
+    if(Array.isArray(days)){
+      days.forEach(function(day){
+        const d=day.date||day.day;
+        if(d && d>=start && d<=end){
+          (day.events||day.gigs||[]).forEach(function(ev){
+            items.push({date:d,title:ev.title||ev.summary||'Gig',loc:ev.location||'',via:'delivery',staffed:ev.staffed,deposit:ev.deposit,paid:ev.paid,status:ev.status});
+          });
+        }
+      });
+    }
+    items.sort(function(a,b){return (a.date+a.title).localeCompare(b.date+b.title);});
+    // de-dupe rough by date+title
+    const seen={}; const uniq=[];
+    items.forEach(function(it){
+      const k=it.date+'|'+(it.title||'').toLowerCase();
+      if(seen[k]) return; seen[k]=1; uniq.push(it);
+    });
+    const el=document.getElementById('booked-body');
+    if(!uniq.length){
+      el.innerHTML='<span class="empty">No dated bookings in next ~5 days in calendar/bookings snapshots — open Delivery calendar.</span>';
+      pill(document.getElementById('booked-pill'),'yellow','thin');
+    } else {
+      el.innerHTML=uniq.map(function(it){
+        const flags=[];
+        if(it.status) flags.push('<span class="flag">'+esc(it.status)+'</span>');
+        if(it.deposit) flags.push('<span class="flag '+(String(it.deposit).toLowerCase().indexOf('accept')>=0?'ok':'warn')+'">deposit: '+esc(it.deposit)+'</span>');
+        if(it.paid) flags.push('<span class="flag '+(it.paid==='unknown'||it.paid==='no_show_money'?'warn':(it.paid==='yes'||it.paid==='verified'?'ok':'warn'))+'">paid: '+esc(it.paid)+'</span>');
+        if(it.staffed!=null) flags.push('<span class="flag">staffed: '+esc(it.staffed)+'</span>');
+        else flags.push('<span class="flag warn">staffed: check Team</span>');
+        return '<div class="book"><div class="t">'+esc(it.date)+' · '+esc(it.title)+'</div>'
+          +'<div class="m">'+esc(it.loc||'')+(it.via?' · via '+esc(it.via):'')+'</div>'
+          +'<div class="flags">'+flags.join('')+'</div></div>';
+      }).join('');
+      pill(document.getElementById('booked-pill'),'green',uniq.length+' dates');
+    }
+    document.getElementById('booked-src').textContent='Sources: calendar_ops_snapshot · bookings_pipeline · ops_delivery_calendar (when present) · window '+start+' → '+end;
+  });
+
+  // Unpaid watch
+  fetch('data/ops_unpaid_watch.json',{cache:'no-store'}).then(r=>r.json()).then(function(d){
+    const accts=d.accounts||[];
+    if(!accts.length){document.getElementById('unpaid-body').innerHTML='<span class="empty">No curated flags.</span>';return;}
+    document.getElementById('unpaid-body').innerHTML=accts.map(function(a){
+      const mails=(a.emails||[]).map(function(e){
+        const sub=encodeURIComponent('Sheehan Homestead · payment / booking hold');
+        const body=encodeURIComponent('Hi — following up on payment / digital pay preference before we book further dates. — Michael / Ann-Marie, Sheehan Homestead');
+        return '<a href="mailto:'+esc(e)+'?subject='+sub+'&body='+body+'">'+esc(e)+'</a>';
+      }).join(' · ');
+      return '<div class="watch"><div class="name">'+esc(a.name)+' · '+esc(a.flag)+'</div>'
+        +'<div class="act">'+esc(a.action)+'</div>'
+        +'<div class="em">mailto: '+mails+'<br/><span style="font-size:.7rem">'+esc(a.note||'')+' · '+esc(a.source_kind)+'</span></div></div>';
+    }).join('');
+    pill(document.getElementById('unpaid-pill'),'red',accts.length+' flags');
+  }).catch(function(){
+    document.getElementById('unpaid-body').innerHTML='<span class="empty">Could not load ops_unpaid_watch.json</span>';
+  });
+})();
+</script>
+</body></html>

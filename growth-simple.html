@@ -53,11 +53,11 @@ h1{font-size:clamp(1.5rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;font
 
 <p class="crumb"><a href="index.html">Operator</a> → <b>Growth</b></p>
 <header>
-  <h1>Growth · closing only</h1>
-  <p class="sub">North star <b>$250,000 bookings by 2026-12-23</b>. Qualified pipeline · bookings · receivables. Never invent contacts or $.</p>
+  <h1>Growth · sprint to Dec 23</h1>
+  <p class="sub">North star <b>$250,000 bookings by 2026-12-23</b>. Qualified pipeline · bookings · receivables. Reviews <b>84 / 555</b>. Never invent contacts or $.</p>
 </header>
 
-<hr class="hair"/><div class="banner" id="banner"><span class="lbl">Campaign</span> Loading…</div>
+<hr class="hair"/><div class="banner" id="banner"><span class="lbl">Sprint</span> Goal $250k bookings by Dec 23 2026 · reviews 84/555 · milestones from growth_campaign.json…</div>
 
 <div class="pace" id="pace" aria-label="Pace to 250k">
   <div class="kpi"><div class="l">Booked so far</div><div class="v" id="p-booked">—</div><div class="s" id="p-booked-s">loading</div></div>
@@ -70,6 +70,7 @@ h1{font-size:clamp(1.5rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;font
 </div>
 
 <div class="thesis" id="thesis">Thesis loading…</div>
+<div class="thesis" id="milestones" style="border-color:#c9a22766;background:#1a160c"><b>Milestones</b> (from campaign JSON): loading…</div>
 
 <a class="chip" href="ops-delivery.html">← Ops calendar (idle capacity)</a>
 <a class="chip" href="ops-capacity.html">Ops capacity · 18 months</a>
@@ -158,6 +159,18 @@ h1{font-size:clamp(1.5rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;font
     const th=gc.thesis||{};
     document.getElementById('thesis').innerHTML=
       `<b>Thesis</b> (not a forecast): ${esc(th.text||'Book $250k → expected hold ≥$100k')} · ${esc(th.source||'Michael belief')}`;
+    const ms=gc.milestones||camp.milestones||[];
+    const msEl=document.getElementById('milestones');
+    if(msEl){
+      if(Array.isArray(ms) && ms.length){
+        msEl.innerHTML='<b>Milestones</b> · '+ms.map(m=>{
+          if(typeof m==='string') return esc(m);
+          return esc(m.label||m.name||m.title||'')+(m.by?(' by '+esc(m.by)):'')+(m.date?(' · '+esc(m.date)):'');
+        }).filter(Boolean).join(' · ');
+      } else {
+        msEl.innerHTML='<b>Milestones</b> · Running start Jul 1 · campaign push Aug 12 · <b>$250k by Dec 23 2026</b> · reviews 84→555. (No extra milestone array in JSON.)';
+      }
+    }
 
     const pipeEl=document.getElementById('pipe');
     const replyRows=(rp&&rp.opportunities)||[];

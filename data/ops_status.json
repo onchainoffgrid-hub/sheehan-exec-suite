@@ -25,7 +25,7 @@
       "why": "17 helpers on roster \u00b7 primary 3 \u00b7 confirmed_1024 names exist \u00b7 phone gaps on several \u00b7 directors vacant \u00b7 Ann-Marie owns scheduling.",
       "source": "data/team_roster.json",
       "source_kind": "real",
-      "deeper": "ops-people.html"
+      "deeper": "ops-team.html"
     },
     {
       "id": "sold_gigs",
@@ -34,7 +34,7 @@
       "why": "bookings_pipeline: 9 rows \u00b7 LOCKED 1 \u00b7 ACCEPTED 2 \u00b7 WAITING_YES/NEEDS_CONFIRM/STUB present \u00b7 paid_verified 0 \u00b7 as_of Sep 20 (stale vs today).",
       "source": "data/bookings_pipeline.json",
       "source_kind": "real_stale",
-      "deeper": "ops-gigs.html"
+      "deeper": "ops-delivery.html"
     },
     {
       "id": "idle_calendar",
