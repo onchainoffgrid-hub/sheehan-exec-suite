@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-20T20:16:50-04:00",
+  "as_of": "2026-09-23T23:30:00-04:00",
   "source": "Right Now Bot DROP-BALL ROUTE (Gmail+Cal+Drive)",
   "north_star": "paid dates locked (mobile + Visit Us)",
   "bookings": [
@@ -173,7 +173,9 @@
       "ACCEPTED": 2,
       "PIPELINE_MIA": 1
     },
-    "paid_verified": 0
+    "paid_verified": 0,
+    "recent_outreach_pipeline_emails": 22,
+    "recent_outreach_mid_stack": 5150
   },
   "rules": {
     "paid_dates_only_in_KPI": true,
@@ -182,9 +184,16 @@
   },
   "michael_notes": {
     "rcs": "2026-09-20: Michael \u2014 RCS just waiting for the yes (Lauren). Not a chase-close.",
-    "2026-09-20b": "Oct 3: Michael doesn't remember firm hold. Madeline (in-town) supposed to come with money \u2014 didn't; annoying. Julie Pettigrew still MIA from pipeline. Sent Ross email. 'A lot stuck but not that stuck.'"
+    "2026-09-20b": "Oct 3: Michael doesn't remember firm hold. Madeline (in-town) supposed to come with money \u2014 didn't; annoying. Julie Pettigrew still MIA from pipeline. Sent Ross email. 'A lot stuck but not that stuck.'",
+    "2026-09-23_evening_outreach": "Past-customer + ToT/FF blast = PIPELINE. Palagio replied warm (Kristi Life Enrichment). Elizabeth bounce / missed. Forms: Amelia Jazz tapped; other forms TBD by Michael. Alexa Mommy & Me booked; Mariel invoice extend; Vesta/Ross + Brooks + Kori Westminster follow-ups present. Ames paid fill-problem not found in Sent ~2d \u2014 not listed."
   },
   "activity": [
+    {
+      "at": "2026-09-23T23:30:00-04:00",
+      "what": "Tonight outreach synced \u00b7 customer-email pipeline + ToT/FF blast \u2192 data/recent_outreach.json (Palagio warm reply; Elizabeth bounce; ~$ mid stack excl. bounce)",
+      "by": "Michael / suite",
+      "href": "recent-outreach.html"
+    },
     {
       "at": "2026-09-20T20:16:50-04:00",
       "what": "Ross email sent",

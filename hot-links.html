@@ -47,6 +47,8 @@ h1{font-size:clamp(1.45rem,3vw,1.95rem);margin:0 0 6px;letter-spacing:-.02em}
 .chip.missed{background:#1f1a2e;color:#c4b5fd;border-color:#a78bfa88}
 .chip.pto{background:#0f2922;color:#5eead4;border-color:#2dd4bf88}
 .chip.blue{background:#0f2922;color:#5eead4;border-color:#2dd4bfaa}
+.chip.tapped{background:#13281d;color:var(--good);border-color:#3dd68c88}
+.card.tapped{border-color:#3dd68c66;opacity:.9}
 .chip.b2b{background:#152238;color:#93c5fd}
 .chip.b2c{background:#241c10;color:#fcd34d}
 .why{font-size:.78rem;color:var(--muted);grid-column:1 / 2}
@@ -99,6 +101,8 @@ a.btn.dim{opacity:.7;background:linear-gradient(180deg,#3a2a2a,#2a1a1a);border-c
   <div class="kpi"><div class="l">Customer</div><div class="v" id="k-cu">—</div></div>
   <div class="kpi"><div class="l">PTO / PTA</div><div class="v" id="k-pto">—</div></div>
   <div class="kpi"><div class="l">Blue chip</div><div class="v" id="k-bc">—</div></div>
+  <div class="kpi"><div class="l">Tapped</div><div class="v" id="k-tap">—</div></div>
+  <div class="kpi"><div class="l">Still open</div><div class="v" id="k-open">—</div></div>
   <div class="kpi"><div class="l">Showing</div><div class="v" id="k-s">—</div></div>
 </div>
 
@@ -126,6 +130,8 @@ a.btn.dim{opacity:.7;background:linear-gradient(180deg,#3a2a2a,#2a1a1a);border-c
   <button type="button" data-channel="b2c">B2C</button>
   <button type="button" data-flag="pto">PTO / PTA</button>
   <button type="button" data-flag="blue">Blue chip</button>
+  <button type="button" data-flag="open">Still open</button>
+  <button type="button" data-flag="tapped">Tapped</button>
   <input id="q" type="search" placeholder="Filter name / city / contact…" autocomplete="off"/>
 </div>
 
@@ -158,6 +164,8 @@ a.btn.dim{opacity:.7;background:linear-gradient(180deg,#3a2a2a,#2a1a1a);border-c
       if(channel!=='all' && r.channel!==channel) return false;
       if(flag==='pto' && !r.pto_pta) return false;
       if(flag==='blue' && !r.blue_chip) return false;
+      if(flag==='open' && r.tapped) return false;
+      if(flag==='tapped' && !r.tapped) return false;
       if(!qq) return true;
       var blob=((r.account||'')+' '+(r.brand||'')+' '+(r.city||'')+' '+(r.why_hot||'')+' '+(r.path_type||'')+' '+(r.email||'')+' '+(r.segment||'')+' '+(r.lane||'')+' '+((r.tags||[]).join(' '))).toLowerCase();
       (r.contacts||[]).forEach(function(c){ blob+=' '+(c.name||'')+' '+(c.title||'')+' '+(c.email||''); });
@@ -191,7 +199,7 @@ a.btn.dim{opacity:.7;background:linear-gradient(180deg,#3a2a2a,#2a1a1a);border-c
       if(r.website) bits.push('<a href="'+esc(r.website)+'" target="_blank" rel="noopener">Website</a>');
       if(r.linkedin_company) bits.push('<a href="'+esc(r.linkedin_company)+'" target="_blank" rel="noopener">Company LinkedIn</a>');
       if(bits.length) linkrow='<div class="links-row">'+bits.join(' · ')+'</div>';
-      return '<article class="card'+(unver?' unverified':'')+(isEmail?' email':'')+(isCust?' customer':'')+(r.blue_chip?' blue':'')+'">'
+      return '<article class="card'+(unver?' unverified':'')+(isEmail?' email':'')+(isCust?' customer':'')+(r.blue_chip?' blue':'')+(r.tapped?' tapped':'')+'">'
         +'<h3>'+esc(r.account)+'</h3>'
         +'<div class="meta">'
         +'<span class="chip lane">'+esc(r.lane||'other')+'</span>'
@@ -202,10 +210,11 @@ a.btn.dim{opacity:.7;background:linear-gradient(180deg,#3a2a2a,#2a1a1a);border-c
         +tierChip(r.tier)
         +(r.pto_pta?'<span class="chip pto">PTO / PTA</span>':'')
         +(r.blue_chip?'<span class="chip blue">blue chip</span>':'')
+        +(r.tapped?'<span class="chip tapped">tapped · '+esc(r.tapped_at||'')+'</span>':'')
         +'</div>'
         +'<div class="why">'+esc(r.why_hot||'')+'</div>'
         +contacts+linkrow
-        +'<div class="actions"><a class="btn'+(isEmail?' email':'')+(isCust?' dim':'')+'" href="'+esc(r.contact_form_url)+'" target="_blank" rel="noopener">'+cta+'</a>'
+        +'<div class="actions"><a class="btn'+(isEmail?' email':'')+(isCust?' dim':'')+'" href="'+esc(r.contact_form_url||r.website||'#')+'" target="_blank" rel="noopener">'+cta+'</a>'
         +tel+mail+'</div></article>';
     }).join('');
   }
@@ -241,7 +250,12 @@ a.btn.dim{opacity:.7;background:linear-gradient(180deg,#3a2a2a,#2a1a1a);border-c
     document.getElementById('k-cu').textContent=n('customer', links.filter(function(r){return r.tier==='customer';}).length);
     document.getElementById('k-pto').textContent=n('pto_pta', links.filter(function(r){return r.pto_pta;}).length);
     document.getElementById('k-bc').textContent=n('blue_chip', links.filter(function(r){return r.blue_chip;}).length);
-    document.getElementById('excl').textContent=d.exclusions_note||d.expand_note||'';
+    var tappedN=n('tapped', links.filter(function(r){return r.tapped;}).length);
+    if(document.getElementById('k-tap')) document.getElementById('k-tap').textContent=tappedN;
+    if(document.getElementById('k-open')) document.getElementById('k-open').textContent=n('still_open', links.filter(function(r){return !r.tapped;}).length);
+    var excl=(d.exclusions_note||d.expand_note||'');
+    if(d.forms_tapped_unknown) excl=(excl?excl+' · ':'')+(d.forms_tapped_unknown_note||'Other forms tapped — Michael to name.');
+    document.getElementById('excl').textContent=excl;
     render();
   }).catch(function(){
     document.getElementById('grid').innerHTML='<p class="empty">Failed to load data/hot_links.json</p>';
