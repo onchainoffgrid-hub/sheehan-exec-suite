@@ -1,0 +1,585 @@
+{
+  "as_of": "2026-09-24T09:22:11-04:00",
+  "as_of_label": "2026-09-24 09:22 ET",
+  "tz": "America/New_York",
+  "source": "Google Calendar snapshot (sheehanhomestead@gmail.com)",
+  "source_updated": "2026-09-24T13:22:11Z",
+  "refresh_note": "Synced from Google Calendar \u00b7 refresh via Dashboard Bot",
+  "capacity_max_concurrent": 4,
+  "capacity_rules": {
+    "green": "\u22643 delivery events that day",
+    "yellow": "=4 delivery events that day",
+    "orange": "\u22655 delivery events that day",
+    "note": "Ceiling 4; day-count proxy for concurrent load (Pages static snapshot)."
+  },
+  "filter_rules": {
+    "exclude_title_patterns": [
+      "farmers market",
+      "wildlife (recurring)",
+      "replace hvac / hvac filter",
+      "dryer repair",
+      "pediatrician",
+      "AIMS lessons (personal)",
+      "Industry Champions / networking",
+      "Horse's Mouth / networking"
+    ],
+    "keep_examples": [
+      "Bunny Haven",
+      "Mobile PZ*",
+      "Mommy & Me",
+      "Mini petting zoo",
+      "Wild Light Market",
+      "Fernandina Arts Market",
+      "Eartha",
+      "Side of Critters"
+    ],
+    "michael_guidance": "Disregard wildlife/farmers market recurring; keep real staffed gigs including paid markets."
+  },
+  "stats": {
+    "raw_events": 43,
+    "kept": 32,
+    "filtered_out": 11,
+    "days": 20
+  },
+  "filtered_out_sample": [
+    {
+      "title": "Dryer repair",
+      "reason": "noise_filter"
+    },
+    {
+      "title": "AIMS Lessons",
+      "reason": "noise_filter"
+    },
+    {
+      "title": "Industry Champions with Chris Budihas",
+      "reason": "noise_filter"
+    },
+    {
+      "title": "AIMS Lessons",
+      "reason": "noise_filter"
+    },
+    {
+      "title": "The Horse's Mouth: Movers and Shakers with Tom McManus and David Ramos",
+      "reason": "noise_filter"
+    },
+    {
+      "title": "Replace hvac filter",
+      "reason": "noise_filter"
+    },
+    {
+      "title": "AIMS Lessons",
+      "reason": "noise_filter"
+    },
+    {
+      "title": "AIMS Lessons",
+      "reason": "noise_filter"
+    },
+    {
+      "title": "Pediatrician visit",
+      "reason": "noise_filter"
+    },
+    {
+      "title": "AIMS Lessons",
+      "reason": "noise_filter"
+    },
+    {
+      "title": "Replace hvac filter",
+      "reason": "noise_filter"
+    }
+  ],
+  "days": [
+    {
+      "date": "2026-09-26",
+      "capacity_color": "green",
+      "event_count": 2,
+      "events": [
+        {
+          "title": "Mommy & Me on the Farm",
+          "start": "2026-09-26T10:00:00-04:00",
+          "end": "2026-09-26T11:00:00-04:00",
+          "all_day": false,
+          "location": "Sheehan Homestead, 44065 Cushman Rd, Callahan, FL 32011",
+          "staffed": "unknown",
+          "deposit": "unknown",
+          "paid": "unknown",
+          "source_id": "_6sqk4e9p8p14cb9o6go32b9k6p234b9p60pj8b9m6l1j4ci66523cgpm8g"
+        },
+        {
+          "title": "Mini petting zoo",
+          "start": "2026-09-26T13:00:00-04:00",
+          "end": "2026-09-26T14:15:00-04:00",
+          "all_day": false,
+          "location": "13118 Chets Creek Dr N\nJacksonville, FL, United States",
+          "staffed": "unknown",
+          "deposit": "unknown",
+          "paid": "unknown",
+          "source_id": "_74q30ha46p0j0b9g6spj8b9k6d2kcba26cskcb9o8ork8h256h0j6dhi64"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-27",
+      "capacity_color": "green",
+      "event_count": 1,
+      "events": [
+        {
+          "title": "Mobile PZ + CoT",
+          "start": "2026-09-27T10:00:00-04:00",
+          "end": "2026-09-27T13:00:00-04:00",
+          "all_day": false,
+          "location": "Durbin Crossing 145 S Durbin Pkwy, St Johns, FL 32259",
+          "staffed": "unknown",
+          "deposit": "accepted",
+          "paid": "unknown",
+          "source_id": "1joitgkd4g5is8t04khj4jgsd4"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-01",
+      "capacity_color": "green",
+      "event_count": 1,
+      "events": [
+        {
+          "title": "Mommy & Me Class",
+          "start": "2026-10-01T11:30:00-04:00",
+          "end": "2026-10-01T12:30:00-04:00",
+          "all_day": false,
+          "location": null,
+          "staffed": "unknown",
+          "deposit": "unknown",
+          "paid": "unknown",
+          "source_id": "5mk3bcodmfb7ct18cjah6jd9re"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-02",
+      "capacity_color": "green",
+      "event_count": 1,
+      "events": [
+        {
+          "title": "Mobile PZ",
+          "start": "2026-10-02T08:20:00-04:00",
+          "end": "2026-10-02T11:20:00-04:00",
+          "all_day": false,
+          "location": "River City Science Academy Innovations 8160 Baymeadows Way W, Jacksonville, FL 32256",
+          "staffed": "unknown",
+          "deposit": "unknown",
+          "paid": "unknown",
+          "source_id": "20qi97nvkk1lhvqs3j8smgq6tn"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-03",
+      "capacity_color": "yellow",
+      "event_count": 4,
+      "events": [
+        {
+          "title": "Wild Light Market - 4 hours",
+          "start": "2026-10-03T09:00:00-04:00",
+          "end": "2026-10-03T09:15:00-04:00",
+          "all_day": false,
+          "location": null,
+          "staffed": "unknown",
+          "deposit": "unknown",
+          "paid": "none",
+          "source_id": "2g6vikre5spnbn4hiu7jfpqsio_20261003T130000Z"
+        },
+        {
+          "title": "Fernandina Arts Market - 2 hrs",
+          "start": "2026-10-03T09:00:00-04:00",
+          "end": "2026-10-03T09:15:00-04:00",
+          "all_day": false,
+          "location": null,
+          "staffed": "unknown",
+          "deposit": "unknown",
+          "paid": "none",
+          "source_id": "48b796rdfr1vjmmqldpuoq9nji_20261003T130000Z"
+        },
+        {
+          "title": "Mobile PZ - BDay Party",
+          "start": "2026-10-03T12:00:00-04:00",
+          "end": "2026-10-03T13:30:00-04:00",
+          "all_day": false,
+          "location": "7350 white birch drive Jax, fl 32277",
+          "staffed": "unknown",
+          "deposit": "unknown",
+          "paid": "unknown",
+          "source_id": "71vcgkdefrk0jrrb5outtl9vef"
+        },
+        {
+          "title": "Mobile PZ",
+          "start": "2026-10-03T13:30:00-04:00",
+          "end": "2026-10-03T15:00:00-04:00",
+          "all_day": false,
+          "location": null,
+          "staffed": "unknown",
+          "deposit": "unknown",
+          "paid": "unknown",
+          "source_id": "_68ok6da484pk4b9i88o38b9k8p138ba160qk8ba48opk8dq3612jcdq26o"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-11",
+      "capacity_color": "green",
+      "event_count": 1,
+      "events": [
+        {
+          "title": "Mobile PZ Event",
+          "start": "2026-10-11T13:00:00-04:00",
+          "end": "2026-10-11T16:00:00-04:00",
+          "all_day": false,
+          "location": "219 Saint Johns Golf Drive  Saint Augustine, FL 32092",
+          "staffed": "unknown",
+          "deposit": "unknown",
+          "paid": "unknown",
+          "source_id": "3b405s325qj3k9gcp9tp58anst"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-12",
+      "capacity_color": "green",
+      "event_count": 1,
+      "events": [
+        {
+          "title": "Bunny Haven",
+          "start": "2026-10-12T11:00:00-04:00",
+          "end": "2026-10-12T12:00:00-04:00",
+          "all_day": false,
+          "location": "9731 Beach Blvd. Jacksonville, FL 32246",
+          "staffed": "unknown",
+          "deposit": "unknown",
+          "paid": "unknown",
+          "source_id": "5lsbt1e5qn852qiggf5bdt511m"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-13",
+      "capacity_color": "green",
+      "event_count": 1,
+      "events": [
+        {
+          "title": "Bunny Haven",
+          "start": "2026-10-13T11:30:00-04:00",
+          "end": "2026-10-13T12:30:00-04:00",
+          "all_day": false,
+          "location": "10660 Validus Dr, Jacksonville, FL 32256",
+          "staffed": "unknown",
+          "deposit": "unknown",
+          "paid": "unknown",
+          "source_id": "6gtl8ff9kc4edki07i9k6npaik_20261013T153000Z"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-14",
+      "capacity_color": "green",
+      "event_count": 1,
+      "events": [
+        {
+          "title": "Bunny Haven",
+          "start": "2026-10-14T11:00:00-04:00",
+          "end": "2026-10-14T12:00:00-04:00",
+          "all_day": false,
+          "location": "641 W 4th St, Jacksonville, FL 32209",
+          "staffed": "unknown",
+          "deposit": "unknown",
+          "paid": "n/a",
+          "source_id": "2580qhb6508lggb9llotvl8uhc"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-15",
+      "capacity_color": "green",
+      "event_count": 1,
+      "events": [
+        {
+          "title": "Mini Petting Zoo",
+          "start": "2026-10-15T11:00:00-04:00",
+          "end": "2026-10-15T12:30:00-04:00",
+          "all_day": false,
+          "location": "2002 San Pablo Rd S",
+          "staffed": "unknown",
+          "deposit": "unknown",
+          "paid": "unknown",
+          "source_id": "78h576l1lr7bf7todh1slj57aq"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-17",
+      "capacity_color": "green",
+      "event_count": 1,
+      "events": [
+        {
+          "title": "Mobile PZ + Side of Critters",
+          "start": "2026-10-17T15:00:00-04:00",
+          "end": "2026-10-17T18:00:00-04:00",
+          "all_day": false,
+          "location": "12788 Meritage Blvd. Jacksonville, FL 32246",
+          "staffed": "unknown",
+          "deposit": "unknown",
+          "paid": "unknown",
+          "source_id": "43fl8b954jsqksah5h01c6fhfk"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-20",
+      "capacity_color": "green",
+      "event_count": 2,
+      "events": [
+        {
+          "title": "Bunny Haven",
+          "start": "2026-10-20T10:30:00-04:00",
+          "end": "2026-10-20T11:30:00-04:00",
+          "all_day": false,
+          "location": "5125 Palm Vly Rd, Ponte Vedra Beach, FL 32082",
+          "staffed": "unknown",
+          "deposit": "unknown",
+          "paid": "unknown",
+          "source_id": "364qopufj2qge35n635mfpuk5j"
+        },
+        {
+          "title": "Bunny Haven",
+          "start": "2026-10-20T10:45:00-04:00",
+          "end": "2026-10-20T11:45:00-04:00",
+          "all_day": false,
+          "location": "4600 Middleton Park Cir E, Jacksonville, FL 32224",
+          "staffed": "unknown",
+          "deposit": "unknown",
+          "paid": "unknown",
+          "source_id": "_64r4ac1h7524ab9m8oo36b9k88r34ba1890jib9n8op38e9n88rjcc2668_20261020T144500Z"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-21",
+      "capacity_color": "green",
+      "event_count": 1,
+      "events": [
+        {
+          "title": "Bunny Haven",
+          "start": "2026-10-21T10:30:00-04:00",
+          "end": "2026-10-21T11:30:00-04:00",
+          "all_day": false,
+          "location": "3760 Dupont Avenue Jacksonville, FL 32217",
+          "staffed": "unknown",
+          "deposit": "unknown",
+          "paid": "unknown",
+          "source_id": "69bg0r23a1m5rako4p2puf2g2n"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-23",
+      "capacity_color": "green",
+      "event_count": 3,
+      "events": [
+        {
+          "title": "Mobile PZ Event",
+          "start": "2026-10-23T14:30:00-04:00",
+          "end": "2026-10-23T18:00:00-04:00",
+          "all_day": false,
+          "location": "8985 Annie Eliza Rd",
+          "staffed": "unknown",
+          "deposit": "unknown",
+          "paid": "unknown",
+          "source_id": "31hckk1h647qnm91hblrk2f0ec"
+        },
+        {
+          "title": "Mobile petting zoo & side of critters",
+          "start": "2026-10-23T16:00:00-04:00",
+          "end": "2026-10-23T18:00:00-04:00",
+          "all_day": false,
+          "location": "12638 Mandarin Rd\nJacksonville, FL, United States",
+          "staffed": "unknown",
+          "deposit": "unknown",
+          "paid": "unknown",
+          "source_id": "_8cp42dq66cs3gba58gqk2b9k68sj0ba28cr44b9m8ork4e1m64rk4chk6g"
+        },
+        {
+          "title": "Mobile PZ + SideOf C",
+          "start": "2026-10-23T17:00:00-04:00",
+          "end": "2026-10-23T20:00:00-04:00",
+          "all_day": false,
+          "location": "86674 pages dairy rd\u00a0 Yulee fl",
+          "staffed": "unknown",
+          "deposit": "unknown",
+          "paid": "unknown",
+          "source_id": "3qrdaisc237nir8bc6o7v9g7hc"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-24",
+      "capacity_color": "orange",
+      "event_count": 5,
+      "events": [
+        {
+          "title": "Eartha mobile petting zoo",
+          "start": "2026-10-24T10:00:00-04:00",
+          "end": "2026-10-24T14:00:00-04:00",
+          "all_day": false,
+          "location": null,
+          "staffed": "unknown",
+          "deposit": "unknown",
+          "paid": "unknown",
+          "source_id": "_611k6d9p6t1j0b9g6oojeb9k68r36b9o68r32b9g8op3ec256srj8d1k70"
+        },
+        {
+          "title": "Mobile PZ Event - 3 hours",
+          "start": "2026-10-24T13:00:00-04:00",
+          "end": "2026-10-24T15:00:00-04:00",
+          "all_day": false,
+          "location": "5825 SR-16 E\nSaint Augustine, FL, United States",
+          "staffed": "unknown",
+          "deposit": "unknown",
+          "paid": "unknown",
+          "source_id": "7112kve3c2rh32jqoiihus69hm"
+        },
+        {
+          "title": "Mobile PZ Event",
+          "start": "2026-10-24T14:00:00-04:00",
+          "end": "2026-10-24T15:30:00-04:00",
+          "all_day": false,
+          "location": "6542 Old Soutel Ct Jacksonville, FL 32219",
+          "staffed": "unknown",
+          "deposit": "unknown",
+          "paid": "unknown",
+          "source_id": "0qklbtq4gd94ngd2eaehtlde6h"
+        },
+        {
+          "title": "Mobile PZ",
+          "start": "2026-10-24T16:00:00-04:00",
+          "end": "2026-10-24T18:00:00-04:00",
+          "all_day": false,
+          "location": "Tinker Street",
+          "staffed": "unknown",
+          "deposit": "unknown",
+          "paid": "unknown",
+          "source_id": "2q79od7l106nrbg6h9pj1e3ga2"
+        },
+        {
+          "title": "Mobile PZ + Side of Critters",
+          "start": "2026-10-24T17:00:00-04:00",
+          "end": "2026-10-24T20:00:00-04:00",
+          "all_day": false,
+          "location": "2433 Atlantic Blvd Jacksonville, FL 32207",
+          "staffed": "unknown",
+          "deposit": "unknown",
+          "paid": "unknown",
+          "source_id": "2ju6hiiavfmqh3higgem4d00sh"
+        }
+      ],
+      "day_note": "Ann-Marie birthday \u00b7 5 Mobile PZ-style delivery events \u00b7 capacity orange"
+    },
+    {
+      "date": "2026-10-25",
+      "capacity_color": "green",
+      "event_count": 1,
+      "events": [
+        {
+          "title": "Mobile PZ Event - 2 hours",
+          "start": "2026-10-25T00:00:00-04:00",
+          "end": "2026-10-26T00:00:00-04:00",
+          "all_day": true,
+          "location": "11665 Fort Caroline Rd, Jacksonville, FL 32225",
+          "staffed": "unknown",
+          "deposit": "unknown",
+          "paid": "unknown",
+          "source_id": "4olmomjajcmo5pohhkslfdvcu5"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-28",
+      "capacity_color": "green",
+      "event_count": 1,
+      "events": [
+        {
+          "title": "Bunny Haven",
+          "start": "2026-10-28T14:30:00-04:00",
+          "end": "2026-10-28T15:30:00-04:00",
+          "all_day": false,
+          "location": "10520 Validus Dr. Jacksonville",
+          "staffed": "unknown",
+          "deposit": "unknown",
+          "paid": "unknown",
+          "source_id": "62t03reu7ra5i3ncdpvia5hub5"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-29",
+      "capacity_color": "green",
+      "event_count": 1,
+      "events": [
+        {
+          "title": "Mobile PZ Event",
+          "start": "2026-10-29T14:30:00-04:00",
+          "end": "2026-10-29T18:00:00-04:00",
+          "all_day": false,
+          "location": "The Goddard School of Ponte Vedra - Nocatee",
+          "staffed": "unknown",
+          "deposit": "unknown",
+          "paid": "unknown",
+          "source_id": "6oqi9g9e2h32oovr9cu8c34m1f"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-30",
+      "capacity_color": "green",
+      "event_count": 2,
+      "events": [
+        {
+          "title": "Mobile PZ Event",
+          "start": "2026-10-30T14:30:00-04:00",
+          "end": "2026-10-30T18:00:00-04:00",
+          "all_day": false,
+          "location": "The Goddard School of Ponte Vedra Beach",
+          "staffed": "unknown",
+          "deposit": "unknown",
+          "paid": "unknown",
+          "source_id": "3kg5sos5250v55mmn2raohqo0m"
+        },
+        {
+          "title": "Mini PZ",
+          "start": "2026-10-30T18:30:00-04:00",
+          "end": "2026-10-30T20:00:00-04:00",
+          "all_day": false,
+          "location": "4700 Amelia Island Pkwy, Amelia Island, FL 32034",
+          "staffed": "unknown",
+          "deposit": "unknown",
+          "paid": "unknown",
+          "source_id": "3gpk95gatpapq64il857qelt88"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-31",
+      "capacity_color": "green",
+      "event_count": 1,
+      "events": [
+        {
+          "title": "Mobile PZ + Side of Critters",
+          "start": "2026-10-31T16:00:00-04:00",
+          "end": "2026-10-31T18:00:00-04:00",
+          "all_day": false,
+          "location": "85971 N Harts Rd, Yulee, FL 32097",
+          "staffed": "unknown",
+          "deposit": "unknown",
+          "paid": "unknown",
+          "source_id": "4si6spuucd4mupqs4vc80o8u67"
+        }
+      ]
+    }
+  ]
+}

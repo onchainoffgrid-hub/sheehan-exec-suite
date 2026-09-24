@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Growth · pipeline · booked · AR · Sheehan Homestead</title>
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--money:#f0abfc}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1100px;margin:0 auto;padding:28px 22px 64px}
+.crumb{font-size:.82rem;color:var(--muted);margin:0 0 12px}.crumb a{color:#9ec1ff;font-weight:600}
+h1{font-size:clamp(1.5rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;font-weight:750}
+.sub{color:var(--muted);font-size:.95rem;margin:0 0 18px}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0 0 22px}
+@media(max-width:900px){.cols{grid-template-columns:1fr}}
+.col{border:1px solid var(--line);border-radius:18px;background:var(--card);padding:18px 18px 14px;min-height:280px}
+.col h2{margin:0 0 4px;font-size:1.15rem}
+.col .kicker{font-size:.68rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:12px}
+.col.pipeline{border-color:#5b8cff66}.col.pipeline h2{color:#9ec1ff}
+.col.booked{border-color:#fbbf2466}.col.booked h2{color:#fde68a}
+.col.ar{border-color:#3dd68c66}.col.ar h2{color:#9dffc5}
+.card-row{padding:12px 12px;border-radius:12px;background:var(--panel);border:1px solid #1a2438;margin:0 0 8px}
+.card-row .name{font-weight:700;font-size:.92rem}
+.card-row .meta{font-size:.75rem;color:var(--muted);margin-top:3px;line-height:1.4}
+.card-row .tag{display:inline-block;margin-top:6px;font-size:.65rem;padding:2px 7px;border-radius:6px;border:1px solid var(--line);color:var(--muted)}
+.empty{color:var(--muted);font-size:.82rem;padding:8px 0}
+.sec{margin:8px 0 10px;font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted)}
+.secondary{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.secondary a{font-size:.78rem;padding:7px 12px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:#c5d0e6;text-decoration:none}
+.secondary a:hover{border-color:var(--accent);text-decoration:none}
+.note{color:var(--muted);font-size:.75rem;margin-top:18px}
+.chip{display:inline-block;margin:0 0 16px;padding:8px 14px;border-radius:999px;border:1px solid #fbbf2466;background:#2a2210;color:#fde68a;font-size:.8rem;font-weight:650;text-decoration:none}
+.chip:hover{text-decoration:none;border-color:#fbbf24}
+</style></head>
+<body><div class="wrap">
+
+<p class="crumb"><a href="index.html">Operator</a> → <b>Growth</b></p>
+<header>
+  <h1>Growth · closing only</h1>
+  <p class="sub">Three buckets. Not the full BDR / CAPTCHA dump on this face. Named seeds only when present in existing data — never invent contacts or $.</p>
+</header>
+
+<a class="chip" href="ops-delivery.html">← Ops calendar (idle capacity)</a>
+
+<div class="cols" aria-label="Pipeline booked AR">
+  <section class="col pipeline">
+    <div class="kicker">Qualified pipeline</div>
+    <h2>Pipeline</h2>
+    <div id="pipe"><div class="empty">Loading…</div></div>
+  </section>
+  <section class="col booked">
+    <div class="kicker">Booked / commitment</div>
+    <h2>Booked</h2>
+    <div id="booked"><div class="empty">Loading…</div></div>
+  </section>
+  <section class="col ar">
+    <div class="kicker">AR received</div>
+    <h2>AR</h2>
+    <div id="ar"><div class="empty">Loading…</div></div>
+  </section>
+</div>
+
+<div class="sec">Open BDR tools (secondary)</div>
+<nav class="secondary" aria-label="BDR secondary">
+  <a href="captcha-quick.html">CAPTCHA dunk</a>
+  <a href="hot-links.html">Hot links</a>
+  <a href="easy-attack.html">Easy attack</a>
+  <a href="growth-home.html">Full growth home</a>
+  <a href="bdr-tam.html">BDR TAM</a>
+  <a href="one-touch.html">One-touch</a>
+  <a href="recent-outreach.html">Recent outreach</a>
+</nav>
+
+<p class="note">Seeds: Westminster (called / emailed), Starling at Nocatee, Patricia Valenzuela — only if present in existing JSON. Paid $ never invented; AR shows verified / incoming labels only.</p>
+</div>
+<script>
+(function(){
+  function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]))}
+  function card(name, meta, tag){
+    return `<div class="card-row"><div class="name">${esc(name)}</div><div class="meta">${esc(meta)}</div>${tag?`<span class="tag">${esc(tag)}</span>`:''}</div>`;
+  }
+
+  // Hard-coded seeds only from known existing JSON (no invention)
+  const pipelineSeeds = [
+    {name:'Westminster (Kori Montague)', meta:'Kmontague@wservices.org · emailed 2026-09-23 · November Monday double-dip · both locations', tag:'called / emailed', source:'recent_outreach.json'},
+    {name:'Starling at Nocatee', meta:'nocatee@starlingliving.com · (904) 686-2000 · Ponte Vedra · status NO_DATE / rebook', tag:'past customer · no next date', source:'customers_no_next_date.json'},
+    {name:'Patricia Valenzuela', meta:'Director of Celebrations · Discovery Village at Deerwood · tfelix@discoveryvillages.com · (904) 667-3500', tag:'named contact in play', source:'todays_11_play.json / crm_source_overrides.json'},
+  ];
+
+  const pipeEl=document.getElementById('pipe');
+  pipeEl.innerHTML=pipelineSeeds.map(s=>card(s.name, s.meta, s.tag)).join('')
+    + `<div class="empty" style="margin-top:8px">Source-backed only · no invented emails.</div>`;
+
+  Promise.all([
+    fetch('data/bookings_pipeline.json').then(r=>r.json()),
+    fetch('data/recent_outreach.json').then(r=>r.json()).catch(()=>null),
+  ]).then(([bp])=>{
+    const bookedStatuses=new Set(['LOCKED','ACCEPTED','BOOKED','WAITING_YES','NEEDS_CONFIRM']);
+    const booked=(bp.bookings||[]).filter(b=>bookedStatuses.has(b.status) && b.status!=='NO_PAY' && b.status!=='STUB' && b.status!=='PIPELINE_MIA' && b.status!=='PAUSE_RECONCILE');
+    const soft=(bp.bookings||[]).filter(b=>['WAITING_YES','NEEDS_CONFIRM'].includes(b.status));
+    const firm=(bp.bookings||[]).filter(b=>['LOCKED','ACCEPTED','BOOKED'].includes(b.status));
+
+    const bookedEl=document.getElementById('booked');
+    if(!firm.length && !soft.length){
+      bookedEl.innerHTML='<div class="empty">No commitment rows in bookings_pipeline.</div>';
+    } else {
+      let html='';
+      firm.forEach(b=>{
+        html+=card(b.title, `${b.date||'date TBD'}${b.time?' · '+b.time:''} · ${b.status}${b.next_action?' · '+b.next_action:''}`, b.deposit?('deposit: '+b.deposit):b.status);
+      });
+      soft.forEach(b=>{
+        html+=card(b.title, `${b.date||'date TBD'} · ${b.status}${b.next_action?' · '+b.next_action:''}`, 'soft / waiting');
+      });
+      bookedEl.innerHTML=html;
+    }
+
+    // AR: only rows with paid/deposit signal — never invent $ amounts
+    const arEl=document.getElementById('ar');
+    const arRows=(bp.bookings||[]).filter(b=>{
+      const p=String(b.paid||'').toLowerCase();
+      const d=String(b.deposit||'').toLowerCase();
+      return ['paid','cleared','verified','deposit_incoming','incoming','accepted','partial'].some(x=>p.includes(x)||d.includes(x));
+    });
+    if(!arRows.length){
+      arEl.innerHTML='<div class="empty">No AR-cleared rows yet. paid_verified = '+(bp.counts&&bp.counts.paid_verified!=null?bp.counts.paid_verified:'unknown')+' · deposits may be incoming — do not count $ until cleared.</div>';
+    } else {
+      arEl.innerHTML=arRows.map(b=>{
+        const label=[b.deposit?('deposit: '+b.deposit):null, b.paid?('paid: '+b.paid):null].filter(Boolean).join(' · ');
+        return card(b.title, `${b.date||''} · ${label} · no $ invented`, b.status);
+      }).join('')
+        + `<div class="empty" style="margin-top:8px">Rules: accepted ≠ paid until cleared. Source bookings_pipeline.json as_of ${esc(bp.as_of||'')}</div>`;
+    }
+  }).catch(err=>{
+    document.getElementById('booked').innerHTML='<div class="empty">Could not load bookings_pipeline.json</div>';
+    document.getElementById('ar').innerHTML='<div class="empty">Could not load bookings_pipeline.json</div>';
+    console.error(err);
+  });
+})();
+</script>
+</body></html>
