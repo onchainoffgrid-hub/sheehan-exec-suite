@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-24T14:20:00-04:00",
+  "as_of": "2026-09-24T14:30:00-04:00",
   "label": "Tonight's outreach \u2014 2026-09-23 evening (ET)",
   "source": "Gmail Sent verified \u00b7 no invented emails",
   "rule": "Past-customer + ToT/FF blast = PIPELINE. Mid $ only when Michael named it. Investor-safe.",
@@ -27,14 +27,14 @@
       "channel": "email",
       "tier": "customer_pipeline",
       "b2b_b2c": "b2b",
-      "mid_dollar": 600,
-      "status": "quote_draft_awaiting_send",
-      "notes": "Nonprofit Brooks Bartram Lakes \u00b7 Nov 21 10\u20131 \u00b7 $600 std (\u22659 animals) / $500 mini (\u22656) / $750 +seasonal critters \u00b7 +~$100 travel \u00b7 weighted $450 \u00b7 W-9 before invoice \u00b7 DRAFT v3 animal-mix \u2014 NOT sent",
+      "mid_dollar": 629,
+      "status": "quote_draft_open_in_mail",
+      "notes": "Violet all-in $629/$749/$499 \u00b7 open brooks-click.html \u00b7 NOT bot-sent \u00b7 W-9 gate",
       "sent_at": null,
       "gmail_thread": "199c9d13a9c9e556",
       "requested_date": "2026-11-21",
       "pipeline_status": "QUOTE_SENT_AWAITING_REPLY",
-      "weighted_dollar": 450,
+      "weighted_dollar": 472,
       "pipeline_weight": 0.75
     },
     {
