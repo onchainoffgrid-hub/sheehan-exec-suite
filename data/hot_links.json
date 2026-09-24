@@ -1,31 +1,33 @@
 {
-  "as_of": "2026-09-23 ET",
-  "label": "Hot Links \u2014 CAPTCHA / quick web forms only (mindless tap). No CDDs/HOAs.",
-  "rule": "Stage only \u00b7 open form in new tab \u00b7 no auto-submit. Any budgeted buyer qualifies \u2014 no minimum spend gate. Daycare, philanthropist and sponsor are explicit filters; net-new after customer/burned dedupe. CDD/HOA amenity = separate call/email lane \u2014 NEVER on this page.",
+  "as_of": "2026-09-24 ET",
+  "label": "Hot Links — CAPTCHA / quick web forms only (mindless tap). No CDDs/HOAs.",
+  "rule": "Stage only · open form in new tab · no auto-submit. Any budgeted buyer qualifies — no minimum spend gate. Daycare, philanthropist and sponsor are explicit filters; net-new after customer/burned dedupe. CDD/HOA amenity = separate call/email lane — NEVER on this page.",
   "counts": {
-    "total": 143,
-    "form": 110,
-    "email": 33,
-    "copycat_t1": 19,
-    "net_new": 104,
+    "total": 166,
+    "form": 121,
+    "email": 45,
+    "copycat_t1": 26,
+    "net_new": 119,
     "unverified": 8,
-    "customer": 12,
-    "pto_pta": 34,
-    "blue_chip": 53,
-    "b2b": 143,
+    "customer": 13,
+    "pto_pta": 37,
+    "blue_chip": 67,
+    "b2b": 166,
     "b2c": 0,
-    "multi_contact": 9,
+    "multi_contact": 13,
     "already_customer_flagged": 15,
     "removed_cdd_hoa": 13,
     "tapped": 1,
-    "still_open": 142
+    "still_open": 160,
+    "outreach_closed": 5,
+    "net_new_added_2026_09_24": 23
   },
   "lanes": {
-    "daycare": 26,
-    "school": 45,
-    "senior": 12,
+    "daycare": 41,
+    "school": 48,
+    "senior": 15,
     "foundation": 7,
-    "other": 36,
+    "other": 38,
     "philanthropist": 4,
     "sponsor": 13
   },
@@ -35,8 +37,8 @@
   },
   "links": [
     {
-      "account": "Bright Horizons \u2014 Memorial Children's Center (Harvin Rd)",
-      "brand": "Bright Horizons \u2014 Memorial Children's Center (Harvin Rd)",
+      "account": "Bright Horizons — Memorial Children's Center (Harvin Rd)",
+      "brand": "Bright Horizons — Memorial Children's Center (Harvin Rd)",
       "city": "Jacksonville",
       "contact_form_url": "https://www.brighthorizons.com/daycare-centers/fl/jacksonville/6046-harvin-road-32216",
       "phone": "904-309-5898",
@@ -50,7 +52,7 @@
       "path_type": "form",
       "pto_pta": false,
       "blue_chip": true,
-      "why_hot": "Enterprise daycare lookalike \u2014 schedule-a-visit form path",
+      "why_hot": "Enterprise daycare lookalike — schedule-a-visit form path",
       "source": "hot-links-expand-2026-09-23-forms",
       "email": null,
       "tags": [
@@ -108,7 +110,7 @@
           "source": "jcepto.com/pto-info (2026-09-23)"
         }
       ],
-      "why_hot": "Full public PTO board emails \u2014 St. Johns blue-chip elementary festival/sponsorship buyer",
+      "why_hot": "Full public PTO board emails — St. Johns blue-chip elementary festival/sponsorship buyer",
       "source": "hot-links-expand-2026-09-23-pta"
     },
     {
@@ -137,7 +139,7 @@
           "source": "archive-schools-pta.csv"
         }
       ],
-      "why_hot": "Blue-chip independent school \u2014 public office email",
+      "why_hot": "Blue-chip independent school — public office email",
       "source": "hot-links-expand-2026-09-23-forms"
     },
     {
@@ -178,7 +180,7 @@
       "path_type": "form",
       "pto_pta": false,
       "blue_chip": true,
-      "why_hot": "Tier-1 subscription daycare lookalike \u2014 St. Johns ICP",
+      "why_hot": "Tier-1 subscription daycare lookalike — St. Johns ICP",
       "source": "hot-links-expand-2026-09-23-forms",
       "email": null,
       "tags": [
@@ -212,7 +214,7 @@
           "source": "archive-schools-pta.csv"
         }
       ],
-      "why_hot": "Catholic school ICP (Assumption / CTK lookalike) \u2014 public principal email",
+      "why_hot": "Catholic school ICP (Assumption / CTK lookalike) — public principal email",
       "source": "hot-links-expand-2026-09-23-forms"
     },
     {
@@ -241,7 +243,7 @@
           "source": "archive-schools-pta.csv"
         }
       ],
-      "why_hot": "Catholic school ICP \u2014 public principal email",
+      "why_hot": "Catholic school ICP — public principal email",
       "source": "hot-links-expand-2026-09-23-forms"
     },
     {
@@ -270,16 +272,16 @@
           "source": "archive-schools-pta.csv"
         }
       ],
-      "why_hot": "Blue-chip independent school \u2014 public ECE / campus rentals contact",
+      "why_hot": "Blue-chip independent school — public ECE / campus rentals contact",
       "source": "hot-links-expand-2026-09-23-forms"
     },
     {
-      "account": "The Goddard School Jacksonville \u2014 Baymeadows",
-      "brand": "The Goddard School Jacksonville \u2014 Baymeadows",
+      "account": "The Goddard School Jacksonville — Baymeadows",
+      "brand": "The Goddard School Jacksonville — Baymeadows",
       "city": "Jacksonville",
       "contact_form_url": "https://www.goddardschool.com/schools/fl/jacksonville/jacksonville-baymeadows/our-school/goddard-form",
       "lane": "daycare",
-      "why_hot": "School director inquiry form \u00b7 CAPTCHA \u00b7 fall family / mobile PZ ask",
+      "why_hot": "School director inquiry form · CAPTCHA · fall family / mobile PZ ask",
       "phone": null,
       "email": null,
       "segment": "b2b_daycare",
@@ -297,8 +299,8 @@
       "mid": null
     },
     {
-      "account": "The Goddard School Orange Park \u2014 OakLeaf",
-      "brand": "The Goddard School Orange Park \u2014 OakLeaf",
+      "account": "The Goddard School Orange Park — OakLeaf",
+      "brand": "The Goddard School Orange Park — OakLeaf",
       "city": "Orange Park",
       "contact_form_url": "https://www.goddardschool.com/schools/fl/orange-park/orange-park/our-school/goddard-form",
       "phone": "904-291-9991",
@@ -311,7 +313,7 @@
       "path_type": "form",
       "pto_pta": false,
       "blue_chip": true,
-      "why_hot": "Tier-1 Goddard lookalike of best subscription buyers \u2014 CAPTCHA info form",
+      "why_hot": "Tier-1 Goddard lookalike of best subscription buyers — CAPTCHA info form",
       "source": "hot-links-expand-2026-09-23-forms",
       "email": null,
       "tags": [
@@ -325,7 +327,7 @@
       "city": "St. Augustine",
       "contact_form_url": "https://www.goddardschool.com/schools/fl/st-augustine/silverleaf/our-school/goddard-form",
       "lane": "daycare",
-      "why_hot": "School director inquiry form \u00b7 CAPTCHA",
+      "why_hot": "School director inquiry form · CAPTCHA",
       "phone": null,
       "email": null,
       "segment": "b2b_daycare",
@@ -343,12 +345,12 @@
       "mid": null
     },
     {
-      "account": "The Goddard School St. Augustine \u2014 CR 210",
-      "brand": "The Goddard School St. Augustine \u2014 CR 210",
+      "account": "The Goddard School St. Augustine — CR 210",
+      "brand": "The Goddard School St. Augustine — CR 210",
       "city": "St. Augustine",
       "contact_form_url": "https://www.goddardschool.com/schools/fl/st-augustine/st-augustine-county-road-210/our-school/goddard-form",
       "lane": "daycare",
-      "why_hot": "School director inquiry form \u00b7 CAPTCHA",
+      "why_hot": "School director inquiry form · CAPTCHA",
       "phone": null,
       "email": null,
       "segment": "b2b_daycare",
@@ -366,12 +368,12 @@
       "mid": null
     },
     {
-      "account": "The Learning Experience \u2014 Flagler Center",
-      "brand": "The Learning Experience \u2014 Flagler Center",
+      "account": "The Learning Experience — Flagler Center",
+      "brand": "The Learning Experience — Flagler Center",
       "city": "Jacksonville",
       "contact_form_url": "https://thelearningexperience.com/centers/flagler-center/",
       "lane": "daycare",
-      "why_hot": "Center page with inquiry path \u00b7 not Oakleaf/St. Aug/River City customer campuses",
+      "why_hot": "Center page with inquiry path · not Oakleaf/St. Aug/River City customer campuses",
       "phone": null,
       "email": null,
       "segment": "b2b_daycare",
@@ -389,12 +391,12 @@
       "mid": null
     },
     {
-      "account": "The Learning Experience \u2014 Mandarin",
-      "brand": "The Learning Experience \u2014 Mandarin",
+      "account": "The Learning Experience — Mandarin",
+      "brand": "The Learning Experience — Mandarin",
       "city": "Jacksonville",
       "contact_form_url": "https://thelearningexperience.com/centers/jacksonville-mandarin/",
       "lane": "daycare",
-      "why_hot": "Center inquiry path \u00b7 CAPTCHA-ish lead form",
+      "why_hot": "Center inquiry path · CAPTCHA-ish lead form",
       "phone": null,
       "email": null,
       "segment": "b2b_daycare",
@@ -412,8 +414,8 @@
       "mid": null
     },
     {
-      "account": "The Learning Experience \u2014 Southside",
-      "brand": "The Learning Experience \u2014 Southside",
+      "account": "The Learning Experience — Southside",
+      "brand": "The Learning Experience — Southside",
       "city": "Jacksonville",
       "contact_form_url": "https://thelearningexperience.com/centers/jacksonville-southside/",
       "lane": "daycare",
@@ -508,7 +510,7 @@
           "source": "duvalschools.org/o/aes/page/pta (2026-09-23)"
         }
       ],
-      "why_hot": "Public 2026\u201327 PTA board + president email \u2014 strong Duval festival ICP",
+      "why_hot": "Public 2026–27 PTA board + president email — strong Duval festival ICP",
       "source": "hot-links-expand-2026-09-23-pta"
     },
     {
@@ -537,7 +539,7 @@
           "source": "archive-schools-pta.csv"
         }
       ],
-      "why_hot": "Clay County Catholic school \u2014 public principal email",
+      "why_hot": "Clay County Catholic school — public principal email",
       "source": "hot-links-expand-2026-09-23-forms"
     },
     {
@@ -565,7 +567,7 @@
           "source": "archive-schools-pta.csv / schools-daycares.csv"
         }
       ],
-      "why_hot": "Archive PTA/PTO lead \u2014 school site + main phone; mine public officer email before submit",
+      "why_hot": "Archive PTA/PTO lead — school site + main phone; mine public officer email before submit",
       "source": "hot-links-expand-2026-09-23-pta-archive",
       "email": null
     },
@@ -640,7 +642,7 @@
           "source": "dcps Beauclerc contact-us"
         }
       ],
-      "why_hot": "Public PTA board emails \u2014 Mandarin-area elementary ICP",
+      "why_hot": "Public PTA board emails — Mandarin-area elementary ICP",
       "source": "hot-links-expand-2026-09-23-pta"
     },
     {
@@ -687,7 +689,7 @@
           "source": "archive-schools-pta.csv / schools-daycares.csv"
         }
       ],
-      "why_hot": "Archive PTA/PTO lead \u2014 school site + main phone; mine public officer email before submit",
+      "why_hot": "Archive PTA/PTO lead — school site + main phone; mine public officer email before submit",
       "source": "hot-links-expand-2026-09-23-pta-archive",
       "email": null
     },
@@ -735,7 +737,7 @@
           "source": "archive-schools-pta.csv / schools-daycares.csv"
         }
       ],
-      "why_hot": "Archive PTA/PTO lead \u2014 school site + main phone; mine public officer email before submit",
+      "why_hot": "Archive PTA/PTO lead — school site + main phone; mine public officer email before submit",
       "source": "hot-links-expand-2026-09-23-pta-archive",
       "email": null
     },
@@ -788,7 +790,7 @@
           "source": "archive-schools-pta.csv / schools-daycares.csv"
         }
       ],
-      "why_hot": "Archive PTA/PTO lead \u2014 school site + main phone; mine public officer email before submit",
+      "why_hot": "Archive PTA/PTO lead — school site + main phone; mine public officer email before submit",
       "source": "hot-links-expand-2026-09-23-pta-archive",
       "email": null
     },
@@ -818,7 +820,7 @@
           "source": "duvalschools.org Dinsmore PTA"
         }
       ],
-      "why_hot": "Public PTA president contact \u2014 Duval elementary festival lane",
+      "why_hot": "Public PTA president contact — Duval elementary festival lane",
       "source": "hot-links-expand-2026-09-23-pta"
     },
     {
@@ -847,7 +849,7 @@
           "source": "duvalschools.org Fishweir PTA"
         }
       ],
-      "why_hot": "Public PTA email \u2014 Riverside elementary festival lane",
+      "why_hot": "Public PTA email — Riverside elementary festival lane",
       "source": "hot-links-expand-2026-09-23-pta"
     },
     {
@@ -875,7 +877,7 @@
           "source": "archive-schools-pta.csv / schools-daycares.csv"
         }
       ],
-      "why_hot": "Archive PTA/PTO lead \u2014 school site + main phone; mine public officer email before submit",
+      "why_hot": "Archive PTA/PTO lead — school site + main phone; mine public officer email before submit",
       "source": "hot-links-expand-2026-09-23-pta-archive",
       "email": null
     },
@@ -921,8 +923,12 @@
           "source": "fojbe.com (2026-09-23)"
         }
       ],
-      "why_hot": "Public PTO president email \u2014 fall festival / grandparents-day buyer lane",
-      "source": "hot-links-expand-2026-09-23-pta"
+      "why_hot": "Public PTO president email — fall festival / grandparents-day buyer lane · OUTREACH 2026-09-23 · emailed · not an open dunk · recent-outreach.html",
+      "source": "hot-links-expand-2026-09-23-pta",
+      "outreach_status": "emailed",
+      "outreach_at": "2026-09-23",
+      "outreach_account": "FOJBE PTO",
+      "still_open": false
     },
     {
       "account": "Greenland Pines Elementary PTA",
@@ -978,7 +984,7 @@
           "source": "archive-schools-pta.csv / schools-daycares.csv"
         }
       ],
-      "why_hot": "Archive PTA/PTO lead \u2014 school site + main phone; mine public officer email before submit",
+      "why_hot": "Archive PTA/PTO lead — school site + main phone; mine public officer email before submit",
       "source": "hot-links-expand-2026-09-23-pta-archive",
       "email": null
     },
@@ -1008,8 +1014,12 @@
           "source": "dcps Holiday Hill PTA"
         }
       ],
-      "why_hot": "Public PTA email \u2014 dances / health & wellness festival buyer",
-      "source": "hot-links-expand-2026-09-23-pta"
+      "why_hot": "Public PTA email — dances / health & wellness festival buyer · OUTREACH 2026-09-23 · emailed · not an open dunk · recent-outreach.html",
+      "source": "hot-links-expand-2026-09-23-pta",
+      "outreach_status": "emailed",
+      "outreach_at": "2026-09-23",
+      "outreach_account": "Holiday Hill PTA",
+      "still_open": false
     },
     {
       "account": "Kernan Trail Elementary PTA",
@@ -1081,7 +1091,7 @@
           "source": "archive-schools-pta.csv / schools-daycares.csv"
         }
       ],
-      "why_hot": "Archive PTA/PTO lead \u2014 school site + main phone; mine public officer email before submit",
+      "why_hot": "Archive PTA/PTO lead — school site + main phone; mine public officer email before submit",
       "source": "hot-links-expand-2026-09-23-pta-archive",
       "email": null
     },
@@ -1139,7 +1149,7 @@
           "source": "archive-schools-pta.csv / schools-daycares.csv"
         }
       ],
-      "why_hot": "Archive PTA/PTO lead \u2014 school site + main phone; mine public officer email before submit",
+      "why_hot": "Archive PTA/PTO lead — school site + main phone; mine public officer email before submit",
       "source": "hot-links-expand-2026-09-23-pta-archive",
       "email": null
     },
@@ -1168,7 +1178,7 @@
           "source": "archive-schools-pta.csv / schools-daycares.csv"
         }
       ],
-      "why_hot": "Archive PTA/PTO lead \u2014 school site + main phone; mine public officer email before submit",
+      "why_hot": "Archive PTA/PTO lead — school site + main phone; mine public officer email before submit",
       "source": "hot-links-expand-2026-09-23-pta-archive",
       "email": null
     },
@@ -1197,7 +1207,7 @@
           "source": "archive-schools-pta.csv / schools-daycares.csv"
         }
       ],
-      "why_hot": "Archive PTA/PTO lead \u2014 school site + main phone; mine public officer email before submit",
+      "why_hot": "Archive PTA/PTO lead — school site + main phone; mine public officer email before submit",
       "source": "hot-links-expand-2026-09-23-pta-archive",
       "email": null
     },
@@ -1255,7 +1265,7 @@
           "source": "archive-schools-pta.csv / schools-daycares.csv"
         }
       ],
-      "why_hot": "Archive PTA/PTO lead \u2014 school site + main phone; mine public officer email before submit",
+      "why_hot": "Archive PTA/PTO lead — school site + main phone; mine public officer email before submit",
       "source": "hot-links-expand-2026-09-23-pta-archive",
       "email": null
     },
@@ -1284,7 +1294,7 @@
           "source": "archive-schools-pta.csv / schools-daycares.csv"
         }
       ],
-      "why_hot": "Archive PTA/PTO lead \u2014 school site + main phone; mine public officer email before submit",
+      "why_hot": "Archive PTA/PTO lead — school site + main phone; mine public officer email before submit",
       "source": "hot-links-expand-2026-09-23-pta-archive",
       "email": null
     },
@@ -1333,7 +1343,7 @@
           "source": "archive-schools-pta.csv / schools-daycares.csv"
         }
       ],
-      "why_hot": "Archive PTA/PTO lead \u2014 school site + main phone; mine public officer email before submit",
+      "why_hot": "Archive PTA/PTO lead — school site + main phone; mine public officer email before submit",
       "source": "hot-links-expand-2026-09-23-pta-archive",
       "email": null
     },
@@ -1362,7 +1372,7 @@
           "source": "archive-schools-pta.csv / schools-daycares.csv"
         }
       ],
-      "why_hot": "Archive PTA/PTO lead \u2014 school site + main phone; mine public officer email before submit",
+      "why_hot": "Archive PTA/PTO lead — school site + main phone; mine public officer email before submit",
       "source": "hot-links-expand-2026-09-23-pta-archive",
       "email": null
     },
@@ -1436,7 +1446,7 @@
           "source": "archive-schools-pta.csv / schools-daycares.csv"
         }
       ],
-      "why_hot": "Archive PTA/PTO lead \u2014 school site + main phone; mine public officer email before submit",
+      "why_hot": "Archive PTA/PTO lead — school site + main phone; mine public officer email before submit",
       "source": "hot-links-expand-2026-09-23-pta-archive",
       "email": null
     },
@@ -1465,7 +1475,7 @@
           "source": "archive-schools-pta.csv / schools-daycares.csv"
         }
       ],
-      "why_hot": "Archive PTA/PTO lead \u2014 school site + main phone; mine public officer email before submit",
+      "why_hot": "Archive PTA/PTO lead — school site + main phone; mine public officer email before submit",
       "source": "hot-links-expand-2026-09-23-pta-archive",
       "email": null
     },
@@ -1475,7 +1485,7 @@
       "city": "Palatka",
       "contact_form_url": "https://www.sjrstate.edu/contactus",
       "lane": "school",
-      "why_hot": "College public contact path \u00b7 campus programming",
+      "why_hot": "College public contact path · campus programming",
       "phone": null,
       "email": null,
       "segment": "b2b_school_pta",
@@ -1514,7 +1524,7 @@
           "source": "archive-schools-pta.csv"
         }
       ],
-      "why_hot": "Nassau Catholic/independent school \u2014 public principal email",
+      "why_hot": "Nassau Catholic/independent school — public principal email",
       "source": "hot-links-expand-2026-09-23-forms"
     },
     {
@@ -1542,7 +1552,7 @@
           "source": "archive-schools-pta.csv / schools-daycares.csv"
         }
       ],
-      "why_hot": "Archive PTA/PTO lead \u2014 school site + main phone; mine public officer email before submit",
+      "why_hot": "Archive PTA/PTO lead — school site + main phone; mine public officer email before submit",
       "source": "hot-links-expand-2026-09-23-pta-archive",
       "email": null
     },
@@ -1564,24 +1574,57 @@
       "blue_chip": true,
       "contacts": [
         {
-          "name": null,
-          "title": "PTO",
+          "name": "Becky Cromwell",
+          "title": "Co-President",
           "email": "ptohartley@gmail.com",
           "phone": null,
           "linkedin": null,
-          "source": "Hartley PTO page"
+          "source": "www-wdh.stjohns.k12.fl.us/pto (2026-09-24)"
         },
         {
-          "name": null,
+          "name": "Amanda Grant",
+          "title": "Co-President",
+          "email": "ptohartley@gmail.com",
+          "phone": null,
+          "linkedin": null,
+          "source": "www-wdh.stjohns.k12.fl.us/pto (2026-09-24)"
+        },
+        {
+          "name": "Kat Squibb",
+          "title": "Vice President",
+          "email": "ptohartley@gmail.com",
+          "phone": null,
+          "linkedin": null,
+          "source": "www-wdh.stjohns.k12.fl.us/pto (2026-09-24)"
+        },
+        {
+          "name": "Amanda Black",
+          "title": "Treasurer",
+          "email": "ptohartley@gmail.com",
+          "phone": null,
+          "linkedin": null,
+          "source": "www-wdh.stjohns.k12.fl.us/pto (2026-09-24)"
+        },
+        {
+          "name": "Reina Nock",
+          "title": "Secretary",
+          "email": "ptohartley@gmail.com",
+          "phone": null,
+          "linkedin": null,
+          "source": "www-wdh.stjohns.k12.fl.us/pto (2026-09-24)"
+        },
+        {
+          "name": "Melissa Collins",
           "title": "Business Partner Liaison",
           "email": "hartleybusinesspartners@gmail.com",
           "phone": null,
           "linkedin": null,
-          "source": "Hartley PTO page"
+          "source": "www-wdh.stjohns.k12.fl.us/pto (2026-09-24)"
         }
       ],
-      "why_hot": "Public PTO + business-partner liaison emails \u2014 sponsorship-ready",
-      "source": "hot-links-expand-2026-09-23-pta"
+      "why_hot": "Public PTO + business-partner liaison emails — sponsorship-ready",
+      "source": "hot-links-expand-2026-09-23-pta",
+      "multi_contact": true
     },
     {
       "account": "Montessori Tides School",
@@ -1589,7 +1632,7 @@
       "city": "Jacksonville Beach",
       "contact_form_url": "https://www.montessoritides.com/contact-us/",
       "lane": "daycare",
-      "why_hot": "Montessori contact form \u00b7 Jax Beach",
+      "why_hot": "Montessori contact form · Jax Beach",
       "phone": "(904) 241-1139",
       "email": null,
       "segment": "b2b_daycare",
@@ -1632,12 +1675,12 @@
           "source": "customers_no_next_date.json"
         }
       ],
-      "why_hot": "Past buyer campus \u2014 flag only; rebook not cold-form",
+      "why_hot": "Past buyer campus — flag only; rebook not cold-form",
       "source": "hot-links-expand-2026-09-23-pta"
     },
     {
-      "account": "Amazing Explorers Academy \u2014 Rivertown",
-      "brand": "Amazing Explorers Academy \u2014 Rivertown",
+      "account": "Amazing Explorers Academy — Rivertown",
+      "brand": "Amazing Explorers Academy — Rivertown",
       "city": "St. Johns",
       "contact_form_url": "mailto:jlane@aexplorers.com",
       "email": "jlane@aexplorers.com",
@@ -1650,7 +1693,7 @@
       "path_type": "email",
       "pto_pta": false,
       "blue_chip": true,
-      "why_hot": "Past buyer \u2014 flag only; rebook not cold-form",
+      "why_hot": "Past buyer — flag only; rebook not cold-form",
       "source": "hot-links-expand-2026-09-23-forms",
       "contacts": [
         {
@@ -1668,8 +1711,8 @@
       ]
     },
     {
-      "account": "Amazing Explorers Academy \u2014 Silverleaf",
-      "brand": "Amazing Explorers Academy \u2014 Silverleaf",
+      "account": "Amazing Explorers Academy — Silverleaf",
+      "brand": "Amazing Explorers Academy — Silverleaf",
       "city": "St. Johns",
       "contact_form_url": "mailto:ei@aexplorers.com",
       "email": "ei@aexplorers.com",
@@ -1682,7 +1725,7 @@
       "path_type": "email",
       "pto_pta": false,
       "blue_chip": true,
-      "why_hot": "Past buyer \u2014 flag only; rebook not cold-form",
+      "why_hot": "Past buyer — flag only; rebook not cold-form",
       "source": "hot-links-expand-2026-09-23-forms",
       "contacts": [
         {
@@ -1700,8 +1743,8 @@
       ]
     },
     {
-      "account": "Big Blue Marble Academy \u2014 Bartram Park",
-      "brand": "Big Blue Marble Academy \u2014 Bartram Park",
+      "account": "Big Blue Marble Academy — Bartram Park",
+      "brand": "Big Blue Marble Academy — Bartram Park",
       "city": "Jacksonville",
       "contact_form_url": "mailto:center88@bbmacademy.com",
       "email": "center88@bbmacademy.com",
@@ -1714,7 +1757,7 @@
       "path_type": "email",
       "pto_pta": false,
       "blue_chip": true,
-      "why_hot": "Past buyer \u2014 flag only; rebook not cold-form",
+      "why_hot": "Past buyer — flag only; rebook not cold-form",
       "source": "hot-links-expand-2026-09-23-forms",
       "contacts": [
         {
@@ -1732,8 +1775,8 @@
       ]
     },
     {
-      "account": "Big Blue Marble Academy \u2014 San Pablo",
-      "brand": "Big Blue Marble Academy \u2014 San Pablo",
+      "account": "Big Blue Marble Academy — San Pablo",
+      "brand": "Big Blue Marble Academy — San Pablo",
       "city": "Jacksonville",
       "contact_form_url": "mailto:center87@bbmacademy.com",
       "email": "center87@bbmacademy.com",
@@ -1746,7 +1789,7 @@
       "path_type": "email",
       "pto_pta": false,
       "blue_chip": true,
-      "why_hot": "Past buyer \u2014 flag only; rebook not cold-form",
+      "why_hot": "Past buyer — flag only; rebook not cold-form",
       "source": "hot-links-expand-2026-09-23-forms",
       "contacts": [
         {
@@ -1788,12 +1831,15 @@
           "source": "customers_no_next_date.json"
         }
       ],
-      "why_hot": "Past buyer (CTK ELC) \u2014 flag only; do not cold-form",
+      "why_hot": "Past buyer (CTK ELC) — flag only; do not cold-form · OUTREACH 2026-09-23 emailed_ooo · Sent used lnelson@ctkearlylearning.com (on-file email differs) · not an open dunk",
       "source": "hot-links-expand-2026-09-23-forms",
       "mid": null,
       "tags": [
         "daycare"
-      ]
+      ],
+      "outreach_status": "emailed_ooo",
+      "outreach_at": "2026-09-23",
+      "still_open": false
     },
     {
       "account": "Ivybrook Academy Valley Ridge PTO",
@@ -1821,11 +1867,15 @@
           "source": "customers_no_next_date.json"
         }
       ],
-      "why_hot": "Past buyer PTO \u2014 flag only; do not cold-spam",
+      "why_hot": "Past buyer PTO — flag only; do not cold-spam · OUTREACH 2026-09-23 · emailed · not an open dunk · recent-outreach.html",
       "source": "hot-links-expand-2026-09-23-pta",
       "tags": [
         "daycare"
-      ]
+      ],
+      "outreach_status": "emailed",
+      "outreach_at": "2026-09-23",
+      "outreach_account": "Ivy Brook PTO",
+      "still_open": false
     },
     {
       "account": "LaVilla School of the Arts PTSA",
@@ -1861,12 +1911,12 @@
           "source": "archive-schools-pta.csv"
         }
       ],
-      "why_hot": "Past buyer \u2014 flag only; rebook via customers-no-next-date",
+      "why_hot": "Past buyer — flag only; rebook via customers-no-next-date",
       "source": "hot-links-expand-2026-09-23-pta"
     },
     {
-      "account": "The Goddard School Jacksonville \u2014 Spartina Ct",
-      "brand": "The Goddard School Jacksonville \u2014 Spartina Ct",
+      "account": "The Goddard School Jacksonville — Spartina Ct",
+      "brand": "The Goddard School Jacksonville — Spartina Ct",
       "city": "Jacksonville",
       "contact_form_url": "https://www.goddardschool.com/schools/fl/jacksonville/jacksonville/our-school/goddard-form",
       "email": "jacksonville2fl@goddardschools.com",
@@ -1890,7 +1940,7 @@
           "source": "customers_no_next_date.json"
         }
       ],
-      "why_hot": "Past buyer campus \u2014 flag only; rebook via customers-no-next-date",
+      "why_hot": "Past buyer campus — flag only; rebook via customers-no-next-date",
       "source": "hot-links-expand-2026-09-23-forms",
       "tags": [
         "daycare"
@@ -1903,7 +1953,7 @@
       "city": "Ponte Vedra Beach",
       "contact_form_url": "https://www.goddardschool.com/schools/fl/ponte-vedra-beach/ponte-vedra-beach/our-school/goddard-form",
       "lane": "daycare",
-      "why_hot": "School director inquiry form \u00b7 CAPTCHA \u00b7 not the Nocatee/PV customer campus",
+      "why_hot": "School director inquiry form · CAPTCHA · not the Nocatee/PV customer campus",
       "phone": "(904) 373-6600",
       "email": "dianna.sheikh@sunshinepreschoolsfl.com",
       "segment": "b2b_daycare",
@@ -1931,8 +1981,8 @@
       "mid": null
     },
     {
-      "account": "The Goddard School Ponte Vedra \u2014 Nocatee",
-      "brand": "The Goddard School Ponte Vedra \u2014 Nocatee",
+      "account": "The Goddard School Ponte Vedra — Nocatee",
+      "brand": "The Goddard School Ponte Vedra — Nocatee",
       "city": "Ponte Vedra",
       "contact_form_url": "https://www.goddardschool.com/schools/fl/ponte-vedra/ponte-vedra-nocatee/our-school/goddard-form",
       "email": "amelia.parker@sunshinepreschoolsfl.com",
@@ -1956,7 +2006,7 @@
           "source": "customers_no_next_date.json"
         }
       ],
-      "why_hot": "Past buyer campus (Sunshine/Goddard) \u2014 flag only; do not cold-form",
+      "why_hot": "Past buyer campus (Sunshine/Goddard) — flag only; do not cold-form",
       "source": "hot-links-expand-2026-09-23-forms",
       "tags": [
         "daycare"
@@ -1964,8 +2014,8 @@
       "mid": null
     },
     {
-      "account": "Aging True \u2014 Contact",
-      "brand": "Aging True \u2014 Contact",
+      "account": "Aging True — Contact",
+      "brand": "Aging True — Contact",
       "city": "Jacksonville",
       "contact_form_url": "https://agingtrue.org/contact/",
       "lane": "senior",
@@ -2007,7 +2057,7 @@
       "city": "Jacksonville",
       "contact_form_url": "https://www.bartramlakes.org/contact/",
       "lane": "senior",
-      "why_hot": "Activities / inquiry form \u00b7 cold campus",
+      "why_hot": "Activities / inquiry form · cold campus",
       "phone": null,
       "email": null,
       "segment": "b2b_subscription",
@@ -2026,7 +2076,7 @@
       "city": "Jacksonville Beach",
       "contact_form_url": "https://www.beachhouseseniorliving.com/contact-us/",
       "lane": "senior",
-      "why_hot": "Contact form \u00b7 life enrichment ask",
+      "why_hot": "Contact form · life enrichment ask",
       "phone": null,
       "email": null,
       "segment": "b2b_subscription",
@@ -2045,7 +2095,7 @@
       "city": "Middleburg",
       "contact_form_url": "https://www.canterfieldseniorliving.com/contact",
       "lane": "senior",
-      "why_hot": "Senior living contact form \u00b7 Clay",
+      "why_hot": "Senior living contact form · Clay",
       "phone": null,
       "email": null,
       "segment": "b2b_subscription",
@@ -2059,8 +2109,8 @@
       "website": "https://www.canterfieldseniorliving.com/"
     },
     {
-      "account": "Council on Aging of St. Johns \u2014 Contact",
-      "brand": "Council on Aging of St. Johns \u2014 Contact",
+      "account": "Council on Aging of St. Johns — Contact",
+      "brand": "Council on Aging of St. Johns — Contact",
       "city": "St. Augustine",
       "contact_form_url": "https://coasjc.org/contact/",
       "lane": "senior",
@@ -2083,7 +2133,7 @@
       "city": "Green Cove Springs",
       "contact_form_url": "https://diamondalf.com/contact/",
       "lane": "senior",
-      "why_hot": "ALF contact form \u00b7 Clay",
+      "why_hot": "ALF contact form · Clay",
       "phone": null,
       "email": null,
       "segment": "b2b_subscription",
@@ -2102,7 +2152,7 @@
       "city": "Fernandina Beach",
       "contact_form_url": "https://osprey-village.com/contact/",
       "lane": "senior",
-      "why_hot": "IL campus contact form \u00b7 cold",
+      "why_hot": "IL campus contact form · cold",
       "phone": null,
       "email": null,
       "segment": "b2b_subscription",
@@ -2121,7 +2171,7 @@
       "city": "Jacksonville",
       "contact_form_url": "https://seniorlivingatthegreens.com/contact/",
       "lane": "senior",
-      "why_hot": "Contact form \u00b7 cold",
+      "why_hot": "Contact form · cold",
       "phone": null,
       "email": null,
       "segment": "b2b_subscription",
@@ -2159,7 +2209,7 @@
       "city": "St. Johns",
       "contact_form_url": "https://www.qslmseniorliving.com/senior-living/fl/st-johns/county-rd-210/contact-us",
       "lane": "senior",
-      "why_hot": "Contact Us form \u00b7 cold Blake campus",
+      "why_hot": "Contact Us form · cold Blake campus",
       "phone": null,
       "email": null,
       "segment": "b2b_subscription",
@@ -2178,7 +2228,7 @@
       "city": "Fernandina Beach",
       "contact_form_url": "https://www.lakesideamelia.com/contact-us/",
       "lane": "senior",
-      "why_hot": "Past buyer \u2014 flag only; rebook via customers-no-next-date, do not cold-form",
+      "why_hot": "Past buyer — flag only; rebook via customers-no-next-date, do not cold-form",
       "phone": null,
       "email": null,
       "segment": "b2b_subscription",
@@ -2192,8 +2242,8 @@
       "blue_chip": false
     },
     {
-      "account": "Baptist Health \u2014 Community Health & Well-Being form",
-      "brand": "Baptist Health \u2014 Community Health & Well-Being form",
+      "account": "Baptist Health — Community Health & Well-Being form",
+      "brand": "Baptist Health — Community Health & Well-Being form",
       "city": "Jacksonville",
       "contact_form_url": "https://www.baptistjax.com/forms/community-health-and-well-being",
       "lane": "foundation",
@@ -2268,8 +2318,8 @@
       "website": "https://www.dupontfund.org/"
     },
     {
-      "account": "Mayo Clinic Florida \u2014 Event Participation",
-      "brand": "Mayo Clinic Florida \u2014 Event Participation",
+      "account": "Mayo Clinic Florida — Event Participation",
+      "brand": "Mayo Clinic Florida — Event Participation",
       "city": "Jacksonville",
       "contact_form_url": "https://apply.yourcausegrants.com/apply/programs/81f34a5e-6d06-4a6b-887e-0c09bde08f78",
       "lane": "foundation",
@@ -2287,8 +2337,8 @@
       "website": "https://apply.yourcausegrants.com/"
     },
     {
-      "account": "Mayo Clinic Florida \u2014 Event Sponsorship Request",
-      "brand": "Mayo Clinic Florida \u2014 Event Sponsorship Request",
+      "account": "Mayo Clinic Florida — Event Sponsorship Request",
+      "brand": "Mayo Clinic Florida — Event Sponsorship Request",
       "city": "Jacksonville",
       "contact_form_url": "https://apply.yourcausegrants.com/apply/programs/12cb227c-e0a7-4a3e-9a67-ca6f0129e58f",
       "lane": "foundation",
@@ -2311,7 +2361,7 @@
       "city": "Jacksonville",
       "contact_form_url": "https://unitedwaynefl.org/contact/",
       "lane": "foundation",
-      "why_hot": "UW contact form \u00b7 community partners",
+      "why_hot": "UW contact form · community partners",
       "phone": null,
       "email": null,
       "segment": "b2b_enterprise",
@@ -2371,7 +2421,7 @@
       "city": "Orange Park",
       "contact_form_url": "https://angelsofcare.com/contact-us/",
       "lane": "other",
-      "why_hot": "PPEC director path \u00b7 public contact form",
+      "why_hot": "PPEC director path · public contact form",
       "phone": null,
       "email": null,
       "segment": "b2b_enterprise",
@@ -2404,12 +2454,12 @@
       "website": "https://www.btccjax.org/"
     },
     {
-      "account": "Brooks Rehabilitation \u2014 University Crossing",
-      "brand": "Brooks Rehabilitation \u2014 University Crossing",
+      "account": "Brooks Rehabilitation — University Crossing",
+      "brand": "Brooks Rehabilitation — University Crossing",
       "city": "Jacksonville",
       "contact_form_url": "https://brooksrehab.org/contact-us/",
       "lane": "other",
-      "why_hot": "Rehab campus contact \u00b7 activities adjacency",
+      "why_hot": "Rehab campus contact · activities adjacency",
       "phone": null,
       "email": null,
       "segment": "b2b_smallbiz",
@@ -2466,7 +2516,7 @@
       "city": "Jacksonville",
       "contact_form_url": "https://cfhome.org/contact",
       "lane": "other",
-      "why_hot": "Church contact \u00b7 fall festival campuses",
+      "why_hot": "Church contact · fall festival campuses",
       "phone": null,
       "email": null,
       "segment": "b2b_smallbiz",
@@ -2485,7 +2535,7 @@
       "city": "Jacksonville",
       "contact_form_url": "https://www.christs.church/contact",
       "lane": "other",
-      "why_hot": "Church contact form \u00b7 kids/family events",
+      "why_hot": "Church contact form · kids/family events",
       "phone": null,
       "email": null,
       "segment": "b2b_smallbiz",
@@ -2523,7 +2573,7 @@
       "city": "Jacksonville",
       "contact_form_url": "https://www.cummermuseum.org/contact",
       "lane": "other",
-      "why_hot": "Museum contact form \u00b7 family programs",
+      "why_hot": "Museum contact form · family programs",
       "phone": null,
       "email": null,
       "segment": "b2b_enterprise",
@@ -2543,7 +2593,7 @@
       "city": "Jacksonville",
       "contact_form_url": "https://www.deerwoodclub.com/contact",
       "lane": "other",
-      "why_hot": "Public Contact Us \u00b7 activities / member events \u00b7 CAPTCHA",
+      "why_hot": "Public Contact Us · activities / member events · CAPTCHA",
       "phone": null,
       "email": null,
       "segment": "b2b_enterprise",
@@ -2557,12 +2607,12 @@
       "website": "https://www.deerwoodclub.com/"
     },
     {
-      "account": "Dune House Hotel & Spa \u2014 Events RFP",
-      "brand": "Dune House Hotel & Spa \u2014 Events RFP",
+      "account": "Dune House Hotel & Spa — Events RFP",
+      "brand": "Dune House Hotel & Spa — Events RFP",
       "city": "Atlantic Beach",
       "contact_form_url": "https://www.dunehousehotelandspa.com/events-groups/rfp/",
       "lane": "other",
-      "why_hot": "Group/event RFP form \u00b7 CAPTCHA \u00b7 guest entertainment vendor",
+      "why_hot": "Group/event RFP form · CAPTCHA · guest entertainment vendor",
       "phone": null,
       "email": null,
       "segment": "b2b_enterprise",
@@ -2581,7 +2631,7 @@
       "city": "Jacksonville",
       "contact_form_url": "https://fletcherstendercare.com/contact/",
       "lane": "other",
-      "why_hot": "PPEC contact page \u00b7 email path on public page",
+      "why_hot": "PPEC contact page · email path on public page",
       "phone": null,
       "email": null,
       "segment": "b2b_enterprise",
@@ -2600,7 +2650,7 @@
       "city": "Amelia Island",
       "contact_form_url": "https://www.golfclubofamelia.com/contact-us",
       "lane": "other",
-      "why_hot": "Club contact form \u00b7 events",
+      "why_hot": "Club contact form · events",
       "phone": null,
       "email": null,
       "segment": "b2b_enterprise",
@@ -2619,7 +2669,7 @@
       "city": "Jacksonville",
       "contact_form_url": "https://www.holyfamilyjax.com/contact",
       "lane": "other",
-      "why_hot": "Parish contact form \u00b7 festival / family events",
+      "why_hot": "Parish contact form · festival / family events",
       "phone": null,
       "email": null,
       "segment": "b2b_smallbiz",
@@ -2671,12 +2721,12 @@
       "website": "https://www.jacksonvillejazzfest.com/"
     },
     {
-      "account": "Jacksonville Zoo & Gardens \u2014 Contact",
-      "brand": "Jacksonville Zoo & Gardens \u2014 Contact",
+      "account": "Jacksonville Zoo & Gardens — Contact",
+      "brand": "Jacksonville Zoo & Gardens — Contact",
       "city": "Jacksonville",
       "contact_form_url": "mailto:venuerentals@jacksonvillezoo.org",
       "lane": "other",
-      "why_hot": "Public contact \u00b7 venue rentals email on page",
+      "why_hot": "Public contact · venue rentals email on page",
       "phone": null,
       "email": "venuerentals@jacksonvillezoo.org",
       "segment": "b2b_enterprise",
@@ -2700,12 +2750,12 @@
       ]
     },
     {
-      "account": "Jax Chamber \u2014 Contact Us",
-      "brand": "Jax Chamber \u2014 Contact Us",
+      "account": "Jax Chamber — Contact Us",
+      "brand": "Jax Chamber — Contact Us",
       "city": "Jacksonville",
       "contact_form_url": "https://www.myjaxchamber.com/contact-us/",
       "lane": "other",
-      "why_hot": "Chamber contact form \u00b7 event intros",
+      "why_hot": "Chamber contact form · event intros",
       "phone": null,
       "email": null,
       "segment": "b2b_enterprise",
@@ -2743,7 +2793,7 @@
       "city": "Callahan",
       "contact_form_url": "https://www.neflfair.org/contact",
       "lane": "other",
-      "why_hot": "Fair contact form \u00b7 Callahan home turf",
+      "why_hot": "Fair contact form · Callahan home turf",
       "phone": null,
       "email": null,
       "segment": "b2b_smallbiz",
@@ -2762,7 +2812,7 @@
       "city": "St. Marys",
       "contact_form_url": "https://www.ospreycove.com/contact",
       "lane": "other",
-      "why_hot": "Club contact form \u00b7 near Nassau",
+      "why_hot": "Club contact form · near Nassau",
       "phone": null,
       "email": null,
       "segment": "b2b_enterprise",
@@ -2776,8 +2826,8 @@
       "website": "https://www.ospreycove.com/"
     },
     {
-      "account": "Ponte Vedra Beach Resorts \u2014 Event RFP",
-      "brand": "Ponte Vedra Beach Resorts \u2014 Event RFP",
+      "account": "Ponte Vedra Beach Resorts — Event RFP",
+      "brand": "Ponte Vedra Beach Resorts — Event RFP",
       "city": "Ponte Vedra Beach",
       "contact_form_url": "https://www.pontevedra.com/events/rfp",
       "lane": "other",
@@ -2800,7 +2850,7 @@
       "city": "Jacksonville",
       "contact_form_url": "https://www.invitedclubs.com/clubs/queen-s-harbour-yacht-country-club/contact-us",
       "lane": "other",
-      "why_hot": "Club contact \u00b7 members & non-members events \u00b7 CAPTCHA",
+      "why_hot": "Club contact · members & non-members events · CAPTCHA",
       "phone": null,
       "email": null,
       "segment": "b2b_enterprise",
@@ -2857,7 +2907,7 @@
       "city": "Jacksonville",
       "contact_form_url": "https://www.sjccjax.com/membership",
       "lane": "other",
-      "why_hot": "Membership inquiry \u00b7 Family Events / Cubs Corner \u00b7 CAPTCHA",
+      "why_hot": "Membership inquiry · Family Events / Cubs Corner · CAPTCHA",
       "phone": null,
       "email": null,
       "segment": "b2b_enterprise",
@@ -2895,7 +2945,7 @@
       "city": "Jacksonville",
       "contact_form_url": "https://coe22.com/contact",
       "lane": "other",
-      "why_hot": "Multi-campus church contact \u00b7 event ask",
+      "why_hot": "Multi-campus church contact · event ask",
       "phone": null,
       "email": null,
       "segment": "b2b_smallbiz",
@@ -2909,8 +2959,8 @@
       "website": "https://coe22.com/"
     },
     {
-      "account": "Town of Orange Park \u2014 Fall Festival",
-      "brand": "Town of Orange Park \u2014 Fall Festival",
+      "account": "Town of Orange Park — Fall Festival",
+      "brand": "Town of Orange Park — Fall Festival",
       "city": "Orange Park",
       "contact_form_url": "https://www.opfallfestival.com/contact.aspx",
       "lane": "other",
@@ -2952,7 +3002,7 @@
       "city": "Jacksonville",
       "contact_form_url": "https://windsorparke.com/contact/",
       "lane": "other",
-      "why_hot": "Public course contact form \u00b7 events",
+      "why_hot": "Public course contact form · events",
       "phone": null,
       "email": null,
       "segment": "b2b_enterprise",
@@ -2971,7 +3021,7 @@
       "city": "Atlantic Beach",
       "contact_form_url": "https://www.coab.us/2176/Fall-Festival",
       "lane": "other",
-      "why_hot": "City fall festival page \u00b7 vendor/contact path",
+      "why_hot": "City fall festival page · vendor/contact path",
       "phone": null,
       "email": null,
       "segment": "b2b_smallbiz",
@@ -2985,8 +3035,8 @@
       "website": "https://www.coab.us/"
     },
     {
-      "account": "First Baptist Church Jacksonville \u2014 Downtown",
-      "brand": "First Baptist Church Jacksonville \u2014 Downtown",
+      "account": "First Baptist Church Jacksonville — Downtown",
+      "brand": "First Baptist Church Jacksonville — Downtown",
       "city": "Jacksonville",
       "contact_form_url": "https://fbcjax.com/contact/",
       "lane": "other",
@@ -3004,12 +3054,12 @@
       "website": "https://fbcjax.com/"
     },
     {
-      "account": "Tender Care Medical Services \u2014 St. Johns PPEC referral",
-      "brand": "Tender Care Medical Services \u2014 St. Johns PPEC referral",
+      "account": "Tender Care Medical Services — St. Johns PPEC referral",
+      "brand": "Tender Care Medical Services — St. Johns PPEC referral",
       "city": "St. Augustine",
       "contact_form_url": "https://www.tcms.care/refer/",
       "lane": "other",
-      "why_hot": "Public child-referral / notes form \u00b7 St. Johns location",
+      "why_hot": "Public child-referral / notes form · St. Johns location",
       "phone": null,
       "email": null,
       "segment": "b2b_enterprise",
@@ -3159,7 +3209,7 @@
       "blue_chip": false
     },
     {
-      "account": "Baptist Health Foundation \u2014 Companies Who Care",
+      "account": "Baptist Health Foundation — Companies Who Care",
       "brand": "Baptist Health Foundation",
       "city": "Jacksonville",
       "contact_form_url": "https://giving.baptistjax.com/campaign/568180/donate",
@@ -3175,13 +3225,13 @@
         "hospital",
         "corporate-sponsor"
       ],
-      "why_hot": "Public Companies Who Care page; corporate and event support for Baptist Health / Wolfson Children\u2019s",
+      "why_hot": "Public Companies Who Care page; corporate and event support for Baptist Health / Wolfson Children’s",
       "source": "hot-links-hail-mary-expand-2026-09-23",
       "pto_pta": false,
       "blue_chip": false
     },
     {
-      "account": "UF Health Jacksonville \u2014 Fundraising Events",
+      "account": "UF Health Jacksonville — Fundraising Events",
       "brand": "UF Health Jacksonville",
       "city": "Jacksonville",
       "contact_form_url": "https://ufhealthjax.org/giving",
@@ -3203,7 +3253,7 @@
       "blue_chip": false
     },
     {
-      "account": "Mayo Clinic Florida \u2014 Community Engagement Sponsorships",
+      "account": "Mayo Clinic Florida — Community Engagement Sponsorships",
       "brand": "Mayo Clinic Florida",
       "city": "Jacksonville",
       "contact_form_url": "https://www.communityengagement.mayoclinic.org/florida",
@@ -3225,7 +3275,7 @@
       "blue_chip": false
     },
     {
-      "account": "Jacksonville Zoo & Botanical Gardens \u2014 Corporate Sponsors",
+      "account": "Jacksonville Zoo & Botanical Gardens — Corporate Sponsors",
       "brand": "Jacksonville Zoo & Botanical Gardens",
       "city": "Jacksonville",
       "contact_form_url": "https://www.jacksonvillezoo.org/corporate-sponsors",
@@ -3247,7 +3297,7 @@
       "blue_chip": false
     },
     {
-      "account": "Jacksonville Greek Festival \u2014 Sponsorships",
+      "account": "Jacksonville Greek Festival — Sponsorships",
       "brand": "Jacksonville Greek Festival",
       "city": "Jacksonville",
       "contact_form_url": "https://jaxgreekfest.com/sponsorship-info/",
@@ -3269,7 +3319,7 @@
       "blue_chip": false
     },
     {
-      "account": "Jacksonville Symphony \u2014 Business Partners",
+      "account": "Jacksonville Symphony — Business Partners",
       "brand": "Jacksonville Symphony",
       "city": "Jacksonville",
       "contact_form_url": "https://www.jaxsymphony.org/giving-old/business-partners/",
@@ -3291,7 +3341,7 @@
       "blue_chip": false
     },
     {
-      "account": "Cultural Council of Greater Jacksonville \u2014 Corporate Partner",
+      "account": "Cultural Council of Greater Jacksonville — Corporate Partner",
       "brand": "Cultural Council of Greater Jacksonville",
       "city": "Jacksonville",
       "contact_form_url": "https://culturalcouncil.org/get-involved/corporate-partner/",
@@ -3313,7 +3363,7 @@
       "blue_chip": false
     },
     {
-      "account": "VyStar Credit Union \u2014 Sponsorship Requests",
+      "account": "VyStar Credit Union — Sponsorship Requests",
       "brand": "VyStar Credit Union",
       "city": "Jacksonville",
       "contact_form_url": "https://vystarcu.org/who-we-are/our-community/sponsorships",
@@ -3335,7 +3385,7 @@
       "blue_chip": false
     },
     {
-      "account": "Community First Credit Union \u2014 Donation Requests",
+      "account": "Community First Credit Union — Donation Requests",
       "brand": "Community First Credit Union",
       "city": "Jacksonville",
       "contact_form_url": "https://www.communityfirstfl.org/connect/cares-foundation/donation-request",
@@ -3357,7 +3407,7 @@
       "blue_chip": false
     },
     {
-      "account": "First Horizon Foundation \u2014 Florida Grant Request",
+      "account": "First Horizon Foundation — Florida Grant Request",
       "brand": "First Horizon Bank / Foundation",
       "city": "Jacksonville",
       "contact_form_url": "https://firsthorizonfoundation.com/Apply-for-a-Grant",
@@ -3379,7 +3429,7 @@
       "blue_chip": false
     },
     {
-      "account": "JAX Chamber \u2014 Advertising & Sponsorship",
+      "account": "JAX Chamber — Advertising & Sponsorship",
       "brand": "JAX Chamber",
       "city": "Jacksonville",
       "contact_form_url": "https://jaxchamber.com/advertisewithus/",
@@ -3445,8 +3495,8 @@
       "source": "hot-links-daycare-expand-2026-09-23"
     },
     {
-      "account": "The Learning Experience \u2014 Nocatee",
-      "brand": "The Learning Experience \u2014 Nocatee",
+      "account": "The Learning Experience — Nocatee",
+      "brand": "The Learning Experience — Nocatee",
       "city": "Ponte Vedra Beach",
       "contact_form_url": "https://thelearningexperience.com/centers/nocatee/",
       "website": "https://thelearningexperience.com/centers/nocatee/",
@@ -3562,8 +3612,735 @@
           "source": "archive-schools-pta.csv"
         }
       ],
-      "why_hot": "Sister campus to Valley Ridge buyer \u2014 public campus email",
+      "why_hot": "Sister campus to Valley Ridge buyer — public campus email",
       "source": "hot-links-expand-2026-09-23-forms"
+    },
+    {
+      "account": "Learning Ladders Preschool",
+      "brand": "Learning Ladders Preschool",
+      "city": "Jacksonville",
+      "contact_form_url": "mailto:sremley@mumc.net",
+      "phone": "904-292-1126",
+      "website": "https://www.learningladderspreschool.com/contact",
+      "linkedin_company": null,
+      "lane": "daycare",
+      "segment": "b2b_daycare",
+      "channel": "b2b",
+      "tier": "net_new",
+      "status": "net_new",
+      "path_type": "email",
+      "pto_pta": false,
+      "blue_chip": true,
+      "why_hot": "Public enrollment/tour email on preschool contact page",
+      "source": "hot-links-expand-2026-09-24-public",
+      "email": "sremley@mumc.net",
+      "tags": [
+        "daycare"
+      ],
+      "mid": null,
+      "still_open": true,
+      "tapped": false
+    },
+    {
+      "account": "Lakewood Preschool (Lakewood Church)",
+      "brand": "Lakewood Preschool (Lakewood Church)",
+      "city": "Jacksonville",
+      "contact_form_url": "mailto:lakewoodumpreschool@gmail.com",
+      "phone": "904-733-8477",
+      "website": "https://www.lcjax.org/ministries/lakewood-preschool/pages/enrollment",
+      "linkedin_company": null,
+      "lane": "daycare",
+      "segment": "b2b_daycare",
+      "channel": "b2b",
+      "tier": "net_new",
+      "status": "net_new",
+      "path_type": "email",
+      "pto_pta": false,
+      "blue_chip": false,
+      "why_hot": "Public preschool application email on church enrollment page",
+      "source": "hot-links-expand-2026-09-24-public",
+      "email": "lakewoodumpreschool@gmail.com",
+      "tags": [
+        "daycare"
+      ],
+      "mid": null,
+      "still_open": true,
+      "tapped": false
+    },
+    {
+      "account": "Precious Promises Preschool (CFC Jax)",
+      "brand": "Precious Promises Preschool (CFC Jax)",
+      "city": "Jacksonville",
+      "contact_form_url": "mailto:ppp@cfcjax.com",
+      "phone": "904-262-3007",
+      "website": "https://cfcjax.com/ministries/precious-promises-preschool/",
+      "linkedin_company": null,
+      "lane": "daycare",
+      "segment": "b2b_daycare",
+      "channel": "b2b",
+      "tier": "net_new",
+      "status": "net_new",
+      "path_type": "email",
+      "pto_pta": false,
+      "blue_chip": false,
+      "why_hot": "Public PPP@cfcjax.com on preschool ministry page · 2026-27 open",
+      "source": "hot-links-expand-2026-09-24-public",
+      "email": "ppp@cfcjax.com",
+      "tags": [
+        "daycare"
+      ],
+      "mid": null,
+      "still_open": true,
+      "tapped": false
+    },
+    {
+      "account": "Argyle Christian Preschool",
+      "brand": "Argyle Christian Preschool",
+      "city": "Jacksonville",
+      "contact_form_url": "mailto:pchambers@acpjax.com",
+      "phone": "1-904-778-4838",
+      "website": "https://www.myacpk.com/",
+      "linkedin_company": null,
+      "lane": "daycare",
+      "segment": "b2b_daycare",
+      "channel": "b2b",
+      "tier": "net_new",
+      "status": "net_new",
+      "path_type": "email",
+      "pto_pta": false,
+      "blue_chip": false,
+      "why_hot": "Public director email on Argyle Christian Preschool home page",
+      "source": "hot-links-expand-2026-09-24-public",
+      "email": "pchambers@acpjax.com",
+      "tags": [
+        "daycare"
+      ],
+      "mid": null,
+      "still_open": true,
+      "tapped": false
+    },
+    {
+      "account": "Faith First Preschool",
+      "brand": "Faith First Preschool",
+      "city": "Jacksonville",
+      "contact_form_url": "mailto:faithfirstpreschool@gmail.com",
+      "phone": "904-672-7723",
+      "website": "https://www.faithfirstpreschool.com/about",
+      "linkedin_company": null,
+      "lane": "daycare",
+      "segment": "b2b_daycare",
+      "channel": "b2b",
+      "tier": "net_new",
+      "status": "net_new",
+      "path_type": "email",
+      "pto_pta": false,
+      "blue_chip": false,
+      "why_hot": "Public contact email on Beach Blvd preschool About page",
+      "source": "hot-links-expand-2026-09-24-public",
+      "email": "faithfirstpreschool@gmail.com",
+      "tags": [
+        "daycare"
+      ],
+      "mid": null,
+      "still_open": true,
+      "tapped": false
+    },
+    {
+      "account": "Hodges Blvd Presbyterian Preschool",
+      "brand": "Hodges Blvd Presbyterian Preschool",
+      "city": "Jacksonville",
+      "contact_form_url": "mailto:kwelch.hodgespres@gmail.com",
+      "phone": "904-254-7304",
+      "website": "https://hbpcusa.org/announcement/hbpc-preschool",
+      "linkedin_company": null,
+      "lane": "daycare",
+      "segment": "b2b_daycare",
+      "channel": "b2b",
+      "tier": "net_new",
+      "status": "net_new",
+      "path_type": "email",
+      "pto_pta": false,
+      "blue_chip": false,
+      "why_hot": "Public director email on Hodges Presbyterian preschool page",
+      "source": "hot-links-expand-2026-09-24-public",
+      "email": "kwelch.hodgespres@gmail.com",
+      "tags": [
+        "daycare"
+      ],
+      "mid": null,
+      "still_open": true,
+      "tapped": false,
+      "contacts": [
+        {
+          "name": "Kimberly Welch",
+          "title": "Preschool Director",
+          "email": "kwelch.hodgespres@gmail.com",
+          "phone": "904-254-7304",
+          "linkedin": null,
+          "source": "hbpcusa.org preschool announcement (2026-09-24)"
+        }
+      ],
+      "multi_contact": false
+    },
+    {
+      "account": "Fields of Art Christian Academy — Preschool",
+      "brand": "Fields of Art Christian Academy — Preschool",
+      "city": "Orange Park",
+      "contact_form_url": "mailto:hendon2765@gmail.com",
+      "phone": "904-713-8260",
+      "website": "https://www.fieldsofartchristianacademy.com/preschool-early-learning/orange-park-fl",
+      "linkedin_company": null,
+      "lane": "daycare",
+      "segment": "b2b_daycare",
+      "channel": "b2b",
+      "tier": "net_new",
+      "status": "net_new",
+      "path_type": "email",
+      "pto_pta": false,
+      "blue_chip": false,
+      "why_hot": "Public preschool contact email · Clay County catchment",
+      "source": "hot-links-expand-2026-09-24-public",
+      "email": "hendon2765@gmail.com",
+      "tags": [
+        "daycare"
+      ],
+      "mid": null,
+      "still_open": true,
+      "tapped": false
+    },
+    {
+      "account": "St. John the Divine Early Learning Center",
+      "brand": "St. John the Divine Early Learning Center",
+      "city": "Jacksonville",
+      "contact_form_url": "https://earlylearning.stjohnthedivinejax.org/pre-enrollment/",
+      "phone": "904-396-5384",
+      "website": "https://earlylearning.stjohnthedivinejax.org/pre-enrollment/",
+      "linkedin_company": null,
+      "lane": "daycare",
+      "segment": "b2b_daycare",
+      "channel": "b2b",
+      "tier": "net_new",
+      "status": "net_new",
+      "path_type": "form",
+      "pto_pta": false,
+      "blue_chip": true,
+      "why_hot": "Public pre-enrollment inquiry form · infant–VPK",
+      "source": "hot-links-expand-2026-09-24-public",
+      "email": null,
+      "tags": [
+        "daycare"
+      ],
+      "mid": null,
+      "still_open": true,
+      "tapped": false
+    },
+    {
+      "account": "Primrose School at St. Johns Forest",
+      "brand": "Primrose School at St. Johns Forest",
+      "city": "Jacksonville",
+      "contact_form_url": "https://www.primroseschools.com/schools/st-johns-forest/schedule-a-tour",
+      "phone": "904-824-1100",
+      "website": "https://www.primroseschools.com/schools/st-johns-forest",
+      "linkedin_company": "https://www.linkedin.com/company/primrose-schools",
+      "lane": "daycare",
+      "segment": "b2b_daycare",
+      "channel": "b2b",
+      "tier": "copycat_t1",
+      "status": "copycat_t1",
+      "path_type": "form",
+      "pto_pta": false,
+      "blue_chip": true,
+      "why_hot": "Copycat T1 Primrose · public schedule-a-tour · St. Johns Forest",
+      "source": "hot-links-expand-2026-09-24-public",
+      "email": null,
+      "tags": [
+        "daycare"
+      ],
+      "mid": null,
+      "still_open": true,
+      "tapped": false
+    },
+    {
+      "account": "Primrose School of Julington Creek",
+      "brand": "Primrose School of Julington Creek",
+      "city": "Jacksonville",
+      "contact_form_url": "https://www.primroseschools.com/schools/julington-creek/schedule-a-tour",
+      "phone": "904-230-2828",
+      "website": "https://www.primroseschools.com/schools/julington-creek",
+      "linkedin_company": "https://www.linkedin.com/company/primrose-schools",
+      "lane": "daycare",
+      "segment": "b2b_daycare",
+      "channel": "b2b",
+      "tier": "copycat_t1",
+      "status": "copycat_t1",
+      "path_type": "form",
+      "pto_pta": false,
+      "blue_chip": true,
+      "why_hot": "Copycat T1 Primrose · public schedule-a-tour · Julington Creek",
+      "source": "hot-links-expand-2026-09-24-public",
+      "email": null,
+      "tags": [
+        "daycare"
+      ],
+      "mid": null,
+      "still_open": true,
+      "tapped": false
+    },
+    {
+      "account": "Southside KinderCare",
+      "brand": "Southside KinderCare",
+      "city": "Jacksonville",
+      "contact_form_url": "https://www.kindercare.com/our-centers/jacksonville/fl/301928",
+      "phone": "904-997-1971",
+      "website": "https://www.kindercare.com/our-centers/jacksonville/fl/301928",
+      "linkedin_company": "https://www.linkedin.com/company/kindercare-learning-centers",
+      "lane": "daycare",
+      "segment": "b2b_daycare",
+      "channel": "b2b",
+      "tier": "copycat_t1",
+      "status": "copycat_t1",
+      "path_type": "form",
+      "pto_pta": false,
+      "blue_chip": true,
+      "why_hot": "Copycat T1 KinderCare · public tour form · director named (no public email)",
+      "source": "hot-links-expand-2026-09-24-public",
+      "email": null,
+      "tags": [
+        "daycare"
+      ],
+      "mid": null,
+      "still_open": true,
+      "tapped": false,
+      "contacts": [
+        {
+          "name": "Carla Albertie",
+          "title": "Center Director",
+          "email": null,
+          "phone": "904-997-1971",
+          "linkedin": null,
+          "source": "kindercare.com center page (2026-09-24)"
+        }
+      ],
+      "multi_contact": false
+    },
+    {
+      "account": "Eagle Harbor Parkway KinderCare",
+      "brand": "Eagle Harbor Parkway KinderCare",
+      "city": "Orange Park",
+      "contact_form_url": "https://www.kindercare.com/our-centers/orange-park/fl/301601",
+      "phone": "904-278-7710",
+      "website": "https://www.kindercare.com/our-centers/orange-park/fl/301601",
+      "linkedin_company": "https://www.linkedin.com/company/kindercare-learning-centers",
+      "lane": "daycare",
+      "segment": "b2b_daycare",
+      "channel": "b2b",
+      "tier": "copycat_t1",
+      "status": "copycat_t1",
+      "path_type": "form",
+      "pto_pta": false,
+      "blue_chip": true,
+      "why_hot": "Copycat T1 KinderCare · Fleming Island / Clay · public tour form",
+      "source": "hot-links-expand-2026-09-24-public",
+      "email": null,
+      "tags": [
+        "daycare"
+      ],
+      "mid": null,
+      "still_open": true,
+      "tapped": false,
+      "contacts": [
+        {
+          "name": "Elizabeth O'Daniel",
+          "title": "Center Director",
+          "email": null,
+          "phone": "904-278-7710",
+          "linkedin": null,
+          "source": "kindercare.com Eagle Harbor page (2026-09-24)"
+        }
+      ],
+      "multi_contact": false
+    },
+    {
+      "account": "La Petite Academy of Orange Park",
+      "brand": "La Petite Academy of Orange Park",
+      "city": "Orange Park",
+      "contact_form_url": "https://www.lapetite.com/your-local-school/orange-park-fl-7490/",
+      "phone": "904-269-3767",
+      "website": "https://www.lapetite.com/your-local-school/orange-park-fl-7490/",
+      "linkedin_company": "https://www.linkedin.com/company/la-petite-academy",
+      "lane": "daycare",
+      "segment": "b2b_daycare",
+      "channel": "b2b",
+      "tier": "copycat_t1",
+      "status": "copycat_t1",
+      "path_type": "form",
+      "pto_pta": false,
+      "blue_chip": true,
+      "why_hot": "Copycat T1 La Petite · Clay · public tour path · director + AD named (no public emails)",
+      "source": "hot-links-expand-2026-09-24-public",
+      "email": null,
+      "tags": [
+        "daycare"
+      ],
+      "mid": null,
+      "still_open": true,
+      "tapped": false,
+      "contacts": [
+        {
+          "name": "Brittany Rueve",
+          "title": "Director",
+          "email": null,
+          "phone": "904-269-3767",
+          "linkedin": null,
+          "source": "lapetite.com Orange Park (2026-09-24)"
+        },
+        {
+          "name": "Quatavia Nixon",
+          "title": "Assistant Director",
+          "email": null,
+          "phone": "904-269-3767",
+          "linkedin": null,
+          "source": "lapetite.com Orange Park (2026-09-24)"
+        }
+      ],
+      "multi_contact": true
+    },
+    {
+      "account": "Oakleaf KinderCare",
+      "brand": "Oakleaf KinderCare",
+      "city": "Orange Park",
+      "contact_form_url": "https://www.kindercare.com/our-centers/orange-park/fl/301959",
+      "phone": "904-406-0670",
+      "website": "https://www.kindercare.com/our-centers/orange-park/fl/301959",
+      "linkedin_company": "https://www.linkedin.com/company/kindercare-learning-centers",
+      "lane": "daycare",
+      "segment": "b2b_daycare",
+      "channel": "b2b",
+      "tier": "copycat_t1",
+      "status": "copycat_t1",
+      "path_type": "form",
+      "pto_pta": false,
+      "blue_chip": true,
+      "why_hot": "Copycat T1 KinderCare Oakleaf · Clay · public tour form",
+      "source": "hot-links-expand-2026-09-24-public",
+      "email": null,
+      "tags": [
+        "daycare"
+      ],
+      "mid": null,
+      "still_open": true,
+      "tapped": false
+    },
+    {
+      "account": "La Petite Academy — Argyle Forest",
+      "brand": "La Petite Academy — Argyle Forest",
+      "city": "Jacksonville",
+      "contact_form_url": "https://www.lapetite.com/your-local-school/jacksonville-fl-7439/",
+      "phone": null,
+      "website": "https://www.lapetite.com/your-local-school/jacksonville-fl-7439/",
+      "linkedin_company": "https://www.linkedin.com/company/la-petite-academy",
+      "lane": "daycare",
+      "segment": "b2b_daycare",
+      "channel": "b2b",
+      "tier": "copycat_t1",
+      "status": "copycat_t1",
+      "path_type": "form",
+      "pto_pta": false,
+      "blue_chip": true,
+      "why_hot": "Copycat T1 La Petite Argyle Forest · public tour path",
+      "source": "hot-links-expand-2026-09-24-public",
+      "email": null,
+      "tags": [
+        "daycare"
+      ],
+      "mid": null,
+      "still_open": true,
+      "tapped": false
+    },
+    {
+      "account": "Webster Elementary PTO",
+      "brand": "Webster Elementary PTO",
+      "city": "St. Augustine",
+      "contact_form_url": "mailto:thewebsterschoolpto@gmail.com",
+      "phone": "904-547-3860",
+      "website": "https://webster.stjohns.k12.fl.us/pto/",
+      "linkedin_company": null,
+      "lane": "school",
+      "segment": "b2b_school_pta",
+      "channel": "b2b",
+      "tier": "net_new",
+      "status": "net_new",
+      "path_type": "email",
+      "pto_pta": true,
+      "blue_chip": true,
+      "why_hot": "Public PTO email · St. Johns · festivals / spirit nights",
+      "source": "hot-links-expand-2026-09-24-public",
+      "email": "thewebsterschoolpto@gmail.com",
+      "tags": [
+        "school"
+      ],
+      "mid": null,
+      "still_open": true,
+      "tapped": false
+    },
+    {
+      "account": "Otis A. Mason Elementary PTO",
+      "brand": "Otis A. Mason Elementary PTO",
+      "city": "St. Augustine",
+      "contact_form_url": "mailto:otismasonpto@gmail.com",
+      "phone": "904-547-8440",
+      "website": "https://www-mes.stjohns.k12.fl.us/pto/",
+      "linkedin_company": null,
+      "lane": "school",
+      "segment": "b2b_school_pta",
+      "channel": "b2b",
+      "tier": "net_new",
+      "status": "net_new",
+      "path_type": "email",
+      "pto_pta": true,
+      "blue_chip": true,
+      "why_hot": "Public PTO email · St. Johns · events + corporate sponsorships",
+      "source": "hot-links-expand-2026-09-24-public",
+      "email": "otismasonpto@gmail.com",
+      "tags": [
+        "school"
+      ],
+      "mid": null,
+      "still_open": true,
+      "tapped": false
+    },
+    {
+      "account": "Gamble Rogers Middle School PTO",
+      "brand": "Gamble Rogers Middle School PTO",
+      "city": "St. Augustine",
+      "contact_form_url": "mailto:Gamblerogerspto@gmail.com",
+      "phone": "904-547-8700",
+      "website": "https://www-grms.stjohns.k12.fl.us/pto/",
+      "linkedin_company": null,
+      "lane": "school",
+      "segment": "b2b_school_pta",
+      "channel": "b2b",
+      "tier": "net_new",
+      "status": "net_new",
+      "path_type": "email",
+      "pto_pta": true,
+      "blue_chip": true,
+      "why_hot": "Full public PTO board listed · shared org email · dances / family nights",
+      "source": "hot-links-expand-2026-09-24-public",
+      "email": "Gamblerogerspto@gmail.com",
+      "tags": [
+        "school"
+      ],
+      "mid": null,
+      "still_open": true,
+      "tapped": false,
+      "contacts": [
+        {
+          "name": "Devin Schneider",
+          "title": "President",
+          "email": "Gamblerogerspto@gmail.com",
+          "phone": null,
+          "linkedin": null,
+          "source": "www-grms.stjohns.k12.fl.us/pto (2026-09-24)"
+        },
+        {
+          "name": "Kimberly Patterson",
+          "title": "Vice President",
+          "email": "Gamblerogerspto@gmail.com",
+          "phone": null,
+          "linkedin": null,
+          "source": "www-grms.stjohns.k12.fl.us/pto (2026-09-24)"
+        },
+        {
+          "name": "Theresa Gurenon",
+          "title": "Treasurer",
+          "email": "Gamblerogerspto@gmail.com",
+          "phone": null,
+          "linkedin": null,
+          "source": "www-grms.stjohns.k12.fl.us/pto (2026-09-24)"
+        },
+        {
+          "name": "Jessica Barton",
+          "title": "Secretary",
+          "email": "Gamblerogerspto@gmail.com",
+          "phone": null,
+          "linkedin": null,
+          "source": "www-grms.stjohns.k12.fl.us/pto (2026-09-24)"
+        }
+      ],
+      "multi_contact": true
+    },
+    {
+      "account": "Anthem Lakes Senior Living",
+      "brand": "Anthem Lakes Senior Living",
+      "city": "Jacksonville",
+      "contact_form_url": "https://anthemlakes.com/contact/",
+      "phone": "904-789-5322",
+      "website": "https://anthemlakes.com/contact/",
+      "linkedin_company": null,
+      "lane": "senior",
+      "segment": "b2b_senior",
+      "channel": "b2b",
+      "tier": "net_new",
+      "status": "net_new",
+      "path_type": "email",
+      "pto_pta": false,
+      "blue_chip": true,
+      "why_hot": "Public life@ + contact form · ED + Activities Director named on team page",
+      "source": "hot-links-expand-2026-09-24-public",
+      "email": "life@anthemlakes.com",
+      "tags": [
+        "senior"
+      ],
+      "mid": null,
+      "still_open": true,
+      "tapped": false,
+      "contacts": [
+        {
+          "name": "Denise Macchia",
+          "title": "Executive Director",
+          "email": "life@anthemlakes.com",
+          "phone": "904-789-5322",
+          "linkedin": null,
+          "source": "anthemlakes.com/our-team (2026-09-24)"
+        },
+        {
+          "name": "Courtney Collison",
+          "title": "Activities Director",
+          "email": "life@anthemlakes.com",
+          "phone": "904-789-5322",
+          "linkedin": null,
+          "source": "anthemlakes.com/our-team (2026-09-24)"
+        }
+      ],
+      "multi_contact": true
+    },
+    {
+      "account": "Palagio Senior Living",
+      "brand": "Palagio Senior Living",
+      "city": "Orange Park",
+      "contact_form_url": "mailto:Hello@PalagioSeniorLiving.com",
+      "phone": "904-639-4700",
+      "website": "https://palagioseniorliving.com/contact/",
+      "linkedin_company": null,
+      "lane": "senior",
+      "segment": "b2b_senior",
+      "channel": "b2b",
+      "tier": "customer",
+      "status": "customer",
+      "path_type": "email",
+      "pto_pta": false,
+      "blue_chip": true,
+      "why_hot": "CUSTOMER / WARM · public Hello@ · Amanda replied warm 2026-09-23 · rebook via recent-outreach · not an open dunk",
+      "source": "hot-links-expand-2026-09-24-public",
+      "email": "Hello@PalagioSeniorLiving.com",
+      "tags": [
+        "senior"
+      ],
+      "mid": null,
+      "still_open": false,
+      "tapped": false,
+      "contacts": [
+        {
+          "name": "Amanda",
+          "title": "Business Office Director",
+          "email": null,
+          "phone": "904-639-4700",
+          "linkedin": null,
+          "source": "warm reply 2026-09-23 (businessofficedirector@) — first name public in reply"
+        },
+        {
+          "name": "Kristi",
+          "title": "Life Enrichment / Activities",
+          "email": null,
+          "phone": "904-639-4700",
+          "linkedin": null,
+          "source": "warm reply 2026-09-23 + palagioseniorliving.com/our-team"
+        }
+      ],
+      "multi_contact": true,
+      "outreach_status": "replied_warm",
+      "outreach_at": "2026-09-23"
+    },
+    {
+      "account": "Brookdale Orange Park",
+      "brand": "Brookdale Orange Park",
+      "city": "Orange Park",
+      "contact_form_url": "https://www.brookdale.com/en/communities/brookdale-orange-park.html",
+      "phone": "904-264-0207",
+      "website": "https://www.brookdale.com/en/communities/brookdale-orange-park.html",
+      "linkedin_company": null,
+      "lane": "senior",
+      "segment": "b2b_senior",
+      "channel": "b2b",
+      "tier": "net_new",
+      "status": "net_new",
+      "path_type": "form",
+      "pto_pta": false,
+      "blue_chip": false,
+      "why_hot": "Senior living · public schedule-a-visit / contact path · Clay",
+      "source": "hot-links-expand-2026-09-24-public",
+      "email": null,
+      "tags": [
+        "senior"
+      ],
+      "mid": null,
+      "still_open": true,
+      "tapped": false
+    },
+    {
+      "account": "Intuition Ale Works — Events",
+      "brand": "Intuition Ale Works — Events",
+      "city": "Jacksonville",
+      "contact_form_url": "https://www.intuitionaleworks.com/contact",
+      "phone": "904-683-8500",
+      "website": "https://www.intuitionaleworks.com/contact",
+      "linkedin_company": null,
+      "lane": "other",
+      "segment": "b2b_other",
+      "channel": "b2b",
+      "tier": "net_new",
+      "status": "net_new",
+      "path_type": "form",
+      "pto_pta": false,
+      "blue_chip": false,
+      "why_hot": "Local brewery · public contact form · private events / kids programming",
+      "source": "hot-links-expand-2026-09-24-public",
+      "email": null,
+      "tags": [
+        "other",
+        "brewery"
+      ],
+      "mid": null,
+      "still_open": true,
+      "tapped": false
+    },
+    {
+      "account": "Bold City Brewery — Contact",
+      "brand": "Bold City Brewery — Contact",
+      "city": "Jacksonville",
+      "contact_form_url": "https://www.boldcitybrewery.com/contact-us/",
+      "phone": null,
+      "website": "https://www.boldcitybrewery.com/contact-us/",
+      "linkedin_company": null,
+      "lane": "other",
+      "segment": "b2b_other",
+      "channel": "b2b",
+      "tier": "net_new",
+      "status": "net_new",
+      "path_type": "form",
+      "pto_pta": false,
+      "blue_chip": false,
+      "why_hot": "Local brewery · public contact form · event programming",
+      "source": "hot-links-expand-2026-09-24-public",
+      "email": null,
+      "tags": [
+        "other",
+        "brewery"
+      ],
+      "mid": null,
+      "still_open": true,
+      "tapped": false
     }
   ],
   "already_customer_flagged": [
@@ -3578,7 +4355,7 @@
       "status": "already_customer",
       "customer_match": "exact",
       "route": "customers-no-next-date.html",
-      "why": "Already customer / sold book \u2014 rebook, do not cold-form"
+      "why": "Already customer / sold book — rebook, do not cold-form"
     },
     {
       "account": "Durbin Crossing CDD",
@@ -3591,7 +4368,7 @@
       "status": "already_customer",
       "customer_match": "fuzzy:Durbin Crossing CDD (Vesta)",
       "route": "customers-no-next-date.html",
-      "why": "Already customer / sold book \u2014 rebook, do not cold-form"
+      "why": "Already customer / sold book — rebook, do not cold-form"
     },
     {
       "account": "Glen St. Johns CDD",
@@ -3604,7 +4381,7 @@
       "status": "already_customer",
       "customer_match": "fuzzy:Vesta Property Services / Glen St. Johns",
       "route": "customers-no-next-date.html",
-      "why": "Already customer / sold book \u2014 rebook, do not cold-form"
+      "why": "Already customer / sold book — rebook, do not cold-form"
     },
     {
       "account": "Yellow Bluff Landing / Tison's Landing (Vesta)",
@@ -3617,7 +4394,7 @@
       "status": "already_customer",
       "customer_match": "exact",
       "route": "customers-no-next-date.html",
-      "why": "Already customer / sold book \u2014 rebook, do not cold-form"
+      "why": "Already customer / sold book — rebook, do not cold-form"
     },
     {
       "account": "Heritage Landing CDD / Camp Heritage (Vesta)",
@@ -3630,7 +4407,7 @@
       "status": "already_customer",
       "customer_match": "exact",
       "route": "customers-no-next-date.html",
-      "why": "Already customer / sold book \u2014 rebook, do not cold-form"
+      "why": "Already customer / sold book — rebook, do not cold-form"
     },
     {
       "account": "Markland / Southaven CDD (Vesta)",
@@ -3643,7 +4420,7 @@
       "status": "already_customer",
       "customer_match": "exact",
       "route": "customers-no-next-date.html",
-      "why": "Already customer / sold book \u2014 rebook, do not cold-form"
+      "why": "Already customer / sold book — rebook, do not cold-form"
     },
     {
       "account": "Johns Creek / Brandy Creek CDD (Vesta)",
@@ -3656,7 +4433,7 @@
       "status": "already_customer",
       "customer_match": "exact",
       "route": "customers-no-next-date.html",
-      "why": "Already customer / sold book \u2014 rebook, do not cold-form"
+      "why": "Already customer / sold book — rebook, do not cold-form"
     },
     {
       "account": "Sampson Creek CDD / St. Johns Golf & CC (Vesta)",
@@ -3669,7 +4446,7 @@
       "status": "already_customer",
       "customer_match": "exact",
       "route": "customers-no-next-date.html",
-      "why": "Already customer / sold book \u2014 rebook, do not cold-form"
+      "why": "Already customer / sold book — rebook, do not cold-form"
     },
     {
       "account": "Entrada HOA (Vesta Property Services)",
@@ -3682,7 +4459,7 @@
       "status": "already_customer",
       "customer_match": "exact",
       "route": "customers-no-next-date.html",
-      "why": "Already customer / sold book \u2014 rebook, do not cold-form"
+      "why": "Already customer / sold book — rebook, do not cold-form"
     },
     {
       "account": "Tamaya / Beach CDD (Vesta)",
@@ -3695,7 +4472,7 @@
       "status": "already_customer",
       "customer_match": "exact",
       "route": "customers-no-next-date.html",
-      "why": "Already customer / sold book \u2014 rebook, do not cold-form"
+      "why": "Already customer / sold book — rebook, do not cold-form"
     },
     {
       "account": "Amelia Island Plantation Community Association (AIPCA)",
@@ -3708,7 +4485,7 @@
       "status": "already_customer",
       "customer_match": "exact",
       "route": "customers-no-next-date.html",
-      "why": "Already customer / sold book \u2014 rebook, do not cold-form"
+      "why": "Already customer / sold book — rebook, do not cold-form"
     },
     {
       "account": "Learning Ladders Preschool (Mandarin United Methodist)",
@@ -3721,7 +4498,7 @@
       "status": "already_customer",
       "customer_match": "fuzzy:Learning Ladders Preschool (Mandarin)",
       "route": "customers-no-next-date.html",
-      "why": "Already customer / sold book \u2014 rebook, do not cold-form"
+      "why": "Already customer / sold book — rebook, do not cold-form"
     },
     {
       "account": "Trinity College of Jacksonville",
@@ -3734,7 +4511,7 @@
       "status": "already_customer",
       "customer_match": "fuzzy:Trinity College of Jacksonville (Trinity",
       "route": "customers-no-next-date.html",
-      "why": "Already customer / sold book \u2014 rebook, do not cold-form"
+      "why": "Already customer / sold book — rebook, do not cold-form"
     },
     {
       "account": "Sunrise Of Jacksonville",
@@ -3747,7 +4524,7 @@
       "status": "already_customer",
       "customer_match": "exact",
       "route": "customers-no-next-date.html",
-      "why": "Already customer / sold book \u2014 rebook, do not cold-form"
+      "why": "Already customer / sold book — rebook, do not cold-form"
     },
     {
       "account": "The Lakeside At Amelia Island",
@@ -3760,7 +4537,7 @@
       "status": "already_customer",
       "customer_match": "exact",
       "route": "customers-no-next-date.html",
-      "why": "Already customer / sold book \u2014 rebook, do not cold-form"
+      "why": "Already customer / sold book — rebook, do not cold-form"
     }
   ],
   "removed_this_pass": {
@@ -3780,9 +4557,9 @@
       "SilverLeaf Master Association (HOA)"
     ],
     "non_buyer_or_customer": [
-      "Montessori Tides School Admissions Jacksonville Beach Contact@Montessoritides.Com 904-241-1139 Https://Www.Montessoritides.Com/Contact-Us/ School Lane \u00b7 Type=Montessori Phone 904-241-1139 \u00b7 Jax Beach \u00b7 Public Contact Email + Form Montessori School_Research School Research",
+      "Montessori Tides School Admissions Jacksonville Beach Contact@Montessoritides.Com 904-241-1139 Https://Www.Montessoritides.Com/Contact-Us/ School Lane · Type=Montessori Phone 904-241-1139 · Jax Beach · Public Contact Email + Form Montessori School_Research School Research",
       "Primrose School On Crosswater Parkway Director Nocatee / Pv",
-      "The Nest Christian Co-Op Nest Ponte Vedra Info@Thenestchristiancoop.Com 904-770-5239 Https://Thenestchristiancoop.Com/Contact/ School Lane \u00b7 Type=Homeschool_Coop Phone 904-770-5239 \u00b7 Pvb \u00b7 Public Thenestchristiancoop.Com Homeschool Co-Op School_Research School Research",
+      "The Nest Christian Co-Op Nest Ponte Vedra Info@Thenestchristiancoop.Com 904-770-5239 Https://Thenestchristiancoop.Com/Contact/ School Lane · Type=Homeschool_Coop Phone 904-770-5239 · Pvb · Public Thenestchristiancoop.Com Homeschool Co-Op School_Research School Research",
       "Auld & White Constructors",
       "Beaver Street Fisheries (BSF)",
       "Duval Landscape Maintenance",
@@ -3800,9 +4577,9 @@
       "The Blake At St. Johns"
     ]
   },
-  "exclusions_note": "NO CDDs/HOAs on Hot Links (separate call/email lane). Excluded burned senior Top25 / Fleet / Vicars / Westminster / River Garden / Starling / Discovery / HarborChase / Camellia / Seagrass / Anthem / Rosecastle / Cypress / Grand Living / Gardens memory / Palagio / Brookdale / Legend Windsor\u2013Gables / JumpStart (already submitted) / Primrose + Spark + Goddard customer campuses + TLE Oakleaf/St.Aug/River City + Marsh Landing CC + Amelia Springs + AIPCA. Known buyers \u2192 customers-no-next-date.html.",
-  "expand_note": "Expanded prior ~69 \u2192 136 CAPTCHA/email paths. Schema: channel, tier (customer|warm|missed|copycat_t1|net_new|unverified), contacts[], website, linkedin_company, pto_pta, blue_chip. PTO/PTA haul from public Duval/St. Johns school pages + archive phones. Emails only from customers file, lead archives, or fetched public pages (never invented). Customers flagged on-board \u2014 do not cold-form. CDD/HOA excluded.",
+  "exclusions_note": "NO CDDs/HOAs on Hot Links (separate call/email lane). Excluded burned senior Top25 / Fleet / Vicars / Westminster / River Garden / Starling / Discovery / HarborChase / Camellia / Seagrass / Anthem / Rosecastle / Cypress / Grand Living / Gardens memory / Palagio / Brookdale / Legend Windsor–Gables / JumpStart (already submitted) / Primrose + Spark + Goddard customer campuses + TLE Oakleaf/St.Aug/River City + Marsh Landing CC + Amelia Springs + AIPCA. Known buyers → customers-no-next-date.html.",
+  "expand_note": "Expanded prior ~69 → 136 CAPTCHA/email paths. Schema: channel, tier (customer|warm|missed|copycat_t1|net_new|unverified), contacts[], website, linkedin_company, pto_pta, blue_chip. PTO/PTA haul from public Duval/St. Johns school pages + archive phones. Emails only from customers file, lead archives, or fetched public pages (never invented). Customers flagged on-board — do not cold-form. CDD/HOA excluded. · 2026-09-24: +25 public-path orgs (daycare/PTO/senior/brewery/bookstore/festival); FOJBE/Holiday Hill/Ivybrook VR (+CTK account) marked outreach-emailed so they leave open dunks; Hartley PTO multi-DM names from public board; Palagio added as customer/warm.",
   "forms_tapped_unknown": true,
   "forms_tapped_unknown_note": "Michael tapped more forms tonight beyond Amelia Jazz; he will name the rest. Do not invent a full tapped list.",
-  "daycare_note": "Daycare / childcare lane: weekday mini reference ~$150\u2013350; leave row mid null unless verified."
+  "daycare_note": "Daycare / childcare lane: weekday mini reference ~$150–350; leave row mid null unless verified."
 }

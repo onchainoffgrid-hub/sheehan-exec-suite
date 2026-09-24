@@ -41,7 +41,7 @@ tr:hover td{background:#0f1728}
 <thead><tr><th>#</th><th>Company</th><th>Contact / title</th><th>Amenity dir?</th><th>Band</th><th>Price band</th><th>Tap</th></tr></thead>
 <tbody id="rows"><tr><td colspan="7" class="muted">Loading…</td></tr></tbody>
 </table></div>
-<p class="note">Source: data/growth_attack_lists.json · Built 2026-09-23 ET</p>
+<p class="note">Source: data/growth_attack_lists.json · Built 2026-09-24 ET · last-night outreach synced</p>
 </div>
 <script>
 (function(){
@@ -56,7 +56,7 @@ fetch('data/growth_attack_lists.json',{cache:'no-store'}).then(function(r){retur
     var taps=[];
     if(row.email) taps.push('<a href="mailto:'+esc(row.email)+'">Email</a>');
     var th=telHref(row.phone); if(th) taps.push('<a href="'+th+'">Call</a>');
-    tb.innerHTML+='<tr><td>'+row.rank+'</td><td><b>'+esc(row.company)+'</b><div class="muted">'+(esc(row.city||'')+(row.segment?' · '+esc(row.segment):''))+'</div></td><td>'+esc(row.contact||'—')+'<div class="muted">'+esc(row.title||'')+'</div></td><td>'+amenTag(row.amenity_director)+'</td><td>'+esc(row.call_band||'')+'</td><td>'+esc(row.price_band||'')+'</td><td class="actions">'+(taps.join(' ')||'—')+'</td></tr>';
+    tb.innerHTML+='<tr><td>'+row.rank+'</td><td><b>'+esc(row.company)+'</b><div class="muted">'+(esc(row.city||'')+(row.segment?' · '+esc(row.segment):''))+'</div></td><td>'+esc(row.contact||'—')+'<div class="muted">'+esc(row.title||'')+'</div>'+(row.outreach_status?('<div style="margin-top:4px"><span class="tag y">'+esc(row.outreach_status)+'</span></div>'):'')+'</td><td>'+amenTag(row.amenity_director)+'</td><td>'+esc(row.call_band||'')+'</td><td>'+esc(row.price_band||'')+'</td><td class="actions">'+(taps.join(' ')||'—')+'</td></tr>';
   });
   if(!(d.top20||[]).length) tb.innerHTML='<tr><td colspan="7" class="muted">Honest empty — no CALL_NOW amenity rows in seed.</td></tr>';
 }).catch(function(){ document.getElementById('rows').innerHTML='<tr><td colspan="7" class="muted">Could not load growth_attack_lists.json</td></tr>'; });

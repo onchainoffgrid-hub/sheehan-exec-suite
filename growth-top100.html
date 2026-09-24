@@ -41,7 +41,7 @@ tr:hover td{background:#0f1728}
 <thead><tr><th>#</th><th>Company</th><th>Contact / title</th><th>Amenity?</th><th>Band</th><th>Price</th></tr></thead>
 <tbody id="rows"><tr><td colspan="6" class="muted">Loading…</td></tr></tbody>
 </table></div>
-<p class="note">Source: data/growth_attack_lists.json · Built 2026-09-23 ET</p>
+<p class="note">Source: data/growth_attack_lists.json · Built 2026-09-24 ET · last-night outreach synced</p>
 </div>
 <script>
 (function(){
@@ -52,7 +52,7 @@ fetch('data/growth_attack_lists.json',{cache:'no-store'}).then(function(r){retur
   document.getElementById('meta').textContent=(d.top100_count||0)+' rows · '+(d.as_of||'');
   var tb=document.getElementById('rows'); tb.innerHTML='';
   (d.top100||[]).forEach(function(row){
-    tb.innerHTML+='<tr><td>'+row.rank+'</td><td><b>'+esc(row.company)+'</b><div class="muted">'+esc(row.city||'')+(row.segment?' · '+esc(row.segment):'')+'</div></td><td>'+esc(row.contact||'—')+'<div class="muted">'+esc(row.title||'')+'</div></td><td>'+amenTag(row.amenity_director)+'</td><td>'+esc(row.call_band||'')+'</td><td>'+esc(row.price_band||'')+'</td></tr>';
+    tb.innerHTML+='<tr><td>'+row.rank+'</td><td><b>'+esc(row.company)+'</b><div class="muted">'+esc(row.city||'')+(row.segment?' · '+esc(row.segment):'')+'</div></td><td>'+esc(row.contact||'—')+'<div class="muted">'+esc(row.title||'')+'</div>'+(row.outreach_status?('<div style="margin-top:4px"><span class="tag y">'+esc(row.outreach_status)+'</span></div>'):'')+'</td><td>'+amenTag(row.amenity_director)+'</td><td>'+esc(row.call_band||'')+'</td><td>'+esc(row.price_band||'')+'</td></tr>';
   });
   if(!(d.top100||[]).length) tb.innerHTML='<tr><td colspan="6" class="muted">Honest empty.</td></tr>';
 }).catch(function(){ document.getElementById('rows').innerHTML='<tr><td colspan="6" class="muted">Could not load list</td></tr>'; });

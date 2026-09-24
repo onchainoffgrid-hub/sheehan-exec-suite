@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-23T23:30:00-04:00",
+  "as_of": "2026-09-24T08:30:00-04:00",
   "source": "Right Now Bot DROP-BALL ROUTE (Gmail+Cal+Drive)",
   "north_star": "paid dates locked (mobile + Visit Us)",
   "bookings": [
@@ -7,7 +7,7 @@
       "id": "vesta-durbin-2026-09-27",
       "date": "2026-09-27",
       "time": null,
-      "title": "Vesta Durbin Crossing \u2014 Mobile PZ + CoT",
+      "title": "Vesta Durbin Crossing — Mobile PZ + CoT",
       "status": "LOCKED",
       "paid": "unknown",
       "deposit": "accepted",
@@ -20,14 +20,14 @@
     {
       "id": "river-city-science-2026-10-02",
       "date": "2026-10-02",
-      "time": "08:20\u201311:20",
-      "title": "River City Science \u2014 Lauren follow-up meet",
+      "time": "08:20–11:20",
+      "title": "River City Science — Lauren follow-up meet",
       "status": "WAITING_YES",
       "paid": "partial_pitch",
       "deposit": null,
       "channel": "b2b",
-      "next_action": "Hold \u2014 waiting Lauren yes; on yes: calendar + send/confirm draft (Violet 59% partial donation)",
-      "owner": "Lauren (decision) \u2192 then Right Now calendar",
+      "next_action": "Hold — waiting Lauren yes; on yes: calendar + send/confirm draft (Violet 59% partial donation)",
+      "owner": "Lauren (decision) → then Right Now calendar",
       "risk": "medium",
       "notes": "Michael 2026-09-20: just waiting for the yes. Draft exists; NOT on calendar until yes."
     },
@@ -35,29 +35,29 @@
       "id": "ju-birthday-2026-10-03",
       "date": "2026-10-03",
       "time": "12:00",
-      "title": "JU birthday \u2014 Mobile PZ (noon)",
+      "title": "JU birthday — Mobile PZ (noon)",
       "status": "NEEDS_CONFIRM",
       "paid": "unknown",
       "deposit": null,
       "channel": "mobile",
-      "next_action": "Confirm if JU noon PZ is real \u2014 Oct 3 collision eases if Madeline is out",
+      "next_action": "Confirm if JU noon PZ is real — Oct 3 collision eases if Madeline is out",
       "owner": "Michael",
       "risk": "medium",
-      "notes": "Same day as Madelyn birthday + market stubs | Madeline no-pay \u2192 collision less hot"
+      "notes": "Same day as Madelyn birthday + market stubs | Madeline no-pay → collision less hot"
     },
     {
       "id": "madelyn-birthday-2026-10-03",
       "date": "2026-10-03",
-      "time": "13:30\u201315:00",
-      "title": "Madelyn birthday \u2014 Mobile PZ",
+      "time": "13:30–15:00",
+      "title": "Madelyn birthday — Mobile PZ",
       "status": "NO_PAY",
       "paid": "no_show_money",
       "deposit": null,
       "channel": "mobile",
-      "next_action": "Do not count as locked. Optional soft follow-up only \u2014 she was supposed to bring money and didn\u2019t.",
-      "owner": "\u2014",
+      "next_action": "Do not count as locked. Optional soft follow-up only — she was supposed to bring money and didn’t.",
+      "owner": "—",
       "risk": "low",
-      "notes": "Michael 2026-09-20: Madeline in-town girl didn\u2019t come with the money. Annoying. Not a paid date."
+      "notes": "Michael 2026-09-20: Madeline in-town girl didn’t come with the money. Annoying. Not a paid date."
     },
     {
       "id": "wildlight-fernandina-2026-10-03",
@@ -68,21 +68,21 @@
       "paid": "none",
       "deposit": null,
       "channel": "market",
-      "next_action": "Stub only \u2014 keep or kill; not blocking if Madeline dead",
+      "next_action": "Stub only — keep or kill; not blocking if Madeline dead",
       "owner": "Michael",
       "risk": "medium",
-      "notes": "Stub only \u2014 do not treat as locked"
+      "notes": "Stub only — do not treat as locked"
     },
     {
       "id": "fletcher-bunny-haven-2026-10-14",
       "date": "2026-10-14",
       "time": null,
-      "title": "Fletcher Tender Care \u2014 Bunny Haven / pet therapy",
+      "title": "Fletcher Tender Care — Bunny Haven / pet therapy",
       "status": "PAUSE_RECONCILE",
       "paid": "n/a",
       "deposit": null,
       "channel": "therapy",
-      "next_action": "Reconcile calendar: pause when cold (staff allergies) \u2014 remove or mark seasonal hold",
+      "next_action": "Reconcile calendar: pause when cold (staff allergies) — remove or mark seasonal hold",
       "owner": "Right Now + Michael",
       "risk": "medium",
       "notes": "Email: cannot continue pet therapy when cold"
@@ -119,7 +119,7 @@
       "id": "julie-pettigrew-mia",
       "date": null,
       "time": null,
-      "title": "Julie Pettigrew \u2014 pipeline MIA",
+      "title": "Julie Pettigrew — pipeline MIA",
       "status": "PIPELINE_MIA",
       "paid": null,
       "deposit": null,
@@ -128,17 +128,31 @@
       "owner": "BDR / Michael",
       "risk": "medium",
       "notes": "Michael 2026-09-20: thinks Julie Pettigrew still MIA from pipeline"
+    },
+    {
+      "id": "alexa-mommy-me-2026-10-01",
+      "date": "2026-10-01",
+      "time": null,
+      "title": "Alexa · Mommy & Me",
+      "status": "BOOKED",
+      "paid": "unknown",
+      "deposit": null,
+      "channel": "b2c",
+      "next_action": "Confirm load-out / run of show · already booked per Sent",
+      "owner": "ops",
+      "risk": "low",
+      "notes": "Booked 2026-09-23 · alexaowens25@gmail.com · mid null (not invented)"
     }
   ],
   "next_actions_ranked": [
     {
       "rank": 1,
-      "action": "Confirm what\u2019s real on Oct 3 (JU noon / Wild Light stubs) \u2014 Madeline NO_PAY out",
+      "action": "Confirm what’s real on Oct 3 (JU noon / Wild Light stubs) — Madeline NO_PAY out",
       "blocks": "memory gap on Oct 3"
     },
     {
       "rank": 2,
-      "action": "Julie Pettigrew \u2014 pull from MIA / re-surface in pipeline",
+      "action": "Julie Pettigrew — pull from MIA / re-surface in pipeline",
       "blocks": "pipeline leak"
     },
     {
@@ -159,7 +173,7 @@
     {
       "rank": 6,
       "action": "Goddard Oct 23 + 29: mark paid when deposits hit",
-      "blocks": "accepted \u2260 paid"
+      "blocks": "accepted ≠ paid"
     }
   ],
   "counts": {
@@ -175,22 +189,29 @@
     },
     "paid_verified": 0,
     "recent_outreach_pipeline_emails": 22,
-    "recent_outreach_mid_stack": 5150
+    "recent_outreach_mid_stack": 5150,
+    "bookings": 10
   },
   "rules": {
     "paid_dates_only_in_KPI": true,
-    "accepted_not_paid": "Goddard deposits incoming \u2014 do not count as paid $ until cleared",
+    "accepted_not_paid": "Goddard deposits incoming — do not count as paid $ until cleared",
     "weekend_protect": true
   },
   "michael_notes": {
-    "rcs": "2026-09-20: Michael \u2014 RCS just waiting for the yes (Lauren). Not a chase-close.",
-    "2026-09-20b": "Oct 3: Michael doesn't remember firm hold. Madeline (in-town) supposed to come with money \u2014 didn't; annoying. Julie Pettigrew still MIA from pipeline. Sent Ross email. 'A lot stuck but not that stuck.'",
-    "2026-09-23_evening_outreach": "Past-customer + ToT/FF blast = PIPELINE. Palagio replied warm (Kristi Life Enrichment). Elizabeth bounce / missed. Forms: Amelia Jazz tapped; other forms TBD by Michael. Alexa Mommy & Me booked; Mariel invoice extend; Vesta/Ross + Brooks + Kori Westminster follow-ups present. Ames paid fill-problem not found in Sent ~2d \u2014 not listed."
+    "rcs": "2026-09-20: Michael — RCS just waiting for the yes (Lauren). Not a chase-close.",
+    "2026-09-20b": "Oct 3: Michael doesn't remember firm hold. Madeline (in-town) supposed to come with money — didn't; annoying. Julie Pettigrew still MIA from pipeline. Sent Ross email. 'A lot stuck but not that stuck.'",
+    "2026-09-23_evening_outreach": "Past-customer + ToT/FF blast = PIPELINE. Palagio replied warm (Kristi Life Enrichment). Elizabeth bounce / missed. Forms: Amelia Jazz tapped; other forms TBD by Michael. Alexa Mommy & Me booked; Mariel invoice extend; Vesta/Ross + Brooks + Kori Westminster follow-ups present. Ames paid fill-problem not found in Sent ~2d — not listed."
   },
   "activity": [
     {
+      "at": "2026-09-24T08:30:00-04:00",
+      "what": "Synced Alexa Mommy & Me BOOKED + sales/growth outreach status from recent_outreach · Hot Links CAPTCHA/quick-email board added",
+      "by": "suite",
+      "href": "recent-outreach.html"
+    },
+    {
       "at": "2026-09-23T23:30:00-04:00",
-      "what": "Tonight outreach synced \u00b7 customer-email pipeline + ToT/FF blast \u2192 data/recent_outreach.json (Palagio warm reply; Elizabeth bounce; ~$ mid stack excl. bounce)",
+      "what": "Tonight outreach synced · customer-email pipeline + ToT/FF blast → data/recent_outreach.json (Palagio warm reply; Elizabeth bounce; ~$ mid stack excl. bounce)",
       "by": "Michael / suite",
       "href": "recent-outreach.html"
     },

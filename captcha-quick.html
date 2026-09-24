@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head>
 <meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Hot Links · Growth · Sheehan Homestead</title>
+<title>CAPTCHA + Quick Email · Growth · Sheehan Homestead</title>
 <style>
 :root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--violet:#a78bfa;--money:#f0abfc;--rose:#fb7185;--teal:#2dd4bf}
 *{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
@@ -73,80 +73,65 @@ a.btn.dim{opacity:.7;background:linear-gradient(180deg,#3a2a2a,#2a1a1a);border-c
   a.btn{min-height:56px;font-size:1rem}
 }
 </style></head>
-<body data-flow-face="sales" data-flow-chip="hot-links"><div class="wrap">
+<body data-flow-face="sales" data-flow-chip="captcha-quick"><div class="wrap">
 
 <div class="top">
   <span class="lbl">Apps</span>
   <a class="money" href="one-touch.html">One-touch · money</a>
   <a href="growth-home.html">Growth</a>
-  <a href="captcha-quick.html">CAPTCHA + quick email</a>
   <a href="quick-pitches.html">Quick pitches</a>
   <a href="customers-no-next-date.html">Customers · no next date</a>
   <a href="rvp-ops.html">RVP home</a>
 </div>
 
-<p class="crumb"><a href="rvp-ops.html">RVP</a> → <a href="growth-home.html">Growth</a> → <b>Hot Links</b></p>
+<p class="crumb"><a href="rvp-ops.html">RVP</a> → <a href="growth-home.html">Growth</a> → <a href="hot-links.html">Hot Links</a> → <b>CAPTCHA + Quick Email</b></p>
 
 <header>
-  <h1>Hot Links</h1>
-  <div class="sub">Mindless tap · <b>CAPTCHA / quick web forms</b> (+ public email paths) · buyers who can say yes (daycare, activity directors, PPEC, schools/PTAs, churches, festivals, venues, philanthropists, sponsors). Any budgeted buyer qualifies — no minimum spend gate. Stage only · new tab · <b>no auto-submit</b>.</div>
+  <h1>CAPTCHA dunks + quick emails</h1>
+  <div class="sub">Action slices from Hot Links · <b>open CAPTCHA forms</b> + <b>public emails</b> still open · buyers who can say yes (daycare, activity directors, PPEC, schools/PTAs, churches, festivals, venues, philanthropists, sponsors). Any budgeted buyer qualifies — no minimum spend gate. Stage only · new tab · <b>no auto-submit</b>.</div>
 </header>
 
-<div class="banner warn"><b>No CDDs / HOAs here.</b> Amenity CDDs are a separate call/email lane. Daycare, philanthropist and sponsor are explicit filters; any budget is okay when the buyer has a real path. Past buyers are flagged <b>customer</b> — rebook via <a href="customers-no-next-date.html">Customers · no next date</a>; do not cold-form them.</div>
+<div class="banner warn"><b>Open dunks only.</b> Customer-tier and last-night emailed accounts are excluded. Stage compose / open form — <b>never auto-send</b>. Full board → <a href="hot-links.html">Hot Links</a> · pipeline → <a href="recent-outreach.html">Recent outreach</a>.</div>
 
 <div class="kpis">
-  <div class="kpi"><div class="l">Total</div><div class="v" id="k-t">—</div></div>
-  <div class="kpi"><div class="l">Forms</div><div class="v" id="k-f">—</div></div>
-  <div class="kpi"><div class="l">Net-new</div><div class="v" id="k-nn">—</div></div>
-  <div class="kpi"><div class="l">Copycat T1</div><div class="v" id="k-cc">—</div></div>
-  <div class="kpi"><div class="l">Customer</div><div class="v" id="k-cu">—</div></div>
-  <div class="kpi"><div class="l">PTO / PTA</div><div class="v" id="k-pto">—</div></div>
-  <div class="kpi"><div class="l">Blue chip</div><div class="v" id="k-bc">—</div></div>
-  <div class="kpi"><div class="l">Tapped</div><div class="v" id="k-tap">—</div></div>
-  <div class="kpi"><div class="l">Still open</div><div class="v" id="k-open">—</div></div>
+  <div class="kpi"><div class="l">CAPTCHA open</div><div class="v" id="k-f">—</div></div>
+  <div class="kpi"><div class="l">Quick email open</div><div class="v" id="k-em">—</div></div>
+  <div class="kpi"><div class="l">Multi-DM</div><div class="v" id="k-mc">—</div></div>
+  <div class="kpi"><div class="l">Tapped forms</div><div class="v" id="k-tap">—</div></div>
+  <div class="kpi"><div class="l">Outreach closed</div><div class="v" id="k-closed">—</div></div>
   <div class="kpi"><div class="l">Showing</div><div class="v" id="k-s">—</div></div>
 </div>
 
 <div class="filters" id="filters" aria-label="Filters">
+  <span class="filter-label">Path</span>
+  <button type="button" class="on" data-path="all">All open</button>
+  <button type="button" data-path="form">CAPTCHA / form</button>
+  <button type="button" data-path="email">Quick email</button>
+  <button type="button" data-path="tapped">Tapped forms</button>
+  <button type="button" data-path="closed">Outreach closed</button>
   <span class="filter-label">Lane</span>
   <button type="button" class="on" data-lane="all">All lanes</button>
-  <button type="button" data-lane="school">School / VPK / PTA</button>
+  <button type="button" data-lane="school">School / PTO</button>
   <button type="button" data-lane="daycare">Daycare</button>
-  <button type="button" data-lane="philanthropist">Philanthropist</button>
-  <button type="button" data-lane="sponsor">Sponsor</button>
   <button type="button" data-lane="senior">Senior</button>
+  <button type="button" data-lane="sponsor">Sponsor</button>
   <button type="button" data-lane="foundation">Foundation</button>
-  <button type="button" data-lane="other">Church / fest / venue</button>
-  <span class="filter-label">Tier</span>
-  <button type="button" class="on" data-tier="all">All tiers</button>
-  <button type="button" data-tier="net_new">Net-new</button>
-  <button type="button" data-tier="copycat_t1">Copycat T1</button>
-  <button type="button" data-tier="customer">Customer</button>
-  <button type="button" data-tier="warm">Warm</button>
-  <button type="button" data-tier="missed">Missed</button>
-  <button type="button" data-tier="unverified">Unverified</button>
-  <span class="filter-label">Channel / flags</span>
-  <button type="button" class="on" data-channel="all">B2B + B2C</button>
-  <button type="button" data-channel="b2b">B2B</button>
-  <button type="button" data-channel="b2c">B2C</button>
-  <button type="button" data-flag="pto">PTO / PTA</button>
-  <button type="button" data-flag="blue">Blue chip</button>
-  <button type="button" data-flag="open">Still open</button>
-  <button type="button" data-flag="tapped">Tapped</button>
+  <button type="button" data-lane="philanthropist">Philanthropist</button>
+  <button type="button" data-lane="other">Other</button>
   <input id="q" type="search" placeholder="Filter name / city / contact…" autocomplete="off"/>
 </div>
 
 <div class="list" id="grid"></div>
 <p class="empty" id="empty" hidden>No links in this filter.</p>
 
-<div class="alt"><b>Action slices:</b> <a href="captcha-quick.html">CAPTCHA dunks + quick emails</a> (open only · last-night emailed excluded). Need a subject/body? → <a href="quick-pitches.html">Quick pitches</a> (stage only). Already sold / burned? → <a href="customers-no-next-date.html">Customers · no next date</a>. Do not cold-form them.</div>
+<div class="alt">Need a subject/body? → <a href="quick-pitches.html">Quick pitches</a> (stage only). Already sold / burned? → <a href="customers-no-next-date.html">Customers · no next date</a>. Do not cold-form them.</div>
 <p class="note" id="excl"></p>
 
 <div class="alt"><b>CDD / amenity buyers:</b> prefer the <a href="cdd-call-lane.html">Call / email lane</a> (higher touch) — not this CAPTCHA form board. Pitch bodies → <a href="quick-pitches.html#role-cdd">Quick pitches · CDD</a>.</div>
 </div>
 <script>
 (function(){
-  var DATA=null, lane='all', tier='all', channel='all', flag=null, q='';
+  var DATA=null, path='all', lane='all', q='';
   function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g,function(c){return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]);}); }
   function tierChip(t){
     t=t||'net_new';
@@ -154,33 +139,33 @@ a.btn.dim{opacity:.7;background:linear-gradient(180deg,#3a2a2a,#2a1a1a);border-c
     var label={customer:'customer',copycat_t1:'copycat T1',warm:'warm',missed:'missed',unverified:'unverified',net_new:'net-new'}[t]||t;
     return '<span class="chip '+cls+'">'+esc(label)+'</span>';
   }
+  function pool(){
+    if(!DATA) return [];
+    if(path==='form') return DATA.captcha_dunks||[];
+    if(path==='email') return DATA.quick_emails||[];
+    if(path==='tapped') return DATA.tapped_forms||[];
+    if(path==='closed') return DATA.outreach_closed||[];
+    return [].concat(DATA.captcha_dunks||[], DATA.quick_emails||[]);
+  }
   function render(){
     var grid=document.getElementById('grid');
-    var rows=(DATA&&DATA.links)||[];
+    var rows=pool();
     var qq=q.trim().toLowerCase();
     var show=rows.filter(function(r){
-      if(lane==='daycare' && (r.tags||[]).indexOf('daycare')<0) return false;
-      if(lane!=='all' && lane!=='daycare' && r.lane!==lane) return false;
-      if(tier!=='all' && r.tier!==tier) return false;
-      if(channel!=='all' && r.channel!==channel) return false;
-      if(flag==='pto' && !r.pto_pta) return false;
-      if(flag==='blue' && !r.blue_chip) return false;
-      if(flag==='open' && r.tapped) return false;
-      if(flag==='tapped' && !r.tapped) return false;
+      if(lane!=='all' && r.lane!==lane) return false;
       if(!qq) return true;
-      var blob=((r.account||'')+' '+(r.brand||'')+' '+(r.city||'')+' '+(r.why_hot||'')+' '+(r.path_type||'')+' '+(r.email||'')+' '+(r.segment||'')+' '+(r.lane||'')+' '+((r.tags||[]).join(' '))).toLowerCase();
+      var blob=((r.account||'')+' '+(r.city||'')+' '+(r.why_hot||'')+' '+(r.email||'')+' '+(r.lane||'')).toLowerCase();
       (r.contacts||[]).forEach(function(c){ blob+=' '+(c.name||'')+' '+(c.title||'')+' '+(c.email||''); });
-      return blob.toLowerCase().indexOf(qq)>=0;
+      return blob.indexOf(qq)>=0;
     });
     document.getElementById('k-s').textContent=show.length;
     document.getElementById('empty').hidden=show.length>0;
     grid.innerHTML=show.map(function(r){
-      var unver=r.status==='unverified' || r.tier==='unverified';
       var isEmail=(r.path_type==='email');
       var isCust=r.tier==='customer';
       var tel=r.phone?('<a class="btn sec" href="tel:'+String(r.phone).replace(/[^\d+]/g,'')+'">'+esc(r.phone)+'</a>'):'';
       var mail=r.email?('<a class="btn sec" href="mailto:'+esc(r.email)+'">'+esc(r.email)+'</a>'):'';
-      var cta=isCust?(isEmail?'Customer · email path':'Customer · form (do not cold-spam)'):(isEmail?'Open email path':'Open form');
+      var cta=isEmail?'Open email path':'Open form';
       var contacts='';
       if(r.contacts&&r.contacts.length){
         contacts='<div class="contacts"><b>Public contacts</b>'+r.contacts.map(function(c){
@@ -200,18 +185,18 @@ a.btn.dim{opacity:.7;background:linear-gradient(180deg,#3a2a2a,#2a1a1a);border-c
       if(r.website) bits.push('<a href="'+esc(r.website)+'" target="_blank" rel="noopener">Website</a>');
       if(r.linkedin_company) bits.push('<a href="'+esc(r.linkedin_company)+'" target="_blank" rel="noopener">Company LinkedIn</a>');
       if(bits.length) linkrow='<div class="links-row">'+bits.join(' · ')+'</div>';
-      return '<article class="card'+(unver?' unverified':'')+(isEmail?' email':'')+(isCust?' customer':'')+(r.blue_chip?' blue':'')+(r.tapped?' tapped':'')+'">'
+      return '<article class="card'+(isEmail?' email':'')+(isCust?' customer':'')+(r.blue_chip?' blue':'')+(r.tapped?' tapped':'')+'">'
         +'<h3>'+esc(r.account)+'</h3>'
         +'<div class="meta">'
         +'<span class="chip lane">'+esc(r.lane||'other')+'</span>'
         +(r.city?('<span class="chip city">'+esc(r.city)+'</span>'):'')
-        +(r.channel?('<span class="chip '+(r.channel==='b2c'?'b2c':'b2b')+'">'+esc(r.channel.toUpperCase())+'</span>'):'')
-        +(r.segment?('<span class="chip city">'+esc(r.segment)+'</span>'):'')
         +(isEmail?'<span class="chip email">email</span>':'<span class="chip form">form / CAPTCHA</span>')
         +tierChip(r.tier)
         +(r.pto_pta?'<span class="chip pto">PTO / PTA</span>':'')
         +(r.blue_chip?'<span class="chip blue">blue chip</span>':'')
-        +(r.tapped?'<span class="chip tapped">tapped · '+esc(r.tapped_at||'')+'</span>':'')
+        +(r.multi_contact?'<span class="chip pto">multi-DM</span>':'')
+        +(r.tapped?'<span class="chip tapped">tapped</span>':'')
+        +(r.outreach_status?('<span class="chip warm">'+esc(r.outreach_status)+'</span>'):'')
         +'</div>'
         +'<div class="why">'+esc(r.why_hot||'')+'</div>'
         +contacts+linkrow
@@ -221,45 +206,29 @@ a.btn.dim{opacity:.7;background:linear-gradient(180deg,#3a2a2a,#2a1a1a);border-c
   }
   document.getElementById('filters').addEventListener('click',function(e){
     var b=e.target.closest('button'); if(!b) return;
-    if(b.hasAttribute('data-lane')){
+    if(b.hasAttribute('data-path')){
+      path=b.getAttribute('data-path');
+      [].forEach.call(document.querySelectorAll('#filters button[data-path]'),function(x){x.classList.toggle('on',x===b);});
+    } else if(b.hasAttribute('data-lane')){
       lane=b.getAttribute('data-lane');
       [].forEach.call(document.querySelectorAll('#filters button[data-lane]'),function(x){x.classList.toggle('on',x===b);});
-    } else if(b.hasAttribute('data-tier')){
-      tier=b.getAttribute('data-tier');
-      [].forEach.call(document.querySelectorAll('#filters button[data-tier]'),function(x){x.classList.toggle('on',x===b);});
-    } else if(b.hasAttribute('data-channel')){
-      channel=b.getAttribute('data-channel'); flag=null;
-      [].forEach.call(document.querySelectorAll('#filters button[data-channel], #filters button[data-flag]'),function(x){x.classList.toggle('on',x===b);});
-    } else if(b.hasAttribute('data-flag')){
-      var f=b.getAttribute('data-flag');
-      flag=(flag===f)?null:f; channel='all';
-      [].forEach.call(document.querySelectorAll('#filters button[data-channel]'),function(x){x.classList.toggle('on',x.getAttribute('data-channel')==='all');});
-      [].forEach.call(document.querySelectorAll('#filters button[data-flag]'),function(x){x.classList.toggle('on',x.getAttribute('data-flag')===flag);});
     }
     render();
   });
   document.getElementById('q').addEventListener('input',function(e){ q=e.target.value; render(); });
-  fetch('data/hot_links.json',{cache:'no-store'}).then(function(r){return r.json()}).then(function(d){
+  fetch('data/captcha_quick_lists.json',{cache:'no-store'}).then(function(r){return r.json()}).then(function(d){
     DATA=d;
-    var links=d.links||[];
     var c=d.counts||{};
-    function n(k, fallback){ return c[k]!=null?c[k]:fallback; }
-    document.getElementById('k-t').textContent=n('total', links.length);
-    document.getElementById('k-f').textContent=n('form', links.filter(function(r){return r.path_type!=='email';}).length);
-    document.getElementById('k-nn').textContent=n('net_new', links.filter(function(r){return r.tier==='net_new';}).length);
-    document.getElementById('k-cc').textContent=n('copycat_t1', links.filter(function(r){return r.tier==='copycat_t1';}).length);
-    document.getElementById('k-cu').textContent=n('customer', links.filter(function(r){return r.tier==='customer';}).length);
-    document.getElementById('k-pto').textContent=n('pto_pta', links.filter(function(r){return r.pto_pta;}).length);
-    document.getElementById('k-bc').textContent=n('blue_chip', links.filter(function(r){return r.blue_chip;}).length);
-    var tappedN=n('tapped', links.filter(function(r){return r.tapped;}).length);
-    if(document.getElementById('k-tap')) document.getElementById('k-tap').textContent=tappedN;
-    if(document.getElementById('k-open')) document.getElementById('k-open').textContent=n('still_open', links.filter(function(r){return !r.tapped;}).length);
-    var excl=(d.exclusions_note||d.expand_note||'');
-    if(d.forms_tapped_unknown) excl=(excl?excl+' · ':'')+(d.forms_tapped_unknown_note||'Other forms tapped — Michael to name.');
-    document.getElementById('excl').textContent=excl;
+    document.getElementById('k-f').textContent=c.captcha_dunk_open!=null?c.captcha_dunk_open:'—';
+    document.getElementById('k-em').textContent=c.quick_email_open!=null?c.quick_email_open:'—';
+    document.getElementById('k-mc').textContent=((c.multi_contact_in_captcha||0)+(c.multi_contact_in_quick_email||0));
+    document.getElementById('k-tap').textContent=c.forms_tapped!=null?c.forms_tapped:'—';
+    document.getElementById('k-closed').textContent=c.outreach_closed_on_board!=null?c.outreach_closed_on_board:'—';
+    var excl=document.getElementById('excl');
+    if(excl) excl.textContent=(d.rule||'')+' · as_of '+(d.as_of||'');
     render();
   }).catch(function(){
-    document.getElementById('grid').innerHTML='<p class="empty">Failed to load data/hot_links.json</p>';
+    document.getElementById('grid').innerHTML='<p class="empty">Failed to load data/captcha_quick_lists.json</p>';
   });
 })();
 </script>
