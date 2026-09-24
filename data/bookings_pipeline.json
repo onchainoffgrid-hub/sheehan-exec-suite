@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-24T14:10:00-04:00",
+  "as_of": "2026-09-24T14:20:00-04:00",
   "source": "Talk-Deputy + Right Now DROP-BALL (Gmail+Cal+Drive)",
   "north_star": "paid dates locked (mobile + Visit Us)",
   "bookings": [
@@ -148,14 +148,34 @@
       "date": "2026-11-21",
       "time": "10:00\u201313:00",
       "title": "Brooks Bartram Lakes \u2014 3-hr petting zoo (quote)",
-      "status": "QUOTE_SENT",
+      "status": "QUOTE_DRAFT",
       "paid": "none",
       "deposit": null,
       "channel": "senior_mobile",
-      "next_action": "Await Kate reply on package; on yes: invoice + staff + calendar lock",
+      "next_action": "Send invoice-ready quote \u2192 W-9 \u2192 invoice + staff (date already requested Nov 21)",
       "owner": "Michael (send quote) \u2192 Ann-Marie AR on yes",
       "risk": "medium",
-      "notes": "Kate Woodcock-Sharp \u00b7 Activities Manager \u00b7 Katelyn.Woodcock-sharp@brooksrehab.org \u00b7 cc Roneise.Lawrence@brooksrehab.org \u00b7 6209 Brooks Bartram Dr Jax 32258 \u00b7 Options: standard $600 (recommended) / mini $500 / standard+critters $750 \u00b7 +~$100 travel \u00b7 Source: Tasia referral / activity-director channel \u00b7 Email DRAFT only (card in Talk-Deputy chat) \u2014 not sent as of 2026-09-24 \u00b7 Gmail thread 199c9d13a9c9e556 \u00b7 replyTo 1a0d42b219ee6dd0"
+      "notes": "Kate \u00b7 Brooks Bartram Lakes (nonprofit / .org) \u00b7 Nov 21 10\u20131 \u00b7 Quoted AD/nonprofit: $600 std / $500 mini / $750 +critters \u00b7 +~$100 travel \u00b7 List reference (private): std ~$1049 + critters add ~$249 + travel; target economics ~$1200 PZ on ~$200 labor \u00b7 Weighted $450 @75% of $600 \u00b7 DRAFT only \u00b7 Tasia referral",
+      "quoted_mid": 600,
+      "pipeline_weight": 0.75,
+      "weighted_value": 450,
+      "w9_needed": true,
+      "followups": [
+        "W-9 before invoicing",
+        "Customer-journey on-site scanner/link (follow-up; not this email)",
+        "Do not lead with wheel/apps \u2014 she has a date; close the quote"
+      ],
+      "list_price_standard": 1049,
+      "list_price_critters_addon": 249,
+      "travel_quote": 100,
+      "travel_intent": "Travel should cover labor when sold at target (~$200 labor on ~$1200 PZ)",
+      "nonprofit": true,
+      "nonprofit_note": "Brooks Rehabilitation 501(c)(3); Bartram Lakes at bartramlakes.org",
+      "products": {
+        "standard": "\u22659 animals, usually ~3 each dwarf goats / bunnies / specialty fowl; 2 facilitators; setup/teardown",
+        "mini": "\u22656 animals, usually ~2 each of same mix",
+        "standard_plus_critters": "Same as standard + seasonal side (babies/chicks/extras when available)"
+      }
     }
   ],
   "next_actions_ranked": [
@@ -222,9 +242,23 @@
     "rcs": "2026-09-20: Michael \u2014 RCS just waiting for the yes (Lauren). Not a chase-close.",
     "2026-09-20b": "Oct 3: Michael doesn't remember firm hold. Madeline (in-town) supposed to come with money \u2014 didn't; annoying. Julie Pettigrew still MIA from pipeline. Sent Ross email. 'A lot stuck but not that stuck.'",
     "2026-09-23_evening_outreach": "Past-customer + ToT/FF blast = PIPELINE. Palagio replied warm (Kristi Life Enrichment). Elizabeth bounce / missed. Forms: Amelia Jazz tapped; other forms TBD by Michael. Alexa Mommy & Me booked; Mariel invoice extend; Vesta/Ross + Brooks + Kori Westminster follow-ups present. Ames paid fill-problem not found in Sent ~2d \u2014 not listed.",
-    "2026-09-24_brooks": "Brooks Bartram Lakes: Kate asked Sat Nov 21 10\u20131 price for 3hr PZ. Quote options staged (std $600 / mini $500 / +critters $750 +~$100 travel). Status QUOTE_SENT/awaiting once Michael hits Send on draft card. Source Tasia referral."
+    "2026-09-24_brooks": "Brooks Bartram Lakes: Kate asked Sat Nov 21 10\u20131 price for 3hr PZ. Quote options staged (std $600 / mini $500 / +critters $750 +~$100 travel). Status QUOTE_SENT/awaiting once Michael hits Send on draft card. Source Tasia referral.",
+    "2026-09-24_brooks_rewrite": "Brooks quote email rewritten (draft-only). Weighted pipeline $450 (75% of $600). W-9 before invoicing. On-site scanner/link journey = follow-up, not in email.",
+    "2026-09-24_brooks_products": "Product defs locked for quotes: Standard \u22659 animals (~3 goats/bunnies/fowl); Mini \u22656 (~2 each); Side of critters = seasonal extras on same standard base. List ~$1049 (+$249 critters). Brooks = real nonprofit (501c3 / bartramlakes.org). Growth deal: close invoice, not apps."
   },
   "activity": [
+    {
+      "at": "2026-09-24T14:20:00-04:00",
+      "what": "Brooks quote rewritten with animal mix + nonprofit frame; list vs AD pricing noted privately; invoice-first (no apps)",
+      "by": "Talk-Deputy",
+      "href": "ops-pipeline.html"
+    },
+    {
+      "at": "2026-09-24T14:15:00-04:00",
+      "what": "Brooks Bartram quote email rewritten (draft-only) \u00b7 weighted $450 @75% of $600 \u00b7 W-9 gate \u00b7 journey capture follow-up parked",
+      "by": "Talk-Deputy",
+      "href": "ops-pipeline.html"
+    },
     {
       "at": "2026-09-24T14:10:00-04:00",
       "what": "Brooks Bartram Lakes Nov 21 quote added (QUOTE_SENT / awaiting) \u2014 std $600 / mini $500 / +critters $750 +~$100 travel \u00b7 Tasia referral \u00b7 draft-only email",
