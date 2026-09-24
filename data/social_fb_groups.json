@@ -1,0 +1,88 @@
+{
+  "as_of": "2026-09-23 ET",
+  "label": "Facebook groups · Growth / Hot-adjacent · public group URLs only",
+  "lane": "fb_group",
+  "channel": "social_selling",
+  "rule": "Use only the public group-root URL. No invented groups, profiles, or emails. Unverified means the URL was found in web search, but membership, current rules, and activity still need a human check before posting.",
+  "counts": {
+    "total": 8,
+    "unverified": 8,
+    "jax_nefl": 3,
+    "operator_agritainment": 3,
+    "franchise_owner_opportunity": 2
+  },
+  "groups": [
+    {
+      "name": "Small Business Owners of Jacksonville, Florida",
+      "url": "https://www.facebook.com/groups/jaxsmallbiz/",
+      "region": "Jacksonville / NEFL",
+      "category": "biz-owner",
+      "fit": "Local owner referrals, practical business help, and collaboration.",
+      "status": "unverified",
+      "verification_note": "Public group root surfaced in web search; confirm current rules and activity before posting."
+    },
+    {
+      "name": "Jacksonville Small Business Group",
+      "url": "https://www.facebook.com/groups/301961126872415/",
+      "region": "Jacksonville / NEFL",
+      "category": "biz-owner",
+      "fit": "Local small-business networking and referral conversations.",
+      "status": "unverified",
+      "verification_note": "Public group root surfaced from an indexed public post; confirm current rules and activity before posting."
+    },
+    {
+      "name": "Only In Duval",
+      "url": "https://www.facebook.com/groups/5428576643824938/",
+      "region": "Jacksonville / Duval",
+      "category": "biz-owner",
+      "fit": "Local audience with small-business and partnership posts; use only if promotion is allowed.",
+      "status": "unverified",
+      "verification_note": "Public group root surfaced from an indexed public business post; confirm current rules and activity before posting."
+    },
+    {
+      "name": "Show off your Farm stand ideas and pics",
+      "url": "https://www.facebook.com/groups/2034790707045582/",
+      "region": "National / farm operators",
+      "category": "mobile-farm",
+      "fit": "Farm-stand operators share setups, ideas, photos, and operating advice; adjacent to mobile-farm outreach.",
+      "status": "unverified",
+      "verification_note": "Public group root matched indexed public farm-stand posts; confirm operator fit and promotion rules."
+    },
+    {
+      "name": "Agritourism Forum: Farmers Helping Farmers",
+      "url": "https://www.facebook.com/groups/1314591405306494/",
+      "region": "National / agritourism",
+      "category": "agritainment",
+      "fit": "Farmers and agritourism operators sharing challenges, resources, and ideas.",
+      "status": "unverified",
+      "verification_note": "Public group root matched web-search references; confirm current activity and group rules."
+    },
+    {
+      "name": "SWFL Women Entrepreneurs",
+      "url": "https://www.facebook.com/groups/693978731457728/",
+      "region": "Florida / entrepreneur network",
+      "category": "mobile-petting-zoo-adjacent",
+      "fit": "Indexed public discussion includes a mobile-petting-zoo owner seeking clientele advice; qualify before using.",
+      "status": "unverified",
+      "verification_note": "The operator relevance comes from an indexed public post, not a confirmed group charter."
+    },
+    {
+      "name": "Small business owners/entrepreneurs",
+      "url": "https://www.facebook.com/groups/2815042615255352/",
+      "region": "National / entrepreneurs",
+      "category": "franchise-owner-opportunity",
+      "fit": "Entrepreneur discussion includes franchise-selection and owner-operator topics; qualify budget and intent first.",
+      "status": "unverified",
+      "verification_note": "Public group root and franchise-related indexed posts found in web search; confirm current rules and fit."
+    },
+    {
+      "name": "Business For Sale By Owner",
+      "url": "https://www.facebook.com/groups/smallbusinessforsale/",
+      "region": "National / business buyers and sellers",
+      "category": "franchise-owner-opportunity",
+      "fit": "Business-sale audience with indexed franchise-conversion and opportunity discussions; use a light exploratory post only.",
+      "status": "unverified",
+      "verification_note": "Public group root matched indexed public franchise-related posts; confirm current activity and promotion rules."
+    }
+  ]
+}
