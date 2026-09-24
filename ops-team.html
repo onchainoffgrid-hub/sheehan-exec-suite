@@ -48,6 +48,10 @@ tr:hover td{background:#15223855}
 .gap b{color:var(--warn)}
 .note{color:var(--muted);font-size:.75rem;margin-top:18px}
 .muted{color:var(--muted)}
+
+.gig-sec{margin:22px 0 10px;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.gig-note{margin:0 0 10px;padding:10px 12px;border:1px dashed #5b8cff55;border-radius:10px;background:#0f1728;font-size:.78rem;color:var(--muted)}
+.gig-note b{color:#9ec1ff}
 </style></head>
 <body data-flow-face="ops"><div class="wrap">
 
@@ -117,6 +121,22 @@ tr:hover td{background:#15223855}
 </table>
 </div>
 
+
+<div class="gig-sec">Gigs by person (this year)</div>
+<div class="gig-note"><b>Scaffold</b> — counts from a gig-assignment file if present; else zeros / unknown. Wire calendar staff or sheet — <b>input needed</b>.</div>
+<div class="table-wrap" style="margin-bottom:14px">
+<table id="gig-table">
+  <thead>
+    <tr>
+      <th data-gs="name">Name <span class="arrow">↕</span></th>
+      <th data-gs="role">Role <span class="arrow">↕</span></th>
+      <th data-gs="gigs">Gigs YTD <span class="arrow">↕</span></th>
+      <th data-gs="status">Status <span class="arrow">↕</span></th>
+    </tr>
+  </thead>
+  <tbody id="gig-tbody"></tbody>
+</table>
+</div>
 <div class="gap" id="gaps"></div>
 <p class="note" id="foot">Source: TEAM_ROSTER / Helper list Drive · Gmail historical scrape = Phase C (deferred)</p>
 </div>
@@ -147,6 +167,76 @@ tr:hover td{background:#15223855}
   var TIER_ORDER={owners:0,partners:1,primary:2,secondary:3,need_training:4,third:5,backup_bench:6};
   var TIER_LABEL={owners:'Owners',primary:'Primary',secondary:'Secondary',need_training:'Need training',third:'Third',partners:'Partners',backup_bench:'Backup'};
   var ALL=[], filter='all', sortKey='name', sortDir=1;
+
+  // Gigs-by-person scaffold
+  var gSort='name', gDir=1, GIG_ROWS=[];
+  function renderGigs(){
+    var rows=GIG_ROWS.slice().sort(function(a,b){
+      var av=a[gSort], bv=b[gSort];
+      if(gSort==='gigs'){ return ((av||0)-(bv||0))*gDir || a.name.localeCompare(b.name); }
+      return String(av||'').localeCompare(String(bv||''))*gDir || a.name.localeCompare(b.name);
+    });
+    document.getElementById('gig-tbody').innerHTML=rows.map(function(r){
+      return '<tr><td class="name">'+r.name+'</td><td>'+r.role+'</td><td>'+(r.gigs_label||r.gigs)+'</td><td>'+r.status+'</td></tr>';
+    }).join('') || '<tr><td colspan="4" class="muted">No roster rows</td></tr>';
+  }
+  function buildGigScaffold(d, assign){
+    var focus=['Madison','Audrey','Melissa'];
+    var map={};
+    function add(list, role){
+      (list||[]).forEach(function(p){
+        var key=(p.name||'').split(' ')[0];
+        map[p.name]={name:p.name, role:role, gigs:0, gigs_label:'0 · unknown', status:p.confirmed_1024?'on roster · 10/24':'on roster'};
+        // also index first name for focus match
+        map['_f_'+key.toLowerCase()]=map[p.name];
+      });
+    }
+    add(d.owners,'Owner'); add(d.partners,'Partner'); add(d.primary,'Primary');
+    add(d.secondary,'Secondary'); add(d.need_training,'Need training'); add(d.third,'Third');
+    ((d.backup_bench&&d.backup_bench.people)||[]).forEach(function(p){
+      map[p.name]={name:p.name, role:'Backup', gigs:0, gigs_label:'0 · unknown', status:p.status||'backup'};
+    });
+    var counts={};
+    if(assign && assign.assignments){
+      assign.assignments.forEach(function(a){
+        var n=a.name||a.person||'';
+        if(!n) return;
+        counts[n]=(counts[n]||0)+(a.gigs_ytd||a.count||1);
+      });
+    }
+    var usedAssign=!!(assign&&assign.assignments&&assign.assignments.length);
+    var rows=[];
+    // Prefer focus names first, then rest of roster
+    var seen={};
+    focus.forEach(function(fn){
+      var hit=null;
+      Object.keys(map).forEach(function(k){
+        if(k.indexOf('_f_')===0) return;
+        if(map[k].name.toLowerCase().indexOf(fn.toLowerCase())===0 || map[k].name.split(' ')[0].toLowerCase()===fn.toLowerCase()) hit=map[k];
+      });
+      if(hit && !seen[hit.name]){
+        var c=counts[hit.name]||counts[fn]||0;
+        hit.gigs=c;
+        hit.gigs_label=usedAssign?(String(c)):(c?String(c):'0 · unknown');
+        if(!usedAssign) hit.status=(hit.status||'on roster')+' · wire calendar staff or sheet — input needed';
+        rows.push(hit); seen[hit.name]=1;
+      } else if(!hit){
+        rows.push({name:fn, role:'(not on roster detail)', gigs:0, gigs_label:'0 · unknown', status:'wire calendar staff or sheet — input needed'});
+      }
+    });
+    Object.keys(map).forEach(function(k){
+      if(k.indexOf('_f_')===0) return;
+      if(seen[map[k].name]) return;
+      var r=map[k];
+      var c=counts[r.name]||0;
+      r.gigs=c;
+      r.gigs_label=usedAssign?String(c):(c?String(c):'0 · unknown');
+      if(!usedAssign) r.status=(r.status||'on roster')+' · input needed';
+      rows.push(r);
+    });
+    GIG_ROWS=rows;
+    renderGigs();
+  }
 
   function flatten(d){
     var out=[];
@@ -211,6 +301,14 @@ tr:hover td{background:#15223855}
     var foot=document.getElementById('foot');
     foot.textContent='Sheehan Homestead · Team · as_of '+(d.as_of||'')+' · Helper list Drive · Phase C Gmail scrape deferred';
     render();
+    // Gig assignment (optional)
+    Promise.all([
+      fetch('data/gig_assignments.json',{cache:'no-store'}).then(function(r){ return r.ok?r.json():null; }).catch(function(){ return null; }),
+      fetch('data/calendar_staff.json',{cache:'no-store'}).then(function(r){ return r.ok?r.json():null; }).catch(function(){ return null; })
+    ]).then(function(pair){
+      var assign=pair[0]||pair[1]||null;
+      buildGigScaffold(d, assign);
+    });
   }).catch(function(err){
     document.getElementById('tbody').innerHTML='<tr><td colspan="8">Could not load data/team_roster.json — '+err+'</td></tr>';
   });
@@ -222,6 +320,15 @@ tr:hover td{background:#15223855}
   });
   document.getElementById('sort').addEventListener('change', function(){ sortKey=this.value; render(); });
   document.getElementById('q').addEventListener('input', render);
+
+  document.querySelectorAll('#gig-table th[data-gs]').forEach(function(th){
+    th.addEventListener('click', function(){
+      var k=th.getAttribute('data-gs');
+      if(gSort===k) gDir*=-1; else { gSort=k; gDir=1; }
+      renderGigs();
+    });
+  });
+
   document.querySelectorAll('th[data-s]').forEach(function(th){
     th.addEventListener('click', function(){
       var k=th.getAttribute('data-s');

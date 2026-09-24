@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Ops enablement · Support · Sheehan Homestead</title>
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--joy:#fbbf24;--violet:#a78bfa}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1100px;margin:0 auto;padding:28px 22px 64px}
+.crumb{font-size:.82rem;color:var(--muted);margin:0 0 12px}.crumb a{color:#fde68a;font-weight:600}
+h1{font-size:clamp(1.45rem,3vw,1.95rem);margin:0 0 6px;letter-spacing:-.02em;font-weight:750}
+.sub{color:var(--muted);font-size:.95rem;margin:0 0 18px}
+.hub{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:0 0 24px}
+.tile{display:flex;flex-direction:column;justify-content:space-between;min-height:150px;padding:18px 20px;border-radius:16px;border:1px solid var(--line);background:var(--card);color:inherit;text-decoration:none;transition:border-color .15s,transform .12s}
+.tile:hover{border-color:#fbbf2488;transform:translateY(-1px);text-decoration:none}
+.tile .kicker{font-size:.65rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:8px}
+.tile h2{margin:0 0 6px;font-size:1.1rem;color:#fde68a}
+.tile p{margin:0;color:var(--muted);font-size:.82rem}
+.tile .go{margin-top:14px;font-size:.8rem;font-weight:750;color:#fde68a}
+.sec{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:8px 0 10px}
+.item{padding:12px;border-radius:12px;background:var(--panel);border:1px solid #1a2438;margin:0 0 8px}
+.item .t{font-weight:700;font-size:.92rem}
+.item .m{font-size:.78rem;color:var(--muted);margin-top:3px}
+.badge{display:inline-block;margin-top:6px;font-size:.65rem;padding:2px 7px;border-radius:6px;border:1px solid var(--line);color:var(--muted);font-weight:650}
+.badge.available{border-color:#3dd68c55;color:var(--good)}
+.badge.track{border-color:#5b8cff55;color:#9ec1ff}
+.badge.unknown{border-color:#ffb02066;color:var(--warn)}
+.badge.open{border-color:#ff6b4a66;color:#ff9b82}
+.holes{margin:0 0 22px}
+.note{color:var(--muted);font-size:.75rem;margin-top:18px}
+.empty{color:var(--muted);padding:8px}
+</style></head>
+<body><div class="wrap">
+
+<p class="crumb"><a href="index.html">Operator</a> → <a href="support-home.html">Support</a> → <b>Ops enablement</b></p>
+<header>
+  <h1>Ops enablement</h1>
+  <p class="sub">Run-the-business holes + compliance / HR lite. Enables delivery — not a second Ops floor.</p>
+</header>
+
+<nav class="hub" aria-label="Ops enablement tiles">
+  <a class="tile" href="#holes">
+    <div>
+      <div class="kicker">Plans</div>
+      <h2>Run-the-business holes</h2>
+      <p>Showstoppers + contact white space. Honest open items — no shame language.</p>
+    </div>
+    <div class="go">Jump to holes ↓</div>
+  </a>
+  <a class="tile" href="#compliance">
+    <div>
+      <div class="kicker">Checklist</div>
+      <h2>Compliance checklist</h2>
+      <p>COI · LLC · fingerprinted teacher · annual report · W-9 · Nassau permit (unknown).</p>
+    </div>
+    <div class="go">Jump to checklist ↓</div>
+  </a>
+  <a class="tile" href="support-gig-hr.html">
+    <div>
+      <div class="kicker">People</div>
+      <h2>Gig workforce / HR lite</h2>
+      <p>1099 / W-9 · jobs today · aspirational seats · helper form.</p>
+    </div>
+    <div class="go">Open Gig HR →</div>
+  </a>
+  <a class="tile" href="support-compliance-roadmap.html">
+    <div>
+      <div class="kicker">Future</div>
+      <h2>Compliance roadmap</h2>
+      <p>Lawyer · S-Corp · insurance · vet · permits · chambers. Wishlist / not started.</p>
+    </div>
+    <div class="go">Open roadmap →</div>
+  </a>
+</nav>
+
+<div class="sec" id="holes">Run-the-business holes / plans</div>
+<div class="holes" id="holes-root"><div class="empty">Loading showstoppers…</div></div>
+<p class="note" style="margin-top:0;margin-bottom:18px">
+  Also: <a href="ops-delivery.html">Ops delivery calendar</a> ·
+  <a href="org-whitespace.html">Org white space (contacts)</a> ·
+  <a href="ann-marie-ops.html">Ann-Marie ops scorecard</a> ·
+  <a href="ops-team.html">Team roster</a>
+</p>
+
+<div class="sec" id="compliance">Compliance checklist (live)</div>
+<div id="co-root"><div class="empty">Loading…</div></div>
+
+<p class="note" id="foot">Ops enablement · as of loading…</p>
+</div>
+<script>
+(function(){
+  function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]))}
+  Promise.all([
+    fetch('data/ops_showstoppers.json').then(r=>r.json()),
+    fetch('data/compliance_checklist.json').then(r=>r.json()),
+  ]).then(([ss, d])=>{
+    const holes=document.getElementById('holes-root');
+    const items=ss.items||[];
+    if(!items.length){holes.innerHTML='<div class="empty">No showstoppers listed.</div>';}
+    else{
+      holes.innerHTML=items.map(it=>`
+        <div class="item">
+          <div class="t">${esc(it.title)}</div>
+          <div class="m">Owner: ${esc(it.owner||'—')} · Next: ${esc(it.next||'—')}${it.notes?' · '+esc(it.notes):''}</div>
+          <span class="badge ${esc(it.status||'')}">${esc(it.severity||'')} · ${esc(it.status||'')}</span>
+        </div>`).join('')
+        + `<div class="empty" style="margin-top:6px">Open ${ss.open_count||0} · watch ${ss.watch_count||0}. Bills/AR debt stay off this board.</div>`;
+    }
+    const co=document.getElementById('co-root');
+    const cItems=(d.compliance&&d.compliance.items)||[];
+    co.innerHTML=cItems.map(it=>`
+      <div class="item">
+        <div class="t">${esc(it.title)}</div>
+        <div class="m">${esc(it.notes||'')}</div>
+        <span class="badge ${esc(it.status||'')}">${esc(it.status||'')}</span>
+      </div>`).join('')||'<div class="empty">No compliance items</div>';
+    document.getElementById('foot').textContent=
+      `Ops enablement · showstoppers as of ${(ss.as_of_label||'')} · checklist as of ${(d.as_of_label||d.as_of||'')}.`;
+  }).catch(err=>{
+    document.getElementById('holes-root').innerHTML='<div class="empty">Could not load ops_showstoppers.json</div>';
+    document.getElementById('co-root').innerHTML='<div class="empty">Could not load compliance_checklist.json</div>';
+    console.error(err);
+  });
+})();
+</script>
+</body></html>

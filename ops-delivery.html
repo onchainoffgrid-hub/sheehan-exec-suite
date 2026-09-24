@@ -62,6 +62,15 @@ h1{font-size:clamp(1.5rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;font
 .note{color:var(--muted);font-size:.75rem;margin-top:18px}
 .empty{color:var(--muted);padding:20px;text-align:center}
 .labor{font-size:.75rem;color:var(--muted);margin:0 0 14px}
+
+.sum{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:0 0 16px}
+.sum .kpi{border:1px solid var(--line);border-radius:14px;background:var(--card);padding:12px 14px}
+.sum .l{font-size:.65rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.sum .v{font-size:1.15rem;font-weight:750;margin-top:4px;color:#fde68a}
+.sum .s{font-size:.72rem;color:var(--muted);margin-top:3px}
+.need{display:inline-block;margin:2px 4px 0 0;font-size:.65rem;padding:2px 8px;border-radius:999px;border:1px solid #ffb02066;color:var(--warn);font-weight:650;background:#2a2210}
+.gaps-note{margin:0 0 16px;padding:10px 14px;border:1px dashed #ffb02055;border-radius:12px;background:#16140f;font-size:.8rem;color:var(--muted)}
+.gaps-note b{color:var(--warn)}
 </style></head>
 <body><div class="wrap">
 
@@ -72,6 +81,15 @@ h1{font-size:clamp(1.5rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;font
   <p class="q">Am I in business? Can we deliver what we sold today?</p>
 </header>
 <p class="asof" id="asof">Synced from Google Calendar · refresh via Dashboard Bot</p>
+
+<div class="sum" id="sum" aria-label="Delivery summary">
+  <div class="kpi"><div class="l">Gigs scheduled</div><div class="v" id="s-gigs">—</div><div class="s" id="s-gigs-s">from calendar JSON</div></div>
+  <div class="kpi"><div class="l">Rough $ expected/owed</div><div class="v" id="s-dollars">input needed</div><div class="s">no $ invented</div></div>
+  <div class="kpi"><div class="l">Staffed</div><div class="v" id="s-staffed">—</div><div class="s" id="s-staffed-s"></div></div>
+  <div class="kpi"><div class="l">Unconfirmed</div><div class="v" id="s-unconf">—</div><div class="s" id="s-unconf-s"></div></div>
+  <div class="kpi"><div class="l">Invoice not sent</div><div class="v" id="s-inv">—</div><div class="s" id="s-inv-s"></div></div>
+</div>
+<div class="gaps-note" id="gaps-note"><b>More inputs unlock invoice/staffed accuracy</b> — gaps listed as chips when fields are unknown.</div>
 
 <a class="chip" href="growth-simple.html">Open capacity → Growth (fill idle days)</a>
 <a class="chip team" href="ops-team.html">Team · helpers + partners →</a>
@@ -137,10 +155,81 @@ h1{font-size:clamp(1.5rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;font
     }catch(e){return ''}
   }
 
-  fetch('data/ops_delivery_calendar.json').then(r=>r.json()).then(data=>{
+  Promise.all([
+    fetch('data/ops_delivery_calendar.json').then(r=>r.json()),
+    fetch('data/bookings_pipeline.json').then(r=>r.json()).catch(()=>null),
+  ]).then(([data, bp])=>{
     const asof=document.getElementById('asof');
     asof.textContent=(data.refresh_note||'Synced from Google Calendar · refresh via Dashboard Bot')
       + (data.as_of_label? ' · as of '+data.as_of_label : '');
+
+    // Summary strip — honest unknowns
+    const evs=[];
+    (data.days||[]).forEach(d=>(d.events||[]).forEach(e=>evs.push(e)));
+    document.getElementById('s-gigs').textContent=String(evs.length);
+    document.getElementById('s-gigs-s').textContent=(data.stats&&data.stats.kept!=null)?(`kept ${data.stats.kept} of ${data.stats.raw_events||'?'} · ${data.days.length} days`):'from calendar JSON';
+
+    // $ only if bookings_pipeline has real amount fields — never invent
+    let hasAmt=false;
+    if(bp&&bp.bookings){
+      for(const b of bp.bookings){
+        for(const k of Object.keys(b)){
+          if(/usd|amount|price|total|owed|expected/i.test(k) && b[k]!=null && b[k]!==''){ hasAmt=true; break; }
+        }
+        if(hasAmt) break;
+      }
+    }
+    document.getElementById('s-dollars').textContent=hasAmt?'see bookings_pipeline':'input needed';
+
+    function tally(field){
+      let known=0, unknown=0;
+      const vals={};
+      evs.forEach(e=>{
+        const v=String(e[field]==null||e[field]===''?'unknown':e[field]).toLowerCase();
+        if(v==='unknown'||v==='n/a'||v==='none'||v==='tbd'){ unknown++; }
+        else { known++; vals[v]=(vals[v]||0)+1; }
+      });
+      return {known, unknown, vals};
+    }
+    const staffT=tally('staffed');
+    const dep=tally('deposit');
+    // invoice field may be absent → all unknown
+    const inv=tally('invoice');
+    const staffEl=document.getElementById('s-staffed');
+    const staffS=document.getElementById('s-staffed-s');
+    if(staffT.known===0){
+      staffEl.textContent='needs input';
+      staffS.innerHTML='<span class="need">staffed: unknown ×'+staffT.unknown+'</span>';
+    } else {
+      staffEl.textContent=String(staffT.known);
+      staffS.textContent='known · '+staffT.unknown+' unknown';
+    }
+    // Unconfirmed ≈ events without firm deposit/paid
+    let unconf=0;
+    evs.forEach(e=>{
+      const d=String(e.deposit||'unknown').toLowerCase();
+      const p=String(e.paid||'unknown').toLowerCase();
+      const firm=['accepted','paid','cleared','verified','locked'].some(x=>d.includes(x)||p.includes(x));
+      if(!firm) unconf++;
+    });
+    document.getElementById('s-unconf').textContent=String(unconf);
+    document.getElementById('s-unconf-s').textContent='no firm deposit/paid label';
+
+    if(inv.known===0){
+      document.getElementById('s-inv').textContent='needs input';
+      document.getElementById('s-inv-s').innerHTML='<span class="need">invoice field missing</span>';
+    } else {
+      document.getElementById('s-inv').textContent=String(inv.unknown);
+      document.getElementById('s-inv-s').textContent='not sent / unknown';
+    }
+
+    const gaps=[];
+    if(staffT.known===0) gaps.push('staffed status per gig');
+    if(inv.known===0) gaps.push('invoice-sent flag');
+    if(!hasAmt) gaps.push('expected/owed $ (bookings_pipeline amounts)');
+    if(dep.unknown) gaps.push('deposit status ('+dep.unknown+' unknown)');
+    document.getElementById('gaps-note').innerHTML=
+      '<b>More inputs unlock invoice/staffed accuracy</b> — list gaps: '+(gaps.map(g=>' <span class="need">'+g+'</span>').join('')||' none');
 
     const root=document.getElementById('cal-root');
     root.innerHTML='';

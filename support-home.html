@@ -1,96 +1,64 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Support · enablement + compliance · Sheehan Homestead</title>
+<title>Support · enablement for Ops + Growth · Sheehan Homestead</title>
 <style>
 :root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--violet:#a78bfa;--warn:#ffb020}
 *{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
 a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
-.wrap{max-width:1100px;margin:0 auto;padding:28px 22px 64px}
+.wrap{max-width:980px;margin:0 auto;padding:28px 22px 64px}
 .crumb{font-size:.82rem;color:var(--muted);margin:0 0 12px}.crumb a{color:#9dffc5;font-weight:600}
 h1{font-size:clamp(1.5rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;font-weight:750}
 .sub{color:var(--muted);font-size:.95rem;margin:0 0 10px}
 .tenet{margin:0 0 22px;padding:14px 16px;border:1px solid #3dd68c55;border-radius:14px;background:#0e1626;font-size:.9rem;color:#c5d0e6}
 .tenet b{color:#9dffc5}
-.pods{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0 0 24px}
-@media(max-width:800px){.pods{grid-template-columns:1fr}}
-.pod{border:1px solid var(--line);border-radius:18px;background:var(--card);padding:18px 18px 14px}
-.pod.enable{border-color:#5b8cff66}
-.pod.comp{border-color:#a78bfa66}
-.pod h2{margin:0 0 4px;font-size:1.2rem}
-.pod.enable h2{color:#9ec1ff}.pod.comp h2{color:#d4c4ff}
-.pod .kicker{font-size:.68rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:12px}
-.item{padding:12px;border-radius:12px;background:var(--panel);border:1px solid #1a2438;margin:0 0 8px}
-.item .t{font-weight:700;font-size:.92rem}
-.item .t a{color:inherit;text-decoration:none}.item .t a:hover{color:var(--accent);text-decoration:underline}
-.item .m{font-size:.78rem;color:var(--muted);margin-top:3px}
-.badge{display:inline-block;margin-top:6px;font-size:.65rem;padding:2px 7px;border-radius:6px;border:1px solid var(--line);color:var(--muted);font-weight:650}
-.badge.available{border-color:#3dd68c55;color:var(--good)}
-.badge.track{border-color:#5b8cff55;color:#9ec1ff}
-.badge.unknown{border-color:#ffb02066;color:var(--warn)}
-.sec{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:22px 0 10px}
-.hub{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
-.hub a{display:block;padding:14px 16px;border-radius:14px;border:1px solid var(--line);background:var(--card);color:inherit;text-decoration:none;font-size:.85rem}
-.hub a:hover{border-color:var(--accent);text-decoration:none}
-.hub a b{display:block;margin-bottom:4px;font-size:.95rem}
-.hub a span{color:var(--muted);font-size:.78rem}
-.note{color:var(--muted);font-size:.75rem;margin-top:22px}
-.empty{color:var(--muted);padding:12px}
+.hub{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0 0 28px}
+@media(max-width:800px){.hub{grid-template-columns:1fr}}
+.tile{display:flex;flex-direction:column;justify-content:space-between;min-height:220px;padding:24px 26px;border-radius:20px;border:1px solid var(--line);background:var(--card);color:inherit;text-decoration:none;transition:border-color .15s,transform .12s}
+.tile:hover{transform:translateY(-2px);text-decoration:none}
+.tile .kicker{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:10px}
+.tile h2{margin:0 0 8px;font-size:clamp(1.35rem,2.6vw,1.7rem);letter-spacing:-.015em;line-height:1.15}
+.tile p{margin:0;color:var(--muted);font-size:.92rem;max-width:36ch}
+.tile .go{margin-top:20px;font-size:.95rem;font-weight:800}
+.tile.growth{border-color:#5b8cff88;background:linear-gradient(160deg,#152238,#121a2b 65%)}.tile.growth h2{color:#9ec1ff}.tile.growth .go{color:#9ec1ff}
+.tile.ops{border-color:#fbbf2466;background:linear-gradient(160deg,#2a2210,#121a2b 68%)}.tile.ops h2{color:#fde68a}.tile.ops .go{color:#fde68a}
+.quiet{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:8px;padding-top:18px;border-top:1px solid var(--line)}
+.quiet a{font-size:.75rem;color:var(--muted)}.quiet a:hover{color:var(--text)}
+.note{color:var(--muted);font-size:.75rem;margin-top:18px}
 </style></head>
 <body><div class="wrap">
 
 <p class="crumb"><a href="index.html">Operator</a> → <b>Support</b></p>
 <header>
-  <h1>Support · enablement + compliance</h1>
-  <p class="sub">Two pods only. Partner to Ops + Growth — not a second ops floor.</p>
+  <h1>Support · enablement only</h1>
+  <p class="sub">Not a third business. Enables <b>Growth</b> (closing) and <b>Ops</b> (delivery). Two tiles → drill down.</p>
 </header>
-<div class="tenet"><b>Job:</b> sales enablement (collateral / tech) + compliance checklist (COI, LLC, fingerprinted teacher, annual report, W-9, Nassau permit). Keep the sword on Ops fulfillment and Growth closing.</div>
+<div class="tenet"><b>Pattern:</b> clean tile grid → click → next clean page · breadcrumbs back. Role-clickable where useful. Compliance + HR lite live under Ops enablement.</div>
 
-<div class="pods" aria-label="Enablement Compliance">
-  <section class="pod enable">
-    <div class="kicker">Pod A</div>
-    <h2>Enablement</h2>
-    <div id="en-root"><div class="empty">Loading…</div></div>
-  </section>
-  <section class="pod comp">
-    <div class="kicker">Pod B</div>
-    <h2>Compliance</h2>
-    <div id="co-root"><div class="empty">Loading…</div></div>
-  </section>
-</div>
-
-<div class="sec">Quiet refs (not competing tiles)</div>
-<nav class="hub" aria-label="Quiet refs">
-  <a href="ops-team.html"><b>Team</b><span>Helpers + partners roster</span></a>
-  <a href="ops-animals.html"><b>Animals</b><span>Battle Row sheet</span></a>
-  <a href="collateral.html"><b>Collateral</b><span>Leave-behinds</span></a>
-  <a href="investor-home.html"><b>Investor</b><span>Research face</span></a>
-  <a href="support-catalog.html"><b>Catalog (legacy)</b><span>Full enablement index</span></a>
+<nav class="hub" aria-label="Support enablement pods">
+  <a class="tile growth" href="support-growth-enablement.html">
+    <div>
+      <div class="kicker">Pod 1 · sales enablement</div>
+      <h2>Growth enablement</h2>
+      <p>GTM · pricing · collateral · apps/how-to · social lanes · Buzz / appearances. Tools that help close.</p>
+    </div>
+    <div class="go">Open Growth enablement →</div>
+  </a>
+  <a class="tile ops" href="support-ops-enablement.html">
+    <div>
+      <div class="kicker">Pod 2 · run-the-business</div>
+      <h2>Ops enablement</h2>
+      <p>Holes / plans · compliance checklist · gig workforce / HR lite · compliance roadmap (future).</p>
+    </div>
+    <div class="go">Open Ops enablement →</div>
+  </a>
 </nav>
 
-<p class="note" id="foot">Support enables Ops delivery and Growth closing. Nassau permit stays unknown/low-key until confirmed.</p>
-</div>
-<script>
-(function(){
-  function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]))}
-  fetch('data/compliance_checklist.json').then(r=>r.json()).then(d=>{
-    const en=document.getElementById('en-root');
-    const co=document.getElementById('co-root');
-    const eItems=(d.enablement&&d.enablement.items)||[];
-    const cItems=(d.compliance&&d.compliance.items)||[];
-    en.innerHTML=eItems.map(it=>{
-      const title=it.href?`<a href="${esc(it.href)}">${esc(it.title)}</a>`:esc(it.title);
-      return `<div class="item"><div class="t">${title}</div><div class="m">${esc(it.notes||'')}</div><span class="badge ${esc(it.status||'')}">${esc(it.status||'')}</span></div>`;
-    }).join('')||'<div class="empty">No enablement items</div>';
-    co.innerHTML=cItems.map(it=>{
-      return `<div class="item"><div class="t">${esc(it.title)}</div><div class="m">${esc(it.notes||'')}</div><span class="badge ${esc(it.status||'')}">${esc(it.status||'')}</span></div>`;
-    }).join('')||'<div class="empty">No compliance items</div>';
-    document.getElementById('foot').textContent=
-      `Support · as of ${(d.as_of_label||d.as_of||'')} · enablement ${eItems.length} · compliance ${cItems.length} · Nassau permit unknown/low-key.`;
-  }).catch(err=>{
-    document.getElementById('en-root').innerHTML='<div class="empty">Could not load compliance_checklist.json</div>';
-    document.getElementById('co-root').innerHTML='<div class="empty">Could not load compliance_checklist.json</div>';
-    console.error(err);
-  });
-})();
-</script>
-</body></html>
+<nav class="quiet" aria-label="Quiet refs">
+  <a href="ops-delivery.html">Ops delivery</a>
+  <a href="growth-simple.html">Growth</a>
+  <a href="ops-team.html">Team roster</a>
+  <a href="support-catalog.html">Catalog (legacy)</a>
+  <a href="investor-home.html">Investor</a>
+</nav>
+<p class="note">Support enables Ops delivery and Growth closing — never a third P&amp;L. Updated 2026-09-24 ET.</p>
+</div></body></html>

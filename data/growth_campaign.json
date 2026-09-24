@@ -1,17 +1,20 @@
 {
-  "as_of": "2026-09-24T10:33:00-04:00",
-  "as_of_label": "2026-09-24 10:33 ET",
+  "as_of": "2026-09-24T10:39:00-04:00",
+  "as_of_label": "2026-09-24 10:39 ET",
   "campaign": {
     "label": "Fall \u2192 holiday close",
     "start": "2026-08-12",
     "end": "2026-12-23",
     "prep_from": "2026-07",
-    "banner": "Aug 12 \u2192 Dec 23, 2026 \u00b7 running start (prep from July)",
+    "banner": "Running start Jul 1 \u2192 Dec 23, 2026 \u00b7 campaign push Aug 12",
     "buckets_only": [
       "qualified_pipeline",
       "bookings",
       "receivables"
-    ]
+    ],
+    "running_start": "2026-07-01",
+    "north_star_bookings_usd": 250000,
+    "north_star_label": "$250,000 bookings by 2026-12-23"
   },
   "rules": {
     "never_invent_emails_or_dollars": true,
@@ -142,6 +145,61 @@
     {
       "href": "growth-home.html",
       "label": "Full growth home"
+    },
+    {
+      "href": "growth-b2c.html",
+      "label": "B2C"
+    },
+    {
+      "href": "gtm-seats.html",
+      "label": "BDR / GTM seats"
+    },
+    {
+      "href": "ann-marie-ops.html",
+      "label": "Support-role delegation"
+    },
+    {
+      "href": "support-home.html",
+      "label": "Support enablement"
     }
-  ]
+  ],
+  "north_star": {
+    "bookings_usd": 250000,
+    "by": "2026-12-23",
+    "running_start": "2026-07-01",
+    "campaign_push": "2026-08-12",
+    "label": "$250,000 bookings by 2026-12-23"
+  },
+  "thesis": {
+    "label": "Michael belief \u00b7 thesis (not a forecast)",
+    "text": "Book $250k \u2192 expected hold \u2265$100k",
+    "source": "Michael \u00b7 labeled as thesis"
+  },
+  "booked_so_far": {
+    "usd_low": 35000,
+    "usd_high": 40000,
+    "display": "~$35,000\u2013$40,000",
+    "source": "Ann-Marie via Michael voice 2026-09-24",
+    "reconciled": false,
+    "note": "Range \u00b7 not bank-reconciled \u00b7 do not treat as AR"
+  },
+  "reviews": {
+    "goal": 555,
+    "by": "2026-12-23",
+    "current": null,
+    "current_label": "TBD / input needed",
+    "note": "Current count not in growth_campaign data \u2014 do not invent. Journey sketch may live on support-reviews.html"
+  },
+  "pace": {
+    "as_of": "2026-09-24",
+    "target_usd": 250000,
+    "booked_usd_low": 35000,
+    "booked_usd_high": 40000,
+    "pct_low": 14.0,
+    "pct_high": 16.0,
+    "days_left": 90,
+    "window_start": "2026-07-01",
+    "window_end": "2026-12-23",
+    "note": "Pace vs $250k \u00b7 mid-range used only for display % band"
+  }
 }

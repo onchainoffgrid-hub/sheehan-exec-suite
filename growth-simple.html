@@ -9,8 +9,15 @@ a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
 .crumb{font-size:.82rem;color:var(--muted);margin:0 0 12px}.crumb a{color:#9ec1ff;font-weight:600}
 h1{font-size:clamp(1.5rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;font-weight:750}
 .sub{color:var(--muted);font-size:.95rem;margin:0 0 14px}
-.banner{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:0 0 18px;padding:12px 16px;border-radius:14px;border:1px solid #5b8cff66;background:linear-gradient(135deg,#152238,#121a2b);font-size:.88rem;font-weight:650;color:#9ec1ff}
+.banner{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:0 0 14px;padding:12px 16px;border-radius:14px;border:1px solid #5b8cff66;background:linear-gradient(135deg,#152238,#121a2b);font-size:.88rem;font-weight:650;color:#9ec1ff}
 .banner .lbl{font-size:.68rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:600}
+.pace{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:0 0 14px}
+.pace .kpi{border:1px solid var(--line);border-radius:14px;background:var(--card);padding:12px 14px}
+.pace .l{font-size:.65rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.pace .v{font-size:1.15rem;font-weight:750;margin-top:4px;color:#fde68a}
+.pace .s{font-size:.72rem;color:var(--muted);margin-top:3px}
+.thesis{margin:0 0 16px;padding:12px 14px;border:1px dashed #a78bfa66;border-radius:12px;background:#14101f;font-size:.84rem;color:#c5d0e6}
+.thesis b{color:#d4c4ff}
 .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0 0 22px}
 @media(max-width:900px){.cols{grid-template-columns:1fr}}
 .col{border:1px solid var(--line);border-radius:18px;background:var(--card);padding:18px 18px 14px;min-height:280px}
@@ -33,16 +40,30 @@ h1{font-size:clamp(1.5rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;font
 .note{color:var(--muted);font-size:.75rem;margin-top:18px}
 .chip{display:inline-block;margin:0 0 16px;padding:8px 14px;border-radius:999px;border:1px solid #fbbf2466;background:#2a2210;color:#fde68a;font-size:.8rem;font-weight:650;text-decoration:none}
 .chip:hover{text-decoration:none;border-color:#fbbf24}
+.bar{height:10px;background:var(--panel);border-radius:99px;overflow:hidden;border:1px solid var(--line);margin:8px 0 0}
+.bar>i{display:block;height:100%;background:linear-gradient(90deg,var(--good),var(--accent));width:15%}
 </style></head>
 <body><div class="wrap">
 
 <p class="crumb"><a href="index.html">Operator</a> → <b>Growth</b></p>
 <header>
   <h1>Growth · closing only</h1>
-  <p class="sub">Qualified pipeline · bookings · receivables. Named seeds only when evidence exists — never invent contacts or $.</p>
+  <p class="sub">North star <b>$250,000 bookings by 2026-12-23</b>. Qualified pipeline · bookings · receivables. Never invent contacts or $.</p>
 </header>
 
 <div class="banner" id="banner"><span class="lbl">Campaign</span> Loading…</div>
+
+<div class="pace" id="pace" aria-label="Pace to 250k">
+  <div class="kpi"><div class="l">Booked so far</div><div class="v" id="p-booked">—</div><div class="s" id="p-booked-s">loading</div></div>
+  <div class="kpi"><div class="l">Target</div><div class="v">$250,000</div><div class="s">by 2026-12-23</div></div>
+  <div class="kpi"><div class="l">Days left</div><div class="v" id="p-days">—</div><div class="s">to Dec 23</div></div>
+  <div class="kpi"><div class="l">Pace %</div><div class="v" id="p-pct">—</div><div class="s" id="p-pct-s">vs 250k</div>
+    <div class="bar" id="p-bar" title="pace"><i></i></div>
+  </div>
+  <div class="kpi"><div class="l">Reviews goal</div><div class="v">555</div><div class="s" id="p-rev">current: TBD / input needed</div></div>
+</div>
+
+<div class="thesis" id="thesis">Thesis loading…</div>
 
 <a class="chip" href="ops-delivery.html">← Ops calendar (idle capacity)</a>
 
@@ -64,10 +85,10 @@ h1{font-size:clamp(1.5rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;font
   </section>
 </div>
 
-<div class="sec">BDR / CAPTCHA / hot links (secondary drill)</div>
-<nav class="secondary" id="secondary" aria-label="BDR secondary"></nav>
+<div class="sec">BDR / B2C / support-role delegation (secondary)</div>
+<nav class="secondary" id="secondary" aria-label="Secondary tools"></nav>
 
-<p class="note">AR shows verified / incoming labels only — accepted ≠ paid until cleared. Estimates labeled as estimates. Source: growth_campaign.json + bookings_pipeline.json.</p>
+<p class="note">AR shows verified / incoming labels only — accepted ≠ paid until cleared. Estimates labeled as estimates. Booked-so-far range is voice-sourced, not bank-reconciled. Source: growth_campaign.json + bookings_pipeline.json.</p>
 </div>
 <script>
 (function(){
@@ -79,15 +100,41 @@ h1{font-size:clamp(1.5rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;font
     }).join('');
     return `<div class="card-row"><div class="name">${esc(name)}</div><div class="meta">${meta}</div>${t}</div>`;
   }
+  function money(n){
+    if(n==null) return '—';
+    return '$'+Number(n).toLocaleString('en-US');
+  }
 
   Promise.all([
     fetch('data/growth_campaign.json').then(r=>r.json()),
     fetch('data/bookings_pipeline.json').then(r=>r.json()),
   ]).then(([gc, bp])=>{
     const camp=gc.campaign||{};
+    const ns=gc.north_star||{};
     document.getElementById('banner').innerHTML=
-      `<span class="lbl">Campaign</span> ${esc(camp.banner||'Aug 12 → Dec 23, 2026')}`
+      `<span class="lbl">Campaign</span> ${esc(camp.banner||'Running start Jul 1 → Dec 23 · push Aug 12')}`
       + (gc.as_of_label?` <span class="lbl" style="margin-left:8px">as of</span> ${esc(gc.as_of_label)}`:'');
+
+    const pace=gc.pace||{};
+    const booked=gc.booked_so_far||{};
+    document.getElementById('p-booked').textContent=booked.display||(money(booked.usd_low)+'–'+money(booked.usd_high));
+    document.getElementById('p-booked-s').textContent=
+      (booked.source||'source TBD')+(booked.reconciled===false?' · not bank-reconciled':'');
+    document.getElementById('p-days').textContent=pace.days_left!=null?String(pace.days_left):'—';
+    const pl=pace.pct_low, ph=pace.pct_high;
+    document.getElementById('p-pct').textContent=(pl!=null&&ph!=null)?(pl+'–'+ph+'%'):'—';
+    document.getElementById('p-pct-s').textContent='booked vs $250k';
+    const mid=((pl||0)+(ph||0))/2;
+    const bar=document.querySelector('#p-bar i');
+    if(bar) bar.style.width=Math.max(2,Math.min(100,mid))+'%';
+
+    const rev=gc.reviews||{};
+    document.getElementById('p-rev').textContent=
+      rev.current!=null?('current: '+rev.current):(rev.current_label||'current: TBD / input needed');
+
+    const th=gc.thesis||{};
+    document.getElementById('thesis').innerHTML=
+      `<b>Thesis</b> (not a forecast): ${esc(th.text||'Book $250k → expected hold ≥$100k')} · ${esc(th.source||'Michael belief')}`;
 
     const pipeEl=document.getElementById('pipe');
     const rows=gc.pipeline||[];
