@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-23 17:50 ET",
+  "as_of": "2026-09-24 10:33 ET",
   "brand": "Sheehan Homestead",
   "title": "Helper + Team roster",
   "scheduling_owner": "Ann-Marie Sheehan",
@@ -302,23 +302,6 @@
       "need_help_at": []
     },
     {
-      "name": "Melissa",
-      "phone": "(615) 606-5338",
-      "email": "",
-      "notes": "Mobile bartending partner; 10/24 AM only",
-      "confirmed_1024": true,
-      "confirmed_note": "AM only",
-      "area": "TBD",
-      "car": "TBD",
-      "can_do": [
-        "mobile-bartending"
-      ],
-      "dollar_lanes": [
-        "bartending"
-      ],
-      "need_help_at": []
-    },
-    {
       "name": "Kelly",
       "phone": "(912) 676-7051",
       "email": "",
@@ -335,22 +318,6 @@
       "need_help_at": [
         "recovery"
       ]
-    },
-    {
-      "name": "Angie",
-      "phone": "",
-      "email": "",
-      "notes": "Goat yoga partner (with Emmy)",
-      "confirmed_1024": false,
-      "area": "TBD",
-      "car": "TBD",
-      "can_do": [
-        "goat-yoga"
-      ],
-      "dollar_lanes": [
-        "yoga"
-      ],
-      "need_help_at": []
     },
     {
       "name": "Melesia",
@@ -400,7 +367,8 @@
       "dollar_lanes": [
         "yoga"
       ],
-      "need_help_at": []
+      "need_help_at": [],
+      "partner_role": "Goat yoga (with Angie)"
     },
     {
       "name": "Dr. Tara",
@@ -461,6 +429,41 @@
         "events"
       ],
       "need_help_at": []
+    },
+    {
+      "name": "Melissa",
+      "phone": "(615) 606-5338",
+      "email": "",
+      "notes": "Mobile bartending partner; 10/24 AM only",
+      "confirmed_1024": true,
+      "confirmed_note": "AM only",
+      "area": "TBD",
+      "car": "TBD",
+      "can_do": [
+        "mobile-bartending"
+      ],
+      "dollar_lanes": [
+        "bartending"
+      ],
+      "need_help_at": [],
+      "partner_role": "Mobile bartending"
+    },
+    {
+      "name": "Angie",
+      "phone": "",
+      "email": "",
+      "notes": "Goat yoga partner (with Emmy)",
+      "confirmed_1024": false,
+      "area": "TBD",
+      "car": "TBD",
+      "can_do": [
+        "goat-yoga"
+      ],
+      "dollar_lanes": [
+        "yoga"
+      ],
+      "need_help_at": [],
+      "partner_role": "Goat yoga w/ Emmy"
     }
   ],
   "owners": [
@@ -535,15 +538,16 @@
     "primary": 3,
     "secondary": 2,
     "need_training": 4,
-    "third": 8,
-    "partners": 5,
+    "third": 6,
+    "partners": 7,
     "owners": 2,
     "backup_bench": 1,
     "directors_vacant": 3,
-    "helpers_total": 17,
+    "helpers_total": 15,
     "bdr_manager_vacant": 1,
     "bdr_reps_vacant": 5,
-    "sales_tree_vacant": 7
+    "sales_tree_vacant": 7,
+    "roster_faces": 25
   },
   "gaps": [
     "Madison \u2014 email only, no phone on roster",
@@ -672,6 +676,7 @@
       "Most helpers: car TBD",
       "Historical Gmail calendar scrape = Phase C (deferred)",
       "Interview no-hires: Drive Responses Sheet not located"
-    ]
+    ],
+    "partner_promotion_2026_09_24": "Melissa (mobile bartending; 10/24 AM only) and Angie (goat yoga w/ Emmy) promoted third \u2192 partners per Michael: partners more than helpers. Emmy already partner."
   }
 }

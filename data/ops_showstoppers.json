@@ -1,0 +1,65 @@
+{
+  "as_of": "2026-09-24T10:33:00-04:00",
+  "as_of_label": "2026-09-24 10:33 ET",
+  "owner": "Ann-Marie / Michael",
+  "purpose": "Homestead showstoppers that block or risk delivery. No bills/AR debt on Ops.",
+  "labor_rate_stub": {
+    "rate_per_hr": 25,
+    "note": "Nice-to-have modeling stub only. Do not invent miles or total $."
+  },
+  "excluded": [
+    {
+      "item": "Deck",
+      "reason": "Doesn't matter / not a showstopper"
+    },
+    {
+      "item": "Behind on bills / AR debt",
+      "reason": "Not Ops \u2014 keep off this board"
+    },
+    {
+      "item": "Motivational fluff",
+      "reason": "Not actionable"
+    }
+  ],
+  "items": [
+    {
+      "id": "fence-falling",
+      "title": "Fence falling",
+      "severity": "big",
+      "status": "open",
+      "owner": "Michael / Ann-Marie",
+      "next": "Stabilize / repair \u2014 big risk to animals + delivery staging",
+      "notes": "Confirmed open showstopper"
+    },
+    {
+      "id": "comcast-wire",
+      "title": "Comcast / Xfinity wire hanging",
+      "severity": "medium",
+      "status": "open",
+      "owner": "Michael",
+      "next": "Nudge Comcast / Xfinity to fix hanging wire",
+      "notes": "Safety / curb risk"
+    },
+    {
+      "id": "pond-hazard",
+      "title": "Pond hazard",
+      "severity": "medium",
+      "status": "open",
+      "owner": "Ann-Marie / Michael",
+      "next": "Mitigate access / mark hazard",
+      "notes": "Confirmed open"
+    },
+    {
+      "id": "old-hvac",
+      "title": "Old HVAC",
+      "severity": "watch",
+      "status": "watch",
+      "owner": "Michael",
+      "next": "Watch \u2014 replace filter / monitor; not emergency yet",
+      "notes": "Watch status (not same as personal calendar HVAC filter noise)"
+    }
+  ],
+  "open_count": 3,
+  "watch_count": 1,
+  "total_count": 4
+}

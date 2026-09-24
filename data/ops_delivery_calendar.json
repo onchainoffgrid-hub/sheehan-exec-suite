@@ -1,6 +1,6 @@
 {
-  "as_of": "2026-09-24T09:22:11-04:00",
-  "as_of_label": "2026-09-24 09:22 ET",
+  "as_of": "2026-09-24T10:33:00-04:00",
+  "as_of_label": "2026-09-24 10:33 ET",
   "tz": "America/New_York",
   "source": "Google Calendar snapshot (sheehanhomestead@gmail.com)",
   "source_updated": "2026-09-24T13:22:11Z",
@@ -115,7 +115,27 @@
           "paid": "unknown",
           "source_id": "_74q30ha46p0j0b9g6spj8b9k6d2kcba26cskcb9o8ork8h256h0j6dhi64"
         }
-      ]
+      ],
+      "daylight": {
+        "window": "08:00\u201318:00 ET",
+        "minutes_total": 600,
+        "hours_total": 10,
+        "booked_minutes_union": 135,
+        "hours_booked": 2.25,
+        "hours_free": 7.75,
+        "pct_free": 77.5,
+        "merged_intervals_minutes": [
+          [
+            600,
+            660
+          ],
+          [
+            780,
+            855
+          ]
+        ],
+        "chip": "7.75h free of 10h daylight"
+      }
     },
     {
       "date": "2026-09-27",
@@ -133,7 +153,23 @@
           "paid": "unknown",
           "source_id": "1joitgkd4g5is8t04khj4jgsd4"
         }
-      ]
+      ],
+      "daylight": {
+        "window": "08:00\u201318:00 ET",
+        "minutes_total": 600,
+        "hours_total": 10,
+        "booked_minutes_union": 180,
+        "hours_booked": 3.0,
+        "hours_free": 7.0,
+        "pct_free": 70.0,
+        "merged_intervals_minutes": [
+          [
+            600,
+            780
+          ]
+        ],
+        "chip": "7h free of 10h daylight"
+      }
     },
     {
       "date": "2026-10-01",
@@ -151,7 +187,23 @@
           "paid": "unknown",
           "source_id": "5mk3bcodmfb7ct18cjah6jd9re"
         }
-      ]
+      ],
+      "daylight": {
+        "window": "08:00\u201318:00 ET",
+        "minutes_total": 600,
+        "hours_total": 10,
+        "booked_minutes_union": 60,
+        "hours_booked": 1.0,
+        "hours_free": 9.0,
+        "pct_free": 90.0,
+        "merged_intervals_minutes": [
+          [
+            690,
+            750
+          ]
+        ],
+        "chip": "9h free of 10h daylight"
+      }
     },
     {
       "date": "2026-10-02",
@@ -169,7 +221,23 @@
           "paid": "unknown",
           "source_id": "20qi97nvkk1lhvqs3j8smgq6tn"
         }
-      ]
+      ],
+      "daylight": {
+        "window": "08:00\u201318:00 ET",
+        "minutes_total": 600,
+        "hours_total": 10,
+        "booked_minutes_union": 180,
+        "hours_booked": 3.0,
+        "hours_free": 7.0,
+        "pct_free": 70.0,
+        "merged_intervals_minutes": [
+          [
+            500,
+            680
+          ]
+        ],
+        "chip": "7h free of 10h daylight"
+      }
     },
     {
       "date": "2026-10-03",
@@ -220,7 +288,27 @@
           "paid": "unknown",
           "source_id": "_68ok6da484pk4b9i88o38b9k8p138ba160qk8ba48opk8dq3612jcdq26o"
         }
-      ]
+      ],
+      "daylight": {
+        "window": "08:00\u201318:00 ET",
+        "minutes_total": 600,
+        "hours_total": 10,
+        "booked_minutes_union": 195,
+        "hours_booked": 3.25,
+        "hours_free": 6.75,
+        "pct_free": 67.5,
+        "merged_intervals_minutes": [
+          [
+            540,
+            555
+          ],
+          [
+            720,
+            900
+          ]
+        ],
+        "chip": "6.75h free of 10h daylight"
+      }
     },
     {
       "date": "2026-10-11",
@@ -238,7 +326,23 @@
           "paid": "unknown",
           "source_id": "3b405s325qj3k9gcp9tp58anst"
         }
-      ]
+      ],
+      "daylight": {
+        "window": "08:00\u201318:00 ET",
+        "minutes_total": 600,
+        "hours_total": 10,
+        "booked_minutes_union": 180,
+        "hours_booked": 3.0,
+        "hours_free": 7.0,
+        "pct_free": 70.0,
+        "merged_intervals_minutes": [
+          [
+            780,
+            960
+          ]
+        ],
+        "chip": "7h free of 10h daylight"
+      }
     },
     {
       "date": "2026-10-12",
@@ -256,7 +360,23 @@
           "paid": "unknown",
           "source_id": "5lsbt1e5qn852qiggf5bdt511m"
         }
-      ]
+      ],
+      "daylight": {
+        "window": "08:00\u201318:00 ET",
+        "minutes_total": 600,
+        "hours_total": 10,
+        "booked_minutes_union": 60,
+        "hours_booked": 1.0,
+        "hours_free": 9.0,
+        "pct_free": 90.0,
+        "merged_intervals_minutes": [
+          [
+            660,
+            720
+          ]
+        ],
+        "chip": "9h free of 10h daylight"
+      }
     },
     {
       "date": "2026-10-13",
@@ -274,7 +394,23 @@
           "paid": "unknown",
           "source_id": "6gtl8ff9kc4edki07i9k6npaik_20261013T153000Z"
         }
-      ]
+      ],
+      "daylight": {
+        "window": "08:00\u201318:00 ET",
+        "minutes_total": 600,
+        "hours_total": 10,
+        "booked_minutes_union": 60,
+        "hours_booked": 1.0,
+        "hours_free": 9.0,
+        "pct_free": 90.0,
+        "merged_intervals_minutes": [
+          [
+            690,
+            750
+          ]
+        ],
+        "chip": "9h free of 10h daylight"
+      }
     },
     {
       "date": "2026-10-14",
@@ -292,7 +428,23 @@
           "paid": "n/a",
           "source_id": "2580qhb6508lggb9llotvl8uhc"
         }
-      ]
+      ],
+      "daylight": {
+        "window": "08:00\u201318:00 ET",
+        "minutes_total": 600,
+        "hours_total": 10,
+        "booked_minutes_union": 60,
+        "hours_booked": 1.0,
+        "hours_free": 9.0,
+        "pct_free": 90.0,
+        "merged_intervals_minutes": [
+          [
+            660,
+            720
+          ]
+        ],
+        "chip": "9h free of 10h daylight"
+      }
     },
     {
       "date": "2026-10-15",
@@ -310,7 +462,23 @@
           "paid": "unknown",
           "source_id": "78h576l1lr7bf7todh1slj57aq"
         }
-      ]
+      ],
+      "daylight": {
+        "window": "08:00\u201318:00 ET",
+        "minutes_total": 600,
+        "hours_total": 10,
+        "booked_minutes_union": 90,
+        "hours_booked": 1.5,
+        "hours_free": 8.5,
+        "pct_free": 85.0,
+        "merged_intervals_minutes": [
+          [
+            660,
+            750
+          ]
+        ],
+        "chip": "8.5h free of 10h daylight"
+      }
     },
     {
       "date": "2026-10-17",
@@ -328,7 +496,23 @@
           "paid": "unknown",
           "source_id": "43fl8b954jsqksah5h01c6fhfk"
         }
-      ]
+      ],
+      "daylight": {
+        "window": "08:00\u201318:00 ET",
+        "minutes_total": 600,
+        "hours_total": 10,
+        "booked_minutes_union": 180,
+        "hours_booked": 3.0,
+        "hours_free": 7.0,
+        "pct_free": 70.0,
+        "merged_intervals_minutes": [
+          [
+            900,
+            1080
+          ]
+        ],
+        "chip": "7h free of 10h daylight"
+      }
     },
     {
       "date": "2026-10-20",
@@ -357,7 +541,23 @@
           "paid": "unknown",
           "source_id": "_64r4ac1h7524ab9m8oo36b9k88r34ba1890jib9n8op38e9n88rjcc2668_20261020T144500Z"
         }
-      ]
+      ],
+      "daylight": {
+        "window": "08:00\u201318:00 ET",
+        "minutes_total": 600,
+        "hours_total": 10,
+        "booked_minutes_union": 75,
+        "hours_booked": 1.25,
+        "hours_free": 8.75,
+        "pct_free": 87.5,
+        "merged_intervals_minutes": [
+          [
+            630,
+            705
+          ]
+        ],
+        "chip": "8.75h free of 10h daylight"
+      }
     },
     {
       "date": "2026-10-21",
@@ -375,7 +575,23 @@
           "paid": "unknown",
           "source_id": "69bg0r23a1m5rako4p2puf2g2n"
         }
-      ]
+      ],
+      "daylight": {
+        "window": "08:00\u201318:00 ET",
+        "minutes_total": 600,
+        "hours_total": 10,
+        "booked_minutes_union": 60,
+        "hours_booked": 1.0,
+        "hours_free": 9.0,
+        "pct_free": 90.0,
+        "merged_intervals_minutes": [
+          [
+            630,
+            690
+          ]
+        ],
+        "chip": "9h free of 10h daylight"
+      }
     },
     {
       "date": "2026-10-23",
@@ -415,7 +631,23 @@
           "paid": "unknown",
           "source_id": "3qrdaisc237nir8bc6o7v9g7hc"
         }
-      ]
+      ],
+      "daylight": {
+        "window": "08:00\u201318:00 ET",
+        "minutes_total": 600,
+        "hours_total": 10,
+        "booked_minutes_union": 210,
+        "hours_booked": 3.5,
+        "hours_free": 6.5,
+        "pct_free": 65.0,
+        "merged_intervals_minutes": [
+          [
+            870,
+            1080
+          ]
+        ],
+        "chip": "6.5h free of 10h daylight"
+      }
     },
     {
       "date": "2026-10-24",
@@ -478,7 +710,27 @@
           "source_id": "2ju6hiiavfmqh3higgem4d00sh"
         }
       ],
-      "day_note": "Ann-Marie birthday \u00b7 5 Mobile PZ-style delivery events \u00b7 capacity orange"
+      "day_note": "Ann-Marie birthday \u00b7 5 Mobile PZ-style delivery events \u00b7 capacity orange",
+      "daylight": {
+        "window": "08:00\u201318:00 ET",
+        "minutes_total": 600,
+        "hours_total": 10,
+        "booked_minutes_union": 450,
+        "hours_booked": 7.5,
+        "hours_free": 2.5,
+        "pct_free": 25.0,
+        "merged_intervals_minutes": [
+          [
+            600,
+            930
+          ],
+          [
+            960,
+            1080
+          ]
+        ],
+        "chip": "2.5h free of 10h daylight"
+      }
     },
     {
       "date": "2026-10-25",
@@ -496,7 +748,23 @@
           "paid": "unknown",
           "source_id": "4olmomjajcmo5pohhkslfdvcu5"
         }
-      ]
+      ],
+      "daylight": {
+        "window": "08:00\u201318:00 ET",
+        "minutes_total": 600,
+        "hours_total": 10,
+        "booked_minutes_union": 600,
+        "hours_booked": 10.0,
+        "hours_free": 0.0,
+        "pct_free": 0.0,
+        "merged_intervals_minutes": [
+          [
+            480,
+            1080
+          ]
+        ],
+        "chip": "0h free of 10h daylight"
+      }
     },
     {
       "date": "2026-10-28",
@@ -514,7 +782,23 @@
           "paid": "unknown",
           "source_id": "62t03reu7ra5i3ncdpvia5hub5"
         }
-      ]
+      ],
+      "daylight": {
+        "window": "08:00\u201318:00 ET",
+        "minutes_total": 600,
+        "hours_total": 10,
+        "booked_minutes_union": 60,
+        "hours_booked": 1.0,
+        "hours_free": 9.0,
+        "pct_free": 90.0,
+        "merged_intervals_minutes": [
+          [
+            870,
+            930
+          ]
+        ],
+        "chip": "9h free of 10h daylight"
+      }
     },
     {
       "date": "2026-10-29",
@@ -532,7 +816,23 @@
           "paid": "unknown",
           "source_id": "6oqi9g9e2h32oovr9cu8c34m1f"
         }
-      ]
+      ],
+      "daylight": {
+        "window": "08:00\u201318:00 ET",
+        "minutes_total": 600,
+        "hours_total": 10,
+        "booked_minutes_union": 210,
+        "hours_booked": 3.5,
+        "hours_free": 6.5,
+        "pct_free": 65.0,
+        "merged_intervals_minutes": [
+          [
+            870,
+            1080
+          ]
+        ],
+        "chip": "6.5h free of 10h daylight"
+      }
     },
     {
       "date": "2026-10-30",
@@ -561,7 +861,23 @@
           "paid": "unknown",
           "source_id": "3gpk95gatpapq64il857qelt88"
         }
-      ]
+      ],
+      "daylight": {
+        "window": "08:00\u201318:00 ET",
+        "minutes_total": 600,
+        "hours_total": 10,
+        "booked_minutes_union": 210,
+        "hours_booked": 3.5,
+        "hours_free": 6.5,
+        "pct_free": 65.0,
+        "merged_intervals_minutes": [
+          [
+            870,
+            1080
+          ]
+        ],
+        "chip": "6.5h free of 10h daylight"
+      }
     },
     {
       "date": "2026-10-31",
@@ -579,7 +895,33 @@
           "paid": "unknown",
           "source_id": "4si6spuucd4mupqs4vc80o8u67"
         }
-      ]
+      ],
+      "daylight": {
+        "window": "08:00\u201318:00 ET",
+        "minutes_total": 600,
+        "hours_total": 10,
+        "booked_minutes_union": 120,
+        "hours_booked": 2.0,
+        "hours_free": 8.0,
+        "pct_free": 80.0,
+        "merged_intervals_minutes": [
+          [
+            960,
+            1080
+          ]
+        ],
+        "chip": "8h free of 10h daylight"
+      }
     }
-  ]
+  ],
+  "daylight_rules": {
+    "window": "08:00\u201318:00 America/New_York",
+    "hours_total": 10,
+    "method": "Overlap-aware union of event intervals clipped to daylight; all-day events consume full 10h",
+    "capacity_colors": {
+      "green": "\u22643 events",
+      "yellow": "=4 events",
+      "orange": "\u22655 events"
+    }
+  }
 }

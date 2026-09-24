@@ -53,7 +53,7 @@ tr:hover td{background:#15223855}
 
 <div class="top">
   <span class="lbl">Ops</span>
-  <a href="ops.html">Operations</a>
+  <a href="ops-delivery.html">Operations</a>
   <a href="ops-people.html">People</a>
   <a class="on" href="ops-team.html">Team</a>
   <a href="rvp-ops.html" class="sec">Franchise Hub</a>
@@ -61,14 +61,15 @@ tr:hover td{background:#15223855}
 </div>
 
 <header>
-  <h1>Team · workers</h1>
-  <div class="sub">Ann-Marie owns scheduling · Michael supports · list + light tags · no invented contacts</div>
+  <h1>Team · helpers + partners</h1>
+  <div class="sub">Owners · Partners · Primary · Secondary · Backup · Ann-Marie owns scheduling · no invented contacts</div>
 </header>
 
 <div class="priv"><b>PRIVATE operator page</b> — not on investor hub. Stage-only sms / mailto / tel. Gaps labeled TBD. No 1099 $ or essay notes.</div>
 
 <div class="kpis" id="kpis">
   <div class="kpi"><div class="l">On list</div><div class="v" id="k-n">—</div></div>
+  <div class="kpi"><div class="l">Partners</div><div class="v" id="k-partners">—</div></div>
   <div class="kpi"><div class="l">Primary</div><div class="v" id="k-pri">—</div></div>
   <div class="kpi"><div class="l">Secondary</div><div class="v" id="k-sec">—</div></div>
   <div class="kpi"><div class="l">Need training</div><div class="v" id="k-train">—</div></div>
@@ -89,12 +90,12 @@ tr:hover td{background:#15223855}
 </div>
 <div class="filters" id="filters">
   <button type="button" class="on" data-f="all">All</button>
+  <button type="button" data-f="owners">Owners</button>
+  <button type="button" data-f="partners">Partners</button>
   <button type="button" data-f="primary">Primary</button>
   <button type="button" data-f="secondary">Secondary</button>
   <button type="button" data-f="need_training">Need training</button>
   <button type="button" data-f="third">Third</button>
-  <button type="button" data-f="partners">Partners</button>
-  <button type="button" data-f="owners">Owners</button>
   <button type="button" data-f="backup_bench">Backup</button>
 </div>
 
@@ -143,13 +144,13 @@ tr:hover td{background:#15223855}
     var m=mailHref(p.email,p.name); parts.push(m?'<a class="tap email" href="'+m+'">Email</a>':'<span class="tap email disabled">Email</span>');
     return '<div class="taps">'+parts.join('')+'</div>';
   }
-  var TIER_ORDER={owners:0,primary:1,secondary:2,need_training:3,third:4,partners:5,backup_bench:6};
+  var TIER_ORDER={owners:0,partners:1,primary:2,secondary:3,need_training:4,third:5,backup_bench:6};
   var TIER_LABEL={owners:'Owners',primary:'Primary',secondary:'Secondary',need_training:'Need training',third:'Third',partners:'Partners',backup_bench:'Backup'};
   var ALL=[], filter='all', sortKey='name', sortDir=1;
 
   function flatten(d){
     var out=[];
-    [['primary',d.primary],['secondary',d.secondary],['need_training',d.need_training],['third',d.third],['partners',d.partners],['owners',d.owners]].forEach(function(pair){
+    [['owners',d.owners],['partners',d.partners],['primary',d.primary],['secondary',d.secondary],['need_training',d.need_training],['third',d.third]].forEach(function(pair){
       (pair[1]||[]).forEach(function(p){ out.push(Object.assign({},p,{_tier:pair[0],_status:p.confirmed_1024?'10/24':(p.status||'')})); });
     });
     ((d.backup_bench&&d.backup_bench.people)||[]).forEach(function(p){
@@ -178,8 +179,9 @@ tr:hover td{background:#15223855}
       var email=p.email||'—';
       var conf=p.confirmed_1024?' <span class="tag good">10/24</span>':'';
       var note=p.confirmed_note?' <span class="tag warn">'+p.confirmed_note+'</span>':'';
+      var prole=p.partner_role?' <span class="tag lane">'+p.partner_role+'</span>':'';
       return '<tr>'+
-        '<td><div class="name">'+p.name+conf+note+'</div>'+taps(p)+'</td>'+
+        '<td><div class="name">'+p.name+conf+note+prole+'</div>'+taps(p)+'</td>'+
         '<td>'+(TIER_LABEL[p._tier]||p._tier)+'</td>'+
         '<td>'+(p.area||'TBD')+'</td>'+
         '<td><div>☎ '+phone+'</div><div class="muted">✉ '+email+'</div></td>'+
@@ -196,6 +198,7 @@ tr:hover td{background:#15223855}
     ALL=flatten(d);
     var c=d.counts||{};
     document.getElementById('k-n').textContent=ALL.length;
+    document.getElementById('k-partners').textContent=c.partners!=null?c.partners:(d.partners||[]).length;
     document.getElementById('k-pri').textContent=c.primary!=null?c.primary:(d.primary||[]).length;
     document.getElementById('k-sec').textContent=c.secondary!=null?c.secondary:(d.secondary||[]).length;
     document.getElementById('k-train').textContent=c.need_training!=null?c.need_training:(d.need_training||[]).length;

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Support · enablement · Sheehan Homestead</title>
+<title>Support · enablement + compliance · Sheehan Homestead</title>
 <style>
-:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--violet:#a78bfa;--money:#f0abfc}
+:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--violet:#a78bfa;--warn:#ffb020}
 *{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
 a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
 .wrap{max-width:1100px;margin:0 auto;padding:28px 22px 64px}
@@ -11,57 +11,86 @@ h1{font-size:clamp(1.5rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;font
 .sub{color:var(--muted);font-size:.95rem;margin:0 0 10px}
 .tenet{margin:0 0 22px;padding:14px 16px;border:1px solid #3dd68c55;border-radius:14px;background:#0e1626;font-size:.9rem;color:#c5d0e6}
 .tenet b{color:#9dffc5}
+.pods{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0 0 24px}
+@media(max-width:800px){.pods{grid-template-columns:1fr}}
+.pod{border:1px solid var(--line);border-radius:18px;background:var(--card);padding:18px 18px 14px}
+.pod.enable{border-color:#5b8cff66}
+.pod.comp{border-color:#a78bfa66}
+.pod h2{margin:0 0 4px;font-size:1.2rem}
+.pod.enable h2{color:#9ec1ff}.pod.comp h2{color:#d4c4ff}
+.pod .kicker{font-size:.68rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:12px}
+.item{padding:12px;border-radius:12px;background:var(--panel);border:1px solid #1a2438;margin:0 0 8px}
+.item .t{font-weight:700;font-size:.92rem}
+.item .t a{color:inherit;text-decoration:none}.item .t a:hover{color:var(--accent);text-decoration:underline}
+.item .m{font-size:.78rem;color:var(--muted);margin-top:3px}
+.badge{display:inline-block;margin-top:6px;font-size:.65rem;padding:2px 7px;border-radius:6px;border:1px solid var(--line);color:var(--muted);font-weight:650}
+.badge.available{border-color:#3dd68c55;color:var(--good)}
+.badge.track{border-color:#5b8cff55;color:#9ec1ff}
+.badge.unknown{border-color:#ffb02066;color:var(--warn)}
 .sec{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:22px 0 10px}
-.hub{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
-.hub a{display:flex;flex-direction:column;justify-content:space-between;min-height:120px;padding:18px 20px;border-radius:16px;border:1px solid var(--line);background:var(--card);color:inherit;text-decoration:none;transition:border-color .15s}
+.hub{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.hub a{display:block;padding:14px 16px;border-radius:14px;border:1px solid var(--line);background:var(--card);color:inherit;text-decoration:none;font-size:.85rem}
 .hub a:hover{border-color:var(--accent);text-decoration:none}
-.hub h3{margin:0 0 6px;font-size:1.05rem}
-.hub p{margin:0;color:var(--muted);font-size:.82rem}
-.hub .go{margin-top:12px;font-weight:800;font-size:.82rem;color:var(--accent)}
-.hub a.revops{border-color:#5b8cff55}
-.hub a.ref{border-color:#3dd68c44}
-.hub a.invest{border-color:#a78bfa55}
-.hub a.mkt{border-color:#f0abfc55}
+.hub a b{display:block;margin-bottom:4px;font-size:.95rem}
+.hub a span{color:var(--muted);font-size:.78rem}
 .note{color:var(--muted);font-size:.75rem;margin-top:22px}
+.empty{color:var(--muted);padding:12px}
 </style></head>
 <body><div class="wrap">
 
 <p class="crumb"><a href="index.html">Operator</a> → <b>Support</b></p>
 <header>
-  <h1>Support · enablement</h1>
-  <p class="sub">RevOps shell. Partner to Ops + Growth only — not a second ops floor.</p>
+  <h1>Support · enablement + compliance</h1>
+  <p class="sub">Two pods only. Partner to Ops + Growth — not a second ops floor.</p>
 </header>
-<div class="tenet"><b>Job:</b> demand gen / marketing · ICP research · investor research · market sizing · reference sheets (team, animals, catalog). Keep the sword on Ops delivery and Growth closing.</div>
+<div class="tenet"><b>Job:</b> sales enablement (collateral / tech) + compliance checklist (COI, LLC, fingerprinted teacher, annual report, W-9, Nassau permit). Keep the sword on Ops fulfillment and Growth closing.</div>
 
-<div class="sec">RevOps · research</div>
-<nav class="hub" aria-label="RevOps">
-  <a class="revops" href="revops-tam.html"><h3>RevOps TAM</h3><p>Market sizing · territory whitespace.</p><div class="go">Open →</div></a>
-  <a class="revops" href="crm-icp.html"><h3>ICP / CRM</h3><p>Ideal customer profile · regional subscription.</p><div class="go">Open →</div></a>
-  <a class="revops" href="org-whitespace.html"><h3>Org whitespace</h3><p>Account gaps · who we have not touched.</p><div class="go">Open →</div></a>
-  <a class="revops" href="macro-radar.html"><h3>Macro radar</h3><p>External signals · timing.</p><div class="go">Open →</div></a>
-  <a class="invest" href="investor-home.html"><h3>Investor research</h3><p>Investor face · checklist · capital narrative.</p><div class="go">Open →</div></a>
-  <a class="invest" href="franchise-peer-cities.html"><h3>Peer cities</h3><p>Expansion markets · not live ops.</p><div class="go">Open →</div></a>
+<div class="pods" aria-label="Enablement Compliance">
+  <section class="pod enable">
+    <div class="kicker">Pod A</div>
+    <h2>Enablement</h2>
+    <div id="en-root"><div class="empty">Loading…</div></div>
+  </section>
+  <section class="pod comp">
+    <div class="kicker">Pod B</div>
+    <h2>Compliance</h2>
+    <div id="co-root"><div class="empty">Loading…</div></div>
+  </section>
+</div>
+
+<div class="sec">Quiet refs (not competing tiles)</div>
+<nav class="hub" aria-label="Quiet refs">
+  <a href="ops-team.html"><b>Team</b><span>Helpers + partners roster</span></a>
+  <a href="ops-animals.html"><b>Animals</b><span>Battle Row sheet</span></a>
+  <a href="collateral.html"><b>Collateral</b><span>Leave-behinds</span></a>
+  <a href="investor-home.html"><b>Investor</b><span>Research face</span></a>
+  <a href="support-catalog.html"><b>Catalog (legacy)</b><span>Full enablement index</span></a>
 </nav>
 
-<div class="sec">Demand gen · marketing</div>
-<nav class="hub" aria-label="Marketing">
-  <a class="mkt" href="social-reach.html"><h3>Social reach</h3><p>Channels · reach posture.</p><div class="go">Open →</div></a>
-  <a class="mkt" href="jax-local-buzz.html"><h3>Jax local buzz</h3><p>Local awareness · community.</p><div class="go">Open →</div></a>
-  <a class="mkt" href="lead-sources.html"><h3>Lead sources</h3><p>Taxonomy · coverage.</p><div class="go">Open →</div></a>
-  <a class="mkt" href="collateral.html"><h3>Collateral</h3><p>Leave-behinds · pitch assets.</p><div class="go">Open →</div></a>
-  <a class="mkt" href="support-catalog.html"><h3>Support catalog</h3><p>Full enablement index (legacy depth).</p><div class="go">Open →</div></a>
-  <a class="mkt" href="support.html"><h3>Support (legacy hub)</h3><p>Prior support landing — still linked.</p><div class="go">Open →</div></a>
-</nav>
-
-<div class="sec">Reference sheets</div>
-<nav class="hub" aria-label="Reference sheets">
-  <a class="ref" href="ops-team.html"><h3>Team</h3><p>Michael + Ann-Marie public face. Helper detail off investor pages or behind a note.</p><div class="go">Open →</div></a>
-  <a class="ref" href="ops-animals.html"><h3>Animals</h3><p>Battle Row / enclosure readiness.</p><div class="go">Open →</div></a>
-  <a class="ref" href="ops-products.html"><h3>Products / catalog</h3><p>What we sell · programming.</p><div class="go">Open →</div></a>
-  <a class="ref" href="programming.html"><h3>Programming</h3><p>Mommy &amp; Me · Bunny Haven · Mobile PZ.</p><div class="go">Open →</div></a>
-  <a class="ref" href="sop-sla.html"><h3>SOP / SLA</h3><p>How we run delivery.</p><div class="go">Open →</div></a>
-  <a class="ref" href="connect.html"><h3>Connect</h3><p>Contact / handoff paths.</p><div class="go">Open →</div></a>
-</nav>
-
-<p class="note">Support enables Ops delivery and Growth closing. Templates (Tampa / Orlando) live in the landing footer — not here as competing tiles.</p>
-</div></body></html>
+<p class="note" id="foot">Support enables Ops delivery and Growth closing. Nassau permit stays unknown/low-key until confirmed.</p>
+</div>
+<script>
+(function(){
+  function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]))}
+  fetch('data/compliance_checklist.json').then(r=>r.json()).then(d=>{
+    const en=document.getElementById('en-root');
+    const co=document.getElementById('co-root');
+    const eItems=(d.enablement&&d.enablement.items)||[];
+    const cItems=(d.compliance&&d.compliance.items)||[];
+    en.innerHTML=eItems.map(it=>{
+      const title=it.href?`<a href="${esc(it.href)}">${esc(it.title)}</a>`:esc(it.title);
+      return `<div class="item"><div class="t">${title}</div><div class="m">${esc(it.notes||'')}</div><span class="badge ${esc(it.status||'')}">${esc(it.status||'')}</span></div>`;
+    }).join('')||'<div class="empty">No enablement items</div>';
+    co.innerHTML=cItems.map(it=>{
+      return `<div class="item"><div class="t">${esc(it.title)}</div><div class="m">${esc(it.notes||'')}</div><span class="badge ${esc(it.status||'')}">${esc(it.status||'')}</span></div>`;
+    }).join('')||'<div class="empty">No compliance items</div>';
+    document.getElementById('foot').textContent=
+      `Support · as of ${(d.as_of_label||d.as_of||'')} · enablement ${eItems.length} · compliance ${cItems.length} · Nassau permit unknown/low-key.`;
+  }).catch(err=>{
+    document.getElementById('en-root').innerHTML='<div class="empty">Could not load compliance_checklist.json</div>';
+    document.getElementById('co-root').innerHTML='<div class="empty">Could not load compliance_checklist.json</div>';
+    console.error(err);
+  });
+})();
+</script>
+</body></html>

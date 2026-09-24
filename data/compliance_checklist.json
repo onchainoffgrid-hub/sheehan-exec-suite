@@ -1,0 +1,82 @@
+{
+  "as_of": "2026-09-24T10:33:00-04:00",
+  "as_of_label": "2026-09-24 10:33 ET",
+  "pods": [
+    "enablement",
+    "compliance"
+  ],
+  "enablement": {
+    "label": "Sales enablement",
+    "items": [
+      {
+        "id": "collateral",
+        "title": "Collateral / leave-behinds",
+        "status": "available",
+        "href": "collateral.html",
+        "notes": "Pitch assets \u00b7 leave-behinds"
+      },
+      {
+        "id": "tech-stack",
+        "title": "Tech / forms / one-touch",
+        "status": "available",
+        "href": "one-touch.html",
+        "notes": "CAPTCHA \u00b7 hot links \u00b7 outreach boards"
+      },
+      {
+        "id": "programming",
+        "title": "Programming sheet",
+        "status": "available",
+        "href": "programming.html",
+        "notes": "Mommy & Me \u00b7 Bunny Haven \u00b7 Mobile PZ"
+      },
+      {
+        "id": "quick-pitches",
+        "title": "Quick pitches",
+        "status": "available",
+        "href": "quick-pitches.html",
+        "notes": "Short talk tracks"
+      }
+    ]
+  },
+  "compliance": {
+    "label": "Compliance checklist",
+    "items": [
+      {
+        "id": "coi",
+        "title": "COI (Certificate of Insurance)",
+        "status": "track",
+        "notes": "Keep current for venue asks"
+      },
+      {
+        "id": "llc",
+        "title": "LLC in good standing",
+        "status": "track",
+        "notes": "Entity paperwork"
+      },
+      {
+        "id": "fingerprinted-teacher",
+        "title": "Fingerprinted teacher",
+        "status": "track",
+        "notes": "School / youth programming gate"
+      },
+      {
+        "id": "annual-report",
+        "title": "Annual report",
+        "status": "track",
+        "notes": "State filing cadence"
+      },
+      {
+        "id": "w9",
+        "title": "W-9",
+        "status": "track",
+        "notes": "Ready for B2B payers"
+      },
+      {
+        "id": "nassau-permit",
+        "title": "Nassau permit",
+        "status": "unknown",
+        "notes": "Status unknown \u00b7 keep low-key until confirmed"
+      }
+    ]
+  }
+}

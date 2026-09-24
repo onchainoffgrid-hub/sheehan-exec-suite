@@ -1,0 +1,147 @@
+{
+  "as_of": "2026-09-24T10:33:00-04:00",
+  "as_of_label": "2026-09-24 10:33 ET",
+  "campaign": {
+    "label": "Fall \u2192 holiday close",
+    "start": "2026-08-12",
+    "end": "2026-12-23",
+    "prep_from": "2026-07",
+    "banner": "Aug 12 \u2192 Dec 23, 2026 \u00b7 running start (prep from July)",
+    "buckets_only": [
+      "qualified_pipeline",
+      "bookings",
+      "receivables"
+    ]
+  },
+  "rules": {
+    "never_invent_emails_or_dollars": true,
+    "ar_cleared_only_when_verified": true,
+    "growth_face": "pipeline \u00b7 bookings \u00b7 receivables ONLY"
+  },
+  "pipeline": [
+    {
+      "id": "palagio-senior-living-fall-fest-2026",
+      "account": "Palagio Senior Living",
+      "aka_note": "Michael said Pelagio; legal/email domain is Palagio",
+      "customer_or_winback": "winback",
+      "status": "replied / qualified conversation",
+      "evidence": "email_reply",
+      "outbound_to": "memorycaredirector@palagioseniorliving.com",
+      "reply_from": "Amanda Darga \u00b7 businessofficedirector@palagioseniorliving.com",
+      "contacts": [
+        {
+          "name": "Amanda Darga",
+          "role": "Business Office Director",
+          "email": "businessofficedirector@palagioseniorliving.com"
+        },
+        {
+          "name": "Kristi",
+          "role": "Life Enrichment Director",
+          "email": "lifeenrichmentdirector@palagioseniorliving.com"
+        }
+      ],
+      "thread_date": "2026-09-23",
+      "gmail_thread": "1a0d0964cab11a22",
+      "offer": "Fall festival again (prior fall fest guest)",
+      "mid_estimate_usd": 200,
+      "upside_estimate_usd": 300,
+      "estimate_note": "Michael-confirmed likely mid ~$200 \u00b7 upside ~$300. Not cleared AR.",
+      "next": "Follow with Kristi (Life Enrichment) \u00b7 confirm fall fest date + package",
+      "source": "Gmail thread 2026-09-23 night \u00b7 recent_outreach.json"
+    },
+    {
+      "id": "westminster-kori",
+      "account": "Westminster (Kori Montague)",
+      "customer_or_winback": "customer_or_winback",
+      "status": "called / emailed",
+      "evidence": "recent_outreach",
+      "outbound_to": "Kmontague@wservices.org",
+      "contacts": [
+        {
+          "name": "Kori Montague",
+          "email": "Kmontague@wservices.org"
+        }
+      ],
+      "offer": "November Monday double-dip \u00b7 both locations",
+      "mid_estimate_usd": null,
+      "upside_estimate_usd": null,
+      "estimate_note": "No $ invented",
+      "next": "Keep warm \u00b7 lock November Monday",
+      "source": "recent_outreach.json"
+    },
+    {
+      "id": "starling-nocatee",
+      "account": "Starling at Nocatee",
+      "customer_or_winback": "winback",
+      "status": "NO_DATE / rebook",
+      "evidence": "customers_no_next_date",
+      "outbound_to": "nocatee@starlingliving.com",
+      "contacts": [
+        {
+          "email": "nocatee@starlingliving.com",
+          "phone": "(904) 686-2000"
+        }
+      ],
+      "offer": "Rebook past customer \u00b7 Ponte Vedra",
+      "mid_estimate_usd": null,
+      "upside_estimate_usd": null,
+      "estimate_note": "No $ invented",
+      "next": "Rebook outreach",
+      "source": "customers_no_next_date.json"
+    },
+    {
+      "id": "patricia-valenzuela-discovery",
+      "account": "Discovery Village at Deerwood",
+      "customer_or_winback": "pipeline",
+      "status": "named contact in play",
+      "evidence": "todays_11 / crm_source_overrides",
+      "outbound_to": "tfelix@discoveryvillages.com",
+      "contacts": [
+        {
+          "name": "Patricia Valenzuela",
+          "role": "Director of Celebrations",
+          "email": "tfelix@discoveryvillages.com",
+          "phone": "(904) 667-3500"
+        }
+      ],
+      "offer": "Celebrations / programming",
+      "mid_estimate_usd": null,
+      "upside_estimate_usd": null,
+      "estimate_note": "No $ invented",
+      "next": "Continue named-contact play",
+      "source": "todays_11_play.json / crm_source_overrides.json"
+    }
+  ],
+  "bookings_source": "data/bookings_pipeline.json",
+  "receivables_source": "data/bookings_pipeline.json (deposit/paid labels only \u2014 never invent $)",
+  "secondary_tools": [
+    {
+      "href": "captcha-quick.html",
+      "label": "CAPTCHA dunk"
+    },
+    {
+      "href": "hot-links.html",
+      "label": "Hot links"
+    },
+    {
+      "href": "easy-attack.html",
+      "label": "Easy attack"
+    },
+    {
+      "href": "bdr-tam.html",
+      "label": "BDR TAM"
+    },
+    {
+      "href": "one-touch.html",
+      "label": "One-touch"
+    },
+    {
+      "href": "recent-outreach.html",
+      "label": "Recent outreach"
+    },
+    {
+      "href": "growth-home.html",
+      "label": "Full growth home"
+    }
+  ]
+}
