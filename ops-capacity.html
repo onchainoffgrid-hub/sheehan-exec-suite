@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Ops capacity · 18 months · Sheehan Homestead</title>
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--hot:#fb923c}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1180px;margin:0 auto;padding:22px 18px 64px}
+.crumb{font-size:.82rem;color:var(--muted);margin:0 0 12px}.crumb a{color:#9ec1ff;font-weight:600}
+h1{font-size:clamp(1.4rem,3vw,1.95rem);margin:0 0 6px;letter-spacing:-.02em;font-weight:750}
+.sub{color:var(--muted);font-size:.92rem;margin:0 0 14px}
+.banner{margin:0 0 14px;padding:12px 14px;border-radius:14px;border:1px solid #fbbf2466;background:linear-gradient(135deg,#2a2210,#121a2b);font-size:.84rem;color:#fde68a}
+.investor{margin:0 0 14px;padding:10px 12px;border:1px dashed #a78bfa66;border-radius:12px;background:#14101f;font-size:.8rem;color:#c5d0e6}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin:0 0 14px}
+.kpi{border:1px solid var(--line);border-radius:14px;background:var(--card);padding:12px 14px}
+.kpi .l{font-size:.65rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}.kpi .v{font-size:1.2rem;font-weight:750;margin-top:4px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+.tabs button{appearance:none;border:1px solid var(--line);background:var(--card);color:var(--text);padding:8px 14px;border-radius:999px;font-size:.8rem;font-weight:650;cursor:pointer}
+.tabs button.on{border-color:#5b8cff88;background:#152238;color:#9ec1ff}
+.tabs button.hoton{border-color:#fb923c88;color:#fdba74}
+table{width:100%;border-collapse:collapse;font-size:.82rem}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{color:var(--muted);font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;cursor:pointer;user-select:none}
+th:hover{color:#9ec1ff}
+tr:hover td{background:#0f1728}
+.cap{display:inline-block;padding:2px 8px;border-radius:6px;font-size:.68rem;font-weight:700;border:1px solid var(--line)}
+.cap.green{border-color:#3dd68c55;color:var(--good);background:#13281d}
+.cap.yellow{border-color:#ffb02066;color:var(--warn);background:#2a2210}
+.cap.orange{border-color:#fb923c88;color:#fdba74;background:#2a1810}
+.seed{display:inline-block;margin-left:6px;font-size:.62rem;padding:1px 6px;border-radius:6px;border:1px solid #fb923c66;color:#fdba74}
+.meta{font-size:.72rem;color:var(--muted);line-height:1.35}
+.chip{display:inline-block;margin:0 8px 12px 0;padding:8px 14px;border-radius:999px;border:1px solid #5b8cff66;background:#152238;color:#9ec1ff;font-size:.8rem;font-weight:650;text-decoration:none}
+.chip:hover{text-decoration:none;border-color:#5b8cff}
+.note{color:var(--muted);font-size:.75rem;margin-top:16px}
+.empty{color:var(--muted);padding:12px 0}
+</style></head>
+<body><div class="wrap">
+<p class="crumb"><a href="index.html">Operator</a> → <a href="ops-delivery.html">Ops delivery</a> → <b>Capacity (18 mo)</b></p>
+<header>
+  <h1>Ops capacity · 18 months out</h1>
+  <p class="sub">We book ~18 months ahead. Open weekdays for sales · hot / don’t-book-heavy days · seed watch 10/24 · 10/31 · 11/07. Ceiling <b>4</b> · orange ≥5.</p>
+</header>
+<div class="banner" id="banner">Loading…</div>
+<div class="investor" id="investor">Investor note: far-out calendar holds count as <b>booked dates</b> toward the $250k bookings narrative — not cash. Never invent $.</div>
+<div class="kpis" id="kpis"></div>
+<a class="chip" href="ops-delivery.html">← Delivery board</a>
+<a class="chip" href="growth-simple.html">→ Growth (fill open weekdays)</a>
+<a class="chip" href="ops-animals.html">Animals inventory</a>
+<nav class="tabs" id="tabs">
+  <button type="button" data-view="open" class="on">1 · Open weekdays</button>
+  <button type="button" data-view="hot" class="hoton">2 · Hot / don’t-book-heavy</button>
+  <button type="button" data-view="all">All days (horizon)</button>
+  <button type="button" data-view="seed">Seed watch only</button>
+</nav>
+<div id="table-wrap"><div class="empty">Loading…</div></div>
+<p class="note" id="foot"></p>
+</div>
+<script>
+(function(){
+  function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]))}
+  let DAYS=[], VIEW='open', SORT={key:'date',dir:1};
+
+  function filtered(){
+    let rows=DAYS.slice();
+    if(VIEW==='open') rows=rows.filter(d=>d.open_for_sales);
+    else if(VIEW==='hot') rows=rows.filter(d=>d.hot || d.capacity_color==='orange' || d.capacity_color==='yellow' || (d.event_count||0)>=4);
+    else if(VIEW==='seed') rows=rows.filter(d=>d.seed_hot_watch);
+    const k=SORT.key, dir=SORT.dir;
+    rows.sort((a,b)=>{
+      let va=a[k], vb=b[k];
+      if(k==='event_count'||k==='daylight_free_hours'){va=+va||0; vb=+vb||0;}
+      if(va<vb) return -1*dir; if(va>vb) return 1*dir; return 0;
+    });
+    return rows;
+  }
+
+  function render(){
+    const rows=filtered();
+    let html='<table><thead><tr>';
+    [['date','Date'],['weekday','Day'],['event_count','Events'],['capacity_color','Capacity'],['daylight_free_hours','Daylight free h'],['events','Titles']].forEach(([k,lab])=>{
+      html+=`<th data-k="${k}">${lab}${SORT.key===k?(SORT.dir>0?' ▲':' ▼'):''}</th>`;
+    });
+    html+='</tr></thead><tbody>';
+    if(!rows.length){html+='<tr><td colspan="6" class="empty">No rows in this view.</td></tr>';}
+    rows.forEach(d=>{
+      const titles=(d.events||[]).map(e=>esc(e.title)).join(' · ') || '— white space';
+      const seed=d.seed_hot_watch?'<span class="seed">seed watch</span>':'';
+      html+=`<tr>
+        <td><a href="${esc(d.delivery_board_href||('ops-delivery.html#'+d.date))}">${esc(d.date)}</a>${seed}</td>
+        <td>${esc(d.weekday)}${d.is_weekday?'':' <span class="meta">wknd</span>'}</td>
+        <td><b>${d.event_count||0}</b></td>
+        <td><span class="cap ${esc(d.capacity_color)}">${esc(d.capacity_color)}</span></td>
+        <td>${d.daylight_free_hours!=null?d.daylight_free_hours:'—'}</td>
+        <td class="meta">${titles}</td>
+      </tr>`;
+    });
+    html+='</tbody></table>';
+    document.getElementById('table-wrap').innerHTML=html;
+    document.querySelectorAll('th[data-k]').forEach(th=>{
+      th.onclick=()=>{
+        const k=th.getAttribute('data-k');
+        if(k==='events') return;
+        if(SORT.key===k) SORT.dir*=-1; else {SORT.key=k; SORT.dir=1;}
+        render();
+      };
+    });
+  }
+
+  fetch('data/ops_delivery_calendar.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{
+    DAYS=d.days||[];
+    const h=d.horizon||{};
+    const st=d.stats||{};
+    document.getElementById('banner').innerHTML=
+      `Horizon <b>${esc(h.start||'?')}</b> → <b>${esc(h.end||'?')}</b> · as of ${esc(d.as_of_label||'')} · max concurrent <b>${esc(d.capacity_max_concurrent||4)}</b>`;
+    document.getElementById('investor').innerHTML=
+      esc(d.investor_note||'Far-out calendar holds count as booked dates (not cash) toward $250k.');
+    document.getElementById('kpis').innerHTML=[
+      ['Open weekdays', st.open_weekdays, 'low/no load · sales white space'],
+      ['Hot days', st.hot_days, 'seed + at/over ceiling'],
+      ['Orange (≥5)', st.orange_days, 'don’t-book-heavy'],
+      ['Yellow (=4)', st.yellow_days, 'at ceiling'],
+      ['Days listed', st.days_emitted, 'weekdays + event weekends'],
+      ['Kept events', st.kept, 'after delivery filter'],
+    ].map(([l,v,s])=>`<div class="kpi"><div class="l">${l}</div><div class="v">${v!=null?v:'—'}</div><div class="l" style="margin-top:4px;text-transform:none;letter-spacing:0;font-size:.72rem">${s}</div></div>`).join('');
+    document.getElementById('foot').textContent=
+      `Filter same as delivery board · seed hot watch: ${(d.hot_watch_seed||[]).join(', ')} · source ${d.source||''}`;
+    render();
+  }).catch(err=>{
+    document.getElementById('table-wrap').innerHTML='<div class="empty">Could not load data/ops_delivery_calendar.json</div>';
+    console.error(err);
+  });
+
+  document.getElementById('tabs').addEventListener('click',e=>{
+    const b=e.target.closest('button[data-view]');
+    if(!b) return;
+    VIEW=b.getAttribute('data-view');
+    document.querySelectorAll('#tabs button').forEach(x=>x.classList.toggle('on',x===b));
+    render();
+  });
+})();
+</script>
+</body></html>

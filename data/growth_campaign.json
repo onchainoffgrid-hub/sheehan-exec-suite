@@ -1,6 +1,6 @@
 {
-  "as_of": "2026-09-24T10:39:00-04:00",
-  "as_of_label": "2026-09-24 10:39 ET",
+  "as_of": "2026-09-24T10:55:00-04:00",
+  "as_of_label": "2026-09-24 10:55 ET",
   "campaign": {
     "label": "Fall \u2192 holiday close",
     "start": "2026-08-12",
@@ -23,34 +23,511 @@
   },
   "pipeline": [
     {
-      "id": "palagio-senior-living-fall-fest-2026",
+      "id": "palagio-senior-living",
       "account": "Palagio Senior Living",
-      "aka_note": "Michael said Pelagio; legal/email domain is Palagio",
       "customer_or_winback": "winback",
-      "status": "replied / qualified conversation",
-      "evidence": "email_reply",
-      "outbound_to": "memorycaredirector@palagioseniorliving.com",
-      "reply_from": "Amanda Darga \u00b7 businessofficedirector@palagioseniorliving.com",
+      "status": "qualified",
+      "evidence": "gmail_reply",
       "contacts": [
         {
           "name": "Amanda Darga",
-          "role": "Business Office Director",
           "email": "businessofficedirector@palagioseniorliving.com"
-        },
-        {
-          "name": "Kristi",
-          "role": "Life Enrichment Director",
-          "email": "lifeenrichmentdirector@palagioseniorliving.com"
         }
       ],
-      "thread_date": "2026-09-23",
+      "reply_from": "Amanda Darga \u00b7 businessofficedirector@palagioseniorliving.com",
+      "thread_date": "2026-09-24",
       "gmail_thread": "1a0d0964cab11a22",
-      "offer": "Fall festival again (prior fall fest guest)",
+      "offer": "fall_fest_trunk_or_treat",
       "mid_estimate_usd": 200,
-      "upside_estimate_usd": 300,
-      "estimate_note": "Michael-confirmed likely mid ~$200 \u00b7 upside ~$300. Not cleared AR.",
-      "next": "Follow with Kristi (Life Enrichment) \u00b7 confirm fall fest date + package",
-      "source": "Gmail thread 2026-09-23 night \u00b7 recent_outreach.json"
+      "upside_estimate_usd": null,
+      "estimate_note": "Michael-confirmed likely mid (Palagio only). Not cleared AR.",
+      "next": null,
+      "source": "growth_reply_pipeline.json",
+      "snippet": "We are looking to have our fall festival again this year! \u2026 Life Enrichment \u2026 Kristi \u2026 Amanda Darga, CDP \u00b7 Business Office Director \u00b7 Palagio Senior Living",
+      "aka_note": "Spell Palagio (not Pelagio). Also Kristi \u00b7 Life Enrichment Director \u00b7 lifeenrichmentdirector@palagioseniorliving.com"
+    },
+    {
+      "id": "atlantic-beach-country-club",
+      "account": "Atlantic Beach Country Club",
+      "customer_or_winback": null,
+      "status": "qualified",
+      "evidence": "gmail_reply",
+      "contacts": [
+        {
+          "name": "Laura",
+          "email": "laura@atlanticbeachcountryclub.com"
+        }
+      ],
+      "reply_from": "Laura \u00b7 laura@atlanticbeachcountryclub.com",
+      "thread_date": "2026-09-24",
+      "gmail_thread": "1a0d020d3b15e628",
+      "offer": "fall_fest_trunk_or_treat",
+      "mid_estimate_usd": null,
+      "upside_estimate_usd": null,
+      "estimate_note": "No $ invented",
+      "next": null,
+      "source": "growth_reply_pipeline.json",
+      "snippet": "THanks I have forwarded your email. Please send petting zoo pricing out of curiosity."
+    },
+    {
+      "id": "st-johns-river-state-college-foundation",
+      "account": "St. Johns River State College Foundation",
+      "customer_or_winback": null,
+      "status": "nurture_later",
+      "evidence": "gmail_reply",
+      "contacts": [
+        {
+          "name": "Bailey H. Akin",
+          "email": "baileyakin@sjrstate.edu"
+        }
+      ],
+      "reply_from": "Bailey H. Akin \u00b7 baileyakin@sjrstate.edu",
+      "thread_date": "2026-09-24",
+      "gmail_thread": "1a0d134f77eb3b74",
+      "offer": "fall_fest_trunk_or_treat",
+      "mid_estimate_usd": null,
+      "upside_estimate_usd": null,
+      "estimate_note": "No $ invented",
+      "next": null,
+      "source": "growth_reply_pipeline.json",
+      "snippet": "fun concept\u2026 neat fundraiser\u2026 Foundation event calendar already planned for the next year\u2026 keep your information on hand\u2026 future Foundation events. Also cc Rand"
+    },
+    {
+      "id": "brooks-rehabilitation-adc",
+      "account": "Brooks Rehabilitation ADC",
+      "customer_or_winback": "customer_or_winback",
+      "status": "soft_yes",
+      "evidence": "gmail_reply",
+      "contacts": [
+        {
+          "name": "Kate Woodcock-Sharp",
+          "email": "katelyn.woodcock-sharp@brooksrehab.org"
+        }
+      ],
+      "reply_from": "Kate Woodcock-Sharp \u00b7 katelyn.woodcock-sharp@brooksrehab.org",
+      "thread_date": "2026-09-24",
+      "gmail_thread": "199c9d13a9c9e556",
+      "offer": "referral_tasia_followup",
+      "mid_estimate_usd": null,
+      "upside_estimate_usd": null,
+      "estimate_note": "No $ invented",
+      "next": null,
+      "source": "growth_reply_pipeline.json",
+      "snippet": "Hey Michael, We are! We will reach out soon with dates. \u2026 Kate Woodcock-Sharp, ADC Activities Manager"
+    },
+    {
+      "id": "vesta-tamaya-beach-cdd",
+      "account": "Vesta \u00b7 Tamaya / Beach CDD",
+      "customer_or_winback": "customer",
+      "status": "booked",
+      "evidence": "gmail_reply",
+      "contacts": [
+        {
+          "name": "Kaylie Fitzhugh",
+          "email": "kfitzhugh@vestapropertyservices.com"
+        }
+      ],
+      "reply_from": "Kaylie Fitzhugh \u00b7 kfitzhugh@vestapropertyservices.com",
+      "thread_date": "2026-09-02",
+      "gmail_thread": "1a06268b2ade5cc6",
+      "offer": "vesta_saturday_sale",
+      "mid_estimate_usd": null,
+      "upside_estimate_usd": null,
+      "estimate_note": "No $ invented",
+      "next": null,
+      "source": "growth_reply_pipeline.json",
+      "snippet": "looking to book a petting zoo for our fall festival October 24th from 3-6\u2026 could switch to the 17th. Michael: 17th would be great."
+    },
+    {
+      "id": "vesta-property-services",
+      "account": "Vesta Property Services",
+      "customer_or_winback": "customer",
+      "status": "booked",
+      "evidence": "gmail_reply",
+      "contacts": [
+        {
+          "name": "Ross Ruben",
+          "email": "rruben@vestapropertyservices.com"
+        }
+      ],
+      "reply_from": "Ross Ruben \u00b7 rruben@vestapropertyservices.com",
+      "thread_date": "2026-09-24",
+      "gmail_thread": "1a0ad31d88cf87a5",
+      "offer": "vesta_preferred_rates",
+      "mid_estimate_usd": null,
+      "upside_estimate_usd": null,
+      "estimate_note": "No $ invented",
+      "next": null,
+      "source": "growth_reply_pipeline.json",
+      "snippet": "Thank you, btw the manager at Yellowbluff is Elizabeth, not Emily. \u2026 Ross Ruben \u00b7 Director of Resident Experience"
+    },
+    {
+      "id": "vesta-saint-johns-golf",
+      "account": "Vesta \u00b7 Saint Johns Golf",
+      "customer_or_winback": "customer",
+      "status": "booked",
+      "evidence": "gmail_reply",
+      "contacts": [
+        {
+          "name": "Julie Tallaksen",
+          "email": "jtallaksen@vestapropertyservices.com"
+        }
+      ],
+      "reply_from": "Julie Tallaksen \u00b7 jtallaksen@vestapropertyservices.com",
+      "thread_date": "2026-09-09",
+      "gmail_thread": "1a081ed9503c4e92",
+      "offer": "goat_yoga",
+      "mid_estimate_usd": null,
+      "upside_estimate_usd": null,
+      "estimate_note": "No $ invented",
+      "next": null,
+      "source": "growth_reply_pipeline.json",
+      "snippet": "Regular please \u00b7 Julie Tallaksen \u00b7 Event Coordinator \u00b7 Saint Johns Golf Drive"
+    },
+    {
+      "id": "angels-of-care",
+      "account": "Angels of Care",
+      "customer_or_winback": "customer_or_winback",
+      "status": "soft_yes",
+      "evidence": "gmail_reply",
+      "contacts": [
+        {
+          "name": "Brittany Thomas",
+          "email": "bthomas@angelsofcare.com"
+        }
+      ],
+      "reply_from": "Brittany Thomas \u00b7 bthomas@angelsofcare.com",
+      "thread_date": "2026-09-21",
+      "gmail_thread": "1a0165da040173a6",
+      "offer": "critter_visit",
+      "mid_estimate_usd": null,
+      "upside_estimate_usd": null,
+      "estimate_note": "No $ invented",
+      "next": null,
+      "source": "growth_reply_pipeline.json",
+      "snippet": "We can do Tuesday October.13 th but would need an earlier time if possible. 11am is perfect for us. Brittany Thomas, BSN, RN"
+    },
+    {
+      "id": "river-city-science-academy",
+      "account": "River City Science Academy",
+      "customer_or_winback": "customer",
+      "status": "soft_yes",
+      "evidence": "gmail_reply",
+      "contacts": [
+        {
+          "name": "Lauren Burnette",
+          "email": "lburnette@rivercityscience.org"
+        }
+      ],
+      "reply_from": "Lauren Burnette \u00b7 lburnette@rivercityscience.org",
+      "thread_date": "2026-09-20",
+      "gmail_thread": "1a0b66893093a768",
+      "offer": "school_pz",
+      "mid_estimate_usd": null,
+      "upside_estimate_usd": null,
+      "estimate_note": "No $ invented",
+      "next": null,
+      "source": "growth_reply_pipeline.json",
+      "snippet": "We would love to continue with this\u2026 (Oct-2 petting zoo follow-up)"
+    },
+    {
+      "id": "river-city-science-academy",
+      "account": "River City Science Academy",
+      "customer_or_winback": "customer",
+      "status": "replied",
+      "evidence": "gmail_reply",
+      "contacts": [
+        {
+          "name": "Madelynne Beck",
+          "email": "mbeck@rivercityscience.org"
+        }
+      ],
+      "reply_from": "Madelynne Beck \u00b7 mbeck@rivercityscience.org",
+      "thread_date": "2026-09-11",
+      "gmail_thread": "1a086b277278dbf1",
+      "offer": "field_trip",
+      "mid_estimate_usd": null,
+      "upside_estimate_usd": null,
+      "estimate_note": "No $ invented",
+      "next": null,
+      "source": "growth_reply_pipeline.json",
+      "snippet": "Wonderful, Thank you so much! I know my students will be so happy\u2026 Madelynne Beck"
+    },
+    {
+      "id": "golf-club-of-amelia",
+      "account": "Golf Club of Amelia",
+      "customer_or_winback": null,
+      "status": "qualified",
+      "evidence": "gmail_reply",
+      "contacts": [
+        {
+          "name": "S. Regan",
+          "email": "sregan@golfclubofamelia.com"
+        }
+      ],
+      "reply_from": "S. Regan \u00b7 sregan@golfclubofamelia.com",
+      "thread_date": "2026-09-14",
+      "gmail_thread": "1a05d7f4dc4defbb",
+      "offer": "fall_festival",
+      "mid_estimate_usd": null,
+      "upside_estimate_usd": null,
+      "estimate_note": "No $ invented",
+      "next": null,
+      "source": "growth_reply_pipeline.json",
+      "snippet": "Hey Michael! \u2026 I finalized the dates last week\u2026"
+    },
+    {
+      "id": "goddard-sunshine-education-group",
+      "account": "Goddard / Sunshine Education Group",
+      "customer_or_winback": "customer",
+      "status": "booked",
+      "evidence": "gmail_reply",
+      "contacts": [
+        {
+          "name": "Dianna Sheikh",
+          "email": "dianna.sheikh@sunshineeducationgroup.com"
+        }
+      ],
+      "reply_from": "Dianna Sheikh \u00b7 dianna.sheikh@sunshineeducationgroup.com",
+      "thread_date": "2026-09-17",
+      "gmail_thread": "1a0aa81223b3bcda",
+      "offer": "goddard_trunk_or_treat",
+      "mid_estimate_usd": null,
+      "upside_estimate_usd": null,
+      "estimate_note": "No $ invented",
+      "next": null,
+      "source": "growth_reply_pipeline.json",
+      "snippet": "we are good for those dates and I will get the deposit paid for each location"
+    },
+    {
+      "id": "ccmc-wildlight",
+      "account": "CCMC / Wildlight",
+      "customer_or_winback": "customer",
+      "status": "qualified",
+      "evidence": "gmail_reply",
+      "contacts": [
+        {
+          "name": "E. Bricknell",
+          "email": "ebricknell@ccmcnet.com"
+        }
+      ],
+      "reply_from": "E. Bricknell \u00b7 ebricknell@ccmcnet.com",
+      "thread_date": "2026-09-11",
+      "gmail_thread": "1a0210433d4dbead",
+      "offer": "fall_dates_wildlight",
+      "mid_estimate_usd": null,
+      "upside_estimate_usd": null,
+      "estimate_note": "No $ invented",
+      "next": null,
+      "source": "growth_reply_pipeline.json",
+      "snippet": "Thank you so much, Ann-Marie! This looks great. I will redo the new vendor paperwork and send it for signature on Monday."
+    },
+    {
+      "id": "assumption-eclc",
+      "account": "Assumption ECLC",
+      "customer_or_winback": "customer",
+      "status": "replied",
+      "evidence": "gmail_reply",
+      "contacts": [
+        {
+          "name": "Jessica Koci",
+          "email": "jkoci@assumptionjax.org"
+        }
+      ],
+      "reply_from": "Jessica Koci \u00b7 jkoci@assumptionjax.org",
+      "thread_date": "2026-09-09",
+      "gmail_thread": "1a085f80294fe1df",
+      "offer": "invoice_followup",
+      "mid_estimate_usd": null,
+      "upside_estimate_usd": null,
+      "estimate_note": "No $ invented",
+      "next": null,
+      "source": "growth_reply_pipeline.json",
+      "snippet": "Ok thank you and I will let them know and get back to you soon. God Bless, Jessica Koci \u00b7 Center Manager/Registrar"
+    },
+    {
+      "id": "intercoastal-kids",
+      "account": "Intercoastal Kids",
+      "customer_or_winback": "customer",
+      "status": "qualified",
+      "evidence": "gmail_reply",
+      "contacts": [
+        {
+          "name": "Info (Intercoastal Kids)",
+          "email": "info@intercoastalkids.com"
+        }
+      ],
+      "reply_from": "Info (Intercoastal Kids) \u00b7 info@intercoastalkids.com",
+      "thread_date": "2026-09-03",
+      "gmail_thread": "1a067538b7603eef",
+      "offer": "mini_pz_deposit",
+      "mid_estimate_usd": null,
+      "upside_estimate_usd": null,
+      "estimate_note": "No $ invented",
+      "next": null,
+      "source": "growth_reply_pipeline.json",
+      "snippet": "Could you please send me the payment link for the deposit for our Mini Petting Zoo event"
+    },
+    {
+      "id": "legend-senior-living",
+      "account": "Legend Senior Living",
+      "customer_or_winback": "customer",
+      "status": "replied",
+      "evidence": "gmail_reply",
+      "contacts": [
+        {
+          "name": "Deandre Stringer",
+          "email": "deandre.stringer@legendseniorliving.com"
+        }
+      ],
+      "reply_from": "Deandre Stringer \u00b7 deandre.stringer@legendseniorliving.com",
+      "thread_date": "2026-09-18",
+      "gmail_thread": "1a0b4ea1562cdadb",
+      "offer": "paid_invoice_followup",
+      "mid_estimate_usd": null,
+      "upside_estimate_usd": null,
+      "estimate_note": "No $ invented",
+      "next": null,
+      "source": "growth_reply_pipeline.json",
+      "snippet": "I have received the one for December. Just want to make sure you received the payment for the recent visit."
+    },
+    {
+      "id": "angie-10-31-petting-zoo",
+      "account": "Angie (10/31 petting zoo)",
+      "customer_or_winback": "customer",
+      "status": "booked",
+      "evidence": "gmail_reply",
+      "contacts": [
+        {
+          "name": "Angie McClellan",
+          "email": "angiemcclellan@bellsouth.net"
+        }
+      ],
+      "reply_from": "Angie McClellan \u00b7 angiemcclellan@bellsouth.net",
+      "thread_date": "2026-09-11",
+      "gmail_thread": "1a08da45a956441c",
+      "offer": "consumer_pz",
+      "mid_estimate_usd": null,
+      "upside_estimate_usd": null,
+      "estimate_note": "No $ invented",
+      "next": null,
+      "source": "growth_reply_pipeline.json",
+      "snippet": "Thank you so much! We look forward to having you. (You 10-31 4-6 pm petting zoo)"
+    },
+    {
+      "id": "pages-dairy-rd-event-10-31",
+      "account": "Pages Dairy Rd event (10/31)",
+      "customer_or_winback": "customer",
+      "status": "qualified",
+      "evidence": "gmail_reply",
+      "contacts": [
+        {
+          "name": "Fields",
+          "email": "fields8990@gmail.com"
+        }
+      ],
+      "reply_from": "Fields \u00b7 fields8990@gmail.com",
+      "thread_date": "2026-09-15",
+      "gmail_thread": "1a083f86de5af624",
+      "offer": "consumer_pz",
+      "mid_estimate_usd": null,
+      "upside_estimate_usd": null,
+      "estimate_note": "No $ invented",
+      "next": null,
+      "source": "growth_reply_pipeline.json",
+      "snippet": "The events address is: 86674 pages dairy rd Yulee fl \u2026 It will take me a few days to get that paid"
+    },
+    {
+      "id": "fletcher-s-tender-care",
+      "account": "Fletcher's Tender Care",
+      "customer_or_winback": "customer",
+      "status": "nurture_later",
+      "evidence": "gmail_reply",
+      "contacts": [
+        {
+          "name": "E. Cooks",
+          "email": "ecooks@fletcherstendercare.com"
+        }
+      ],
+      "reply_from": "E. Cooks \u00b7 ecooks@fletcherstendercare.com",
+      "thread_date": "2026-09-18",
+      "gmail_thread": "1a0b5b493559793f",
+      "offer": "pet_therapy",
+      "mid_estimate_usd": null,
+      "upside_estimate_usd": null,
+      "estimate_note": "No $ invented",
+      "next": null,
+      "source": "growth_reply_pipeline.json",
+      "snippet": "When it gets cold, I will not be able to continue pet therapy because we have 2 staff members that are highly allergic"
+    },
+    {
+      "id": "consumer-tour-inquiry",
+      "account": "Consumer tour inquiry",
+      "customer_or_winback": null,
+      "status": "soft_yes",
+      "evidence": "gmail_reply",
+      "contacts": [
+        {
+          "name": "A.C. Walker",
+          "email": "acwalker22@gmail.com"
+        }
+      ],
+      "reply_from": "A.C. Walker \u00b7 acwalker22@gmail.com",
+      "thread_date": "2026-09-19",
+      "gmail_thread": "1a0b99023fcb7b25",
+      "offer": "inbound_consumer",
+      "mid_estimate_usd": null,
+      "upside_estimate_usd": null,
+      "estimate_note": "No $ invented",
+      "next": null,
+      "source": "growth_reply_pipeline.json",
+      "snippet": "Do you offer tours of your homestead and animal interactions? My family will be visiting Jacksonville in October."
+    },
+    {
+      "id": "ashley-m-kopec-quote",
+      "account": "Ashley M. Kopec (quote)",
+      "customer_or_winback": null,
+      "status": "soft_yes",
+      "evidence": "gmail_reply",
+      "contacts": [
+        {
+          "name": "Ashley M. Kopec",
+          "email": "ashleymkopec@gmail.com"
+        }
+      ],
+      "reply_from": "Ashley M. Kopec \u00b7 ashleymkopec@gmail.com",
+      "thread_date": "2026-09-02",
+      "gmail_thread": "1a052a9743ef6cf5",
+      "offer": "mobile_pz_quote",
+      "mid_estimate_usd": null,
+      "upside_estimate_usd": null,
+      "estimate_note": "No $ invented",
+      "next": null,
+      "source": "growth_reply_pipeline.json",
+      "snippet": "We're just waiting on one more quote on Friday\u2026 before we decide how to move forward."
+    },
+    {
+      "id": "mommy-me-naomi-chadwick",
+      "account": "Mommy & Me (Naomi Chadwick)",
+      "customer_or_winback": "customer",
+      "status": "booked",
+      "evidence": "gmail_reply",
+      "contacts": [
+        {
+          "name": "Naomi Chadwick",
+          "email": "naomi.chadwick@hotmail.com"
+        }
+      ],
+      "reply_from": "Naomi Chadwick \u00b7 naomi.chadwick@hotmail.com",
+      "thread_date": "2026-08-29",
+      "gmail_thread": "1a04af6a48f83cc0",
+      "offer": "mommy_and_me",
+      "mid_estimate_usd": null,
+      "upside_estimate_usd": null,
+      "estimate_note": "No $ invented",
+      "next": null,
+      "source": "growth_reply_pipeline.json",
+      "snippet": "is it okay that my husband and I are both come with our toddler?"
     },
     {
       "id": "westminster-kori",
@@ -201,5 +678,6 @@
     "window_start": "2026-07-01",
     "window_end": "2026-12-23",
     "note": "Pace vs $250k \u00b7 mid-range used only for display % band"
-  }
+  },
+  "pipeline_source": "data/growth_reply_pipeline.json (primary) \u00b7 prior seeds retained if unique"
 }

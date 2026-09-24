@@ -1,0 +1,161 @@
+{
+  "as_of": "2026-09-24T10:55:00-04:00",
+  "as_of_label": "2026-09-24 10:55 ET",
+  "source": "Michael voice correction 2026-09-24 · investor-safe counts (approx)",
+  "rules": {
+    "never_invent_dollars": true,
+    "counts_are_approx": true
+  },
+  "summary_counts": {
+    "bunnies": {
+      "approx": 12,
+      "label": "~12 bunnies"
+    },
+    "ducks": {
+      "approx": 20,
+      "label": "~20 ducks"
+    },
+    "petting_zoo_goats": {
+      "approx": 20,
+      "label": "~20 petting-zoo goats"
+    }
+  },
+  "notes": [
+    "Counts approximate — current inventory correction (bunnies/ducks flipped vs prior Battle Row seed).",
+    "Goats were missing from prior ops-animals face — restored with tiers + corrals.",
+    "No death/trade ledger on this board."
+  ],
+  "goats": {
+    "label": "Petting-zoo goats · tiers + housing",
+    "approx_total": 20,
+    "housing": [
+      {
+        "id": "boys_corral",
+        "label": "Boys corral",
+        "note": "Intact bucks ~30–40 lb · A-tier but not first choice · travel as set of 4"
+      },
+      {
+        "id": "main_barn_herd",
+        "label": "Main barn herd",
+        "note": "Primary petting-zoo herd"
+      },
+      {
+        "id": "shania_moses_dolly",
+        "label": "Shania–Moses–Dolly trio",
+        "note": "Only Dolly comfortable off-farm"
+      },
+      {
+        "id": "thelma_louise_zip",
+        "label": "Thelma–Louise–Zip",
+        "note": "OK with watch · Zip very smart — watch"
+      }
+    ],
+    "tiers": [
+      {
+        "tier": "boys_corral",
+        "label": "Boys corral (travel set of 4)",
+        "note": "Intact bucks ~30–40 lb · A-tier but not first choice",
+        "names": [
+          "Kneepad Senior",
+          "Gomez",
+          "Dunkaroo",
+          "Romeo"
+        ]
+      },
+      {
+        "tier": "S",
+        "label": "S-tier",
+        "names": [
+          {
+            "name": "Divvy",
+            "aka": "Dividends"
+          },
+          {
+            "name": "Kneepads Junior"
+          }
+        ]
+      },
+      {
+        "tier": "A",
+        "label": "A-tier",
+        "names": [
+          {
+            "name": "Sassy"
+          },
+          {
+            "name": "Petunia",
+            "note": "leg OK"
+          },
+          {
+            "name": "Silverado",
+            "note": "Sassy’s mom"
+          },
+          {
+            "name": "Bally"
+          },
+          {
+            "name": "Jenny",
+            "note": "big, loves people · main herd not fully integrated"
+          }
+        ]
+      },
+      {
+        "tier": "B",
+        "label": "B-tier",
+        "names": [
+          {
+            "name": "Myrna",
+            "spell": "M-R-N-A",
+            "note": "Divvy’s mom"
+          }
+        ]
+      },
+      {
+        "tier": "stay_limited",
+        "label": "Stay / limited (prefer not off-farm)",
+        "note": "Maybe goat yoga · from Shania–Moses–Dolly trio only Dolly comfortable off-farm",
+        "names": [
+          {
+            "name": "Shania",
+            "off_farm": false
+          },
+          {
+            "name": "Moses",
+            "off_farm": false
+          },
+          {
+            "name": "Domino",
+            "off_farm": false,
+            "note": "prefer not off-farm · maybe goat yoga"
+          },
+          {
+            "name": "Dolly",
+            "off_farm": true,
+            "note": "only one of Shania–Moses–Dolly comfortable off-farm"
+          }
+        ]
+      },
+      {
+        "tier": "ok_with_watch",
+        "label": "OK with watch",
+        "names": [
+          {
+            "name": "Thelma"
+          },
+          {
+            "name": "Louise"
+          },
+          {
+            "name": "Zip",
+            "note": "very smart — watch"
+          }
+        ]
+      }
+    ],
+    "relations": [
+      "Domino = mom of Kneepad and of Silverado/Petunia line",
+      "Silverado = Sassy’s mom",
+      "Myrna = Divvy’s mom (spell M-R-N-A per Michael)"
+    ]
+  }
+}

@@ -189,28 +189,33 @@
   "ops_dump_date": "2026-09-23",
   "animals": {
     "label": "Animal well-being \u00b7 headcounts (stated 2026-09-23)",
-    "as_of": "2026-09-23",
+    "as_of": "2026-09-24",
     "items": [
       {
         "id": "bunnies",
         "label": "Bunnies",
-        "count": 20,
-        "prior_count": 14,
-        "note": "Was 14; trading ducks\u2192bunnies. Needs more bunnies for events.",
-        "status": "grow"
+        "count": 12,
+        "note": "Inventory correction 2026-09-24 \u00b7 ~12",
+        "status": "ok"
       },
       {
         "id": "ducks",
         "label": "Ducks",
-        "count": 12,
-        "note": "Too many; trading down (ducks\u2192bunnies). Duck surplus.",
-        "status": "surplus"
+        "count": 20,
+        "note": "Inventory correction 2026-09-24 \u00b7 ~20",
+        "status": "ok"
+      },
+      {
+        "id": "goats",
+        "label": "Petting-zoo goats",
+        "count": 20,
+        "note": "Was missing \u00b7 see ops_animals.json tiers",
+        "status": "ok"
       }
     ],
     "notes": [
-      "Needs more bunnies for events",
-      "Duck surplus \u2014 trading down",
-      "No death/trade ledger on this board \u2014 current counts only"
+      "Counts approx from Michael 2026-09-24 correction",
+      "Full goat tiers on ops-animals.html / ops_animals.json"
     ]
   },
   "feed_systems": {

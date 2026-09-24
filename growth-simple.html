@@ -66,6 +66,7 @@ h1{font-size:clamp(1.5rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;font
 <div class="thesis" id="thesis">Thesis loading…</div>
 
 <a class="chip" href="ops-delivery.html">← Ops calendar (idle capacity)</a>
+<a class="chip" href="ops-capacity.html">Ops capacity · 18 months</a>
 
 <div class="cols" aria-label="Pipeline bookings AR">
   <section class="col pipeline">
@@ -88,7 +89,7 @@ h1{font-size:clamp(1.5rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;font
 <div class="sec">BDR / B2C / support-role delegation (secondary)</div>
 <nav class="secondary" id="secondary" aria-label="Secondary tools"></nav>
 
-<p class="note">AR shows verified / incoming labels only — accepted ≠ paid until cleared. Estimates labeled as estimates. Booked-so-far range is voice-sourced, not bank-reconciled. Source: growth_campaign.json + bookings_pipeline.json.</p>
+<p class="note">AR shows verified / incoming labels only — accepted ≠ paid until cleared. Estimates labeled as estimates. Booked-so-far range is voice-sourced, not bank-reconciled. Primary pipeline: growth_reply_pipeline.json (real Gmail replies) · growth_campaign.json · bookings_pipeline.json. Never invent emails or $.</p>
 </div>
 <script>
 (function(){
@@ -108,7 +109,8 @@ h1{font-size:clamp(1.5rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;font
   Promise.all([
     fetch('data/growth_campaign.json').then(r=>r.json()),
     fetch('data/bookings_pipeline.json').then(r=>r.json()),
-  ]).then(([gc, bp])=>{
+    fetch('data/growth_reply_pipeline.json').then(r=>r.json()).catch(()=>({opportunities:[]})),
+  ]).then(([gc, bp, rp])=>{
     const camp=gc.campaign||{};
     const ns=gc.north_star||{};
     document.getElementById('banner').innerHTML=
@@ -137,8 +139,22 @@ h1{font-size:clamp(1.5rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;font
       `<b>Thesis</b> (not a forecast): ${esc(th.text||'Book $250k → expected hold ≥$100k')} · ${esc(th.source||'Michael belief')}`;
 
     const pipeEl=document.getElementById('pipe');
-    const rows=gc.pipeline||[];
-    if(!rows.length){pipeEl.innerHTML='<div class="empty">No qualified pipeline seeds.</div>';}
+    const replyRows=(rp&&rp.opportunities)||[];
+    const rows = replyRows.length ? replyRows.map(r=>({
+      account:r.account,
+      status:r.status,
+      customer_or_winback:r.customer_or_winback,
+      contacts:[{name:r.contact_name,email:r.email}],
+      reply_from:(r.contact_name||'')+' · '+(r.email||''),
+      offer:r.source_campaign,
+      mid_estimate_usd:r.mid_dollar,
+      estimate_note:r.mid_dollar==null?'No $ invented':null,
+      evidence:r.evidence?(('thread '+r.evidence.thread_id)+' · '+(r.evidence.date||'')):'gmail_reply',
+      snippet:(r.evidence&&r.evidence.snippet)||'',
+      aka_note:r.aka_note,
+      next:null,
+    })) : (gc.pipeline||[]);
+    if(!rows.length){pipeEl.innerHTML='<div class="empty">No qualified pipeline from Gmail replies yet.</div>';}
     else{
       pipeEl.innerHTML=rows.map(p=>{
         const contacts=(p.contacts||[]).map(c=>{
@@ -157,17 +173,20 @@ h1{font-size:clamp(1.5rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;font
         const meta=esc([
           p.offer||'',
           contacts,
+          p.aka_note||'',
           p.outbound_to?('outbound: '+p.outbound_to):'',
           p.reply_from?('reply: '+p.reply_from):'',
+          p.snippet?('“'+p.snippet.slice(0,110)+'…”'):'',
           p.next?('next: '+p.next):'',
         ].filter(Boolean).join(' · ')) + esc(est);
         const tags=[
-          {label:p.status||'pipeline', cls:'ok'},
+          {label:p.status||'pipeline', cls:p.status==='booked'?'ok':(p.status==='qualified'?'ok':'')},
           p.customer_or_winback?{label:p.customer_or_winback, cls:p.customer_or_winback==='winback'?'win':''}:null,
-          p.evidence?{label:'evidence: '+p.evidence}:null,
+          p.evidence?{label:String(p.evidence).slice(0,48)}:null,
         ].filter(Boolean);
         return card(p.account, meta, tags);
-      }).join('');
+      }).join('')
+      + (replyRows.length?`<div class="empty" style="margin-top:8px">${replyRows.length} opportunities from growth_reply_pipeline.json (real replies)</div>`:'');
     }
 
     const sec=document.getElementById('secondary');

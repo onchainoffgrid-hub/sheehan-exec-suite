@@ -1,0 +1,338 @@
+{
+  "as_of": "2026-09-24T10:55:00-04:00",
+  "as_of_label": "2026-09-24 10:55 ET",
+  "source": "Gmail MCP search_threads + get_thread (campaign replies since 2026-07-01)",
+  "rules": {
+    "never_invent_emails_or_dollars": true,
+    "mid_dollar_null_unless_known": true,
+    "palagio_not_pelagio": true,
+    "include_soft_yes": true
+  },
+  "counts": {
+    "opportunities": 22,
+    "by_status": {
+      "qualified": 6,
+      "nurture_later": 2,
+      "soft_yes": 5,
+      "booked": 6,
+      "replied": 3
+    }
+  },
+  "opportunities": [
+    {
+      "account": "Palagio Senior Living",
+      "contact_name": "Amanda Darga",
+      "email": "businessofficedirector@palagioseniorliving.com",
+      "status": "qualified",
+      "mid_dollar": 200,
+      "evidence": {
+        "thread_id": "1a0d0964cab11a22",
+        "date": "2026-09-24",
+        "snippet": "We are looking to have our fall festival again this year! \u2026 Life Enrichment \u2026 Kristi \u2026 Amanda Darga, CDP \u00b7 Business Office Director \u00b7 Palagio Senior Living"
+      },
+      "customer_or_winback": "winback",
+      "source_campaign": "fall_fest_trunk_or_treat",
+      "aka_note": "Spell Palagio (not Pelagio). Also Kristi \u00b7 Life Enrichment Director \u00b7 lifeenrichmentdirector@palagioseniorliving.com"
+    },
+    {
+      "account": "Atlantic Beach Country Club",
+      "contact_name": "Laura",
+      "email": "laura@atlanticbeachcountryclub.com",
+      "status": "qualified",
+      "mid_dollar": null,
+      "evidence": {
+        "thread_id": "1a0d020d3b15e628",
+        "date": "2026-09-24",
+        "snippet": "THanks I have forwarded your email. Please send petting zoo pricing out of curiosity."
+      },
+      "customer_or_winback": null,
+      "source_campaign": "fall_fest_trunk_or_treat"
+    },
+    {
+      "account": "St. Johns River State College Foundation",
+      "contact_name": "Bailey H. Akin",
+      "email": "baileyakin@sjrstate.edu",
+      "status": "nurture_later",
+      "mid_dollar": null,
+      "evidence": {
+        "thread_id": "1a0d134f77eb3b74",
+        "date": "2026-09-24",
+        "snippet": "fun concept\u2026 neat fundraiser\u2026 Foundation event calendar already planned for the next year\u2026 keep your information on hand\u2026 future Foundation events. Also cc Randa Gibson (Activities Coordinator)."
+      },
+      "customer_or_winback": null,
+      "source_campaign": "fall_fest_trunk_or_treat"
+    },
+    {
+      "account": "Brooks Rehabilitation ADC",
+      "contact_name": "Kate Woodcock-Sharp",
+      "email": "katelyn.woodcock-sharp@brooksrehab.org",
+      "status": "soft_yes",
+      "mid_dollar": null,
+      "evidence": {
+        "thread_id": "199c9d13a9c9e556",
+        "date": "2026-09-24",
+        "snippet": "Hey Michael, We are! We will reach out soon with dates. \u2026 Kate Woodcock-Sharp, ADC Activities Manager"
+      },
+      "customer_or_winback": "customer_or_winback",
+      "source_campaign": "referral_tasia_followup"
+    },
+    {
+      "account": "Vesta \u00b7 Tamaya / Beach CDD",
+      "contact_name": "Kaylie Fitzhugh",
+      "email": "kfitzhugh@vestapropertyservices.com",
+      "status": "booked",
+      "mid_dollar": null,
+      "evidence": {
+        "thread_id": "1a06268b2ade5cc6",
+        "date": "2026-09-02",
+        "snippet": "looking to book a petting zoo for our fall festival October 24th from 3-6\u2026 could switch to the 17th. Michael: 17th would be great.",
+        "bookings_match": "vesta-durbin-2026-09-27"
+      },
+      "customer_or_winback": "customer",
+      "source_campaign": "vesta_saturday_sale"
+    },
+    {
+      "account": "Vesta Property Services",
+      "contact_name": "Ross Ruben",
+      "email": "rruben@vestapropertyservices.com",
+      "status": "booked",
+      "mid_dollar": null,
+      "evidence": {
+        "thread_id": "1a0ad31d88cf87a5",
+        "date": "2026-09-24",
+        "snippet": "Thank you, btw the manager at Yellowbluff is Elizabeth, not Emily. \u2026 Ross Ruben \u00b7 Director of Resident Experience",
+        "bookings_match": "vesta-durbin-2026-09-27"
+      },
+      "customer_or_winback": "customer",
+      "source_campaign": "vesta_preferred_rates"
+    },
+    {
+      "account": "Vesta \u00b7 Saint Johns Golf",
+      "contact_name": "Julie Tallaksen",
+      "email": "jtallaksen@vestapropertyservices.com",
+      "status": "booked",
+      "mid_dollar": null,
+      "evidence": {
+        "thread_id": "1a081ed9503c4e92",
+        "date": "2026-09-09",
+        "snippet": "Regular please \u00b7 Julie Tallaksen \u00b7 Event Coordinator \u00b7 Saint Johns Golf Drive",
+        "bookings_match": "vesta-durbin-2026-09-27"
+      },
+      "customer_or_winback": "customer",
+      "source_campaign": "goat_yoga"
+    },
+    {
+      "account": "Angels of Care",
+      "contact_name": "Brittany Thomas",
+      "email": "bthomas@angelsofcare.com",
+      "status": "soft_yes",
+      "mid_dollar": null,
+      "evidence": {
+        "thread_id": "1a0165da040173a6",
+        "date": "2026-09-21",
+        "snippet": "We can do Tuesday October.13 th but would need an earlier time if possible. 11am is perfect for us. Brittany Thomas, BSN, RN"
+      },
+      "customer_or_winback": "customer_or_winback",
+      "source_campaign": "critter_visit"
+    },
+    {
+      "account": "River City Science Academy",
+      "contact_name": "Lauren Burnette",
+      "email": "lburnette@rivercityscience.org",
+      "status": "soft_yes",
+      "mid_dollar": null,
+      "evidence": {
+        "thread_id": "1a0b66893093a768",
+        "date": "2026-09-20",
+        "snippet": "We would love to continue with this\u2026 (Oct-2 petting zoo follow-up)"
+      },
+      "customer_or_winback": "customer",
+      "source_campaign": "school_pz"
+    },
+    {
+      "account": "River City Science Academy",
+      "contact_name": "Madelynne Beck",
+      "email": "mbeck@rivercityscience.org",
+      "status": "replied",
+      "mid_dollar": null,
+      "evidence": {
+        "thread_id": "1a086b277278dbf1",
+        "date": "2026-09-11",
+        "snippet": "Wonderful, Thank you so much! I know my students will be so happy\u2026 Madelynne Beck"
+      },
+      "customer_or_winback": "customer",
+      "source_campaign": "field_trip"
+    },
+    {
+      "account": "Golf Club of Amelia",
+      "contact_name": "S. Regan",
+      "email": "sregan@golfclubofamelia.com",
+      "status": "qualified",
+      "mid_dollar": null,
+      "evidence": {
+        "thread_id": "1a05d7f4dc4defbb",
+        "date": "2026-09-14",
+        "snippet": "Hey Michael! \u2026 I finalized the dates last week\u2026"
+      },
+      "customer_or_winback": null,
+      "source_campaign": "fall_festival"
+    },
+    {
+      "account": "Goddard / Sunshine Education Group",
+      "contact_name": "Dianna Sheikh",
+      "email": "dianna.sheikh@sunshineeducationgroup.com",
+      "status": "booked",
+      "mid_dollar": null,
+      "evidence": {
+        "thread_id": "1a0aa81223b3bcda",
+        "date": "2026-09-17",
+        "snippet": "we are good for those dates and I will get the deposit paid for each location",
+        "bookings_match": "goddard-tot-2026-10-23",
+        "calendar_accept": "Mobile PZ Event Fri Oct 23, 2026 (sunshinepreschoolsfl accept)"
+      },
+      "customer_or_winback": "customer",
+      "source_campaign": "goddard_trunk_or_treat"
+    },
+    {
+      "account": "CCMC / Wildlight",
+      "contact_name": "E. Bricknell",
+      "email": "ebricknell@ccmcnet.com",
+      "status": "qualified",
+      "mid_dollar": null,
+      "evidence": {
+        "thread_id": "1a0210433d4dbead",
+        "date": "2026-09-11",
+        "snippet": "Thank you so much, Ann-Marie! This looks great. I will redo the new vendor paperwork and send it for signature on Monday."
+      },
+      "customer_or_winback": "customer",
+      "source_campaign": "fall_dates_wildlight"
+    },
+    {
+      "account": "Assumption ECLC",
+      "contact_name": "Jessica Koci",
+      "email": "jkoci@assumptionjax.org",
+      "status": "replied",
+      "mid_dollar": null,
+      "evidence": {
+        "thread_id": "1a085f80294fe1df",
+        "date": "2026-09-09",
+        "snippet": "Ok thank you and I will let them know and get back to you soon. God Bless, Jessica Koci \u00b7 Center Manager/Registrar"
+      },
+      "customer_or_winback": "customer",
+      "source_campaign": "invoice_followup"
+    },
+    {
+      "account": "Intercoastal Kids",
+      "contact_name": "Info (Intercoastal Kids)",
+      "email": "info@intercoastalkids.com",
+      "status": "qualified",
+      "mid_dollar": null,
+      "evidence": {
+        "thread_id": "1a067538b7603eef",
+        "date": "2026-09-03",
+        "snippet": "Could you please send me the payment link for the deposit for our Mini Petting Zoo event"
+      },
+      "customer_or_winback": "customer",
+      "source_campaign": "mini_pz_deposit"
+    },
+    {
+      "account": "Legend Senior Living",
+      "contact_name": "Deandre Stringer",
+      "email": "deandre.stringer@legendseniorliving.com",
+      "status": "replied",
+      "mid_dollar": null,
+      "evidence": {
+        "thread_id": "1a0b4ea1562cdadb",
+        "date": "2026-09-18",
+        "snippet": "I have received the one for December. Just want to make sure you received the payment for the recent visit."
+      },
+      "customer_or_winback": "customer",
+      "source_campaign": "paid_invoice_followup"
+    },
+    {
+      "account": "Angie (10/31 petting zoo)",
+      "contact_name": "Angie McClellan",
+      "email": "angiemcclellan@bellsouth.net",
+      "status": "booked",
+      "mid_dollar": null,
+      "evidence": {
+        "thread_id": "1a08da45a956441c",
+        "date": "2026-09-11",
+        "snippet": "Thank you so much! We look forward to having you. (You 10-31 4-6 pm petting zoo)"
+      },
+      "customer_or_winback": "customer",
+      "source_campaign": "consumer_pz"
+    },
+    {
+      "account": "Pages Dairy Rd event (10/31)",
+      "contact_name": "Fields",
+      "email": "fields8990@gmail.com",
+      "status": "qualified",
+      "mid_dollar": null,
+      "evidence": {
+        "thread_id": "1a083f86de5af624",
+        "date": "2026-09-15",
+        "snippet": "The events address is: 86674 pages dairy rd Yulee fl \u2026 It will take me a few days to get that paid"
+      },
+      "customer_or_winback": "customer",
+      "source_campaign": "consumer_pz"
+    },
+    {
+      "account": "Fletcher's Tender Care",
+      "contact_name": "E. Cooks",
+      "email": "ecooks@fletcherstendercare.com",
+      "status": "nurture_later",
+      "mid_dollar": null,
+      "evidence": {
+        "thread_id": "1a0b5b493559793f",
+        "date": "2026-09-18",
+        "snippet": "When it gets cold, I will not be able to continue pet therapy because we have 2 staff members that are highly allergic"
+      },
+      "customer_or_winback": "customer",
+      "source_campaign": "pet_therapy"
+    },
+    {
+      "account": "Consumer tour inquiry",
+      "contact_name": "A.C. Walker",
+      "email": "acwalker22@gmail.com",
+      "status": "soft_yes",
+      "mid_dollar": null,
+      "evidence": {
+        "thread_id": "1a0b99023fcb7b25",
+        "date": "2026-09-19",
+        "snippet": "Do you offer tours of your homestead and animal interactions? My family will be visiting Jacksonville in October."
+      },
+      "customer_or_winback": null,
+      "source_campaign": "inbound_consumer"
+    },
+    {
+      "account": "Ashley M. Kopec (quote)",
+      "contact_name": "Ashley M. Kopec",
+      "email": "ashleymkopec@gmail.com",
+      "status": "soft_yes",
+      "mid_dollar": null,
+      "evidence": {
+        "thread_id": "1a052a9743ef6cf5",
+        "date": "2026-09-02",
+        "snippet": "We're just waiting on one more quote on Friday\u2026 before we decide how to move forward."
+      },
+      "customer_or_winback": null,
+      "source_campaign": "mobile_pz_quote"
+    },
+    {
+      "account": "Mommy & Me (Naomi Chadwick)",
+      "contact_name": "Naomi Chadwick",
+      "email": "naomi.chadwick@hotmail.com",
+      "status": "booked",
+      "mid_dollar": null,
+      "evidence": {
+        "thread_id": "1a04af6a48f83cc0",
+        "date": "2026-08-29",
+        "snippet": "is it okay that my husband and I are both come with our toddler?",
+        "bookings_match": "alexa-mommy-me-2026-10-01"
+      },
+      "customer_or_winback": "customer",
+      "source_campaign": "mommy_and_me"
+    }
+  ]
+}

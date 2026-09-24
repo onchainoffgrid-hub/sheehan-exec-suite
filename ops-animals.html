@@ -17,75 +17,81 @@ h1{font-size:1.45rem;margin:0 0 4px}.sub{color:var(--muted);font-size:.88rem;mar
 .kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px}
 .kpi .l{font-size:.68rem;color:var(--muted);text-transform:uppercase}.kpi .v{font-size:1.3rem;font-weight:750;margin-top:3px}.kpi .s{font-size:.72rem;color:var(--muted)}
 .section{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin:16px 0 8px}
-.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
 .tile{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
 .tile h3{margin:0 0 4px;font-size:.95rem}.tile p{margin:0;font-size:.8rem;color:var(--muted)}
-.tile.active{border-color:#3dd68c55}.tile.grow{border-color:#3dd68c88}.tile.surplus{border-color:#ffb02066}
-.tag{display:inline-block;font-size:.62rem;padding:2px 7px;border-radius:6px;border:1px solid var(--line);margin-left:4px;vertical-align:middle}
-.tag.good{border-color:#3dd68c55;color:var(--good);background:#13281d}
+.tile.s{border-color:#a78bfa88}.tile.a{border-color:#3dd68c55}.tile.b{border-color:#5b8cff66}.tile.stay{border-color:#ffb02066}.tile.watch{border-color:#fb923c66}.tile.boys{border-color:#fbbf2466}
+.tag{display:inline-block;font-size:.62rem;padding:2px 7px;border-radius:6px;border:1px solid var(--line);margin:2px 4px 0 0;vertical-align:middle;color:var(--muted)}
 .note{color:var(--muted);font-size:.75rem;margin-top:18px}
-.door{display:inline-block;margin-top:8px;padding:8px 14px;border-radius:999px;border:1px solid #fbbf2466;background:#2a2210;color:#fde68a;font-weight:700;font-size:.82rem;text-decoration:none}
+.door{display:inline-block;margin:8px 8px 0 0;padding:8px 14px;border-radius:999px;border:1px solid #fbbf2466;background:#2a2210;color:#fde68a;font-weight:700;font-size:.82rem;text-decoration:none}
+ul.names{margin:6px 0 0;padding-left:18px;font-size:.82rem;color:#c5d0e6}
+ul.names li{margin:2px 0}
+.rel{margin:8px 0 0;padding:10px 12px;border-radius:10px;background:var(--panel);border:1px solid var(--line);font-size:.8rem;color:#c5d0e6}
 </style></head>
 <body data-flow-face="ops"><div class="wrap">
 <div class="top">
   <span class="lbl">Ops</span>
   <a href="ops.html">Operations</a>
   <a class="on" href="ops-animals.html">Animals &amp; facilities</a>
-  <a href="ops-battle-row.html">Battle Row (full)</a>
-  <a href="ops-supply.html" class="sec">What we can supply</a>
-  <a href="rvp-ops.html" class="sec">Franchise Hub</a>
+  <a href="ops-capacity.html">Capacity 18 mo</a>
+  <a href="ops-delivery.html" class="sec">Delivery</a>
+  <a href="ops-battle-row.html" class="sec">Battle Row</a>
+  <a href="support-ops-enablement.html" class="sec">Ops enablement</a>
 </div>
 <header>
   <h1>Animals &amp; facilities</h1>
-  <div class="sub">Callahan FL · Battle Row inventory · current counts only</div>
+  <div class="sub">Callahan FL · inventory correction 2026-09-24 · goats restored with tiers</div>
 </header>
-<div class="banner">Pull from Battle Row data · <a href="ops-battle-row.html" style="color:#fde68a;font-weight:700">Open full Battle Row →</a></div>
+<div class="banner">Counts approx · <b>~12 bunnies</b> · <b>~20 ducks</b> · <b>~20 petting-zoo goats</b> · no invented $</div>
 <div class="kpis" id="kpis">
-  <div class="kpi"><div class="l">Pens</div><div class="v" id="k-pens">5</div><div class="s">Battle Row live</div></div>
-  <div class="kpi"><div class="l">Bunnies</div><div class="v" id="k-bun">~20</div><div class="s">grow</div></div>
-  <div class="kpi"><div class="l">Ducks</div><div class="v" id="k-duck">~12</div><div class="s">surplus / trade</div></div>
-  <div class="kpi"><div class="l">Tents</div><div class="v" id="k-tent">—</div><div class="s">on hand</div></div>
+  <div class="kpi"><div class="l">Bunnies</div><div class="v" id="k-bun">~12</div><div class="s">approx</div></div>
+  <div class="kpi"><div class="l">Ducks</div><div class="v" id="k-duck">~20</div><div class="s">approx</div></div>
+  <div class="kpi"><div class="l">Goats (PZ)</div><div class="v" id="k-goat">~20</div><div class="s">tiers below</div></div>
 </div>
-<div class="section">Enclosures</div>
-<div class="tiles" id="pens"></div>
-<div class="section">Animals</div>
-<div class="tiles" id="animals"></div>
-<div class="section">Site assets (summary)</div>
-<div class="tiles" id="assets"></div>
-<a class="door" href="ops-battle-row.html">Full Battle Row detail →</a>
-<p class="note" id="foot">No death/trade ledger · no invented $. Source battle_row.json</p>
+<div class="section">Housing</div>
+<div class="tiles" id="housing"></div>
+<div class="section">Goat tiers</div>
+<div class="tiles" id="tiers"></div>
+<div class="section">Relations</div>
+<div id="rels"></div>
+<a class="door" href="ops-delivery.html">Delivery board →</a>
+<a class="door" href="ops-capacity.html">Capacity calendar →</a>
+<a class="door" href="ops-battle-row.html">Battle Row →</a>
+<p class="note" id="foot">Source data/ops_animals.json · investor-safe approx counts</p>
 </div>
 <script>
 (function(){
-  fetch('data/battle_row.json',{cache:'no-store'}).then(function(r){if(!r.ok)throw new Error(r.status);return r.json();})
+  function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]))}
+  function nameLine(n){
+    if(typeof n==='string') return esc(n);
+    const bits=[esc(n.name)];
+    if(n.aka) bits.push('aka '+esc(n.aka));
+    if(n.spell) bits.push('spell '+esc(n.spell));
+    if(n.note) bits.push(esc(n.note));
+    if(n.off_farm===true) bits.push('off-farm OK');
+    if(n.off_farm===false) bits.push('prefer not off-farm');
+    return bits.join(' · ');
+  }
+  fetch('data/ops_animals.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error(r.status);return r.json();})
   .then(function(d){
-    var pens=d.enclosures||[];
-    document.getElementById('k-pens').textContent=pens.length||5;
-    document.getElementById('pens').innerHTML=pens.map(function(p){
-      return '<div class="tile active"><h3>'+p.label+' <span class="tag good">'+(p.status||'')+'</span></h3><p>'+(p.note||p.kind||'')+'</p></div>';
-    }).join('')||'<div class="tile"><h3>5 pens</h3><p>See Battle Row</p></div>';
-    var animals=(d.animals&&d.animals.items)||[];
-    animals.forEach(function(a){
-      if(a.id==='bunnies') document.getElementById('k-bun').textContent='~'+a.count;
-      if(a.id==='ducks') document.getElementById('k-duck').textContent='~'+a.count;
-    });
-    document.getElementById('animals').innerHTML=animals.map(function(a){
-      var cls=a.status==='grow'?'grow':(a.status==='surplus'?'surplus':'');
-      return '<div class="tile '+cls+'"><h3>'+a.label+' · ~'+a.count+'</h3><p>'+(a.note||'')+'</p></div>';
-    }).join('')||'<div class="tile"><h3>~20 bunnies / ~12 ducks</h3><p>IA seed</p></div>';
-    var tents=(d.built_environment&&d.built_environment.tents)||(d.goat_yoga&&d.goat_yoga.tents&&d.goat_yoga.tents.inventory)||[];
-    var tentCount = Array.isArray(tents) ? tents.length : 0;
-    document.getElementById('k-tent').textContent=tentCount||'—';
-    var assets=[];
-    (d.exhibits||[]).forEach(function(e){ assets.push({h:e.label,p:(e.builder?e.builder+' · ':'')+(e.note||e.status||'')}); });
-    ((d.built_environment&&d.built_environment.structures)||[]).forEach(function(s){ assets.push({h:s.label,p:s.status||''}); });
-    if(Array.isArray(tents)) tents.forEach(function(t){ assets.push({h:typeof t==='string'?t:(t.label||'Tent'),p:(t&&t.note)||'tent'}); });
-    document.getElementById('assets').innerHTML=assets.slice(0,12).map(function(a){
-      return '<div class="tile"><h3>'+a.h+'</h3><p>'+a.p+'</p></div>';
+    const sc=d.summary_counts||{};
+    if(sc.bunnies) document.getElementById('k-bun').textContent='~'+sc.bunnies.approx;
+    if(sc.ducks) document.getElementById('k-duck').textContent='~'+sc.ducks.approx;
+    if(sc.petting_zoo_goats) document.getElementById('k-goat').textContent='~'+sc.petting_zoo_goats.approx;
+    const g=d.goats||{};
+    document.getElementById('housing').innerHTML=(g.housing||[]).map(h=>
+      `<div class="tile"><h3>${esc(h.label)}</h3><p>${esc(h.note||'')}</p></div>`
+    ).join('');
+    const cls={boys_corral:'boys',S:'s',A:'a',B:'b',stay_limited:'stay',ok_with_watch:'watch'};
+    document.getElementById('tiers').innerHTML=(g.tiers||[]).map(t=>{
+      const names=(t.names||[]).map(n=>`<li>${nameLine(n)}</li>`).join('');
+      return `<div class="tile ${cls[t.tier]||''}"><h3>${esc(t.label)} <span class="tag">${esc(t.tier)}</span></h3>
+        <p>${esc(t.note||'')}</p><ul class="names">${names}</ul></div>`;
     }).join('');
-    document.getElementById('foot').textContent='as_of '+(d.as_of||'')+' · battle_row.json · full detail on ops-battle-row.html';
+    document.getElementById('rels').innerHTML=(g.relations||[]).map(r=>`<div class="rel">${esc(r)}</div>`).join('');
+    document.getElementById('foot').textContent='as_of '+(d.as_of_label||d.as_of||'')+' · ops_animals.json · '+(d.source||'');
   }).catch(function(e){
-    document.getElementById('pens').innerHTML='<div class="tile"><h3>Load failed</h3><p>'+e+' — see <a href="ops-battle-row.html">Battle Row</a></p></div>';
+    document.getElementById('tiers').innerHTML='<div class="tile"><h3>Load failed</h3><p>'+esc(String(e))+'</p></div>';
   });
 })();
 </script>
