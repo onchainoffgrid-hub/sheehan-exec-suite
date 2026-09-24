@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-23T23:40:00-04:00",
+  "as_of": "2026-09-24T14:10:00-04:00",
   "label": "Tonight's outreach \u2014 2026-09-23 evening (ET)",
   "source": "Gmail Sent verified \u00b7 no invented emails",
   "rule": "Past-customer + ToT/FF blast = PIPELINE. Mid $ only when Michael named it. Investor-safe.",
@@ -21,17 +21,19 @@
   },
   "emails": [
     {
-      "account": "Brooks (nudge)",
-      "contact_name": "Katelyn Woodcock-Sharp",
+      "account": "Brooks Bartram Lakes",
+      "contact_name": "Kate Woodcock-Sharp",
       "email": "Katelyn.Woodcock-sharp@brooksrehab.org",
       "channel": "email",
-      "tier": "net_new_outreach",
+      "tier": "customer_pipeline",
       "b2b_b2c": "b2b",
-      "mid_dollar": null,
-      "status": "nudge",
-      "notes": "Still thinking of scheduling \u00b7 referred-by-Tasia thread",
-      "sent_at": "2025-10-09T16:39:50Z",
-      "gmail_thread": "199c9d13a9c9e556"
+      "mid_dollar": 600,
+      "status": "quote_draft_awaiting_send",
+      "notes": "3hr PZ Sat Nov 21 10\u20131 \u00b7 options $600 std (rec) / $500 mini / $750 std+critters \u00b7 +~$100 travel \u00b7 source Tasia referral/activity-director \u00b7 draft card only \u2014 NOT sent",
+      "sent_at": null,
+      "gmail_thread": "199c9d13a9c9e556",
+      "requested_date": "2026-11-21",
+      "pipeline_status": "QUOTE_SENT_AWAITING_REPLY"
     },
     {
       "account": "Vesta / Ross follow-up",
