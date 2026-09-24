@@ -1,6 +1,6 @@
 {
-  "as_of": "2026-09-24T10:55:00-04:00",
-  "as_of_label": "2026-09-24 10:55 ET",
+  "as_of": "2026-09-24T11:15:00-04:00",
+  "as_of_label": "2026-09-24 11:15 ET",
   "campaign": {
     "label": "Fall \u2192 holiday close",
     "start": "2026-08-12",
@@ -596,6 +596,10 @@
   "receivables_source": "data/bookings_pipeline.json (deposit/paid labels only \u2014 never invent $)",
   "secondary_tools": [
     {
+      "href": "growth-pipeline.html",
+      "label": "Weighted pipeline"
+    },
+    {
       "href": "captcha-quick.html",
       "label": "CAPTCHA dunk"
     },
@@ -663,9 +667,10 @@
   "reviews": {
     "goal": 555,
     "by": "2026-12-23",
-    "current": null,
-    "current_label": "TBD / input needed",
-    "note": "Current count not in growth_campaign data \u2014 do not invent. Journey sketch may live on support-reviews.html"
+    "current": 84,
+    "current_label": "84 showing",
+    "note": "Michael 2026-09-24: ~100 reviews exist; only 84 showing. Goal 555 by Dec 23 2026.",
+    "as_of": "2026-09-24"
   },
   "pace": {
     "as_of": "2026-09-24",

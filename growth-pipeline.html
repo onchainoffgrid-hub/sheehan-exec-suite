@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Growth · weighted pipeline · Sheehan Homestead</title>
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#3dd68c;--brand-green:#3dd68c;--brand-green-deep:#2f6b4f;--brand-gold:#c9a227;--brand-gold-bright:#fbbf24;--good:#3dd68c;--warn:#ffb020;--blue:#5b8cff}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1280px;margin:0 auto;padding:22px 18px 64px}
+.crumb{font-size:.82rem;color:var(--muted);margin:0 0 12px}.crumb a{color:#9dffc5;font-weight:600}
+h1{font-size:clamp(1.4rem,3vw,1.95rem);margin:0 0 6px;letter-spacing:-.02em;font-weight:750}
+.sub{color:var(--muted);font-size:.92rem;margin:0 0 14px}
+.banner{margin:0 0 14px;padding:12px 14px;border-radius:14px;border:1px solid #3dd68c55;background:linear-gradient(135deg,#13281d,#121a2b);font-size:.84rem;color:#9dffc5}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin:0 0 14px}
+.kpi{border:1px solid var(--line);border-radius:14px;background:var(--card);padding:12px 14px}
+.kpi .l{font-size:.65rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.kpi .v{font-size:1.2rem;font-weight:750;margin-top:4px;color:var(--brand-gold-bright)}
+.kpi .s{font-size:.72rem;color:var(--muted);margin-top:3px}
+.kpi.green .v{color:var(--brand-green)}
+.chip{display:inline-block;margin:0 8px 12px 0;padding:8px 14px;border-radius:999px;border:1px solid #3dd68c66;background:#13281d;color:#9dffc5;font-size:.8rem;font-weight:650;text-decoration:none}
+.chip:hover{text-decoration:none;border-color:var(--brand-green)}
+.chip.gold{border-color:#c9a22766;background:#2a2210;color:#fde68a}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+.filters button{appearance:none;border:1px solid var(--line);background:var(--card);color:var(--text);padding:7px 12px;border-radius:999px;font-size:.78rem;font-weight:650;cursor:pointer}
+.filters button.on{border-color:#3dd68c88;background:#13281d;color:#9dffc5}
+.scroll,.scroll{overflow:auto;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+table{width:100%;border-collapse:collapse;font-size:.8rem;min-width:980px}
+th,td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{color:var(--muted);font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;position:sticky;top:0;background:var(--card);cursor:pointer;user-select:none}
+th:hover{color:#9dffc5}
+tr:hover td{background:#0f1728}
+.money,.money{color:var(--brand-gold-bright);font-weight:700;font-variant-numeric:tabular-nums}
+.muted{color:var(--muted);font-size:.72rem}
+.tag{display:inline-block;padding:2px 8px;border-radius:999px;font-size:.65rem;border:1px solid var(--line);white-space:nowrap}
+.tag.w80{border-color:#3dd68c66;color:var(--good);background:#13281d}
+.tag.w75{border-color:#c9a22788;color:#fde68a;background:#2a2210}
+.tag.w50{border-color:#5b8cff66;color:#9ec1ff;background:#152238}
+.tag.w25{border-color:#ffb02066;color:var(--warn);background:#2a2210}
+.tag.st{color:var(--muted)}
+.src{font-size:.62rem;padding:1px 6px;border-radius:6px;border:1px dashed #c9a22755;color:#e8d48b}
+.src.michael{border-style:solid;border-color:#3dd68c55;color:#9dffc5}
+.src.placeholder{border-color:#ffb02066;color:#ffb020}
+.src.unknown{opacity:.7}
+.sec{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:18px 0 8px}
+.watch{border:1px solid #ffb02055;border-radius:14px;background:#16140f;padding:12px 14px;margin:0 0 8px}
+.watch .t{font-weight:700}.watch .m{font-size:.78rem;color:var(--muted);margin-top:3px}
+.note{color:var(--muted);font-size:.75rem;margin-top:16px}
+.empty{color:var(--muted);padding:16px}
+.hair{height:2px;background:linear-gradient(90deg,transparent,var(--brand-gold),transparent);opacity:.55;margin:0 0 14px;border:0}
+</style></head>
+<body><div class="wrap">
+<p class="crumb"><a href="index.html">Operator</a> → <a href="growth-simple.html">Growth</a> → <b>Weighted pipeline</b></p>
+<header>
+  <h1>Growth · weighted pipeline</h1>
+  <p class="sub">Salesforce-style mid $ · win % · weighted $. BDR-actionable. Never invent emails. Placeholder $ always labeled.</p>
+</header>
+<hr class="hair"/>
+<div class="banner" id="banner">Loading…</div>
+<div class="kpis" id="kpis"></div>
+<a class="chip" href="growth-simple.html">← Growth home</a>
+<a class="chip gold" href="ops-delivery.html">Ops delivery</a>
+<a class="chip" href="mailto:" id="mail-all" style="display:none">Mailto top</a>
+<nav class="filters" id="filters" aria-label="Win filters">
+  <button type="button" data-w="all" class="on">All</button>
+  <button type="button" data-w="80">80%</button>
+  <button type="button" data-w="75">75%</button>
+  <button type="button" data-w="50">50%</button>
+  <button type="button" data-w="25">25%</button>
+</nav>
+<div class="scroll"><div id="table-wrap"><div class="empty">Loading…</div></div></div>
+<div class="sec">Voice-named (not only Gmail reply)</div>
+<div id="voice"><div class="empty">—</div></div>
+<div class="sec">AR / forgotten-$ watches (not booked)</div>
+<div id="watches"><div class="empty">—</div></div>
+<p class="note" id="foot">Weighted = round(mid × win%/100). Sources: michael_specified · email_evidence · booking_match · placeholder_standard · unknown. as of loading…</p>
+</div>
+<script>
+(function(){
+  function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,c=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]))}
+  function money(n){if(n==null||n==='')return '—';return '$'+Number(n).toLocaleString('en-US')}
+  let DATA=null, WIN='all', SORT={key:'weighted_dollar',dir:-1};
+
+  function rows(){
+    let list=[...(DATA.opportunities||[]),...(DATA.voice_named||[])].slice();
+    if(WIN!=='all') list=list.filter(o=>String(o.win_pct)===String(WIN));
+    const k=SORT.key, dir=SORT.dir;
+    list.sort((a,b)=>{
+      let va=a[k], vb=b[k];
+      if(k==='mid_dollar'||k==='win_pct'||k==='weighted_dollar'){va=va==null?-1: +va; vb=vb==null?-1:+vb;}
+      else {va=va==null?'':String(va).toLowerCase(); vb=vb==null?'':String(vb).toLowerCase();}
+      if(va<vb) return -1*dir; if(va>vb) return 1*dir; return 0;
+    });
+    return list;
+  }
+
+  function winTag(w){
+    if(w==null) return '<span class="tag st">—</span>';
+    const cls=w>=80?'w80':w>=75?'w75':w>=50?'w50':'w25';
+    return `<span class="tag ${cls}">${w}%</span>`;
+  }
+  function srcTag(s){
+    const cls=s==='michael_specified'?'michael':s==='placeholder_standard'?'placeholder':s==='unknown'?'unknown':'';
+    return `<span class="src ${cls}">${esc(s||'unknown')}</span>`;
+  }
+  function mailto(email, account){
+    if(!email) return '—';
+    const sub=encodeURIComponent('Sheehan Homestead · next step — '+(account||''));
+    return `<a href="mailto:${esc(email)}?subject=${sub}">${esc(email)}</a>`;
+  }
+
+  function render(){
+    const list=rows();
+    let html='<table><thead><tr>';
+    [['account','Account'],['contact_name','Contact'],['mid_dollar','Mid $'],['win_pct','Win %'],['weighted_dollar','Weighted $'],['close_date','Close'],['status','Status'],['next_step','Next'],['email','Mailto']].forEach(([k,lab])=>{
+      html+=`<th data-k="${k}">${lab}${SORT.key===k?(SORT.dir>0?' ↑':' ↓'):''}</th>`;
+    });
+    html+='</tr></thead><tbody>';
+    if(!list.length) html+='<tr><td colspan="9" class="empty">No rows for this filter.</td></tr>';
+    list.forEach(o=>{
+      const note=(o.dollar_note||o.dollar_note)?`<div class="muted">${esc((o.dollar_note||o.dollar_note))}</div>`:'';
+      const pnote=(o.probability_note||o.probability_note)?`<div class="muted">${esc(o.probability_note||o.probability_note)}</div>`:'';
+      html+=`<tr>
+        <td><b>${esc(o.account)}</b>${o.aka_note?`<div class="muted">${esc(o.aka_note)}</div>`:''}${note}</td>
+        <td>${esc(o.contact_name||'—')}</td>
+        <td class="money">${money(o.mid_dollar)}<div>${srcTag(o.dollar_source)}</div></td>
+        <td>${winTag(o.win_pct)}${pnote}</td>
+        <td class="money">${money(o.weighted_dollar)}</td>
+        <td>${esc(o.close_date||'—')}</td>
+        <td><span class="tag st">${esc(o.status||'')}</span></td>
+        <td>${esc(o.next_step||'—')}</td>
+        <td>${mailto(o.email,o.account)}</td>
+      </tr>`;
+    });
+    html+='</tbody></table>';
+    document.getElementById('table-wrap').innerHTML=html;
+    document.querySelectorAll('th[data-k]').forEach(th=>{
+      th.onclick=()=>{
+        const k=th.getAttribute('data-k');
+        if(SORT.key===k) SORT.dir*=-1; else {SORT.key=k; SORT.dir=(k.includes('dollar')||k==='win_pct')?-1:1;}
+        render();
+      };
+    });
+  }
+
+  fetch('data/growth_reply_pipeline.json').then(r=>r.json()).then(d=>{
+    DATA=d;
+    const k=d.kpis||d.counts||{};
+    document.getElementById('banner').textContent=
+      `as of ${d.as_of_label||d.as_of||''} · ${(k.opp_count!=null?k.opp_count:(d.opportunities||[]).length)} opps · placeholders labeled · no invented emails`;
+    const by=d.counts&&d.counts.by_win_pct||{};
+    document.getElementById('kpis').innerHTML=`
+      <div class="kpi green"><div class="l">Opps</div><div class="v">${esc(k.opp_count!=null?k.opp_count:(d.opportunities||[]).length)}</div><div class="s">reply + voice-named</div></div>
+      <div class="kpi"><div class="l">Sum mid $</div><div class="v">${money(k.sum_mid_dollar)}</div><div class="s">labeled sources</div></div>
+      <div class="kpi"><div class="l">Sum weighted $</div><div class="v">${money(k.sum_weighted_dollar)}</div><div class="s">mid × win%</div></div>
+      <div class="kpi"><div class="l">80% bucket</div><div class="v">${by['80']||0}</div><div class="s">booked / ATS</div></div>
+      <div class="kpi"><div class="l">75%</div><div class="v">${by['75']||0}</div><div class="s">warm booked/winback</div></div>
+      <div class="kpi"><div class="l">50%</div><div class="v">${by['50']||0}</div><div class="s">qualified / soft_yes</div></div>
+      <div class="kpi"><div class="l">25%</div><div class="v">${by['25']||0}</div><div class="s">curiosity / nurture</div></div>
+      <div class="kpi"><div class="l">Placeholders</div><div class="v">${k.placeholder_count!=null?k.placeholder_count:(d.placeholders||[]).length}</div><div class="s">must stay labeled</div></div>`;
+    const voice=d.voice_named||[];
+    document.getElementById('voice').innerHTML=voice.length?voice.map(o=>`
+      <div class="watch" style="border-color:#3dd68c55;background:#0e1626">
+        <div class="t">${esc(o.account)} · ${esc(o.contact_name||'')}</div>
+        <div class="m">${money(o.mid_dollar)} · ${o.win_pct}% · weighted ${money(o.weighted_dollar)} · ${esc(o.dollar_source)} · next: ${esc(o.next_step||'')}</div>
+        <div class="m">${o.email?mailto(o.email,o.account):'no email invented'} · ${esc(o.probability_note||'')}</div>
+      </div>`).join(''):'<div class="empty">No voice-named rows</div>';
+    const watches=d.ar_watches||[];
+    document.getElementById('watches').innerHTML=watches.length?watches.map(w=>`
+      <div class="watch">
+        <div class="t">${esc(w.account)} · ${esc(w.contact_name||'')}</div>
+        <div class="m">${esc(w.watch_type||w.status||'')} · mid ${money(w.mid_dollar)} · ${esc(w.dollar_note||'')}</div>
+        <div class="m">Next: ${esc(w.next_step||'')}</div>
+      </div>`).join(''):'<div class="empty">No watches</div>';
+    document.getElementById('foot').textContent=
+      `Weighted = round(mid × win%/100). Placeholders: ${(d.placeholders||[]).length}. as of ${d.as_of_label||''}.`;
+    render();
+  }).catch(err=>{
+    document.getElementById('table-wrap').innerHTML='<div class="empty">Could not load growth_reply_pipeline.json</div>';
+    console.error(err);
+  });
+
+  document.getElementById('filters').onclick=e=>{
+    const b=e.target.closest('button[data-w]'); if(!b) return;
+    WIN=b.getAttribute('data-w');
+    document.querySelectorAll('#filters button').forEach(x=>x.classList.toggle('on',x===b));
+    render();
+  };
+})();
+</script>
+</body></html>

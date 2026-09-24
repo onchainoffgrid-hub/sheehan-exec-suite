@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Growth enablement · Support · Sheehan Homestead</title>
+<title>Sales enablement · Support · Sheehan Homestead</title>
 <style>
-:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--joy:#fbbf24}
+:root{--brand-green:#3dd68c;--brand-green-deep:#2f6b4f;--brand-gold:#c9a227;--brand-gold-bright:#fbbf24;--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:var(--brand-green);--good:#3dd68c;--warn:#ffb020;--joy:#fbbf24}
 *{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
 a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
 .wrap{max-width:1100px;margin:0 auto;padding:28px 22px 64px}
-.crumb{font-size:.82rem;color:var(--muted);margin:0 0 12px}.crumb a{color:#9ec1ff;font-weight:600}
+.crumb{font-size:.82rem;color:var(--muted);margin:0 0 12px}.crumb a{color:#9dffc5;font-weight:600}
 h1{font-size:clamp(1.45rem,3vw,1.95rem);margin:0 0 6px;letter-spacing:-.02em;font-weight:750}
 .sub{color:var(--muted);font-size:.95rem;margin:0 0 18px}
 .hub{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:0 0 24px}
 .tile{display:flex;flex-direction:column;justify-content:space-between;min-height:150px;padding:18px 20px;border-radius:16px;border:1px solid var(--line);background:var(--card);color:inherit;text-decoration:none;transition:border-color .15s,transform .12s}
 .tile:hover{border-color:var(--accent);transform:translateY(-1px);text-decoration:none}
 .tile .kicker{font-size:.65rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:8px}
-.tile h2{margin:0 0 6px;font-size:1.1rem;color:#9ec1ff}
+.tile h2{margin:0 0 6px;font-size:1.1rem;color:#9dffc5}
 .tile p{margin:0;color:var(--muted);font-size:.82rem}
-.tile .go{margin-top:14px;font-size:.8rem;font-weight:750;color:#9ec1ff}
+.tile .go{margin-top:14px;font-size:.8rem;font-weight:750;color:#9dffc5}
 .tile.stub{border-style:dashed;opacity:.92}
 .tile.stub h2{color:#c5d0e6}
 .tile.stub .go{color:var(--warn)}
@@ -23,24 +23,20 @@ h1{font-size:clamp(1.45rem,3vw,1.95rem);margin:0 0 6px;letter-spacing:-.02em;fon
 .badge.tbd{border-color:#ffb02066;color:var(--warn)}
 .note{color:var(--muted);font-size:.75rem;margin-top:8px}
 .sec{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:18px 0 10px}
+.hair{height:2px;border:0;margin:0 0 14px;background:linear-gradient(90deg,transparent,var(--brand-gold),transparent);opacity:.55}
 </style></head>
 <body><div class="wrap">
 
-<p class="crumb"><a href="index.html">Operator</a> → <a href="support-home.html">Support</a> → <b>Growth enablement</b></p>
+<p class="crumb"><a href="index.html">Operator</a> → <a href="support-home.html">Support</a> → <b>Sales enablement</b></p>
 <header>
-  <h1>Growth enablement</h1>
-  <p class="sub">Sales enablement for closing. Link live assets · honest TBD when missing. Not a second Growth floor.</p>
+  <h1>Sales enablement</h1>
+  <p class="sub">Current sales basics for closing. Connect · ICP · collateral · pricing · apps. Stretch lives under Roadmap.</p>
 </header>
+<hr class="hair"/>
 
-<nav class="hub" aria-label="Growth enablement tiles">
-  <a class="tile stub" href="#gtm">
-    <div>
-      <div class="kicker">Playbook</div>
-      <h2>GTM playbook <span class="badge tbd">TBD</span></h2>
-      <p>Dedicated playbook page not built yet. Closest live seats map: GTM seats · investor GTM framing.</p>
-    </div>
-    <div class="go">Stub · see quiet links below →</div>
-  </a>
+<div class="sec" id="current" style="margin-top:0">Current · sales basics</div>
+<nav class="hub" aria-label="Sales enablement current">
+  
   <a class="tile" href="https://onchainoffgrid-hub.github.io/critters-on-call/pricing.html" target="_blank" rel="noopener">
     <div>
       <div class="kicker">Money face</div>
@@ -83,6 +79,34 @@ h1{font-size:clamp(1.45rem,3vw,1.95rem);margin:0 0 6px;letter-spacing:-.02em;fon
   </a>
 </nav>
 
+
+<div class="sec" id="roadmap">Roadmap / future</div>
+<nav class="hub" aria-label="Sales enablement roadmap">
+  <a class="tile stub" href="#gtm">
+    <div>
+      <div class="kicker">Stretch</div>
+      <h2>GTM playbook <span class="badge tbd">TBD</span></h2>
+      <p>Dedicated playbook page not built yet. Closest: GTM seats · investor GTM framing.</p>
+    </div>
+    <div class="go">Stub · quiet links below →</div>
+  </a>
+  <a class="tile stub" href="support-reviews.html">
+    <div>
+      <div class="kicker">Outcomes</div>
+      <h2>Reviews journey · 555 <span class="badge tbd">stretch</span></h2>
+      <p>Showing 84 now · goal 555 by Dec 23 2026. Journey sketch only.</p>
+    </div>
+    <div class="go">Open reviews sketch →</div>
+  </a>
+  <a class="tile stub" href="growth-pipeline.html">
+    <div>
+      <div class="kicker">Pipeline tool</div>
+      <h2>Weighted pipeline <span class="badge">live</span></h2>
+      <p>BDR mid $ · win % · weighted $ board (feeds Growth).</p>
+    </div>
+    <div class="go">Open weighted pipeline →</div>
+  </a>
+</nav>
 <div class="sec" id="gtm">Quiet GTM refs (until playbook lands)</div>
 <p class="note">
   <a href="gtm-seats.html">GTM seats</a> ·

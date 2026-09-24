@@ -2,19 +2,19 @@
 <html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Growth · pipeline · bookings · AR · Sheehan Homestead</title>
 <style>
-:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--money:#f0abfc}
+:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#3dd68c;--brand-green:#3dd68c;--brand-green-deep:#2f6b4f;--brand-gold:#c9a227;--brand-gold-bright:#fbbf24;--good:#3dd68c;--warn:#ffb020;--money:#fbbf24}
 *{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
 a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
 .wrap{max-width:1100px;margin:0 auto;padding:28px 22px 64px}
 .crumb{font-size:.82rem;color:var(--muted);margin:0 0 12px}.crumb a{color:#9ec1ff;font-weight:600}
 h1{font-size:clamp(1.5rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;font-weight:750}
 .sub{color:var(--muted);font-size:.95rem;margin:0 0 14px}
-.banner{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:0 0 14px;padding:12px 16px;border-radius:14px;border:1px solid #5b8cff66;background:linear-gradient(135deg,#152238,#121a2b);font-size:.88rem;font-weight:650;color:#9ec1ff}
+.banner{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:0 0 14px;padding:12px 16px;border-radius:14px;border:1px solid #3dd68c66;background:linear-gradient(135deg,#13281d,#121a2b);font-size:.88rem;font-weight:650;color:#9dffc5}
 .banner .lbl{font-size:.68rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:600}
 .pace{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:0 0 14px}
 .pace .kpi{border:1px solid var(--line);border-radius:14px;background:var(--card);padding:12px 14px}
 .pace .l{font-size:.65rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
-.pace .v{font-size:1.15rem;font-weight:750;margin-top:4px;color:#fde68a}
+.pace .v{font-size:1.15rem;font-weight:750;margin-top:4px;color:var(--brand-gold-bright)}
 .pace .s{font-size:.72rem;color:var(--muted);margin-top:3px}
 .thesis{margin:0 0 16px;padding:12px 14px;border:1px dashed #a78bfa66;border-radius:12px;background:#14101f;font-size:.84rem;color:#c5d0e6}
 .thesis b{color:#d4c4ff}
@@ -23,8 +23,8 @@ h1{font-size:clamp(1.5rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;font
 .col{border:1px solid var(--line);border-radius:18px;background:var(--card);padding:18px 18px 14px;min-height:280px}
 .col h2{margin:0 0 4px;font-size:1.15rem}
 .col .kicker{font-size:.68rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:12px}
-.col.pipeline{border-color:#5b8cff66}.col.pipeline h2{color:#9ec1ff}
-.col.booked{border-color:#fbbf2466}.col.booked h2{color:#fde68a}
+.col.pipeline{border-color:#3dd68c66}.col.pipeline h2{color:#9dffc5}
+.col.booked{border-color:#c9a22788}.col.booked h2{color:#fde68a}
 .col.ar{border-color:#3dd68c66}.col.ar h2{color:#9dffc5}
 .card-row{padding:12px 12px;border-radius:12px;background:var(--panel);border:1px solid #1a2438;margin:0 0 8px}
 .card-row .name{font-weight:700;font-size:.92rem}
@@ -41,7 +41,10 @@ h1{font-size:clamp(1.5rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;font
 .chip{display:inline-block;margin:0 0 16px;padding:8px 14px;border-radius:999px;border:1px solid #fbbf2466;background:#2a2210;color:#fde68a;font-size:.8rem;font-weight:650;text-decoration:none}
 .chip:hover{text-decoration:none;border-color:#fbbf24}
 .bar{height:10px;background:var(--panel);border-radius:99px;overflow:hidden;border:1px solid var(--line);margin:8px 0 0}
-.bar>i{display:block;height:100%;background:linear-gradient(90deg,var(--good),var(--accent));width:15%}
+.bar>i{display:block;height:100%;background:linear-gradient(90deg,var(--brand-green),var(--brand-gold-bright));width:15%}
+.hair{height:2px;border:0;margin:0 0 14px;background:linear-gradient(90deg,transparent,var(--brand-gold),transparent);opacity:.55}
+.pipe-link{display:inline-block;margin:0 0 10px;font-size:.78rem;font-weight:700;color:#9dffc5}
+.wrow{font-size:.72rem;color:#fde68a;margin-top:4px}
 </style></head>
 <body><div class="wrap">
 
@@ -51,7 +54,7 @@ h1{font-size:clamp(1.5rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;font
   <p class="sub">North star <b>$250,000 bookings by 2026-12-23</b>. Qualified pipeline · bookings · receivables. Never invent contacts or $.</p>
 </header>
 
-<div class="banner" id="banner"><span class="lbl">Campaign</span> Loading…</div>
+<hr class="hair"/><div class="banner" id="banner"><span class="lbl">Campaign</span> Loading…</div>
 
 <div class="pace" id="pace" aria-label="Pace to 250k">
   <div class="kpi"><div class="l">Booked so far</div><div class="v" id="p-booked">—</div><div class="s" id="p-booked-s">loading</div></div>
@@ -60,7 +63,7 @@ h1{font-size:clamp(1.5rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;font
   <div class="kpi"><div class="l">Pace %</div><div class="v" id="p-pct">—</div><div class="s" id="p-pct-s">vs 250k</div>
     <div class="bar" id="p-bar" title="pace"><i></i></div>
   </div>
-  <div class="kpi"><div class="l">Reviews goal</div><div class="v">555</div><div class="s" id="p-rev">current: TBD / input needed</div></div>
+  <div class="kpi"><div class="l">Reviews</div><div class="v" id="p-rev-v">84 / 555</div><div class="s" id="p-rev">showing 84 · goal 555 by Dec 23</div></div>
 </div>
 
 <div class="thesis" id="thesis">Thesis loading…</div>
@@ -72,6 +75,8 @@ h1{font-size:clamp(1.5rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;font
   <section class="col pipeline">
     <div class="kicker">Qualified pipeline</div>
     <h2>Pipeline</h2>
+    <a class="pipe-link" href="growth-pipeline.html">Open weighted pipeline →</a>
+    <div id="top-weighted" class="empty" style="margin-bottom:8px">Top weighted…</div>
     <div id="pipe"><div class="empty">Loading…</div></div>
   </section>
   <section class="col booked">
@@ -131,8 +136,12 @@ h1{font-size:clamp(1.5rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;font
     if(bar) bar.style.width=Math.max(2,Math.min(100,mid))+'%';
 
     const rev=gc.reviews||{};
+    const rc=rev.current!=null?rev.current:84;
+    const rg=rev.goal!=null?rev.goal:555;
+    const rv=document.getElementById('p-rev-v');
+    if(rv) rv.textContent=rc+' / '+rg;
     document.getElementById('p-rev').textContent=
-      rev.current!=null?('current: '+rev.current):(rev.current_label||'current: TBD / input needed');
+      (rev.current_label||('showing '+rc))+' · goal '+rg+' by '+(rev.by||'2026-12-23');
 
     const th=gc.thesis||{};
     document.getElementById('thesis').innerHTML=
@@ -143,16 +152,19 @@ h1{font-size:clamp(1.5rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;font
     const rows = replyRows.length ? replyRows.map(r=>({
       account:r.account,
       status:r.status,
-      customer_or_winback:r.customer_or_winback,
+      customer_or_winback:r.customer_or_winback||r.customer_or_winback,
       contacts:[{name:r.contact_name,email:r.email}],
       reply_from:(r.contact_name||'')+' · '+(r.email||''),
       offer:r.source_campaign,
       mid_estimate_usd:r.mid_dollar,
-      estimate_note:r.mid_dollar==null?'No $ invented':null,
-      evidence:r.evidence?(('thread '+r.evidence.thread_id)+' · '+(r.evidence.date||'')):'gmail_reply',
+      win_pct:r.win_pct,
+      weighted_dollar:r.weighted_dollar,
+      dollar_source:r.dollar_source,
+      estimate_note:r.dollar_note||(r.mid_dollar==null?'No $ invented':null),
+      evidence:r.evidence?(('thread '+(r.evidence.thread_id||'')+' · '+(r.evidence.date||''))):'gmail_reply',
       snippet:(r.evidence&&r.evidence.snippet)||'',
       aka_note:r.aka_note,
-      next:null,
+      next:r.next_step||null,
     })) : (gc.pipeline||[]);
     if(!rows.length){pipeEl.innerHTML='<div class="empty">No qualified pipeline from Gmail replies yet.</div>';}
     else{
@@ -162,11 +174,14 @@ h1{font-size:clamp(1.5rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;font
           return bits.join(' · ');
         }).join(' · ');
         let est='';
-        if(p.mid_estimate_usd!=null || p.upside_estimate_usd!=null){
+        if(p.mid_estimate_usd!=null || p.weighted_dollar!=null || p.upside_estimate_usd!=null){
           const parts=[];
-          if(p.mid_estimate_usd!=null) parts.push('mid ~$'+p.mid_estimate_usd);
+          if(p.mid_estimate_usd!=null) parts.push('$'+p.mid_estimate_usd);
+          if(p.win_pct!=null) parts.push(p.win_pct+'%');
+          if(p.weighted_dollar!=null) parts.push('weighted $'+p.weighted_dollar);
+          if(p.dollar_source) parts.push(p.dollar_source);
           if(p.upside_estimate_usd!=null) parts.push('upside ~$'+p.upside_estimate_usd);
-          est=' · estimate: '+parts.join(' · ')+' (not AR)';
+          est=' · '+parts.join(' · ');
         } else if(p.estimate_note){
           est=' · '+p.estimate_note;
         }
@@ -187,6 +202,24 @@ h1{font-size:clamp(1.5rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;font
         return card(p.account, meta, tags);
       }).join('')
       + (replyRows.length?`<div class="empty" style="margin-top:8px">${replyRows.length} opportunities from growth_reply_pipeline.json (real replies)</div>`:'');
+    }
+
+
+    // Top weighted opps (reply + voice_named)
+    const topEl=document.getElementById('top-weighted');
+    if(topEl){
+      const voice=(rp&&rp.voice_named)||[];
+      const all=[...replyRows, ...voice].filter(x=>x&&x.weighted_dollar!=null);
+      all.sort((a,b)=>(b.weighted_dollar||0)-(a.weighted_dollar||0));
+      const top=all.slice(0,5);
+      if(!top.length) topEl.innerHTML='<span class="empty">No weighted $ yet</span>';
+      else topEl.innerHTML='<div class="sec" style="margin-top:0">Top weighted</div>'+top.map(o=>{
+        const mid=o.mid_dollar!=null?('$'+o.mid_dollar):'—';
+        const w=o.win_pct!=null?(o.win_pct+'%'):'—';
+        const wt=o.weighted_dollar!=null?('$'+o.weighted_dollar):'—';
+        const src=o.dollar_source?(' · '+o.dollar_source):'';
+        return `<div class="card-row"><div class="name">${esc(o.account)}</div><div class="wrow">${mid} · ${w} · weighted ${wt}${esc(src)}</div><div class="meta">${esc(o.next_step||o.contact_name||'')}</div></div>`;
+      }).join('')+`<div class="empty" style="margin-top:6px"><a href="growth-pipeline.html">Full weighted table →</a></div>`;
     }
 
     const sec=document.getElementById('secondary');
@@ -217,15 +250,24 @@ h1{font-size:clamp(1.5rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;font
       const d=String(b.deposit||'').toLowerCase();
       return ['paid','cleared','verified','deposit_incoming','incoming','accepted','partial'].some(x=>p.includes(x)||d.includes(x));
     });
+    const watches=((rp&&rp.ar_watches)||[]).map(w=>{
+      const mid=w.mid_dollar!=null?(' · mid $'+w.mid_dollar):'';
+      return card(w.account||w.contact_name, esc((w.watch_type||w.status||'watch')+mid+' · '+(w.dollar_note||w.next_step||'')+' · not booked'), [{label:'watch', cls:''}]);
+    }).join('');
+    let arHtml='';
     if(!arRows.length){
-      arEl.innerHTML='<div class="empty">No AR-cleared rows yet. paid_verified = '+(bp.counts&&bp.counts.paid_verified!=null?bp.counts.paid_verified:'unknown')+' · deposits may be incoming — do not count $ until cleared.</div>';
+      arHtml='<div class="empty">No AR-cleared rows yet. paid_verified = '+(bp.counts&&bp.counts.paid_verified!=null?bp.counts.paid_verified:'unknown')+' · deposits may be incoming — do not count $ until cleared.</div>';
     } else {
-      arEl.innerHTML=arRows.map(b=>{
+      arHtml=arRows.map(b=>{
         const label=[b.deposit?('deposit: '+b.deposit):null, b.paid?('paid: '+b.paid):null].filter(Boolean).join(' · ');
         return card(b.title, esc(`${b.date||''} · ${label} · no $ invented`), [{label:b.status}]);
       }).join('')
         + `<div class="empty" style="margin-top:8px">Rules: accepted ≠ paid until cleared. Source bookings_pipeline.json as_of ${esc(bp.as_of||'')}</div>`;
     }
+    if(watches){
+      arHtml += '<div class="sec">Forgotten-$ / MIA watches</div>'+watches;
+    }
+    arEl.innerHTML=arHtml;
   }).catch(err=>{
     document.getElementById('pipe').innerHTML='<div class="empty">Could not load growth_campaign.json</div>';
     document.getElementById('booked').innerHTML='<div class="empty">Could not load bookings_pipeline.json</div>';

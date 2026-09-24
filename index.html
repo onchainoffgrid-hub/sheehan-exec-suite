@@ -2,7 +2,7 @@
 <html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Sheehan Homestead · Operator</title>
 <style>
-:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--joy:#fbbf24}
+:root{--brand-green:#3dd68c;--brand-green-deep:#2f6b4f;--brand-gold:#c9a227;--brand-gold-bright:#fbbf24;--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:var(--brand-green);--good:#3dd68c;--warn:#ffb020;--joy:#fbbf24}
 *{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
 a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
 .wrap{max-width:980px;margin:0 auto;padding:40px 22px 72px}
@@ -17,8 +17,8 @@ h1{font-size:clamp(1.6rem,3.4vw,2.25rem);margin:0 0 8px;letter-spacing:-.02em;fo
 .tile h2{margin:0 0 8px;font-size:clamp(1.45rem,2.8vw,1.85rem);letter-spacing:-.015em;line-height:1.15}
 .tile p{margin:0;color:var(--muted);font-size:.92rem;max-width:30ch}
 .tile .go{margin-top:20px;font-size:.95rem;font-weight:800}
-.tile.ops{border-color:#fbbf2466;background:linear-gradient(160deg,#2a2210,#121a2b 68%)}.tile.ops h2{color:#fde68a}.tile.ops .go{color:#fde68a}
-.tile.growth{border-color:#5b8cff88;background:linear-gradient(160deg,#152238,#121a2b 65%)}.tile.growth h2{color:#9ec1ff}.tile.growth .go{color:#9ec1ff}
+.tile.ops{border-color:#c9a22788;background:linear-gradient(160deg,#2a2210,#121a2b 68%)}.tile.ops h2{color:#fde68a}.tile.ops .go{color:#fde68a}
+.tile.growth{border-color:#3dd68c88;background:linear-gradient(160deg,#13281d,#121a2b 65%)}.tile.growth h2{color:#9dffc5}.tile.growth .go{color:#9dffc5}
 .tile.support{border-color:#3dd68c66;background:linear-gradient(160deg,#13281d,#121a2b 65%)}.tile.support h2{color:#9dffc5}.tile.support .go{color:#9dffc5}
 .q{margin:0 0 10px;font-size:.78rem;color:#c5d0e6;font-style:italic}
 footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center}
@@ -26,13 +26,15 @@ footer a{font-size:.78rem;color:var(--muted)}footer a:hover{color:var(--text)}
 .note{color:var(--muted);font-size:.72rem;margin-top:14px}
 .face{font-size:.78rem;color:#c5d0e6;margin:0 0 22px}
 .face b{color:#fff}
+.hair{height:2px;border:0;margin:0 0 14px;background:linear-gradient(90deg,transparent,var(--brand-gold),transparent);opacity:.55}
 </style></head>
 <body><div class="wrap">
 
 <header>
-  <h1>Sheehan Homestead · Operator</h1>
+  <div style="display:flex;align-items:center;gap:14px;margin:0 0 8px"><img src="collateral/hen-logo-flyer-gold-tight.png" alt="" width="52" height="52" style="border-radius:12px;border:1px solid #c9a22755"/><h1 style="margin:0">Sheehan Homestead · Operator</h1></div>
   <p class="sub">Jacksonville Homestead · Franchise #0 · Callahan. Three tiles. Investor + franchisee face.</p>
 </header>
+<hr class="hair"/>
 <p class="face">Seat: <b>Michael Sheehan</b> · Ann-Marie · Critters on Call</p>
 
 <nav class="hub" aria-label="Operations Growth Support">
@@ -58,8 +60,8 @@ footer a{font-size:.78rem;color:var(--muted)}footer a:hover{color:var(--text)}
     <div>
       <div class="kicker">Support · enablement for both</div>
       <h2>Support</h2>
-      <p class="q">Enablement for Ops + Growth — not a third business.</p>
-      <p>Growth enablement · Ops enablement (holes · compliance · gig HR).</p>
+      <p class="q">Sales + Ops enablement — not a third business.</p>
+      <p>Sales enablement · Ops enablement · quieter roadmap/future.</p>
     </div>
     <div class="go">Open Support →</div>
   </a>

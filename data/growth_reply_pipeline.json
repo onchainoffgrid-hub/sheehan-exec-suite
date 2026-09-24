@@ -1,22 +1,48 @@
 {
-  "as_of": "2026-09-24T10:55:00-04:00",
-  "as_of_label": "2026-09-24 10:55 ET",
+  "as_of": "2026-09-24T11:15:00-04:00",
+  "as_of_label": "2026-09-24 11:15 ET",
   "source": "Gmail MCP search_threads + get_thread (campaign replies since 2026-07-01)",
   "rules": {
     "never_invent_emails_or_dollars": true,
     "mid_dollar_null_unless_known": true,
     "palagio_not_pelagio": true,
-    "include_soft_yes": true
+    "include_soft_yes": true,
+    "weighted_dollar": "round(mid_dollar * win_pct / 100)",
+    "win_pct_buckets": [
+      25,
+      50,
+      75,
+      80
+    ],
+    "placeholder_dollars_must_label_source": true,
+    "never_invent_emails": true,
+    "madelynne_beck_not_madeline_cash": true
   },
   "counts": {
     "opportunities": 22,
+    "voice_named": 1,
+    "ar_watches": 2,
     "by_status": {
       "qualified": 6,
       "nurture_later": 2,
       "soft_yes": 5,
       "booked": 6,
       "replied": 3
-    }
+    },
+    "by_win_pct": {
+      "75": 1,
+      "25": 7,
+      "50": 8,
+      "80": 7
+    },
+    "sum_mid_dollar": 5950,
+    "sum_weighted_dollar": 3488
+  },
+  "kpis": {
+    "sum_mid_dollar": 5950,
+    "sum_weighted_dollar": 3488,
+    "opp_count": 23,
+    "placeholder_count": 18
   },
   "opportunities": [
     {
@@ -32,56 +58,82 @@
       },
       "customer_or_winback": "winback",
       "source_campaign": "fall_fest_trunk_or_treat",
-      "aka_note": "Spell Palagio (not Pelagio). Also Kristi \u00b7 Life Enrichment Director \u00b7 lifeenrichmentdirector@palagioseniorliving.com"
+      "aka_note": "Spell Palagio (not Pelagio). Also Kristi \u00b7 Life Enrichment Director \u00b7 lifeenrichmentdirector@palagioseniorliving.com",
+      "win_pct": 75,
+      "weighted_dollar": 150,
+      "close_date": "2026-10-31",
+      "dollar_source": "michael_specified",
+      "next_step": "Confirm fall fest date with Amanda/Kristi \u00b7 send hold",
+      "probability_note": "Michael-confirmed mid $200 \u00b7 warm winback \u2192 75%"
     },
     {
       "account": "Atlantic Beach Country Club",
       "contact_name": "Laura",
       "email": "laura@atlanticbeachcountryclub.com",
       "status": "qualified",
-      "mid_dollar": null,
+      "mid_dollar": 350,
       "evidence": {
         "thread_id": "1a0d020d3b15e628",
         "date": "2026-09-24",
         "snippet": "THanks I have forwarded your email. Please send petting zoo pricing out of curiosity."
       },
       "customer_or_winback": null,
-      "source_campaign": "fall_fest_trunk_or_treat"
+      "source_campaign": "fall_fest_trunk_or_treat",
+      "win_pct": 25,
+      "weighted_dollar": 88,
+      "close_date": "2027-03-24",
+      "dollar_source": "placeholder_standard",
+      "dollar_note": "Placeholder typical mobile PZ ~$350 (not quoted in thread) \u00b7 dollar_source=placeholder_standard",
+      "next_step": "Send petting zoo pricing to Laura \u00b7 nurture",
+      "probability_note": "Curiosity pricing ask \u2192 25% \u00b7 +6mo close"
     },
     {
       "account": "St. Johns River State College Foundation",
       "contact_name": "Bailey H. Akin",
       "email": "baileyakin@sjrstate.edu",
       "status": "nurture_later",
-      "mid_dollar": null,
+      "mid_dollar": 200,
       "evidence": {
         "thread_id": "1a0d134f77eb3b74",
         "date": "2026-09-24",
         "snippet": "fun concept\u2026 neat fundraiser\u2026 Foundation event calendar already planned for the next year\u2026 keep your information on hand\u2026 future Foundation events. Also cc Randa Gibson (Activities Coordinator)."
       },
       "customer_or_winback": null,
-      "source_campaign": "fall_fest_trunk_or_treat"
+      "source_campaign": "fall_fest_trunk_or_treat",
+      "win_pct": 25,
+      "weighted_dollar": 50,
+      "close_date": "2027-03-24",
+      "dollar_source": "placeholder_standard",
+      "dollar_note": "Fall fest / ToT placeholder ~$200",
+      "next_step": "Park for 2027 Foundation calendar \u00b7 keep on file",
+      "probability_note": "Calendar already planned \u00b7 nurture later 25%"
     },
     {
       "account": "Brooks Rehabilitation ADC",
       "contact_name": "Kate Woodcock-Sharp",
       "email": "katelyn.woodcock-sharp@brooksrehab.org",
       "status": "soft_yes",
-      "mid_dollar": null,
+      "mid_dollar": 150,
       "evidence": {
         "thread_id": "199c9d13a9c9e556",
         "date": "2026-09-24",
         "snippet": "Hey Michael, We are! We will reach out soon with dates. \u2026 Kate Woodcock-Sharp, ADC Activities Manager"
       },
       "customer_or_winback": "customer_or_winback",
-      "source_campaign": "referral_tasia_followup"
+      "source_campaign": "referral_tasia_followup",
+      "win_pct": 50,
+      "weighted_dollar": 75,
+      "close_date": "2026-11-15",
+      "dollar_source": "michael_specified",
+      "next_step": "Wait for Kate dates \u00b7 assume-the-sale soft hold",
+      "probability_note": "Michael: mental ~$100 \u00b7 pipeline mid $150 @ 50% soft_yes"
     },
     {
       "account": "Vesta \u00b7 Tamaya / Beach CDD",
       "contact_name": "Kaylie Fitzhugh",
       "email": "kfitzhugh@vestapropertyservices.com",
       "status": "booked",
-      "mid_dollar": null,
+      "mid_dollar": 400,
       "evidence": {
         "thread_id": "1a06268b2ade5cc6",
         "date": "2026-09-02",
@@ -89,14 +141,20 @@
         "bookings_match": "vesta-durbin-2026-09-27"
       },
       "customer_or_winback": "customer",
-      "source_campaign": "vesta_saturday_sale"
+      "source_campaign": "vesta_saturday_sale",
+      "win_pct": 80,
+      "weighted_dollar": 320,
+      "close_date": "2026-09-27",
+      "dollar_source": "placeholder_standard",
+      "dollar_note": "Booked match vesta-durbin-2026-09-27; $ not in bookings file \u2014 mobile PZ placeholder ~$400",
+      "next_step": "Confirm load-out \u00b7 watch deposit/paid"
     },
     {
       "account": "Vesta Property Services",
       "contact_name": "Ross Ruben",
       "email": "rruben@vestapropertyservices.com",
       "status": "booked",
-      "mid_dollar": null,
+      "mid_dollar": 400,
       "evidence": {
         "thread_id": "1a0ad31d88cf87a5",
         "date": "2026-09-24",
@@ -104,14 +162,20 @@
         "bookings_match": "vesta-durbin-2026-09-27"
       },
       "customer_or_winback": "customer",
-      "source_campaign": "vesta_preferred_rates"
+      "source_campaign": "vesta_preferred_rates",
+      "win_pct": 80,
+      "weighted_dollar": 320,
+      "close_date": "2026-09-27",
+      "dollar_source": "placeholder_standard",
+      "dollar_note": "Booked match vesta-durbin-2026-09-27; $ not in bookings file \u2014 mobile PZ placeholder ~$400",
+      "next_step": "Confirm load-out \u00b7 watch deposit/paid"
     },
     {
       "account": "Vesta \u00b7 Saint Johns Golf",
       "contact_name": "Julie Tallaksen",
       "email": "jtallaksen@vestapropertyservices.com",
       "status": "booked",
-      "mid_dollar": null,
+      "mid_dollar": 400,
       "evidence": {
         "thread_id": "1a081ed9503c4e92",
         "date": "2026-09-09",
@@ -119,35 +183,53 @@
         "bookings_match": "vesta-durbin-2026-09-27"
       },
       "customer_or_winback": "customer",
-      "source_campaign": "goat_yoga"
+      "source_campaign": "goat_yoga",
+      "win_pct": 80,
+      "weighted_dollar": 320,
+      "close_date": "2026-09-27",
+      "dollar_source": "placeholder_standard",
+      "dollar_note": "Booked match vesta-durbin-2026-09-27; $ not in bookings file \u2014 mobile PZ placeholder ~$400",
+      "next_step": "Confirm load-out \u00b7 watch deposit/paid"
     },
     {
       "account": "Angels of Care",
       "contact_name": "Brittany Thomas",
       "email": "bthomas@angelsofcare.com",
       "status": "soft_yes",
-      "mid_dollar": null,
+      "mid_dollar": 150,
       "evidence": {
         "thread_id": "1a0165da040173a6",
         "date": "2026-09-21",
         "snippet": "We can do Tuesday October.13 th but would need an earlier time if possible. 11am is perfect for us. Brittany Thomas, BSN, RN"
       },
       "customer_or_winback": "customer_or_winback",
-      "source_campaign": "critter_visit"
+      "source_campaign": "critter_visit",
+      "win_pct": 50,
+      "weighted_dollar": 75,
+      "close_date": "2026-10-13",
+      "dollar_source": "placeholder_standard",
+      "dollar_note": "Senior/clinical visit placeholder ~$150",
+      "next_step": "Push date + soft assume-the-sale"
     },
     {
       "account": "River City Science Academy",
       "contact_name": "Lauren Burnette",
       "email": "lburnette@rivercityscience.org",
       "status": "soft_yes",
-      "mid_dollar": null,
+      "mid_dollar": 350,
       "evidence": {
         "thread_id": "1a0b66893093a768",
         "date": "2026-09-20",
         "snippet": "We would love to continue with this\u2026 (Oct-2 petting zoo follow-up)"
       },
       "customer_or_winback": "customer",
-      "source_campaign": "school_pz"
+      "source_campaign": "school_pz",
+      "win_pct": 50,
+      "weighted_dollar": 175,
+      "close_date": "2026-10-02",
+      "dollar_source": "placeholder_standard",
+      "dollar_note": "School PZ continue \u2014 placeholder ~$350",
+      "next_step": "Push date + soft assume-the-sale"
     },
     {
       "account": "River City Science Academy",
@@ -161,51 +243,81 @@
         "snippet": "Wonderful, Thank you so much! I know my students will be so happy\u2026 Madelynne Beck"
       },
       "customer_or_winback": "customer",
-      "source_campaign": "field_trip"
+      "source_campaign": "field_trip",
+      "win_pct": 25,
+      "weighted_dollar": null,
+      "close_date": "2027-03-24",
+      "dollar_source": "unknown",
+      "dollar_note": "No $ in writing; River City Madelynne Beck \u2260 cash Madeline no-show",
+      "next_step": "Reply / clarify next date",
+      "probability_note": "NOT the Madeline cash no-show"
     },
     {
       "account": "Golf Club of Amelia",
       "contact_name": "S. Regan",
       "email": "sregan@golfclubofamelia.com",
       "status": "qualified",
-      "mid_dollar": null,
+      "mid_dollar": 350,
       "evidence": {
         "thread_id": "1a05d7f4dc4defbb",
         "date": "2026-09-14",
         "snippet": "Hey Michael! \u2026 I finalized the dates last week\u2026"
       },
       "customer_or_winback": null,
-      "source_campaign": "fall_festival"
+      "source_campaign": "fall_festival",
+      "win_pct": 50,
+      "weighted_dollar": 175,
+      "close_date": "2026-10-31",
+      "dollar_source": "placeholder_standard",
+      "dollar_note": "Fall festival dates finalized \u2014 mobile PZ placeholder ~$350",
+      "next_step": "Qualify date \u00b7 send pricing/hold"
     },
     {
       "account": "Goddard / Sunshine Education Group",
       "contact_name": "Dianna Sheikh",
       "email": "dianna.sheikh@sunshineeducationgroup.com",
       "status": "booked",
-      "mid_dollar": null,
+      "mid_dollar": 700,
       "evidence": {
         "thread_id": "1a0aa81223b3bcda",
         "date": "2026-09-17",
         "snippet": "we are good for those dates and I will get the deposit paid for each location",
         "bookings_match": "goddard-tot-2026-10-23",
-        "calendar_accept": "Mobile PZ Event Fri Oct 23, 2026 (sunshinepreschoolsfl accept)"
+        "calendar_accept": "Mobile PZ Event Fri Oct 23, 2026 (sunshinepreschoolsfl accept)",
+        "bookings_ids": [
+          "goddard-tot-2026-10-23",
+          "goddard-tot-2026-10-29"
+        ]
       },
       "customer_or_winback": "customer",
-      "source_campaign": "goddard_trunk_or_treat"
+      "source_campaign": "goddard_trunk_or_treat",
+      "win_pct": 80,
+      "weighted_dollar": 560,
+      "close_date": "2026-10-23",
+      "dollar_source": "placeholder_standard",
+      "dollar_note": "Two ToT locations accepted; no $ in bookings_pipeline \u2014 placeholder ~$350\u00d72=$700",
+      "next_step": "Watch deposits clear \u00b7 lock paid on Oct 23 + Oct 29",
+      "probability_note": "Assume-the-sale / deposit paid each location \u2192 booked 80%"
     },
     {
       "account": "CCMC / Wildlight",
       "contact_name": "E. Bricknell",
       "email": "ebricknell@ccmcnet.com",
       "status": "qualified",
-      "mid_dollar": null,
+      "mid_dollar": 400,
       "evidence": {
         "thread_id": "1a0210433d4dbead",
         "date": "2026-09-11",
         "snippet": "Thank you so much, Ann-Marie! This looks great. I will redo the new vendor paperwork and send it for signature on Monday."
       },
       "customer_or_winback": "customer",
-      "source_campaign": "fall_dates_wildlight"
+      "source_campaign": "fall_dates_wildlight",
+      "win_pct": 50,
+      "weighted_dollar": 200,
+      "close_date": "2026-10-31",
+      "dollar_source": "placeholder_standard",
+      "dollar_note": "Fall dates Wildlight \u2014 mobile/festival placeholder ~$400",
+      "next_step": "Qualify date \u00b7 send pricing/hold"
     },
     {
       "account": "Assumption ECLC",
@@ -219,112 +331,162 @@
         "snippet": "Ok thank you and I will let them know and get back to you soon. God Bless, Jessica Koci \u00b7 Center Manager/Registrar"
       },
       "customer_or_winback": "customer",
-      "source_campaign": "invoice_followup"
+      "source_campaign": "invoice_followup",
+      "win_pct": 25,
+      "weighted_dollar": null,
+      "close_date": "2027-03-24",
+      "dollar_source": "unknown",
+      "dollar_note": "Invoice follow-up reply \u00b7 no $ invented",
+      "next_step": "Reply / clarify next date"
     },
     {
       "account": "Intercoastal Kids",
       "contact_name": "Info (Intercoastal Kids)",
       "email": "info@intercoastalkids.com",
       "status": "qualified",
-      "mid_dollar": null,
+      "mid_dollar": 250,
       "evidence": {
         "thread_id": "1a067538b7603eef",
         "date": "2026-09-03",
         "snippet": "Could you please send me the payment link for the deposit for our Mini Petting Zoo event"
       },
       "customer_or_winback": "customer",
-      "source_campaign": "mini_pz_deposit"
+      "source_campaign": "mini_pz_deposit",
+      "win_pct": 50,
+      "weighted_dollar": 125,
+      "close_date": "2026-10-31",
+      "dollar_source": "placeholder_standard",
+      "dollar_note": "Mini PZ deposit requested \u2014 placeholder ~$250",
+      "next_step": "Qualify date \u00b7 send pricing/hold"
     },
     {
       "account": "Legend Senior Living",
       "contact_name": "Deandre Stringer",
       "email": "deandre.stringer@legendseniorliving.com",
       "status": "replied",
-      "mid_dollar": null,
+      "mid_dollar": 150,
       "evidence": {
         "thread_id": "1a0b4ea1562cdadb",
         "date": "2026-09-18",
         "snippet": "I have received the one for December. Just want to make sure you received the payment for the recent visit."
       },
       "customer_or_winback": "customer",
-      "source_campaign": "paid_invoice_followup"
+      "source_campaign": "paid_invoice_followup",
+      "win_pct": 50,
+      "weighted_dollar": 75,
+      "close_date": "2026-12-15",
+      "dollar_source": "placeholder_standard",
+      "dollar_note": "Senior visit placeholder ~$150 (payment already discussed \u2014 not invented)",
+      "next_step": "Reply / clarify next date"
     },
     {
       "account": "Angie (10/31 petting zoo)",
       "contact_name": "Angie McClellan",
       "email": "angiemcclellan@bellsouth.net",
       "status": "booked",
-      "mid_dollar": null,
+      "mid_dollar": 350,
       "evidence": {
         "thread_id": "1a08da45a956441c",
         "date": "2026-09-11",
         "snippet": "Thank you so much! We look forward to having you. (You 10-31 4-6 pm petting zoo)"
       },
       "customer_or_winback": "customer",
-      "source_campaign": "consumer_pz"
+      "source_campaign": "consumer_pz",
+      "win_pct": 80,
+      "weighted_dollar": 280,
+      "close_date": "2026-10-31",
+      "dollar_source": "placeholder_standard",
+      "dollar_note": "Consumer PZ 10/31 booked; $ not in writing \u2014 placeholder ~$350",
+      "next_step": "Confirm load-out \u00b7 watch deposit/paid"
     },
     {
       "account": "Pages Dairy Rd event (10/31)",
       "contact_name": "Fields",
       "email": "fields8990@gmail.com",
       "status": "qualified",
-      "mid_dollar": null,
+      "mid_dollar": 350,
       "evidence": {
         "thread_id": "1a083f86de5af624",
         "date": "2026-09-15",
         "snippet": "The events address is: 86674 pages dairy rd Yulee fl \u2026 It will take me a few days to get that paid"
       },
       "customer_or_winback": "customer",
-      "source_campaign": "consumer_pz"
+      "source_campaign": "consumer_pz",
+      "win_pct": 50,
+      "weighted_dollar": 175,
+      "close_date": "2026-10-31",
+      "dollar_source": "placeholder_standard",
+      "dollar_note": "Consumer PZ; payment pending \u2014 placeholder ~$350",
+      "next_step": "Qualify date \u00b7 send pricing/hold"
     },
     {
       "account": "Fletcher's Tender Care",
       "contact_name": "E. Cooks",
       "email": "ecooks@fletcherstendercare.com",
       "status": "nurture_later",
-      "mid_dollar": null,
+      "mid_dollar": 150,
       "evidence": {
         "thread_id": "1a0b5b493559793f",
         "date": "2026-09-18",
         "snippet": "When it gets cold, I will not be able to continue pet therapy because we have 2 staff members that are highly allergic"
       },
       "customer_or_winback": "customer",
-      "source_campaign": "pet_therapy"
+      "source_campaign": "pet_therapy",
+      "win_pct": 25,
+      "weighted_dollar": 38,
+      "close_date": "2027-03-24",
+      "dollar_source": "placeholder_standard",
+      "dollar_note": "Pet therapy visit placeholder ~$150",
+      "next_step": "Seasonal hold \u00b7 resume when warm weather",
+      "probability_note": "Cold/allergies pause \u00b7 nurture 25%"
     },
     {
       "account": "Consumer tour inquiry",
       "contact_name": "A.C. Walker",
       "email": "acwalker22@gmail.com",
       "status": "soft_yes",
-      "mid_dollar": null,
+      "mid_dollar": 75,
       "evidence": {
         "thread_id": "1a0b99023fcb7b25",
         "date": "2026-09-19",
         "snippet": "Do you offer tours of your homestead and animal interactions? My family will be visiting Jacksonville in October."
       },
       "customer_or_winback": null,
-      "source_campaign": "inbound_consumer"
+      "source_campaign": "inbound_consumer",
+      "win_pct": 25,
+      "weighted_dollar": 19,
+      "close_date": "2027-03-24",
+      "dollar_source": "placeholder_standard",
+      "dollar_note": "Homestead tour placeholder ~$75 \u2014 product idea $5 ticket IGNORED",
+      "next_step": "Push date + soft assume-the-sale",
+      "probability_note": "Tour inquiry soft \u00b7 25% (not building $5 ticket product)"
     },
     {
       "account": "Ashley M. Kopec (quote)",
       "contact_name": "Ashley M. Kopec",
       "email": "ashleymkopec@gmail.com",
       "status": "soft_yes",
-      "mid_dollar": null,
+      "mid_dollar": 350,
       "evidence": {
         "thread_id": "1a052a9743ef6cf5",
         "date": "2026-09-02",
         "snippet": "We're just waiting on one more quote on Friday\u2026 before we decide how to move forward."
       },
       "customer_or_winback": null,
-      "source_campaign": "mobile_pz_quote"
+      "source_campaign": "mobile_pz_quote",
+      "win_pct": 25,
+      "weighted_dollar": 88,
+      "close_date": "2027-03-24",
+      "dollar_source": "placeholder_standard",
+      "dollar_note": "Mobile PZ quote \u2014 placeholder ~$350",
+      "next_step": "Push date + soft assume-the-sale"
     },
     {
       "account": "Mommy & Me (Naomi Chadwick)",
       "contact_name": "Naomi Chadwick",
       "email": "naomi.chadwick@hotmail.com",
       "status": "booked",
-      "mid_dollar": null,
+      "mid_dollar": 75,
       "evidence": {
         "thread_id": "1a04af6a48f83cc0",
         "date": "2026-08-29",
@@ -332,7 +494,190 @@
         "bookings_match": "alexa-mommy-me-2026-10-01"
       },
       "customer_or_winback": "customer",
-      "source_campaign": "mommy_and_me"
+      "source_campaign": "mommy_and_me",
+      "win_pct": 80,
+      "weighted_dollar": 60,
+      "close_date": "2026-10-01",
+      "dollar_source": "placeholder_standard",
+      "dollar_note": "Mommy & Me booked; $ not in bookings file \u2014 placeholder ~$75",
+      "next_step": "Confirm load-out \u00b7 watch deposit/paid"
+    }
+  ],
+  "voice_named": [
+    {
+      "account": "Discovery Village at Deerwood",
+      "contact_name": "Patricia Valenzuela",
+      "email": "tfelix@discoveryvillages.com",
+      "phone": "(904) 667-3500",
+      "role": "Director of Celebrations",
+      "status": "assume_the_sale",
+      "mid_dollar": 150,
+      "win_pct": 80,
+      "weighted_dollar": 120,
+      "close_date": "2026-11-15",
+      "dollar_source": "michael_specified",
+      "dollar_note": "CRM override: Michael believes ~$150 visit sold (Patricia / Discovery)",
+      "next_step": "Assume-the-sale close \u00b7 confirm Celebrations date",
+      "probability_note": "Michael ~80% assume-the-sale",
+      "customer_or_winback": "pipeline",
+      "source_campaign": "voice_named_patricia",
+      "evidence": {
+        "source": "todays_11_play.json / crm_source_overrides.json",
+        "note": "Email only from existing growth_campaign / crm data \u2014 not invented"
+      },
+      "pipeline_section": "voice_named"
+    }
+  ],
+  "ar_watches": [
+    {
+      "account": "Julie Pettigrew",
+      "contact_name": "Julie Pettigrew",
+      "email": null,
+      "status": "pipeline_mia",
+      "mid_dollar": null,
+      "win_pct": null,
+      "weighted_dollar": null,
+      "close_date": null,
+      "dollar_source": "unknown",
+      "dollar_note": "No $ \u00b7 MIA from pipeline \u2014 re-surface or kill",
+      "next_step": "Find where she dropped in BDR/pipeline",
+      "probability_note": "Watch row \u2014 not booked",
+      "watch_type": "pipeline_mia",
+      "evidence": {
+        "source": "bookings_pipeline.json",
+        "id": "julie-pettigrew-mia"
+      },
+      "pipeline_section": "ar_watch"
+    },
+    {
+      "account": "Madeline (cash no-show)",
+      "contact_name": "Madeline",
+      "email": null,
+      "status": "no_pay",
+      "mid_dollar": 200,
+      "win_pct": 0,
+      "weighted_dollar": 0,
+      "close_date": "2026-10-03",
+      "dollar_source": "michael_specified",
+      "dollar_note": "Michael: ~$200 cash supposed to bring \u2014 did not. NOT River City Madelynne Beck.",
+      "next_step": "Optional soft follow-up only \u00b7 do not count as locked",
+      "probability_note": "Forgotten-$ risk \u00b7 win 0% until paid",
+      "watch_type": "forgotten_cash",
+      "evidence": {
+        "source": "bookings_pipeline.json",
+        "id": "madelyn-birthday-2026-10-03"
+      },
+      "pipeline_section": "ar_watch"
+    }
+  ],
+  "placeholders": [
+    {
+      "account": "Atlantic Beach Country Club",
+      "mid_dollar": 350,
+      "dollar_source": "placeholder_standard",
+      "dollar_note": "Placeholder typical mobile PZ ~$350 (not quoted in thread) \u00b7 dollar_source=placeholder_standard"
+    },
+    {
+      "account": "St. Johns River State College Foundation",
+      "mid_dollar": 200,
+      "dollar_source": "placeholder_standard",
+      "dollar_note": "Fall fest / ToT placeholder ~$200"
+    },
+    {
+      "account": "Vesta \u00b7 Tamaya / Beach CDD",
+      "mid_dollar": 400,
+      "dollar_source": "placeholder_standard",
+      "dollar_note": "Booked match vesta-durbin-2026-09-27; $ not in bookings file \u2014 mobile PZ placeholder ~$400"
+    },
+    {
+      "account": "Vesta Property Services",
+      "mid_dollar": 400,
+      "dollar_source": "placeholder_standard",
+      "dollar_note": "Booked match vesta-durbin-2026-09-27; $ not in bookings file \u2014 mobile PZ placeholder ~$400"
+    },
+    {
+      "account": "Vesta \u00b7 Saint Johns Golf",
+      "mid_dollar": 400,
+      "dollar_source": "placeholder_standard",
+      "dollar_note": "Booked match vesta-durbin-2026-09-27; $ not in bookings file \u2014 mobile PZ placeholder ~$400"
+    },
+    {
+      "account": "Angels of Care",
+      "mid_dollar": 150,
+      "dollar_source": "placeholder_standard",
+      "dollar_note": "Senior/clinical visit placeholder ~$150"
+    },
+    {
+      "account": "River City Science Academy",
+      "mid_dollar": 350,
+      "dollar_source": "placeholder_standard",
+      "dollar_note": "School PZ continue \u2014 placeholder ~$350"
+    },
+    {
+      "account": "Golf Club of Amelia",
+      "mid_dollar": 350,
+      "dollar_source": "placeholder_standard",
+      "dollar_note": "Fall festival dates finalized \u2014 mobile PZ placeholder ~$350"
+    },
+    {
+      "account": "Goddard / Sunshine Education Group",
+      "mid_dollar": 700,
+      "dollar_source": "placeholder_standard",
+      "dollar_note": "Two ToT locations accepted; no $ in bookings_pipeline \u2014 placeholder ~$350\u00d72=$700"
+    },
+    {
+      "account": "CCMC / Wildlight",
+      "mid_dollar": 400,
+      "dollar_source": "placeholder_standard",
+      "dollar_note": "Fall dates Wildlight \u2014 mobile/festival placeholder ~$400"
+    },
+    {
+      "account": "Intercoastal Kids",
+      "mid_dollar": 250,
+      "dollar_source": "placeholder_standard",
+      "dollar_note": "Mini PZ deposit requested \u2014 placeholder ~$250"
+    },
+    {
+      "account": "Legend Senior Living",
+      "mid_dollar": 150,
+      "dollar_source": "placeholder_standard",
+      "dollar_note": "Senior visit placeholder ~$150 (payment already discussed \u2014 not invented)"
+    },
+    {
+      "account": "Angie (10/31 petting zoo)",
+      "mid_dollar": 350,
+      "dollar_source": "placeholder_standard",
+      "dollar_note": "Consumer PZ 10/31 booked; $ not in writing \u2014 placeholder ~$350"
+    },
+    {
+      "account": "Pages Dairy Rd event (10/31)",
+      "mid_dollar": 350,
+      "dollar_source": "placeholder_standard",
+      "dollar_note": "Consumer PZ; payment pending \u2014 placeholder ~$350"
+    },
+    {
+      "account": "Fletcher's Tender Care",
+      "mid_dollar": 150,
+      "dollar_source": "placeholder_standard",
+      "dollar_note": "Pet therapy visit placeholder ~$150"
+    },
+    {
+      "account": "Consumer tour inquiry",
+      "mid_dollar": 75,
+      "dollar_source": "placeholder_standard",
+      "dollar_note": "Homestead tour placeholder ~$75 \u2014 product idea $5 ticket IGNORED"
+    },
+    {
+      "account": "Ashley M. Kopec (quote)",
+      "mid_dollar": 350,
+      "dollar_source": "placeholder_standard",
+      "dollar_note": "Mobile PZ quote \u2014 placeholder ~$350"
+    },
+    {
+      "account": "Mommy & Me (Naomi Chadwick)",
+      "mid_dollar": 75,
+      "dollar_source": "placeholder_standard",
+      "dollar_note": "Mommy & Me booked; $ not in bookings file \u2014 placeholder ~$75"
     }
   ]
 }

@@ -2,7 +2,7 @@
 <html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Operations · fulfillment · Sheehan Homestead</title>
 <style>
-:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--bad:#ff6b4a;--joy:#fbbf24}
+:root{--brand-green:#3dd68c;--brand-green-deep:#2f6b4f;--brand-gold:#c9a227;--brand-gold-bright:#fbbf24;--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:var(--brand-green);--good:#3dd68c;--warn:#ffb020;--bad:#ff6b4a;--joy:var(--brand-gold-bright)}
 *{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
 a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
 .wrap{max-width:1100px;margin:0 auto;padding:28px 22px 64px}
@@ -71,6 +71,7 @@ h1{font-size:clamp(1.5rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;font
 .need{display:inline-block;margin:2px 4px 0 0;font-size:.65rem;padding:2px 8px;border-radius:999px;border:1px solid #ffb02066;color:var(--warn);font-weight:650;background:#2a2210}
 .gaps-note{margin:0 0 16px;padding:10px 14px;border:1px dashed #ffb02055;border-radius:12px;background:#16140f;font-size:.8rem;color:var(--muted)}
 .gaps-note b{color:var(--warn)}
+.hair{height:2px;border:0;margin:0 0 14px;background:linear-gradient(90deg,transparent,var(--brand-gold),transparent);opacity:.55}
 </style></head>
 <body><div class="wrap">
 
@@ -80,6 +81,7 @@ h1{font-size:clamp(1.5rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;font
   <p class="sub">Bare MVP for Ann-Marie: calendar white space · showstoppers · team. Capacity ceiling <b>4</b> · green ≤3 · yellow =4 · orange ≥5.</p>
   <p class="q">Am I in business? Can we deliver what we sold today?</p>
 </header>
+<hr class="hair"/>
 <p class="asof" id="asof">Synced from Google Calendar · refresh via Dashboard Bot</p>
 
 <div class="sum" id="sum" aria-label="Delivery summary">
