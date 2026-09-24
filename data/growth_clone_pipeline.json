@@ -1,0 +1,915 @@
+{
+  "as_of": "2026-09-24",
+  "as_of_label": "Thu Sep 24, 2026 ET",
+  "source": "paypal_customers Sep\u2013Nov 2025 + invoices + calendar_attendees + customers_no_next_date enrichment; deduped vs growth_reply_pipeline warm statuses + bookings LOCKED/ACCEPTED same season",
+  "rules": {
+    "clone_window": "prior purchase Sep\u2013Nov 2025 \u2192 clone for fall 2026; Mar\u2013Apr \u2192 spring anniversary",
+    "win_pct_prior_buyer": 50,
+    "win_pct_repeat_buyer": 60,
+    "win_pct_if_already_in_reply_warm": "skip to skipped_deduped \u2014 do not double-count weighted $",
+    "mid_dollar": "last fall-dated invoice gross for payer; else customer Gross; label dollar_source",
+    "never_invent_contact": true,
+    "exclude": "Michael Sheehan owner self-payments",
+    "secondary_dunk": "fall_priority.json (129 CDD/HOA-style) remains separate \u2014 not dumped into $ pipeline"
+  },
+  "kpis": {
+    "clone_count": 25,
+    "sum_mid_dollar": 9027.91,
+    "sum_weighted_dollar": 4704,
+    "skipped_deduped_count": 6,
+    "spring_anniversary_count": 0
+  },
+  "clones": [
+    {
+      "account": "Martin Matthews",
+      "contact_name": "Martin Matthews",
+      "email": null,
+      "phone": null,
+      "status": "clone_renew",
+      "prior_purchase_date": "2025-10-31",
+      "prior_amount": 851.9,
+      "prior_product": "Paid event (PayPal) \u2014 confirm package on dunk",
+      "clone_close_date": "2026-10-31",
+      "mid_dollar": 851.9,
+      "win_pct": 50,
+      "weighted_dollar": 426,
+      "dollar_source": "paypal_invoice",
+      "next_step": "Dunk: CAPTCHA or call \u2014 clone last year\u2019s booking",
+      "dunk_lane": "captcha_or_call",
+      "evidence": {
+        "invoices": [
+          "0058"
+        ],
+        "invoice_fall_dates": [
+          "2025-10-31"
+        ],
+        "calendar_hint": null,
+        "paypal_first_paid": "2025-10-31",
+        "paypal_last_paid": "2025-10-31",
+        "paypal_gross": 851.9,
+        "repeat": "No"
+      },
+      "dedupe_note": null
+    },
+    {
+      "account": "Silver Leaf \u00b7 First Coast CMS",
+      "contact_name": "Elizabeth Giacobbi",
+      "email": "liz@firstcoastcms.com",
+      "phone": null,
+      "status": "clone_renew",
+      "prior_purchase_date": "2025-09-21",
+      "prior_amount": 811.52,
+      "prior_product": "Mobile Petting Zoo",
+      "clone_close_date": "2026-09-21",
+      "mid_dollar": 811.52,
+      "win_pct": 50,
+      "weighted_dollar": 406,
+      "dollar_source": "paypal_invoice",
+      "next_step": "Dunk: CAPTCHA or call \u2014 clone last year\u2019s booking",
+      "dunk_lane": "captcha_or_call",
+      "evidence": {
+        "invoices": [
+          "0030"
+        ],
+        "invoice_fall_dates": [
+          "2025-09-21"
+        ],
+        "calendar_hint": "Mobile Petting Zoo (2025-09-27) \u00b7 liz@firstcoastcms.com",
+        "paypal_first_paid": "2025-09-21",
+        "paypal_last_paid": "2025-09-21",
+        "paypal_gross": 811.52,
+        "repeat": "No"
+      },
+      "dedupe_note": null
+    },
+    {
+      "account": "Goddard School - Julington Creek",
+      "contact_name": "Niral Patel",
+      "email": "niralnpatel1618@gmail.com",
+      "phone": "(904) 230-2002",
+      "status": "clone_renew",
+      "prior_purchase_date": "2025-10-28",
+      "prior_amount": 742.0,
+      "prior_product": "Paid event (PayPal) \u2014 confirm package on dunk",
+      "clone_close_date": "2026-10-28",
+      "mid_dollar": 742.0,
+      "win_pct": 50,
+      "weighted_dollar": 371,
+      "dollar_source": "paypal_invoice",
+      "next_step": "Dunk: CAPTCHA or call \u2014 clone last year\u2019s booking",
+      "dunk_lane": "captcha_or_call",
+      "evidence": {
+        "invoices": [
+          "0018"
+        ],
+        "invoice_fall_dates": [
+          "2025-10-28"
+        ],
+        "calendar_hint": null,
+        "paypal_first_paid": "2025-10-28",
+        "paypal_last_paid": "2025-10-28",
+        "paypal_gross": 742.0,
+        "repeat": "No"
+      },
+      "dedupe_note": null
+    },
+    {
+      "account": "Kelsey Taylor",
+      "contact_name": "Kelsey Taylor",
+      "email": "ktaylor28@ju.edu",
+      "phone": null,
+      "status": "clone_renew",
+      "prior_purchase_date": "2025-11-06",
+      "prior_amount": 700.0,
+      "prior_product": "Mobile PZ Event",
+      "clone_close_date": "2026-11-06",
+      "mid_dollar": 700.0,
+      "win_pct": 50,
+      "weighted_dollar": 350,
+      "dollar_source": "paypal_invoice",
+      "next_step": "Dunk: CAPTCHA or call \u2014 clone last year\u2019s booking",
+      "dunk_lane": "captcha_or_call",
+      "evidence": {
+        "invoices": [
+          "0061"
+        ],
+        "invoice_fall_dates": [
+          "2025-11-06"
+        ],
+        "calendar_hint": "Mobile PZ Event (2025-11-17) \u00b7 ktaylor28@ju.edu",
+        "paypal_first_paid": "2025-11-06",
+        "paypal_last_paid": "2025-11-06",
+        "paypal_gross": 700.0,
+        "repeat": "No"
+      },
+      "dedupe_note": null
+    },
+    {
+      "account": "Vesta \u00b7 Sampson Creek at St. John's Country Club",
+      "contact_name": "Haley Hadd",
+      "email": "hhadd@vestapropertyservices.com",
+      "phone": null,
+      "status": "clone_renew",
+      "prior_purchase_date": "2025-10-24",
+      "prior_amount": 450.0,
+      "prior_product": "Paid event (PayPal) \u2014 confirm package on dunk",
+      "clone_close_date": "2026-10-24",
+      "mid_dollar": 450.0,
+      "win_pct": 60,
+      "weighted_dollar": 270,
+      "dollar_source": "paypal_invoice",
+      "next_step": "Dunk: CAPTCHA or call \u2014 clone last year\u2019s booking",
+      "dunk_lane": "captcha_or_call",
+      "evidence": {
+        "invoices": [
+          "0028"
+        ],
+        "invoice_fall_dates": [
+          "2025-10-24"
+        ],
+        "calendar_hint": null,
+        "paypal_first_paid": "2025-10-24",
+        "paypal_last_paid": "2025-12-30",
+        "paypal_gross": 900.0,
+        "repeat": "Yes"
+      },
+      "dedupe_note": null
+    },
+    {
+      "account": "theresa timm",
+      "contact_name": "theresa timm",
+      "email": null,
+      "phone": null,
+      "status": "clone_renew",
+      "prior_purchase_date": "2025-10-10",
+      "prior_amount": 500.0,
+      "prior_product": "Paid event (PayPal) \u2014 confirm package on dunk",
+      "clone_close_date": "2026-10-10",
+      "mid_dollar": 500.0,
+      "win_pct": 50,
+      "weighted_dollar": 250,
+      "dollar_source": "paypal_customer_gross",
+      "next_step": "Dunk: CAPTCHA or call \u2014 clone last year\u2019s booking",
+      "dunk_lane": "captcha_or_call",
+      "evidence": {
+        "invoices": [],
+        "invoice_fall_dates": null,
+        "calendar_hint": null,
+        "paypal_first_paid": "2025-10-10",
+        "paypal_last_paid": "2025-10-10",
+        "paypal_gross": 500.0,
+        "repeat": "No"
+      },
+      "dedupe_note": null
+    },
+    {
+      "account": "Amelia Island Plantation Community Association (AIPCA)",
+      "contact_name": "Katherine Bean",
+      "email": "kbean@aipca.net",
+      "phone": "(904) 491-9850",
+      "status": "clone_renew",
+      "prior_purchase_date": "2025-10-24",
+      "prior_amount": 475.0,
+      "prior_product": "Mobile Petting Zoo",
+      "clone_close_date": "2026-10-24",
+      "mid_dollar": 475.0,
+      "win_pct": 50,
+      "weighted_dollar": 238,
+      "dollar_source": "paypal_invoice",
+      "next_step": "Dunk: CAPTCHA or call \u2014 clone last year\u2019s booking",
+      "dunk_lane": "captcha_or_call",
+      "evidence": {
+        "invoices": [
+          "0053"
+        ],
+        "invoice_fall_dates": [
+          "2025-10-24"
+        ],
+        "calendar_hint": "Mobile Petting Zoo (2025-11-08) \u00b7 kbean@aipca.net",
+        "paypal_first_paid": "2025-10-24",
+        "paypal_last_paid": "2025-10-24",
+        "paypal_gross": 475.0,
+        "repeat": "No"
+      },
+      "dedupe_note": null
+    },
+    {
+      "account": "Sarah Bierschied",
+      "contact_name": "Sarah Bierschied",
+      "email": null,
+      "phone": null,
+      "status": "clone_renew",
+      "prior_purchase_date": "2025-11-03",
+      "prior_amount": 429.19,
+      "prior_product": "Paid event (PayPal) \u2014 confirm package on dunk",
+      "clone_close_date": "2026-11-03",
+      "mid_dollar": 429.19,
+      "win_pct": 50,
+      "weighted_dollar": 215,
+      "dollar_source": "paypal_invoice",
+      "next_step": "Dunk: CAPTCHA or call \u2014 clone last year\u2019s booking",
+      "dunk_lane": "captcha_or_call",
+      "evidence": {
+        "invoices": [
+          "0059"
+        ],
+        "invoice_fall_dates": [
+          "2025-11-03"
+        ],
+        "calendar_hint": null,
+        "paypal_first_paid": "2025-11-03",
+        "paypal_last_paid": "2025-11-03",
+        "paypal_gross": 429.19,
+        "repeat": "No"
+      },
+      "dedupe_note": null
+    },
+    {
+      "account": "Abigail Gayle",
+      "contact_name": "Abigail Gayle",
+      "email": null,
+      "phone": null,
+      "status": "clone_renew",
+      "prior_purchase_date": "2025-11-12",
+      "prior_amount": 344.25,
+      "prior_product": "Paid event (PayPal) \u2014 confirm package on dunk",
+      "clone_close_date": "2026-11-12",
+      "mid_dollar": 344.25,
+      "win_pct": 60,
+      "weighted_dollar": 207,
+      "dollar_source": "paypal_invoice",
+      "next_step": "Dunk: CAPTCHA or call \u2014 clone last year\u2019s booking",
+      "dunk_lane": "captcha_or_call",
+      "evidence": {
+        "invoices": [
+          "0064"
+        ],
+        "invoice_fall_dates": [
+          "2025-11-12"
+        ],
+        "calendar_hint": null,
+        "paypal_first_paid": "2025-11-12",
+        "paypal_last_paid": "2025-12-06",
+        "paypal_gross": 344.25,
+        "repeat": "Yes"
+      },
+      "dedupe_note": null
+    },
+    {
+      "account": "Vanessa Kocher",
+      "contact_name": "Vanessa Kocher",
+      "email": null,
+      "phone": null,
+      "status": "clone_renew",
+      "prior_purchase_date": "2025-11-13",
+      "prior_amount": 344.25,
+      "prior_product": "Paid event (PayPal) \u2014 confirm package on dunk",
+      "clone_close_date": "2026-11-13",
+      "mid_dollar": 344.25,
+      "win_pct": 60,
+      "weighted_dollar": 207,
+      "dollar_source": "paypal_invoice",
+      "next_step": "Dunk: CAPTCHA or call \u2014 clone last year\u2019s booking",
+      "dunk_lane": "captcha_or_call",
+      "evidence": {
+        "invoices": [
+          "0065"
+        ],
+        "invoice_fall_dates": [
+          "2025-11-13"
+        ],
+        "calendar_hint": null,
+        "paypal_first_paid": "2025-11-13",
+        "paypal_last_paid": "2025-12-06",
+        "paypal_gross": 344.25,
+        "repeat": "Yes"
+      },
+      "dedupe_note": null
+    },
+    {
+      "account": "Stephanie Traylor",
+      "contact_name": "Stephanie Traylor",
+      "email": null,
+      "phone": null,
+      "status": "clone_renew",
+      "prior_purchase_date": "2025-10-29",
+      "prior_amount": 400.0,
+      "prior_product": "Paid event (PayPal) \u2014 confirm package on dunk",
+      "clone_close_date": "2026-10-29",
+      "mid_dollar": 400.0,
+      "win_pct": 50,
+      "weighted_dollar": 200,
+      "dollar_source": "paypal_invoice",
+      "next_step": "Dunk: CAPTCHA or call \u2014 clone last year\u2019s booking",
+      "dunk_lane": "captcha_or_call",
+      "evidence": {
+        "invoices": [
+          "0050"
+        ],
+        "invoice_fall_dates": [
+          "2025-10-29"
+        ],
+        "calendar_hint": null,
+        "paypal_first_paid": "2025-10-29",
+        "paypal_last_paid": "2025-10-29",
+        "paypal_gross": 400.0,
+        "repeat": "No"
+      },
+      "dedupe_note": null
+    },
+    {
+      "account": "Christ the King Early Learning Center",
+      "contact_name": "Laura Harrington",
+      "email": "wtlaharrington@gmail.com",
+      "phone": "(904) 724-7239",
+      "status": "clone_renew",
+      "prior_purchase_date": "2025-11-23",
+      "prior_amount": 300.0,
+      "prior_product": "Mobile PZ - Birthday",
+      "clone_close_date": "2026-11-23",
+      "mid_dollar": 300.0,
+      "win_pct": 60,
+      "weighted_dollar": 180,
+      "dollar_source": "paypal_invoice",
+      "next_step": "Dunk: CAPTCHA or call \u2014 clone last year\u2019s booking",
+      "dunk_lane": "captcha_or_call",
+      "evidence": {
+        "invoices": [
+          "0010"
+        ],
+        "invoice_fall_dates": [
+          "2025-11-23"
+        ],
+        "calendar_hint": "Mobile PZ - Birthday (2025-11-16) \u00b7 wtlaharrington@gmail.com",
+        "paypal_first_paid": "2025-07-17",
+        "paypal_last_paid": "2025-11-23",
+        "paypal_gross": 600.0,
+        "repeat": "Yes"
+      },
+      "dedupe_note": null
+    },
+    {
+      "account": "Michelle Cannilla",
+      "contact_name": "Michelle Cannilla",
+      "email": null,
+      "phone": null,
+      "status": "clone_renew",
+      "prior_purchase_date": "2025-11-24",
+      "prior_amount": 288.25,
+      "prior_product": "Paid event (PayPal) \u2014 confirm package on dunk",
+      "clone_close_date": "2026-11-24",
+      "mid_dollar": 288.25,
+      "win_pct": 60,
+      "weighted_dollar": 173,
+      "dollar_source": "paypal_invoice",
+      "next_step": "Dunk: CAPTCHA or call \u2014 clone last year\u2019s booking",
+      "dunk_lane": "captcha_or_call",
+      "evidence": {
+        "invoices": [
+          "0070"
+        ],
+        "invoice_fall_dates": [
+          "2025-11-24"
+        ],
+        "calendar_hint": null,
+        "paypal_first_paid": "2025-11-24",
+        "paypal_last_paid": "2025-12-21",
+        "paypal_gross": 288.25,
+        "repeat": "Yes"
+      },
+      "dedupe_note": null
+    },
+    {
+      "account": "Clara White Mission, Inc.",
+      "contact_name": "Clara White Mission, Inc.",
+      "email": "bdawson@clarawhitemission.org",
+      "phone": null,
+      "status": "clone_renew",
+      "prior_purchase_date": "2025-10-29",
+      "prior_amount": 325.0,
+      "prior_product": "Mobile PZ",
+      "clone_close_date": "2026-10-29",
+      "mid_dollar": 325.0,
+      "win_pct": 50,
+      "weighted_dollar": 162,
+      "dollar_source": "paypal_invoice",
+      "next_step": "Dunk: CAPTCHA or call \u2014 clone last year\u2019s booking",
+      "dunk_lane": "captcha_or_call",
+      "evidence": {
+        "invoices": [
+          "0055"
+        ],
+        "invoice_fall_dates": [
+          "2025-10-29"
+        ],
+        "calendar_hint": "Mobile PZ (2025-10-25) \u00b7 bdawson@clarawhitemission.org",
+        "paypal_first_paid": "2025-10-29",
+        "paypal_last_paid": "2025-10-29",
+        "paypal_gross": 325.0,
+        "repeat": "No"
+      },
+      "dedupe_note": null
+    },
+    {
+      "account": "Jeremiah Stanley",
+      "contact_name": "Jeremiah Stanley",
+      "email": null,
+      "phone": null,
+      "status": "clone_renew",
+      "prior_purchase_date": "2025-09-03",
+      "prior_amount": 300.0,
+      "prior_product": "Paid event (PayPal) \u2014 confirm package on dunk",
+      "clone_close_date": "2026-09-03",
+      "mid_dollar": 300.0,
+      "win_pct": 50,
+      "weighted_dollar": 150,
+      "dollar_source": "paypal_invoice",
+      "next_step": "Dunk: CAPTCHA or call \u2014 clone last year\u2019s booking",
+      "dunk_lane": "captcha_or_call",
+      "evidence": {
+        "invoices": [
+          "0027"
+        ],
+        "invoice_fall_dates": [
+          "2025-09-03"
+        ],
+        "calendar_hint": null,
+        "paypal_first_paid": "2025-09-03",
+        "paypal_last_paid": "2025-09-03",
+        "paypal_gross": 300.0,
+        "repeat": "No"
+      },
+      "dedupe_note": null
+    },
+    {
+      "account": "Randy Harp",
+      "contact_name": "Randy Harp",
+      "email": "randyharp@gmail.com",
+      "phone": null,
+      "status": "clone_renew",
+      "prior_purchase_date": "2025-09-17",
+      "prior_amount": 275.0,
+      "prior_product": "Mobile petting zoo",
+      "clone_close_date": "2026-09-17",
+      "mid_dollar": 275.0,
+      "win_pct": 50,
+      "weighted_dollar": 138,
+      "dollar_source": "paypal_invoice",
+      "next_step": "Dunk: CAPTCHA or call \u2014 clone last year\u2019s booking",
+      "dunk_lane": "captcha_or_call",
+      "evidence": {
+        "invoices": [
+          "0035"
+        ],
+        "invoice_fall_dates": [
+          "2025-09-17"
+        ],
+        "calendar_hint": "Mobile petting zoo (2025-09-19) \u00b7 randyharp@gmail.com",
+        "paypal_first_paid": "2025-09-17",
+        "paypal_last_paid": "2025-09-17",
+        "paypal_gross": 275.0,
+        "repeat": "No"
+      },
+      "dedupe_note": null
+    },
+    {
+      "account": "Tanielle Smith",
+      "contact_name": "Tanielle Smith",
+      "email": null,
+      "phone": null,
+      "status": "clone_renew",
+      "prior_purchase_date": "2025-11-25",
+      "prior_amount": 225.0,
+      "prior_product": "Paid event (PayPal) \u2014 confirm package on dunk",
+      "clone_close_date": "2026-11-25",
+      "mid_dollar": 225.0,
+      "win_pct": 50,
+      "weighted_dollar": 112,
+      "dollar_source": "paypal_invoice",
+      "next_step": "Dunk: CAPTCHA or call \u2014 clone last year\u2019s booking",
+      "dunk_lane": "captcha_or_call",
+      "evidence": {
+        "invoices": [
+          "0071"
+        ],
+        "invoice_fall_dates": [
+          "2025-11-25"
+        ],
+        "calendar_hint": null,
+        "paypal_first_paid": "2025-11-25",
+        "paypal_last_paid": "2025-11-25",
+        "paypal_gross": 225.0,
+        "repeat": "No"
+      },
+      "dedupe_note": null
+    },
+    {
+      "account": "Laytan Wickizer",
+      "contact_name": "Laytan Wickizer",
+      "email": "laytanwickizer@gmail.com",
+      "phone": null,
+      "status": "clone_renew",
+      "prior_purchase_date": "2025-11-21",
+      "prior_amount": 217.3,
+      "prior_product": "Bunny Haven Bday Party",
+      "clone_close_date": "2026-11-21",
+      "mid_dollar": 217.3,
+      "win_pct": 50,
+      "weighted_dollar": 109,
+      "dollar_source": "paypal_invoice",
+      "next_step": "Dunk: CAPTCHA or call \u2014 clone last year\u2019s booking",
+      "dunk_lane": "captcha_or_call",
+      "evidence": {
+        "invoices": [
+          "0068"
+        ],
+        "invoice_fall_dates": [
+          "2025-11-21"
+        ],
+        "calendar_hint": "Bunny Haven Bday Party (2025-11-23) \u00b7 laytanwickizer@gmail.com",
+        "paypal_first_paid": "2025-11-21",
+        "paypal_last_paid": "2025-11-21",
+        "paypal_gross": 217.3,
+        "repeat": "No"
+      },
+      "dedupe_note": null
+    },
+    {
+      "account": "Fletcher's Tender Care",
+      "contact_name": "Ericka Cooks",
+      "email": "ecooks@fletcherstendercare.com",
+      "phone": "(904) 257-4646",
+      "status": "clone_renew",
+      "prior_purchase_date": "2025-10-14",
+      "prior_amount": 159.0,
+      "prior_product": "Paid event (PayPal) \u2014 confirm package on dunk",
+      "clone_close_date": "2026-10-14",
+      "mid_dollar": 159.0,
+      "win_pct": 60,
+      "weighted_dollar": 95,
+      "dollar_source": "paypal_invoice",
+      "next_step": "Dunk: CAPTCHA or call \u2014 clone last year\u2019s booking",
+      "dunk_lane": "captcha_or_call",
+      "evidence": {
+        "invoices": [
+          "0047",
+          "0041"
+        ],
+        "invoice_fall_dates": [
+          "2025-10-14",
+          "2025-11-09"
+        ],
+        "calendar_hint": null,
+        "paypal_first_paid": "2025-10-14",
+        "paypal_last_paid": "2025-12-29",
+        "paypal_gross": 477.0,
+        "repeat": "Yes"
+      },
+      "dedupe_note": "Also in reply pipeline as Fletcher's Tender Care (nurture_later) \u2014 clone kept; do not double-count if moved to warm"
+    },
+    {
+      "account": "Lisa Doerler",
+      "contact_name": "Lisa Doerler",
+      "email": null,
+      "phone": null,
+      "status": "clone_renew",
+      "prior_purchase_date": "2025-10-09",
+      "prior_amount": 185.5,
+      "prior_product": "Paid event (PayPal) \u2014 confirm package on dunk",
+      "clone_close_date": "2026-10-09",
+      "mid_dollar": 185.5,
+      "win_pct": 50,
+      "weighted_dollar": 93,
+      "dollar_source": "paypal_invoice",
+      "next_step": "Dunk: CAPTCHA or call \u2014 clone last year\u2019s booking",
+      "dunk_lane": "captcha_or_call",
+      "evidence": {
+        "invoices": [
+          "0038"
+        ],
+        "invoice_fall_dates": [
+          "2025-10-09"
+        ],
+        "calendar_hint": null,
+        "paypal_first_paid": "2025-10-09",
+        "paypal_last_paid": "2025-10-09",
+        "paypal_gross": 185.5,
+        "repeat": "No"
+      },
+      "dedupe_note": null
+    },
+    {
+      "account": "Latonya Stamper",
+      "contact_name": "Latonya Stamper",
+      "email": null,
+      "phone": null,
+      "status": "clone_renew",
+      "prior_purchase_date": "2025-10-14",
+      "prior_amount": 185.5,
+      "prior_product": "Paid event (PayPal) \u2014 confirm package on dunk",
+      "clone_close_date": "2026-10-14",
+      "mid_dollar": 185.5,
+      "win_pct": 50,
+      "weighted_dollar": 93,
+      "dollar_source": "paypal_invoice",
+      "next_step": "Dunk: CAPTCHA or call \u2014 clone last year\u2019s booking",
+      "dunk_lane": "captcha_or_call",
+      "evidence": {
+        "invoices": [
+          "0046"
+        ],
+        "invoice_fall_dates": [
+          "2025-10-14"
+        ],
+        "calendar_hint": null,
+        "paypal_first_paid": "2025-10-14",
+        "paypal_last_paid": "2025-10-14",
+        "paypal_gross": 185.5,
+        "repeat": "No"
+      },
+      "dedupe_note": null
+    },
+    {
+      "account": "Liudmila Lashchenko",
+      "contact_name": "Liudmila Lashchenko",
+      "email": "liudmila.lashchenko@gmail.com",
+      "phone": null,
+      "status": "clone_renew",
+      "prior_purchase_date": "2025-11-18",
+      "prior_amount": 150.0,
+      "prior_product": "Mini Petting Zoo Bday",
+      "clone_close_date": "2026-11-18",
+      "mid_dollar": 150.0,
+      "win_pct": 50,
+      "weighted_dollar": 75,
+      "dollar_source": "paypal_invoice",
+      "next_step": "Dunk: CAPTCHA or call \u2014 clone last year\u2019s booking",
+      "dunk_lane": "captcha_or_call",
+      "evidence": {
+        "invoices": [
+          "0067"
+        ],
+        "invoice_fall_dates": [
+          "2025-11-18"
+        ],
+        "calendar_hint": "Mini Petting Zoo Bday (2025-11-22) \u00b7 liudmila.lashchenko@gmail.com",
+        "paypal_first_paid": "2025-11-18",
+        "paypal_last_paid": "2025-11-18",
+        "paypal_gross": 150.0,
+        "repeat": "No"
+      },
+      "dedupe_note": null
+    },
+    {
+      "account": "Dolores FLEMMING",
+      "contact_name": "Dolores FLEMMING",
+      "email": null,
+      "phone": null,
+      "status": "clone_renew",
+      "prior_purchase_date": "2025-09-02",
+      "prior_amount": 125.0,
+      "prior_product": "Paid event (PayPal) \u2014 confirm package on dunk",
+      "clone_close_date": "2026-09-02",
+      "mid_dollar": 125.0,
+      "win_pct": 50,
+      "weighted_dollar": 62,
+      "dollar_source": "paypal_invoice",
+      "next_step": "Dunk: CAPTCHA or call \u2014 clone last year\u2019s booking",
+      "dunk_lane": "captcha_or_call",
+      "evidence": {
+        "invoices": [
+          "0029"
+        ],
+        "invoice_fall_dates": [
+          "2025-09-02"
+        ],
+        "calendar_hint": null,
+        "paypal_first_paid": "2025-09-02",
+        "paypal_last_paid": "2025-09-02",
+        "paypal_gross": 125.0,
+        "repeat": "No"
+      },
+      "dedupe_note": null
+    },
+    {
+      "account": "Lindsey Hale",
+      "contact_name": "Lindsey Hale",
+      "email": "lindseyrgriffith@yahoo.com",
+      "phone": null,
+      "status": "clone_renew",
+      "prior_purchase_date": "2025-09-12",
+      "prior_amount": 125.0,
+      "prior_product": "Rabbit Haven",
+      "clone_close_date": "2026-09-12",
+      "mid_dollar": 125.0,
+      "win_pct": 50,
+      "weighted_dollar": 62,
+      "dollar_source": "paypal_invoice",
+      "next_step": "Dunk: CAPTCHA or call \u2014 clone last year\u2019s booking",
+      "dunk_lane": "captcha_or_call",
+      "evidence": {
+        "invoices": [
+          "0032"
+        ],
+        "invoice_fall_dates": [
+          "2025-09-12"
+        ],
+        "calendar_hint": "Rabbit Haven (2025-09-13) \u00b7 lindseyrgriffith@yahoo.com",
+        "paypal_first_paid": "2025-09-12",
+        "paypal_last_paid": "2025-09-12",
+        "paypal_gross": 125.0,
+        "repeat": "No"
+      },
+      "dedupe_note": null
+    },
+    {
+      "account": "RoseMarie Llerandi",
+      "contact_name": "RoseMarie Llerandi",
+      "email": null,
+      "phone": null,
+      "status": "clone_renew",
+      "prior_purchase_date": "2025-11-09",
+      "prior_amount": 119.25,
+      "prior_product": "Paid event (PayPal) \u2014 confirm package on dunk",
+      "clone_close_date": "2026-11-09",
+      "mid_dollar": 119.25,
+      "win_pct": 50,
+      "weighted_dollar": 60,
+      "dollar_source": "paypal_invoice",
+      "next_step": "Dunk: CAPTCHA or call \u2014 clone last year\u2019s booking",
+      "dunk_lane": "captcha_or_call",
+      "evidence": {
+        "invoices": [
+          "0062"
+        ],
+        "invoice_fall_dates": [
+          "2025-11-09"
+        ],
+        "calendar_hint": null,
+        "paypal_first_paid": "2025-11-09",
+        "paypal_last_paid": "2025-11-09",
+        "paypal_gross": 119.25,
+        "repeat": "No"
+      },
+      "dedupe_note": null
+    }
+  ],
+  "skipped_deduped": [
+    {
+      "account": "Sunshine Preschool / Goddard",
+      "contact_name": "Elizabeth Scott",
+      "email": null,
+      "prior_purchase_date": "2025-10-24",
+      "prior_amount": 742.0,
+      "mid_dollar": 742.0,
+      "win_pct": 60,
+      "weighted_dollar": 445,
+      "reason": "already_in_reply_pipeline:booked",
+      "dedupe_note": "Skipped \u2014 Goddard / Sunshine Education Group is booked in growth_reply_pipeline (weighted already counted)",
+      "pointer": {
+        "reply_account": "Goddard / Sunshine Education Group",
+        "reply_status": "booked",
+        "reply_email": "dianna.sheikh@sunshineeducationgroup.com",
+        "match_reasons": [
+          "sunshine\u2192goddard"
+        ]
+      }
+    },
+    {
+      "account": "Sunshine Preschools / Goddard",
+      "contact_name": "Amelia Parker",
+      "email": "amelia.parker@sunshinepreschoolsfl.com",
+      "prior_purchase_date": "2025-10-24",
+      "prior_amount": 742.0,
+      "mid_dollar": 742.0,
+      "win_pct": 50,
+      "weighted_dollar": 371,
+      "reason": "already_in_reply_pipeline:booked",
+      "dedupe_note": "Skipped \u2014 Goddard / Sunshine Education Group is booked in growth_reply_pipeline (weighted already counted)",
+      "pointer": {
+        "reply_account": "Goddard / Sunshine Education Group",
+        "reply_status": "booked",
+        "reply_email": "dianna.sheikh@sunshineeducationgroup.com",
+        "match_reasons": [
+          "sunshine\u2192goddard"
+        ]
+      }
+    },
+    {
+      "account": "Advanced Care Partners",
+      "contact_name": "Brittany Thomas",
+      "email": "bthomas@advancedcarepartners.com",
+      "prior_purchase_date": "2025-11-26",
+      "prior_amount": 185.5,
+      "mid_dollar": 185.5,
+      "win_pct": 60,
+      "weighted_dollar": 111,
+      "reason": "already_in_reply_pipeline:soft_yes",
+      "dedupe_note": "Skipped \u2014 Angels of Care is soft_yes in growth_reply_pipeline (weighted already counted)",
+      "pointer": {
+        "reply_account": "Angels of Care",
+        "reply_status": "soft_yes",
+        "reply_email": "bthomas@angelsofcare.com",
+        "match_reasons": [
+          "contact_lastname",
+          "contact_exact",
+          "brittany"
+        ]
+      }
+    },
+    {
+      "account": "Palagio Senior Living",
+      "contact_name": "Amanda Darga",
+      "email": "businessofficedirector@palagioseniorliving.com",
+      "prior_purchase_date": "2025-10-07",
+      "prior_amount": 307.4,
+      "mid_dollar": 307.4,
+      "win_pct": 50,
+      "weighted_dollar": 154,
+      "reason": "already_in_reply_pipeline:qualified",
+      "dedupe_note": "Skipped \u2014 Palagio Senior Living is qualified in growth_reply_pipeline (weighted already counted)",
+      "pointer": {
+        "reply_account": "Palagio Senior Living",
+        "reply_status": "qualified",
+        "reply_email": "businessofficedirector@palagioseniorliving.com",
+        "match_reasons": [
+          "contact_lastname",
+          "contact_exact",
+          "email",
+          "account",
+          "darga\u2192palagio"
+        ]
+      }
+    },
+    {
+      "account": "Intercoastal Kids",
+      "contact_name": "Ted Prevost",
+      "email": "info@intercoastalkids.com",
+      "prior_purchase_date": "2025-09-12",
+      "prior_amount": 275.0,
+      "mid_dollar": 275.0,
+      "win_pct": 60,
+      "weighted_dollar": 165,
+      "reason": "already_in_reply_pipeline:qualified",
+      "dedupe_note": "Skipped \u2014 Intercoastal Kids is qualified in growth_reply_pipeline (weighted already counted)",
+      "pointer": {
+        "reply_account": "Intercoastal Kids",
+        "reply_status": "qualified",
+        "reply_email": "info@intercoastalkids.com",
+        "match_reasons": [
+          "email",
+          "account",
+          "ted\u2192intercoastal"
+        ]
+      }
+    },
+    {
+      "account": "Michael Sheehan",
+      "contact_name": "Michael Sheehan",
+      "reason": "owner_self_payments_excluded",
+      "pointer": null
+    }
+  ],
+  "spring_anniversary": [],
+  "fall_priority_secondary_note": "129 fall_priority rows stay on captcha-quick / fall lanes \u2014 link only, not clone $ KPIs"
+}

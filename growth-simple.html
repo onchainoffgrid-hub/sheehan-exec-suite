@@ -70,6 +70,7 @@ h1{font-size:clamp(1.5rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;font
 
 <a class="chip" href="ops-delivery.html">← Ops calendar (idle capacity)</a>
 <a class="chip" href="ops-capacity.html">Ops capacity · 18 months</a>
+<a class="chip" href="growth-pipeline.html#clone" id="clone-chip">Clone last year · loading…</a>
 
 <div class="cols" aria-label="Pipeline bookings AR">
   <section class="col pipeline">
@@ -91,10 +92,13 @@ h1{font-size:clamp(1.5rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;font
   </section>
 </div>
 
+<div class="sec">Clone last year · renew dunks (CAPTCHA / call)</div>
+<div id="clone-top" class="empty" style="margin:0 0 14px">Loading clones…</div>
+
 <div class="sec">BDR / B2C / support-role delegation (secondary)</div>
 <nav class="secondary" id="secondary" aria-label="Secondary tools"></nav>
 
-<p class="note">AR shows verified / incoming labels only — accepted ≠ paid until cleared. Estimates labeled as estimates. Booked-so-far range is voice-sourced, not bank-reconciled. Primary pipeline: growth_reply_pipeline.json (real Gmail replies) · growth_campaign.json · bookings_pipeline.json. Never invent emails or $.</p>
+<p class="note">AR shows verified / incoming labels only — accepted ≠ paid until cleared. Estimates labeled as estimates. Booked-so-far range is voice-sourced, not bank-reconciled. Primary pipeline: growth_reply_pipeline.json (real Gmail replies) · growth_clone_pipeline.json (PayPal fall renew dunks) · growth_campaign.json · bookings_pipeline.json. Never invent emails or $.</p>
 </div>
 <script>
 (function(){
@@ -115,7 +119,8 @@ h1{font-size:clamp(1.5rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;font
     fetch('data/growth_campaign.json').then(r=>r.json()),
     fetch('data/bookings_pipeline.json').then(r=>r.json()),
     fetch('data/growth_reply_pipeline.json').then(r=>r.json()).catch(()=>({opportunities:[]})),
-  ]).then(([gc, bp, rp])=>{
+    fetch('data/growth_clone_pipeline.json').then(r=>r.json()).catch(()=>({clones:[],kpis:{}})),
+  ]).then(([gc, bp, rp, cp])=>{
     const camp=gc.campaign||{};
     const ns=gc.north_star||{};
     document.getElementById('banner').innerHTML=
@@ -220,6 +225,41 @@ h1{font-size:clamp(1.5rem,3vw,2.05rem);margin:0 0 6px;letter-spacing:-.02em;font
         const src=o.dollar_source?(' · '+o.dollar_source):'';
         return `<div class="card-row"><div class="name">${esc(o.account)}</div><div class="wrow">${mid} · ${w} · weighted ${wt}${esc(src)}</div><div class="meta">${esc(o.next_step||o.contact_name||'')}</div></div>`;
       }).join('')+`<div class="empty" style="margin-top:6px"><a href="growth-pipeline.html">Full weighted table →</a></div>`;
+    }
+
+    // Clone last year chip + top 3 weighted
+    const cloneEl=document.getElementById('clone-top');
+    const chip=document.getElementById('clone-chip');
+    const ck=(cp&&cp.kpis)||{};
+    const clones=(cp&&cp.clones)||[];
+    const nClone=ck.clone_count!=null?ck.clone_count:clones.length;
+    const cMid=ck.sum_mid_dollar;
+    const cWt=ck.sum_weighted_dollar;
+    if(chip){
+      chip.textContent=`Clone last year · ${nClone} · weighted ${cWt!=null?('$' + Number(cWt).toLocaleString('en-US')):'—'}`;
+    }
+    if(cloneEl){
+      const top=clones.slice().sort((a,b)=>(b.weighted_dollar||0)-(a.weighted_dollar||0)).slice(0,3);
+      if(!top.length){
+        cloneEl.innerHTML='<div class="empty">No fall clones yet · <a href="growth-pipeline.html#clone">open clone lane →</a></div>';
+      } else {
+        cloneEl.innerHTML=top.map(o=>{
+          const meta=esc([
+            o.prior_purchase_date?('prior '+o.prior_purchase_date):'',
+            o.prior_amount!=null?('prior $'+o.prior_amount):'',
+            o.prior_product||'',
+            o.clone_close_date?('close '+o.clone_close_date):'',
+            o.win_pct!=null?(o.win_pct+'%'):'',
+            o.weighted_dollar!=null?('weighted $'+o.weighted_dollar):'',
+            'Dunk: CAPTCHA or call',
+          ].filter(Boolean).join(' · '));
+          return card(o.account||o.contact_name, meta, [
+            {label:'clone_renew', cls:'ok'},
+            o.win_pct!=null?{label:o.win_pct+'%', cls:'win'}:null,
+          ].filter(Boolean));
+        }).join('')
+        + `<div class="empty" style="margin-top:6px">${nClone} clones · mid ${money(cMid)} · weighted ${money(cWt)} · <a href="growth-pipeline.html#clone">full dunk list →</a></div>`;
+      }
     }
 
     const sec=document.getElementById('secondary');

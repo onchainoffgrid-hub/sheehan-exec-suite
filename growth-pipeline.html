@@ -51,13 +51,15 @@ tr:hover td{background:#0f1728}
 <p class="crumb"><a href="index.html">Operator</a> → <a href="growth-simple.html">Growth</a> → <b>Weighted pipeline</b></p>
 <header>
   <h1>Growth · weighted pipeline</h1>
-  <p class="sub">Salesforce-style mid $ · win % · weighted $. BDR-actionable. Never invent emails. Placeholder $ always labeled.</p>
+  <p class="sub">Salesforce-style mid $ · win % · weighted $. Clone last-year buyers for renew dunks. BDR-actionable. Never invent emails. Placeholder $ always labeled.</p>
 </header>
 <hr class="hair"/>
 <div class="banner" id="banner">Loading…</div>
 <div class="kpis" id="kpis"></div>
 <a class="chip" href="growth-simple.html">← Growth home</a>
+<a class="chip gold" href="#clone">Clone / renew dunks</a>
 <a class="chip gold" href="ops-delivery.html">Ops delivery</a>
+<a class="chip" href="captcha-quick.html">CAPTCHA quick (secondary)</a>
 <a class="chip" href="mailto:" id="mail-all" style="display:none">Mailto top</a>
 <nav class="filters" id="filters" aria-label="Win filters">
   <button type="button" data-w="all" class="on">All</button>
@@ -67,11 +69,18 @@ tr:hover td{background:#0f1728}
   <button type="button" data-w="25">25%</button>
 </nav>
 <div class="scroll"><div id="table-wrap"><div class="empty">Loading…</div></div></div>
+<div class="sec" id="clone">Clone / renew · BDR dunk list (CAPTCHA or call)</div>
+<div class="kpis" id="clone-kpis" style="margin-bottom:10px"></div>
+<div class="scroll"><div id="clone-table"><div class="empty">Loading clones…</div></div></div>
+<details style="margin:10px 0 0;color:var(--muted);font-size:.78rem">
+  <summary style="cursor:pointer;color:#9dffc5">Skipped / deduped (already in reply warm or locked same season)</summary>
+  <div id="clone-skipped" class="empty" style="margin-top:8px">—</div>
+</details>
 <div class="sec">Voice-named (not only Gmail reply)</div>
 <div id="voice"><div class="empty">—</div></div>
 <div class="sec">AR / forgotten-$ watches (not booked)</div>
 <div id="watches"><div class="empty">—</div></div>
-<p class="note" id="foot">Weighted = round(mid × win%/100). Sources: michael_specified · email_evidence · booking_match · placeholder_standard · unknown. as of loading…</p>
+<p class="note" id="foot">Weighted = round(mid × win%/100). Sources: michael_specified · email_evidence · booking_match · placeholder_standard · unknown · paypal_invoice. Reply weighted and clone weighted are separate; combined total is labeled. as of loading…</p>
 </div>
 <script>
 (function(){
@@ -141,20 +150,66 @@ tr:hover td{background:#0f1728}
     });
   }
 
-  fetch('data/growth_reply_pipeline.json').then(r=>r.json()).then(d=>{
+  function renderClones(cd){
+    const ck=cd.kpis||{};
+    const clones=cd.clones||[];
+    document.getElementById('clone-kpis').innerHTML=`
+      <div class="kpi green"><div class="l">Clones</div><div class="v">${ck.clone_count!=null?ck.clone_count:clones.length}</div><div class="s">fall renew dunks</div></div>
+      <div class="kpi"><div class="l">Clone mid $</div><div class="v">${money(ck.sum_mid_dollar)}</div><div class="s">prior invoice / gross</div></div>
+      <div class="kpi"><div class="l">Clone weighted $</div><div class="v">${money(ck.sum_weighted_dollar)}</div><div class="s">50% prior · 60% repeat</div></div>
+      <div class="kpi"><div class="l">Skipped dedupe</div><div class="v">${ck.skipped_deduped_count!=null?ck.skipped_deduped_count:(cd.skipped_deduped||[]).length}</div><div class="s">warm reply / locked</div></div>
+      <div class="kpi"><div class="l">Spring anniv</div><div class="v">${ck.spring_anniversary_count!=null?ck.spring_anniversary_count:(cd.spring_anniversary||[]).length}</div><div class="s">Mar–Apr prior</div></div>`;
+    let html='<table><thead><tr>';
+    [['account','Account'],['contact_name','Contact'],['prior_purchase_date','Prior date'],['prior_amount','Prior $'],['prior_product','Product'],['clone_close_date','Clone close'],['mid_dollar','Mid $'],['win_pct','Win %'],['weighted_dollar','Weighted $'],['next_step','Next dunk'],['email','Mailto']].forEach(([k,lab])=>{
+      html+=`<th>${lab}</th>`;
+    });
+    html+='</tr></thead><tbody>';
+    if(!clones.length) html+='<tr><td colspan="11" class="empty">No clone rows</td></tr>';
+    clones.forEach(o=>{
+      html+=`<tr>
+        <td><b>${esc(o.account)}</b>${o.dedupe_note?`<div class="muted">${esc(o.dedupe_note)}</div>`:''}</td>
+        <td>${esc(o.contact_name||'—')}${o.phone?`<div class="muted">${esc(o.phone)}</div>`:''}</td>
+        <td>${esc(o.prior_purchase_date||'—')}</td>
+        <td class="money">${money(o.prior_amount)}</td>
+        <td>${esc(o.prior_product||'—')}</td>
+        <td>${esc(o.clone_close_date||'—')}</td>
+        <td class="money">${money(o.mid_dollar)}<div>${srcTag(o.dollar_source)}</div></td>
+        <td>${winTag(o.win_pct)}</td>
+        <td class="money">${money(o.weighted_dollar)}</td>
+        <td>${esc(o.next_step||'Dunk: CAPTCHA or call')}</td>
+        <td>${o.email?mailto(o.email,o.account):'<span class="muted">null — dunk by name</span>'}</td>
+      </tr>`;
+    });
+    html+='</tbody></table>';
+    document.getElementById('clone-table').innerHTML=html;
+    const sk=cd.skipped_deduped||[];
+    document.getElementById('clone-skipped').innerHTML=sk.length?('<ul style="margin:0;padding-left:18px">'+sk.map(s=>
+      `<li><b>${esc(s.contact_name||s.account)}</b> — ${esc(s.reason||'')} · ${esc(s.dedupe_note||'')}</li>`
+    ).join('')+'</ul>'):'<div class="empty">None skipped</div>';
+    return ck;
+  }
+
+  Promise.all([
+    fetch('data/growth_reply_pipeline.json').then(r=>r.json()),
+    fetch('data/growth_clone_pipeline.json').then(r=>r.json()).catch(()=>({clones:[],kpis:{}})),
+  ]).then(([d, cd])=>{
     DATA=d;
     const k=d.kpis||d.counts||{};
+    const ck=renderClones(cd);
+    const replyW=k.sum_weighted_dollar||0;
+    const cloneW=ck.sum_weighted_dollar||0;
+    const combined=replyW+cloneW;
     document.getElementById('banner').textContent=
-      `as of ${d.as_of_label||d.as_of||''} · ${(k.opp_count!=null?k.opp_count:(d.opportunities||[]).length)} opps · placeholders labeled · no invented emails`;
+      `as of ${d.as_of_label||d.as_of||''} · ${(k.opp_count!=null?k.opp_count:(d.opportunities||[]).length)} reply opps · ${(ck.clone_count!=null?ck.clone_count:(cd.clones||[]).length)} clones · no invented emails`;
     const by=d.counts&&d.counts.by_win_pct||{};
     document.getElementById('kpis').innerHTML=`
-      <div class="kpi green"><div class="l">Opps</div><div class="v">${esc(k.opp_count!=null?k.opp_count:(d.opportunities||[]).length)}</div><div class="s">reply + voice-named</div></div>
-      <div class="kpi"><div class="l">Sum mid $</div><div class="v">${money(k.sum_mid_dollar)}</div><div class="s">labeled sources</div></div>
-      <div class="kpi"><div class="l">Sum weighted $</div><div class="v">${money(k.sum_weighted_dollar)}</div><div class="s">mid × win%</div></div>
+      <div class="kpi green"><div class="l">Reply opps</div><div class="v">${esc(k.opp_count!=null?k.opp_count:(d.opportunities||[]).length)}</div><div class="s">reply + voice-named</div></div>
+      <div class="kpi"><div class="l">Reply mid $</div><div class="v">${money(k.sum_mid_dollar)}</div><div class="s">labeled sources</div></div>
+      <div class="kpi"><div class="l">Reply weighted $</div><div class="v">${money(replyW)}</div><div class="s">mid × win%</div></div>
+      <div class="kpi"><div class="l">Clone weighted $</div><div class="v">${money(cloneW)}</div><div class="s">separate lane</div></div>
+      <div class="kpi green"><div class="l">Combined weighted $</div><div class="v">${money(combined)}</div><div class="s">reply + clone (labeled)</div></div>
       <div class="kpi"><div class="l">80% bucket</div><div class="v">${by['80']||0}</div><div class="s">booked / ATS</div></div>
-      <div class="kpi"><div class="l">75%</div><div class="v">${by['75']||0}</div><div class="s">warm booked/winback</div></div>
-      <div class="kpi"><div class="l">50%</div><div class="v">${by['50']||0}</div><div class="s">qualified / soft_yes</div></div>
-      <div class="kpi"><div class="l">25%</div><div class="v">${by['25']||0}</div><div class="s">curiosity / nurture</div></div>
+      <div class="kpi"><div class="l">50% / 25%</div><div class="v">${(by['50']||0)} / ${(by['25']||0)}</div><div class="s">reply buckets</div></div>
       <div class="kpi"><div class="l">Placeholders</div><div class="v">${k.placeholder_count!=null?k.placeholder_count:(d.placeholders||[]).length}</div><div class="s">must stay labeled</div></div>`;
     const voice=d.voice_named||[];
     document.getElementById('voice').innerHTML=voice.length?voice.map(o=>`
@@ -171,7 +226,7 @@ tr:hover td{background:#0f1728}
         <div class="m">Next: ${esc(w.next_step||'')}</div>
       </div>`).join(''):'<div class="empty">No watches</div>';
     document.getElementById('foot').textContent=
-      `Weighted = round(mid × win%/100). Placeholders: ${(d.placeholders||[]).length}. as of ${d.as_of_label||''}.`;
+      `Weighted = round(mid × win%/100). Reply weighted $${replyW} + clone weighted $${cloneW} = combined $${combined} (lanes separate until dunked). Placeholders: ${(d.placeholders||[]).length}. as of ${d.as_of_label||''} · clones ${cd.as_of_label||''}.`;
     render();
   }).catch(err=>{
     document.getElementById('table-wrap').innerHTML='<div class="empty">Could not load growth_reply_pipeline.json</div>';
