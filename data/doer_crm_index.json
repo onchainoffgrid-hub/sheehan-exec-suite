@@ -1,0 +1,77 @@
+{
+  "as_of": "2026-09-24 ET",
+  "label": "Doer CRM \u00b7 deep dunk lanes",
+  "rule": "Deep link only \u00b7 not on operator three-tile face. Stage compose / open form only \u00b7 never auto-send. Never invent emails, phones, or $.",
+  "visual": "green + gold \u00b7 dark \u00b7 mobile",
+  "landing_hygiene": {
+    "operator_tiles": [
+      "Operations",
+      "Growth",
+      "Support"
+    ],
+    "doer_crm_on_landing": false,
+    "discreet_links_ok": [
+      "growth-simple.html",
+      "growth-pipeline.html"
+    ]
+  },
+  "sections": [
+    {
+      "id": "do_now",
+      "heading": "Do Now / hot deals",
+      "source": "data/bookings_pipeline.json",
+      "filter": "do_now=true OR status=QUOTE_DRAFT OR next_actions_ranked top",
+      "href_full": "do-now.html",
+      "brooks_href": "brooks-click.html"
+    },
+    {
+      "id": "captcha",
+      "heading": "CAPTCHA / form taps (net-new)",
+      "source": "data/captcha_quick_lists.json",
+      "lists": [
+        "captcha_dunks",
+        "quick_emails"
+      ],
+      "href_full": "captcha-quick.html"
+    },
+    {
+      "id": "winback",
+      "heading": "Win-backs without a next date",
+      "source": "data/customers_no_next_date.json",
+      "filter": "status=NO_DATE",
+      "href_full": "customers-no-next-date.html"
+    },
+    {
+      "id": "clone",
+      "heading": "Clone / renew last-year buyers (seasonal)",
+      "source": "data/growth_clone_pipeline.json",
+      "lists": [
+        "clones"
+      ],
+      "href_full": "growth-pipeline.html#clone"
+    },
+    {
+      "id": "easy_attack",
+      "heading": "Easy attack \u00b7 cross-marketers",
+      "source": "data/easy_attack.json",
+      "lists": [
+        "cross_marketers"
+      ],
+      "href_full": "easy-attack.html",
+      "note": "Only disk-sourced contacts; Unknown when missing"
+    },
+    {
+      "id": "consumer_warm",
+      "heading": "Consumer inbound \u00b7 warm / needs attention",
+      "source": "data/consumer_inbound.json",
+      "filter": "status in warm|needs_attention|interest with email or phone",
+      "href_full": "consumer-inbound.html"
+    }
+  ],
+  "localStorage_key": "sheehan_doer_crm_done_v1",
+  "gmail_authuser": "sheehanhomestead@gmail.com",
+  "spelling_lock": [
+    "Ann-Marie",
+    "Rayquan"
+  ]
+}

@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Doer CRM · deep dunk · Sheehan Homestead</title>
+<style>
+:root{
+  --bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;
+  --brand-green:#3dd68c;--brand-green-deep:#2f6b4f;--brand-gold:#c9a227;--brand-gold-bright:#fbbf24;
+  --accent:var(--brand-green);--good:#3dd68c;--warn:#ffb020;--blue:#5b8cff;--violet:#a78bfa;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1120px;margin:0 auto;padding:18px 14px 64px}
+.crumb{font-size:.82rem;color:var(--muted);margin:0 0 10px}.crumb a{color:#9dffc5;font-weight:600}
+h1{font-size:clamp(1.35rem,3vw,1.9rem);margin:0 0 6px;letter-spacing:-.02em;font-weight:750}
+.sub{color:var(--muted);font-size:.9rem;max-width:68ch;margin:0 0 12px}
+.hair{height:2px;border:0;margin:0 0 14px;background:linear-gradient(90deg,transparent,var(--brand-gold),transparent);opacity:.55}
+.banner{margin:0 0 14px;padding:12px 14px;border-radius:14px;border:1px solid #3dd68c55;
+  background:linear-gradient(135deg,#13281d,#121a2b);font-size:.84rem;color:#9dffc5}
+.banner b{color:#fde68a}
+.banner.warn{border-color:#ffb02066;background:#241c10;color:#f5e6c8}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:8px;margin:0 0 14px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px;position:relative;overflow:hidden}
+.kpi::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:linear-gradient(90deg,var(--brand-green),var(--brand-gold-bright));opacity:.55}
+.kpi .l{font-size:.62rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.kpi .v{font-size:1.2rem;font-weight:800;margin-top:2px;color:var(--brand-gold-bright)}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px;position:sticky;top:0;z-index:6;padding:8px 0 10px;
+  background:linear-gradient(180deg,var(--bg) 85%,transparent)}
+.toc a,.toc button{appearance:none;border:1px solid var(--line);background:var(--card);color:#c5d0e6;
+  padding:8px 12px;border-radius:999px;font-size:.74rem;font-weight:700;cursor:pointer;text-decoration:none;min-height:40px;
+  display:inline-flex;align-items:center;gap:6px;font-family:inherit}
+.toc a:hover,.toc button:hover{border-color:#3dd68c88;text-decoration:none}
+.toc a .n,.toc button .n{color:var(--brand-gold-bright);font-variant-numeric:tabular-nums}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+.filters input{flex:1;min-width:160px;min-height:40px;padding:8px 12px;border-radius:10px;border:1px solid var(--line);
+  background:var(--card);color:var(--text);font-size:.84rem}
+.filters select,.filters button{appearance:none;border:1px solid var(--line);background:var(--panel);color:var(--muted);
+  padding:8px 12px;border-radius:999px;font-size:.74rem;font-weight:700;cursor:pointer;min-height:40px;font-family:inherit}
+.filters button.on{border-color:#3dd68c88;background:#13281d;color:#9dffc5}
+.sec{margin:22px 0 10px;scroll-margin-top:64px}
+.sec-head{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline;justify-content:space-between;margin:0 0 8px}
+.sec-head h2{margin:0;font-size:1.05rem;color:#9dffc5}
+.sec-head .full{font-size:.78rem;color:#fde68a;font-weight:650}
+.sec .blurb{font-size:.78rem;color:var(--muted);margin:0 0 10px}
+.list{display:flex;flex-direction:column;gap:10px}
+.row{border:1px solid var(--line);border-radius:14px;padding:12px 14px;background:var(--card)}
+.row.done{opacity:.58;border-color:#3dd68c44}
+.row.hot{border-color:#fbbf2488;background:linear-gradient(160deg,#2a2210,#121a2b 70%);box-shadow:0 0 0 1px #3dd68c33}
+.row h3{margin:0 0 6px;font-size:.98rem;letter-spacing:-.01em}
+.meta{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 6px}
+.chip{display:inline-block;padding:3px 9px;border-radius:999px;font-size:.68rem;font-weight:700;border:1px solid var(--line)}
+.chip.lane{background:#152238;color:#9ec1ff;border-color:#5b8cff55}
+.chip.city{background:#0e1626;color:#c5d0e6}
+.chip.ok{background:#13281d;color:var(--good);border-color:#3dd68c55}
+.chip.warn{background:#2a2416;color:var(--warn);border-color:#ffb02066}
+.chip.gold{background:#2a2210;color:#fde68a;border-color:#c9a22788}
+.chip.form{background:#13281d;color:var(--good);border-color:#3dd68c88}
+.chip.email{background:#221833;color:#d4c4ff;border-color:#a78bfa88}
+.chip.hot{background:#2a2210;color:#fbbf24;border-color:#fbbf24aa}
+.ctx{font-size:.78rem;color:var(--muted);margin:0 0 8px}
+.ctx b{color:#e8eefc;font-weight:650}
+.actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+a.btn,button.btn{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:8px 12px;
+  border-radius:999px;background:#13281d;border:1px solid #3dd68c88;color:#9dffc5;font-weight:700;font-size:.74rem;
+  text-decoration:none;cursor:pointer;font-family:inherit}
+a.btn:hover,button.btn:hover{text-decoration:none;filter:brightness(1.08)}
+a.btn.gold,button.btn.gold{background:#2a2210;border-color:#c9a22788;color:#fde68a}
+a.btn.gmail{background:#0c4a6e;border-color:#38bdf888;color:#bae6fd}
+a.btn.sec,button.btn.sec{background:var(--panel);border-color:var(--line);color:#c5d0e6;font-weight:600}
+button.btn.done{background:var(--card);border-color:var(--line);color:var(--muted)}
+button.btn.done.is-done{background:#13281d;border-color:#3dd68c88;color:var(--good)}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 0;font-size:.74rem}
+.links a{color:#9ec1ff}
+.empty{color:var(--muted);padding:14px;text-align:center;font-size:.84rem}
+.note{color:var(--muted);font-size:.74rem;margin-top:20px}
+.more{margin:8px 0 0}
+@media(max-width:640px){
+  .wrap{padding:12px 10px 56px}
+  a.btn,button.btn{min-height:44px}
+}
+</style></head>
+<body><div class="wrap">
+
+<p class="crumb"><a href="index.html">Operator</a> → <a href="growth-simple.html">Growth</a> → <b>Doer CRM</b>
+  <span style="opacity:.7"> · deep link (not a fourth tile)</span></p>
+
+<header>
+  <h1>Doer CRM · dunk lanes</h1>
+  <p class="sub">Working CRM when you need to dunk. Compose-only · <b>never auto-send</b>. Contacts and $ only from existing suite JSON — unknowns stay blank. Spelling lock: <b>Ann-Marie</b> · <b>Rayquan</b>.</p>
+</header>
+<hr class="hair"/>
+
+<div class="banner"><b>Operator hygiene:</b> landing stays Ops · Growth · Support only. This page is URL-deep + discreet Growth drill-down links. Full boards stay on their own pages.</div>
+<div class="banner warn">Stage mailto / Gmail compose / open form in a new tab. You hit Send. Deputy never bot-sends.</div>
+
+<div class="kpis" id="kpis" aria-label="Section counts">
+  <div class="kpi"><div class="l">Do Now</div><div class="v" id="k-now">—</div></div>
+  <div class="kpi"><div class="l">CAPTCHA / form</div><div class="v" id="k-cap">—</div></div>
+  <div class="kpi"><div class="l">Win-back · no date</div><div class="v" id="k-wb">—</div></div>
+  <div class="kpi"><div class="l">Clone / renew</div><div class="v" id="k-cl">—</div></div>
+  <div class="kpi"><div class="l">Easy attack</div><div class="v" id="k-ea">—</div></div>
+  <div class="kpi"><div class="l">Consumer warm</div><div class="v" id="k-ci">—</div></div>
+  <div class="kpi"><div class="l">Done (local)</div><div class="v" id="k-done">0</div></div>
+</div>
+
+<nav class="toc" aria-label="Sections">
+  <a href="#do-now">Do Now <span class="n" id="t-now">—</span></a>
+  <a href="#captcha">CAPTCHA <span class="n" id="t-cap">—</span></a>
+  <a href="#winback">Win-backs <span class="n" id="t-wb">—</span></a>
+  <a href="#clone">Clone <span class="n" id="t-cl">—</span></a>
+  <a href="#easy">Easy attack <span class="n" id="t-ea">—</span></a>
+  <a href="#consumer">Consumer <span class="n" id="t-ci">—</span></a>
+</nav>
+
+<div class="filters" id="global-filters">
+  <input id="q" type="search" placeholder="Filter all visible rows (name / city / email / note)…" autocomplete="off"/>
+  <button type="button" class="on" data-done="all">All</button>
+  <button type="button" data-done="open">Open</button>
+  <button type="button" data-done="done">Done</button>
+</div>
+
+<!-- DO NOW -->
+<section class="sec" id="do-now">
+  <div class="sec-head">
+    <h2>1 · Do Now / hot deals</h2>
+    <a class="full" href="do-now.html">Full Do Now →</a>
+  </div>
+  <p class="blurb">Pinned hot cards from bookings pipeline (includes Brooks when QUOTE_DRAFT / do_now). Open-in-mail only.</p>
+  <div class="list" id="list-now"></div>
+</section>
+
+<!-- CAPTCHA -->
+<section class="sec" id="captcha">
+  <div class="sec-head">
+    <h2>2 · CAPTCHA / form taps (net-new)</h2>
+    <a class="full" href="captcha-quick.html">Full CAPTCHA board →</a>
+  </div>
+  <p class="blurb">Open CAPTCHA forms + quick public emails from captcha_quick_lists (Hot Links slice). No invented contacts.</p>
+  <div class="filters" id="cap-filters">
+    <button type="button" class="on" data-path="all">All open</button>
+    <button type="button" data-path="form">Forms</button>
+    <button type="button" data-path="email">Quick email</button>
+  </div>
+  <div class="list" id="list-cap"></div>
+  <p class="more"><button type="button" class="btn sec" id="cap-more" hidden>Show more</button></p>
+</section>
+
+<!-- WINBACK -->
+<section class="sec" id="winback">
+  <div class="sec-head">
+    <h2>3 · Win-backs without a next date</h2>
+    <a class="full" href="customers-no-next-date.html">Full no-next-date →</a>
+  </div>
+  <p class="blurb">Past buyers with NO DATE on books. Rebook tone — not stranger cold forms.</p>
+  <div class="list" id="list-wb"></div>
+  <p class="more"><button type="button" class="btn sec" id="wb-more" hidden>Show more</button></p>
+</section>
+
+<!-- CLONE -->
+<section class="sec" id="clone">
+  <div class="sec-head">
+    <h2>4 · Clone / renew last-year buyers (seasonal)</h2>
+    <a class="full" href="growth-pipeline.html#clone">Weighted clone table →</a>
+  </div>
+  <p class="blurb">Fall renew dunks from PayPal / invoices (growth_clone_pipeline). Prior $ only when on disk.</p>
+  <div class="list" id="list-cl"></div>
+</section>
+
+<!-- EASY ATTACK -->
+<section class="sec" id="easy">
+  <div class="sec-head">
+    <h2>5 · Easy attack · cross-marketers</h2>
+    <a class="full" href="easy-attack.html">Full easy-attack →</a>
+  </div>
+  <p class="blurb">Public calendar / kids-pages / co-post lanes already on disk. Contact Unknown when missing.</p>
+  <div class="list" id="list-ea"></div>
+</section>
+
+<!-- CONSUMER -->
+<section class="sec" id="consumer">
+  <div class="sec-head">
+    <h2>6 · Consumer inbound · warm / needs attention / interest</h2>
+    <a class="full" href="consumer-inbound.html">Full consumer inbound →</a>
+  </div>
+  <p class="blurb">Rows with email or phone in warm · needs_attention · interest. Amounts only when purchase crossref exists.</p>
+  <div class="list" id="list-ci"></div>
+  <p class="more"><button type="button" class="btn sec" id="ci-more" hidden>Show more</button></p>
+</section>
+
+<p class="note" id="foot">Sources: bookings_pipeline · captcha_quick_lists · customers_no_next_date · growth_clone_pipeline · easy_attack · consumer_inbound · doer_crm_index. Done checkboxes are localStorage only (<code>sheehan_doer_crm_done_v1</code>). Never invent emails / phones / $. Ann-Marie · Rayquan spelling lock.</p>
+</div>
+<script>
+(function(){
+  var LS='sheehan_doer_crm_done_v1';
+  var GMAIL='sheehanhomestead@gmail.com';
+  var DONE={};
+  var Q='', DONE_F='all', CAP_PATH='all';
+  var LIMIT={cap:40, wb:40, ci:40};
+  var SHOW={cap:40, wb:40, ci:40};
+  var CACHE={};
+
+  function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+  function loadDone(){try{DONE=JSON.parse(localStorage.getItem(LS)||'{}')||{};}catch(e){DONE={};}}
+  function saveDone(){try{localStorage.setItem(LS,JSON.stringify(DONE));}catch(e){}}
+  function isDone(id){return !!DONE[id];}
+  function toggleDone(id){DONE[id]=!DONE[id];saveDone();paintDoneCount();renderAll();}
+  function paintDoneCount(){
+    var n=0; for(var k in DONE) if(DONE[k]) n++;
+    document.getElementById('k-done').textContent=n;
+  }
+  function money(n){
+    if(n==null||n==='') return null;
+    return '$'+Number(n).toLocaleString('en-US',{maximumFractionDigits:2});
+  }
+  function telHref(p){return 'tel:'+String(p).replace(/[^\d+]/g,'');}
+  function mailtoHref(email, subject){
+    var u='mailto:'+encodeURIComponent(email);
+    if(subject) u+='?subject='+encodeURIComponent(subject);
+    return u;
+  }
+  function gmailHref(email, subject){
+    var u='https://mail.google.com/mail/?authuser='+encodeURIComponent(GMAIL)+'&view=cm&fs=1&to='+encodeURIComponent(email);
+    if(subject) u+='&su='+encodeURIComponent(subject);
+    return u;
+  }
+  function passDone(id){
+    var d=isDone(id);
+    if(DONE_F==='open' && d) return false;
+    if(DONE_F==='done' && !d) return false;
+    return true;
+  }
+  function passQ(blob){
+    var qq=Q.trim().toLowerCase();
+    if(!qq) return true;
+    return String(blob||'').toLowerCase().indexOf(qq)>=0;
+  }
+  function actionLinks(opts){
+    // opts: email, phone, website, linkedin, formUrl, formLabel, extraHref, extraLabel, subject, doneId
+    var bits=[];
+    if(opts.email){
+      bits.push('<a class="btn" href="'+esc(mailtoHref(opts.email, opts.subject))+'" title="mailto — you send">Email</a>');
+      bits.push('<a class="btn gmail" href="'+esc(gmailHref(opts.email, opts.subject))+'" target="_blank" rel="noopener">Gmail</a>');
+    }
+    if(opts.phone) bits.push('<a class="btn sec" href="'+esc(telHref(opts.phone))+'">'+esc(opts.phone)+'</a>');
+    if(opts.formUrl) bits.push('<a class="btn gold" href="'+esc(opts.formUrl)+'" target="_blank" rel="noopener">'+(opts.formLabel||'Open form')+'</a>');
+    if(opts.extraHref) bits.push('<a class="btn gold" href="'+esc(opts.extraHref)+'">'+(opts.extraLabel||'Open')+'</a>');
+    bits.push('<button type="button" class="btn done'+(isDone(opts.doneId)?' is-done':'')+'" data-done="'+esc(opts.doneId)+'">'+(isDone(opts.doneId)?'Done ✓':'Done')+'</button>');
+    var linkrow=[];
+    if(opts.website) linkrow.push('<a href="'+esc(opts.website)+'" target="_blank" rel="noopener">Website</a>');
+    if(opts.linkedin) linkrow.push('<a href="'+esc(opts.linkedin)+'" target="_blank" rel="noopener">LinkedIn</a>');
+    if(opts.email) linkrow.push('<a href="'+esc(mailtoHref(opts.email, opts.subject))+'">'+esc(opts.email)+'</a>');
+    return '<div class="actions">'+bits.join('')+'</div>'+(linkrow.length?'<div class="links">'+linkrow.join(' · ')+'</div>':'');
+  }
+
+  function renderNow(){
+    var bookings=(CACHE.bp&&CACHE.bp.bookings)||[];
+    var ranked=(CACHE.bp&&CACHE.bp.next_actions_ranked)||[];
+    var rows=bookings.filter(function(b){return b.do_now || b.status==='QUOTE_DRAFT';});
+    // also surface rank-1 action as context if Brooks missing somehow
+    var html=rows.map(function(b){
+      var id='now:'+(b.id||b.title);
+      if(!passDone(id)) return '';
+      var blob=[b.title,b.notes,b.next_action,b.status,b.owner].join(' ');
+      if(!passQ(blob)) return '';
+      var mid=b.quoted_mid!=null?money(b.quoted_mid):(b.all_in&&b.all_in.standard!=null?money(b.all_in.standard):null);
+      var chips='<span class="chip hot">Do Now</span><span class="chip gold">'+esc(b.status||'')+'</span>';
+      if(b.violet) chips+='<span class="chip ok">Violet</span>';
+      if(b.date) chips+='<span class="chip city">'+esc(b.date)+(b.time?(' · '+esc(b.time)):'')+'</span>';
+      var ctxBits=[];
+      if(mid) ctxBits.push('<b>'+esc(mid)+'</b> mid quote');
+      if(b.weighted_value!=null) ctxBits.push('weighted '+esc(money(b.weighted_value)));
+      if(b.next_action) ctxBits.push(esc(b.next_action));
+      if(b.notes) ctxBits.push(esc(String(b.notes).slice(0,180)));
+      var openHref=b.open_email_href||(String(b.id||'').indexOf('brooks')>=0?'brooks-click.html':null);
+      return '<article class="row hot'+(isDone(id)?' done':'')+'"><h3>'+esc(b.title||b.id)+'</h3>'
+        +'<div class="meta">'+chips+'</div>'
+        +'<div class="ctx">'+ctxBits.join(' · ')+'</div>'
+        +actionLinks({
+          email: null, // use open-email page for Brooks body; no invented bare mailto without known address
+          phone: null,
+          website: (b.nonprofit_note&&/bartramlakes\.org/.test(b.nonprofit_note))?'https://bartramlakes.org':null,
+          extraHref: openHref,
+          extraLabel: openHref?'Open email card →':'',
+          doneId: id,
+          subject: null
+        })
+        // If we can find Brooks email from recent_outreach, add compose
+        +'</article>';
+    }).filter(Boolean);
+
+    // Enrich Brooks with known email from recent_outreach (never invent)
+    var brooksEmail=null, brooksCc=null;
+    ((CACHE.ro&&CACHE.ro.emails)||[]).forEach(function(e){
+      if(/brooks/i.test(e.account||'') && e.email) brooksEmail=e.email;
+    });
+    // Harden: known CC from existing do-now / brooks-click pages only when Brooks present
+    if(brooksEmail && /brooksrehab\.org/i.test(brooksEmail)){
+      brooksCc='Roneise.Lawrence@brooksrehab.org';
+    }
+
+    if(!html.length && !rows.length){
+      html=['<div class="empty">No do_now / QUOTE_DRAFT rows in bookings_pipeline right now.</div>'];
+    } else if(!html.length){
+      html=['<div class="empty">No open Do Now rows in this filter.</div>'];
+    } else if(brooksEmail){
+      // Rewrite first matching hot row actions to include mailto/gmail for Brooks
+      html=html.map(function(block){
+        if(block.indexOf('Brooks')<0) return block;
+        var sub='Re: Referred by Tasia — Nov 21 petting zoo (Violet package)';
+        var mail=mailtoHref(brooksEmail, sub);
+        var gm=gmailHref(brooksEmail, sub);
+        if(brooksCc){
+          mail='mailto:'+encodeURIComponent(brooksEmail)+'?cc='+encodeURIComponent(brooksCc)+'&subject='+encodeURIComponent(sub);
+          gm='https://mail.google.com/mail/?authuser='+encodeURIComponent(GMAIL)+'&view=cm&fs=1&to='+encodeURIComponent(brooksEmail)+'&cc='+encodeURIComponent(brooksCc)+'&su='+encodeURIComponent(sub);
+        }
+        return block.replace('</div></article>',
+          '</div><div class="actions" style="margin-top:6px">'
+          +'<a class="btn" href="'+esc(mail)+'">Email Kate</a>'
+          +'<a class="btn gmail" href="'+esc(gm)+'" target="_blank" rel="noopener">Gmail Kate</a>'
+          +'<a class="btn sec" href="do-now.html">Do Now page</a>'
+          +'</div></article>');
+      });
+    }
+
+    // Ranked next actions as compact notes (not contacts)
+    if(ranked.length){
+      html.push('<article class="row"><h3>Next actions ranked</h3><div class="ctx">'
+        +ranked.slice(0,5).map(function(a){return '<div><b>#'+esc(a.rank)+'</b> '+esc(a.action)+(a.blocks?(' · <span style="color:#ffb020">'+esc(a.blocks)+'</span>'):'')+'</div>';}).join('')
+        +'</div></article>');
+    }
+
+    document.getElementById('list-now').innerHTML=html.join('')||'<div class="empty">Empty</div>';
+    document.getElementById('k-now').textContent=rows.length;
+    document.getElementById('t-now').textContent=rows.length;
+  }
+
+  function renderCap(){
+    var cq=CACHE.cq||{};
+    var pool=[];
+    if(CAP_PATH==='form') pool=(cq.captcha_dunks||[]).slice();
+    else if(CAP_PATH==='email') pool=(cq.quick_emails||[]).slice();
+    else pool=[].concat(cq.captcha_dunks||[], cq.quick_emails||[]);
+    var totalOpen=pool.length;
+    var filtered=pool.filter(function(r){
+      var id='cap:'+(r.account||'')+'|'+(r.contact_form_url||r.email||'');
+      if(!passDone(id)) return false;
+      var blob=[r.account,r.city,r.lane,r.email,r.why_hot,r.phone].join(' ');
+      (r.contacts||[]).forEach(function(c){blob+=' '+(c.name||'')+' '+(c.email||'');});
+      return passQ(blob);
+    });
+    var show=filtered.slice(0, SHOW.cap);
+    var html=show.map(function(r){
+      var id='cap:'+(r.account||'')+'|'+(r.contact_form_url||r.email||'');
+      var isEmail=r.path_type==='email';
+      var chips='<span class="chip lane">'+esc(r.lane||'other')+'</span>'
+        +(r.city?('<span class="chip city">'+esc(r.city)+'</span>'):'')
+        +(isEmail?'<span class="chip email">email</span>':'<span class="chip form">form / CAPTCHA</span>')
+        +(r.tier?('<span class="chip ok">'+esc(r.tier)+'</span>'):'')
+        +(r.pto_pta?'<span class="chip ok">PTO/PTA</span>':'')
+        +(r.blue_chip?'<span class="chip gold">blue chip</span>':'');
+      var ctx=[];
+      if(r.why_hot) ctx.push(esc(r.why_hot));
+      if(r.mid!=null) ctx.push('<b>'+esc(money(r.mid))+'</b> mid (on disk)');
+      if(r.contacts&&r.contacts.length){
+        ctx.push(r.contacts.slice(0,4).map(function(c){
+          return esc([c.name,c.title,c.email].filter(Boolean).join(' · '));
+        }).join(' · '));
+      }
+      var formUrl=(!isEmail && r.contact_form_url)?r.contact_form_url:null;
+      var email=r.email||null;
+      // Prefer first contact email if row email missing
+      if(!email && r.contacts){
+        for(var i=0;i<r.contacts.length;i++){ if(r.contacts[i].email){ email=r.contacts[i].email; break; } }
+      }
+      var li=null;
+      if(r.linkedin_company) li=r.linkedin_company;
+      else if(r.contacts){ for(var j=0;j<r.contacts.length;j++){ if(r.contacts[j].linkedin){ li=r.contacts[j].linkedin; break; } } }
+      return '<article class="row'+(isDone(id)?' done':'')+'"><h3>'+esc(r.account)+'</h3>'
+        +'<div class="meta">'+chips+'</div>'
+        +(ctx.length?'<div class="ctx">'+ctx.join(' · ')+'</div>':'')
+        +actionLinks({
+          email: email,
+          phone: r.phone||null,
+          website: r.website||null,
+          linkedin: li,
+          formUrl: formUrl,
+          formLabel: isEmail?'':'Open form',
+          subject: 'Sheehan Homestead / Critters on Call — '+(r.account||''),
+          doneId: id
+        })+'</article>';
+    }).join('');
+    document.getElementById('list-cap').innerHTML=html||'<div class="empty">No CAPTCHA / quick-email rows in this filter.</div>';
+    var btn=document.getElementById('cap-more');
+    if(filtered.length>SHOW.cap){ btn.hidden=false; btn.textContent='Show more ('+(filtered.length-SHOW.cap)+' left)'; }
+    else btn.hidden=true;
+    var openCount=(cq.counts&&cq.counts.captcha_dunk_open!=null)
+      ? (cq.counts.captcha_dunk_open+(cq.counts.quick_email_open||0))
+      : ((cq.captcha_dunks||[]).length+(cq.quick_emails||[]).length);
+    document.getElementById('k-cap').textContent=openCount;
+    document.getElementById('t-cap').textContent=openCount;
+  }
+
+  function renderWb(){
+    var rows=((CACHE.cn&&CACHE.cn.rows)||[]).filter(function(r){
+      return r.status==='NO_DATE' || !(r.next_date || (r.next_dates&&r.next_dates[0]));
+    });
+    var filtered=rows.filter(function(r){
+      var id='wb:'+(r.account||'')+'|'+(r.email||r.phone||'');
+      if(!passDone(id)) return false;
+      return passQ([r.account,r.brand,r.city,r.email,r.phone,r.reason,r.why,r.penetration,r.last_paid].join(' '));
+    });
+    var show=filtered.slice(0, SHOW.wb);
+    var html=show.map(function(r){
+      var id='wb:'+(r.account||'')+'|'+(r.email||r.phone||'');
+      var chips='<span class="chip warn">NO DATE</span>'
+        +(r.city?('<span class="chip city">'+esc(r.city)+'</span>'):'')
+        +(r.lane?('<span class="chip lane">'+esc(r.lane)+'</span>'):'')
+        +(r.penetration?('<span class="chip ok">'+esc(r.penetration)+'</span>'):'');
+      var ctx=[];
+      if(r.reason||r.why) ctx.push(esc(r.reason||r.why));
+      if(r.last_paid) ctx.push('last paid '+esc(r.last_paid));
+      if(r.source) ctx.push(esc(r.source));
+      return '<article class="row'+(isDone(id)?' done':'')+'"><h3>'+esc(r.account||r.brand)+'</h3>'
+        +'<div class="meta">'+chips+'</div>'
+        +(ctx.length?'<div class="ctx">'+ctx.join(' · ')+'</div>':'')
+        +actionLinks({
+          email: r.email||null,
+          phone: r.phone||null,
+          website: null,
+          linkedin: null,
+          subject: 'Rebook / next date — '+(r.account||'')+' · Sheehan Homestead',
+          doneId: id
+        })+'</article>';
+    }).join('');
+    document.getElementById('list-wb').innerHTML=html||'<div class="empty">No win-back rows in this filter.</div>';
+    var btn=document.getElementById('wb-more');
+    if(filtered.length>SHOW.wb){ btn.hidden=false; btn.textContent='Show more ('+(filtered.length-SHOW.wb)+' left)'; }
+    else btn.hidden=true;
+    document.getElementById('k-wb').textContent=rows.length;
+    document.getElementById('t-wb').textContent=rows.length;
+  }
+
+  function renderCl(){
+    var clones=(CACHE.cp&&CACHE.cp.clones)||[];
+    var filtered=clones.filter(function(r){
+      var id='cl:'+(r.account||'')+'|'+(r.email||r.prior_purchase_date||'');
+      if(!passDone(id)) return false;
+      return passQ([r.account,r.contact_name,r.email,r.phone,r.prior_product,r.next_step,r.dunk_lane].join(' '));
+    });
+    var html=filtered.map(function(r){
+      var id='cl:'+(r.account||'')+'|'+(r.email||r.prior_purchase_date||'');
+      var chips='<span class="chip gold">clone / renew</span>'
+        +(r.clone_close_date?('<span class="chip city">close '+esc(r.clone_close_date)+'</span>'):'')
+        +(r.dunk_lane?('<span class="chip lane">'+esc(r.dunk_lane)+'</span>'):'')
+        +(r.win_pct!=null?('<span class="chip ok">'+esc(r.win_pct)+'% win</span>'):'');
+      var ctx=[];
+      if(r.contact_name) ctx.push(esc(r.contact_name));
+      if(r.prior_purchase_date) ctx.push('prior '+esc(r.prior_purchase_date));
+      if(r.prior_amount!=null) ctx.push('<b>'+esc(money(r.prior_amount))+'</b> prior');
+      if(r.mid_dollar!=null) ctx.push('mid '+esc(money(r.mid_dollar)));
+      if(r.weighted_dollar!=null) ctx.push('weighted '+esc(money(r.weighted_dollar)));
+      if(r.prior_product) ctx.push(esc(r.prior_product));
+      if(r.next_step) ctx.push(esc(r.next_step));
+      return '<article class="row'+(isDone(id)?' done':'')+'"><h3>'+esc(r.account)+'</h3>'
+        +'<div class="meta">'+chips+'</div>'
+        +'<div class="ctx">'+ctx.join(' · ')+'</div>'
+        +actionLinks({
+          email: r.email||null,
+          phone: r.phone||null,
+          website: null,
+          linkedin: null,
+          subject: 'Clone last year — '+(r.account||'')+' · Sheehan Homestead',
+          doneId: id
+        })+'</article>';
+    }).join('');
+    document.getElementById('list-cl').innerHTML=html||'<div class="empty">No clone rows in this filter'+(clones.length?' (or all Done / filtered)':'. growth_clone_pipeline empty')+'.</div>';
+    document.getElementById('k-cl').textContent=clones.length;
+    document.getElementById('t-cl').textContent=clones.length;
+  }
+
+  function renderEa(){
+    var xm=((CACHE.ea&&CACHE.ea.cross_marketers)||[]);
+    var filtered=xm.filter(function(r){
+      var id='ea:'+(r.id||r.name);
+      if(!passDone(id)) return false;
+      return passQ([r.name,r.type,r.why,r.email,r.phone,r.note,r.gtm_lane].join(' '));
+    });
+    var html=filtered.map(function(r){
+      var id='ea:'+(r.id||r.name);
+      var chips='<span class="chip lane">'+esc(r.gtm_lane||'—')+'</span>'
+        +'<span class="chip city">'+esc(r.type||'')+'</span>'
+        +(r.swing==='team'?'<span class="chip ok">team-swingable</span>':'<span class="chip warn">founder</span>');
+      var ctx=[];
+      if(r.why) ctx.push(esc(r.why));
+      if(r.note) ctx.push(esc(r.note));
+      if(r.sell) ctx.push(esc(r.sell));
+      if(r.contacts_note) ctx.push(esc(r.contacts_note));
+      var website=r.link||null;
+      var formUrl=r.path||null;
+      return '<article class="row'+(isDone(id)?' done':'')+'"><h3>'+esc(r.name)+'</h3>'
+        +'<div class="meta">'+chips+'</div>'
+        +(ctx.length?'<div class="ctx">'+ctx.join(' · ')+'</div>':'')
+        +actionLinks({
+          email: r.email||null,
+          phone: r.phone||null,
+          website: website,
+          linkedin: null,
+          formUrl: formUrl && formUrl!==website ? formUrl : null,
+          formLabel: 'Submit / path',
+          subject: 'Sheehan Homestead listing / co-post — '+(r.name||''),
+          doneId: id,
+          extraHref: website && !formUrl ? website : null,
+          extraLabel: website && !formUrl ? 'Open page' : null
+        })+'</article>';
+    }).join('');
+    document.getElementById('list-ea').innerHTML=html||'<div class="empty">No easy-attack cross-marketers in this filter.</div>';
+    document.getElementById('k-ea').textContent=xm.length;
+    document.getElementById('t-ea').textContent=xm.length;
+  }
+
+  function renderCi(){
+    var contacts=((CACHE.ci&&CACHE.ci.contacts)||[]).filter(function(c){
+      return (c.status==='warm'||c.status==='needs_attention'||c.status==='interest') && (c.email||c.phone);
+    });
+    var filtered=contacts.filter(function(c){
+      var id='ci:'+(c.email||'')+'|'+(c.name||'')+'|'+(c.bucket||'');
+      if(!passDone(id)) return false;
+      return passQ([c.name,c.email,c.phone,c.bucket,c.status,c.detail,c.next_action].join(' '));
+    });
+    var show=filtered.slice(0, SHOW.ci);
+    var html=show.map(function(c){
+      var id='ci:'+(c.email||'')+'|'+(c.name||'')+'|'+(c.bucket||'');
+      var chips='<span class="chip lane">'+esc(c.status||'')+'</span>'
+        +(c.bucket?('<span class="chip city">'+esc(c.bucket)+'</span>'):'')
+        +(c.purchase_status?('<span class="chip '+(c.purchase_status==='bought'?'ok':'warn')+'">'+esc(c.purchase_status)+'</span>'):'');
+      var ctx=[];
+      if(c.detail) ctx.push(esc(String(c.detail).slice(0,160)));
+      if(c.next_action) ctx.push(esc(c.next_action));
+      if(c.amount!=null) ctx.push('<b>'+esc(money(c.amount))+'</b>');
+      if(c.last_paid_or_booked) ctx.push(esc(c.last_paid_or_booked));
+      if(c.date) ctx.push(esc(c.date));
+      return '<article class="row'+(isDone(id)?' done':'')+'"><h3>'+esc(c.name||'(no name)')+'</h3>'
+        +'<div class="meta">'+chips+'</div>'
+        +(ctx.length?'<div class="ctx">'+ctx.join(' · ')+'</div>':'')
+        +actionLinks({
+          email: c.email||null,
+          phone: c.phone||null,
+          website: null,
+          linkedin: null,
+          subject: c.subject||('Farm visit / birthday — Sheehan Homestead'),
+          doneId: id
+        })+'</article>';
+    }).join('');
+    document.getElementById('list-ci').innerHTML=html||'<div class="empty">No consumer warm/interest rows in this filter.</div>';
+    var btn=document.getElementById('ci-more');
+    if(filtered.length>SHOW.ci){ btn.hidden=false; btn.textContent='Show more ('+(filtered.length-SHOW.ci)+' left)'; }
+    else btn.hidden=true;
+    document.getElementById('k-ci').textContent=contacts.length;
+    document.getElementById('t-ci').textContent=contacts.length;
+  }
+
+  function renderAll(){
+    renderNow(); renderCap(); renderWb(); renderCl(); renderEa(); renderCi();
+  }
+
+  document.getElementById('q').addEventListener('input',function(e){ Q=e.target.value; renderAll(); });
+  document.getElementById('global-filters').addEventListener('click',function(e){
+    var b=e.target.closest('button[data-done]'); if(!b) return;
+    DONE_F=b.getAttribute('data-done');
+    [].forEach.call(document.querySelectorAll('#global-filters button[data-done]'),function(x){x.classList.toggle('on',x===b);});
+    renderAll();
+  });
+  document.getElementById('cap-filters').addEventListener('click',function(e){
+    var b=e.target.closest('button[data-path]'); if(!b) return;
+    CAP_PATH=b.getAttribute('data-path');
+    SHOW.cap=LIMIT.cap;
+    [].forEach.call(document.querySelectorAll('#cap-filters button'),function(x){x.classList.toggle('on',x===b);});
+    renderCap();
+  });
+  document.getElementById('cap-more').onclick=function(){ SHOW.cap+=60; renderCap(); };
+  document.getElementById('wb-more').onclick=function(){ SHOW.wb+=60; renderWb(); };
+  document.getElementById('ci-more').onclick=function(){ SHOW.ci+=60; renderCi(); };
+  document.body.addEventListener('click',function(e){
+    var b=e.target.closest('button[data-done]'); if(!b) return;
+    toggleDone(b.getAttribute('data-done'));
+  });
+
+  loadDone(); paintDoneCount();
+  Promise.all([
+    fetch('data/bookings_pipeline.json',{cache:'no-store'}).then(function(r){return r.json();}),
+    fetch('data/captcha_quick_lists.json',{cache:'no-store'}).then(function(r){return r.json();}),
+    fetch('data/customers_no_next_date.json',{cache:'no-store'}).then(function(r){return r.json();}),
+    fetch('data/growth_clone_pipeline.json',{cache:'no-store'}).then(function(r){return r.json();}),
+    fetch('data/easy_attack.json',{cache:'no-store'}).then(function(r){return r.json();}),
+    fetch('data/consumer_inbound.json',{cache:'no-store'}).then(function(r){return r.json();}),
+    fetch('data/recent_outreach.json',{cache:'no-store'}).then(function(r){return r.json();}).catch(function(){return {};}),
+    fetch('data/doer_crm_index.json',{cache:'no-store'}).then(function(r){return r.json();}).catch(function(){return {};})
+  ]).then(function(arr){
+    CACHE.bp=arr[0]; CACHE.cq=arr[1]; CACHE.cn=arr[2]; CACHE.cp=arr[3];
+    CACHE.ea=arr[4]; CACHE.ci=arr[5]; CACHE.ro=arr[6]; CACHE.idx=arr[7];
+    renderAll();
+    var asof=(CACHE.idx&&CACHE.idx.as_of)||(CACHE.bp&&CACHE.bp.as_of)||'—';
+    document.getElementById('foot').innerHTML=
+      'Sources: bookings_pipeline · captcha_quick_lists · customers_no_next_date · growth_clone_pipeline · easy_attack · consumer_inbound · doer_crm_index.'
+      +' Done = localStorage <code>sheehan_doer_crm_done_v1</code>. Never invent emails / phones / $.'
+      +' Ann-Marie · Rayquan spelling lock. as of '+esc(asof)+'.';
+  }).catch(function(err){
+    document.getElementById('list-now').innerHTML='<div class="empty">Failed to load CRM data: '+esc(err&&err.message||err)+'</div>';
+  });
+})();
+</script>
+</body></html>
