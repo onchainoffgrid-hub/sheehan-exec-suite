@@ -16,7 +16,9 @@
     "b2c": 0,
     "multi_contact": 9,
     "already_customer_flagged": 15,
-    "removed_cdd_hoa": 13
+    "removed_cdd_hoa": 13,
+    "tapped": 1,
+    "still_open": 142
   },
   "lanes": {
     "daycare": 26,
