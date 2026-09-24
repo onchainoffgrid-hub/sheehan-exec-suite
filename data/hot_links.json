@@ -3,23 +3,24 @@
   "label": "Hot Links \u2014 CAPTCHA / quick web forms only (mindless tap). No CDDs/HOAs.",
   "rule": "Stage only \u00b7 open form in new tab \u00b7 no auto-submit. Any budgeted buyer qualifies \u2014 no minimum spend gate. Daycare, philanthropist and sponsor are explicit filters; net-new after customer/burned dedupe. CDD/HOA amenity = separate call/email lane \u2014 NEVER on this page.",
   "counts": {
-    "total": 136,
-    "form": 104,
-    "email": 32,
-    "copycat_t1": 14,
-    "net_new": 102,
+    "total": 143,
+    "form": 110,
+    "email": 33,
+    "copycat_t1": 19,
+    "net_new": 104,
     "unverified": 8,
     "customer": 12,
     "pto_pta": 34,
-    "blue_chip": 48,
-    "b2b": 136,
+    "blue_chip": 53,
+    "b2b": 143,
     "b2c": 0,
     "multi_contact": 9,
     "already_customer_flagged": 15,
     "removed_cdd_hoa": 13
   },
   "lanes": {
-    "school": 64,
+    "daycare": 26,
+    "school": 45,
     "senior": 12,
     "foundation": 7,
     "other": 36,
@@ -27,8 +28,8 @@
     "sponsor": 13
   },
   "path_types": {
-    "form": 104,
-    "email": 32
+    "form": 110,
+    "email": 33
   },
   "links": [
     {
@@ -39,8 +40,8 @@
       "phone": "904-309-5898",
       "website": "https://www.brighthorizons.com/daycare-centers/fl/jacksonville/6046-harvin-road-32216",
       "linkedin_company": "https://www.linkedin.com/company/bright-horizons",
-      "lane": "school",
-      "segment": "b2b_enterprise",
+      "lane": "daycare",
+      "segment": "b2b_daycare",
       "channel": "b2b",
       "tier": "copycat_t1",
       "status": "copycat_t1",
@@ -52,7 +53,8 @@
       "email": null,
       "tags": [
         "daycare"
-      ]
+      ],
+      "mid": null
     },
     {
       "account": "Julington Creek Elementary PTO",
@@ -66,7 +68,7 @@
       "segment": "b2b_school_pta",
       "channel": "b2b",
       "tier": "net_new",
-      "status": "copycat_t1",
+      "status": "net_new",
       "path_type": "email",
       "pto_pta": true,
       "blue_chip": true,
@@ -104,8 +106,8 @@
           "source": "jcepto.com/pto-info (2026-09-23)"
         }
       ],
-      "why_hot": "Sister campus to Valley Ridge buyer \u2014 public campus email",
-      "source": "hot-links-expand-2026-09-23-forms"
+      "why_hot": "Full public PTO board emails \u2014 St. Johns blue-chip elementary festival/sponsorship buyer",
+      "source": "hot-links-expand-2026-09-23-pta"
     },
     {
       "account": "Jacksonville Country Day School",
@@ -141,11 +143,11 @@
       "brand": "Kiddie Academy of Jacksonville",
       "city": "Jacksonville",
       "contact_form_url": "https://kiddieacademy.com/locations/jacksonville-fl/schedule-a-tour/",
-      "lane": "school",
+      "lane": "daycare",
       "why_hot": "Schedule-a-tour / inquiry form",
       "phone": null,
       "email": null,
-      "segment": "b2b_subscription",
+      "segment": "b2b_daycare",
       "tier": "copycat_t1",
       "source": "hot-links-rebuild-2026-09-23",
       "status": "copycat_t1",
@@ -156,7 +158,8 @@
       "blue_chip": true,
       "tags": [
         "daycare"
-      ]
+      ],
+      "mid": null
     },
     {
       "account": "Kiddie Academy of St. Johns",
@@ -165,8 +168,8 @@
       "contact_form_url": "https://kiddieacademy.com/academies/st-johns/about-us/",
       "phone": "904-647-9186",
       "website": "https://kiddieacademy.com/academies/st-johns/",
-      "lane": "school",
-      "segment": "b2b_subscription",
+      "lane": "daycare",
+      "segment": "b2b_daycare",
       "channel": "b2b",
       "tier": "copycat_t1",
       "status": "copycat_t1",
@@ -178,7 +181,8 @@
       "email": null,
       "tags": [
         "daycare"
-      ]
+      ],
+      "mid": null
     },
     {
       "account": "Palmer Catholic Academy",
@@ -272,11 +276,11 @@
       "brand": "The Goddard School Jacksonville \u2014 Baymeadows",
       "city": "Jacksonville",
       "contact_form_url": "https://www.goddardschool.com/schools/fl/jacksonville/jacksonville-baymeadows/our-school/goddard-form",
-      "lane": "school",
+      "lane": "daycare",
       "why_hot": "School director inquiry form \u00b7 CAPTCHA \u00b7 fall family / mobile PZ ask",
       "phone": null,
       "email": null,
-      "segment": "b2b_subscription",
+      "segment": "b2b_daycare",
       "tier": "copycat_t1",
       "source": "hot-links-rebuild-2026-09-23",
       "status": "copycat_t1",
@@ -287,7 +291,8 @@
       "website": "https://www.goddardschool.com/",
       "tags": [
         "daycare"
-      ]
+      ],
+      "mid": null
     },
     {
       "account": "The Goddard School Orange Park \u2014 OakLeaf",
@@ -296,8 +301,8 @@
       "contact_form_url": "https://www.goddardschool.com/schools/fl/orange-park/orange-park/our-school/goddard-form",
       "phone": "904-291-9991",
       "website": "https://www.goddardschool.com/schools/fl/orange-park/orange-park",
-      "lane": "school",
-      "segment": "b2b_subscription",
+      "lane": "daycare",
+      "segment": "b2b_daycare",
       "channel": "b2b",
       "tier": "copycat_t1",
       "status": "copycat_t1",
@@ -309,18 +314,19 @@
       "email": null,
       "tags": [
         "daycare"
-      ]
+      ],
+      "mid": null
     },
     {
       "account": "The Goddard School Silverleaf",
       "brand": "The Goddard School Silverleaf",
       "city": "St. Augustine",
       "contact_form_url": "https://www.goddardschool.com/schools/fl/st-augustine/silverleaf/our-school/goddard-form",
-      "lane": "school",
+      "lane": "daycare",
       "why_hot": "School director inquiry form \u00b7 CAPTCHA",
       "phone": null,
       "email": null,
-      "segment": "b2b_subscription",
+      "segment": "b2b_daycare",
       "tier": "copycat_t1",
       "source": "hot-links-rebuild-2026-09-23",
       "status": "copycat_t1",
@@ -331,18 +337,19 @@
       "blue_chip": true,
       "tags": [
         "daycare"
-      ]
+      ],
+      "mid": null
     },
     {
       "account": "The Goddard School St. Augustine \u2014 CR 210",
       "brand": "The Goddard School St. Augustine \u2014 CR 210",
       "city": "St. Augustine",
       "contact_form_url": "https://www.goddardschool.com/schools/fl/st-augustine/st-augustine-county-road-210/our-school/goddard-form",
-      "lane": "school",
+      "lane": "daycare",
       "why_hot": "School director inquiry form \u00b7 CAPTCHA",
       "phone": null,
       "email": null,
-      "segment": "b2b_subscription",
+      "segment": "b2b_daycare",
       "tier": "copycat_t1",
       "source": "hot-links-rebuild-2026-09-23",
       "status": "copycat_t1",
@@ -353,18 +360,19 @@
       "website": "https://www.goddardschool.com/",
       "tags": [
         "daycare"
-      ]
+      ],
+      "mid": null
     },
     {
       "account": "The Learning Experience \u2014 Flagler Center",
       "brand": "The Learning Experience \u2014 Flagler Center",
       "city": "Jacksonville",
       "contact_form_url": "https://thelearningexperience.com/centers/flagler-center/",
-      "lane": "school",
+      "lane": "daycare",
       "why_hot": "Center page with inquiry path \u00b7 not Oakleaf/St. Aug/River City customer campuses",
       "phone": null,
       "email": null,
-      "segment": "b2b_subscription",
+      "segment": "b2b_daycare",
       "tier": "copycat_t1",
       "source": "hot-links-rebuild-2026-09-23",
       "status": "copycat_t1",
@@ -375,18 +383,19 @@
       "website": "https://thelearningexperience.com/",
       "tags": [
         "daycare"
-      ]
+      ],
+      "mid": null
     },
     {
       "account": "The Learning Experience \u2014 Mandarin",
       "brand": "The Learning Experience \u2014 Mandarin",
       "city": "Jacksonville",
       "contact_form_url": "https://thelearningexperience.com/centers/jacksonville-mandarin/",
-      "lane": "school",
+      "lane": "daycare",
       "why_hot": "Center inquiry path \u00b7 CAPTCHA-ish lead form",
       "phone": null,
       "email": null,
-      "segment": "b2b_subscription",
+      "segment": "b2b_daycare",
       "tier": "copycat_t1",
       "source": "hot-links-rebuild-2026-09-23",
       "status": "copycat_t1",
@@ -397,18 +406,19 @@
       "website": "https://thelearningexperience.com/",
       "tags": [
         "daycare"
-      ]
+      ],
+      "mid": null
     },
     {
       "account": "The Learning Experience \u2014 Southside",
       "brand": "The Learning Experience \u2014 Southside",
       "city": "Jacksonville",
       "contact_form_url": "https://thelearningexperience.com/centers/jacksonville-southside/",
-      "lane": "school",
+      "lane": "daycare",
       "why_hot": "Center inquiry path",
       "phone": null,
       "email": null,
-      "segment": "b2b_subscription",
+      "segment": "b2b_daycare",
       "tier": "copycat_t1",
       "source": "hot-links-rebuild-2026-09-23",
       "status": "copycat_t1",
@@ -419,7 +429,8 @@
       "website": "https://thelearningexperience.com/",
       "tags": [
         "daycare"
-      ]
+      ],
+      "mid": null
     },
     {
       "account": "Alimacani Elementary PTA",
@@ -731,11 +742,11 @@
       "brand": "Christ Church Preschool Ponte Vedra",
       "city": "Ponte Vedra Beach",
       "contact_form_url": "https://ccpvb.org/contact/",
-      "lane": "school",
+      "lane": "daycare",
       "why_hot": "Church preschool contact form",
       "phone": null,
       "email": null,
-      "segment": "b2b_subscription",
+      "segment": "b2b_daycare",
       "tier": "net_new",
       "source": "hot-links-rebuild-2026-09-23",
       "status": "net_new",
@@ -743,7 +754,12 @@
       "channel": "b2b",
       "pto_pta": false,
       "blue_chip": false,
-      "website": "https://ccpvb.org/"
+      "website": "https://ccpvb.org/",
+      "mid": null,
+      "tags": [
+        "daycare",
+        "preschool"
+      ]
     },
     {
       "account": "Crown Point Elementary School PTA",
@@ -1570,11 +1586,11 @@
       "brand": "Montessori Tides School",
       "city": "Jacksonville Beach",
       "contact_form_url": "https://www.montessoritides.com/contact-us/",
-      "lane": "school",
+      "lane": "daycare",
       "why_hot": "Montessori contact form \u00b7 Jax Beach",
       "phone": "(904) 241-1139",
       "email": null,
-      "segment": "b2b_subscription",
+      "segment": "b2b_daycare",
       "tier": "unverified",
       "source": "hot-links-rebuild-2026-09-23",
       "status": "unverified",
@@ -1582,7 +1598,11 @@
       "channel": "b2b",
       "pto_pta": false,
       "blue_chip": false,
-      "website": "https://www.montessoritides.com/"
+      "website": "https://www.montessoritides.com/",
+      "mid": null,
+      "tags": [
+        "daycare"
+      ]
     },
     {
       "account": "Abess Park Elementary PTA",
@@ -1620,8 +1640,8 @@
       "contact_form_url": "mailto:jlane@aexplorers.com",
       "email": "jlane@aexplorers.com",
       "phone": "(407) 378-2834",
-      "lane": "school",
-      "segment": "b2b_subscription",
+      "lane": "daycare",
+      "segment": "b2b_daycare",
       "channel": "b2b",
       "tier": "customer",
       "status": "customer",
@@ -1639,6 +1659,10 @@
           "linkedin": null,
           "source": "customers_no_next_date.json"
         }
+      ],
+      "mid": null,
+      "tags": [
+        "daycare"
       ]
     },
     {
@@ -1648,8 +1672,8 @@
       "contact_form_url": "mailto:ei@aexplorers.com",
       "email": "ei@aexplorers.com",
       "phone": "(904) 290-2250",
-      "lane": "school",
-      "segment": "b2b_subscription",
+      "lane": "daycare",
+      "segment": "b2b_daycare",
       "channel": "b2b",
       "tier": "customer",
       "status": "customer",
@@ -1667,6 +1691,10 @@
           "linkedin": null,
           "source": "customers_no_next_date.json"
         }
+      ],
+      "mid": null,
+      "tags": [
+        "daycare"
       ]
     },
     {
@@ -1676,8 +1704,8 @@
       "contact_form_url": "mailto:center88@bbmacademy.com",
       "email": "center88@bbmacademy.com",
       "phone": "(904) 682-9868",
-      "lane": "school",
-      "segment": "b2b_subscription",
+      "lane": "daycare",
+      "segment": "b2b_daycare",
       "channel": "b2b",
       "tier": "customer",
       "status": "customer",
@@ -1695,6 +1723,10 @@
           "linkedin": null,
           "source": "customers_no_next_date.json"
         }
+      ],
+      "mid": null,
+      "tags": [
+        "daycare"
       ]
     },
     {
@@ -1704,8 +1736,8 @@
       "contact_form_url": "mailto:center87@bbmacademy.com",
       "email": "center87@bbmacademy.com",
       "phone": "(904) 656-1555",
-      "lane": "school",
-      "segment": "b2b_subscription",
+      "lane": "daycare",
+      "segment": "b2b_daycare",
       "channel": "b2b",
       "tier": "customer",
       "status": "customer",
@@ -1723,6 +1755,10 @@
           "linkedin": null,
           "source": "customers_no_next_date.json"
         }
+      ],
+      "mid": null,
+      "tags": [
+        "daycare"
       ]
     },
     {
@@ -1732,8 +1768,8 @@
       "contact_form_url": "mailto:wtlaharrington@gmail.com",
       "email": "wtlaharrington@gmail.com",
       "phone": "(904) 724-7239",
-      "lane": "school",
-      "segment": "b2b_school_pta",
+      "lane": "daycare",
+      "segment": "b2b_daycare",
       "channel": "b2b",
       "tier": "customer",
       "status": "customer",
@@ -1751,7 +1787,11 @@
         }
       ],
       "why_hot": "Past buyer (CTK ELC) \u2014 flag only; do not cold-form",
-      "source": "hot-links-expand-2026-09-23-forms"
+      "source": "hot-links-expand-2026-09-23-forms",
+      "mid": null,
+      "tags": [
+        "daycare"
+      ]
     },
     {
       "account": "Ivybrook Academy Valley Ridge PTO",
@@ -1830,8 +1870,8 @@
       "email": "jacksonville2fl@goddardschools.com",
       "phone": "904-821-0085",
       "website": "https://www.goddardschool.com/schools/fl/jacksonville/jacksonville",
-      "lane": "school",
-      "segment": "b2b_subscription",
+      "lane": "daycare",
+      "segment": "b2b_daycare",
       "channel": "b2b",
       "tier": "customer",
       "status": "customer",
@@ -1852,18 +1892,19 @@
       "source": "hot-links-expand-2026-09-23-forms",
       "tags": [
         "daycare"
-      ]
+      ],
+      "mid": null
     },
     {
       "account": "The Goddard School Ponte Vedra Beach",
       "brand": "The Goddard School Ponte Vedra Beach",
       "city": "Ponte Vedra Beach",
       "contact_form_url": "https://www.goddardschool.com/schools/fl/ponte-vedra-beach/ponte-vedra-beach/our-school/goddard-form",
-      "lane": "school",
+      "lane": "daycare",
       "why_hot": "School director inquiry form \u00b7 CAPTCHA \u00b7 not the Nocatee/PV customer campus",
       "phone": "(904) 373-6600",
       "email": "dianna.sheikh@sunshinepreschoolsfl.com",
-      "segment": "b2b_subscription",
+      "segment": "b2b_daycare",
       "tier": "customer",
       "source": "hot-links-rebuild-2026-09-23",
       "status": "customer",
@@ -1884,7 +1925,8 @@
       ],
       "tags": [
         "daycare"
-      ]
+      ],
+      "mid": null
     },
     {
       "account": "The Goddard School Ponte Vedra \u2014 Nocatee",
@@ -1894,8 +1936,8 @@
       "email": "amelia.parker@sunshinepreschoolsfl.com",
       "phone": "904-709-4740",
       "website": "https://www.goddardschool.com/schools/fl/ponte-vedra/ponte-vedra-nocatee",
-      "lane": "school",
-      "segment": "b2b_subscription",
+      "lane": "daycare",
+      "segment": "b2b_daycare",
       "channel": "b2b",
       "tier": "customer",
       "status": "customer",
@@ -1916,7 +1958,8 @@
       "source": "hot-links-expand-2026-09-23-forms",
       "tags": [
         "daycare"
-      ]
+      ],
+      "mid": null
     },
     {
       "account": "Aging True \u2014 Contact",
@@ -3354,6 +3397,171 @@
       "source": "hot-links-hail-mary-expand-2026-09-23",
       "pto_pta": false,
       "blue_chip": false
+    },
+    {
+      "account": "Primrose School of Glen Kernan",
+      "brand": "Primrose School of Glen Kernan",
+      "city": "Jacksonville",
+      "contact_form_url": "https://www.primroseschools.com/schools/glen-kernan/schedule-a-tour",
+      "website": "https://www.primroseschools.com/schools/glen-kernan",
+      "phone": "(904) 992-9002",
+      "lane": "daycare",
+      "segment": "b2b_daycare",
+      "channel": "b2b",
+      "tier": "copycat_t1",
+      "status": "copycat_t1",
+      "path_type": "form",
+      "pto_pta": false,
+      "blue_chip": true,
+      "mid": null,
+      "tags": [
+        "daycare"
+      ],
+      "why_hot": "Primrose schedule-a-tour form; local chain lookalike of past daycare buyers; weekday mini fit, confirm pricing",
+      "source": "hot-links-daycare-expand-2026-09-23"
+    },
+    {
+      "account": "Primrose School of Ponte Vedra at Nocatee",
+      "brand": "Primrose School of Ponte Vedra at Nocatee",
+      "city": "Ponte Vedra",
+      "contact_form_url": "https://www.primroseschools.com/schools/ponte-vedra-nocatee/schedule-a-tour",
+      "website": "https://www.primroseschools.com/schools/ponte-vedra-nocatee",
+      "phone": null,
+      "lane": "daycare",
+      "segment": "b2b_daycare",
+      "channel": "b2b",
+      "tier": "copycat_t1",
+      "status": "copycat_t1",
+      "path_type": "form",
+      "pto_pta": false,
+      "blue_chip": true,
+      "mid": null,
+      "tags": [
+        "daycare"
+      ],
+      "why_hot": "Primrose/Nocatee public schedule-a-tour form (formerly Crosswater Parkway); local chain lookalike, confirm pricing",
+      "source": "hot-links-daycare-expand-2026-09-23"
+    },
+    {
+      "account": "The Learning Experience \u2014 Nocatee",
+      "brand": "The Learning Experience \u2014 Nocatee",
+      "city": "Ponte Vedra Beach",
+      "contact_form_url": "https://thelearningexperience.com/centers/nocatee/",
+      "website": "https://thelearningexperience.com/centers/nocatee/",
+      "phone": "(904) 295-3129",
+      "lane": "daycare",
+      "segment": "b2b_daycare",
+      "channel": "b2b",
+      "tier": "copycat_t1",
+      "status": "copycat_t1",
+      "path_type": "form",
+      "pto_pta": false,
+      "blue_chip": true,
+      "mid": null,
+      "tags": [
+        "daycare",
+        "preschool"
+      ],
+      "why_hot": "TLE Nocatee openings / pricing quick form; net-new campus against past TLE buyers, confirm pricing",
+      "source": "hot-links-daycare-expand-2026-09-23"
+    },
+    {
+      "account": "La Petite Academy on St Johns Bluff Rd",
+      "brand": "La Petite Academy",
+      "city": "Jacksonville",
+      "contact_form_url": "https://www.lapetite.com/your-local-school/jacksonville-fl-7438/",
+      "website": "https://www.lapetite.com/your-local-school/jacksonville-fl-7438/",
+      "phone": "904.642.3224",
+      "lane": "daycare",
+      "segment": "b2b_daycare",
+      "channel": "b2b",
+      "tier": "copycat_t1",
+      "status": "copycat_t1",
+      "path_type": "form",
+      "pto_pta": false,
+      "blue_chip": true,
+      "mid": null,
+      "tags": [
+        "daycare",
+        "preschool"
+      ],
+      "why_hot": "Local La Petite daycare / preschool page with schedule-a-tour and request-a-call paths; confirm pricing",
+      "source": "hot-links-daycare-expand-2026-09-23"
+    },
+    {
+      "account": "Assumption Early Childhood Learning Center",
+      "brand": "Assumption Early Childhood Learning Center",
+      "city": "Jacksonville",
+      "contact_form_url": "https://assumptioneclc.org/online-enrollment/",
+      "website": "https://assumptioneclc.org/",
+      "phone": "(904) 518-4880",
+      "lane": "daycare",
+      "segment": "b2b_daycare",
+      "channel": "b2b",
+      "tier": "net_new",
+      "status": "net_new",
+      "path_type": "form",
+      "pto_pta": false,
+      "blue_chip": false,
+      "mid": null,
+      "tags": [
+        "daycare",
+        "preschool"
+      ],
+      "why_hot": "Public inquiry / enrollment form for local early-learning center; cold form, confirm pricing",
+      "source": "hot-links-daycare-expand-2026-09-23"
+    },
+    {
+      "account": "The Discovery School",
+      "brand": "The Discovery School",
+      "city": "Jacksonville Beach",
+      "contact_form_url": "https://www.thediscoveryschool.org/admissions/request-information",
+      "website": "https://www.thediscoveryschool.org/",
+      "phone": "904-247-4577",
+      "lane": "daycare",
+      "segment": "b2b_daycare",
+      "channel": "b2b",
+      "tier": "net_new",
+      "status": "net_new",
+      "path_type": "form",
+      "pto_pta": false,
+      "blue_chip": false,
+      "mid": null,
+      "tags": [
+        "daycare",
+        "preschool"
+      ],
+      "why_hot": "Independent Montessori preschool admissions inquiry / tour form; cold form, confirm pricing",
+      "source": "hot-links-daycare-expand-2026-09-23"
+    },
+    {
+      "account": "Ivybrook Academy Julington Creek",
+      "brand": "Ivybrook Academy Julington Creek",
+      "city": "St. Johns",
+      "contact_form_url": "mailto:Alexis.Bailey@ivybrookacademy.com",
+      "email": "Alexis.Bailey@ivybrookacademy.com",
+      "phone": "904-592-3999",
+      "website": "https://www.ivybrookacademy.com/julington-creek",
+      "lane": "school",
+      "segment": "b2b_subscription",
+      "channel": "b2b",
+      "tier": "copycat_t1",
+      "status": "copycat_t1",
+      "path_type": "email",
+      "pto_pta": false,
+      "blue_chip": true,
+      "contacts": [
+        {
+          "name": "Alexis Bailey",
+          "title": "Campus Contact",
+          "email": "Alexis.Bailey@ivybrookacademy.com",
+          "phone": "904-592-3999",
+          "linkedin": null,
+          "source": "archive-schools-pta.csv"
+        }
+      ],
+      "why_hot": "Sister campus to Valley Ridge buyer \u2014 public campus email",
+      "source": "hot-links-expand-2026-09-23-forms"
     }
   ],
   "already_customer_flagged": [
@@ -3593,5 +3801,6 @@
   "exclusions_note": "NO CDDs/HOAs on Hot Links (separate call/email lane). Excluded burned senior Top25 / Fleet / Vicars / Westminster / River Garden / Starling / Discovery / HarborChase / Camellia / Seagrass / Anthem / Rosecastle / Cypress / Grand Living / Gardens memory / Palagio / Brookdale / Legend Windsor\u2013Gables / JumpStart (already submitted) / Primrose + Spark + Goddard customer campuses + TLE Oakleaf/St.Aug/River City + Marsh Landing CC + Amelia Springs + AIPCA. Known buyers \u2192 customers-no-next-date.html.",
   "expand_note": "Expanded prior ~69 \u2192 136 CAPTCHA/email paths. Schema: channel, tier (customer|warm|missed|copycat_t1|net_new|unverified), contacts[], website, linkedin_company, pto_pta, blue_chip. PTO/PTA haul from public Duval/St. Johns school pages + archive phones. Emails only from customers file, lead archives, or fetched public pages (never invented). Customers flagged on-board \u2014 do not cold-form. CDD/HOA excluded.",
   "forms_tapped_unknown": true,
-  "forms_tapped_unknown_note": "Michael tapped more forms tonight beyond Amelia Jazz; he will name the rest. Do not invent a full tapped list."
+  "forms_tapped_unknown_note": "Michael tapped more forms tonight beyond Amelia Jazz; he will name the rest. Do not invent a full tapped list.",
+  "daycare_note": "Daycare / childcare lane: weekday mini reference ~$150\u2013350; leave row mid null unless verified."
 }
