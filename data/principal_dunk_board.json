@@ -1,6 +1,6 @@
 {
-  "as_of": "2026-09-25 7:30 PM ET",
-  "board_version": "Board v2.9.3 \u00b7 Sep 25 \u00b7 lead-source chips (dated provenance)",
+  "as_of": "2026-09-25 7:19 PM ET",
+  "board_version": "Board v2.9.4 \u00b7 Sep 25 \u00b7 Beatrix apology / partner reconnect card",
   "label": "Principal dunk board v2.9 \u2014 Friday weekend programmers + Jax universities + Corporate Friday",
   "rule": "Compose-only. Friday filter = weekend programmers (church / CDD amenity / apartments / corporate-district) + secondary consumer rebook. University = separate filter, NOT Friday default. Published emails only. Done key sheehan_principal_dunk_done_v2 \u00b7 Notes sheehan_dunk_notes_v1.",
   "compose_authuser": "sheehanhomestead@gmail.com",
@@ -12,12 +12,12 @@
     "cdd_hoa": 74,
     "university": 73,
     "enterprise": 20,
-    "owe_followup": 12,
+    "owe_followup": 13,
     "local_forms_optional": 19,
-    "mailto_total": 635,
+    "mailto_total": 636,
     "by_persona": {
       "senior": 49,
-      "other": 59,
+      "other": 60,
       "school": 112,
       "enterprise": 54,
       "daycare": 61,
@@ -156,6 +156,39 @@
       "title": "Owe / Slam / Follow-up",
       "hint": "Close these first. Verbal / promised / overdue resends. Open email \u2192 Send. Done grays out.",
       "rows": [
+        {
+          "id": "owe-beatrix-mali-vai-apology-reconnect",
+          "account": "MaliVai Washington Youth Foundation",
+          "contact": "Beatrix",
+          "title": "Partner / reconnect",
+          "email": "beatrix@malwashington.com",
+          "phone": "",
+          "city": "Jacksonville",
+          "segment": "Partner / Other",
+          "persona": "other",
+          "kind": "mailto",
+          "lane": "owe",
+          "tier": "S",
+          "website": "https://www.malwashington.com/",
+          "subject": "Sorry I dropped the ball \u2014 still here",
+          "owe_reason": "RELATIONSHIP / APOLOGY \u00b7 reconnect after Jericho departure; partner/resource lane, no hard pitch.",
+          "why": "Apology + reconnect after Beatrix left Jericho; stay connected around referrals, sensory-friendly and family resources.",
+          "quick_body": "Hi Beatrix,\n\nI owe you an apology \u2014 I dropped the ball and was slow to follow up after you left Jericho, especially after you offered to stay in touch on LinkedIn.\n\nI\u2019d still like to stay connected as partners around referrals, sensory-friendly ideas, and family resources \u2014 not lead with a petting-zoo pitch.\n\nFor homeschool / scholarship families, this may be useful if it\u2019s a fit: https://www.stepupforstudents.org/\n\nIf you have a current best email or cell, or a fall date / intro where I can be helpful, I\u2019m happy to connect. If not, all good.\n",
+          "quick_email": true,
+          "form_url": "",
+          "area": "Metro Jax \u00b7 MaliVai",
+          "role_chip": "Partner",
+          "chip_tags": [
+            "Apology",
+            "Partner"
+          ],
+          "friday": false,
+          "lead_source": "Partner \u00b7 Jericho\u2192MaliVai",
+          "lead_source_type": "partner",
+          "lead_source_detail": "Jericho relationship \u2192 MaliVai Washington Youth Foundation \u00b7 Sep 2026 inbound",
+          "lead_source_date": "2026-09-25",
+          "lead_events": []
+        },
         {
           "phone": "",
           "city": "St. Augustine / Julington Creek",
@@ -21276,7 +21309,7 @@
       "church": 38
     }
   },
-  "compose_note": "Mailto bodies omit signature \u2014 Gmail auto-signature only. | v2.9.2: clean copy; org greetings\u2192Hi there; McD consumer removed; B2B misfiles cleared of consumer_lane/quick_body | v2.9.3: lead_source chips from Gmail+inbound+PayPal+calendar; never invent",
+  "compose_note": "Mailto bodies omit signature \u2014 Gmail auto-signature only. | v2.9.2: clean copy; org greetings\u2192Hi there; McD consumer removed; B2B misfiles cleared of consumer_lane/quick_body | v2.9.3: lead_source chips from Gmail+inbound+PayPal+calendar; never invent | v2.9.4: Beatrix apology / partner reconnect card; mailto beatrix@malwashington.com; no auto-send",
   "v292": {
     "as_of": "2026-09-25 6:50 PM ET",
     "mcd_consumer_removed": true,
@@ -21364,5 +21397,20 @@
         }
       ]
     }
+  },
+  "v294": {
+    "as_of": "2026-09-25 7:19 PM ET",
+    "change": "Beatrix apology / partner reconnect Owe card",
+    "rows_total": 658,
+    "rows_with_email": 636,
+    "owe_followup": 13,
+    "card_id": "owe-beatrix-mali-vai-apology-reconnect",
+    "contact_email": "beatrix@malwashington.com",
+    "lead_source": "Partner \u00b7 Jericho\u2192MaliVai",
+    "chip_tags": [
+      "Apology",
+      "Partner"
+    ],
+    "friday": false
   }
 }
