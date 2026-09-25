@@ -43,7 +43,7 @@ button.done.on{background:#3dd68c;color:#062016;border-color:#3dd68c}
 <body><div class="wrap">
 <p class="crumb"><a href="index.html">Operator</a> · <a href="growth-simple.html">Growth</a> · <a href="doer-crm.html">Doer CRM</a> → <b>Principal dunks</b></p>
 <h1>Principal dunk board</h1>
-<p class="sub">One-click Gmail / mailto to principals / directors / local PTO presidents — subject + reply-bait body prefilled (fall fest / trunk-or-treat). Done sticks on this device. No HQ CAPTCHA junk. Compose only — you hit Send.</p>
+<p class="sub">One-click Gmail / mailto to principals / directors / local PTO presidents — subject + reply-bait body prefilled (fall fest / trunk-or-treat). Done sticks on this device. No HQ CAPTCHA junk. Uses mailto so your phone can open the Gmail app (not Chrome). Compose only — you hit Send.</p>
 <div class="banner"><b>Compose only — never auto-send.</b> Skip Duval PTA / district HQ forms. Prefer a named inbox that a human reads.</div>
 <div class="banner" id="dedupe" style="border-color:#3dd68c66;color:#9dffc5">Scrubbing vs sent + customers…</div>
 <div class="kpis" id="kpis"></div>
@@ -125,8 +125,8 @@ button.done.on{background:#3dd68c;color:#062016;border-color:#3dd68c}
       if(r.why)html+=`<div class="why">${esc(r.why)}</div>`;
       html+=`<div class="actions">`;
       if(r.email){
-        html+=`<a class="btn" target="_blank" rel="noopener" href="${gmail(r.email,r.account)}">Open email</a>`;
-        html+=`<a class="btn sec" href="${mailto(r.email)}">mailto</a>`;
+        html+=`<a class="btn" href="${mailto(r.email)}">Open email</a>`;
+        html+=`<a class="btn sec" target="_blank" rel="noopener" href="${gmail(r.email,r.account)}">Browser Gmail</a>`;
       }else if(r.form_url){
         html+=`<a class="btn" target="_blank" rel="noopener" href="${esc(r.form_url)}">Open local form</a>`;
       }
