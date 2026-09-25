@@ -1,6 +1,6 @@
 {
-  "as_of": "2026-09-24T14:30:00-04:00",
-  "label": "Tonight's outreach \u2014 2026-09-23 evening (ET)",
+  "as_of": "2026-09-25T12:38:00-04:00",
+  "label": "Recent outreach \u2014 Sep 23 evening + Sep 25 principal dunk blast",
   "source": "Gmail Sent verified \u00b7 no invented emails",
   "rule": "Past-customer + ToT/FF blast = PIPELINE. Mid $ only when Michael named it. Investor-safe.",
   "forms_tapped_unknown": true,
@@ -17,7 +17,9 @@
     "email_rows_total": 28,
     "pipeline_plus_warm_email_count": 22,
     "emailed_customer_pipeline_full_yes_stack_mid_sum": 5150,
-    "emailed_customer_pipeline_full_yes_stack_note": "Named mid $ on pipeline+warm only (excl. bounce $0) = $5150. Null-mid pipeline rows excluded from $ sum. Michael target \u2248 $6k excl. bounce."
+    "emailed_customer_pipeline_full_yes_stack_note": "Named mid $ on pipeline+warm only (excl. bounce $0) = $5150. Null-mid pipeline rows excluded from $ sum. Michael target \u2248 $6k excl. bounce.",
+    "sep25_dunk_gmail_unique": 33,
+    "note_sep25": "Sep 25 dunk blast \u2248 33 unique Gmail sent recipients (verified). Prior Sep 23 evening rows retained below."
   },
   "emails": [
     {
@@ -407,5 +409,39 @@
       "sent_at": "2026-09-23T23:00:00Z",
       "gmail_thread": null
     }
-  ]
+  ],
+  "sep25_dunk_blast": {
+    "as_of": "2026-09-25 12:38 ET",
+    "note": "Michael principal dunk mailto blast on 2026-09-25. Counts from Gmail in:sent after:2026/09/25 (compose-only; no bot send). Winning reply: Tabatha Onorato / Bartram Springs Elementary PTA (bseptapres@gmail.com).",
+    "gmail_today_unique_recipients": 33,
+    "gmail_today_emails_sample": [
+      "annelisas@njbc.org",
+      "arainey@resurrectioncatholic.com",
+      "beauclercpta@gmail.com",
+      "bott@cpsschool.org",
+      "bpeters@stjosephcs.org",
+      "bseptapres@gmail.com",
+      "chetscreekelementarypta@gmail.com",
+      "cmeyer@spcsjax.org",
+      "connect@chetscreek.com",
+      "csult@hscatholicschool.com",
+      "ddossantos@pcapvb.org",
+      "flaglercenter@tlechildcare.com",
+      "ganyeladim@jcajax.org",
+      "info@asburyop.com",
+      "info@prov.org"
+    ],
+    "winning_reply": {
+      "contact": "Tabatha Onorato",
+      "spelling": "Tabatha",
+      "account": "Bartram Springs Elementary PTA",
+      "email": "bseptapres@gmail.com",
+      "phone": "904-755-7230",
+      "events": [
+        "2026-10-30 trunk-or-treat",
+        "2026-11-13 science night"
+      ],
+      "status": "CALL_OFFERED"
+    }
+  }
 }

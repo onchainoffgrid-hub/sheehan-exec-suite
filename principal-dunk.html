@@ -43,18 +43,23 @@ button.done.on{background:#3dd68c;color:#062016;border-color:#3dd68c}
 <body><div class="wrap">
 <p class="crumb"><a href="index.html">Operator</a> · <a href="growth-simple.html">Growth</a> · <a href="doer-crm.html">Doer CRM</a> → <b>Principal dunks</b></p>
 <h1>Principal dunk board</h1>
-<p class="sub">One-click Gmail / mailto to principals / directors / local PTO presidents — subject + reply-bait body prefilled (fall fest / trunk-or-treat). Done sticks on this device. No HQ CAPTCHA junk. Uses mailto so your phone can open the Gmail app (not Chrome). Compose only — you hit Send.</p>
+<p class="sub">One-click Gmail / mailto — short Tabatha-style ask (date + open dates). Body persona matches the seat: church ≠ school, daycare/senior get their own line. Done sticks on this device. Mailto opens Gmail app on phone. Compose only — you hit Send.</p>
 <div class="banner"><b>Compose only — never auto-send.</b> Skip Duval PTA / district HQ forms. Prefer a named inbox that a human reads.</div>
 <div class="banner" id="dedupe" style="border-color:#3dd68c66;color:#9dffc5">Scrubbing vs sent + customers…</div>
 <div class="kpis" id="kpis"></div>
 <div class="filters">
-  <button type="button" class="on" data-sec="principals">Principals</button>
+  <button type="button" class="on" data-sec="next40">Next 40 mix</button>
+  <button type="button" data-sec="principals">Principals</button>
   <button type="button" data-sec="directors">Directors</button>
   <button type="button" data-sec="pto">PTO / PTA</button>
   <button type="button" data-sec="other">Other email</button>
   <button type="button" data-sec="local_forms">Local forms</button>
-  <button type="button" data-sec="open">Open only</button>
-  <input id="q" type="search" placeholder="Filter name, school, email…" autocomplete="off"/>
+  <button type="button" class="on" data-sec="open">Open only</button>
+  <button type="button" data-persona="school">School</button>
+  <button type="button" data-persona="church">Church</button>
+  <button type="button" data-persona="daycare">Daycare</button>
+  <button type="button" data-persona="senior">Senior</button>
+  <input id="q" type="search" placeholder="Filter email / city…" autocomplete="off"/>
 </div>
 <div id="board"></div>
 <p class="note">Source: TAM dialer + quick emails · filtered for decision-maker seats with public email · CAPTCHA HQ / salesy forms stripped · local Done key <code>sheehan_principal_dunk_done_v1</code></p>
@@ -66,22 +71,77 @@ button.done.on{background:#3dd68c;color:#062016;border-color:#3dd68c}
   function loadDone(){try{return JSON.parse(localStorage.getItem(DONE_KEY)||'{}')}catch(e){return{}}}
   function saveDone(m){localStorage.setItem(DONE_KEY,JSON.stringify(m))}
   function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-  function gmail(email, account){
-    const su=encodeURIComponent('Petting zoo for fall festival / trunk or treat?');
-    const body=encodeURIComponent('Hi —\n\nReaching out because we bring petting zoos and STEM / nature school programs to dozens of leading schools in metro Jacksonville.\n\nDo you have any fall festivals or trunk-or-treat dates you want to consider?\n\nWhile most are doing festival planning, some are doing after-school, assemblies, and longer-term labs as well.\n\nHappy to share dates if useful.\n');
-    return 'https://mail.google.com/mail/?authuser='+encodeURIComponent(AUTH)+'&view=cm&fs=1&to='+encodeURIComponent(email)+'&su='+su+'&body='+body;
+  function firstName(contact){
+    const c=String(contact||'').trim();
+    if(!c) return '';
+    const skip=/^(dr\.?|mr\.?|mrs\.?|ms\.?|miss|pastor|rev\.?|father|sister|brother)$/i;
+    const parts=c.split(/\s+/).filter(Boolean);
+    for(const p of parts){ if(!skip.test(p.replace(/\./g,''))) return p.replace(/,$/,''); }
+    return parts[0]||'';
   }
-  function mailto(email){
-    const su=encodeURIComponent('Petting zoo for fall festival / trunk or treat?');
-    const body=encodeURIComponent('Hi —\n\nReaching out because we bring petting zoos and STEM / nature school programs to dozens of leading schools in metro Jacksonville.\n\nDo you have any fall festivals or trunk-or-treat dates you want to consider?\n\nWhile most are doing festival planning, some are doing after-school, assemblies, and longer-term labs as well.\n\nHappy to share dates if useful.\n');
-    return 'mailto:'+encodeURIComponent(email)+'?subject='+su+'&body='+body;
+  function inferPersona(r){
+    const p=String(r.persona||'').toLowerCase().trim();
+    if(['school','church','daycare','senior','other'].includes(p)) return p;
+    const blob=[r.account,r.segment,r.title,r.contact,r.why].join(' ').toLowerCase();
+    if(/church|congregation|pastor|synagogue|temple|mosque|parish|ministry|faith/.test(blob)) return 'church';
+    if(/daycare|day care|preschool|pre-school|vpk|childcare|child care|early childhood|goddard|primrose|learning center/.test(blob)) return 'daycare';
+    if(/senior|assisted living|memory care|alf|nursing|rehab|elder/.test(blob)) return 'senior';
+    if(/school|elementary|middle|high|academy|pto|pta|principal|teacher/.test(blob)) return 'school';
+    return 'other';
   }
-  let data=null, done=loadDone(), sec='principals', openOnly=false;
+  function composeBody(r){
+    // Persona-only greeting — no org/name in body (Michael 2026-09-25)
+    const hi='Hi —,';
+    const persona=inferPersona(r);
+    let reach, ask;
+    if(persona==='church'){
+      reach='Reaching out because we bring petting zoos to congregations and community events across metro Jacksonville.';
+      ask='Do you have any fall festivals, trunk-or-treat, or family event dates you want to consider?';
+    }else if(persona==='daycare'){
+      reach='Reaching out because we bring petting zoos to daycares and early childhood programs across metro Jacksonville.';
+      ask='Do you have any fall festivals or trunk-or-treat dates you want to consider?';
+    }else if(persona==='senior'){
+      reach='Reaching out because we bring petting zoos to senior communities across metro Jacksonville.';
+      ask='Do you have any fall festivals, family days, or resident event dates you want to consider?';
+    }else if(persona==='other'){
+      reach='Reaching out because we bring petting zoos to community events across metro Jacksonville.';
+      ask='Do you have any fall festivals or trunk-or-treat dates you want to consider?';
+    }else{
+      reach='Reaching out because we bring petting zoos to dozens of schools in metro Jacksonville.';
+      ask='Do you have any fall festivals or trunk-or-treat dates you want to consider?';
+    }
+    const sig='Cheers,\n\nAnn-Marie and Michael Sheehan\n\n914-263-1311\n\nPlease like our Facebook\nhttps://www.facebook.com/profile.php?id=61556795506312\n\nSheehan Homestead\nhttp://www.sheehanhomestead.com/';
+    return hi+'\n\n'+reach+'\n\n'+ask+'\n\nHappy to share open dates or more info if useful.\n\n'+sig+'\n';
+  }
+  function subjectFor(r){
+    const persona=inferPersona(r);
+    if(persona==='church') return 'Petting zoo for fall festival / family event?';
+    if(persona==='senior') return 'Petting zoo for fall / resident event?';
+    return 'Petting zoo for fall festival / trunk or treat?';
+  }
+  function gmail(r){
+    const su=encodeURIComponent(subjectFor(r));
+    const body=encodeURIComponent(composeBody(r));
+    return 'https://mail.google.com/mail/?authuser='+encodeURIComponent(AUTH)+'&view=cm&fs=1&to='+encodeURIComponent(r.email)+'&su='+su+'&body='+body;
+  }
+  function mailto(r){
+    const su=encodeURIComponent(subjectFor(r));
+    const body=encodeURIComponent(composeBody(r));
+    return 'mailto:'+encodeURIComponent(r.email)+'?subject='+su+'&body='+body;
+  }
+  let data=null, done=loadDone(), sec='next40', openOnly=true, personaFilter='';
   const qEl=document.getElementById('q');
   document.querySelectorAll('.filters button').forEach(b=>{
     b.addEventListener('click',()=>{
       const id=b.getAttribute('data-sec');
+      const pers=b.getAttribute('data-persona');
       if(id==='open'){openOnly=!openOnly;b.classList.toggle('on',openOnly);render();return;}
+      if(pers){
+        personaFilter=(personaFilter===pers)?'':pers;
+        document.querySelectorAll('.filters button[data-persona]').forEach(x=>x.classList.toggle('on',x.getAttribute('data-persona')===personaFilter));
+        render();return;
+      }
+      if(!id)return;
       sec=id;
       document.querySelectorAll('.filters button[data-sec]').forEach(x=>{if(x.getAttribute('data-sec')!=='open')x.classList.remove('on')});
       b.classList.add('on');
@@ -92,41 +152,71 @@ button.done.on{background:#3dd68c;color:#062016;border-color:#3dd68c}
   function render(){
     if(!data)return;
     const counts=data.counts||{};
+    const bp=counts.by_persona||{};
     document.getElementById('kpis').innerHTML=[
-      ['Principals',counts.principals],
-      ['Directors',counts.directors],
-      ['PTO/PTA',counts.pto_pta_presidents],
-      ['Other email',counts.other_decision_makers],
-      ['Local forms',counts.local_forms_optional],
+      ['Mailto left',counts.mailto_total],
+      ['Untapped vs today',counts.untapped_vs_today_sent],
+      ['School',bp.school],
+      ['Church',bp.church],
+      ['Daycare',bp.daycare],
+      ['Senior',bp.senior],
       ['Done',Object.keys(done).filter(k=>done[k]).length]
     ].map(([l,v])=>`<div class="kpi"><div class="l">${esc(l)}</div><div class="v">${v||0}</div></div>`).join('');
-    const section=(data.sections||[]).find(s=>s.id===sec)||data.sections[0];
     const q=(qEl.value||'').trim().toLowerCase();
-    let rows=(section.rows||[]).filter(r=>{
+    let sectionTitle='Next 40 mix';
+    let sectionHint='Mixed school / church / daycare / senior — persona chip only. Open email → send. Mark Done as you go.';
+    let rows=[];
+    if(sec==='next40'){
+      const all=[];
+      (data.sections||[]).forEach(s=>{ if(s.id==='local_forms') return; (s.rows||[]).forEach(r=>{ if(r.email) all.push(r); }); });
+      // Round-robin by persona for a fair mix
+      const buckets={school:[],church:[],daycare:[],senior:[],other:[]};
+      all.forEach(r=>{ const p=inferPersona(r); (buckets[p]||buckets.other).push(r); });
+      const order=['school','church','pto_bias','daycare','senior','other'];
+      // Prefer PTO-ish school rows first within school
+      buckets.school.sort((a,b)=>((/pto|pta/i.test([a.title,a.segment,a.account].join(' '))?0:1)-(/pto|pta/i.test([b.title,b.segment,b.account].join(' '))?0:1)));
+      const keys=['school','church','daycare','senior','other'];
+      let i=0; const picked=[];
+      while(picked.length<40){
+        let added=false;
+        for(const k of keys){
+          while(buckets[k].length && done[buckets[k][0].id] && openOnly) buckets[k].shift();
+          if(!buckets[k].length) continue;
+          picked.push(buckets[k].shift()); added=true;
+          if(picked.length>=40) break;
+        }
+        if(!added) break;
+      }
+      rows=picked;
+    }else{
+      const section=(data.sections||[]).find(s=>s.id===sec)||data.sections[0];
+      sectionTitle=section.title; sectionHint=section.hint||'';
+      rows=(section.rows||[]).slice();
+    }
+    rows=rows.filter(r=>{
       if(openOnly&&done[r.id])return false;
+      if(personaFilter && inferPersona(r)!==personaFilter)return false;
       if(!q)return true;
-      const blob=[r.account,r.contact,r.title,r.email,r.city,r.segment].join(' ').toLowerCase();
+      const blob=[r.account,r.contact,r.title,r.email,r.city,r.segment,r.persona].join(' ').toLowerCase();
       return blob.includes(q);
     });
     const board=document.getElementById('board');
     if(!rows.length){board.innerHTML='<div class="empty">Nothing in this lane (or all marked Done).</div>';return;}
-    let html=`<div class="sec">${esc(section.title)}</div><p class="hint">${esc(section.hint||'')}</p>`;
+    let html=`<div class="sec">${esc(sectionTitle)}</div><p class="hint">${esc(sectionHint)}</p>`;
     rows.forEach(r=>{
       const isDone=!!done[r.id];
       const titleLine=[r.contact,r.title].filter(Boolean).join(' · ')||r.title||'Contact';
       html+=`<article class="card${isDone?' done':''}" data-id="${esc(r.id)}">`;
-      html+=`<h3>${esc(r.account||'—')}</h3>`;
-      html+=`<div class="meta"><span class="chip pri">${esc(titleLine)}</span>`;
-      if(r.city)html+=`<span class="chip">${esc(r.city)}</span>`;
-      if(r.segment)html+=`<span class="chip">${esc(r.segment)}</span>`;
-      if(r.email)html+=` <b>${esc(r.email)}</b>`;
-      if(r.phone)html+=` · ${esc(r.phone)}`;
+      const pers=inferPersona(r);
+      html+=`<h3><span class="chip pri">${esc(pers)}</span> ${esc(r.city||r.segment||'metro Jax')}</h3>`;
+      html+=`<div class="meta">`;
+      if(r.email)html+=`<b>${esc(r.email)}</b>`;
       html+=`</div>`;
-      if(r.why)html+=`<div class="why">${esc(r.why)}</div>`;
+      html+=`<div class="why">Template says <b>${esc(pers)}</b> — not school-for-church. Tap Open email → Send.</div>`;
       html+=`<div class="actions">`;
       if(r.email){
-        html+=`<a class="btn" href="${mailto(r.email)}">Open email</a>`;
-        html+=`<a class="btn sec" target="_blank" rel="noopener" href="${gmail(r.email,r.account)}">Browser Gmail</a>`;
+        html+=`<a class="btn" href="${mailto(r)}">Open email</a>`;
+        html+=`<a class="btn sec" target="_blank" rel="noopener" href="${gmail(r)}">Browser Gmail</a>`;
       }else if(r.form_url){
         html+=`<a class="btn" target="_blank" rel="noopener" href="${esc(r.form_url)}">Open local form</a>`;
       }

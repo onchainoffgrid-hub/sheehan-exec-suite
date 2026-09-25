@@ -1,42 +1,126 @@
 {
-  "as_of": "2026-09-25 10:36 ET",
-  "recipient_count": 55,
+  "as_of": "2026-09-25 12:35 ET",
+  "recipient_count": 75,
+  "today_unique": 33,
+  "today_emails": [
+    "annelisas@njbc.org",
+    "arainey@resurrectioncatholic.com",
+    "beauclercpta@gmail.com",
+    "bott@cpsschool.org",
+    "bpeters@stjosephcs.org",
+    "bseptapres@gmail.com",
+    "chetscreekelementarypta@gmail.com",
+    "cmeyer@spcsjax.org",
+    "connect@chetscreek.com",
+    "csult@hscatholicschool.com",
+    "ddossantos@pcapvb.org",
+    "flaglercenter@tlechildcare.com",
+    "ganyeladim@jcajax.org",
+    "info@asburyop.com",
+    "info@prov.org",
+    "jcelempto@gmail.com",
+    "jlord@guardiancatholic.com",
+    "kernantrailpta@gmail.com",
+    "kim.repper@spsjax.org",
+    "kthompson@stpaulsbeach.com",
+    "mandarinmiddleptsa@gmail.com",
+    "mdubberly@stmatthewscs.com",
+    "mkavanagh@hfcatholicschool.com",
+    "mkennedy@sacredheartjax.com",
+    "neptunebeachvolunteers@gmail.com",
+    "office@jcds.com",
+    "principal@annunciationcatholic.org",
+    "principal@morningstar-jax.org",
+    "rcjergensen@gmail.com",
+    "rroot@ccpvb.org",
+    "swain@sanjoseschool.com",
+    "todd.declemente@sjaweb.org",
+    "trhodes@sjdrschool.org"
+  ],
   "board_hits": [
     {
-      "account": "Duval Landscape Maintenance",
-      "email": "info@duvallandscape.com",
-      "contact": "Rob Bullock",
-      "title": "President"
+      "account": "Annunciation Catholic School",
+      "email": "principal@annunciationcatholic.org",
+      "contact": "Stephen Eiswert",
+      "title": "Principal",
+      "persona": "school"
     },
     {
-      "account": "James A. Webster Elementary PTO",
-      "email": "thewebsterschoolpto@gmail.com",
-      "contact": "Sherria Joye",
-      "title": "PTO President"
+      "account": "Jacksonville Country Day School",
+      "email": "office@jcds.com",
+      "contact": "Christopher Johnson",
+      "title": "Head of School",
+      "persona": "school"
     },
     {
-      "account": "Abess Park Elementary",
-      "email": "marykslover@gmail.com",
-      "contact": "Abess Park Elementary",
-      "title": "PTA/PTO President"
+      "account": "Palmer Catholic Academy",
+      "email": "ddossantos@pcapvb.org",
+      "contact": "Daniela DosSantos",
+      "title": "Principal",
+      "persona": "school"
     },
     {
-      "account": "Palagio Senior Living",
-      "email": "lifeenrichmentdirector@palagioseniorliving.com",
-      "contact": "Kristi Wilder",
-      "title": "Life Enrichment Director"
+      "account": "San Juan Del Rio Catholic School",
+      "email": "trhodes@sjdrschool.org",
+      "contact": "Tabatha Rhodes",
+      "title": "Principal",
+      "persona": "school"
     },
     {
-      "account": "The Windsor at Ortega",
-      "email": "deandre.stringer@legendseniorliving.com",
-      "contact": "Deandre Stringer",
-      "title": "Life Enrichment Director"
+      "account": "Cathedral Parish School",
+      "email": "bott@cpsschool.org",
+      "contact": "Bryan Ott",
+      "title": "Principal",
+      "persona": "church"
     },
     {
-      "account": "Fletcher's Tender Care, LLC",
-      "email": "ecooks@fletcherstendercare.com",
-      "contact": "Ericka Cooks",
-      "title": "Center Director / Regional"
+      "account": "Guardian Catholic School",
+      "email": "jlord@guardiancatholic.com",
+      "contact": "Jenn Lord",
+      "title": "Principal",
+      "persona": "church"
+    },
+    {
+      "account": "Holy Family Catholic School",
+      "email": "mkavanagh@hfcatholicschool.com",
+      "contact": "Michael Kavanagh",
+      "title": "Principal",
+      "persona": "church"
+    },
+    {
+      "account": "Holy Spirit Catholic School",
+      "email": "csult@hscatholicschool.com",
+      "contact": "Chelsea Sult",
+      "title": "Principal",
+      "persona": "church"
+    },
+    {
+      "account": "Morning Star High School",
+      "email": "principal@morningstar-jax.org",
+      "contact": "Elaine Shott",
+      "title": "Principal",
+      "persona": "church"
+    },
+    {
+      "account": "Resurrection Catholic School",
+      "email": "arainey@resurrectioncatholic.com",
+      "contact": "Amanda Rainey",
+      "title": "Principal",
+      "persona": "church"
+    },
+    {
+      "account": "Sacred Heart Catholic School",
+      "email": "mkennedy@sacredheartjax.com",
+      "contact": "Melissa Kennedy",
+      "title": "Principal",
+      "persona": "church"
+    },
+    {
+      "account": "San Jose Catholic School",
+      "email": "swain@sanjoseschool.com",
+      "contact": "Jennifer Swain",
+      "title": "Principal",
+      "persona": "church"
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-24T14:30:00-04:00",
+  "as_of": "2026-09-25T12:38:00-04:00",
   "source": "Talk-Deputy + Right Now DROP-BALL (Gmail+Cal+Drive)",
   "north_star": "paid dates locked (mobile + Visit Us)",
   "bookings": [
@@ -16,6 +16,40 @@
       "owner": "ops",
       "risk": "low",
       "notes": "Accepted / locked per Right Now"
+    },
+    {
+      "id": "bartram-springs-pta-tabatha-2026-fall",
+      "date": "2026-10-30",
+      "date_secondary": "2026-11-13",
+      "time": null,
+      "title": "Bartram Springs Elementary PTA \u2014 Tabatha Onorato (ToT + Science Night)",
+      "status": "CALL_OFFERED",
+      "paid": "none",
+      "deposit": null,
+      "channel": "school_pta",
+      "email": "bseptapres@gmail.com",
+      "phone": "904-755-7230",
+      "contact": "Tabatha Onorato",
+      "account": "Bartram Springs Elementary PTA",
+      "next_action": "Await Tabatha call/text reply \u2014 Michael offered call Sep 25 (spelling: Tabatha)",
+      "owner": "Michael",
+      "risk": "low",
+      "notes": "Winning reply 2026-09-25: Tabatha (not Megan) is PTA president. Planning trunk-or-treat Oct 30 2026 + science night Nov 13 2026. Michael offered call/text 914-263-1311. Spelling TABATHA. Email bseptapres@gmail.com \u00b7 phone 904-755-7230.",
+      "events": [
+        {
+          "date": "2026-10-30",
+          "label": "Trunk-or-treat"
+        },
+        {
+          "date": "2026-11-13",
+          "label": "Science night"
+        }
+      ],
+      "gmail_thread": "1a0d9233a343e7e6",
+      "pipeline_weight": 0.6,
+      "quoted_mid": null,
+      "weighted_value": null,
+      "do_now": true
     },
     {
       "id": "river-city-science-2026-10-02",
@@ -148,17 +182,17 @@
       "date": "2026-11-21",
       "time": "10:00\u201313:00",
       "title": "Brooks Bartram Lakes \u2014 3-hr petting zoo (quote)",
-      "status": "QUOTE_DRAFT",
+      "status": "WAITING_MONDAY",
       "paid": "none",
       "deposit": null,
       "channel": "senior_mobile",
-      "next_action": "Open brooks-click.html \u2192 edit \u2192 YOU send \u2192 Done \u2192 flip QUOTE_SENT",
-      "owner": "Michael (send quote) \u2192 Ann-Marie AR on yes",
-      "risk": "medium",
-      "notes": "Violet package all-in: std $629 (rec) / +critters $749 / mini $499 \u00b7 list $1049 / $1298 \u00b7 weighted $472 @75% of $629 \u00b7 Open-in-mail only (no bot send) \u00b7 W-9 before invoice",
+      "next_action": "Wait for Kate Monday answer \u2014 Michael called Sep 25; probably a go; she double-checks",
+      "owner": "Kate (Brooks) \u2192 Michael",
+      "risk": "low",
+      "notes": "Violet package all-in: std $629 (rec) / +critters $749 / mini $499 \u00b7 list $1049 / $1298 \u00b7 weighted $472 @75% of $629 \u00b7 Open-in-mail only (no bot send) \u00b7 W-9 before invoice \u00b7 Michael called Kate 2026-09-25 \u2014 probably a go; she double-checks; answer Monday",
       "quoted_mid": 629,
-      "pipeline_weight": 0.75,
-      "weighted_value": 472,
+      "pipeline_weight": 0.85,
+      "weighted_value": 535,
       "w9_needed": true,
       "followups": [
         "W-9 before invoicing",
@@ -189,43 +223,48 @@
       },
       "violet": true,
       "violet_policy": "\u226550% service donated + \u226575% fees donated for qualifying nonprofits/good causes",
-      "do_now": true,
+      "do_now": false,
       "open_email_href": "brooks-click.html"
     }
   ],
   "next_actions_ranked": [
     {
       "rank": 1,
-      "action": "Brooks Bartram Lakes Nov 21 \u2014 send quote draft (card ready); await Kate package pick",
-      "blocks": "quote not sent / awaiting reply"
+      "action": "Tabatha Onorato / Bartram Springs PTA \u2014 await call reply (ToT Oct 30 + science night Nov 13); spelling Tabatha",
+      "blocks": "call offered / waiting reply"
     },
     {
       "rank": 2,
+      "action": "Brooks Bartram Lakes Nov 21 \u2014 WAITING_MONDAY (Michael called Kate Sep 25; probably go; she double-checks)",
+      "blocks": "Kate Monday answer"
+    },
+    {
+      "rank": 3,
       "action": "Confirm what\u2019s real on Oct 3 (JU noon / Wild Light stubs) \u2014 Madeline NO_PAY out",
       "blocks": "memory gap on Oct 3"
     },
     {
-      "rank": 3,
+      "rank": 4,
       "action": "Julie Pettigrew \u2014 pull from MIA / re-surface in pipeline",
       "blocks": "pipeline leak"
     },
     {
-      "rank": 4,
+      "rank": 5,
       "action": "Fletcher Oct 14: pause on calendar (cold / allergies)",
       "blocks": "calendar lie"
     },
     {
-      "rank": 5,
+      "rank": 6,
       "action": "Confirm Vesta Durbin Sep 27 crew + deposit clear",
       "blocks": "delivery soon"
     },
     {
-      "rank": 6,
+      "rank": 7,
       "action": "RCS Oct 2: waiting Lauren yes",
       "blocks": "pending acceptance"
     },
     {
-      "rank": 7,
+      "rank": 8,
       "action": "Goddard Oct 23 + 29: mark paid when deposits hit",
       "blocks": "accepted \u2260 paid"
     }
@@ -233,6 +272,7 @@
   "counts": {
     "by_status": {
       "LOCKED": 1,
+      "CALL_OFFERED": 1,
       "WAITING_YES": 1,
       "NEEDS_CONFIRM": 1,
       "NO_PAY": 1,
@@ -241,12 +281,12 @@
       "ACCEPTED": 2,
       "PIPELINE_MIA": 1,
       "BOOKED": 1,
-      "QUOTE_SENT": 1
+      "WAITING_MONDAY": 1
     },
     "paid_verified": 0,
     "recent_outreach_pipeline_emails": 22,
     "recent_outreach_mid_stack": 5150,
-    "bookings": 11
+    "bookings": 12
   },
   "rules": {
     "paid_dates_only_in_KPI": true,
@@ -260,9 +300,18 @@
     "2026-09-24_brooks": "Brooks Bartram Lakes: Kate asked Sat Nov 21 10\u20131 price for 3hr PZ. Quote options staged (std $600 / mini $500 / +critters $750 +~$100 travel). Status QUOTE_SENT/awaiting once Michael hits Send on draft card. Source Tasia referral.",
     "2026-09-24_brooks_rewrite": "Brooks quote email rewritten (draft-only). Weighted pipeline $450 (75% of $600). W-9 before invoicing. On-site scanner/link journey = follow-up, not in email.",
     "2026-09-24_brooks_products": "Product defs locked for quotes: Standard \u22659 animals (~3 goats/bunnies/fowl); Mini \u22656 (~2 each); Side of critters = seasonal extras on same standard base. List ~$1049 (+$249 critters). Brooks = real nonprofit (501c3 / bartramlakes.org). Growth deal: close invoice, not apps.",
-    "2026-09-24_violet": "Violet membership: \u226550% service + \u226575% fees donation posture for qualifying 501c3 / good causes. Named for daughter Violet (~8 mo). Brooks qualifies. Travel folded into all-in round numbers."
+    "2026-09-24_violet": "Violet membership: \u226550% service + \u226575% fees donation posture for qualifying 501c3 / good causes. Named for daughter Violet (~8 mo). Brooks qualifies. Travel folded into all-in round numbers.",
+    "2026-09-25_tabatha": "Tabatha Onorato (spelling TABATHA) \u2014 Bartram Springs Elementary PTA president (Megan no longer). Reply to dunk email: wants info for trunk-or-treat Oct 30 2026 + science night Nov 13 2026. Michael offered call Sep 25. Email bseptapres@gmail.com \u00b7 phone 904-755-7230. Status CALL_OFFERED.",
+    "2026-09-25_brooks": "Brooks Bartram Lakes / Kate: Michael called Kate Sep 25 \u2014 probably a go; she double-checks; answer Monday. Status WAITING_MONDAY. Nov 21 10\u20131 quote still Violet all-in $629/$749/$499.",
+    "2026-09-25_dunk_blast": "Principal dunk board refreshed 2026-09-25 12:38 ET after ~33 unique Gmail sent recipients today; board scrubbed; persona field added for templates."
   },
   "activity": [
+    {
+      "at": "2026-09-25T12:38:00-04:00",
+      "what": "Tabatha Onorato / Bartram Springs PTA CALL_OFFERED (ToT Oct 30 + science night Nov 13) \u00b7 Brooks \u2192 WAITING_MONDAY after Sep 25 call",
+      "by": "suite / dunk refresh",
+      "href": "ops-pipeline.html"
+    },
     {
       "at": "2026-09-24T14:30:00-04:00",
       "what": "Brooks Violet all-in rewrite $629/$749/$499 \u00b7 open-in-mail click page \u00b7 do-now",
