@@ -43,7 +43,7 @@ button.done.on{background:#3dd68c;color:#062016;border-color:#3dd68c}
 <body><div class="wrap">
 <p class="crumb"><a href="index.html">Operator</a> · <a href="growth-simple.html">Growth</a> · <a href="doer-crm.html">Doer CRM</a> → <b>Principal dunks</b></p>
 <h1>Principal dunk board</h1>
-<p class="sub">One-click mailto to principals / directors / local PTO presidents. Done sticks on this device. No HQ CAPTCHA junk. Forms only as a small optional lane — skip anything salesy.</p>
+<p class="sub">One-click Gmail / mailto to principals / directors / local PTO presidents — subject + reply-bait body prefilled (fall fest / trunk-or-treat). Done sticks on this device. No HQ CAPTCHA junk. Compose only — you hit Send.</p>
 <div class="banner"><b>Compose only — never auto-send.</b> Skip Duval PTA / district HQ forms. Prefer a named inbox that a human reads.</div>
 <div class="banner" id="dedupe" style="border-color:#3dd68c66;color:#9dffc5">Scrubbing vs sent + customers…</div>
 <div class="kpis" id="kpis"></div>
@@ -67,13 +67,13 @@ button.done.on{background:#3dd68c;color:#062016;border-color:#3dd68c}
   function saveDone(m){localStorage.setItem(DONE_KEY,JSON.stringify(m))}
   function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
   function gmail(email, account){
-    const su=encodeURIComponent('Mobile petting zoo / farm visit — Sheehan Homestead (Callahan)');
-    const body=encodeURIComponent('Hi —\\n\\nQuick note from Sheehan Homestead in Callahan. We bring a small mobile petting zoo / farm visit for schools and programs (goats, etc.). Happy to share dates and a simple one-pager if useful.\\n\\nNo hard sell — just checking fit.\\n\\nMichael & Ann-Marie Sheehan\\nSheehan Homestead · Critters on Call\\n');
+    const su=encodeURIComponent('Petting zoo for fall festival / trunk or treat?');
+    const body=encodeURIComponent('Hi —\n\nReaching out because we bring petting zoos and STEM / nature school programs to dozens of leading schools in metro Jacksonville.\n\nDo you have any fall festivals or trunk-or-treat dates you want to consider?\n\nWhile most are doing festival planning, some are doing after-school, assemblies, and longer-term labs as well.\n\nHappy to share dates if useful.\n\nCheers,\n');
     return 'https://mail.google.com/mail/?authuser='+encodeURIComponent(AUTH)+'&view=cm&fs=1&to='+encodeURIComponent(email)+'&su='+su+'&body='+body;
   }
   function mailto(email){
-    const su=encodeURIComponent('Mobile petting zoo / farm visit — Sheehan Homestead (Callahan)');
-    const body=encodeURIComponent('Hi —\n\nQuick note from Sheehan Homestead in Callahan. We bring a small mobile petting zoo / farm visit for schools and programs. Happy to share dates if useful.\n\nMichael & Ann-Marie Sheehan\n');
+    const su=encodeURIComponent('Petting zoo for fall festival / trunk or treat?');
+    const body=encodeURIComponent('Hi —\n\nReaching out because we bring petting zoos and STEM / nature school programs to dozens of leading schools in metro Jacksonville.\n\nDo you have any fall festivals or trunk-or-treat dates you want to consider?\n\nWhile most are doing festival planning, some are doing after-school, assemblies, and longer-term labs as well.\n\nHappy to share dates if useful.\n\nCheers,\n');
     return 'mailto:'+encodeURIComponent(email)+'?subject='+su+'&body='+body;
   }
   let data=null, done=loadDone(), sec='principals', openOnly=false;
