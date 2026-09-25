@@ -65,6 +65,11 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
 .chip.corp-fri{border-color:#f9731688;color:#fdba74}
 .chip.hlane{border-color:#fb923c88;color:#fdba74}
 .chip.north{border-color:#86efac88;color:#bbf7d0}
+.chip.lead{border-color:#67e8f988;color:#a5f3fc;font-weight:600}
+.chip.lead.unk{border-color:#93a0b866;color:#93a0b8;font-weight:500}
+.lead-line{font-size:.72rem;color:#93a0b8;grid-column:1/-1;margin-top:2px}
+.lead-line b{color:#a5f3fc;font-weight:600}
+.lead-line .detail{color:#93a0b8}
 
 .card.premium{border-color:#a78bfa55}
 .area{font-size:.78rem;color:#fde68a;grid-column:1/-1;font-weight:600}
@@ -87,7 +92,7 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
 <p class="crumb"><a href="index.html">Operator</a> · <a href="growth-simple.html">Growth</a> · <a href="doer-crm.html">Doer CRM</a> → <b>Principal dunks</b></p>
 <h1>Principal dunk board</h1>
 <p class="sub">One-click Gmail / mailto — B2B school/CDD keeps v2.7 Michael voice. Consumer: Reviewed → APP-FIRST (no review ask); else soft next-date / warm visit. RCSA + Fancy filters. Area + S/A/B + role chip. Done sticks (v2). Compose only.</p>
-<div class="banner"><span class="ver" id="verstamp">Board v2.9.2 · Sep 25 · scrub copy + greetings; McD consumer dropped</span><b>Compose only — never auto-send.</b> Board v2.9.2: clean copy · org→Hi there · McD consumer dropped · B2B misfiles use Michael voice. Board v2.9: <b>Friday</b> weekend programmers (church · CDD amenity · apartments · corporate/district) · <b>University</b> Jax-first (JU/UNF/FSCJ) — not Friday default · Bartram notes live. </div>
+<div class="banner"><span class="ver" id="verstamp">Board v2.9.3 · Sep 25 · lead-source chips (dated provenance)</span><b>Compose only — never auto-send.</b> Board v2.9.3: lead-source chips (GoDaddy/form/invoice/calendar/prior) · never invent · Unknown only on consumer. Board v2.9: <b>Friday</b> weekend programmers (church · CDD amenity · apartments · corporate/district) · <b>University</b> Jax-first (JU/UNF/FSCJ) — not Friday default · Bartram notes live. </div>
 <div class="banner" id="dedupe" style="border-color:#3dd68c66;color:#9dffc5">Scrubbing vs sent + customers…</div>
 <div class="kpis" id="kpis"></div>
 <div class="filters">
@@ -131,7 +136,7 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
   <input id="q" type="search" placeholder="Filter email / city / area / note…" autocomplete="off"/>
 </div>
 <div id="board"></div>
-<p class="note">Source: TAM + Jax universities (JU/UNF/FSCJ) + Friday weekend programmers + RCSA/Fancy + Consumer · CAPTCHA HQ stripped · Done key <code>sheehan_principal_dunk_done_v2</code> · Notes key <code>sheehan_dunk_notes_v1</code> · Hard-refresh (?v=292)</p>
+<p class="note">Source: TAM + Jax universities (JU/UNF/FSCJ) + Friday weekend programmers + RCSA/Fancy + Consumer · CAPTCHA HQ stripped · Done key <code>sheehan_principal_dunk_done_v2</code> · Notes key <code>sheehan_dunk_notes_v1</code> · Hard-refresh (?v=293)</p>
 </div>
 <script>
 (function(){
@@ -435,7 +440,7 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
       if(!q)return true;
       const nk=noteKey(r);
       const noteTxt=(notes[nk]&&notes[nk].text)||'';
-      const blob=[r.account,r.contact,r.title,r.email,r.city,r.area,r.region,r.county,r.segment,r.persona,r.tier,r.owe_reason,r.why,r.spend_hint,r.history_lane,r.history_lane_label,r.north_star,r.premium?'premium':'',noteTxt].join(' ').toLowerCase();
+      const blob=[r.account,r.contact,r.title,r.email,r.city,r.area,r.region,r.county,r.segment,r.persona,r.tier,r.owe_reason,r.why,r.spend_hint,r.history_lane,r.history_lane_label,r.north_star,r.lead_source,r.lead_source_detail,r.premium?'premium':'',noteTxt].join(' ').toLowerCase();
       return blob.includes(q);
     });
     const board=document.getElementById('board');
@@ -464,6 +469,13 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
       if(r.role_chip) html+=`<span class="chip role">${esc(r.role_chip)}</span> `;
       if(r.history_lane_label) html+=`<span class="chip hlane">${esc(r.history_lane_label)}</span> `;
       if(r.north_star_label) html+=`<span class="chip north">${esc(r.north_star)}</span> `;
+      if(r.lead_source){
+        const unk=String(r.lead_source).toLowerCase()==='unknown';
+        // B2B: skip Unknown noise; consumer may show it
+        if(!(unk && pers!=='consumer' && !r.consumer_lane)){
+          html+=`<span class="chip lead${unk?' unk':''}" title="${esc(r.lead_source_detail||r.lead_source)}">${esc(r.lead_source)}</span> `;
+        }
+      }
       const rs=String(r.review_status||'');
       if(rs==='likely_reviewed') html+=`<span class="chip reviewed">Reviewed</span> `;
       else if(rs==='no_review_seen') html+=`<span class="chip ask-review">Ask review later</span> `;
@@ -477,6 +489,14 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
       else if(r.contact)html+=` · ${esc(r.contact)}`;
       if(r.title)html+=` · ${esc(r.title)}`;
       html+=`</div>`;
+      if(r.lead_source){
+        const unk=String(r.lead_source).toLowerCase()==='unknown';
+        if(!(unk && pers!=='consumer' && !r.consumer_lane)){
+          html+=`<div class="lead-line"><b>Lead:</b> ${esc(r.lead_source)}`;
+          if(r.lead_source_detail) html+=` <span class="detail">· ${esc(r.lead_source_detail)}</span>`;
+          html+=`</div>`;
+        }
+      }
       if((isOwe || r.lane==='philanthropy_gm' || r.bucket==='philanthropy_gm') && (r.owe_reason||r.why)){
         html+=`<div class="owe-why"><b>Why chase:</b> ${esc(r.owe_reason||r.why)}</div>`;
       }else if(r.quick_email && r.why){
@@ -572,7 +592,7 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
     var el=document.getElementById('dedupe');
     if(el){
       var counts=d.counts||{}; var v28=d.v28||{}; var cs=(v28.consumer)||{};
-      el.innerHTML='<b>v2.9.2</b> · Friday '+(counts.friday||0)+' · Uni '+(counts.university_unique||counts.university||0)+' · Church fri '+(counts.friday_church||0)+' · CDD amenity '+(counts.friday_cdd_amenity||0)+' · Apt '+(counts.friday_apartment||0)+' · Corp/dist '+(counts.friday_corporate||0)+'/'+(counts.friday_district||0)+' · RCSA '+(counts.rcsa||v28.rcsa_rows||0)+' · Fancy '+(counts.fancy||0)+' · Consumer '+(counts.consumer||0)+' · left <b>'+(counts.mailto_total||0)+' mailto</b> · Gmail today '+(sc.gmail_sent_today||0);
+      el.innerHTML='<b>v2.9.3</b> · Friday '+(counts.friday||0)+' · Uni '+(counts.university_unique||counts.university||0)+' · Church fri '+(counts.friday_church||0)+' · CDD amenity '+(counts.friday_cdd_amenity||0)+' · Apt '+(counts.friday_apartment||0)+' · Corp/dist '+(counts.friday_corporate||0)+'/'+(counts.friday_district||0)+' · RCSA '+(counts.rcsa||v28.rcsa_rows||0)+' · Fancy '+(counts.fancy||0)+' · Consumer '+(counts.consumer||0)+' · left <b>'+(counts.mailto_total||0)+' mailto</b> · Gmail today '+(sc.gmail_sent_today||0);
     }
     render();
   }).catch(()=>{

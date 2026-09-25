@@ -1,0 +1,60 @@
+{
+  "board_version": "Board v2.9.3 \u00b7 Sep 25 \u00b7 lead-source chips (dated provenance)",
+  "as_of": "2026-09-25 7:30 PM ET",
+  "non_unknown": 192,
+  "unknown_shown": 0,
+  "rows_with_lead_source": 192,
+  "type_breakdown": {
+    "invoice": 48,
+    "godaddy": 46,
+    "form": 55,
+    "prior": 38,
+    "calendar": 4,
+    "order": 1
+  },
+  "stats": {
+    "hidden_b2b_unknown": 443,
+    "non_unknown": 192,
+    "unknown_consumer": 0
+  },
+  "charlene": {
+    "email": "cgross@elcduval.org",
+    "lead_source": "GoDaddy chat \u00b7 Aug 3",
+    "lead_source_detail": "Invoice \u00b7 Falladay Oct 24 \u00b7 $587",
+    "lead_events": [
+      {
+        "type": "godaddy",
+        "label": "GoDaddy chat \u00b7 Aug 3",
+        "date": "2026-08-03",
+        "subject": "Re: New message for Sheehan Homestead",
+        "thread_id": "19fc7eac1c416bea",
+        "source": "gmail_godaddy_conversations"
+      },
+      {
+        "type": "invoice",
+        "label": "PayPal invoice \u00b7 Jul 28 \u00b7 $587",
+        "date": "2026-07-28",
+        "amount": 587,
+        "subject": "We sent your invoice (0176) for $587.00 USD",
+        "source": "gmail_paypal"
+      },
+      {
+        "type": "calendar",
+        "label": "Calendar \u00b7 Oct 24",
+        "date": "2026-10-24",
+        "subject": "Accepted: Eartha mobile petting zoo",
+        "source": "gmail_calendar"
+      }
+    ]
+  },
+  "gaps": [
+    "Step Up For Students mail is almost all no-reply@sufs.org provider status \u2014 no clear board-email match on sampled pages; no Step Up chips applied.",
+    "Eventbrite/GigSalad hits are marketing to Sheehan, not lead provenance for board rows.",
+    "PayPal CSR exports are name-only (no emails) \u2014 invoice chips rely on Gmail subjects + AnnMarie email-as-name rows + consumer_inbound.",
+    "GoDaddy contact-form bodies not fully re-fetched for all 201 threads; consumer_inbound GODADDY_CONTACTS.csv (89) used as durable email map."
+  ],
+  "live_urls": [
+    "https://onchainoffgrid-hub.github.io/sheehan-exec-suite/principal-dunk.html?v=293",
+    "https://onchainoffgrid-hub.github.io/critters-on-call/exec/principal-dunk.html?v=293"
+  ]
+}
