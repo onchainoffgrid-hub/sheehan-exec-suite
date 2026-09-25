@@ -1,5 +1,5 @@
 {
-  "board_version": "Board v2.6 \u00b7 Sep 25 3:35 ET",
+  "board_version": "Board v2.7 \u00b7 Sep 25 3:45 ET",
   "as_of": "2026-09-25 15:35 ET",
   "premium_cards": 29,
   "premium_map_gaps": 5,
@@ -43,5 +43,6 @@
   ],
   "cdd_hoa": 57,
   "mailto_total": 216,
-  "v_query": 26
+  "v_query": 26,
+  "note": "v2.7 Michael voice mailto + area + S/A/B tiers"
 }

@@ -44,8 +44,14 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
 .chip.pri{border-color:#c9a22788;color:#fde68a}
 .chip.owe{border-color:#ffb02088;color:#ffb020}
 .chip.premium{border-color:#a78bfa88;color:#c4b5fd}
+.chip.tier-s{border-color:#ff6b4a88;color:#ff8a70;font-weight:800;min-width:1.4em;text-align:center}
+.chip.tier-a{border-color:#3dd68c88;color:#9dffc5;font-weight:800;min-width:1.4em;text-align:center}
+.chip.tier-b{border-color:#93a0b888;color:#93a0b8;font-weight:800;min-width:1.4em;text-align:center}
 .filters button.premium-btn.on{border-color:#a78bfa88;background:#1a1430;color:#c4b5fd}
+.filters button.tier-btn.on{border-color:#c9a22788;background:#2a2210;color:#fde68a}
 .card.premium{border-color:#a78bfa55}
+.area{font-size:.78rem;color:#fde68a;grid-column:1/-1;font-weight:600}
+.area b{color:#fff;font-weight:700}
 .spend{font-size:.74rem;color:#c4b5fd;grid-column:1/-1}
 .premium-map{margin:0 0 12px;padding:12px 14px;border:1px dashed #a78bfa66;border-radius:14px;background:#14102a;font-size:.78rem;color:#c5d0e6}
 .premium-map h4{margin:0 0 8px;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:#c4b5fd}
@@ -63,8 +69,8 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
 <body><div class="wrap">
 <p class="crumb"><a href="index.html">Operator</a> · <a href="growth-simple.html">Growth</a> · <a href="doer-crm.html">Doer CRM</a> → <b>Principal dunks</b></p>
 <h1>Principal dunk board</h1>
-<p class="sub">One-click Gmail / mailto — GTM first-touch: animals + open weeks, short & link-light. Hi {First} when known; persona matches the seat. Done sticks on this device (v2). Compose only — you hit Send.</p>
-<div class="banner"><span class="ver" id="verstamp">Board v2.6 · Sep 25 3:35 ET</span><b>Compose only — never auto-send.</b> Premium = big amenity wallets ($20k–$100k+ class). First-touch: animals + dates, no link dumps. Skip Duval PTA / district HQ forms. Prefer a named inbox. Notes → localStorage + optional mailto to account for Talk-Deputy sync.</div>
+<p class="sub">One-click Gmail / mailto — voice matches recent sent outreach (animals + dates ask + open dates offer). Hi {First} when known; persona matches the seat. Area + S/A/B on every card. Done sticks on this device (v2). Compose only — you hit Send.</p>
+<div class="banner"><span class="ver" id="verstamp">Board v2.7 · Sep 25 3:45 ET</span><b>Compose only — never auto-send.</b> Voice = recent sent outreach. <b>S</b> = chase/close · <b>A</b> = solid Jax · <b>B</b> = lower / farther. Premium = big amenity wallets. Skip Duval PTA / district HQ forms. Prefer a named inbox. Notes → localStorage + optional mailto to account for Talk-Deputy sync.</div>
 <div class="banner" id="dedupe" style="border-color:#3dd68c66;color:#9dffc5">Scrubbing vs sent + customers…</div>
 <div class="kpis" id="kpis"></div>
 <div class="filters">
@@ -89,10 +95,13 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
   <button type="button" data-persona="cdd">CDD</button>
   <button type="button" data-persona="university">Uni</button>
   <button type="button" data-persona="enterprise">Ent</button>
-  <input id="q" type="search" placeholder="Filter email / city / note…" autocomplete="off"/>
+  <button type="button" class="tier-btn" data-tier="S">S</button>
+  <button type="button" class="tier-btn" data-tier="A">A</button>
+  <button type="button" class="tier-btn" data-tier="B">B</button>
+  <input id="q" type="search" placeholder="Filter email / city / area / note…" autocomplete="off"/>
 </div>
 <div id="board"></div>
-<p class="note">Source: TAM + CDD/HOA + university peers + enterprise dialers · CAPTCHA HQ stripped · Done key <code>sheehan_principal_dunk_done_v2</code> · Notes key <code>sheehan_dunk_notes_v1</code> · Hard-refresh when ready (?v=26)</p>
+<p class="note">Source: TAM + CDD/HOA + university peers + enterprise dialers · CAPTCHA HQ stripped · Done key <code>sheehan_principal_dunk_done_v2</code> · Notes key <code>sheehan_dunk_notes_v1</code> · Hard-refresh when ready (?v=27)</p>
 </div>
 <script>
 (function(){
@@ -136,36 +145,52 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
     const fn=firstName(r.contact);
     const hi=fn?('Hi '+fn+','):'Hi there,';
     const persona=inferPersona(r);
-    let vibe;
-    if(persona==='church'){
-      vibe='We bring the animals — goats, bunnies, chickens — for fall festivals, trunk-or-treats, and family events. Got any open weeks you\'re filling?';
-    }else if(persona==='daycare'){
-      vibe='We bring the animals — goats, bunnies, chickens — for fall festivals and trunk-or-treats. Got any open weeks you\'re filling?';
-    }else if(persona==='senior'){
-      vibe='We bring the animals — goats, bunnies, chickens — for resident and family days. Got any open weeks you\'re filling?';
-    }else if(persona==='cdd'){
-      vibe='We bring the animals — goats, bunnies, chickens — for community and amenity fall festivals. Got any open weeks you\'re filling?';
-    }else if(persona==='university'){
-      vibe='We bring the animals — goats, bunnies, chickens — for campus and student-life fall events. Got any open weeks you\'re filling?';
-    }else if(persona==='enterprise'){
-      vibe='We bring the animals — goats, bunnies, chickens — for employee family and wellness days. Got any open weeks you\'re filling?';
-    }else if(persona==='other'){
-      vibe='We bring the animals — goats, bunnies, chickens — for community fall events. Got any open weeks you\'re filling?';
-    }else{
-      vibe='We bring the animals — goats, bunnies, chickens — for fall festivals and trunk-or-treats. Got any open weeks you\'re filling?';
-    }
-    return hi+'\n\n'+vibe+'\n\n914-263-1311\n';
+    const phrases={
+      school:['dozens of schools in metro Jacksonville','fall festivals or trunk-or-treat dates'],
+      daycare:['daycares and early childhood programs across metro Jacksonville','fall festivals or trunk-or-treat dates'],
+      church:['congregations and community events across metro Jacksonville','fall festivals, trunk-or-treat, or family event dates'],
+      senior:['senior communities across metro Jacksonville','fall festivals, family days, or resident event dates'],
+      cdd:['CDD and HOA community events across metro Jacksonville','community, amenity, fall festival, or family event dates for the CDD'],
+      university:['campuses and student-life programs across metro Jacksonville','campus, student-life, or fall event dates'],
+      enterprise:['employee family and wellness events across metro Jacksonville','employee family, wellness, or fall event dates'],
+      other:['families and community events across metro Jacksonville','fall festivals or trunk-or-treat dates']
+    };
+    const pair=phrases[persona]||phrases.other;
+    return hi+'\n\nReaching out because we bring petting zoos to '+pair[0]+'.\n\nDo you have any '+pair[1]+' you want to consider?\n\nHappy to share open dates or more info if useful.\n\nCheers,\n\nAnn-Marie and Michael Sheehan\n\n914-263-1311\n\nPlease like our Facebook\nhttps://www.facebook.com/profile.php?id=61556795506312\n\nSheehan Homestead\nhttp://www.sheehanhomestead.com/\n';
   }
   function subjectFor(r){
     if(r.subject) return r.subject;
     if(r.id===QUICK_EMAIL_ID || r.quick_email) return QUICK_EMAIL_SUBJECT;
     const persona=inferPersona(r);
-    if(persona==='church') return 'festival animals?';
-    if(persona==='senior') return 'resident animal visit?';
-    if(persona==='cdd') return 'community festival animals?';
-    if(persona==='university') return 'campus animal day?';
-    if(persona==='enterprise') return 'employee family animals?';
-    return 'fall festival animals?';
+    if(persona==='church') return 'Petting zoo for fall festival / family event?';
+    if(persona==='senior') return 'Petting zoo for fall / resident event?';
+    if(persona==='cdd') return 'Petting zoo for CDD / amenity fall festival?';
+    if(persona==='university') return 'Petting zoo for campus / student event?';
+    if(persona==='enterprise') return 'Petting zoo for employee family day?';
+    // school, daycare, other/default
+    return 'Petting zoo for fall festival / trunk or treat?';
+  }
+  function areaLabel(r){
+    if(r.area) return String(r.area);
+    const bits=[r.region,r.county,r.city].map(x=>String(x||'').trim()).filter(Boolean);
+    if(bits.length>=2) return bits[0]+' · '+bits[1];
+    if(bits.length===1){
+      const c=bits[0];
+      if(/jacksonville/i.test(c)) return 'Metro Jax · '+c;
+      if(/st\.?\s*johns|ponte|nocatee|augustine/i.test(c)) return 'St. Johns · '+c;
+      if(/fernandina|yulee|callahan|amelia|nassau/i.test(c)) return 'Nassau · '+c;
+      if(/orange park|fleming|middleburg|green cove|clay/i.test(c)) return 'Clay · '+c;
+      return 'Metro Jax · '+c;
+    }
+    return 'Metro Jax · area TBD';
+  }
+  function tierLabel(r){
+    const t=String(r.tier||'').trim().toUpperCase();
+    if(t==='S'||t==='A'||t==='B') return t;
+    if(r.lane==='owe'||r.premium) return 'S';
+    const a=areaLabel(r);
+    if(/Farther|Georgia|TBD/i.test(a)) return 'B';
+    return 'A';
   }
   function gmail(r){
     const su=encodeURIComponent(subjectFor(r));
@@ -191,7 +216,7 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
     );
     return 'mailto:'+encodeURIComponent(AUTH)+'?subject='+su+'&body='+body;
   }
-  let data=null, done=loadDone(), notes=loadNotes(), sec='next40', openOnly=true, personaFilter='';
+  let data=null, done=loadDone(), notes=loadNotes(), sec='next40', openOnly=true, personaFilter='', tierFilter='';
   const qEl=document.getElementById('q');
   document.querySelectorAll('.filters button').forEach(b=>{
     b.addEventListener('click',()=>{
@@ -201,6 +226,12 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
       if(pers){
         personaFilter=(personaFilter===pers)?'':pers;
         document.querySelectorAll('.filters button[data-persona]').forEach(x=>x.classList.toggle('on',x.getAttribute('data-persona')===personaFilter));
+        render();return;
+      }
+      const tr=b.getAttribute('data-tier');
+      if(tr){
+        tierFilter=(tierFilter===tr)?'':tr;
+        document.querySelectorAll('.filters button[data-tier]').forEach(x=>x.classList.toggle('on',x.getAttribute('data-tier')===tierFilter));
         render();return;
       }
       if(!id)return;
@@ -270,10 +301,11 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
     let rows=pack.rows.filter(r=>{
       if(openOnly&&done[r.id])return false;
       if(personaFilter && inferPersona(r)!==personaFilter)return false;
+      if(tierFilter && tierLabel(r)!==tierFilter)return false;
       if(!q)return true;
       const nk=noteKey(r);
       const noteTxt=(notes[nk]&&notes[nk].text)||'';
-      const blob=[r.account,r.contact,r.title,r.email,r.city,r.segment,r.persona,r.owe_reason,r.why,r.spend_hint,r.premium?'premium':'',noteTxt].join(' ').toLowerCase();
+      const blob=[r.account,r.contact,r.title,r.email,r.city,r.area,r.region,r.county,r.segment,r.persona,r.tier,r.owe_reason,r.why,r.spend_hint,r.premium?'premium':'',noteTxt].join(' ').toLowerCase();
       return blob.includes(q);
     });
     const board=document.getElementById('board');
@@ -289,10 +321,15 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
       const nk=noteKey(r);
       const saved=(notes[nk]&&notes[nk].text)||'';
       html+=`<article class="card${isDone?' done':''}${isOwe?' owe':''}${isPrem?' premium':''}" data-id="${esc(r.id)}">`;
+      const tier=tierLabel(r);
+      const area=areaLabel(r);
       html+=`<h3>`;
       if(isOwe)html+=`<span class="chip owe">owe</span> `;
       if(isPrem)html+=`<span class="chip premium">premium</span> `;
-      html+=`<span class="chip pri">${esc(pers)}</span> ${esc(r.account||r.city||r.segment||'metro Jax')}</h3>`;
+      html+=`<span class="chip pri">${esc(pers)}</span> `;
+      html+=`<span class="chip tier-${tier.toLowerCase()}" title="${tier==='S'?'chase/close':tier==='A'?'solid Jax':'lower / farther'}">${esc(tier)}</span> `;
+      html+=`${esc(r.account||r.city||r.segment||'metro Jax')}</h3>`;
+      html+=`<div class="area"><b>Area:</b> ${esc(area)}</div>`;
       html+=`<div class="meta">`;
       if(r.email)html+=`<b>${esc(r.email)}</b>`;
       if(fn)html+=` · greets as <b>${esc(fn)}</b>`;
