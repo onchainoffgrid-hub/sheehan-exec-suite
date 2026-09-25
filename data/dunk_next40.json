@@ -1,254 +1,337 @@
 {
-  "as_of": "2026-09-25 12:45 ET",
-  "label": "Next 40 dunk mix",
+  "as_of": "2026-09-25 14:54 ET",
+  "label": "Next 40 dunk mix v2",
   "count": 40,
   "by_persona": {
-    "school": 8,
-    "church": 8,
-    "daycare": 8,
-    "senior": 8,
-    "other": 8
+    "school": 6,
+    "church": 5,
+    "daycare": 5,
+    "senior": 5,
+    "cdd": 6,
+    "university": 5,
+    "enterprise": 5,
+    "other": 3
   },
   "rows": [
     {
       "persona": "school",
-      "email": "wsummer@smacad.org",
-      "city": "Fernandina Beach",
-      "id": "wsummer-smacad-org-st-michael-academy-principal"
+      "email": "president@landrumpto.com",
+      "city": "Ponte Vedra Beach",
+      "id": "president-landrumpto-com-alice-b-landrum-middle-school-pto-pto-president",
+      "contact": "Regan Cartwright",
+      "account": "Alice B. Landrum Middle School PTO"
     },
     {
-      "persona": "church",
-      "email": "hello@christs.church",
+      "persona": "school",
+      "email": "alimacanipta@gmail.com",
       "city": "Jacksonville",
-      "id": "hello-christs-church-christ-s-church-kids-pastor"
+      "id": "alimacanipta-gmail-com-alimacani-elementary-pta-pta-president-vp-programs-even",
+      "contact": "Lisa Britt",
+      "account": "Alimacani Elementary PTA"
     },
     {
-      "persona": "daycare",
-      "email": "tlittle@assumptionjax.org",
+      "persona": "school",
+      "email": "atlanticcoasthsptsa@gmail.com",
       "city": "Jacksonville",
-      "id": "tlittle-assumptionjax-org-assumption-early-learning-center-director"
-    },
-    {
-      "persona": "senior",
-      "email": "charvey@bakercoa.org",
-      "city": "Macclenny",
-      "id": "charvey-bakercoa-org-baker-county-friendship-center-executive-director"
-    },
-    {
-      "persona": "other",
-      "email": "phyllis@ameliamuseum.org",
-      "city": "Fernandina Beach",
-      "id": "phyllis-ameliamuseum-org-amelia-island-museum-of-history-executive-director"
+      "id": "atlanticcoasthsptsa-gmail-com-atlantic-coast-high-ptsa-ptsa-president",
+      "contact": "Erin Ware",
+      "account": "Atlantic Coast High PTSA"
     },
     {
       "persona": "school",
       "email": "ayumul@bishopsnyder.org",
       "city": "Jacksonville",
-      "id": "ayumul-bishopsnyder-org-bishop-john-j-snyder-high-school-principal"
-    },
-    {
-      "persona": "church",
-      "email": "lighthousechurch904@gmail.com",
-      "city": "St. Augustine",
-      "id": "lighthousechurch904-gmail-com-lighthouse-church-of-god-children-s-pastor"
-    },
-    {
-      "persona": "daycare",
-      "email": "director@stlukechildcare.org",
-      "city": "Middleburg",
-      "id": "director-stlukechildcare-org-st-luke-child-care-center-director"
-    },
-    {
-      "persona": "senior",
-      "email": "diane@bradfordcountyfl.gov",
-      "city": "Starke",
-      "id": "diane-bradfordcountyfl-gov-bradford-county-senior-center-director"
-    },
-    {
-      "persona": "other",
-      "email": "director@mandarinmuseum.org",
-      "city": "Jacksonville",
-      "id": "director-mandarinmuseum-org-mandarin-museum-historical-society-executive-director"
+      "id": "ayumul-bishopsnyder-org-bishop-john-j-snyder-high-school-principal",
+      "contact": "Arsenio Yumul",
+      "account": "Bishop John J. Snyder High School"
     },
     {
       "persona": "school",
       "email": "torlando@bishopkenny.org",
       "city": "Jacksonville",
-      "id": "torlando-bishopkenny-org-bishop-kenny-high-school-principal"
-    },
-    {
-      "persona": "church",
-      "email": "taylorh@fbcjax.com",
-      "city": "Jacksonville",
-      "id": "taylorh-fbcjax-com-first-baptist-church-of-jacksonville-dow-family-ministry-trunk-of-treat"
-    },
-    {
-      "persona": "daycare",
-      "email": "jacksonvillemandarin@tlechildcare.com",
-      "city": "Jacksonville",
-      "id": "jacksonvillemandarin-tlechildcare-com-the-learning-experience-jacksonville-man-director-program-director"
-    },
-    {
-      "persona": "senior",
-      "email": "pmcneal@georgialivingseniorcare.com",
-      "city": "Kingsland",
-      "id": "pmcneal-georgialivingseniorcare-com-lakes-crossing-senior-care-executive-director"
-    },
-    {
-      "persona": "other",
-      "email": "sheri@smpsjax.com",
-      "city": "Jacksonville",
-      "id": "sheri-smpsjax-com-san-marco-preservation-society-executive-director"
+      "id": "torlando-bishopkenny-org-bishop-kenny-high-school-principal",
+      "contact": "Todd Orlando",
+      "account": "Bishop Kenny High School"
     },
     {
       "persona": "school",
       "email": "deannasands@ctkschooljax.com",
       "city": "Jacksonville",
-      "id": "deannasands-ctkschooljax-com-christ-the-king-catholic-school-principal"
+      "id": "deannasands-ctkschooljax-com-christ-the-king-catholic-school-principal",
+      "contact": "Deanna Sands",
+      "account": "Christ the King Catholic School"
     },
     {
       "persona": "church",
-      "email": "communication@coe22.com",
-      "city": "Fleming Island",
-      "id": "communication-coe22-com-the-church-of-eleven22-fleming-island-ca-kids-pastor"
+      "email": "amandamhjax@gmail.com",
+      "city": "",
+      "id": "amandamhjax-gmail-com-amanda-churchill-children-s-family-ministry",
+      "contact": "Amanda Churchill",
+      "account": "Amanda Churchill"
     },
     {
-      "persona": "daycare",
-      "email": "jacksonville@tlechildcare.com",
+      "persona": "church",
+      "email": "taylorh@fbcjax.com",
       "city": "Jacksonville",
-      "id": "jacksonville-tlechildcare-com-the-learning-experience-jacksonville-sou-center-director"
+      "id": "taylorh-fbcjax-com-first-baptist-church-of-jacksonville-dow-family-ministry-trunk-of-treat",
+      "contact": "Taylor",
+      "account": "First Baptist Church of Jacksonville - Downtown Campus"
     },
     {
-      "persona": "senior",
-      "email": "seniorctr@stmarysga.gov",
-      "city": "St. Marys",
-      "id": "seniorctr-stmarysga-gov-st-marys-senior-center-center-director"
-    },
-    {
-      "persona": "other",
-      "email": "info@staugustinelighthouse.org",
-      "city": "St. Augustine",
-      "id": "info-staugustinelighthouse-org-st-augustine-lighthouse-maritime-museum-executive-director"
-    },
-    {
-      "persona": "school",
-      "email": "info@opajax.org",
-      "city": "Jacksonville",
-      "id": "info-opajax-org-oxford-preparatory-academy-executive-director-founder"
+      "persona": "church",
+      "email": "brian7901@gmail.com",
+      "city": "Middleburg",
+      "id": "brian7901-gmail-com-black-creek-methodist-church-children-s-family-ministry",
+      "contact": "",
+      "account": "Black Creek Methodist Church"
     },
     {
       "persona": "church",
       "email": "info@celebration.org",
       "city": "Fleming Island",
-      "id": "info-celebration-org-celebration-church-kids-pastor"
-    },
-    {
-      "persona": "daycare",
-      "email": "nocatee@tlechildcare.com",
-      "city": "Ponte Vedra Beach",
-      "id": "nocatee-tlechildcare-com-the-learning-experience-nocatee-assistant-director-curriculum-"
-    },
-    {
-      "persona": "senior",
-      "email": "dsc@nbfl.us",
-      "city": "Neptune Beach",
-      "id": "dsc-nbfl-us-neptune-beach-senior-activity-center-director"
-    },
-    {
-      "persona": "other",
-      "email": "stjohns@tlechildcare.com",
-      "city": "St. Augustine",
-      "id": "stjohns-tlechildcare-com-the-learning-experience-st-johns-assistant-director"
-    },
-    {
-      "persona": "school",
-      "email": "patriotoakspto@gmail.com",
-      "city": "St. Johns",
-      "id": "patriotoakspto-gmail-com-patriot-oaks-academy-pto-pto-president"
+      "id": "info-celebration-org-celebration-church-kids-pastor",
+      "contact": "",
+      "account": "Celebration Church"
     },
     {
       "persona": "church",
       "email": "cfyuleehelp@gmail.com",
       "city": "Yulee",
-      "id": "cfyuleehelp-gmail-com-christ-fellowship-church-yulee-kids-pastor"
+      "id": "cfyuleehelp-gmail-com-christ-fellowship-church-yulee-kids-pastor",
+      "contact": "",
+      "account": "Christ Fellowship Church - Yulee"
     },
     {
       "persona": "daycare",
-      "email": "kburnette@stclareelc.org",
-      "city": "Yulee",
-      "id": "kburnette-stclareelc-org-st-clare-early-learning-center-director"
-    },
-    {
-      "persona": "senior",
-      "email": "sanjose@starlingliving.com",
-      "city": "Jacksonville",
-      "id": "sanjose-starlingliving-com-starling-at-san-jose-life-enrichment-director"
-    },
-    {
-      "persona": "other",
-      "email": "trichland@marshlanding.org",
-      "city": "Jacksonville Beach",
-      "id": "trichland-marshlanding-org-marsh-landing-management-company-director-of-operations-preside"
-    },
-    {
-      "persona": "school",
-      "email": "opeptopresident@gmail.com",
-      "city": "Ponte Vedra Beach",
-      "id": "opeptopresident-gmail-com-ocean-palms-elementary-pto-pto-president"
-    },
-    {
-      "persona": "church",
-      "email": "office@cohjax.com",
-      "city": "Jacksonville",
-      "id": "office-cohjax-com-church-of-hope-kids-pastor"
+      "email": "adultdaycare@agingtrue.org",
+      "city": "Green Cove Springs",
+      "id": "adultdaycare-agingtrue-org-aging-true-adult-day-care-at-revels-seni-x",
+      "contact": "Teresa Barton",
+      "account": "Aging True Adult Day Care at Revels Senior Center"
     },
     {
       "persona": "daycare",
-      "email": "ccarolino@stjp2elc.net",
-      "city": "Ponte Vedra",
-      "id": "ccarolino-stjp2elc-net-st-john-paul-ii-early-learning-center-director"
+      "email": "tlittle@assumptionjax.org",
+      "city": "Jacksonville",
+      "id": "tlittle-assumptionjax-org-assumption-early-learning-center-director",
+      "contact": "Theresa Little",
+      "account": "Assumption Early Learning Center"
+    },
+    {
+      "persona": "daycare",
+      "email": "ksperanza@canopyway.com",
+      "city": "Fernandina Beach",
+      "id": "ksperanza-canopyway-com-canopy-way-adult-day-care-x",
+      "contact": "Kim Kelly-Speranza",
+      "account": "Canopy Way Adult Day Care"
+    },
+    {
+      "persona": "daycare",
+      "email": "enrollment@dlcjax.org",
+      "city": "Jacksonville",
+      "id": "enrollment-dlcjax-org-developmental-learning-center-inc-x",
+      "contact": "Heather Corey",
+      "account": "Developmental Learning Center, Inc."
+    },
+    {
+      "persona": "daycare",
+      "email": "kwelch.hodgespres@gmail.com",
+      "city": "Jacksonville",
+      "id": "kwelch-hodgespres-gmail-com-hodges-blvd-presbyterian-preschool-preschool-director",
+      "contact": "Kimberly Welch",
+      "account": "Hodges Blvd Presbyterian Preschool"
     },
     {
       "persona": "senior",
       "email": "info@almosthomeseniorservices.com",
       "city": "Jacksonville",
-      "id": "info-almosthomeseniorservices-com-almost-home-x"
-    },
-    {
-      "persona": "other",
-      "email": "leah@sanmarcomerchants.com",
-      "city": "Jacksonville",
-      "id": "leah-sanmarcomerchants-com-san-marco-merchants-association-executive-director"
-    },
-    {
-      "persona": "school",
-      "email": "gamblerogerspto@gmail.com",
-      "city": "St. Augustine",
-      "id": "gamblerogerspto-gmail-com-gamble-rogers-middle-school-pto-pto-president"
-    },
-    {
-      "persona": "church",
-      "email": "office@crossroadlutheran.com",
-      "city": "Fleming Island",
-      "id": "office-crossroadlutheran-com-crossroad-lutheran-church-kids-pastor"
-    },
-    {
-      "persona": "daycare",
-      "email": "drollings@stpaulsbeach.com",
-      "city": "Jacksonville Beach",
-      "id": "drollings-stpaulsbeach-com-st-paul-early-learning-center-director"
+      "id": "info-almosthomeseniorservices-com-almost-home-x",
+      "contact": "Jamie Glavich",
+      "account": "Almost Home"
     },
     {
       "persona": "senior",
-      "email": "adultsvcs@coj.net",
+      "email": "charvey@bakercoa.org",
+      "city": "Macclenny",
+      "id": "charvey-bakercoa-org-baker-county-friendship-center-executive-director",
+      "contact": "Chris Harvey",
+      "account": "Baker County Friendship Center"
+    },
+    {
+      "persona": "senior",
+      "email": "diane@bradfordcountyfl.gov",
+      "city": "Starke",
+      "id": "diane-bradfordcountyfl-gov-bradford-county-senior-center-director",
+      "contact": "Latanya Mitchell",
+      "account": "Bradford County Senior Center"
+    },
+    {
+      "persona": "senior",
+      "email": "e000822111@brookdale.com",
+      "city": "",
+      "id": "e000822111-brookdale-com-brookdale-x",
+      "contact": "Courtney Santos",
+      "account": "Brookdale"
+    },
+    {
+      "persona": "senior",
+      "email": "caregiving@coasjc.org",
+      "city": "Ponte Vedra",
+      "id": "caregiving-coasjc-org-coa-center-at-uf-health-nocatee-x",
+      "contact": "Pam Brunell Center Coordinator",
+      "account": "COA Center at UF Health Nocatee"
+    },
+    {
+      "persona": "cdd",
+      "email": "kate.trivelpiece@fsresidential.com",
+      "city": "St. Johns",
+      "id": "kate-trivelpiece-fsresidential-com-aberdeen-cdd-lifestyle-director",
+      "contact": "Kate Trivelpiece",
+      "account": "Aberdeen CDD"
+    },
+    {
+      "persona": "cdd",
+      "email": "jsapere@maymgt.com",
+      "city": "St. Johns",
+      "id": "jsapere-maymgt-com-aberdeen-stonehaven-townhomes-may-community-association-manag",
+      "contact": "Jane Sapere",
+      "account": "Aberdeen Stonehaven Townhomes (MAY)"
+    },
+    {
+      "persona": "cdd",
+      "email": "kmullins@gmsnf.com",
+      "city": "Fernandina Beach",
+      "id": "kmullins-gmsnf-com-amelia-concourse-cdd-heron-isles-cdd-gms-amenity-operations-m",
+      "contact": "Kelly Mullins",
+      "account": "Amelia Concourse CDD / Heron Isles CDD (GMS)"
+    },
+    {
+      "persona": "cdd",
+      "email": "ripollv@pfm.com",
+      "city": "Fernandina Beach",
+      "id": "ripollv-pfm-com-amelia-national-cdd-district-manager",
+      "contact": "Venessa Ripoll",
+      "account": "Amelia National CDD"
+    },
+    {
+      "persona": "cdd",
+      "email": "ameliawalkmanager@gmsnf.com",
+      "city": "Fernandina Beach",
+      "id": "ameliawalkmanager-gmsnf-com-amelia-walk-cdd-gms-amenity-operations-manager",
+      "contact": "Chip Delllinger",
+      "account": "Amelia Walk CDD (GMS)"
+    },
+    {
+      "persona": "cdd",
+      "email": "greyhawkmanager@gmsnf.com",
+      "city": "Green Cove Springs",
+      "id": "greyhawkmanager-gmsnf-com-armstrong-cdd-greyhawk-gms-amenity-manager",
+      "contact": "Ryan Wilson",
+      "account": "Armstrong CDD / Greyhawk (GMS)"
+    },
+    {
+      "persona": "university",
+      "email": "esurdyke@bellarmine.edu",
+      "city": "Louisville",
+      "id": "esurdyke-bellarmine-edu-bellarmine-university-director-of-student-activities-ori",
+      "contact": "Elaine Hartlage",
+      "account": "Bellarmine University"
+    },
+    {
+      "persona": "university",
+      "email": "mrodezno@bellarmine.edu",
+      "city": "Louisville",
+      "id": "mrodezno-bellarmine-edu-bellarmine-university-asst-dir-student-activities",
+      "contact": "Megan Rodezno",
+      "account": "Bellarmine University"
+    },
+    {
+      "persona": "university",
+      "email": "clopez2@bellarmine.edu",
+      "city": "Louisville",
+      "id": "clopez2-bellarmine-edu-bellarmine-university-asst-dir-orientation-engagement",
+      "contact": "Cole Lopez",
+      "account": "Bellarmine University"
+    },
+    {
+      "persona": "university",
+      "email": "ewerner@bellarmine.edu",
+      "city": "Louisville",
+      "id": "ewerner-bellarmine-edu-bellarmine-university-director-campus-recreation-wellness",
+      "contact": "Emily Werner",
+      "account": "Bellarmine University"
+    },
+    {
+      "persona": "university",
+      "email": "atofanelli@ccga.edu",
+      "city": "Brunswick / Camden",
+      "id": "atofanelli-ccga-edu-college-of-coastal-georgia-coordinator-of-recreation-and-wel",
+      "contact": "(name not fully resolved)",
+      "account": "College of Coastal Georgia"
+    },
+    {
+      "persona": "enterprise",
+      "email": "alena.mullen@aircommunities.com",
       "city": "Jacksonville",
-      "id": "adultsvcs-coj-net-city-of-jacksonville-senior-services-div-x"
+      "id": "alena-mullen-aircommunities-com-air-communities-jacksonville-region-regional-pro",
+      "contact": "Alena Mullen",
+      "account": "AIR Communities (Jacksonville region)"
+    },
+    {
+      "persona": "enterprise",
+      "email": "eva.taraseviciute@aircommunities.com",
+      "city": "Jacksonville",
+      "id": "eva-taraseviciute-aircommunities-com-air-communities-jacksonville-region-regiona",
+      "contact": "Eva Taraseviciute",
+      "account": "AIR Communities (Jacksonville region)"
+    },
+    {
+      "persona": "enterprise",
+      "email": "sherry.naydeck@greystar.com",
+      "city": "St. Augustine",
+      "id": "sherry-naydeck-greystar-com-aspire-at-silverleaf-greystar-leasing-manager",
+      "contact": "Sherry Naydeck",
+      "account": "Aspire at Silverleaf (Greystar)"
+    },
+    {
+      "persona": "enterprise",
+      "email": "rshoemaker@cimarronegolf.com",
+      "city": "",
+      "id": "rshoemaker-cimarronegolf-com-cimarrone-golf-club-general-manager",
+      "contact": "Rick Shoemaker",
+      "account": "Cimarrone Golf Club"
+    },
+    {
+      "persona": "enterprise",
+      "email": "josie.curtis@patriotrail.com",
+      "city": "Jacksonville",
+      "id": "josie-curtis-patriotrail-com-patriot-rail-vp-people-strategy",
+      "contact": "Josie Curtis",
+      "account": "Patriot Rail"
     },
     {
       "persona": "other",
-      "email": "wes.hinton@wildlight.com",
-      "city": "Yulee",
-      "id": "wes-hinton-wildlight-com-wildlight-east-nassau-stewardship-distri-community-developer-lifestyle"
+      "email": "phyllis@ameliamuseum.org",
+      "city": "Fernandina Beach",
+      "id": "phyllis-ameliamuseum-org-amelia-island-museum-of-history-executive-director",
+      "contact": "Phyllis Davis",
+      "account": "Amelia Island Museum of History"
+    },
+    {
+      "persona": "other",
+      "email": "mary.anne.thomas@ascension.org",
+      "city": "Jacksonville",
+      "id": "mary-anne-thomas-ascension-org-ascension-st-vincent-s-foundation-director-major-gifts",
+      "contact": "Mary Anne Thomas",
+      "account": "Ascension St. Vincent's Foundation"
+    },
+    {
+      "persona": "other",
+      "email": "paul.poirrier@ascension.org",
+      "city": "Jacksonville",
+      "id": "paul-poirrier-ascension-org-ascension-st-vincent-s-foundation-director-of-major-and-planned-",
+      "contact": "Paul Poirrier",
+      "account": "Ascension St. Vincent's Foundation"
     }
   ]
 }

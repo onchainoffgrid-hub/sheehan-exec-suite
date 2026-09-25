@@ -12,46 +12,61 @@ h1{font-size:clamp(1.35rem,3vw,1.85rem);margin:0 0 6px;letter-spacing:-.02em}
 .sub{color:var(--muted);font-size:.9rem;max-width:62ch;margin:0 0 12px}
 .banner{margin:0 0 14px;padding:12px 14px;border:1px solid #c9a22788;border-radius:14px;background:linear-gradient(135deg,#2a2210,#121a2b);font-size:.84rem;color:#fde68a}
 .banner b{color:#fff}
-.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:8px;margin:0 0 12px}
+.banner .ver{float:right;font-size:.72rem;color:#9dffc5;font-weight:700}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:8px;margin:0 0 12px}
 .kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
 .kpi .l{font-size:.62rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
-.kpi .v{font-size:1.2rem;font-weight:800;margin-top:2px;color:#9dffc5}
+.kpi .v{font-size:1.15rem;font-weight:800;margin-top:2px;color:#9dffc5}
 .filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px;position:sticky;top:0;z-index:5;padding:8px 0;background:linear-gradient(180deg,var(--bg) 75%,transparent)}
 .filters button{appearance:none;border:1px solid var(--line);background:var(--panel);color:var(--muted);padding:9px 12px;border-radius:999px;font-size:.72rem;font-weight:700;cursor:pointer;min-height:40px}
 .filters button.on{border-color:#3dd68c88;background:#13281d;color:#9dffc5}
+.filters button.owe-btn.on{border-color:#ffb02088;background:#2a2210;color:#fde68a}
 .filters input{flex:1;min-width:150px;min-height:40px;padding:8px 12px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--text)}
 .sec{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin:18px 0 8px}
 .hint{font-size:.78rem;color:#c5d0e6;margin:0 0 8px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:0 0 8px;display:grid;grid-template-columns:1fr auto;gap:8px 12px;align-items:center}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:0 0 8px;display:grid;grid-template-columns:1fr auto;gap:8px 12px;align-items:start}
 .card.done{opacity:.45;border-color:#3dd68c44}
+.card.owe{border-color:#ffb02066}
 .card h3{margin:0;font-size:.98rem;grid-column:1/-1}
 .meta{font-size:.78rem;color:var(--muted);grid-column:1/-1}
 .meta b{color:#c5d0e6;font-weight:600}
 .why{font-size:.74rem;color:#93a0b8;grid-column:1/-1}
+.owe-why{font-size:.78rem;color:#fde68a;grid-column:1/-1;padding:6px 8px;border-radius:8px;background:#2a221088;border:1px solid #c9a22744}
 .actions{display:flex;flex-direction:column;gap:6px;min-width:132px}
 a.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:10px 14px;border-radius:12px;background:linear-gradient(180deg,#2f6b4f,#1a3d2e);border:1px solid #3dd68caa;color:#fff;font-weight:800;font-size:.88rem;text-decoration:none}
 a.btn:hover{filter:brightness(1.08);text-decoration:none}
 a.btn.sec{min-height:32px;font-size:.7rem;font-weight:600;background:var(--panel);border-color:var(--line);color:#c5d0e6}
+a.btn.note-mail{min-height:32px;font-size:.68rem;font-weight:700;background:#2a2210;border-color:#c9a22788;color:#fde68a}
 button.done{appearance:none;min-height:36px;border-radius:999px;border:1px solid #3dd68c66;background:#13281d;color:#9dffc5;font-weight:700;font-size:.72rem;cursor:pointer}
 button.done.on{background:#3dd68c;color:#062016;border-color:#3dd68c}
+button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px solid #3dd68c66;background:#13281d;color:#9dffc5;font-weight:700;font-size:.68rem;cursor:pointer;padding:6px 10px}
 .chip{display:inline-block;font-size:.65rem;padding:2px 8px;border-radius:999px;border:1px solid var(--line);margin-right:4px;color:#c5d0e6}
 .chip.pri{border-color:#c9a22788;color:#fde68a}
+.chip.owe{border-color:#ffb02088;color:#ffb020}
+.note-box{grid-column:1/-1;margin-top:4px}
+.note-box textarea{width:100%;min-height:52px;padding:8px 10px;border-radius:10px;border:1px solid var(--line);background:var(--panel);color:var(--text);font-size:.78rem;font-family:inherit;resize:vertical}
+.note-preview{font-size:.72rem;color:#9dffc5;margin:4px 0 0;white-space:pre-wrap}
+.note-actions{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
 .note{color:var(--muted);font-size:.75rem;margin-top:18px}
 .empty{color:var(--muted);padding:16px;text-align:center}
-@media(max-width:640px){.card{grid-template-columns:1fr}.actions{min-width:0}a.btn{min-height:52px}}
+@media(max-width:640px){.card{grid-template-columns:1fr}.actions{min-width:0}a.btn{min-height:52px}.banner .ver{float:none;display:block;margin-top:4px}}
 </style></head>
 <body><div class="wrap">
 <p class="crumb"><a href="index.html">Operator</a> · <a href="growth-simple.html">Growth</a> · <a href="doer-crm.html">Doer CRM</a> → <b>Principal dunks</b></p>
 <h1>Principal dunk board</h1>
-<p class="sub">One-click Gmail / mailto — short Tabatha-style ask (date + open dates). Body persona matches the seat: church ≠ school, daycare/senior get their own line. Done sticks on this device. Mailto opens Gmail app on phone. Compose only — you hit Send.</p>
-<div class="banner"><b>Compose only — never auto-send.</b> Skip Duval PTA / district HQ forms. Prefer a named inbox that a human reads.</div>
+<p class="sub">One-click Gmail / mailto — Hi {FirstName} when known. Body persona matches the seat (church ≠ school; CDD / uni / enterprise included). Done sticks on this device (v2). Compose only — you hit Send.</p>
+<div class="banner"><span class="ver" id="verstamp">Board v2</span><b>Compose only — never auto-send.</b> Skip Duval PTA / district HQ forms. Prefer a named inbox. Notes → localStorage + optional mailto to account for Talk-Deputy sync.</div>
 <div class="banner" id="dedupe" style="border-color:#3dd68c66;color:#9dffc5">Scrubbing vs sent + customers…</div>
 <div class="kpis" id="kpis"></div>
 <div class="filters">
+  <button type="button" class="owe-btn" data-sec="owe">Owe / Follow-up</button>
   <button type="button" class="on" data-sec="next40">Next 40 mix</button>
   <button type="button" data-sec="principals">Principals</button>
   <button type="button" data-sec="directors">Directors</button>
   <button type="button" data-sec="pto">PTO / PTA</button>
+  <button type="button" data-sec="cdd">CDD / HOA</button>
+  <button type="button" data-sec="university">University</button>
+  <button type="button" data-sec="enterprise">Enterprise</button>
   <button type="button" data-sec="other">Other email</button>
   <button type="button" data-sec="local_forms">Local forms</button>
   <button type="button" class="on" data-sec="open">Open only</button>
@@ -59,17 +74,25 @@ button.done.on{background:#3dd68c;color:#062016;border-color:#3dd68c}
   <button type="button" data-persona="church">Church</button>
   <button type="button" data-persona="daycare">Daycare</button>
   <button type="button" data-persona="senior">Senior</button>
-  <input id="q" type="search" placeholder="Filter email / city…" autocomplete="off"/>
+  <button type="button" data-persona="cdd">CDD</button>
+  <button type="button" data-persona="university">Uni</button>
+  <button type="button" data-persona="enterprise">Ent</button>
+  <input id="q" type="search" placeholder="Filter email / city / note…" autocomplete="off"/>
 </div>
 <div id="board"></div>
-<p class="note">Source: TAM dialer + quick emails · filtered for decision-maker seats with public email · CAPTCHA HQ / salesy forms stripped · local Done key <code>sheehan_principal_dunk_done_v1</code></p>
+<p class="note">Source: TAM + CDD/HOA + university peers + enterprise dialers · CAPTCHA HQ stripped · Done key <code>sheehan_principal_dunk_done_v2</code> · Notes key <code>sheehan_dunk_notes_v1</code> · Hard-refresh when ready (?v=2)</p>
 </div>
 <script>
 (function(){
-  const DONE_KEY='sheehan_principal_dunk_done_v1';
+  const DONE_KEY='sheehan_principal_dunk_done_v2';
+  const NOTES_KEY='sheehan_dunk_notes_v1';
   const AUTH='sheehanhomestead@gmail.com';
+  const PERSONAS=['school','church','daycare','senior','cdd','university','enterprise','other'];
   function loadDone(){try{return JSON.parse(localStorage.getItem(DONE_KEY)||'{}')}catch(e){return{}}}
   function saveDone(m){localStorage.setItem(DONE_KEY,JSON.stringify(m))}
+  function loadNotes(){try{return JSON.parse(localStorage.getItem(NOTES_KEY)||'{}')}catch(e){return{}}}
+  function saveNotes(m){localStorage.setItem(NOTES_KEY,JSON.stringify(m))}
+  function noteKey(r){return r.id||r.email||''}
   function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
   function firstName(contact){
     const c=String(contact||'').trim();
@@ -81,8 +104,11 @@ button.done.on{background:#3dd68c;color:#062016;border-color:#3dd68c}
   }
   function inferPersona(r){
     const p=String(r.persona||'').toLowerCase().trim();
-    if(['school','church','daycare','senior','other'].includes(p)) return p;
-    const blob=[r.account,r.segment,r.title,r.contact,r.why].join(' ').toLowerCase();
+    if(PERSONAS.includes(p)) return p;
+    const blob=[r.account,r.segment,r.title,r.contact,r.why,r.email].join(' ').toLowerCase();
+    if(/\bcdd\b|hoa\b|amenity|lifestyle director|community association/.test(blob)) return 'cdd';
+    if(/university|college|campus|student life|greek|residence life|\.edu\b/.test(blob)) return 'university';
+    if(/corporate|employee|wellness|enterprise|country club|golf club/.test(blob)) return 'enterprise';
     if(/church|congregation|pastor|synagogue|temple|mosque|parish|ministry|faith/.test(blob)) return 'church';
     if(/daycare|day care|preschool|pre-school|vpk|childcare|child care|early childhood|goddard|primrose|learning center/.test(blob)) return 'daycare';
     if(/senior|assisted living|memory care|alf|nursing|rehab|elder/.test(blob)) return 'senior';
@@ -90,8 +116,8 @@ button.done.on{background:#3dd68c;color:#062016;border-color:#3dd68c}
     return 'other';
   }
   function composeBody(r){
-    // Persona-only greeting — no org/name in body (Michael 2026-09-25)
-    const hi='Hi —,';
+    const fn=firstName(r.contact);
+    const hi=fn?('Hi '+fn+','):'Hi there,';
     const persona=inferPersona(r);
     let reach, ask;
     if(persona==='church'){
@@ -103,6 +129,15 @@ button.done.on{background:#3dd68c;color:#062016;border-color:#3dd68c}
     }else if(persona==='senior'){
       reach='Reaching out because we bring petting zoos to senior communities across metro Jacksonville.';
       ask='Do you have any fall festivals, family days, or resident event dates you want to consider?';
+    }else if(persona==='cdd'){
+      reach='Reaching out because we bring petting zoos to CDD and HOA community events across metro Jacksonville.';
+      ask='Do you have any community, amenity, fall festival, or family event dates for the CDD you want to consider?';
+    }else if(persona==='university'){
+      reach='Reaching out because we bring petting zoos to campus student life and family events across the region.';
+      ask='Do you have any campus student life, family weekend, Greek, or residence life fall event dates you want to consider?';
+    }else if(persona==='enterprise'){
+      reach='Reaching out because we bring petting zoos to employee family days and wellness events across metro Jacksonville.';
+      ask='Do you have any employee family day, wellness, or appreciation fall event dates you want to consider?';
     }else if(persona==='other'){
       reach='Reaching out because we bring petting zoos to community events across metro Jacksonville.';
       ask='Do you have any fall festivals or trunk-or-treat dates you want to consider?';
@@ -117,6 +152,9 @@ button.done.on{background:#3dd68c;color:#062016;border-color:#3dd68c}
     const persona=inferPersona(r);
     if(persona==='church') return 'Petting zoo for fall festival / family event?';
     if(persona==='senior') return 'Petting zoo for fall / resident event?';
+    if(persona==='cdd') return 'Petting zoo for CDD / amenity fall festival?';
+    if(persona==='university') return 'Petting zoo for campus / student life fall event?';
+    if(persona==='enterprise') return 'Petting zoo for employee family / wellness event?';
     return 'Petting zoo for fall festival / trunk or treat?';
   }
   function gmail(r){
@@ -129,7 +167,21 @@ button.done.on{background:#3dd68c;color:#062016;border-color:#3dd68c}
     const body=encodeURIComponent(composeBody(r));
     return 'mailto:'+encodeURIComponent(r.email)+'?subject='+su+'&body='+body;
   }
-  let data=null, done=loadDone(), sec='next40', openOnly=true, personaFilter='';
+  function noteMailto(r, text){
+    const ts=new Date().toLocaleString('en-US',{timeZone:'America/New_York',dateStyle:'medium',timeStyle:'short'})+' ET';
+    const su=encodeURIComponent('[DUNK NOTE] '+(r.email||r.id||''));
+    const body=encodeURIComponent(
+      'Account: '+(r.account||'')+'\n'+
+      'Contact: '+(r.contact||'')+'\n'+
+      'Email: '+(r.email||'')+'\n'+
+      'Persona: '+inferPersona(r)+'\n'+
+      'Card id: '+(r.id||'')+'\n'+
+      'Saved: '+ts+'\n\n'+
+      'Note:\n'+(text||'')+'\n'
+    );
+    return 'mailto:'+encodeURIComponent(AUTH)+'?subject='+su+'&body='+body;
+  }
+  let data=null, done=loadDone(), notes=loadNotes(), sec='next40', openOnly=true, personaFilter='';
   const qEl=document.getElementById('q');
   document.querySelectorAll('.filters button').forEach(b=>{
     b.addEventListener('click',()=>{
@@ -149,34 +201,21 @@ button.done.on{background:#3dd68c;color:#062016;border-color:#3dd68c}
     });
   });
   qEl.addEventListener('input',()=>render());
-  function render(){
-    if(!data)return;
-    const counts=data.counts||{};
-    const bp=counts.by_persona||{};
-    document.getElementById('kpis').innerHTML=[
-      ['Mailto left',counts.mailto_total],
-      ['Untapped vs today',counts.untapped_vs_today_sent],
-      ['School',bp.school],
-      ['Church',bp.church],
-      ['Daycare',bp.daycare],
-      ['Senior',bp.senior],
-      ['Done',Object.keys(done).filter(k=>done[k]).length]
-    ].map(([l,v])=>`<div class="kpi"><div class="l">${esc(l)}</div><div class="v">${v||0}</div></div>`).join('');
-    const q=(qEl.value||'').trim().toLowerCase();
-    let sectionTitle='Next 40 mix';
-    let sectionHint='Mixed school / church / daycare / senior — persona chip only. Open email → send. Mark Done as you go.';
-    let rows=[];
+  function rowsForSection(){
     if(sec==='next40'){
+      if(data.next40_ids && data.next40_ids.length){
+        const byId={};
+        (data.sections||[]).forEach(s=>{(s.rows||[]).forEach(r=>{if(r.id)byId[r.id]=r; if(r.email)byId[r.email]=r;});});
+        const picked=data.next40_ids.map(id=>byId[id]).filter(Boolean);
+        if(picked.length) return {title:'Next 40 mix', hint:'Mixed school / church / daycare / senior / CDD / uni / enterprise. Open email → send. Mark Done as you go.', rows:picked};
+      }
+      // fallback round-robin
       const all=[];
-      (data.sections||[]).forEach(s=>{ if(s.id==='local_forms') return; (s.rows||[]).forEach(r=>{ if(r.email) all.push(r); }); });
-      // Round-robin by persona for a fair mix
-      const buckets={school:[],church:[],daycare:[],senior:[],other:[]};
+      (data.sections||[]).forEach(s=>{ if(s.id==='local_forms'||s.id==='owe'||s.id==='next40') return; (s.rows||[]).forEach(r=>{ if(r.email) all.push(r); }); });
+      const buckets={school:[],church:[],daycare:[],senior:[],cdd:[],university:[],enterprise:[],other:[]};
       all.forEach(r=>{ const p=inferPersona(r); (buckets[p]||buckets.other).push(r); });
-      const order=['school','church','pto_bias','daycare','senior','other'];
-      // Prefer PTO-ish school rows first within school
-      buckets.school.sort((a,b)=>((/pto|pta/i.test([a.title,a.segment,a.account].join(' '))?0:1)-(/pto|pta/i.test([b.title,b.segment,b.account].join(' '))?0:1)));
-      const keys=['school','church','daycare','senior','other'];
-      let i=0; const picked=[];
+      const keys=['school','church','daycare','senior','cdd','university','enterprise','other'];
+      const picked=[];
       while(picked.length<40){
         let added=false;
         for(const k of keys){
@@ -187,32 +226,69 @@ button.done.on{background:#3dd68c;color:#062016;border-color:#3dd68c}
         }
         if(!added) break;
       }
-      rows=picked;
-    }else{
-      const section=(data.sections||[]).find(s=>s.id===sec)||data.sections[0];
-      sectionTitle=section.title; sectionHint=section.hint||'';
-      rows=(section.rows||[]).slice();
+      return {title:'Next 40 mix', hint:'Mixed personas. Open email → send.', rows:picked};
     }
-    rows=rows.filter(r=>{
+    const section=(data.sections||[]).find(s=>s.id===sec)||data.sections[0];
+    return {title:section.title, hint:section.hint||'', rows:(section.rows||[]).slice()};
+  }
+  function render(){
+    if(!data)return;
+    const counts=data.counts||{};
+    const bp=counts.by_persona||{};
+    const n40=counts.next40_by_persona||{};
+    document.getElementById('kpis').innerHTML=[
+      ['Mailto left',counts.mailto_total],
+      ['Today sent',counts.gmail_today_sent_unique],
+      ['Owe',counts.owe_followup],
+      ['School',bp.school],
+      ['CDD',bp.cdd],
+      ['Uni',bp.university],
+      ['Ent',bp.enterprise],
+      ['Done',Object.keys(done).filter(k=>done[k]).length]
+    ].map(([l,v])=>`<div class="kpi"><div class="l">${esc(l)}</div><div class="v">${v||0}</div></div>`).join('');
+    const q=(qEl.value||'').trim().toLowerCase();
+    const pack=rowsForSection();
+    let rows=pack.rows.filter(r=>{
       if(openOnly&&done[r.id])return false;
       if(personaFilter && inferPersona(r)!==personaFilter)return false;
       if(!q)return true;
-      const blob=[r.account,r.contact,r.title,r.email,r.city,r.segment,r.persona].join(' ').toLowerCase();
+      const nk=noteKey(r);
+      const noteTxt=(notes[nk]&&notes[nk].text)||'';
+      const blob=[r.account,r.contact,r.title,r.email,r.city,r.segment,r.persona,r.owe_reason,r.why,noteTxt].join(' ').toLowerCase();
       return blob.includes(q);
     });
     const board=document.getElementById('board');
     if(!rows.length){board.innerHTML='<div class="empty">Nothing in this lane (or all marked Done).</div>';return;}
-    let html=`<div class="sec">${esc(sectionTitle)}</div><p class="hint">${esc(sectionHint)}</p>`;
+    let html=`<div class="sec">${esc(pack.title)}</div><p class="hint">${esc(pack.hint)}</p>`;
     rows.forEach(r=>{
       const isDone=!!done[r.id];
-      const titleLine=[r.contact,r.title].filter(Boolean).join(' · ')||r.title||'Contact';
-      html+=`<article class="card${isDone?' done':''}" data-id="${esc(r.id)}">`;
+      const isOwe=sec==='owe'||r.lane==='owe';
       const pers=inferPersona(r);
-      html+=`<h3><span class="chip pri">${esc(pers)}</span> ${esc(r.city||r.segment||'metro Jax')}</h3>`;
+      const fn=firstName(r.contact);
+      const nk=noteKey(r);
+      const saved=(notes[nk]&&notes[nk].text)||'';
+      html+=`<article class="card${isDone?' done':''}${isOwe?' owe':''}" data-id="${esc(r.id)}">`;
+      html+=`<h3>`;
+      if(isOwe)html+=`<span class="chip owe">owe</span> `;
+      html+=`<span class="chip pri">${esc(pers)}</span> ${esc(r.account||r.city||r.segment||'metro Jax')}</h3>`;
       html+=`<div class="meta">`;
       if(r.email)html+=`<b>${esc(r.email)}</b>`;
+      if(fn)html+=` · greets as <b>${esc(fn)}</b>`;
+      else if(r.contact)html+=` · ${esc(r.contact)}`;
+      if(r.title)html+=` · ${esc(r.title)}`;
       html+=`</div>`;
-      html+=`<div class="why">Template says <b>${esc(pers)}</b> — not school-for-church. Tap Open email → Send.</div>`;
+      if(isOwe && (r.owe_reason||r.why)){
+        html+=`<div class="owe-why"><b>Why chase:</b> ${esc(r.owe_reason||r.why)}</div>`;
+      }else{
+        html+=`<div class="why">Template says <b>${esc(pers)}</b>${fn?' · Hi '+esc(fn):' · Hi there'}. Tap Open email → Send.</div>`;
+      }
+      html+=`<div class="note-box">`;
+      html+=`<textarea data-note-id="${esc(nk)}" placeholder="Private note (stays on this device)…">${esc(saved)}</textarea>`;
+      if(saved)html+=`<div class="note-preview">Saved: ${esc(saved.slice(0,180))}${saved.length>180?'…':''}</div>`;
+      html+=`<div class="note-actions">`;
+      html+=`<button type="button" class="save-note" data-note-id="${esc(nk)}">Save note</button>`;
+      html+=`<a class="btn note-mail" data-note-mail="${esc(nk)}" href="#">Email note to account</a>`;
+      html+=`</div></div>`;
       html+=`<div class="actions">`;
       if(r.email){
         html+=`<a class="btn" href="${mailto(r)}">Open email</a>`;
@@ -235,8 +311,47 @@ button.done.on{background:#3dd68c;color:#062016;border-color:#3dd68c}
         render();
       });
     });
+    board.querySelectorAll('button.save-note').forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        const id=btn.getAttribute('data-note-id');
+        const ta=board.querySelector(`textarea[data-note-id="${CSS.escape(id)}"]`);
+        const text=(ta&&ta.value||'').trim();
+        if(text){notes[id]={text,saved_at:new Date().toISOString()};}
+        else{delete notes[id];}
+        saveNotes(notes);
+        btn.textContent='Saved ✓';
+        setTimeout(()=>{btn.textContent='Save note';},900);
+        render();
+      });
+    });
+    board.querySelectorAll('a[data-note-mail]').forEach(a=>{
+      a.addEventListener('click',(ev)=>{
+        ev.preventDefault();
+        const id=a.getAttribute('data-note-mail');
+        const ta=board.querySelector(`textarea[data-note-id="${CSS.escape(id)}"]`);
+        const text=(ta&&ta.value||'').trim()||((notes[id]&&notes[id].text)||'');
+        if(!text){alert('Write a note first, then Save or Email note to account.');return;}
+        // find row
+        let row=null;
+        (data.sections||[]).forEach(s=>{(s.rows||[]).forEach(r=>{if(noteKey(r)===id)row=r;});});
+        if(!row)row={id,email:id,account:'',contact:''};
+        notes[id]={text,saved_at:new Date().toISOString()};
+        saveNotes(notes);
+        window.location.href=noteMailto(row, text);
+      });
+    });
   }
-  fetch('data/principal_dunk_board.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{data=d;var dd=d.dedupe||{};var sc=dd.suppress_counts||{};var el=document.getElementById('dedupe'); if(el){var sc=(dd.suppress_counts||{});el.innerHTML='<b>Scrubbed '+(dd.suppress_total||0)+'</b> · outreach '+(sc.outreach_sent||0)+' · Gmail sent '+(sc.gmail_sent||0)+' · customer email '+(sc.customer_email||0)+' · customer account '+(sc.customer_account||0)+' · left <b>'+((d.counts||{}).mailto_total||0)+' mailto</b>';} render()}).catch(()=>{
+  fetch('data/principal_dunk_board.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{
+    data=d;
+    const ver=document.getElementById('verstamp');
+    if(ver)ver.textContent=d.board_version||'Board v2';
+    var dd=d.dedupe||{};var sc=dd.suppress_counts||{};
+    var el=document.getElementById('dedupe');
+    if(el){
+      el.innerHTML='<b>Scrubbed '+(dd.suppress_total||0)+'</b> · Gmail sent '+(sc.gmail_sent||0)+' (today '+(sc.gmail_sent_today||0)+') · customer email '+(sc.customer_email||0)+' · booking '+(sc.booking_pipeline||0)+' · left <b>'+((d.counts||{}).mailto_total||0)+' mailto</b> · CDD +'+(sc.cdd_hoa_added_this_pass||0)+' · uni +'+(sc.university_added||0)+' · ent +'+(sc.enterprise_added||0);
+    }
+    render();
+  }).catch(()=>{
     document.getElementById('board').innerHTML='<div class="empty">Could not load principal_dunk_board.json</div>';
   });
 })();

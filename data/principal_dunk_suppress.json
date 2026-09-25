@@ -1,204 +1,148 @@
 {
-  "deduped_as_of": "2026-09-25 12:40 ET",
+  "deduped_as_of": "2026-09-25 14:54 ET",
   "suppress_sources": [
-    "recent_outreach.json",
-    "Gmail in:sent newer_than:2d + after:2026/09/25 (today blast)",
-    "customers_no_next_date.json",
-    "paypal_customers.json (payer name)",
-    "bookings_pipeline.json",
-    "intra-list email + account/title"
+    "Gmail in:sent after:2026/09/24 + newer_than:2d (petting/festival subjects)",
+    "customers_no_next_date.json + paypal_customers.json",
+    "bookings_pipeline.json emails",
+    "intra-list email"
   ],
   "suppress_counts": {
     "outreach_sent": 0,
-    "gmail_sent": 52,
-    "gmail_sent_today": 33,
-    "customer_email": 80,
-    "customer_account": 12,
+    "gmail_sent": 77,
+    "gmail_sent_today": 44,
+    "customer_email": 0,
+    "customer_account": 0,
     "paypal_name": 0,
     "booking_pipeline": 1,
     "dup_account_title": 0,
-    "cdd_hoa_removed_this_pass": 17
+    "cdd_hoa_removed_this_pass": 0,
+    "cdd_hoa_added_this_pass": 40,
+    "university_added": 25,
+    "enterprise_added": 16
   },
-  "suppress_total": 162,
-  "outreach_email_universe": 28,
-  "gmail_recipient_universe": 75,
-  "gmail_today_unique": 33,
+  "suppress_total": 78,
+  "gmail_recipient_universe": 77,
+  "gmail_today_unique": 44,
   "customer_email_universe": 125,
-  "account_universe": 166,
   "samples": {
-    "outreach_sent": [],
     "gmail_sent": [
       {
-        "account": "Annunciation Catholic School",
-        "email": "principal@annunciationcatholic.org",
-        "contact": "Stephen Eiswert",
-        "title": "Principal",
+        "account": "Dinsmore Elementary PTA",
+        "email": "dinsmorepta@gmail.com",
+        "contact": "",
+        "title": "PTA President",
         "persona": "school"
       },
       {
-        "account": "Jacksonville Country Day School",
-        "email": "office@jcds.com",
-        "contact": "Christopher Johnson",
-        "title": "Head of School",
+        "account": "St. Luke Child Care Center",
+        "email": "director@stlukechildcare.org",
+        "contact": "Amy Roberts",
+        "title": "Director",
+        "persona": "daycare"
+      },
+      {
+        "account": "Fishweir Elementary PTA",
+        "email": "fishweirelementary@gmail.com",
+        "contact": "",
+        "title": "PTA",
         "persona": "school"
       },
       {
-        "account": "Palmer Catholic Academy",
-        "email": "ddossantos@pcapvb.org",
-        "contact": "Daniela DosSantos",
-        "title": "Principal",
+        "account": "Freedom Crossing Academy PTO",
+        "email": "freedomcrossingacademypto@gmail.com",
+        "contact": "",
+        "title": "PTO President",
         "persona": "school"
       },
       {
-        "account": "San Juan Del Rio Catholic School",
-        "email": "trhodes@sjdrschool.org",
-        "contact": "Tabatha Rhodes",
-        "title": "Principal",
+        "account": "Gamble Rogers Middle School PTO",
+        "email": "gamblerogerspto@gmail.com",
+        "contact": "Devin Schneider",
+        "title": "PTO President",
         "persona": "school"
       },
       {
-        "account": "Cathedral Parish School",
-        "email": "bott@cpsschool.org",
-        "contact": "Bryan Ott",
-        "title": "Principal",
+        "account": "Christ's Church",
+        "email": "hello@christs.church",
+        "contact": "Sophie Davis",
+        "title": "Kids Pastor",
         "persona": "church"
       },
       {
-        "account": "Guardian Catholic School",
-        "email": "jlord@guardiancatholic.com",
-        "contact": "Jenn Lord",
-        "title": "Principal",
+        "account": "Lighthouse Church of God",
+        "email": "lighthousechurch904@gmail.com",
+        "contact": "Andi Kohlhepp",
+        "title": "Children's Pastor",
         "persona": "church"
       },
       {
-        "account": "Holy Family Catholic School",
-        "email": "mkavanagh@hfcatholicschool.com",
-        "contact": "Michael Kavanagh",
-        "title": "Principal",
-        "persona": "church"
+        "account": "Patriot Oaks Academy PTO",
+        "email": "patriotoakspto@gmail.com",
+        "contact": "Amanda Causey",
+        "title": "PTO President",
+        "persona": "school"
       },
       {
-        "account": "Holy Spirit Catholic School",
-        "email": "csult@hscatholicschool.com",
-        "contact": "Chelsea Sult",
-        "title": "Principal",
-        "persona": "church"
+        "account": "Lakes Crossing Senior Care",
+        "email": "pmcneal@georgialivingseniorcare.com",
+        "contact": "Patti McNeal",
+        "title": "Executive Director",
+        "persona": "senior"
       },
       {
-        "account": "Morning Star High School",
-        "email": "principal@morningstar-jax.org",
-        "contact": "Elaine Shott",
-        "title": "Principal",
-        "persona": "church"
-      },
-      {
-        "account": "Resurrection Catholic School",
-        "email": "arainey@resurrectioncatholic.com",
-        "contact": "Amanda Rainey",
-        "title": "Principal",
-        "persona": "church"
+        "account": "Lakeside Academy PTO",
+        "email": "president@lakesideacademypto.org",
+        "contact": "Kristin Duguid",
+        "title": "PTO President",
+        "persona": "school"
       }
     ],
-    "customer_email": [
+    "owe": [
       {
-        "account": "Amazing Explorers Academy \u2014 Rivertown",
-        "email": "jlane@aexplorers.com",
-        "contact": "",
-        "title": "customer file",
-        "persona": "daycare"
+        "account": "Bartram Springs Elementary PTA",
+        "email": "bseptapres@gmail.com",
+        "owe_reason": "Pipeline CALL_OFFERED \u00b7 Michael offered call Sep 25"
       },
       {
-        "account": "Amazing Explorers Academy \u2014 Silverleaf",
-        "email": "ei@aexplorers.com",
-        "contact": "",
-        "title": "customer file",
-        "persona": "daycare"
+        "account": "Brooks Bartram Lakes",
+        "email": "katelyn.woodcock-sharp@brooksrehab.org",
+        "owe_reason": "Pipeline WAITING_MONDAY \u00b7 Kate answer Monday"
       },
       {
-        "account": "Big Blue Marble Academy \u2014 Bartram Park",
-        "email": "center88@bbmacademy.com",
-        "contact": "",
-        "title": "customer file",
-        "persona": "daycare"
+        "account": "Palagio Senior Living",
+        "email": "businessofficedirector@palagioseniorliving.com",
+        "owe_reason": "Warm unreplied dunk \u00b7 confirm fall fest date"
       },
       {
-        "account": "Big Blue Marble Academy \u2014 San Pablo",
-        "email": "center87@bbmacademy.com",
-        "contact": "",
-        "title": "customer file",
-        "persona": "daycare"
+        "account": "Starling at San Jose",
+        "email": "sanjose@starlingliving.com",
+        "owe_reason": "Follow-up owed \u00b7 Starling life enrichment"
       },
       {
-        "account": "Christ the King Early Learning Center",
-        "email": "wtlaharrington@gmail.com",
-        "contact": "",
-        "title": "customer file",
-        "persona": "daycare"
+        "account": "Atlantic Beach Country Club",
+        "email": "laura@atlanticbeachcountryclub.com",
+        "owe_reason": "Warm lead \u00b7 send pricing"
       },
       {
-        "account": "LaVilla School of the Arts PTSA",
-        "email": "lasotaptsa@gmail.com",
-        "contact": "",
-        "title": "customer file",
-        "persona": "school"
+        "account": "Angels of Care",
+        "email": "bthomas@angelsofcare.com",
+        "owe_reason": "Soft yes \u00b7 push date"
       },
       {
-        "account": "The Goddard School Jacksonville \u2014 Spartina Ct",
-        "email": "jacksonville2fl@goddardschools.com",
-        "contact": "",
-        "title": "customer file",
-        "persona": "daycare"
-      },
-      {
-        "account": "The Goddard School Ponte Vedra Beach",
-        "email": "dianna.sheikh@sunshinepreschoolsfl.com",
-        "contact": "",
-        "title": "Campus contact (customer file)",
-        "persona": "daycare"
+        "account": "River City Science Academy",
+        "email": "lburnette@rivercityscience.org",
+        "owe_reason": "Pipeline soft_yes \u00b7 push date"
       }
     ],
-    "booking": [],
-    "cdd_hoa_removed": [
-      {
-        "section": "directors",
-        "account": "First Coast CMS",
-        "email": "service@firstcoastcms.com"
-      },
-      {
-        "section": "other",
-        "account": "Eagle Harbor HOA",
-        "email": "sandersen@eagleharborcdd.com"
-      },
-      {
-        "section": "other",
-        "account": "Bartram Springs CDD",
-        "email": "mbiagetti@gmsnf.com"
-      },
-      {
-        "section": "other",
-        "account": "Bartram Springs HOA",
-        "email": "jarias@vestapropertyservices.com"
-      },
-      {
-        "section": "other",
-        "account": "Sweetwater Creek CDD (Palencia North)",
-        "email": "howard@cddmanagers.com"
-      },
-      {
-        "section": "other",
-        "account": "Glen St. Johns HOA",
-        "email": "abrassfield@rizzetta.com"
-      },
-      {
-        "section": "other",
-        "account": "Marshall Creek CDD (Palencia)",
-        "email": "jmoore@vestapropertyservices.com"
-      },
-      {
-        "section": "other",
-        "account": "Double Branch CDD (Oakleaf Plantation)",
-        "email": "mgiles@gmsnf.com"
-      }
-    ]
+    "next40_mix": {
+      "school": 6,
+      "church": 5,
+      "daycare": 5,
+      "senior": 5,
+      "cdd": 6,
+      "university": 5,
+      "enterprise": 5,
+      "other": 3
+    }
   }
 }
