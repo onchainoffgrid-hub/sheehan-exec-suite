@@ -1,0 +1,294 @@
+{
+  "as_of": "2026-09-25 4:13 PM ET",
+  "window": {
+    "label": "Wed Sep 23 \u2013 Fri Sep 25 2026 ET",
+    "start": "2026-09-23",
+    "end": "2026-09-25",
+    "timezone": "America/New_York"
+  },
+  "account": "sheehanhomestead@gmail.com",
+  "brand": "Sheehan Homestead / Michael Sheehan",
+  "rule": "Gmail read-only \u00b7 no invented reply counts or $ \u00b7 unknown marked unknown",
+  "sent": {
+    "metric": "unique_recipients",
+    "sent_count": 96,
+    "note": "Unique To: recipients on SENT messages Wed\u2013Fri (excl. self). Not unique threads.",
+    "by_day": {
+      "2026-09-23": {
+        "unique_recipients": 23,
+        "label": "Wed"
+      },
+      "2026-09-24": {
+        "unique_recipients": 17,
+        "label": "Thu"
+      },
+      "2026-09-25": {
+        "unique_recipients": 59,
+        "label": "Fri \u00b7 dunk blast + follow-ups"
+      }
+    },
+    "sources": [
+      "Gmail MCP search_threads in:sent after:2026/9/23 before:2026/9/25 + after:2026/9/25 (paginated)",
+      "Cross-check: data/gmail_sent_suppress.json (44 today @ 2:54 PM ET \u2014 later sends raised Fri to 59)",
+      "data/principal_dunk_board.json counts.gmail_today_sent_unique was 44 at earlier refresh"
+    ],
+    "sep25_dunk_board_earlier": 44,
+    "sep25_gmail_live": 59
+  },
+  "replied": [
+    {
+      "name": "Tabatha Onorato",
+      "phone_short": "Tabatha \u00b7 Bartram PTA",
+      "account": "Bartram Springs Elementary PTA",
+      "email": "bseptapres@gmail.com",
+      "phone": "904-755-7230",
+      "status": "CALL_OFFERED",
+      "one_liner": "Winning dunk reply \u00b7 ToT Oct 30 + science night Nov 13 \u00b7 will call later Fri",
+      "date": "2026-09-25",
+      "gmail_thread": "1a0d9233a343e7e6",
+      "window": true
+    },
+    {
+      "name": "Kate Woodcock-Sharp",
+      "phone_short": "Kate \u00b7 Brooks",
+      "account": "Brooks Bartram Lakes / Brooks Rehab ADC",
+      "email": "Katelyn.Woodcock-sharp@brooksrehab.org",
+      "status": "WAITING_MONDAY",
+      "one_liner": "Booked ask Nov 21 10\u20131 \u00b7 Violet quote $629/$749/$499 \u00b7 Michael called Fri \u00b7 probably go \u00b7 answer Mon",
+      "date": "2026-09-24",
+      "quoted_mid_usd": 629,
+      "gmail_thread": "199c9d13a9c9e556",
+      "window": true
+    },
+    {
+      "name": "Amanda Darga (+ Kristi Life Enrichment)",
+      "phone_short": "Amanda \u00b7 Palagio",
+      "account": "Palagio Senior Living",
+      "email": "businessofficedirector@palagioseniorliving.com",
+      "status": "replied_warm",
+      "one_liner": "Warm winback \u00b7 want fall fest again \u00b7 Kristi now Life Enrichment Director",
+      "date": "2026-09-24",
+      "mid_usd": 200,
+      "gmail_thread": "1a0d0964cab11a22",
+      "window": true
+    },
+    {
+      "name": "Bailey H. Akin",
+      "phone_short": "Bailey \u00b7 SJR Found.",
+      "account": "St. Johns River State College Foundation",
+      "email": "BaileyAkin@sjrstate.edu",
+      "status": "nurture_later",
+      "one_liner": "Fun concept / fundraiser later \u00b7 2026 calendar already planned \u00b7 keep on file",
+      "date": "2026-09-24",
+      "gmail_thread": "1a0d134f77eb3b74",
+      "window": true
+    },
+    {
+      "name": "Rachael Jergensen",
+      "phone_short": "Rachael \u00b7 K co-op",
+      "account": "Homeschool kindergarten co-op (inbound)",
+      "email": "rcjergensen@gmail.com",
+      "status": "CALL_OFFERED",
+      "one_liner": "Inbound farm-tour ask Fri \u00b7 Michael offered call/text 914-263-1311",
+      "date": "2026-09-25",
+      "gmail_thread": "1a0d8a98b1e83310",
+      "window": true,
+      "note": "Inbound (not dunk reply) \u00b7 counted as answered"
+    },
+    {
+      "name": "Alexa Owens",
+      "phone_short": "Alexa \u00b7 Mommy & Me",
+      "account": "Alexa \u00b7 Mommy & Me",
+      "email": "alexaowens25@gmail.com",
+      "status": "BOOKED",
+      "one_liner": "Mommy & Me Oct 1 booked \u00b7 paid unknown",
+      "date": "2026-09-23",
+      "paid_usd": "unknown",
+      "gmail_thread": "1a0cf8bc27196eda",
+      "window": true
+    }
+  ],
+  "replied_not_human": [
+    {
+      "name": "Lauren Nelson",
+      "phone_short": "Lauren \u00b7 CTK OOO",
+      "account": "Christ the King Early Learning",
+      "status": "OOO_auto",
+      "one_liner": "OOO auto-reply only \u00b7 not a human answer"
+    },
+    {
+      "name": "Elizabeth",
+      "phone_short": "Elizabeth \u00b7 bounce",
+      "account": "Let's Party Please",
+      "status": "bounce",
+      "one_liner": "Delivery failure \u00b7 address not found \u00b7 $0"
+    }
+  ],
+  "replied_count_human": 6,
+  "closed_paid_this_window": [
+    {
+      "name": "Ashlee Langley",
+      "phone_short": "Ashlee \u00b7 M&M $25",
+      "account": "Mommy & Me \u2014 Saturdays",
+      "email": "ajslangley@gmail.com",
+      "phone": "561-603-2050",
+      "amount_usd": 25.0,
+      "status": "PAID_IN_FULL",
+      "when": "Saturday, September 26, 2026 at 10:00 AM ET",
+      "booked_at": "2026-09-25T13:13:54-04:00",
+      "order": "C-DF1EE17EBC134BD7",
+      "source": "GoDaddy OLA booking confirmation email",
+      "gmail_thread": "1a0d98f5b2a20805"
+    }
+  ],
+  "closed_paid_total_usd": 25.0,
+  "closed_paid_note": "Only verified paid $ in this window. Alexa BOOKED paid=unknown. Goddard deposits incoming \u2014 not counted as paid.",
+  "awaiting": [
+    {
+      "name": "Kate Woodcock-Sharp",
+      "phone_short": "Kate \u00b7 Mon",
+      "account": "Brooks Bartram Lakes",
+      "status": "WAITING_MONDAY",
+      "one_liner": "Answer Monday \u00b7 Violet std $629 mid \u00b7 W-9 before invoice",
+      "quoted_mid_usd": 629,
+      "weighted_usd": 535
+    },
+    {
+      "name": "Lauren Burnette",
+      "phone_short": "Burnette \u00b7 $600 inv",
+      "account": "River City Science Academy",
+      "email": "lburnette@rivercityscience.org",
+      "status": "INVOICE_UNOPENED",
+      "one_liner": "PayPal inv #0274 $600 sent Sep 21 \u00b7 still unopened as of Sep 24 \u00b7 Oct 2 meet WAITING_YES",
+      "amount_usd": 600.0,
+      "invoice_id": "0274",
+      "invoice_sent": "2026-09-21",
+      "source": "PayPal seller notice thread 1a0d5a25a7fb7bf1"
+    },
+    {
+      "name": "Tabatha Onorato",
+      "phone_short": "Tabatha \u00b7 call",
+      "account": "Bartram Springs PTA",
+      "status": "CALL_OFFERED",
+      "one_liner": "Await call/text reply \u00b7 ToT Oct 30 + science night Nov 13"
+    },
+    {
+      "name": "Rachael Jergensen",
+      "phone_short": "Rachael \u00b7 call",
+      "account": "Homeschool co-op inbound",
+      "status": "CALL_OFFERED",
+      "one_liner": "Await call/text on farm tour pricing"
+    },
+    {
+      "name": "Kori Montague",
+      "phone_short": "Kori \u00b7 Westmin.",
+      "account": "Westminster",
+      "email": "Kmontague@wservices.org",
+      "status": "emailed_no_reply_yet",
+      "one_liner": "Nov Monday double-dip both locations \u00b7 emailed Wed \u00b7 no reply in window"
+    },
+    {
+      "name": "Starling at Nocatee",
+      "phone_short": "Starling \u00b7 rebook",
+      "account": "Starling at Nocatee",
+      "email": "nocatee@starlingliving.com",
+      "status": "NO_DATE",
+      "one_liner": "Past customer rebook lane \u00b7 no dunk reply this window",
+      "dollar": "unknown"
+    }
+  ],
+  "open_leads_pipeline": [
+    {
+      "name": "Tabatha Onorato",
+      "phone_short": "Tabatha",
+      "status": "CALL_OFFERED",
+      "heat": "hot",
+      "events": [
+        "2026-10-30 ToT",
+        "2026-11-13 science night"
+      ],
+      "dollar": "unknown"
+    },
+    {
+      "name": "Kate / Brooks",
+      "phone_short": "Kate Brooks",
+      "status": "WAITING_MONDAY",
+      "heat": "hot",
+      "event": "2026-11-21 10\u20131",
+      "quoted_mid_usd": 629
+    },
+    {
+      "name": "Lauren Burnette / RCS",
+      "phone_short": "Burnette",
+      "status": "WAITING_YES + inv $600 unopened",
+      "heat": "hot",
+      "event": "2026-10-02",
+      "invoice_usd": 600
+    },
+    {
+      "name": "Amanda / Palagio",
+      "phone_short": "Palagio",
+      "status": "replied_warm",
+      "heat": "warm",
+      "mid_usd": 200
+    },
+    {
+      "name": "Alexa Mommy & Me",
+      "phone_short": "Alexa",
+      "status": "BOOKED",
+      "heat": "booked",
+      "event": "2026-10-01",
+      "paid_usd": "unknown"
+    },
+    {
+      "name": "Jessica Koci / Assumption ECLC",
+      "phone_short": "Jessica \u00b7 Assum.",
+      "status": "soft_not_confirmed",
+      "heat": "soft",
+      "one_liner": "Sep 9 reply \u00b7 will get back \u00b7 not confirmed \u00b7 outside dunk window",
+      "dollar": "unknown",
+      "window": false
+    },
+    {
+      "name": "Vesta Durbin Crossing",
+      "phone_short": "Vesta",
+      "status": "LOCKED",
+      "heat": "ops",
+      "event": "2026-09-27",
+      "paid_usd": "unknown"
+    },
+    {
+      "name": "Goddard ToT \u00d72",
+      "phone_short": "Goddard",
+      "status": "ACCEPTED \u00b7 deposit_incoming",
+      "heat": "ops",
+      "events": [
+        "2026-10-23",
+        "2026-10-29"
+      ],
+      "paid_usd": "not_cleared"
+    }
+  ],
+  "hot_leads_count": 3,
+  "kpis": {
+    "sent": 96,
+    "sent_label": "unique recipients Wed\u2013Fri",
+    "replied": 6,
+    "replied_label": "human answers in window",
+    "hot_leads": 3,
+    "hot_leads_label": "Tabatha \u00b7 Kate \u00b7 Burnette",
+    "closed_usd": 25,
+    "closed_label": "Ashlee M&M paid",
+    "waiting": 6,
+    "waiting_label": "Kate Mon \u00b7 Burnette inv \u00b7 Tabatha call \u00b7 Rachael \u00b7 Kori \u00b7 Starling"
+  },
+  "sources_used": [
+    "user-Gmail search_threads / get_thread (read-only)",
+    "data/bookings_pipeline.json",
+    "data/recent_outreach.json",
+    "data/principal_dunk_board.json + gmail_sent_suppress.json",
+    "data/growth_reply_pipeline.json + growth_campaign.json",
+    "PayPal unopened-invoice notice (Burnette $600)",
+    "GoDaddy OLA booking confirm (Ashlee $25)"
+  ]
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Campaign scoreboard · Sep 23–25 · Sheehan Homestead</title>
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#3dd68c;--gold:#fbbf24;--warn:#ffb020;--hot:#ff6b6b;--soft:#a78bfa}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1100px;margin:0 auto;padding:28px 22px 64px}
+.crumb{font-size:.82rem;color:var(--muted);margin:0 0 12px}.crumb a{color:#9ec1ff;font-weight:600}
+h1{font-size:clamp(1.55rem,3vw,2.1rem);margin:0 0 6px;letter-spacing:-.02em;font-weight:750}
+.sub{color:var(--muted);font-size:.95rem;margin:0 0 18px}
+.banner{margin:0 0 18px;padding:12px 16px;border-radius:14px;border:1px solid #3dd68c66;background:linear-gradient(135deg,#13281d,#121a2b);font-size:.88rem;font-weight:650;color:#9dffc5}
+.kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:0 0 22px}
+@media(max-width:900px){.kpis{grid-template-columns:repeat(2,1fr)}.kpis .kpi:last-child{grid-column:1/-1}}
+.kpi{border:1px solid var(--line);border-radius:16px;background:var(--card);padding:16px 14px;text-align:center}
+.kpi .l{font-size:.65rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:600}
+.kpi .v{font-size:clamp(1.6rem,4vw,2.2rem);font-weight:800;margin-top:6px;line-height:1}
+.kpi .s{font-size:.72rem;color:var(--muted);margin-top:8px}
+.kpi.sent .v{color:#9ec1ff}.kpi.replied .v{color:var(--accent)}.kpi.hot .v{color:var(--hot)}
+.kpi.closed .v{color:var(--gold)}.kpi.wait .v{color:var(--warn)}
+.sec{margin:22px 0 10px;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin:0 0 8px}
+.card{border:1px solid var(--line);border-radius:14px;background:var(--card);padding:14px 14px 12px}
+.card.hot{border-color:#ff6b6b66;box-shadow:0 0 0 1px #ff6b6b22 inset}
+.card.paid{border-color:#fbbf2466}.card.warm{border-color:#3dd68c55}.card.soft{border-color:#a78bfa44}.card.wait{border-color:#ffb02055}
+.card .name{font-weight:750;font-size:.98rem}
+.card .tag{display:inline-block;margin:6px 4px 0 0;font-size:.62rem;padding:2px 7px;border-radius:6px;border:1px solid var(--line);color:var(--muted);text-transform:uppercase;letter-spacing:.04em;font-weight:700}
+.card .tag.hot{border-color:#ff6b6b66;color:#ffb4b4}.card .tag.ok{border-color:#3dd68c55;color:var(--accent)}
+.card .tag.gold{border-color:#fbbf2466;color:#fde68a}.card .tag.warn{border-color:#ffb02066;color:#ffd08a}
+.card .meta{font-size:.78rem;color:var(--muted);margin-top:8px;line-height:1.4}
+.card .buck{font-size:.95rem;font-weight:750;color:var(--gold);margin-top:6px}
+.days{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}
+.day{flex:1;min-width:110px;border:1px solid var(--line);border-radius:12px;background:var(--panel);padding:10px 12px}
+.day .d{font-size:.65rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.day .n{font-size:1.35rem;font-weight:800;color:#9ec1ff;margin-top:2px}
+.note{color:var(--muted);font-size:.75rem;margin-top:22px;line-height:1.5}
+.cols2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:800px){.cols2{grid-template-columns:1fr}}
+</style></head><body>
+<div class="wrap">
+  <div class="crumb"><a href="index.html">Operator</a> · <a href="growth-simple.html">Growth</a> · <a href="ops-pipeline.html">Pipeline</a> · Scoreboard</div>
+  <h1>Campaign scoreboard</h1>
+  <p class="sub">Sheehan Homestead · Michael Sheehan · dunk / outreach · <b>Wed Sep 23 – Fri Sep 25 2026 ET</b></p>
+  <div class="banner">Phone-short · Gmail read-only · no invented $ · live as of <span id="asof">…</span></div>
+
+  <div class="kpis">
+    <div class="kpi sent"><div class="l">Sent</div><div class="v" id="k-sent">—</div><div class="s" id="k-sent-s">unique recipients</div></div>
+    <div class="kpi replied"><div class="l">Replied</div><div class="v" id="k-replied">—</div><div class="s" id="k-replied-s">human answers</div></div>
+    <div class="kpi hot"><div class="l">Hot leads</div><div class="v" id="k-hot">—</div><div class="s" id="k-hot-s">named</div></div>
+    <div class="kpi closed"><div class="l">Closed $</div><div class="v" id="k-closed">—</div><div class="s" id="k-closed-s">paid verified</div></div>
+    <div class="kpi wait"><div class="l">Waiting</div><div class="v" id="k-wait">—</div><div class="s" id="k-wait-s">open clocks</div></div>
+  </div>
+
+  <div class="sec">Sent by day · unique recipients</div>
+  <div class="days" id="days"></div>
+
+  <div class="sec">Hot pipeline cards</div>
+  <div class="grid" id="hot"></div>
+
+  <div class="cols2" style="margin-top:8px">
+    <div>
+      <div class="sec">Answered / replied</div>
+      <div class="grid" id="replied" style="grid-template-columns:1fr"></div>
+    </div>
+    <div>
+      <div class="sec">Closed / paid · Waiting</div>
+      <div class="grid" id="closed" style="grid-template-columns:1fr"></div>
+      <div class="grid" id="waiting" style="grid-template-columns:1fr;margin-top:8px"></div>
+    </div>
+  </div>
+
+  <div class="sec">Open leads (pipeline)</div>
+  <div class="grid" id="open"></div>
+
+  <p class="note" id="note"></p>
+</div>
+<script>
+fetch('data/campaign_scoreboard_2026-09-25.json').then(r=>r.json()).then(d=>{
+  document.getElementById('asof').textContent = d.as_of;
+  const k=d.kpis;
+  document.getElementById('k-sent').textContent = k.sent;
+  document.getElementById('k-sent-s').textContent = k.sent_label;
+  document.getElementById('k-replied').textContent = k.replied;
+  document.getElementById('k-replied-s').textContent = k.replied_label;
+  document.getElementById('k-hot').textContent = k.hot_leads;
+  document.getElementById('k-hot-s').textContent = k.hot_leads_label;
+  document.getElementById('k-closed').textContent = '$'+k.closed_usd;
+  document.getElementById('k-closed-s').textContent = k.closed_label;
+  document.getElementById('k-wait').textContent = k.waiting;
+  document.getElementById('k-wait-s').textContent = k.waiting_label;
+
+  const days=document.getElementById('days');
+  const order=['2026-09-23','2026-09-24','2026-09-25'];
+  order.forEach(day=>{
+    const row=d.sent.by_day[day]; if(!row) return;
+    const el=document.createElement('div'); el.className='day';
+    el.innerHTML=`<div class="d">${row.label} · ${day.slice(5)}</div><div class="n">${row.unique_recipients}</div>`;
+    days.appendChild(el);
+  });
+
+  function card(c, cls){
+    const el=document.createElement('div'); el.className='card '+(cls||'');
+    const tags=(c.tags||[]).map(t=>`<span class="tag ${t.cls||''}">${t.t}</span>`).join('');
+    el.innerHTML=`<div class="name">${c.name}</div>${tags}<div class="meta">${c.meta||''}</div>${c.buck?`<div class="buck">${c.buck}</div>`:''}`;
+    return el;
+  }
+
+  const hotEl=document.getElementById('hot');
+  [
+    {name:'Tabatha · Bartram PTA', tags:[{t:'CALL OFFERED',cls:'hot'},{t:'HOT',cls:'hot'}], meta:'ToT Oct 30 + science night Nov 13 · will call · 904-755-7230', cls:'hot'},
+    {name:'Kate · Brooks', tags:[{t:'WAITING MONDAY',cls:'warn'},{t:'HOT',cls:'hot'}], meta:'Nov 21 10–1 · Violet all-in · Michael called Fri · probably go', buck:'Quote mid $629', cls:'hot'},
+    {name:'Burnette · RCS', tags:[{t:'INV UNOPENED',cls:'warn'},{t:'HOT',cls:'hot'}], meta:'PayPal #0274 sent Sep 21 · Oct 2 WAITING_YES', buck:'$600 invoice', cls:'hot'},
+  ].forEach(c=>hotEl.appendChild(card(c,c.cls)));
+
+  const rep=document.getElementById('replied');
+  (d.replied||[]).forEach(r=>{
+    rep.appendChild(card({
+      name: r.phone_short || r.name,
+      tags:[{t:r.status,cls:'ok'}],
+      meta: r.one_liner,
+      buck: r.quoted_mid_usd ? ('Quote $'+r.quoted_mid_usd) : (r.mid_usd?('Mid ~$'+r.mid_usd):null)
+    }, 'warm'));
+  });
+
+  const cl=document.getElementById('closed');
+  (d.closed_paid_this_window||[]).forEach(r=>{
+    cl.appendChild(card({
+      name: r.phone_short || r.name,
+      tags:[{t:'PAID',cls:'gold'}],
+      meta: (r.when||'') + ' · ' + (r.account||''),
+      buck: '$'+Number(r.amount_usd).toFixed(0)+' paid'
+    }, 'paid'));
+  });
+
+  const wa=document.getElementById('waiting');
+  (d.awaiting||[]).forEach(r=>{
+    wa.appendChild(card({
+      name: r.phone_short || r.name,
+      tags:[{t:r.status,cls:'warn'}],
+      meta: r.one_liner,
+      buck: r.amount_usd!=null ? ('$'+Number(r.amount_usd).toFixed(0)) : (r.quoted_mid_usd?('Quote $'+r.quoted_mid_usd):null)
+    }, 'wait'));
+  });
+
+  const op=document.getElementById('open');
+  (d.open_leads_pipeline||[]).forEach(r=>{
+    const heat=r.heat||'';
+    const buck = r.quoted_mid_usd!=null ? ('$'+r.quoted_mid_usd+' mid')
+      : r.invoice_usd!=null ? ('$'+r.invoice_usd+' inv')
+      : r.mid_usd!=null ? ('~$'+r.mid_usd)
+      : (r.paid_usd && r.paid_usd!=='unknown' ? String(r.paid_usd) : (r.dollar==='unknown'?'$ unknown':null));
+    op.appendChild(card({
+      name: r.phone_short || r.name,
+      tags:[{t:r.status,cls: heat==='hot'?'hot':heat==='booked'?'gold':'ok'}, ...(heat==='hot'?[{t:'HOT',cls:'hot'}]:[])],
+      meta: r.one_liner || [r.event, ...(r.events||[])].filter(Boolean).join(' · '),
+      buck
+    }, heat==='hot'?'hot':heat==='soft'?'soft':heat==='booked'?'paid':'warm'));
+  });
+
+  document.getElementById('note').textContent =
+    'Sent = unique recipients (not threads). Replied = human answers in window (excl. OOO/bounce). Closed $ = verified paid only ($'+d.closed_paid_total_usd+'). Sources: Gmail MCP + bookings_pipeline + dunk board + PayPal notice. JSON: data/campaign_scoreboard_2026-09-25.json';
+}).catch(e=>{
+  document.getElementById('asof').textContent = 'JSON load failed — open from suite root';
+  console.error(e);
+});
+</script>
+</body></html>
