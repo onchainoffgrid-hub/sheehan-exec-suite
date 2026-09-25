@@ -68,12 +68,12 @@ button.done.on{background:#3dd68c;color:#062016;border-color:#3dd68c}
   function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
   function gmail(email, account){
     const su=encodeURIComponent('Petting zoo for fall festival / trunk or treat?');
-    const body=encodeURIComponent('Hi —\n\nReaching out because we bring petting zoos and STEM / nature school programs to dozens of leading schools in metro Jacksonville.\n\nDo you have any fall festivals or trunk-or-treat dates you want to consider?\n\nWhile most are doing festival planning, some are doing after-school, assemblies, and longer-term labs as well.\n\nHappy to share dates if useful.\n\nCheers,\n');
+    const body=encodeURIComponent('Hi —\n\nReaching out because we bring petting zoos and STEM / nature school programs to dozens of leading schools in metro Jacksonville.\n\nDo you have any fall festivals or trunk-or-treat dates you want to consider?\n\nWhile most are doing festival planning, some are doing after-school, assemblies, and longer-term labs as well.\n\nHappy to share dates if useful.\n');
     return 'https://mail.google.com/mail/?authuser='+encodeURIComponent(AUTH)+'&view=cm&fs=1&to='+encodeURIComponent(email)+'&su='+su+'&body='+body;
   }
   function mailto(email){
     const su=encodeURIComponent('Petting zoo for fall festival / trunk or treat?');
-    const body=encodeURIComponent('Hi —\n\nReaching out because we bring petting zoos and STEM / nature school programs to dozens of leading schools in metro Jacksonville.\n\nDo you have any fall festivals or trunk-or-treat dates you want to consider?\n\nWhile most are doing festival planning, some are doing after-school, assemblies, and longer-term labs as well.\n\nHappy to share dates if useful.\n\nCheers,\n');
+    const body=encodeURIComponent('Hi —\n\nReaching out because we bring petting zoos and STEM / nature school programs to dozens of leading schools in metro Jacksonville.\n\nDo you have any fall festivals or trunk-or-treat dates you want to consider?\n\nWhile most are doing festival planning, some are doing after-school, assemblies, and longer-term labs as well.\n\nHappy to share dates if useful.\n');
     return 'mailto:'+encodeURIComponent(email)+'?subject='+su+'&body='+body;
   }
   let data=null, done=loadDone(), sec='principals', openOnly=false;
