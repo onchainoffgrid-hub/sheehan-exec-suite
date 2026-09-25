@@ -289,7 +289,7 @@ def mailto_fields(lane: str, north: str, contact: str, review_status: str) -> tu
     play = "https://onchainoffgrid-hub.github.io/critters-play/"
     wheel = "https://onchainoffgrid-hub.github.io/critters-on-call/wheel.html"
     services = "https://www.sheehanhomestead.com/services"
-    sig = "Cheers,\nMichael + Ann-Marie\n914-263-1311\n"
+    sig = ""  # Gmail auto-signature; never double
 
     if lane == "reviewers" or review_status == "likely_reviewed":
         subj = "kids games from Sheehan Homestead"

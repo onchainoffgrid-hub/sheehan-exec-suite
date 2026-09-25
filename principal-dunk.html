@@ -87,7 +87,7 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
 <p class="crumb"><a href="index.html">Operator</a> · <a href="growth-simple.html">Growth</a> · <a href="doer-crm.html">Doer CRM</a> → <b>Principal dunks</b></p>
 <h1>Principal dunk board</h1>
 <p class="sub">One-click Gmail / mailto — B2B school/CDD keeps v2.7 Michael voice. Consumer: Reviewed → APP-FIRST (no review ask); else soft next-date / warm visit. RCSA + Fancy filters. Area + S/A/B + role chip. Done sticks (v2). Compose only.</p>
-<div class="banner"><span class="ver" id="verstamp">Board v2.9 · Sep 25 4:12 ET</span><b>Compose only — never auto-send.</b> Board v2.9: <b>Friday</b> weekend programmers (church · CDD amenity · apartments · corporate/district) · <b>University</b> Jax-first (JU/UNF/FSCJ) — not Friday default · Bartram notes live. </div>
+<div class="banner"><span class="ver" id="verstamp">Board v2.9.1 · Sep 25 · no doubled Gmail sig</span><b>Compose only — never auto-send.</b> Board v2.9: <b>Friday</b> weekend programmers (church · CDD amenity · apartments · corporate/district) · <b>University</b> Jax-first (JU/UNF/FSCJ) — not Friday default · Bartram notes live. </div>
 <div class="banner" id="dedupe" style="border-color:#3dd68c66;color:#9dffc5">Scrubbing vs sent + customers…</div>
 <div class="kpis" id="kpis"></div>
 <div class="filters">
@@ -131,7 +131,7 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
   <input id="q" type="search" placeholder="Filter email / city / area / note…" autocomplete="off"/>
 </div>
 <div id="board"></div>
-<p class="note">Source: TAM + Jax universities (JU/UNF/FSCJ) + Friday weekend programmers + RCSA/Fancy + Consumer · CAPTCHA HQ stripped · Done key <code>sheehan_principal_dunk_done_v2</code> · Notes key <code>sheehan_dunk_notes_v1</code> · Hard-refresh (?v=29)</p>
+<p class="note">Source: TAM + Jax universities (JU/UNF/FSCJ) + Friday weekend programmers + RCSA/Fancy + Consumer · CAPTCHA HQ stripped · Done key <code>sheehan_principal_dunk_done_v2</code> · Notes key <code>sheehan_dunk_notes_v1</code> · Hard-refresh (?v=291)</p>
 </div>
 <script>
 (function(){
@@ -170,24 +170,33 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
   const QUICK_EMAIL_ID='quick-action-news-jax-shoutout';
   const QUICK_EMAIL_SUBJECT='local animal shout-out?';
   const QUICK_EMAIL_BODY='Hi there,\n\nWe bring the animals to Jax festivals and trunk-or-treats — soft ask for a free shout-out if there\'s a fit (Family Focus, community hit, whatever works). Happy to bring animals for a quick TV hit too.\n\n914-263-1311';
+  function stripGmailSig(body){
+    // Gmail already appends Michael's signature — never double it in dunk compose.
+    let t=String(body||'');
+    t=t.replace(/\n*Cheers,?\s*(?:\n\s*)*(?:Ann-Marie and Michael Sheehan|Michael \+ Ann-Marie|Michael \+ Ann Marie|Michael)?\s*(?:\n\s*)*(?:914-263-1311)?\s*(?:\n\s*Please like our Facebook[\s\S]*)?$/i,'');
+    t=t.replace(/\n*914-263-1311\s*$/,'');
+    t=t.replace(/\n*Please like our Facebook[\s\S]*$/i,'');
+    t=t.replace(/\n*Sheehan Homestead\s*\n\s*https?:\/\/(?:www\.)?sheehanhomestead\.com\/?\s*$/i,'');
+    return t.replace(/\n{3,}/g,'\n\n').replace(/\s+$/,'')+'\n';
+  }
   function consumerAppFirstBody(r){
     const fn=firstName(r.contact)||firstName(r.account);
     const hi=fn?('Hi '+fn+','):'Hi there,';
-    return hi+'\n\nThanks again for being part of the homestead — dropping the kids games for you (play + prize wheel). If they hit a high score they can text HIGH SCORE to 914-263-1311.\n\nPlay: https://onchainoffgrid-hub.github.io/critters-play/\nWheel: https://onchainoffgrid-hub.github.io/critters-on-call/wheel.html\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael\n914-263-1311\n';
+    return hi+'\n\nThanks again for being part of the homestead — dropping the kids games for you (play + prize wheel). If they hit a high score they can text HIGH SCORE to 914-263-1311.\n\nPlay: https://onchainoffgrid-hub.github.io/critters-play/\nWheel: https://onchainoffgrid-hub.github.io/critters-on-call/wheel.html\nServices: https://www.sheehanhomestead.com/services\n';
   }
   function consumerNextDateBody(r){
     const fn=firstName(r.contact)||firstName(r.account);
     const hi=fn?('Hi '+fn+','):'Hi there,';
-    return hi+'\n\nQuick one from Sheehan Homestead — soft check whether you want another date on the books this fall. Happy to hold a Saturday or weekday if something\'s brewing.\n\nKids games if useful:\nPlay: https://onchainoffgrid-hub.github.io/critters-play/\nWheel: https://onchainoffgrid-hub.github.io/critters-on-call/wheel.html\n\nCheers,\nMichael\n914-263-1311\n';
+    return hi+'\n\nQuick one from Sheehan Homestead — soft check whether you want another date on the books this fall. Happy to hold a Saturday or weekday if something\'s brewing.\n\nKids games if useful:\nPlay: https://onchainoffgrid-hub.github.io/critters-play/\nWheel: https://onchainoffgrid-hub.github.io/critters-on-call/wheel.html\n';
   }
   function consumerWarmBody(r){
     const fn=firstName(r.contact)||firstName(r.account);
     const hi=fn?('Hi '+fn+','):'Hi there,';
-    return hi+'\n\nFollowing up from your interest in the animals / homestead visit. We do mobile petting zoos and on-farm visits around metro Jacksonville — happy to share open weekend dates or the services page.\n\nServices: https://www.sheehanhomestead.com/services\nPlay (kids): https://onchainoffgrid-hub.github.io/critters-play/\n\nCheers,\nMichael\n914-263-1311\n';
+    return hi+'\n\nFollowing up from your interest in the animals / homestead visit. We do mobile petting zoos and on-farm visits around metro Jacksonville — happy to share open weekend dates or the services page.\n\nServices: https://www.sheehanhomestead.com/services\nPlay (kids): https://onchainoffgrid-hub.github.io/critters-play/\n';
   }
   function composeBody(r){
-    if(r.quick_body) return r.quick_body;
-    if(r.id===QUICK_EMAIL_ID || r.quick_email) return QUICK_EMAIL_BODY;
+    if(r.quick_body) return stripGmailSig(r.quick_body);
+    if(r.id===QUICK_EMAIL_ID || r.quick_email) return stripGmailSig(QUICK_EMAIL_BODY);
     const persona=inferPersona(r);
     if(persona==='consumer' || r.lane==='consumer' || r.consumer_lane){
       const rs=String(r.review_status||'unknown');
@@ -209,7 +218,7 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
       other:['families and community events across metro Jacksonville','fall festivals or trunk-or-treat dates']
     };
     const pair=phrases[persona]||phrases.other;
-    return hi+'\n\nReaching out because we bring petting zoos to '+pair[0]+'.\n\nDo you have any '+pair[1]+' you want to consider?\n\nHappy to share open dates or more info if useful.\n\nCheers,\n\nAnn-Marie and Michael Sheehan\n\n914-263-1311\n\nPlease like our Facebook\nhttps://www.facebook.com/profile.php?id=61556795506312\n\nSheehan Homestead\nhttp://www.sheehanhomestead.com/\n';
+    return hi+'\n\nReaching out because we bring petting zoos to '+pair[0]+'.\n\nDo you have any '+pair[1]+' you want to consider?\n\nHappy to share open dates or more info if useful.\n';
   }
   function subjectFor(r){
     if(r.subject) return r.subject;

@@ -1,6 +1,6 @@
 {
   "as_of": "2026-09-25 4:12 PM ET",
-  "board_version": "Board v2.9 \u00b7 Sep 25 4:12 ET",
+  "board_version": "Board v2.9.1 \u00b7 Sep 25 \u00b7 no doubled Gmail sig",
   "label": "Principal dunk board v2.9 \u2014 Friday weekend programmers + Jax universities + Corporate Friday",
   "rule": "Compose-only. Friday filter = weekend programmers (church / CDD amenity / apartments / corporate-district) + secondary consumer rebook. University = separate filter, NOT Friday default. Published emails only. Done key sheehan_principal_dunk_done_v2 \u00b7 Notes sheehan_dunk_notes_v1.",
   "compose_authuser": "sheehanhomestead@gmail.com",
@@ -173,7 +173,7 @@
           "owe_reason": "SLAM CLOSE \u00b7 Verbal/warm dual mini Mondays Nov \u2014 both St. Augustine + Julington Creek/Woods. Cody inbound. $375 each mini if both lock ($750). Close it.",
           "why": "SLAM: verbal dual-campus November Mondays. Confirm both dates + invoice path.",
           "form_url": "https://westminstercommunitiesfl.org/westminster-woods/contact-us/",
-          "quick_body": "Hi Kori,\n\nChecking in to lock dual mini Mondays in November (St. Augustine + Woods) at $375 each. Cody is ready on our side \u2014 can we firm both this week?\n\n914-263-1311\n",
+          "quick_body": "Hi Kori,\n\nChecking in to lock dual mini Mondays in November (St. Augustine + Woods) at $375 each. Cody is ready on our side \u2014 can we firm both this week?\n",
           "quick_email": true,
           "legacy_tier": 1,
           "area": "St. Johns \u00b7 Westminster"
@@ -195,7 +195,7 @@
           "subject": "petting zoo date?",
           "owe_reason": "SLAM / OVERDUE \u00b7 Verbal then resends Sep 2 + Sep 14, no reply. Two Starlings said they would book \u2014 not locked. Chase date.",
           "why": "Overdue Starling follow-up after verbal interest. Not cold.",
-          "quick_body": "Hi there,\n\nFollowing up \u2014 any open weekday morning for a resident animal visit at Nocatee, or should I close the loop this quarter?\n\n914-263-1311\n",
+          "quick_body": "Hi there,\n\nFollowing up \u2014 any open weekday morning for a resident animal visit at Nocatee, or should I close the loop this quarter?\n",
           "quick_email": true,
           "legacy_tier": 1,
           "area": "St. Johns \u00b7 Nocatee"
@@ -217,7 +217,7 @@
           "subject": "petting zoo date?",
           "owe_reason": "SLAM / OVERDUE \u00b7 Same Starling cluster. Resends Sep 2 + Sep 14 unanswered. Lock or clear.",
           "why": "Overdue Starling follow-up after verbal interest. Not cold.",
-          "quick_body": "Hi there,\n\nFollowing up \u2014 any open weekday morning for a resident animal visit at Ponte Vedra, or should I close the loop this quarter?\n\n914-263-1311\n",
+          "quick_body": "Hi there,\n\nFollowing up \u2014 any open weekday morning for a resident animal visit at Ponte Vedra, or should I close the loop this quarter?\n",
           "quick_email": true,
           "legacy_tier": 1,
           "area": "St. Johns \u00b7 Ponte Vedra"
@@ -260,7 +260,7 @@
           "city": "Jacksonville metro",
           "subject": "petting zoo date?",
           "owe_reason": "SLAM / OVERDUE \u00b7 Named Starling contact (Alexa). Brand cluster said they would book \u2014 not locked. Soft close.",
-          "quick_body": "Hi Alexa,\n\nFollowing up on the Starling animal-visit thread \u2014 if a campus still wants a resident morning, send which one + a date window and I'll hold it. Quick no is fine too.\n\n914-263-1311\n",
+          "quick_body": "Hi Alexa,\n\nFollowing up on the Starling animal-visit thread \u2014 if a campus still wants a resident morning, send which one + a date window and I'll hold it. Quick no is fine too.\n",
           "legacy_tier": 1,
           "area": "Metro Jax \u00b7 metro"
         },
@@ -332,7 +332,7 @@
           "owe_reason": "SLAM / OVERDUE \u00b7 Resends Sep 2 + Sep 14. Verbal interest not locked. Chase Shelly / life enrichment.",
           "tier": "S",
           "subject": "petting zoo date?",
-          "quick_body": "Hi Shelly,\n\nFollowing up on San Jose \u2014 can we pick a weekday morning for residents, or should I close the loop this quarter?\n\n914-263-1311\n",
+          "quick_body": "Hi Shelly,\n\nFollowing up on San Jose \u2014 can we pick a weekday morning for residents, or should I close the loop this quarter?\n",
           "quick_email": true,
           "phone": "",
           "website": "https://starlingliving.com/",
@@ -745,7 +745,7 @@
             "Prior mobile",
             "Friday"
           ],
-          "quick_body": "Hi Charlene,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Charlene,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -786,7 +786,7 @@
             "Prior mobile",
             "Friday"
           ],
-          "quick_body": "Hi Kathy,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Kathy,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -827,7 +827,7 @@
             "Prior mobile",
             "Friday"
           ],
-          "quick_body": "Hi marieljaster,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi marieljaster,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -868,7 +868,7 @@
             "Summer cohort",
             "Friday"
           ],
-          "quick_body": "Hi Julie,\n\nYou came through over summer \u2014 want a fall date? Trunk-or-treat, farm visit, or any next date works. Happy to hold what fits.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Julie,\n\nYou came through over summer \u2014 want a fall date? Trunk-or-treat, farm visit, or any next date works. Happy to hold what fits.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -909,7 +909,7 @@
             "Summer cohort",
             "Friday"
           ],
-          "quick_body": "Hi kelli,\n\nYou came through over summer \u2014 want a fall date? Trunk-or-treat, farm visit, or any next date works. Happy to hold what fits.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi kelli,\n\nYou came through over summer \u2014 want a fall date? Trunk-or-treat, farm visit, or any next date works. Happy to hold what fits.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -950,7 +950,7 @@
             "Prior mobile",
             "Friday"
           ],
-          "quick_body": "Hi Lauren,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Lauren,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -991,7 +991,7 @@
             "Prior mobile",
             "Friday"
           ],
-          "quick_body": "Hi WildLight,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi WildLight,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -1032,7 +1032,7 @@
             "Prior mobile",
             "Friday"
           ],
-          "quick_body": "Hi Cornerstone,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Cornerstone,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -1073,7 +1073,7 @@
             "Summer cohort",
             "Friday"
           ],
-          "quick_body": "Hi San,\n\nYou came through over summer \u2014 want a fall date? Trunk-or-treat, farm visit, or any next date works. Happy to hold what fits.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi San,\n\nYou came through over summer \u2014 want a fall date? Trunk-or-treat, farm visit, or any next date works. Happy to hold what fits.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -1114,7 +1114,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Marti,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Marti,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -1155,7 +1155,7 @@
             "Prior mobile",
             "Friday"
           ],
-          "quick_body": "Hi Advanced,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Advanced,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -1196,7 +1196,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Michelle,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Michelle,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -1237,7 +1237,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Liudmila,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Liudmila,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -1278,7 +1278,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Palm,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Palm,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -1319,7 +1319,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Orange,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Orange,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -1360,7 +1360,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi The,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi The,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -1401,7 +1401,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Greenwood,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Greenwood,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -1442,7 +1442,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Silver,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Silver,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -1483,7 +1483,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Dolores,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Dolores,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -1524,7 +1524,7 @@
             "Summer cohort",
             "Friday"
           ],
-          "quick_body": "Hi Ortega,\n\nYou came through over summer \u2014 want a fall date? Trunk-or-treat, farm visit, or any next date works. Happy to hold what fits.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Ortega,\n\nYou came through over summer \u2014 want a fall date? Trunk-or-treat, farm visit, or any next date works. Happy to hold what fits.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -1565,7 +1565,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi HarborChase,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi HarborChase,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -1606,7 +1606,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Brightside,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Brightside,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -1647,7 +1647,7 @@
             "Prior mobile",
             "Friday"
           ],
-          "quick_body": "Hi Leia,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Leia,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -1688,7 +1688,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Tender,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Tender,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -1729,7 +1729,7 @@
             "Prior mobile",
             "Friday"
           ],
-          "quick_body": "Hi Abess,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Abess,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -1770,7 +1770,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Addyfest-,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Addyfest-,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -1811,7 +1811,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Amazing,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Amazing,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -1852,7 +1852,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Amazing,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Amazing,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -1893,7 +1893,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Amelia,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Amelia,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -1934,7 +1934,7 @@
             "Prior mobile",
             "Friday"
           ],
-          "quick_body": "Hi Amelia,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Amelia,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -1975,7 +1975,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Amelia,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Amelia,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -2016,7 +2016,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Amy,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Amy,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -2057,7 +2057,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Assumption,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Assumption,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -2098,7 +2098,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Big,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Big,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -2139,7 +2139,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Big,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Big,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -2180,7 +2180,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Brianna,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Brianna,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -2221,7 +2221,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Brittany,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Brittany,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -2262,7 +2262,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Christ,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Christ,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -2303,7 +2303,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Coach,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Coach,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -2344,7 +2344,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi The,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi The,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -2386,7 +2386,7 @@
             "Friday",
             "Corporate Friday"
           ],
-          "quick_body": "Hi DCC,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi DCC,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -2427,7 +2427,7 @@
             "Summer cohort",
             "Friday"
           ],
-          "quick_body": "Hi scheduled,\n\nYou came through over summer \u2014 want a fall date? Trunk-or-treat, farm visit, or any next date works. Happy to hold what fits.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi scheduled,\n\nYou came through over summer \u2014 want a fall date? Trunk-or-treat, farm visit, or any next date works. Happy to hold what fits.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -2468,7 +2468,7 @@
             "Prior mobile",
             "Friday"
           ],
-          "quick_body": "Hi Doctor,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Doctor,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -2509,7 +2509,7 @@
             "Summer cohort",
             "Friday"
           ],
-          "quick_body": "Hi Fletcher's,\n\nYou came through over summer \u2014 want a fall date? Trunk-or-treat, farm visit, or any next date works. Happy to hold what fits.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Fletcher's,\n\nYou came through over summer \u2014 want a fall date? Trunk-or-treat, farm visit, or any next date works. Happy to hold what fits.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -2550,7 +2550,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Fallon,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Fallon,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -2591,7 +2591,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Ponte,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Ponte,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -2632,7 +2632,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Grand,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Grand,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -2673,7 +2673,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Heather,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Heather,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -2714,7 +2714,7 @@
             "Prior mobile",
             "Friday"
           ],
-          "quick_body": "Hi intercoastal,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi intercoastal,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -2755,7 +2755,7 @@
             "Prior mobile",
             "Friday"
           ],
-          "quick_body": "Hi Ivybrook,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Ivybrook,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -2796,7 +2796,7 @@
             "Prior mobile",
             "Friday"
           ],
-          "quick_body": "Hi Ivybrook,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Ivybrook,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -2837,7 +2837,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Ivybrook,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Ivybrook,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -2878,7 +2878,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Jacksonville,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Jacksonville,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -2919,7 +2919,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi JEA,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi JEA,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -2960,7 +2960,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Jenna,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Jenna,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -3001,7 +3001,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Jericho,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Jericho,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -3042,7 +3042,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Lavilla,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Lavilla,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -3083,7 +3083,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi LaVilla,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi LaVilla,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -3124,7 +3124,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Life,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Life,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -3165,7 +3165,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Marsh,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Marsh,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -3206,7 +3206,7 @@
             "Prior mobile",
             "Friday"
           ],
-          "quick_body": "Hi Marsh,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Marsh,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -3247,7 +3247,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi NFSSE,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi NFSSE,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -3288,7 +3288,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi O2B,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi O2B,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -3329,7 +3329,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi One,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi One,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -3370,7 +3370,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Our,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Our,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -3411,7 +3411,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Wyndham,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Wyndham,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -3452,7 +3452,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Palagio,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Palagio,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -3493,7 +3493,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Phil,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Phil,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -3534,7 +3534,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Primrose,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Primrose,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -3575,7 +3575,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Primrose,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Primrose,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -3616,7 +3616,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Publix,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Publix,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -3657,7 +3657,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Ricky,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Ricky,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -3698,7 +3698,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Seniors,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Seniors,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -3739,7 +3739,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Rosette,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Rosette,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -3780,7 +3780,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Seacoast,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Seacoast,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -3821,7 +3821,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Seagrass,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Seagrass,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -3862,7 +3862,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Senetra,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Senetra,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -3903,7 +3903,7 @@
             "Prior mobile",
             "Friday"
           ],
-          "quick_body": "Hi Sheridan,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Sheridan,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -3944,7 +3944,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi SPAR,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi SPAR,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -3985,7 +3985,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Springfield,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Springfield,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -4026,7 +4026,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Starling,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Starling,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -4067,7 +4067,7 @@
             "Prior mobile",
             "Friday"
           ],
-          "quick_body": "Hi Summer,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Summer,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -4108,7 +4108,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Sysco,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Sysco,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -4149,7 +4149,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi The,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi The,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -4190,7 +4190,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi The,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi The,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -4231,7 +4231,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi The,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi The,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -4272,7 +4272,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi The,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi The,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -4313,7 +4313,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi thepeachpower@hotmail.com,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi thepeachpower@hotmail.com,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -4354,7 +4354,7 @@
             "Prior mobile",
             "Friday"
           ],
-          "quick_body": "Hi VPK,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi VPK,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -4395,7 +4395,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi YCC,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi YCC,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -4436,7 +4436,7 @@
             "Prior mobile",
             "Friday"
           ],
-          "quick_body": "Hi eTown,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi eTown,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -4477,7 +4477,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Julington,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Julington,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -4518,7 +4518,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Vesta,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Vesta,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -4559,7 +4559,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Vesta,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Vesta,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -4600,7 +4600,7 @@
             "Prior mobile",
             "Friday"
           ],
-          "quick_body": "Hi Vesta,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Vesta,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -4641,7 +4641,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Wynnfield,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Wynnfield,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -4682,7 +4682,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Eartha's,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Eartha's,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -4723,7 +4723,7 @@
             "Prior mobile",
             "Friday"
           ],
-          "quick_body": "Hi Goddard,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Goddard,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -4764,7 +4764,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Goddard,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Goddard,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -4805,7 +4805,7 @@
             "Prior mobile",
             "Friday"
           ],
-          "quick_body": "Hi Goddard,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Goddard,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -4846,7 +4846,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Goddard,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Goddard,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -4887,7 +4887,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Sunshine,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Sunshine,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -4928,7 +4928,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Yolanda,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Yolanda,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -4969,7 +4969,7 @@
             "Prior mobile",
             "Friday"
           ],
-          "quick_body": "Hi Carson,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Carson,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -5010,7 +5010,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi John,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi John,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -5051,7 +5051,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Emily,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Emily,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -5092,7 +5092,7 @@
             "Summer cohort",
             "Friday"
           ],
-          "quick_body": "Hi Rachael,\n\nYou came through over summer \u2014 want a fall date? Trunk-or-treat, farm visit, or any next date works. Happy to hold what fits.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Rachael,\n\nYou came through over summer \u2014 want a fall date? Trunk-or-treat, farm visit, or any next date works. Happy to hold what fits.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -5133,7 +5133,7 @@
             "Prior mobile",
             "Friday"
           ],
-          "quick_body": "Hi Heather,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Heather,\n\nQuick one \u2014 you had us mobile before. Want another mobile date this fall (weekday or Saturday)? Happy to hold whatever SKU fits; mobile rebook is easy on our side.\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -5174,7 +5174,7 @@
             "Summer cohort",
             "Friday"
           ],
-          "quick_body": "Hi Vivian,\n\nYou came through over summer \u2014 want a fall date? Trunk-or-treat, farm visit, or any next date works. Happy to hold what fits.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Vivian,\n\nYou came through over summer \u2014 want a fall date? Trunk-or-treat, farm visit, or any next date works. Happy to hold what fits.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -5214,7 +5214,7 @@
             "Consumer",
             "Unknown-past"
           ],
-          "quick_body": "Hi Emily,\n\nReaching back \u2014 want another homestead date on the books? Mobile, visit, or party \u2014 whatever fits. Happy to share open dates.\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Emily,\n\nReaching back \u2014 want another homestead date on the books? Mobile, visit, or party \u2014 whatever fits. Happy to share open dates.\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -5252,7 +5252,7 @@
             "Consumer",
             "Unknown-past"
           ],
-          "quick_body": "Hi Sarah,\n\nReaching back \u2014 want another homestead date on the books? Mobile, visit, or party \u2014 whatever fits. Happy to share open dates.\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Sarah,\n\nReaching back \u2014 want another homestead date on the books? Mobile, visit, or party \u2014 whatever fits. Happy to share open dates.\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -5291,7 +5291,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi 86145,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi 86145,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -5332,7 +5332,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Todd,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Todd,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -5373,7 +5373,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi H.,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi H.,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -5414,7 +5414,7 @@
             "Booked, no review",
             "Friday"
           ],
-          "quick_body": "Hi Kerry,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Kerry,\n\nSoft check \u2014 want another date this fall? Any SKU is fine; happy to hold a Saturday or weekday.\n\nIf you\u2019re also willing, a short Google review helps more families find us \u2014 totally optional.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
@@ -5454,7 +5454,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Ascension,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Ascension,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -5492,7 +5492,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Amanda,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Amanda,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -5530,7 +5530,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Helene,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Helene,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -5568,7 +5568,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Jessica,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Jessica,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -5606,7 +5606,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Amanda,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Amanda,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -5644,7 +5644,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Mandy,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Mandy,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -5682,7 +5682,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Ciara,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Ciara,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -5720,7 +5720,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi William,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi William,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -5758,7 +5758,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Alexandra,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Alexandra,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -5796,7 +5796,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Sunny,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Sunny,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -5834,7 +5834,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Meghan,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Meghan,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -5872,7 +5872,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Emma,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Emma,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -5910,7 +5910,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Colleen,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Colleen,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -5948,7 +5948,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Suzanne,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Suzanne,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -5986,7 +5986,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Sarah,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Sarah,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -6024,7 +6024,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Kate,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Kate,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -6062,7 +6062,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Haley,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Haley,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -6100,7 +6100,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Kristina,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Kristina,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -6138,7 +6138,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Raxhel,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Raxhel,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -6176,7 +6176,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Jenee,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Jenee,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -6214,7 +6214,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Reilley,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Reilley,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -6252,7 +6252,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Carolina,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Carolina,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -6290,7 +6290,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Aida,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Aida,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -6328,7 +6328,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Vanessa,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Vanessa,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -6366,7 +6366,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Dustina,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Dustina,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -6404,7 +6404,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Emil,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Emil,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -6442,7 +6442,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Hannah,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Hannah,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -6480,7 +6480,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Janice,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Janice,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -6518,7 +6518,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Coleen,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Coleen,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -6556,7 +6556,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Sara,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Sara,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -6594,7 +6594,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Elizabeth,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Elizabeth,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -6632,7 +6632,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Hillary,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Hillary,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -6670,7 +6670,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Jackie,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Jackie,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -6708,7 +6708,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Jacqueline,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Jacqueline,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -6746,7 +6746,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Theresa,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Theresa,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -6784,7 +6784,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Desirae,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Desirae,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -6822,7 +6822,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Diane,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Diane,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -6860,7 +6860,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Kristi,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Kristi,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -6898,7 +6898,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Dena,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Dena,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -6936,7 +6936,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Grace,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Grace,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -6974,7 +6974,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Kendall,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Kendall,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -7012,7 +7012,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Amber,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Amber,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -7050,7 +7050,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi CHRYS,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi CHRYS,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -7088,7 +7088,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Chry'Shonda,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Chry'Shonda,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -7126,7 +7126,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Tammy,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Tammy,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -7164,7 +7164,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Chakevia,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Chakevia,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -7202,7 +7202,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Rentia,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Rentia,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -7240,7 +7240,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Estefani,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Estefani,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -7278,7 +7278,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Marisa,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Marisa,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -7316,7 +7316,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Paul,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Paul,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -7354,7 +7354,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Elvir,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Elvir,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -7392,7 +7392,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Destiny,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Destiny,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -7430,7 +7430,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Julio,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Julio,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -7468,7 +7468,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Jayiana,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Jayiana,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -7506,7 +7506,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Amy,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Amy,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -7544,7 +7544,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Kierston,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Kierston,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -7582,7 +7582,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Misty,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Misty,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -7620,7 +7620,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Summer,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Summer,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -7658,7 +7658,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Janet,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Janet,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -7696,7 +7696,7 @@
             "Consumer",
             "Warm"
           ],
-          "quick_body": "Hi Hesham,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael + Ann-Marie\n914-263-1311\n",
+          "quick_body": "Hi Hesham,\n\nFollowing up on your interest \u2014 want to book a date? Mobile, farm visit, or party \u2014 whatever fits. I can hold a Saturday or weekday.\n\nServices: https://www.sheehanhomestead.com/services\n",
           "quick_email": true,
           "consumer_lane": "warm_inbound",
           "purchase_status": "not_seen",
@@ -9286,7 +9286,7 @@
           "subject": "local animal shout-out?",
           "why": "Closed mouths don't get fed \u2014 opportunity-frame shout-out ask (NOT complaining about Amazing Acres). Also events@actionnewsjax.com for Family Focus / community calendar \u00b7 Doing Good form linked.",
           "owe_reason": "Quick-email follow-up \u00b7 ask for community shout-out fit",
-          "quick_body": "Hi there,\n\nWe bring the animals to Jax festivals and trunk-or-treats \u2014 soft ask for a free shout-out if there's a fit (Family Focus, community hit, whatever works). Happy to bring animals for a quick TV hit too.\n\n914-263-1311\n",
+          "quick_body": "Hi there,\n\nWe bring the animals to Jax festivals and trunk-or-treats \u2014 soft ask for a free shout-out if there's a fit (Family Focus, community hit, whatever works). Happy to bring animals for a quick TV hit too.\n",
           "bucket": "media_collab",
           "legacy_tier": 1,
           "area": "Metro Jax \u00b7 Jacksonville"
@@ -9309,7 +9309,7 @@
           "subject": "community calendar animals?",
           "why": "Calendar crawl lane (separate from news@ shout-out). Email photo/flyer + date/time. Public dated events only.",
           "owe_reason": "Family Focus / community calendar listing",
-          "quick_body": "Hi Focus,\n\nWe bring the animals for public family events \u2014 soft ask to list our next farm morning / trunk-or-treat on the community calendar if there's a fit. Happy to send a short blurb + photo.\n\n914-263-1311\n",
+          "quick_body": "Hi Focus,\n\nWe bring the animals for public family events \u2014 soft ask to list our next farm morning / trunk-or-treat on the community calendar if there's a fit. Happy to send a short blurb + photo.\n",
           "bucket": "media_collab",
           "legacy_tier": 1,
           "area": "Metro Jax \u00b7 Jacksonville"
@@ -9332,7 +9332,7 @@
           "subject": "fall reconnect?",
           "why": "Soft reconnect \u2014 Melissa reached out Alignable / spring. Also Melissa@buzztownmedia.com \u00b7 Amy Armstrong amy@buzztownmedia.com (community). NOT a TV booking pitch \u2014 collab / hire the farm / another shout.",
           "owe_reason": "Buzztown soft reconnect \u00b7 missed spring follow-up",
-          "quick_body": "Hi Melissa,\n\nYou reached out around spring and we dropped the ball \u2014 sorry. Fall is busy with animals at festivals; open to a Buzz Town shout, hiring the farm for a community hit, or just staying on each other's radar.\n\n914-263-1311\n",
+          "quick_body": "Hi Melissa,\n\nYou reached out around spring and we dropped the ball \u2014 sorry. Fall is busy with animals at festivals; open to a Buzz Town shout, hiring the farm for a community hit, or just staying on each other's radar.\n",
           "bucket": "media_collab",
           "legacy_tier": 1,
           "area": "Nassau \u00b7 Callahan"
@@ -9355,7 +9355,7 @@
           "subject": "fall animal collab?",
           "why": "Partner adjacent \u2014 they do lizards/exotics; homestead does NOT. Soft fall collab/cross-referral. Prior subject \"Potential Partnership Chat\" (Nov 2024 FB find) \u2014 no reply on file.",
           "owe_reason": "Partner reconnect \u00b7 exotics cross-referral",
-          "quick_body": "Hi River,\n\nWe bring goats/bunnies/fowl (no reptiles) for Jax family events \u2014 soft ask to cross-refer when a family wants the other lane, or a joint community day if that ever fits.\n\n914-263-1311\n",
+          "quick_body": "Hi River,\n\nWe bring goats/bunnies/fowl (no reptiles) for Jax family events \u2014 soft ask to cross-refer when a family wants the other lane, or a joint community day if that ever fits.\n",
           "legacy_tier": 1,
           "area": "Metro Jax \u00b7 Jacksonville"
         },
@@ -9378,7 +9378,7 @@
           "subject": "live animal demo?",
           "why": "DEMO not talking head. Primary path = Help Desk ticket (River City Live \u2192 How do I get on the show). Also producer@wjxt.com \u00b7 newstips@wjxt.com. How-to: help.news4jax.com/kb/article/255.",
           "owe_reason": "RCL demo pitch \u00b7 goat / mommy-and-me / STEM live bit",
-          "quick_body": "Hi River,\n\nPitching a short LIVE animal demo for River City Live \u2014 goats on set, not a talking head. Soft ask for a free segment shout-out if there's a fit.\n\n914-263-1311\n",
+          "quick_body": "Hi River,\n\nPitching a short LIVE animal demo for River City Live \u2014 goats on set, not a talking head. Soft ask for a free segment shout-out if there's a fit.\n",
           "bucket": "media_collab",
           "legacy_tier": 1,
           "area": "Metro Jax \u00b7 Jacksonville"
@@ -9402,7 +9402,7 @@
           "subject": "another animal segment?",
           "why": "House network. Use form \u2014 book more segments (Buzz, Around Town, Buzzworthy; Ann-Marie on Ask the Educator). Paste draft below into form notes.",
           "owe_reason": "Stack another Buzz / Ask the Educator booking",
-          "quick_body": "Hi there,\n\nWe've done Buzz / Buzzworthy before \u2014 soft ask for another free animal / farm-STEM segment if there's a fit. In-person or remote both work.\n\n914-263-1311\n",
+          "quick_body": "Hi there,\n\nWe've done Buzz / Buzzworthy before \u2014 soft ask for another free animal / farm-STEM segment if there's a fit. In-person or remote both work.\n",
           "bucket": "media_collab",
           "legacy_tier": 1,
           "area": "Metro Jax \u00b7 Jacksonville"
@@ -9425,7 +9425,7 @@
           "subject": "farm / family STEM idea?",
           "why": "Civic frame not a party-rental ad. Also sbennett@wjct.org \u00b7 show 9\u201310 a.m. \u00b7 call-in 904-549-2937 during hour only.",
           "owe_reason": "NPR-style call-in pitch \u00b7 event-tied if possible",
-          "quick_body": "Hi Stacey,\n\nSoft ask for a First Coast Connect hit on Callahan farm animals + family STEM if there's a civic/education fit. Happy to keep it short.\n\n914-263-1311\n",
+          "quick_body": "Hi Stacey,\n\nSoft ask for a First Coast Connect hit on Callahan farm animals + family STEM if there's a civic/education fit. Happy to keep it short.\n",
           "bucket": "media_collab",
           "legacy_tier": 1,
           "area": "Metro Jax \u00b7 Jacksonville"
@@ -9448,7 +9448,7 @@
           "subject": "local farm / family tip?",
           "why": "Needs a newsy / timely hook (seasonal farm, public event, animals + kids). Text tip also: 904-633-8808. Do NOT treat First Coast Living Grow Your Business form as free until confirmed unpaid.",
           "owe_reason": "Newsroom tip with timely public-event hook",
-          "quick_body": "Hi tips,\n\nWe bring the animals to Jax festivals and farm mornings \u2014 soft ask for a free local tip / shout-out if there's a fit.\n\n914-263-1311\n",
+          "quick_body": "Hi tips,\n\nWe bring the animals to Jax festivals and farm mornings \u2014 soft ask for a free local tip / shout-out if there's a fit.\n",
           "bucket": "media_collab",
           "legacy_tier": 1,
           "area": "Metro Jax \u00b7 Jacksonville"
@@ -9472,7 +9472,7 @@
           "subject": "farm / family listing?",
           "why": "Submit event form + email photo/press (allow 48 business hours). Scene piece OK; not a coupon.",
           "owe_reason": "Calendar + alt-weekly press path",
-          "quick_body": "Hi press,\n\nSoft ask for a free Folio listing / shout-out for our next public farm morning if there's a fit. We bring the animals.\n\n914-263-1311\n",
+          "quick_body": "Hi press,\n\nSoft ask for a free Folio listing / shout-out for our next public farm morning if there's a fit. We bring the animals.\n",
           "bucket": "media_collab",
           "legacy_tier": 1,
           "area": "Metro Jax \u00b7 Jacksonville"
@@ -9496,7 +9496,7 @@
           "subject": "mommy-and-me farm morning?",
           "why": "Best owned mommy-group collateral. Guest post: community story NOT sales (put farm URL in bio). Calendar form linked. Free listing: jacksonvillemom.com/add-directory-listing/",
           "owe_reason": "Ann-Marie guest essay + event calendar dump",
-          "quick_body": "Hi Editors,\n\nSoft ask: guest note on a Nassau mommy-and-me farm morning (we bring the animals) if there's a fit. Happy to draft a short blurb.\n\n914-263-1311\n",
+          "quick_body": "Hi Editors,\n\nSoft ask: guest note on a Nassau mommy-and-me farm morning (we bring the animals) if there's a fit. Happy to draft a short blurb.\n",
           "bucket": "media_collab",
           "legacy_tier": 1,
           "area": "Metro Jax \u00b7 Jacksonville"
@@ -9519,7 +9519,7 @@
           "subject": "Callahan farm morning?",
           "why": "Open press-release inbox for local fun. Joe: joe@iknowjax.com \u00b7 904-345-0755. Free path only \u2014 skip paid story sponsorship.",
           "owe_reason": "CW17 local-fun press tip",
-          "quick_body": "Hi Joe,\n\nSoft ask for an I Know Jax shout on a Callahan farm morning \u2014 we bring the animals for Jax families. Happy to keep it short.\n\n914-263-1311\n",
+          "quick_body": "Hi Joe,\n\nSoft ask for an I Know Jax shout on a Callahan farm morning \u2014 we bring the animals for Jax families. Happy to keep it short.\n",
           "bucket": "media_collab",
           "legacy_tier": 1,
           "area": "Metro Jax \u00b7 Jacksonville"
@@ -9543,7 +9543,7 @@
           "subject": "First Coast farm essay?",
           "why": "Open story form + editor email. 300+ words, original, unpublished, Jacksonville-related. Unpaid byline = great mommy-group collateral.",
           "owe_reason": "Owned byline essay (Ann-Marie)",
-          "quick_body": "Hi Nathan,\n\nSoft ask for a short First Coast farm / family essay if there's a fit \u2014 we bring the animals for local events. Happy to draft.\n\n914-263-1311\n",
+          "quick_body": "Hi Nathan,\n\nSoft ask for a short First Coast farm / family essay if there's a fit \u2014 we bring the animals for local events. Happy to draft.\n",
           "bucket": "media_collab",
           "legacy_tier": 1,
           "area": "Metro Jax \u00b7 Jacksonville"
@@ -9566,7 +9566,7 @@
           "subject": "open mic / animal shout?",
           "why": "True open-mic: 10-second owner voice note via email or CMG Jax app. Two takes (Michael founder + Ann-Marie mommy-and-me).",
           "owe_reason": "Cluster-wide radio open mic",
-          "quick_body": "Hi Open,\n\nSoft ask for a Shop the 904 open-mic or shout \u2014 we bring the animals to Jax festivals. Happy to keep it quick.\n\n914-263-1311\n",
+          "quick_body": "Hi Open,\n\nSoft ask for a Shop the 904 open-mic or shout \u2014 we bring the animals to Jax festivals. Happy to keep it quick.\n",
           "bucket": "media_collab",
           "legacy_tier": 1,
           "area": "Metro Jax \u00b7 Jacksonville"
@@ -9589,7 +9589,7 @@
           "subject": "community farm tip?",
           "why": "Weekday newsletter ~30k. Civic/community frame. Perspectives pitches: jessica@jaxtoday.org. Not a business directory ad.",
           "owe_reason": "Newsletter tip / what-to-do mention",
-          "quick_body": "Hi there,\n\nSoft ask for a Jacksonville Today community tip on Callahan farm animals / family STEM if there's a fit.\n\n914-263-1311\n",
+          "quick_body": "Hi there,\n\nSoft ask for a Jacksonville Today community tip on Callahan farm animals / family STEM if there's a fit.\n",
           "bucket": "media_collab",
           "legacy_tier": 1,
           "area": "Metro Jax \u00b7 Jacksonville"
@@ -9613,7 +9613,7 @@
           "subject": "",
           "why": "Free CitySpark listing. One submit can syndicate to other local CitySpark calendars \u2014 do not double-submit. Public dated events only.",
           "owe_reason": "Calendar crawl dump",
-          "quick_body": "Event listing draft:\n\u2022 Who: Callahan mobile petting zoo (goats, bunnies, chickens)\n\u2022 What: Public farm / mommy-and-me / STEM morning (or dated trunk-or-treat)\n\u2022 Where / when: [fill date, time, address]\n\u2022 Phone: 914-263-1311\n\u2022 Photo: attach clean event photo (not a wordy flyer)",
+          "quick_body": "Event listing draft:\n\u2022 Who: Callahan mobile petting zoo (goats, bunnies, chickens)\n\u2022 What: Public farm / mommy-and-me / STEM morning (or dated trunk-or-treat)\n\u2022 Where / when: [fill date, time, address]\n\u2022 Phone: 914-263-1311\n\u2022 Photo: attach clean event photo (not a wordy flyer)\n",
           "bucket": "media_collab",
           "legacy_tier": 1,
           "area": "Metro Jax \u00b7 Jacksonville"
@@ -9637,7 +9637,7 @@
           "subject": "",
           "why": "Free camp listing + free calendar event (up to 7 days ahead per their calendar rules). Family lane.",
           "owe_reason": "Family calendar listing",
-          "quick_body": "Listing draft:\nCallahan mobile petting zoo + STEM / mommy-and-me farm mornings for First Coast kids.\nPhone: 914-263-1311\nAdd public dated events on their calendar too.",
+          "quick_body": "Listing draft:\nCallahan mobile petting zoo + STEM / mommy-and-me farm mornings for First Coast kids.\nPhone: 914-263-1311\nAdd public dated events on their calendar too.\n",
           "bucket": "media_collab",
           "legacy_tier": 1,
           "area": "Metro Jax \u00b7 Jacksonville"
@@ -9661,7 +9661,7 @@
           "subject": "Callahan farm feature?",
           "why": "Nassau hometown ink. Reader submissions form + publisher email. Makes later Jax pitches easier (\"we're local\").",
           "owe_reason": "Hometown print / web feature",
-          "quick_body": "Hi there,\n\nSoft ask for a short Nassau feature / shout \u2014 we bring the animals for local and Jax-metro families. Happy to draft a blurb.\n\n914-263-1311\n",
+          "quick_body": "Hi there,\n\nSoft ask for a short Nassau feature / shout \u2014 we bring the animals for local and Jax-metro families. Happy to draft a blurb.\n",
           "bucket": "media_collab",
           "legacy_tier": 1,
           "area": "Nassau \u00b7 Fernandina"
@@ -9684,7 +9684,7 @@
           "subject": "Callahan farm feature?",
           "why": "Published pitch email. Slow lead time. Couple/homestead / small-biz feature frame.",
           "owe_reason": "Magazine feature pitch (slow)",
-          "quick_body": "Hi Joe,\n\nSoft ask for a Magazine feature / shout on a Callahan farm family that brings the animals to Jax events. Happy to draft or sit for photos.\n\n914-263-1311\n",
+          "quick_body": "Hi Joe,\n\nSoft ask for a Magazine feature / shout on a Callahan farm family that brings the animals to Jax events. Happy to draft or sit for photos.\n",
           "bucket": "media_collab",
           "legacy_tier": 1,
           "area": "Metro Jax \u00b7 Jacksonville"
@@ -9707,7 +9707,7 @@
           "subject": "member farm morning shout?",
           "why": "Members: Info Hub Add Event + news/press to this email. Note from chambers sheet: membership previously tried / not renewed \u2014 use only as soft news tip, not a rejoin pitch. West Nassau Chamber is the Callahan org (separate card).",
           "owe_reason": "Chamber blog / member calendar",
-          "quick_body": "Hi news,\n\nSoft ask for a free chamber blog / calendar shout for our next public farm morning \u2014 we bring the animals. Happy to send a short blurb + photo.\n\n914-263-1311\n",
+          "quick_body": "Hi news,\n\nSoft ask for a free chamber blog / calendar shout for our next public farm morning \u2014 we bring the animals. Happy to send a short blurb + photo.\n",
           "bucket": "media_collab",
           "legacy_tier": 1,
           "area": "Metro Jax \u00b7 Jacksonville"
@@ -9730,7 +9730,7 @@
           "subject": "Callahan farm feature?",
           "why": "Nassau hometown paper. Editor Tracy Dishman \u00b7 904-261-3696. Local feature / letters \u2014 not a national op-ed.",
           "owe_reason": "Hometown print feature",
-          "quick_body": "Hi Tracy,\n\nSoft ask for a local feature / shout \u2014 we bring the animals for Nassau and metro Jax families. Happy to draft a short blurb.\n\n914-263-1311\n",
+          "quick_body": "Hi Tracy,\n\nSoft ask for a local feature / shout \u2014 we bring the animals for Nassau and metro Jax families. Happy to draft a short blurb.\n",
           "bucket": "media_collab",
           "legacy_tier": 1,
           "area": "Nassau \u00b7 Fernandina"
@@ -9753,7 +9753,7 @@
           "subject": "Callahan farm shout-out?",
           "why": "Callahan hometown chamber (different from Amelia Nassau Chamber). Public gmail on First-Coast-chambers.xlsx. Not a rejoin pitch \u2014 soft community shout-out / event mention.",
           "owe_reason": "West Nassau / Callahan chamber touch",
-          "quick_body": "Hi there,\n\nSoft ask for a free chamber shout or calendar mention \u2014 we bring the animals for West Nassau and metro Jax. Happy to draft a blurb.\n\n914-263-1311\n",
+          "quick_body": "Hi there,\n\nSoft ask for a free chamber shout or calendar mention \u2014 we bring the animals for West Nassau and metro Jax. Happy to draft a blurb.\n",
           "bucket": "media_collab",
           "legacy_tier": 1,
           "area": "Nassau \u00b7 Callahan"
@@ -9776,7 +9776,7 @@
           "subject": "family animal event shout?",
           "why": "Verified public info@ from First-Coast-chambers.xlsx / MARKET_TOUCH COMMUNITY_LEADERS. Soft community frame.",
           "owe_reason": "Community chamber Quick Email",
-          "quick_body": "Hi there,\n\nSoft ask for a free shout or community calendar mention \u2014 we bring the animals for Jax family events. Happy to draft a blurb.\n\n914-263-1311\n",
+          "quick_body": "Hi there,\n\nSoft ask for a free shout or community calendar mention \u2014 we bring the animals for Jax family events. Happy to draft a blurb.\n",
           "bucket": "media_collab",
           "legacy_tier": 1,
           "area": "Metro Jax \u00b7 Jacksonville"
@@ -9805,7 +9805,7 @@
           "subject": "family animal day idea?",
           "owe_reason": "Foundation / philanthropy path \u2014 soft community education frame, not a cold sales dump.",
           "why": "Verified enterprise dunk email. Philanthropy + community marketing adjacency.",
-          "quick_body": "Hi Caitlin,\n\nWe bring the animals for community / family-day activations. Soft ask if your team ever needs a simple local option \u2014 happy to share open weeks.\n\n914-263-1311\n",
+          "quick_body": "Hi Caitlin,\n\nWe bring the animals for community / family-day activations. Soft ask if your team ever needs a simple local option \u2014 happy to share open weeks.\n",
           "quick_email": true,
           "legacy_tier": 1,
           "area": "Metro Jax \u00b7 St. Vincent's"
@@ -9827,7 +9827,7 @@
           "subject": "family animal day idea?",
           "owe_reason": "Marketing seat at big local brand \u2014 community event / family day adjacency.",
           "why": "Verified marketing contact on enterprise dialer.",
-          "quick_body": "Hi Jordan,\n\nWe bring the animals for community / employee family events. Soft ask if marketing ever needs a simple local activation \u2014 happy to share open weeks.\n\n914-263-1311\n",
+          "quick_body": "Hi Jordan,\n\nWe bring the animals for community / employee family events. Soft ask if marketing ever needs a simple local activation \u2014 happy to share open weeks.\n",
           "quick_email": true,
           "legacy_tier": 1,
           "area": "Metro Jax \u00b7 Jacksonville"
@@ -9849,7 +9849,7 @@
           "subject": "family animal day idea?",
           "owe_reason": "Marketing + stakeholder engagement seat \u2014 soft community ask only.",
           "why": "Verified VP Marketing email on enterprise dialer.",
-          "quick_body": "Hi Laura,\n\nWe bring the animals for community / employee family events. Soft ask if your team ever needs a simple local activation \u2014 happy to share open weeks.\n\n914-263-1311\n",
+          "quick_body": "Hi Laura,\n\nWe bring the animals for community / employee family events. Soft ask if your team ever needs a simple local activation \u2014 happy to share open weeks.\n",
           "quick_email": true,
           "legacy_tier": 1,
           "area": "Metro Jax \u00b7 Jacksonville"
@@ -9871,7 +9871,7 @@
           "subject": "member family animal day?",
           "owe_reason": "GM seat \u2014 member family day / community event buyer.",
           "why": "Verified GM email on enterprise dialer.",
-          "quick_body": "Hi Rick,\n\nWe bring the animals for member family days. Soft ask if you ever need a simple on-property activation \u2014 happy to share open weeks.\n\n914-263-1311\n",
+          "quick_body": "Hi Rick,\n\nWe bring the animals for member family days. Soft ask if you ever need a simple on-property activation \u2014 happy to share open weeks.\n",
           "quick_email": true,
           "legacy_tier": 1,
           "area": "St. Johns \u00b7 Cimarrone"
@@ -9893,7 +9893,7 @@
           "subject": "member family animal day?",
           "owe_reason": "GM seat \u2014 member/family event adjacency.",
           "why": "Verified GM email on enterprise dialer.",
-          "quick_body": "Hi Jason,\n\nWe bring the animals for member family days. Soft ask if you ever need a simple on-property activation \u2014 happy to share open weeks.\n\n914-263-1311\n",
+          "quick_body": "Hi Jason,\n\nWe bring the animals for member family days. Soft ask if you ever need a simple on-property activation \u2014 happy to share open weeks.\n",
           "quick_email": true,
           "legacy_tier": 1,
           "area": "Nassau \u00b7 Amelia Island"
@@ -18369,5 +18369,6 @@
       "apartment": 11,
       "church": 38
     }
-  }
+  },
+  "compose_note": "Mailto bodies omit signature \u2014 Gmail auto-signature only."
 }
