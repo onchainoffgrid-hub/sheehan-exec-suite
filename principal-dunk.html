@@ -54,8 +54,8 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
 <body><div class="wrap">
 <p class="crumb"><a href="index.html">Operator</a> · <a href="growth-simple.html">Growth</a> · <a href="doer-crm.html">Doer CRM</a> → <b>Principal dunks</b></p>
 <h1>Principal dunk board</h1>
-<p class="sub">One-click Gmail / mailto — Hi {FirstName} when known. Body persona matches the seat (church ≠ school; CDD / uni / enterprise included). Done sticks on this device (v2). Compose only — you hit Send.</p>
-<div class="banner"><span class="ver" id="verstamp">Board v2.4 · Sep 25 3:30 ET</span><b>Compose only — never auto-send.</b> Skip Duval PTA / district HQ forms. Prefer a named inbox. Notes → localStorage + optional mailto to account for Talk-Deputy sync.</div>
+<p class="sub">One-click Gmail / mailto — GTM first-touch: animals + open weeks, short & link-light. Hi {First} when known; persona matches the seat. Done sticks on this device (v2). Compose only — you hit Send.</p>
+<div class="banner"><span class="ver" id="verstamp">Board v2.5 · Sep 25 3:25 ET</span><b>Compose only — never auto-send.</b> First-touch: animals + dates, no link dumps. Skip Duval PTA / district HQ forms. Prefer a named inbox. Notes → localStorage + optional mailto to account for Talk-Deputy sync.</div>
 <div class="banner" id="dedupe" style="border-color:#3dd68c66;color:#9dffc5">Scrubbing vs sent + customers…</div>
 <div class="kpis" id="kpis"></div>
 <div class="filters">
@@ -82,7 +82,7 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
   <input id="q" type="search" placeholder="Filter email / city / note…" autocomplete="off"/>
 </div>
 <div id="board"></div>
-<p class="note">Source: TAM + CDD/HOA + university peers + enterprise dialers · CAPTCHA HQ stripped · Done key <code>sheehan_principal_dunk_done_v2</code> · Notes key <code>sheehan_dunk_notes_v1</code> · Hard-refresh when ready (?v=24)</p>
+<p class="note">Source: TAM + CDD/HOA + university peers + enterprise dialers · CAPTCHA HQ stripped · Done key <code>sheehan_principal_dunk_done_v2</code> · Notes key <code>sheehan_dunk_notes_v1</code> · Hard-refresh when ready (?v=25)</p>
 </div>
 <script>
 (function(){
@@ -118,53 +118,44 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
     return 'other';
   }
   const QUICK_EMAIL_ID='quick-action-news-jax-shoutout';
-  const QUICK_EMAIL_SUBJECT='Local agritourism shout-out? — Sheehan Homestead (Callahan)';
-  const QUICK_EMAIL_BODY='Hi —\n\nI can\'t help but notice Action News Jax supports local business and local agritourism. Thank you for that.\n\nWe\'re Sheehan Homestead / Critters on Call out of Callahan — mobile petting zoo + STEM on the farm. We\'ve done hundreds of events around metro Jacksonville and we\'re in the thick of fall trunk-or-treats right now.\n\nI don\'t know exactly how shout-outs work on your end, but we\'d love a free mention if there\'s a fit — newsletter, Family Focus, community hit, whatever makes sense for you. Happy to write a short blurb or bring animals for a quick TV hit if that\'s useful.\n\nA few recent media clips if helpful:\n• First segment (Ann-Marie + me): https://dailynewsnetwork.com/2024/shows/jacksonville-buzz/the-jacksonville-buzz-with-michael-ann-marie-sheehan-of-sheehan-homestead-llc/\n• With Brian Sexton (Jags voice — he came in for it): https://buzztvnews.com/2026/shows/finding-your-frequency/finding-your-frequency-with-michael-sheehan-of-sheehan-homestead-3/\n• Ann-Marie solo: https://buzztvnews.com/2026/shows/buzzworthy-businesses/buzzworthy-businesses-with-ann-marie-sheehan-of-sheehan-homestead-llc-dba-critters-on-call/\n\nSite: https://www.sheehanhomestead.com/\nPhone/text: 914-263-1311\n\nGrateful either way — closed mouths don\'t get fed, so I figured I\'d ask nicely.\n\nCheers,\nMichael Sheehan\nSheehan Homestead / Critters on Call';
+  const QUICK_EMAIL_SUBJECT='local animal shout-out?';
+  const QUICK_EMAIL_BODY='Hi there,\n\nWe bring the animals to Jax festivals and trunk-or-treats — soft ask for a free shout-out if there\'s a fit (Family Focus, community hit, whatever works). Happy to bring animals for a quick TV hit too.\n\n914-263-1311';
   function composeBody(r){
     if(r.quick_body) return r.quick_body;
     if(r.id===QUICK_EMAIL_ID || r.quick_email) return QUICK_EMAIL_BODY;
     const fn=firstName(r.contact);
     const hi=fn?('Hi '+fn+','):'Hi there,';
     const persona=inferPersona(r);
-    let reach, ask;
+    let vibe;
     if(persona==='church'){
-      reach='Reaching out because we bring petting zoos to congregations and community events across metro Jacksonville.';
-      ask='Do you have any fall festivals, trunk-or-treat, or family event dates you want to consider?';
+      vibe='We bring the animals — goats, bunnies, chickens — for fall festivals, trunk-or-treats, and family events. Got any open weeks you\'re filling?';
     }else if(persona==='daycare'){
-      reach='Reaching out because we bring petting zoos to daycares and early childhood programs across metro Jacksonville.';
-      ask='Do you have any fall festivals or trunk-or-treat dates you want to consider?';
+      vibe='We bring the animals — goats, bunnies, chickens — for fall festivals and trunk-or-treats. Got any open weeks you\'re filling?';
     }else if(persona==='senior'){
-      reach='Reaching out because we bring petting zoos to senior communities across metro Jacksonville.';
-      ask='Do you have any fall festivals, family days, or resident event dates you want to consider?';
+      vibe='We bring the animals — goats, bunnies, chickens — for resident and family days. Got any open weeks you\'re filling?';
     }else if(persona==='cdd'){
-      reach='Reaching out because we bring petting zoos to CDD and HOA community events across metro Jacksonville.';
-      ask='Do you have any community, amenity, fall festival, or family event dates for the CDD you want to consider?';
+      vibe='We bring the animals — goats, bunnies, chickens — for community and amenity fall festivals. Got any open weeks you\'re filling?';
     }else if(persona==='university'){
-      reach='Reaching out because we bring petting zoos to campus student life and family events across the region.';
-      ask='Do you have any campus student life, family weekend, Greek, or residence life fall event dates you want to consider?';
+      vibe='We bring the animals — goats, bunnies, chickens — for campus and student-life fall events. Got any open weeks you\'re filling?';
     }else if(persona==='enterprise'){
-      reach='Reaching out because we bring petting zoos to employee family days and wellness events across metro Jacksonville.';
-      ask='Do you have any employee family day, wellness, or appreciation fall event dates you want to consider?';
+      vibe='We bring the animals — goats, bunnies, chickens — for employee family and wellness days. Got any open weeks you\'re filling?';
     }else if(persona==='other'){
-      reach='Reaching out because we bring petting zoos to community events across metro Jacksonville.';
-      ask='Do you have any fall festivals or trunk-or-treat dates you want to consider?';
+      vibe='We bring the animals — goats, bunnies, chickens — for community fall events. Got any open weeks you\'re filling?';
     }else{
-      reach='Reaching out because we bring petting zoos to dozens of schools in metro Jacksonville.';
-      ask='Do you have any fall festivals or trunk-or-treat dates you want to consider?';
+      vibe='We bring the animals — goats, bunnies, chickens — for fall festivals and trunk-or-treats. Got any open weeks you\'re filling?';
     }
-    const sig='Cheers,\n\nAnn-Marie and Michael Sheehan\n\n914-263-1311\n\nPlease like our Facebook\nhttps://www.facebook.com/profile.php?id=61556795506312\n\nSheehan Homestead\nhttp://www.sheehanhomestead.com/';
-    return hi+'\n\n'+reach+'\n\n'+ask+'\n\nHappy to share open dates or more info if useful.\n\n'+sig+'\n';
+    return hi+'\n\n'+vibe+'\n\n914-263-1311\n';
   }
   function subjectFor(r){
     if(r.subject) return r.subject;
     if(r.id===QUICK_EMAIL_ID || r.quick_email) return QUICK_EMAIL_SUBJECT;
     const persona=inferPersona(r);
-    if(persona==='church') return 'Petting zoo for fall festival / family event?';
-    if(persona==='senior') return 'Petting zoo for fall / resident event?';
-    if(persona==='cdd') return 'Petting zoo for CDD / amenity fall festival?';
-    if(persona==='university') return 'Petting zoo for campus / student life fall event?';
-    if(persona==='enterprise') return 'Petting zoo for employee family / wellness event?';
-    return 'Petting zoo for fall festival / trunk or treat?';
+    if(persona==='church') return 'festival animals?';
+    if(persona==='senior') return 'resident animal visit?';
+    if(persona==='cdd') return 'community festival animals?';
+    if(persona==='university') return 'campus animal day?';
+    if(persona==='enterprise') return 'employee family animals?';
+    return 'fall festival animals?';
   }
   function gmail(r){
     const su=encodeURIComponent(subjectFor(r));
