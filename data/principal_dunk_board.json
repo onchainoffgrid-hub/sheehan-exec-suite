@@ -1,8 +1,8 @@
 {
-  "as_of": "2026-09-25 14:54 ET",
-  "board_version": "Board v2 \u00b7 Sep 25 2:54 ET",
-  "label": "Principal dunk board v2",
-  "rule": "Compose-only mailto. Truth=Gmail SENT. Done key v2. CDD/uni/enterprise allowed. Names in Hi {FirstName}.",
+  "as_of": "2026-09-25 15:00 ET",
+  "board_version": "Board v2.1 · Sep 25 3:00 ET",
+  "label": "Principal dunk board v2.1",
+  "rule": "Compose-only mailto. Truth=Gmail SENT. Done local. CDD/uni/enterprise + Quick emails allowed. Names in Hi {FirstName} for standard templates.",
   "compose_authuser": "sheehanhomestead@gmail.com",
   "counts": {
     "principals": 3,
@@ -12,21 +12,21 @@
     "cdd_hoa": 40,
     "university": 25,
     "enterprise": 16,
-    "owe_followup": 7,
+    "owe_followup": 8,
     "local_forms_optional": 15,
-    "mailto_total": 199,
+    "mailto_total": 200,
     "by_persona": {
       "school": 35,
       "daycare": 22,
       "senior": 22,
       "church": 15,
-      "other": 24,
+      "other": 25,
       "cdd": 40,
       "university": 25,
       "enterprise": 16
     },
     "gmail_today_sent_unique": 44,
-    "untapped_vs_today_sent": 199,
+    "untapped_vs_today_sent": 200,
     "next40_by_persona": {
       "school": 6,
       "church": 5,
@@ -36,7 +36,8 @@
       "university": 5,
       "enterprise": 5,
       "other": 3
-    }
+    },
+    "quick_emails": 1
   },
   "dedupe": {
     "deduped_as_of": "2026-09-25 14:55 ET",
@@ -111,8 +112,26 @@
     {
       "id": "owe",
       "title": "Owe / Follow-up",
-      "hint": "Chase these \u2014 pipeline + warm unreplied. Open email \u2192 Send. Notes save on-device; Email note to account syncs via mailto.",
+      "hint": "Chase these — pipeline + warm unreplied. Open email → Send. Notes save on-device; Email note to account syncs via mailto.",
       "rows": [
+        {
+          "id": "owe-action-news-jax-shoutout",
+          "account": "Action News Jax (WJAX/WFOX)",
+          "contact": "Newsroom / Community",
+          "title": "Newsroom / Community",
+          "email": "news@actionnewsjax.com",
+          "phone": "",
+          "city": "Jacksonville",
+          "segment": "Media / Community",
+          "persona": "other",
+          "kind": "mailto",
+          "lane": "owe",
+          "quick_email": true,
+          "subject": "Local agritourism shout-out? — Sheehan Homestead (Callahan)",
+          "why": "Closed mouths don't get fed — opportunity-frame shout-out ask (NOT complaining about Amazing Acres). Also events@actionnewsjax.com · Family Focus / Doing Good form https://www.actionnewsjax.com/doinggood/",
+          "owe_reason": "Quick-email follow-up · ask for community shout-out fit",
+          "tier": 1
+        },
         {
           "id": "owe-tabatha-bartram-springs-pta",
           "account": "Bartram Springs Elementary PTA",
@@ -125,8 +144,8 @@
           "persona": "school",
           "kind": "mailto",
           "lane": "owe",
-          "why": "CALL_OFFERED \u2014 await Tabatha call/text reply (ToT Oct 30 + science night Nov 13). Spelling TABATHA.",
-          "owe_reason": "Pipeline CALL_OFFERED \u00b7 Michael offered call Sep 25",
+          "why": "CALL_OFFERED — await Tabatha call/text reply (ToT Oct 30 + science night Nov 13). Spelling TABATHA.",
+          "owe_reason": "Pipeline CALL_OFFERED · Michael offered call Sep 25",
           "tier": 1
         },
         {
@@ -140,8 +159,8 @@
           "persona": "senior",
           "kind": "mailto",
           "lane": "owe",
-          "why": "WAITING_MONDAY \u2014 Michael called Kate Sep 25; probably a go; she double-checks. Nov 21 10\u20131 Violet quote.",
-          "owe_reason": "Pipeline WAITING_MONDAY \u00b7 Kate answer Monday",
+          "why": "WAITING_MONDAY — Michael called Kate Sep 25; probably a go; she double-checks. Nov 21 10–1 Violet quote.",
+          "owe_reason": "Pipeline WAITING_MONDAY · Kate answer Monday",
           "website": "brooks-click.html",
           "tier": 1
         },
@@ -156,8 +175,8 @@
           "persona": "senior",
           "kind": "mailto",
           "lane": "owe",
-          "why": "Warm reply \u2014 fall festival again; Kristi now Life Enrichment. Confirm date + send hold.",
-          "owe_reason": "Warm unreplied dunk \u00b7 confirm fall fest date",
+          "why": "Warm reply — fall festival again; Kristi now Life Enrichment. Confirm date + send hold.",
+          "owe_reason": "Warm unreplied dunk · confirm fall fest date",
           "tier": 1
         },
         {
@@ -171,8 +190,8 @@
           "persona": "senior",
           "kind": "mailto",
           "lane": "owe",
-          "why": "Overdue follow-up \u2014 life enrichment touch owed.",
-          "owe_reason": "Follow-up owed \u00b7 Starling life enrichment",
+          "why": "Overdue follow-up — life enrichment touch owed.",
+          "owe_reason": "Follow-up owed · Starling life enrichment",
           "tier": 1
         },
         {
@@ -186,8 +205,8 @@
           "persona": "enterprise",
           "kind": "mailto",
           "lane": "owe",
-          "why": "Qualified reply pipeline \u2014 send petting zoo pricing / nurture.",
-          "owe_reason": "Warm lead \u00b7 send pricing",
+          "why": "Qualified reply pipeline — send petting zoo pricing / nurture.",
+          "owe_reason": "Warm lead · send pricing",
           "tier": 1
         },
         {
@@ -201,8 +220,8 @@
           "persona": "senior",
           "kind": "mailto",
           "lane": "owe",
-          "why": "Soft yes \u2014 push date + soft assume-the-sale.",
-          "owe_reason": "Soft yes \u00b7 push date",
+          "why": "Soft yes — push date + soft assume-the-sale.",
+          "owe_reason": "Soft yes · push date",
           "tier": 1
         },
         {
@@ -216,8 +235,8 @@
           "persona": "school",
           "kind": "mailto",
           "lane": "owe",
-          "why": "WAITING_YES on Oct 2 meet \u2014 push date / soft assume-the-sale.",
-          "owe_reason": "Pipeline soft_yes \u00b7 push date",
+          "why": "WAITING_YES on Oct 2 meet — push date / soft assume-the-sale.",
+          "owe_reason": "Pipeline soft_yes · push date",
           "tier": 1
         }
       ]
@@ -261,7 +280,7 @@
           "linkedin": "",
           "form_url": "",
           "kind": "mailto",
-          "why": "Public 2026\u201327 PTA board + president email \u2014 strong Duval festival ICP"
+          "why": "Public 2026–27 PTA board + president email — strong Duval festival ICP"
         },
         {
           "id": "atlanticcoasthsptsa-gmail-com-atlantic-coast-high-ptsa-ptsa-president",
@@ -808,7 +827,7 @@
           "persona": "enterprise",
           "website": "",
           "kind": "mailto",
-          "why": "source=Jax_Corporate_BDR_CallList.csv + AIR resident-feedback. Prior resident-relations background. Portfolio events booker. | Lifestyle/resident events \u2014 Class",
+          "why": "source=Jax_Corporate_BDR_CallList.csv + AIR resident-feedback. Prior resident-relations background. Portfolio events booker. | Lifestyle/resident events — Class",
           "lane": "enterprise",
           "tier": 1,
           "id": "eva-taraseviciute-aircommunities-com-air-communities-jacksonville-region-regiona"
@@ -824,7 +843,7 @@
           "persona": "enterprise",
           "website": "",
           "kind": "mailto",
-          "why": "source=enrichment.csv. Named Greystar contact published. Class-A Silverleaf lifestyle community \u2014 pitch resident fall fest / ToT / holiday appreciation. | Lifes",
+          "why": "source=enrichment.csv. Named Greystar contact published. Class-A Silverleaf lifestyle community — pitch resident fall fest / ToT / holiday appreciation. | Lifes",
           "lane": "enterprise",
           "tier": 1,
           "id": "sherry-naydeck-greystar-com-aspire-at-silverleaf-greystar-leasing-manager"
@@ -840,7 +859,7 @@
           "persona": "enterprise",
           "website": "",
           "kind": "mailto",
-          "why": "source=cimarronegolf.com contact. Public course + outings; ask junior/family event calendar. | Golf/country club activities \u2014 kids camp, Family Night, member ev",
+          "why": "source=cimarronegolf.com contact. Public course + outings; ask junior/family event calendar. | Golf/country club activities — kids camp, Family Night, member ev",
           "lane": "enterprise",
           "tier": 1,
           "id": "rshoemaker-cimarronegolf-com-cimarrone-golf-club-general-manager"
@@ -856,7 +875,7 @@
           "persona": "enterprise",
           "website": "",
           "kind": "mailto",
-          "why": "[named programmer/HR + phone; phone+email; known appreciation/events evidence; HR/events authority; HR appreciation wallet] HR proper $1200\u2013$3000 | CALL FIRST \u2014",
+          "why": "[named programmer/HR + phone; phone+email; known appreciation/events evidence; HR/events authority; HR appreciation wallet] HR proper $1200–$3000 | CALL FIRST —",
           "lane": "enterprise",
           "tier": 1,
           "id": "josie-curtis-patriotrail-com-patriot-rail-vp-people-strategy"
@@ -914,6 +933,32 @@
           "form_url": "",
           "kind": "mailto",
           "why": "Org whitespace DM email"
+        }
+      ]
+    },
+    {
+      "id": "quick_emails",
+      "title": "Quick emails",
+      "hint": "Short, high-leverage asks. Open email → Send. Compose only.",
+      "rows": [
+        {
+          "id": "quick-action-news-jax-shoutout",
+          "account": "Action News Jax (WJAX/WFOX)",
+          "contact": "Newsroom / Community",
+          "title": "Newsroom / Community",
+          "email": "news@actionnewsjax.com",
+          "phone": "",
+          "city": "Jacksonville",
+          "segment": "Media / Community",
+          "persona": "other",
+          "kind": "mailto",
+          "lane": "quick_emails",
+          "quick_email": true,
+          "subject": "Local agritourism shout-out? — Sheehan Homestead (Callahan)",
+          "why": "Closed mouths don't get fed — opportunity-frame shout-out ask (NOT complaining about Amazing Acres). Also events@actionnewsjax.com · Family Focus / Doing Good form https://www.actionnewsjax.com/doinggood/",
+          "owe_reason": "Quick-email follow-up · ask for community shout-out fit",
+          "quick_body": "Hi —\n\nI can't help but notice Action News Jax supports local business and local agritourism. Thank you for that.\n\nWe're Sheehan Homestead / Critters on Call out of Callahan — mobile petting zoo + STEM on the farm. We've done hundreds of events around metro Jacksonville and we're in the thick of fall trunk-or-treats right now.\n\nI don't know exactly how shout-outs work on your end, but we'd love a free mention if there's a fit — newsletter, Family Focus, community hit, whatever makes sense for you. Happy to write a short blurb or bring animals for a quick TV hit if that's useful.\n\nA few recent media clips if helpful:\n• First segment (Ann-Marie + me): https://dailynewsnetwork.com/2024/shows/jacksonville-buzz/the-jacksonville-buzz-with-michael-ann-marie-sheehan-of-sheehan-homestead-llc/\n• With Brian Sexton (Jags voice — he came in for it): https://buzztvnews.com/2026/shows/finding-your-frequency/finding-your-frequency-with-michael-sheehan-of-sheehan-homestead-3/\n• Ann-Marie solo: https://buzztvnews.com/2026/shows/buzzworthy-businesses/buzzworthy-businesses-with-ann-marie-sheehan-of-sheehan-homestead-llc-dba-critters-on-call/\n\nSite: https://www.sheehanhomestead.com/\nPhone/text: 914-263-1311\n\nGrateful either way — closed mouths don't get fed, so I figured I'd ask nicely.\n\nCheers,\nMichael Sheehan\nSheehan Homestead / Critters on Call",
+          "tier": 1
         }
       ]
     },
@@ -1705,7 +1750,7 @@
         },
         {
           "id": "realsampalli-gmail-com-the-goddard-school-of-st-augustine-count-owner",
-          "account": "The Goddard School of St. Augustine \u2014 County Road 210",
+          "account": "The Goddard School of St. Augustine — County Road 210",
           "contact": "Sam Palli",
           "title": "Owner",
           "email": "realsampalli@gmail.com",
@@ -1723,7 +1768,7 @@
         },
         {
           "id": "jacksonvillemandarin-tlechildcare-com-the-learning-experience-jacksonville-man-director-program-director",
-          "account": "The Learning Experience \u2014 Jacksonville Mandarin",
+          "account": "The Learning Experience — Jacksonville Mandarin",
           "contact": "Cynthia Marrero",
           "title": "Director / Program Director",
           "email": "jacksonvillemandarin@tlechildcare.com",
@@ -1813,7 +1858,7 @@
         },
         {
           "id": "jacksonville-tlechildcare-com-the-learning-experience-jacksonville-sou-center-director",
-          "account": "The Learning Experience \u2014 Jacksonville Southside",
+          "account": "The Learning Experience — Jacksonville Southside",
           "contact": "Mary",
           "title": "Center Director",
           "email": "jacksonville@tlechildcare.com",
@@ -1831,7 +1876,7 @@
         },
         {
           "id": "nocatee-tlechildcare-com-the-learning-experience-nocatee-assistant-director-curriculum-",
-          "account": "The Learning Experience \u2014 Nocatee",
+          "account": "The Learning Experience — Nocatee",
           "contact": "Loran",
           "title": "Assistant Director / Curriculum Coordinator",
           "email": "nocatee@tlechildcare.com",
@@ -1849,7 +1894,7 @@
         },
         {
           "id": "stjohns-tlechildcare-com-the-learning-experience-st-johns-assistant-director",
-          "account": "The Learning Experience \u2014 St. Johns",
+          "account": "The Learning Experience — St. Johns",
           "contact": "Ashley",
           "title": "Assistant Director",
           "email": "stjohns@tlechildcare.com",
@@ -2065,7 +2110,7 @@
         },
         {
           "id": "hendon2765-gmail-com-fields-of-art-christian-academy-preschoo-x",
-          "account": "Fields of Art Christian Academy \u2014 Preschool",
+          "account": "Fields of Art Christian Academy — Preschool",
           "contact": "",
           "title": "Center Director",
           "email": "hendon2765@gmail.com",
@@ -2079,7 +2124,7 @@
           "linkedin": "",
           "form_url": "",
           "kind": "mailto",
-          "why": "Public preschool contact email \u00b7 Clay County catchment"
+          "why": "Public preschool contact email · Clay County catchment"
         },
         {
           "id": "lakewoodumpreschool-gmail-com-lakewood-preschool-lakewood-church-x",
@@ -2169,7 +2214,7 @@
           "linkedin": "",
           "form_url": "",
           "kind": "mailto",
-          "why": "Public PPP@cfcjax.com on preschool ministry page \u00b7 2026-27 open"
+          "why": "Public PPP@cfcjax.com on preschool ministry page · 2026-27 open"
         },
         {
           "id": "admin-riverchristian-church-river-christian-church-kids-pastor",
@@ -2374,7 +2419,7 @@
           "linkedin": "",
           "form_url": "",
           "kind": "mailto",
-          "why": "Public 2026\u201327 PTA board + president email \u2014 strong Duval festival ICP"
+          "why": "Public 2026–27 PTA board + president email — strong Duval festival ICP"
         },
         {
           "id": "atlanticcoasthsptsa-gmail-com-atlantic-coast-high-ptsa-ptsa-president",
@@ -2500,7 +2545,7 @@
           "linkedin": "",
           "form_url": "",
           "kind": "mailto",
-          "why": "Full public PTO board emails \u2014 St. Johns blue-chip elementary festival/sponsorship buyer"
+          "why": "Full public PTO board emails — St. Johns blue-chip elementary festival/sponsorship buyer"
         },
         {
           "id": "treasurer-jcepto-gmail-com-julington-creek-elementary-pto-treasurer",
@@ -2518,7 +2563,7 @@
           "linkedin": "",
           "form_url": "",
           "kind": "mailto",
-          "why": "Full public PTO board emails \u2014 St. Johns blue-chip elementary festival/sponsorship buyer"
+          "why": "Full public PTO board emails — St. Johns blue-chip elementary festival/sponsorship buyer"
         },
         {
           "id": "secretary-jcepto-gmail-com-julington-creek-elementary-pto-secretary",
@@ -2536,7 +2581,7 @@
           "linkedin": "",
           "form_url": "",
           "kind": "mailto",
-          "why": "Full public PTO board emails \u2014 St. Johns blue-chip elementary festival/sponsorship buyer"
+          "why": "Full public PTO board emails — St. Johns blue-chip elementary festival/sponsorship buyer"
         },
         {
           "id": "katherineadesja-gmail-com-love-grove-elementary-pta-pta-president",
@@ -2752,7 +2797,7 @@
           "linkedin": "",
           "form_url": "",
           "kind": "mailto",
-          "why": "Public PTO + business-partner liaison emails \u2014 sponsorship-ready"
+          "why": "Public PTO + business-partner liaison emails — sponsorship-ready"
         },
         {
           "id": "chimneylakespta-gmail-com-chimney-lakes-elementary-pta-pta-president",
@@ -2806,7 +2851,7 @@
           "linkedin": "",
           "form_url": "",
           "kind": "mailto",
-          "why": "Public PTO president email \u2014 fall festival / grandparents-day buyer lane \u00b7 OUTREACH 2026-09-23 \u00b7 emailed \u00b7 not an open dunk \u00b7 recent-outreach.html"
+          "why": "Public PTO president email — fall festival / grandparents-day buyer lane · OUTREACH 2026-09-23 · emailed · not an open dunk · recent-outreach.html"
         },
         {
           "id": "kteptamembers-gmail-com-kernan-trail-elementary-pta-vp-membership",
@@ -2878,7 +2923,7 @@
           "linkedin": "",
           "form_url": "",
           "kind": "mailto",
-          "why": "Public PTO email \u00b7 St. Johns \u00b7 events + corporate sponsorships"
+          "why": "Public PTO email · St. Johns · events + corporate sponsorships"
         },
         {
           "id": "pvpvrawlingspto-gmail-com-pvpv-rawlings-elementary-pto-pto-president",
@@ -2975,7 +3020,7 @@
     {
       "id": "cdd",
       "title": "CDD / HOA amenity",
-      "hint": "Community / amenity / fall festival \u2014 allow list.",
+      "hint": "Community / amenity / fall festival — allow list.",
       "rows": [
         {
           "account": "Aberdeen CDD",
@@ -3084,7 +3129,7 @@
           "persona": "cdd",
           "website": "https://bainebridgecdd.vglobaltech.com/",
           "kind": "mailto",
-          "why": "Rizzetta. First Coast CMS lists Bainbridge Estates for amenity \u2014 service@firstcoastcms.com 904-537-9034. Parks/rec special powers. North Jax. CDD.",
+          "why": "Rizzetta. First Coast CMS lists Bainbridge Estates for amenity — service@firstcoastcms.com 904-537-9034. Parks/rec special powers. North Jax. CDD.",
           "lane": "cdd",
           "tier": 1,
           "id": "bpfuhl-rizzetta-com-bainebridge-cdd-district-manager"
@@ -3186,7 +3231,7 @@
           "id": "carvalhov-pfm-com-cedar-pointe-cdd-district-manager"
         },
         {
-          "account": "City of Jacksonville Parks \u2014 Recreation and Community Programming",
+          "account": "City of Jacksonville Parks — Recreation and Community Programming",
           "contact": "Dan Piastuck",
           "title": "Chief of Recreation and Community Programming",
           "email": "dpiastuck@coj.net",
@@ -3212,7 +3257,7 @@
           "persona": "cdd",
           "website": "https://www.jacksonville.gov/departments/parks-and-recreation",
           "kind": "mailto",
-          "why": "Won biz then risk rained on parade \u2014 COJ procurement/risk. Include for awareness; not Fast.",
+          "why": "Won biz then risk rained on parade — COJ procurement/risk. Include for awareness; not Fast.",
           "lane": "cdd",
           "tier": 1,
           "id": "djoseph-coj-net-city-of-jacksonville-parks-recreation-and-community-services-dir"
@@ -3468,7 +3513,7 @@
           "persona": "cdd",
           "website": "https://www.thecrossingsatflemingislandcdd.com/",
           "kind": "mailto",
-          "why": "On-site DM/Ops Steve Andersen 2105 Harbor Lake Dr. Eagle Harbor clubhouse/golf \u2014 large family event capability. CDD.",
+          "why": "On-site DM/Ops Steve Andersen 2105 Harbor Lake Dr. Eagle Harbor clubhouse/golf — large family event capability. CDD.",
           "lane": "cdd",
           "tier": 1,
           "id": "sandersen-eagleharborcdd-com-the-crossings-at-fleming-island-cdd-eagle-harbor-di"
@@ -3891,7 +3936,7 @@
           "persona": "university",
           "website": "",
           "kind": "mailto",
-          "why": "campus=St. Augustine Campus | St. Augustine Kelsey-type. Coordinator of Student OnBoarding, Engagement & Success \u2014 Viking Center. Events + budget + speed: same ",
+          "why": "campus=St. Augustine Campus | St. Augustine Kelsey-type. Coordinator of Student OnBoarding, Engagement & Success — Viking Center. Events + budget + speed: same ",
           "lane": "university",
           "tier": 1,
           "id": "rosemoise-sjrstate-edu-st-johns-river-state-college-coordinator-of-student-onboa"
@@ -4058,7 +4103,7 @@
           "persona": "enterprise",
           "website": "",
           "kind": "mailto",
-          "why": "source=Jax_Corporate_BDR_CallList.csv + AIR resident-feedback. Prior resident-relations background. Portfolio events booker. | Lifestyle/resident events \u2014 Class",
+          "why": "source=Jax_Corporate_BDR_CallList.csv + AIR resident-feedback. Prior resident-relations background. Portfolio events booker. | Lifestyle/resident events — Class",
           "lane": "enterprise",
           "tier": 1,
           "id": "eva-taraseviciute-aircommunities-com-air-communities-jacksonville-region-regiona"
@@ -4074,7 +4119,7 @@
           "persona": "enterprise",
           "website": "",
           "kind": "mailto",
-          "why": "source=enrichment.csv. Named Greystar contact published. Class-A Silverleaf lifestyle community \u2014 pitch resident fall fest / ToT / holiday appreciation. | Lifes",
+          "why": "source=enrichment.csv. Named Greystar contact published. Class-A Silverleaf lifestyle community — pitch resident fall fest / ToT / holiday appreciation. | Lifes",
           "lane": "enterprise",
           "tier": 1,
           "id": "sherry-naydeck-greystar-com-aspire-at-silverleaf-greystar-leasing-manager"
@@ -4090,7 +4135,7 @@
           "persona": "enterprise",
           "website": "",
           "kind": "mailto",
-          "why": "source=cimarronegolf.com contact. Public course + outings; ask junior/family event calendar. | Golf/country club activities \u2014 kids camp, Family Night, member ev",
+          "why": "source=cimarronegolf.com contact. Public course + outings; ask junior/family event calendar. | Golf/country club activities — kids camp, Family Night, member ev",
           "lane": "enterprise",
           "tier": 1,
           "id": "rshoemaker-cimarronegolf-com-cimarrone-golf-club-general-manager"
@@ -4106,7 +4151,7 @@
           "persona": "enterprise",
           "website": "",
           "kind": "mailto",
-          "why": "[named programmer/HR + phone; phone+email; known appreciation/events evidence; HR/events authority; HR appreciation wallet] HR proper $1200\u2013$3000 | CALL FIRST \u2014",
+          "why": "[named programmer/HR + phone; phone+email; known appreciation/events evidence; HR/events authority; HR appreciation wallet] HR proper $1200–$3000 | CALL FIRST —",
           "lane": "enterprise",
           "tier": 1,
           "id": "josie-curtis-patriotrail-com-patriot-rail-vp-people-strategy"
@@ -4138,7 +4183,7 @@
           "persona": "enterprise",
           "website": "",
           "kind": "mailto",
-          "why": "source=golfclubofamelia.com. GM escalate for Sheridan Regan multi-date. | Golf/country club activities \u2014 kids camp, Family Night, member events \u00b7 $1.5\u20133k path. ",
+          "why": "source=golfclubofamelia.com. GM escalate for Sheridan Regan multi-date. | Golf/country club activities — kids camp, Family Night, member events · $1.5–3k path. ",
           "lane": "enterprise",
           "tier": 1,
           "id": "jhill-concertgolfclubs-com-the-golf-club-of-amelia-island-concert-golf-general-m"
@@ -4170,7 +4215,7 @@
           "persona": "enterprise",
           "website": "",
           "kind": "mailto",
-          "why": "[named programmer/HR + phone; phone+email; known appreciation/events evidence; HR appreciation wallet] HR proper $1200\u2013$3000 | BEST CU COMMUNITY BOOKER. LinkedI",
+          "why": "[named programmer/HR + phone; phone+email; known appreciation/events evidence; HR appreciation wallet] HR proper $1200–$3000 | BEST CU COMMUNITY BOOKER. LinkedI",
           "lane": "enterprise",
           "tier": 2,
           "id": "communityfirst-c1cufl-org-community-first-credit-union-manager-of-community-affa"
@@ -4186,7 +4231,7 @@
           "persona": "enterprise",
           "website": "",
           "kind": "mailto",
-          "why": "[named programmer/HR + phone; phone+email; likely programmer/HR title; HR appreciation wallet] HR proper $1200\u2013$3000 | CALL FIRST. LinkedIn + company announceme",
+          "why": "[named programmer/HR + phone; phone+email; likely programmer/HR title; HR appreciation wallet] HR proper $1200–$3000 | CALL FIRST. LinkedIn + company announceme",
           "lane": "enterprise",
           "tier": 2,
           "id": "talent-dreamfindershomes-com-dream-finders-homes-head-of-human-resources"
@@ -4202,7 +4247,7 @@
           "persona": "enterprise",
           "website": "",
           "kind": "mailto",
-          "why": "[named contact + phone; phone+email; HR appreciation wallet] HR proper $1200\u2013$3000 | LinkedIn: Marketing Strategist Duval Ford Jun 2025-present (content & commu",
+          "why": "[named contact + phone; phone+email; HR appreciation wallet] HR proper $1200–$3000 | LinkedIn: Marketing Strategist Duval Ford Jun 2025-present (content & commu",
           "lane": "enterprise",
           "tier": 2,
           "id": "jordan-massenburg-duvalmotor-com-duval-ford-marketing-strategist"
@@ -4250,7 +4295,7 @@
           "persona": "enterprise",
           "website": "",
           "kind": "mailto",
-          "why": "RED TAPE / Later. [named programmer/HR + phone; phone+email; known appreciation/events evidence; red tape (hospital/insurance/defense); Florida Blue/hospital \u2192 ",
+          "why": "RED TAPE / Later. [named programmer/HR + phone; phone+email; known appreciation/events evidence; red tape (hospital/insurance/defense); Florida Blue/hospital → ",
           "lane": "enterprise",
           "tier": 2,
           "id": "flaevents-mayo-edu-mayo-clinic-in-florida-hr-events-manager"
@@ -4266,7 +4311,7 @@
           "persona": "enterprise",
           "website": "",
           "kind": "mailto",
-          "why": "[named contact + phone; phone+email; likely programmer/HR title; HR appreciation wallet] CALL FIRST \u2014 published email AND direct 904. Official contact page: Lau",
+          "why": "[named contact + phone; phone+email; likely programmer/HR title; HR appreciation wallet] CALL FIRST — published email AND direct 904. Official contact page: Lau",
           "lane": "enterprise",
           "tier": 2,
           "id": "laura-mellem-patriotrail-com-patriot-rail-vp-marketing-communications-stakeholde"
@@ -4346,7 +4391,7 @@
           "linkedin": "",
           "form_url": "",
           "kind": "mailto",
-          "why": "Sister campus to Valley Ridge buyer \u2014 public campus email"
+          "why": "Sister campus to Valley Ridge buyer — public campus email"
         },
         {
           "id": "petra-thediscoveryschool-org-the-discovery-school-x",
@@ -4382,7 +4427,7 @@
           "linkedin": "",
           "form_url": "",
           "kind": "mailto",
-          "why": "Blue-chip independent school \u2014 public ECE / campus rentals contact"
+          "why": "Blue-chip independent school — public ECE / campus rentals contact"
         }
       ]
     },
@@ -4393,7 +4438,7 @@
       "rows": [
         {
           "id": "form-6473245815",
-          "account": "Bright Horizons \u2014 Memorial Children's Center (Harvin Rd)",
+          "account": "Bright Horizons — Memorial Children's Center (Harvin Rd)",
           "contact": "",
           "title": "Site contact form",
           "email": "",
@@ -4406,7 +4451,7 @@
           "linkedin": "https://www.linkedin.com/company/bright-horizons",
           "form_url": "https://www.brighthorizons.com/daycare-centers/fl/jacksonville/6046-harvin-road-32216",
           "kind": "local_form",
-          "why": "Local site form only \u2014 skip if salesy or corporate HQ",
+          "why": "Local site form only — skip if salesy or corporate HQ",
           "persona": "daycare"
         },
         {
@@ -4424,7 +4469,7 @@
           "linkedin": "",
           "form_url": "https://kiddieacademy.com/locations/jacksonville-fl/schedule-a-tour/",
           "kind": "local_form",
-          "why": "Local site form only \u2014 skip if salesy or corporate HQ",
+          "why": "Local site form only — skip if salesy or corporate HQ",
           "persona": "daycare"
         },
         {
@@ -4442,12 +4487,12 @@
           "linkedin": "",
           "form_url": "https://kiddieacademy.com/academies/st-johns/about-us/",
           "kind": "local_form",
-          "why": "Local site form only \u2014 skip if salesy or corporate HQ",
+          "why": "Local site form only — skip if salesy or corporate HQ",
           "persona": "daycare"
         },
         {
           "id": "form-5025945655",
-          "account": "The Goddard School Jacksonville \u2014 Baymeadows",
+          "account": "The Goddard School Jacksonville — Baymeadows",
           "contact": "",
           "title": "Site contact form",
           "email": "",
@@ -4460,12 +4505,12 @@
           "linkedin": "",
           "form_url": "https://www.goddardschool.com/schools/fl/jacksonville/jacksonville-baymeadows/our-school/goddard-form",
           "kind": "local_form",
-          "why": "Local site form only \u2014 skip if salesy or corporate HQ",
+          "why": "Local site form only — skip if salesy or corporate HQ",
           "persona": "daycare"
         },
         {
           "id": "form-2177992865",
-          "account": "The Goddard School Orange Park \u2014 OakLeaf",
+          "account": "The Goddard School Orange Park — OakLeaf",
           "contact": "",
           "title": "Site contact form",
           "email": "",
@@ -4478,7 +4523,7 @@
           "linkedin": "",
           "form_url": "https://www.goddardschool.com/schools/fl/orange-park/orange-park/our-school/goddard-form",
           "kind": "local_form",
-          "why": "Local site form only \u2014 skip if salesy or corporate HQ",
+          "why": "Local site form only — skip if salesy or corporate HQ",
           "persona": "daycare"
         },
         {
@@ -4496,12 +4541,12 @@
           "linkedin": "",
           "form_url": "https://www.goddardschool.com/schools/fl/st-augustine/silverleaf/our-school/goddard-form",
           "kind": "local_form",
-          "why": "Local site form only \u2014 skip if salesy or corporate HQ",
+          "why": "Local site form only — skip if salesy or corporate HQ",
           "persona": "daycare"
         },
         {
           "id": "form-1735044964",
-          "account": "The Goddard School St. Augustine \u2014 CR 210",
+          "account": "The Goddard School St. Augustine — CR 210",
           "contact": "",
           "title": "Site contact form",
           "email": "",
@@ -4514,12 +4559,12 @@
           "linkedin": "",
           "form_url": "https://www.goddardschool.com/schools/fl/st-augustine/st-augustine-county-road-210/our-school/goddard-form",
           "kind": "local_form",
-          "why": "Local site form only \u2014 skip if salesy or corporate HQ",
+          "why": "Local site form only — skip if salesy or corporate HQ",
           "persona": "daycare"
         },
         {
           "id": "form-7639561702",
-          "account": "The Learning Experience \u2014 Flagler Center",
+          "account": "The Learning Experience — Flagler Center",
           "contact": "",
           "title": "Site contact form",
           "email": "",
@@ -4532,12 +4577,12 @@
           "linkedin": "",
           "form_url": "https://thelearningexperience.com/centers/flagler-center/",
           "kind": "local_form",
-          "why": "Local site form only \u2014 skip if salesy or corporate HQ",
+          "why": "Local site form only — skip if salesy or corporate HQ",
           "persona": "daycare"
         },
         {
           "id": "form-906374711",
-          "account": "The Learning Experience \u2014 Mandarin",
+          "account": "The Learning Experience — Mandarin",
           "contact": "",
           "title": "Site contact form",
           "email": "",
@@ -4550,12 +4595,12 @@
           "linkedin": "",
           "form_url": "https://thelearningexperience.com/centers/jacksonville-mandarin/",
           "kind": "local_form",
-          "why": "Local site form only \u2014 skip if salesy or corporate HQ",
+          "why": "Local site form only — skip if salesy or corporate HQ",
           "persona": "daycare"
         },
         {
           "id": "form-9956707348",
-          "account": "The Learning Experience \u2014 Southside",
+          "account": "The Learning Experience — Southside",
           "contact": "",
           "title": "Site contact form",
           "email": "",
@@ -4568,7 +4613,7 @@
           "linkedin": "",
           "form_url": "https://thelearningexperience.com/centers/jacksonville-southside/",
           "kind": "local_form",
-          "why": "Local site form only \u2014 skip if salesy or corporate HQ",
+          "why": "Local site form only — skip if salesy or corporate HQ",
           "persona": "daycare"
         },
         {
@@ -4586,7 +4631,7 @@
           "linkedin": "",
           "form_url": "http://www.duvalschools.org/abe",
           "kind": "local_form",
-          "why": "Local site form only \u2014 skip if salesy or corporate HQ",
+          "why": "Local site form only — skip if salesy or corporate HQ",
           "persona": "school"
         },
         {
@@ -4604,7 +4649,7 @@
           "linkedin": "",
           "form_url": "https://www.blessedtrinitycatholicschool.org/contact",
           "kind": "local_form",
-          "why": "Local site form only \u2014 skip if salesy or corporate HQ",
+          "why": "Local site form only — skip if salesy or corporate HQ",
           "persona": "school"
         },
         {
@@ -4622,7 +4667,7 @@
           "linkedin": "",
           "form_url": "https://www.nassau.k12.fl.us/",
           "kind": "local_form",
-          "why": "Local site form only \u2014 skip if salesy or corporate HQ",
+          "why": "Local site form only — skip if salesy or corporate HQ",
           "persona": "school"
         },
         {
@@ -4640,7 +4685,7 @@
           "linkedin": "",
           "form_url": "https://www.thecathedralparishschool.org/contact",
           "kind": "local_form",
-          "why": "Local site form only \u2014 skip if salesy or corporate HQ",
+          "why": "Local site form only — skip if salesy or corporate HQ",
           "persona": "school"
         },
         {
@@ -4658,7 +4703,7 @@
           "linkedin": "",
           "form_url": "http://www.duvalschools.org/cle",
           "kind": "local_form",
-          "why": "Local site form only \u2014 skip if salesy or corporate HQ",
+          "why": "Local site form only — skip if salesy or corporate HQ",
           "persona": "school"
         }
       ]
