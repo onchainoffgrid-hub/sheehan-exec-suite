@@ -1,66 +1,18 @@
 {
-  "as_of": "2026-09-25 4:15 PM ET",
-  "board_version": "Board v2.8 \u00b7 Sep 25 4:15 ET",
-  "v28": {
-    "rcsa_campuses": 6,
-    "rcsa_rows": 13,
-    "fancy_principals": 18,
-    "principals_total": 32,
-    "consumer": {
-      "customers": 115,
-      "warm": 60,
-      "likely_reviewed": 0,
-      "no_review": 0,
-      "unknown": 175,
-      "scrape_ok": false
-    },
-    "google_reviewers_file": "data/google_reviewers.json"
+  "as_of": "2026-09-25 4:20 PM ET",
+  "board_version": "Board v2.8 \u00b7 Sep 25 4:20 ET",
+  "lanes": {
+    "prior_mobile": 24,
+    "summer_cohort": 8,
+    "booked_no_review": 81,
+    "unknown_past": 2,
+    "warm_inbound": 60
   },
-  "counts": {
-    "principals": 32,
-    "directors": 89,
-    "pto_pta_presidents": 35,
-    "other_decision_makers": 2,
-    "cdd_hoa": 57,
-    "university": 25,
-    "enterprise": 16,
-    "owe_followup": 12,
-    "local_forms_optional": 19,
-    "mailto_total": 549,
-    "by_persona": {
-      "senior": 35,
-      "other": 49,
-      "school": 105,
-      "enterprise": 28,
-      "consumer": 175,
-      "cdd": 92,
-      "church": 20,
-      "daycare": 37,
-      "university": 30
-    },
-    "gmail_today_sent_unique": 44,
-    "untapped_vs_today_sent": 200,
-    "next40_by_persona": {
-      "school": 6,
-      "church": 5,
-      "daycare": 5,
-      "senior": 5,
-      "cdd": 6,
-      "university": 5,
-      "enterprise": 5,
-      "other": 3
-    },
-    "quick_emails": 1,
-    "premium": 29,
-    "premium_map_gaps": 5,
-    "rcsa": 13,
-    "consumer": 175,
-    "consumer_customers": 115,
-    "consumer_warm": 60,
-    "consumer_likely_reviewed": 0,
-    "consumer_no_review": 0,
-    "consumer_unknown": 175,
-    "fancy": 36,
-    "rcsa_cards": 14
-  }
+  "north_star": {
+    "money": 94,
+    "barter": 81
+  },
+  "customers": 115,
+  "warm": 60,
+  "one_touch_indexed": 87
 }
