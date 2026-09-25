@@ -55,13 +55,14 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
 <p class="crumb"><a href="index.html">Operator</a> · <a href="growth-simple.html">Growth</a> · <a href="doer-crm.html">Doer CRM</a> → <b>Principal dunks</b></p>
 <h1>Principal dunk board</h1>
 <p class="sub">One-click Gmail / mailto — Hi {FirstName} when known. Body persona matches the seat (church ≠ school; CDD / uni / enterprise included). Done sticks on this device (v2). Compose only — you hit Send.</p>
-<div class="banner"><span class="ver" id="verstamp">Board v2.3 · Sep 25 3:20 ET</span><b>Compose only — never auto-send.</b> Skip Duval PTA / district HQ forms. Prefer a named inbox. Notes → localStorage + optional mailto to account for Talk-Deputy sync.</div>
+<div class="banner"><span class="ver" id="verstamp">Board v2.4 · Sep 25 3:30 ET</span><b>Compose only — never auto-send.</b> Skip Duval PTA / district HQ forms. Prefer a named inbox. Notes → localStorage + optional mailto to account for Talk-Deputy sync.</div>
 <div class="banner" id="dedupe" style="border-color:#3dd68c66;color:#9dffc5">Scrubbing vs sent + customers…</div>
 <div class="kpis" id="kpis"></div>
 <div class="filters">
-  <button type="button" class="owe-btn" data-sec="owe">Owe / Follow-up</button>
+  <button type="button" class="owe-btn" data-sec="owe">Owe / Slam</button>
   <button type="button" class="on" data-sec="next40">Next 40 mix</button>
-  <button type="button" data-sec="quick_emails">Quick emails</button>
+  <button type="button" data-sec="quick_emails">Media &amp; collab</button>
+  <button type="button" data-sec="philanthropy_gm">Philanthropy / Mkt GM</button>
   <button type="button" data-sec="principals">Principals</button>
   <button type="button" data-sec="directors">Directors</button>
   <button type="button" data-sec="pto">PTO / PTA</button>
@@ -81,7 +82,7 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
   <input id="q" type="search" placeholder="Filter email / city / note…" autocomplete="off"/>
 </div>
 <div id="board"></div>
-<p class="note">Source: TAM + CDD/HOA + university peers + enterprise dialers · CAPTCHA HQ stripped · Done key <code>sheehan_principal_dunk_done_v2</code> · Notes key <code>sheehan_dunk_notes_v1</code> · Hard-refresh when ready (?v=23)</p>
+<p class="note">Source: TAM + CDD/HOA + university peers + enterprise dialers · CAPTCHA HQ stripped · Done key <code>sheehan_principal_dunk_done_v2</code> · Notes key <code>sheehan_dunk_notes_v1</code> · Hard-refresh when ready (?v=24)</p>
 </div>
 <script>
 (function(){
@@ -120,7 +121,8 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
   const QUICK_EMAIL_SUBJECT='Local agritourism shout-out? — Sheehan Homestead (Callahan)';
   const QUICK_EMAIL_BODY='Hi —\n\nI can\'t help but notice Action News Jax supports local business and local agritourism. Thank you for that.\n\nWe\'re Sheehan Homestead / Critters on Call out of Callahan — mobile petting zoo + STEM on the farm. We\'ve done hundreds of events around metro Jacksonville and we\'re in the thick of fall trunk-or-treats right now.\n\nI don\'t know exactly how shout-outs work on your end, but we\'d love a free mention if there\'s a fit — newsletter, Family Focus, community hit, whatever makes sense for you. Happy to write a short blurb or bring animals for a quick TV hit if that\'s useful.\n\nA few recent media clips if helpful:\n• First segment (Ann-Marie + me): https://dailynewsnetwork.com/2024/shows/jacksonville-buzz/the-jacksonville-buzz-with-michael-ann-marie-sheehan-of-sheehan-homestead-llc/\n• With Brian Sexton (Jags voice — he came in for it): https://buzztvnews.com/2026/shows/finding-your-frequency/finding-your-frequency-with-michael-sheehan-of-sheehan-homestead-3/\n• Ann-Marie solo: https://buzztvnews.com/2026/shows/buzzworthy-businesses/buzzworthy-businesses-with-ann-marie-sheehan-of-sheehan-homestead-llc-dba-critters-on-call/\n\nSite: https://www.sheehanhomestead.com/\nPhone/text: 914-263-1311\n\nGrateful either way — closed mouths don\'t get fed, so I figured I\'d ask nicely.\n\nCheers,\nMichael Sheehan\nSheehan Homestead / Critters on Call';
   function composeBody(r){
-    if(r.id===QUICK_EMAIL_ID || r.quick_email) return r.quick_body || QUICK_EMAIL_BODY;
+    if(r.quick_body) return r.quick_body;
+    if(r.id===QUICK_EMAIL_ID || r.quick_email) return QUICK_EMAIL_BODY;
     const fn=firstName(r.contact);
     const hi=fn?('Hi '+fn+','):'Hi there,';
     const persona=inferPersona(r);
@@ -154,7 +156,8 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
     return hi+'\n\n'+reach+'\n\n'+ask+'\n\nHappy to share open dates or more info if useful.\n\n'+sig+'\n';
   }
   function subjectFor(r){
-    if(r.id===QUICK_EMAIL_ID || r.quick_email) return r.subject || QUICK_EMAIL_SUBJECT;
+    if(r.subject) return r.subject;
+    if(r.id===QUICK_EMAIL_ID || r.quick_email) return QUICK_EMAIL_SUBJECT;
     const persona=inferPersona(r);
     if(persona==='church') return 'Petting zoo for fall festival / family event?';
     if(persona==='senior') return 'Petting zoo for fall / resident event?';
@@ -217,7 +220,7 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
       }
       // fallback round-robin
       const all=[];
-      (data.sections||[]).forEach(s=>{ if(s.id==='local_forms'||s.id==='owe'||s.id==='next40') return; (s.rows||[]).forEach(r=>{ if(r.email) all.push(r); }); });
+      (data.sections||[]).forEach(s=>{ if(s.id==='local_forms'||s.id==='owe'||s.id==='next40'||s.id==='quick_emails'||s.id==='philanthropy_gm') return; (s.rows||[]).forEach(r=>{ if(r.email) all.push(r); }); });
       const buckets={school:[],church:[],daycare:[],senior:[],cdd:[],university:[],enterprise:[],other:[]};
       all.forEach(r=>{ const p=inferPersona(r); (buckets[p]||buckets.other).push(r); });
       const keys=['school','church','daycare','senior','cdd','university','enterprise','other'];
@@ -283,7 +286,7 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
       else if(r.contact)html+=` · ${esc(r.contact)}`;
       if(r.title)html+=` · ${esc(r.title)}`;
       html+=`</div>`;
-      if(isOwe && (r.owe_reason||r.why)){
+      if((isOwe || r.lane==='philanthropy_gm' || r.bucket==='philanthropy_gm') && (r.owe_reason||r.why)){
         html+=`<div class="owe-why"><b>Why chase:</b> ${esc(r.owe_reason||r.why)}</div>`;
       }else if(r.quick_email && r.why){
         html+=`<div class="why"><b>Why:</b> ${esc(r.why)}</div>`;
@@ -318,10 +321,19 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
     board.querySelectorAll('button.done').forEach(btn=>{
       btn.addEventListener('click',()=>{
         const id=btn.getAttribute('data-id');
+        const cardEl=btn.closest('article.card');
+        const nextEl=cardEl && cardEl.nextElementSibling;
         done[id]=!done[id];
         if(!done[id])delete done[id];
         saveDone(done);
         render();
+        // After Done (marking complete), nudge scroll to the next open card
+        if(done[id]){
+          requestAnimationFrame(()=>{
+            const next=document.querySelector('#board article.card:not(.done)');
+            if(next) next.scrollIntoView({behavior:'smooth',block:'nearest'});
+          });
+        }
       });
     });
     board.querySelectorAll('button.save-note').forEach(btn=>{
