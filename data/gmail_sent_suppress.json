@@ -1,0 +1,42 @@
+{
+  "as_of": "2026-09-25 10:36 ET",
+  "recipient_count": 55,
+  "board_hits": [
+    {
+      "account": "Duval Landscape Maintenance",
+      "email": "info@duvallandscape.com",
+      "contact": "Rob Bullock",
+      "title": "President"
+    },
+    {
+      "account": "James A. Webster Elementary PTO",
+      "email": "thewebsterschoolpto@gmail.com",
+      "contact": "Sherria Joye",
+      "title": "PTO President"
+    },
+    {
+      "account": "Abess Park Elementary",
+      "email": "marykslover@gmail.com",
+      "contact": "Abess Park Elementary",
+      "title": "PTA/PTO President"
+    },
+    {
+      "account": "Palagio Senior Living",
+      "email": "lifeenrichmentdirector@palagioseniorliving.com",
+      "contact": "Kristi Wilder",
+      "title": "Life Enrichment Director"
+    },
+    {
+      "account": "The Windsor at Ortega",
+      "email": "deandre.stringer@legendseniorliving.com",
+      "contact": "Deandre Stringer",
+      "title": "Life Enrichment Director"
+    },
+    {
+      "account": "Fletcher's Tender Care, LLC",
+      "email": "ecooks@fletcherstendercare.com",
+      "contact": "Ericka Cooks",
+      "title": "Center Director / Regional"
+    }
+  ]
+}

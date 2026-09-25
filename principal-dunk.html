@@ -45,6 +45,7 @@ button.done.on{background:#3dd68c;color:#062016;border-color:#3dd68c}
 <h1>Principal dunk board</h1>
 <p class="sub">One-click mailto to principals / directors / local PTO presidents. Done sticks on this device. No HQ CAPTCHA junk. Forms only as a small optional lane — skip anything salesy.</p>
 <div class="banner"><b>Compose only — never auto-send.</b> Skip Duval PTA / district HQ forms. Prefer a named inbox that a human reads.</div>
+<div class="banner" id="dedupe" style="border-color:#3dd68c66;color:#9dffc5">Scrubbing vs sent + customers…</div>
 <div class="kpis" id="kpis"></div>
 <div class="filters">
   <button type="button" class="on" data-sec="principals">Principals</button>
@@ -145,7 +146,7 @@ button.done.on{background:#3dd68c;color:#062016;border-color:#3dd68c}
       });
     });
   }
-  fetch('data/principal_dunk_board.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{data=d;render()}).catch(()=>{
+  fetch('data/principal_dunk_board.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{data=d;var dd=d.dedupe||{};var sc=dd.suppress_counts||{};var el=document.getElementById('dedupe'); if(el){var sc=(dd.suppress_counts||{});el.innerHTML='<b>Scrubbed '+(dd.suppress_total||0)+'</b> · outreach '+(sc.outreach_sent||0)+' · Gmail sent '+(sc.gmail_sent||0)+' · customer email '+(sc.customer_email||0)+' · customer account '+(sc.customer_account||0)+' · left <b>'+((d.counts||{}).mailto_total||0)+' mailto</b>';} render()}).catch(()=>{
     document.getElementById('board').innerHTML='<div class="empty">Could not load principal_dunk_board.json</div>';
   });
 })();
