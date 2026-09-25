@@ -1,0 +1,65 @@
+{
+  "as_of": "2026-09-25 4:15 PM ET",
+  "board_version": "Board v2.9 \u00b7 Sep 25 4:15 ET",
+  "friday_total": 255,
+  "friday_by_class": {
+    "consumer_rebook": 112,
+    "friday_total": 255,
+    "corporate": 5,
+    "district": 21,
+    "cdd_amenity": 68,
+    "apartment": 11,
+    "church": 38
+  },
+  "university_section": 73,
+  "university_unique": 73,
+  "meta": {
+    "as_of": "2026-09-25 4:15 PM ET",
+    "university_added_ju": 17,
+    "university_added_jax_area": 31,
+    "university_phone_gaps": [
+      "Lacey Worsdell: Personal email unpublished \u2014 route via alumni@ju.edu",
+      "Bambi Brundage: Personal email unpublished \u2014 route via engage@ju.edu or jaxrecwell@ju.edu"
+    ],
+    "apartments_added": 3,
+    "apartments_already": 4,
+    "apartment_no_email_gaps": [
+      "Greystar (Jacksonville region)",
+      "Greystar (Jacksonville region)",
+      "Greystar (Jacksonville)",
+      "Velara Luxury Apartments",
+      "Palacio Apartments",
+      "Lago St. Augustine Apartments",
+      "360 Communities at Shearwater",
+      "360 Communities at Crossroads",
+      "360 Communities at Avenues Walk",
+      "The Aston at Town Center (Greystar)",
+      "The Edge at Town Center",
+      "The Uptown at St. Johns",
+      "Sands on Beach Apartments",
+      "The Enclave at Atlantic (Gables Residential)",
+      "Links at Windsor Parke",
+      "Antlers Apartment Homes",
+      "Avana Bartram Springs",
+      "River House Jacksonville",
+      "SUR Southside Quarter (Greystar)",
+      "Levi at River City (AIR Communities)"
+    ],
+    "churches_added": 18,
+    "corporate_friday": {
+      "mcd": 1,
+      "district": 17,
+      "tagged_existing_mcd": 0
+    },
+    "friday_counts": {
+      "consumer_rebook": 112,
+      "friday_total": 255,
+      "corporate": 5,
+      "district": 21,
+      "cdd_amenity": 68,
+      "apartment": 11,
+      "church": 38
+    }
+  },
+  "mailto_total": 636
+}
