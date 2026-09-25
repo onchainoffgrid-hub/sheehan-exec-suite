@@ -49,6 +49,17 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
 .chip.tier-b{border-color:#93a0b888;color:#93a0b8;font-weight:800;min-width:1.4em;text-align:center}
 .filters button.premium-btn.on{border-color:#a78bfa88;background:#1a1430;color:#c4b5fd}
 .filters button.tier-btn.on{border-color:#c9a22788;background:#2a2210;color:#fde68a}
+
+.chip.role{border-color:#60a5fa88;color:#93c5fd}
+.chip.rcsa{border-color:#38bdf888;color:#7dd3fc}
+.chip.fancy{border-color:#f0abfc88;color:#f5d0fe}
+.chip.reviewed{border-color:#3dd68c88;color:#9dffc5;font-weight:700}
+.chip.ask-review{border-color:#ffb02088;color:#fde68a}
+.chip.review-unknown{border-color:#93a0b888;color:#93a0b8}
+.filters button.rcsa-btn.on{border-color:#38bdf888;background:#0c2a3a;color:#7dd3fc}
+.filters button.fancy-btn.on{border-color:#f0abfc88;background:#2a1030;color:#f5d0fe}
+.filters button.consumer-btn.on{border-color:#fb923c88;background:#2a1a10;color:#fdba74}
+
 .card.premium{border-color:#a78bfa55}
 .area{font-size:.78rem;color:#fde68a;grid-column:1/-1;font-weight:600}
 .area b{color:#fff;font-weight:700}
@@ -69,13 +80,16 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
 <body><div class="wrap">
 <p class="crumb"><a href="index.html">Operator</a> · <a href="growth-simple.html">Growth</a> · <a href="doer-crm.html">Doer CRM</a> → <b>Principal dunks</b></p>
 <h1>Principal dunk board</h1>
-<p class="sub">One-click Gmail / mailto — voice matches recent sent outreach (animals + dates ask + open dates offer). Hi {First} when known; persona matches the seat. Area + S/A/B on every card. Done sticks on this device (v2). Compose only — you hit Send.</p>
-<div class="banner"><span class="ver" id="verstamp">Board v2.7 · Sep 25 3:45 ET</span><b>Compose only — never auto-send.</b> Voice = recent sent outreach. <b>S</b> = chase/close · <b>A</b> = solid Jax · <b>B</b> = lower / farther. Premium = big amenity wallets. Skip Duval PTA / district HQ forms. Prefer a named inbox. Notes → localStorage + optional mailto to account for Talk-Deputy sync.</div>
+<p class="sub">One-click Gmail / mailto — B2B school/CDD keeps v2.7 Michael voice. Consumer: Reviewed → APP-FIRST (no review ask); else soft next-date / warm visit. RCSA + Fancy filters. Area + S/A/B + role chip. Done sticks (v2). Compose only.</p>
+<div class="banner"><span class="ver" id="verstamp">Board v2.8 · Sep 25 4:15 ET</span><b>Compose only — never auto-send.</b> Board v2.8: <b>RCSA</b> all campuses · <b>Fancy</b> principals/directors · <b>Consumer</b> customers + warm (review scrape gap → unknown; APP-FIRST optional for buyers). B2B voice unchanged. <b>S</b> chase · <b>A</b> solid · <b>B</b> lower. Notes local + optional account mailto.</div>
 <div class="banner" id="dedupe" style="border-color:#3dd68c66;color:#9dffc5">Scrubbing vs sent + customers…</div>
 <div class="kpis" id="kpis"></div>
 <div class="filters">
   <button type="button" class="owe-btn" data-sec="owe">Owe / Slam</button>
   <button type="button" class="premium-btn" data-sec="premium">Premium</button>
+  <button type="button" class="rcsa-btn" data-sec="rcsa">RCSA</button>
+  <button type="button" class="fancy-btn" data-sec="fancy">Fancy</button>
+  <button type="button" class="consumer-btn" data-sec="consumer">Consumer</button>
   <button type="button" class="on" data-sec="next40">Next 40 mix</button>
   <button type="button" data-sec="quick_emails">Media &amp; collab</button>
   <button type="button" data-sec="philanthropy_gm">Philanthropy / Mkt GM</button>
@@ -95,20 +109,21 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
   <button type="button" data-persona="cdd">CDD</button>
   <button type="button" data-persona="university">Uni</button>
   <button type="button" data-persona="enterprise">Ent</button>
+  <button type="button" data-persona="consumer">Consumer</button>
   <button type="button" class="tier-btn" data-tier="S">S</button>
   <button type="button" class="tier-btn" data-tier="A">A</button>
   <button type="button" class="tier-btn" data-tier="B">B</button>
   <input id="q" type="search" placeholder="Filter email / city / area / note…" autocomplete="off"/>
 </div>
 <div id="board"></div>
-<p class="note">Source: TAM + CDD/HOA + university peers + enterprise dialers · CAPTCHA HQ stripped · Done key <code>sheehan_principal_dunk_done_v2</code> · Notes key <code>sheehan_dunk_notes_v1</code> · Hard-refresh when ready (?v=27)</p>
+<p class="note">Source: TAM + RCSA campuses + Fancy schools + Consumer customers/warm · CAPTCHA HQ stripped · Done key <code>sheehan_principal_dunk_done_v2</code> · Notes key <code>sheehan_dunk_notes_v1</code> · Hard-refresh (?v=28)</p>
 </div>
 <script>
 (function(){
   const DONE_KEY='sheehan_principal_dunk_done_v2';
   const NOTES_KEY='sheehan_dunk_notes_v1';
   const AUTH='sheehanhomestead@gmail.com';
-  const PERSONAS=['school','church','daycare','senior','cdd','university','enterprise','other'];
+  const PERSONAS=['school','church','daycare','senior','cdd','university','enterprise','consumer','other'];
   function loadDone(){try{return JSON.parse(localStorage.getItem(DONE_KEY)||'{}')}catch(e){return{}}}
   function saveDone(m){localStorage.setItem(DONE_KEY,JSON.stringify(m))}
   function loadNotes(){try{return JSON.parse(localStorage.getItem(NOTES_KEY)||'{}')}catch(e){return{}}}
@@ -133,18 +148,41 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
     if(/church|congregation|pastor|synagogue|temple|mosque|parish|ministry|faith/.test(blob)) return 'church';
     if(/daycare|day care|preschool|pre-school|vpk|childcare|child care|early childhood|goddard|primrose|learning center/.test(blob)) return 'daycare';
     if(/senior|assisted living|memory care|alf|nursing|rehab|elder/.test(blob)) return 'senior';
+    if(/consumer|customer|critter club|summer interest|godaddy/.test(blob)) return 'consumer';
     if(/school|elementary|middle|high|academy|pto|pta|principal|teacher/.test(blob)) return 'school';
     return 'other';
   }
   const QUICK_EMAIL_ID='quick-action-news-jax-shoutout';
   const QUICK_EMAIL_SUBJECT='local animal shout-out?';
   const QUICK_EMAIL_BODY='Hi there,\n\nWe bring the animals to Jax festivals and trunk-or-treats — soft ask for a free shout-out if there\'s a fit (Family Focus, community hit, whatever works). Happy to bring animals for a quick TV hit too.\n\n914-263-1311';
+  function consumerAppFirstBody(r){
+    const fn=firstName(r.contact)||firstName(r.account);
+    const hi=fn?('Hi '+fn+','):'Hi there,';
+    return hi+'\n\nThanks again for being part of the homestead — dropping the kids games for you (play + prize wheel). If they hit a high score they can text HIGH SCORE to 914-263-1311.\n\nPlay: https://onchainoffgrid-hub.github.io/critters-play/\nWheel: https://onchainoffgrid-hub.github.io/critters-on-call/wheel.html\nServices: https://www.sheehanhomestead.com/services\n\nCheers,\nMichael\n914-263-1311\n';
+  }
+  function consumerNextDateBody(r){
+    const fn=firstName(r.contact)||firstName(r.account);
+    const hi=fn?('Hi '+fn+','):'Hi there,';
+    return hi+'\n\nQuick one from Sheehan Homestead — soft check whether you want another date on the books this fall. Happy to hold a Saturday or weekday if something\'s brewing.\n\nKids games if useful:\nPlay: https://onchainoffgrid-hub.github.io/critters-play/\nWheel: https://onchainoffgrid-hub.github.io/critters-on-call/wheel.html\n\nCheers,\nMichael\n914-263-1311\n';
+  }
+  function consumerWarmBody(r){
+    const fn=firstName(r.contact)||firstName(r.account);
+    const hi=fn?('Hi '+fn+','):'Hi there,';
+    return hi+'\n\nFollowing up from your interest in the animals / homestead visit. We do mobile petting zoos and on-farm visits around metro Jacksonville — happy to share open weekend dates or the services page.\n\nServices: https://www.sheehanhomestead.com/services\nPlay (kids): https://onchainoffgrid-hub.github.io/critters-play/\n\nCheers,\nMichael\n914-263-1311\n';
+  }
   function composeBody(r){
     if(r.quick_body) return r.quick_body;
     if(r.id===QUICK_EMAIL_ID || r.quick_email) return QUICK_EMAIL_BODY;
+    const persona=inferPersona(r);
+    if(persona==='consumer' || r.lane==='consumer' || r.consumer_lane){
+      const rs=String(r.review_status||'unknown');
+      if(rs==='likely_reviewed') return consumerAppFirstBody(r);
+      if(r.consumer_lane==='warm_inbound' || r.purchase_status==='not_seen') return consumerWarmBody(r);
+      // bought + no_review_seen OR unknown: soft next-date (APP-FIRST is for reviewed; unknown buyers get next-date not fake Reviewed)
+      return consumerNextDateBody(r);
+    }
     const fn=firstName(r.contact);
     const hi=fn?('Hi '+fn+','):'Hi there,';
-    const persona=inferPersona(r);
     const phrases={
       school:['dozens of schools in metro Jacksonville','fall festivals or trunk-or-treat dates'],
       daycare:['daycares and early childhood programs across metro Jacksonville','fall festivals or trunk-or-treat dates'],
@@ -162,12 +200,17 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
     if(r.subject) return r.subject;
     if(r.id===QUICK_EMAIL_ID || r.quick_email) return QUICK_EMAIL_SUBJECT;
     const persona=inferPersona(r);
+    if(persona==='consumer' || r.lane==='consumer' || r.consumer_lane){
+      const rs=String(r.review_status||'unknown');
+      if(rs==='likely_reviewed') return 'kids games from Sheehan Homestead';
+      if(r.consumer_lane==='warm_inbound' || r.purchase_status==='not_seen') return 'animals / homestead visit?';
+      return 'Next date? (Sheehan Homestead)';
+    }
     if(persona==='church') return 'Petting zoo for fall festival / family event?';
     if(persona==='senior') return 'Petting zoo for fall / resident event?';
     if(persona==='cdd') return 'Petting zoo for CDD / amenity fall festival?';
     if(persona==='university') return 'Petting zoo for campus / student event?';
     if(persona==='enterprise') return 'Petting zoo for employee family day?';
-    // school, daycare, other/default
     return 'Petting zoo for fall festival / trunk or treat?';
   }
   function areaLabel(r){
@@ -243,6 +286,11 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
   });
   qEl.addEventListener('input',()=>render());
   function rowsForSection(){
+    if(sec==='fancy'){
+      const rows=[];
+      (data.sections||[]).forEach(s=>{(s.rows||[]).forEach(r=>{ if(r.fancy || (r.chip_tags||[]).includes('Fancy')) rows.push(r); });});
+      return {title:'Fancy schools · principals / directors / activities', hint:'Bolles / Montessori / JCDS / ESJ / Providence / SJCDS / San Jose prep-class. Published emails only; phone/form cards when email unpublished.', rows};
+    }
     if(sec==='next40'){
       if(data.next40_ids && data.next40_ids.length){
         const byId={};
@@ -281,11 +329,11 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
       ['Mailto left',counts.mailto_total],
       ['Today sent',counts.gmail_today_sent_unique],
       ['Owe',counts.owe_followup],
-      ['Premium',counts.premium],
+      ['RCSA',counts.rcsa],
+      ['Fancy',counts.fancy],
+      ['Consumer',counts.consumer],
       ['School',bp.school],
       ['CDD',bp.cdd],
-      ['Uni',bp.university],
-      ['Ent',bp.enterprise],
       ['Done',Object.keys(done).filter(k=>done[k]).length]
     ].map(([l,v])=>`<div class="kpi"><div class="l">${esc(l)}</div><div class="v">${v||0}</div></div>`).join('');
     const q=(qEl.value||'').trim().toLowerCase();
@@ -326,7 +374,14 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
       html+=`<h3>`;
       if(isOwe)html+=`<span class="chip owe">owe</span> `;
       if(isPrem)html+=`<span class="chip premium">premium</span> `;
+      if(r.rcsa || (r.chip_tags||[]).includes('RCSA') || /river city science|rcsa/i.test(r.account||'')) html+=`<span class="chip rcsa">RCSA</span> `;
+      if(r.fancy || (r.chip_tags||[]).includes('Fancy')) html+=`<span class="chip fancy">Fancy</span> `;
       html+=`<span class="chip pri">${esc(pers)}</span> `;
+      if(r.role_chip) html+=`<span class="chip role">${esc(r.role_chip)}</span> `;
+      const rs=String(r.review_status||'');
+      if(rs==='likely_reviewed') html+=`<span class="chip reviewed">Reviewed</span> `;
+      else if(rs==='no_review_seen') html+=`<span class="chip ask-review">Ask review later</span> `;
+      else if(rs==='unknown' && (pers==='consumer'||r.consumer_lane)) html+=`<span class="chip review-unknown">Review unknown</span> `;
       html+=`<span class="chip tier-${tier.toLowerCase()}" title="${tier==='S'?'chase/close':tier==='A'?'solid Jax':'lower / farther'}">${esc(tier)}</span> `;
       html+=`${esc(r.account||r.city||r.segment||'metro Jax')}</h3>`;
       html+=`<div class="area"><b>Area:</b> ${esc(area)}</div>`;
@@ -343,6 +398,10 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
         if(r.quick_body && !r.email){
           html+=`<div class="owe-why" style="margin-top:6px;white-space:pre-wrap"><b>Paste draft into form:</b>\n${esc(r.quick_body)}</div>`;
         }
+      }else if(pers==='consumer'||r.consumer_lane){
+        const rs=String(r.review_status||'unknown');
+        const mode=rs==='likely_reviewed'?'APP-FIRST (no review ask)':(r.consumer_lane==='warm_inbound'?'warm visit/animals':'soft next-date');
+        html+=`<div class="why"><b>Consumer:</b> ${esc(mode)} · review=${esc(rs)}. ${esc(r.why||'')}</div>`;
       }else{
         html+=`<div class="why">Template says <b>${esc(pers)}</b>${fn?' · Hi '+esc(fn):' · Hi there'}. Tap Open email → Send.</div>`;
       }
@@ -426,7 +485,8 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
     var dd=d.dedupe||{};var sc=dd.suppress_counts||{};
     var el=document.getElementById('dedupe');
     if(el){
-      el.innerHTML='<b>Scrubbed '+(dd.suppress_total||0)+'</b> · Gmail sent '+(sc.gmail_sent||0)+' (today '+(sc.gmail_sent_today||0)+') · customer email '+(sc.customer_email||0)+' · booking '+(sc.booking_pipeline||0)+' · left <b>'+((d.counts||{}).mailto_total||0)+' mailto</b> · Premium '+((d.counts||{}).premium||0)+' · CDD +'+(sc.cdd_hoa_added_this_pass||0)+' · uni +'+(sc.university_added||0)+' · ent +'+(sc.enterprise_added||0);
+      var counts=d.counts||{}; var v28=d.v28||{}; var cs=(v28.consumer)||{};
+      el.innerHTML='<b>v2.8</b> · RCSA '+(counts.rcsa||v28.rcsa_rows||0)+' · Fancy '+(counts.fancy||0)+' · Consumer cust '+(cs.customers||counts.consumer_customers||0)+' / warm '+(cs.warm||counts.consumer_warm||0)+' · reviews '+(cs.scrape_ok?'matched':'<b>scrape gap → unknown</b>')+' · left <b>'+(counts.mailto_total||0)+' mailto</b> · Gmail today '+(sc.gmail_sent_today||0);
     }
     render();
   }).catch(()=>{

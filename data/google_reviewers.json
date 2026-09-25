@@ -1,0 +1,13 @@
+{
+  "as_of": "2026-09-25 16:05 ET",
+  "source_url": "https://share.google/CbXwVQ7PiVNJgLFAa",
+  "attempted": [
+    "curl share.google redirect to google.com/search kgmid",
+    "curl maps place Sheehan Homestead",
+    "headless chrome maps search Callahan",
+    "headless chrome maps place dump-dom"
+  ],
+  "status": "scrape_failed",
+  "note": "Google Maps review author names are JS-rendered / blocked for headless dump-dom; no prior review-name export on box. Consumer cards ship with review_status=unknown.",
+  "reviewers": []
+}
