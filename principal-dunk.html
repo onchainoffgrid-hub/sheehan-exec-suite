@@ -55,7 +55,7 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
 <p class="crumb"><a href="index.html">Operator</a> · <a href="growth-simple.html">Growth</a> · <a href="doer-crm.html">Doer CRM</a> → <b>Principal dunks</b></p>
 <h1>Principal dunk board</h1>
 <p class="sub">One-click Gmail / mailto — Hi {FirstName} when known. Body persona matches the seat (church ≠ school; CDD / uni / enterprise included). Done sticks on this device (v2). Compose only — you hit Send.</p>
-<div class="banner"><span class="ver" id="verstamp">Board v2.1 · Sep 25 3:00 ET</span><b>Compose only — never auto-send.</b> Skip Duval PTA / district HQ forms. Prefer a named inbox. Notes → localStorage + optional mailto to account for Talk-Deputy sync.</div>
+<div class="banner"><span class="ver" id="verstamp">Board v2.2 · Sep 25 3:15 ET</span><b>Compose only — never auto-send.</b> Skip Duval PTA / district HQ forms. Prefer a named inbox. Notes → localStorage + optional mailto to account for Talk-Deputy sync.</div>
 <div class="banner" id="dedupe" style="border-color:#3dd68c66;color:#9dffc5">Scrubbing vs sent + customers…</div>
 <div class="kpis" id="kpis"></div>
 <div class="filters">
@@ -81,7 +81,7 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
   <input id="q" type="search" placeholder="Filter email / city / note…" autocomplete="off"/>
 </div>
 <div id="board"></div>
-<p class="note">Source: TAM + CDD/HOA + university peers + enterprise dialers · CAPTCHA HQ stripped · Done key <code>sheehan_principal_dunk_done_v2</code> · Notes key <code>sheehan_dunk_notes_v1</code> · Hard-refresh when ready (?v=21)</p>
+<p class="note">Source: TAM + CDD/HOA + university peers + enterprise dialers · CAPTCHA HQ stripped · Done key <code>sheehan_principal_dunk_done_v2</code> · Notes key <code>sheehan_dunk_notes_v1</code> · Hard-refresh when ready (?v=22)</p>
 </div>
 <script>
 (function(){
@@ -287,6 +287,9 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
         html+=`<div class="owe-why"><b>Why chase:</b> ${esc(r.owe_reason||r.why)}</div>`;
       }else if(r.quick_email && r.why){
         html+=`<div class="why"><b>Why:</b> ${esc(r.why)}</div>`;
+        if(r.quick_body && !r.email){
+          html+=`<div class="owe-why" style="margin-top:6px;white-space:pre-wrap"><b>Paste draft into form:</b>\n${esc(r.quick_body)}</div>`;
+        }
       }else{
         html+=`<div class="why">Template says <b>${esc(pers)}</b>${fn?' · Hi '+esc(fn):' · Hi there'}. Tap Open email → Send.</div>`;
       }
@@ -301,8 +304,10 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
       if(r.email){
         html+=`<a class="btn" href="${mailto(r)}">Open email</a>`;
         html+=`<a class="btn sec" target="_blank" rel="noopener" href="${gmail(r)}">Browser Gmail</a>`;
-      }else if(r.form_url){
-        html+=`<a class="btn" target="_blank" rel="noopener" href="${esc(r.form_url)}">Open local form</a>`;
+      }
+      if(r.form_url){
+        const formLabel=r.quick_email?(r.email?'Open form':'Open form / ticket'):'Open local form';
+        html+=`<a class="btn${r.email?' sec':''}" target="_blank" rel="noopener" href="${esc(r.form_url)}">${formLabel}</a>`;
       }
       if(r.website)html+=`<a class="btn sec" target="_blank" rel="noopener" href="${esc(r.website)}">Website</a>`;
       if(r.linkedin)html+=`<a class="btn sec" target="_blank" rel="noopener" href="${esc(r.linkedin)}">LinkedIn</a>`;
