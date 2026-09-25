@@ -1,6 +1,6 @@
 {
   "as_of": "2026-09-25 15:00 ET",
-  "board_version": "Board v2.2 · Sep 25 3:15 ET",
+  "board_version": "Board v2.3 · Sep 25 3:20 ET",
   "label": "Principal dunk board v2.1",
   "rule": "Compose-only mailto. Truth=Gmail SENT. Done local. CDD/uni/enterprise + Quick emails allowed. Names in Hi {FirstName} for standard templates.",
   "compose_authuser": "sheehanhomestead@gmail.com",
@@ -939,7 +939,7 @@
     {
       "id": "quick_emails",
       "title": "Quick emails",
-      "hint": "Jax market-touch: mailto / forms only — you edit & Send. Opportunity frame. Verified contacts from jax-free-local-media.md.",
+      "hint": "Jax market-touch from jax-free-local-media + RevOps MARKET_TOUCH_INVENTORY. Mailto / forms only — you edit & Send. Opportunity frame. No invented emails.",
       "rows": [
         {
           "phone": "",
@@ -971,17 +971,37 @@
           "lane": "quick_emails",
           "quick_email": true,
           "tier": 1,
+          "id": "quick-action-news-events-calendar",
+          "account": "Action News Jax — Community Calendar",
+          "contact": "Family Focus / Events",
+          "title": "events@ calendar crawl",
+          "email": "events@actionnewsjax.com",
+          "website": "https://www.actionnewsjax.com/family-focus/community-calendar/",
+          "subject": "Community calendar event — Sheehan Homestead (Callahan)",
+          "why": "Calendar crawl lane (separate from news@ shout-out). Email photo/flyer + date/time. Public dated events only.",
+          "owe_reason": "Family Focus / community calendar listing",
+          "quick_body": "Hi there,\n\nPlease consider this for the Action News Jax community calendar / Family Focus crawl:\n\n• Who: Sheehan Homestead / Critters on Call (Callahan) — mobile petting zoo + family STEM / agritourism serving Jax\n• What / when / where: [fill public event details]\n• Soft ask for a free calendar shout-out; happy to attach a clean photo/flyer and write a short blurb\n\nSite: https://www.sheehanhomestead.com/\nPhone/text: 914-263-1311\n\nCheers,\nMichael Sheehan\nSheehan Homestead / Critters on Call"
+        },
+        {
+          "phone": "",
+          "city": "Jacksonville",
+          "segment": "Media / Community",
+          "persona": "other",
+          "kind": "mailto",
+          "lane": "quick_emails",
+          "quick_email": true,
+          "tier": 1,
           "id": "quick-river-city-live",
           "account": "News4JAX River City Live (WJXT)",
           "contact": "River City Live producers",
           "title": "Lifestyle demo booking",
-          "email": "newstips@wjxt.com",
+          "email": "newstips@news4jax.com",
           "form_url": "https://help.news4jax.com/new/",
           "website": "https://help.news4jax.com/kb/article/255-river-city-live-how-do-i-get-on-the-show/",
           "subject": "River City Live demo idea — Sheehan Homestead (Callahan mobile petting zoo)",
-          "why": "DEMO not talking head. File Help Desk ticket (category River City Live / How do I get on the show). Also producer@wjxt.com. How-to article linked.",
+          "why": "DEMO not talking head. Primary path = Help Desk ticket (River City Live → How do I get on the show). Also producer@wjxt.com · newstips@wjxt.com. How-to: help.news4jax.com/kb/article/255.",
           "owe_reason": "RCL demo pitch · goat / mommy-and-me / STEM live bit",
-          "quick_body": "Hi —\n\nPitching a short LIVE DEMO for River City Live (not a talking-head interview).\n\nWe're Sheehan Homestead / Critters on Call out of Callahan — mobile petting zoo + family STEM / agritourism serving metro Jacksonville. Happy to bring a goat (or a 90-second mommy-and-me animal-care bit) on set so viewers see something fun, not just hear about it.\n\nWhy it fits THE local station:\n• Callahan farm family serving Jax kids / schools / trunk-or-treats\n• Visual, interactive demo in under 2 minutes\n• Soft ask for a free segment shout-out — we can also write a short blurb if useful\n\nAlso filing via your Help Desk (River City Live → How do I get on the show).\n\nA few recent media clips if helpful:\n• First segment (Ann-Marie + me): https://dailynewsnetwork.com/2024/shows/jacksonville-buzz/the-jacksonville-buzz-with-michael-ann-marie-sheehan-of-sheehan-homestead-llc/\n• With Brian Sexton (Jags voice — he came in for it): https://buzztvnews.com/2026/shows/finding-your-frequency/finding-your-frequency-with-michael-sheehan-of-sheehan-homestead-3/\n• Ann-Marie solo: https://buzztvnews.com/2026/shows/buzzworthy-businesses/buzzworthy-businesses-with-ann-marie-sheehan-of-sheehan-homestead-llc-dba-critters-on-call/\n\nSite: https://www.sheehanhomestead.com/\nPhone/text: 914-263-1311\n\nGrateful either way — closed mouths don't get fed, so I figured I'd ask nicely.\n\nCheers,\nMichael Sheehan\nSheehan Homestead / Critters on Call"
+          "quick_body": "Hi —\n\nPitching a short LIVE DEMO for River City Live (not a talking-head interview).\n\nWe're Sheehan Homestead / Critters on Call out of Callahan — mobile petting zoo + family STEM / agritourism serving metro Jacksonville. Happy to bring a goat (or a 90-second mommy-and-me animal-care bit) on set so viewers see something fun, not just hear about it.\n\nWhy it fits THE local station:\n• Callahan farm family serving Jax kids / schools / trunk-or-treats\n• Visual, interactive demo in under 2 minutes\n• Soft ask for a free segment shout-out — we can also write a short blurb if useful\n\nAlso filing via your Help Desk (River City Live → How do I get on the show). CC path: producer@wjxt.com.\n\nA few recent media clips if helpful:\n• First segment (Ann-Marie + me): https://dailynewsnetwork.com/2024/shows/jacksonville-buzz/the-jacksonville-buzz-with-michael-ann-marie-sheehan-of-sheehan-homestead-llc/\n• With Brian Sexton (Jags voice — he came in for it): https://buzztvnews.com/2026/shows/finding-your-frequency/finding-your-frequency-with-michael-sheehan-of-sheehan-homestead-3/\n• Ann-Marie solo: https://buzztvnews.com/2026/shows/buzzworthy-businesses/buzzworthy-businesses-with-ann-marie-sheehan-of-sheehan-homestead-llc-dba-critters-on-call/\n\nSite: https://www.sheehanhomestead.com/\nPhone/text: 914-263-1311\n\nGrateful either way — closed mouths don't get fed, so I figured I'd ask nicely.\n\nCheers,\nMichael Sheehan\nSheehan Homestead / Critters on Call"
         },
         {
           "phone": "",
@@ -1266,7 +1286,7 @@
           "email": "info@NassauCountyFLChamber.com",
           "website": "https://www.nassaucountyflchamber.com/chamber-frequently-asked-questions/",
           "subject": "Member news — Sheehan Homestead public farm / family STEM",
-          "why": "Members: Info Hub Add Event + news/press to this email for chamber blog. Hometown proof for later Jax pitches.",
+          "why": "Members: Info Hub Add Event + news/press to this email. Note from chambers sheet: membership previously tried / not renewed — use only as soft news tip, not a rejoin pitch. West Nassau Chamber is the Callahan org (separate card).",
           "owe_reason": "Chamber blog / member calendar",
           "quick_body": "Hi there,\n\nMember / community news from Sheehan Homestead / Critters on Call (Callahan) — mobile petting zoo + family STEM / agritourism education.\n\nSoft ask for a free chamber blog / calendar shout-out for our next public farm morning. Happy to send a short blurb + photo.\n\nSite: https://www.sheehanhomestead.com/\nPhone/text: 914-263-1311\n\nCheers,\nMichael Sheehan\nSheehan Homestead / Critters on Call"
         },
@@ -1289,6 +1309,46 @@
           "why": "Nassau hometown paper. Editor Tracy Dishman · 904-261-3696. Local feature / letters — not a national op-ed.",
           "owe_reason": "Hometown print feature",
           "quick_body": "Hi Tracy,\n\nLocal pitch: Sheehan Homestead / Critters on Call in Callahan — mobile petting zoo + family STEM / homeschool field trips serving Nassau and metro Jax.\n\nSoft ask for a free local feature or shout-out if there's a fit. Happy to write a short blurb.\n\nA few recent media clips if helpful:\n• First segment (Ann-Marie + me): https://dailynewsnetwork.com/2024/shows/jacksonville-buzz/the-jacksonville-buzz-with-michael-ann-marie-sheehan-of-sheehan-homestead-llc/\n• With Brian Sexton (Jags voice — he came in for it): https://buzztvnews.com/2026/shows/finding-your-frequency/finding-your-frequency-with-michael-sheehan-of-sheehan-homestead-3/\n• Ann-Marie solo: https://buzztvnews.com/2026/shows/buzzworthy-businesses/buzzworthy-businesses-with-ann-marie-sheehan-of-sheehan-homestead-llc-dba-critters-on-call/\n\nSite: https://www.sheehanhomestead.com/\nPhone/text: 914-263-1311\n\nGrateful either way — closed mouths don't get fed, so I figured I'd ask nicely.\n\nCheers,\nMichael Sheehan\nSheehan Homestead / Critters on Call"
+        },
+        {
+          "phone": "",
+          "city": "Callahan",
+          "segment": "Community / Chamber",
+          "persona": "other",
+          "kind": "mailto",
+          "lane": "quick_emails",
+          "quick_email": true,
+          "tier": 1,
+          "id": "quick-west-nassau-chamber",
+          "account": "West Nassau Chamber",
+          "contact": "Chamber",
+          "title": "Callahan / Hilliard / Bryceville",
+          "email": "westnassauchamber@gmail.com",
+          "website": "https://www.westnassauchamber.com",
+          "subject": "Local Callahan farm / family STEM shout-out — Sheehan Homestead",
+          "why": "Callahan hometown chamber (different from Amelia Nassau Chamber). Public gmail on First-Coast-chambers.xlsx. Not a rejoin pitch — soft community shout-out / event mention.",
+          "owe_reason": "West Nassau / Callahan chamber touch",
+          "quick_body": "Hi there,\n\nWe're Sheehan Homestead / Critters on Call right here in Callahan — mobile petting zoo + family STEM / agritourism education serving West Nassau and metro Jax.\n\nSoft ask for a free chamber shout-out or event calendar mention if there's a fit. Happy to write a short blurb or bring animals for a quick community hit.\n\nSite: https://www.sheehanhomestead.com/\nPhone/text: 914-263-1311\n\nCheers,\nMichael Sheehan\nSheehan Homestead / Critters on Call"
+        },
+        {
+          "phone": "",
+          "city": "Jacksonville",
+          "segment": "Community / Chamber",
+          "persona": "other",
+          "kind": "mailto",
+          "lane": "quick_emails",
+          "quick_email": true,
+          "tier": 1,
+          "id": "quick-jax-black-chamber",
+          "account": "Jacksonville Black Chamber of Commerce",
+          "contact": "Chamber",
+          "title": "Community / member news",
+          "email": "info@jacksonvillebcc.org",
+          "website": "https://jacksonvillebcc.org",
+          "subject": "Community family-education shout-out — Sheehan Homestead (Callahan)",
+          "why": "Verified public info@ from First-Coast-chambers.xlsx / MARKET_TOUCH COMMUNITY_LEADERS. Soft community frame.",
+          "owe_reason": "Community chamber Quick Email",
+          "quick_body": "Hi there,\n\nReaching out from Sheehan Homestead / Critters on Call (Callahan) — mobile petting zoo + family STEM / agritourism education serving Jacksonville families and community events.\n\nSoft ask for a free shout-out or community calendar mention if there's a fit. Happy to write a short blurb.\n\nSite: https://www.sheehanhomestead.com/\nPhone/text: 914-263-1311\n\nCheers,\nMichael Sheehan\nSheehan Homestead / Critters on Call"
         }
       ]
     },
