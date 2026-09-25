@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Principal dunk board · mailto · Sheehan Homestead</title>
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#3dd68c;--gold:#c9a227;--warn:#ffb020;--bad:#ff6b4a}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
+a{color:var(--accent)}a:hover{text-decoration:underline}
+.wrap{max-width:920px;margin:0 auto;padding:18px 14px 64px}
+.crumb{font-size:.82rem;color:var(--muted);margin:0 0 10px}.crumb a{color:#fde68a;font-weight:600;text-decoration:none}
+h1{font-size:clamp(1.35rem,3vw,1.85rem);margin:0 0 6px;letter-spacing:-.02em}
+.sub{color:var(--muted);font-size:.9rem;max-width:62ch;margin:0 0 12px}
+.banner{margin:0 0 14px;padding:12px 14px;border:1px solid #c9a22788;border-radius:14px;background:linear-gradient(135deg,#2a2210,#121a2b);font-size:.84rem;color:#fde68a}
+.banner b{color:#fff}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:8px;margin:0 0 12px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+.kpi .l{font-size:.62rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.kpi .v{font-size:1.2rem;font-weight:800;margin-top:2px;color:#9dffc5}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px;position:sticky;top:0;z-index:5;padding:8px 0;background:linear-gradient(180deg,var(--bg) 75%,transparent)}
+.filters button{appearance:none;border:1px solid var(--line);background:var(--panel);color:var(--muted);padding:9px 12px;border-radius:999px;font-size:.72rem;font-weight:700;cursor:pointer;min-height:40px}
+.filters button.on{border-color:#3dd68c88;background:#13281d;color:#9dffc5}
+.filters input{flex:1;min-width:150px;min-height:40px;padding:8px 12px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--text)}
+.sec{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin:18px 0 8px}
+.hint{font-size:.78rem;color:#c5d0e6;margin:0 0 8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:0 0 8px;display:grid;grid-template-columns:1fr auto;gap:8px 12px;align-items:center}
+.card.done{opacity:.45;border-color:#3dd68c44}
+.card h3{margin:0;font-size:.98rem;grid-column:1/-1}
+.meta{font-size:.78rem;color:var(--muted);grid-column:1/-1}
+.meta b{color:#c5d0e6;font-weight:600}
+.why{font-size:.74rem;color:#93a0b8;grid-column:1/-1}
+.actions{display:flex;flex-direction:column;gap:6px;min-width:132px}
+a.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:10px 14px;border-radius:12px;background:linear-gradient(180deg,#2f6b4f,#1a3d2e);border:1px solid #3dd68caa;color:#fff;font-weight:800;font-size:.88rem;text-decoration:none}
+a.btn:hover{filter:brightness(1.08);text-decoration:none}
+a.btn.sec{min-height:32px;font-size:.7rem;font-weight:600;background:var(--panel);border-color:var(--line);color:#c5d0e6}
+button.done{appearance:none;min-height:36px;border-radius:999px;border:1px solid #3dd68c66;background:#13281d;color:#9dffc5;font-weight:700;font-size:.72rem;cursor:pointer}
+button.done.on{background:#3dd68c;color:#062016;border-color:#3dd68c}
+.chip{display:inline-block;font-size:.65rem;padding:2px 8px;border-radius:999px;border:1px solid var(--line);margin-right:4px;color:#c5d0e6}
+.chip.pri{border-color:#c9a22788;color:#fde68a}
+.note{color:var(--muted);font-size:.75rem;margin-top:18px}
+.empty{color:var(--muted);padding:16px;text-align:center}
+@media(max-width:640px){.card{grid-template-columns:1fr}.actions{min-width:0}a.btn{min-height:52px}}
+</style></head>
+<body><div class="wrap">
+<p class="crumb"><a href="index.html">Operator</a> · <a href="growth-simple.html">Growth</a> · <a href="doer-crm.html">Doer CRM</a> → <b>Principal dunks</b></p>
+<h1>Principal dunk board</h1>
+<p class="sub">One-click mailto to principals / directors / local PTO presidents. Done sticks on this device. No HQ CAPTCHA junk. Forms only as a small optional lane — skip anything salesy.</p>
+<div class="banner"><b>Compose only — never auto-send.</b> Skip Duval PTA / district HQ forms. Prefer a named inbox that a human reads.</div>
+<div class="kpis" id="kpis"></div>
+<div class="filters">
+  <button type="button" class="on" data-sec="principals">Principals</button>
+  <button type="button" data-sec="directors">Directors</button>
+  <button type="button" data-sec="pto">PTO / PTA</button>
+  <button type="button" data-sec="other">Other email</button>
+  <button type="button" data-sec="local_forms">Local forms</button>
+  <button type="button" data-sec="open">Open only</button>
+  <input id="q" type="search" placeholder="Filter name, school, email…" autocomplete="off"/>
+</div>
+<div id="board"></div>
+<p class="note">Source: TAM dialer + quick emails · filtered for decision-maker seats with public email · CAPTCHA HQ / salesy forms stripped · local Done key <code>sheehan_principal_dunk_done_v1</code></p>
+</div>
+<script>
+(function(){
+  const DONE_KEY='sheehan_principal_dunk_done_v1';
+  const AUTH='sheehanhomestead@gmail.com';
+  function loadDone(){try{return JSON.parse(localStorage.getItem(DONE_KEY)||'{}')}catch(e){return{}}}
+  function saveDone(m){localStorage.setItem(DONE_KEY,JSON.stringify(m))}
+  function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+  function gmail(email, account){
+    const su=encodeURIComponent('Mobile petting zoo / farm visit — Sheehan Homestead (Callahan)');
+    const body=encodeURIComponent('Hi —\\n\\nQuick note from Sheehan Homestead in Callahan. We bring a small mobile petting zoo / farm visit for schools and programs (goats, etc.). Happy to share dates and a simple one-pager if useful.\\n\\nNo hard sell — just checking fit.\\n\\nMichael & Ann-Marie Sheehan\\nSheehan Homestead · Critters on Call\\n');
+    return 'https://mail.google.com/mail/?authuser='+encodeURIComponent(AUTH)+'&view=cm&fs=1&to='+encodeURIComponent(email)+'&su='+su+'&body='+body;
+  }
+  function mailto(email){
+    const su=encodeURIComponent('Mobile petting zoo / farm visit — Sheehan Homestead (Callahan)');
+    const body=encodeURIComponent('Hi —\n\nQuick note from Sheehan Homestead in Callahan. We bring a small mobile petting zoo / farm visit for schools and programs. Happy to share dates if useful.\n\nMichael & Ann-Marie Sheehan\n');
+    return 'mailto:'+encodeURIComponent(email)+'?subject='+su+'&body='+body;
+  }
+  let data=null, done=loadDone(), sec='principals', openOnly=false;
+  const qEl=document.getElementById('q');
+  document.querySelectorAll('.filters button').forEach(b=>{
+    b.addEventListener('click',()=>{
+      const id=b.getAttribute('data-sec');
+      if(id==='open'){openOnly=!openOnly;b.classList.toggle('on',openOnly);render();return;}
+      sec=id;
+      document.querySelectorAll('.filters button[data-sec]').forEach(x=>{if(x.getAttribute('data-sec')!=='open')x.classList.remove('on')});
+      b.classList.add('on');
+      render();
+    });
+  });
+  qEl.addEventListener('input',()=>render());
+  function render(){
+    if(!data)return;
+    const counts=data.counts||{};
+    document.getElementById('kpis').innerHTML=[
+      ['Principals',counts.principals],
+      ['Directors',counts.directors],
+      ['PTO/PTA',counts.pto_pta_presidents],
+      ['Other email',counts.other_decision_makers],
+      ['Local forms',counts.local_forms_optional],
+      ['Done',Object.keys(done).filter(k=>done[k]).length]
+    ].map(([l,v])=>`<div class="kpi"><div class="l">${esc(l)}</div><div class="v">${v||0}</div></div>`).join('');
+    const section=(data.sections||[]).find(s=>s.id===sec)||data.sections[0];
+    const q=(qEl.value||'').trim().toLowerCase();
+    let rows=(section.rows||[]).filter(r=>{
+      if(openOnly&&done[r.id])return false;
+      if(!q)return true;
+      const blob=[r.account,r.contact,r.title,r.email,r.city,r.segment].join(' ').toLowerCase();
+      return blob.includes(q);
+    });
+    const board=document.getElementById('board');
+    if(!rows.length){board.innerHTML='<div class="empty">Nothing in this lane (or all marked Done).</div>';return;}
+    let html=`<div class="sec">${esc(section.title)}</div><p class="hint">${esc(section.hint||'')}</p>`;
+    rows.forEach(r=>{
+      const isDone=!!done[r.id];
+      const titleLine=[r.contact,r.title].filter(Boolean).join(' · ')||r.title||'Contact';
+      html+=`<article class="card${isDone?' done':''}" data-id="${esc(r.id)}">`;
+      html+=`<h3>${esc(r.account||'—')}</h3>`;
+      html+=`<div class="meta"><span class="chip pri">${esc(titleLine)}</span>`;
+      if(r.city)html+=`<span class="chip">${esc(r.city)}</span>`;
+      if(r.segment)html+=`<span class="chip">${esc(r.segment)}</span>`;
+      if(r.email)html+=` <b>${esc(r.email)}</b>`;
+      if(r.phone)html+=` · ${esc(r.phone)}`;
+      html+=`</div>`;
+      if(r.why)html+=`<div class="why">${esc(r.why)}</div>`;
+      html+=`<div class="actions">`;
+      if(r.email){
+        html+=`<a class="btn" target="_blank" rel="noopener" href="${gmail(r.email,r.account)}">Open email</a>`;
+        html+=`<a class="btn sec" href="${mailto(r.email)}">mailto</a>`;
+      }else if(r.form_url){
+        html+=`<a class="btn" target="_blank" rel="noopener" href="${esc(r.form_url)}">Open local form</a>`;
+      }
+      if(r.website)html+=`<a class="btn sec" target="_blank" rel="noopener" href="${esc(r.website)}">Website</a>`;
+      if(r.linkedin)html+=`<a class="btn sec" target="_blank" rel="noopener" href="${esc(r.linkedin)}">LinkedIn</a>`;
+      html+=`<button type="button" class="done${isDone?' on':''}" data-id="${esc(r.id)}">${isDone?'Done ✓':'Done'}</button>`;
+      html+=`</div></article>`;
+    });
+    board.innerHTML=html;
+    board.querySelectorAll('button.done').forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        const id=btn.getAttribute('data-id');
+        done[id]=!done[id];
+        if(!done[id])delete done[id];
+        saveDone(done);
+        render();
+      });
+    });
+  }
+  fetch('data/principal_dunk_board.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{data=d;render()}).catch(()=>{
+    document.getElementById('board').innerHTML='<div class="empty">Could not load principal_dunk_board.json</div>';
+  });
+})();
+</script>
+</body></html>
