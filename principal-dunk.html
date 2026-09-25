@@ -87,7 +87,7 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
 <p class="crumb"><a href="index.html">Operator</a> · <a href="growth-simple.html">Growth</a> · <a href="doer-crm.html">Doer CRM</a> → <b>Principal dunks</b></p>
 <h1>Principal dunk board</h1>
 <p class="sub">One-click Gmail / mailto — B2B school/CDD keeps v2.7 Michael voice. Consumer: Reviewed → APP-FIRST (no review ask); else soft next-date / warm visit. RCSA + Fancy filters. Area + S/A/B + role chip. Done sticks (v2). Compose only.</p>
-<div class="banner"><span class="ver" id="verstamp">Board v2.9.1 · Sep 25 · no doubled Gmail sig</span><b>Compose only — never auto-send.</b> Board v2.9: <b>Friday</b> weekend programmers (church · CDD amenity · apartments · corporate/district) · <b>University</b> Jax-first (JU/UNF/FSCJ) — not Friday default · Bartram notes live. </div>
+<div class="banner"><span class="ver" id="verstamp">Board v2.9.2 · Sep 25 · scrub copy + greetings; McD consumer dropped</span><b>Compose only — never auto-send.</b> Board v2.9.2: clean copy · org→Hi there · McD consumer dropped · B2B misfiles use Michael voice. Board v2.9: <b>Friday</b> weekend programmers (church · CDD amenity · apartments · corporate/district) · <b>University</b> Jax-first (JU/UNF/FSCJ) — not Friday default · Bartram notes live. </div>
 <div class="banner" id="dedupe" style="border-color:#3dd68c66;color:#9dffc5">Scrubbing vs sent + customers…</div>
 <div class="kpis" id="kpis"></div>
 <div class="filters">
@@ -131,7 +131,7 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
   <input id="q" type="search" placeholder="Filter email / city / area / note…" autocomplete="off"/>
 </div>
 <div id="board"></div>
-<p class="note">Source: TAM + Jax universities (JU/UNF/FSCJ) + Friday weekend programmers + RCSA/Fancy + Consumer · CAPTCHA HQ stripped · Done key <code>sheehan_principal_dunk_done_v2</code> · Notes key <code>sheehan_dunk_notes_v1</code> · Hard-refresh (?v=291)</p>
+<p class="note">Source: TAM + Jax universities (JU/UNF/FSCJ) + Friday weekend programmers + RCSA/Fancy + Consumer · CAPTCHA HQ stripped · Done key <code>sheehan_principal_dunk_done_v2</code> · Notes key <code>sheehan_dunk_notes_v1</code> · Hard-refresh (?v=292)</p>
 </div>
 <script>
 (function(){
@@ -145,13 +145,47 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
   function saveNotes(m){localStorage.setItem(NOTES_KEY,JSON.stringify(m))}
   function noteKey(r){return r.id||r.email||''}
   function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-  function firstName(contact){
-    const c=String(contact||'').trim();
+  function firstName(contact, account){
+    let c=String(contact||'').trim();
+    const acc=String(account||'').trim();
     if(!c) return '';
-    const skip=/^(dr\.?|mr\.?|mrs\.?|ms\.?|miss|pastor|rev\.?|father|sister|brother)$/i;
+    if(/@/.test(c)) return '';
+    // Prefer real person after " - " / en-dash (e.g. "YCC - Peter Hicks", "Greenwood Schools - Kate Fraser")
+    const dashSplit=c.split(/\s+[–—-]\s+/);
+    if(dashSplit.length>=2){
+      const after=dashSplit[dashSplit.length-1].trim();
+      if(after && !/@/.test(after) && !orgish(after)) c=after;
+    }
+    // "David Mullins / Ops" or "Charlene Gross / ELC Duval" → person before slash
+    if(/\//.test(c)){
+      const before=c.split('/')[0].trim();
+      if(before && !orgish(before)) c=before;
+    }
+    if(acc && c.toLowerCase()===acc.toLowerCase() && orgish(c)) return '';
+    if(orgish(c) && dashSplit.length<2 && !/\//.test(String(contact||''))) return '';
+    c=c.replace(/^(the|a|an)\s+/i,'').trim();
+    const skipTitle=/^(dr\.?|mr\.?|mrs\.?|ms\.?|miss|pastor|rev\.?|father|sister|brother)$/i;
+    const skipFirst=/^(the|a|an|big|palm|dcc|wildlight|assumption|tle|ycc|o2b|our|san|st|st\.|new|north|south|east|west)$/i;
     const parts=c.split(/\s+/).filter(Boolean);
-    for(const p of parts){ if(!skip.test(p.replace(/\./g,''))) return p.replace(/,$/,''); }
-    return parts[0]||'';
+    for(const raw of parts){
+      const p=raw.replace(/,$/,'').trim();
+      if(!p||skipTitle.test(p)||skipFirst.test(p)) continue;
+      if(/@/.test(p)) return '';
+      if(/^[a-z]+$/.test(p) && p.length>=8) return ''; // fused lowercase handle
+      if(!/^[A-Za-z][A-Za-z\-']*$/.test(p)) continue;
+      if(/^(wildlight|assumption|dcc|ycc|o2b|tle|hoa|cdd|vpk|elc|jea|spar|sysco|publix)$/i.test(p)) continue;
+      return p;
+    }
+    return '';
+  }
+  function orgish(s){
+    const t=String(s||'');
+    if(!t) return true;
+    if(/@/.test(t)) return true;
+    if(/\b(academy|school|schools|church|catholic|preschool|daycare|kids|learning|experience|gardens|chase|partners|elementary|middle|high|pto|ptsa|pta|hoa|cdd|village|resort|club|country|golf|mission|market|rehab|nursing|assisted|living|memory|care|pediatrics|medical|services|enterprises|mcdonald|wildlight|foundation|university|college|apartment|management|community|association|preserve|inn|senior|alf|elc|vpk|ycc|tle|o2b|goddard|primrose|ivybrook|explorers|marble|assumption|cornerstone|enterprise|corporate|franchise|inc|llc)\b/i.test(t)) return true;
+    if(/scheduled/i.test(t)) return true;
+    if(/^[a-z]+$/.test(t) && t.length>=8) return true;
+    return false;
   }
   function inferPersona(r){
     const p=String(r.persona||'').toLowerCase().trim();
@@ -180,19 +214,19 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
     return t.replace(/\n{3,}/g,'\n\n').replace(/\s+$/,'')+'\n';
   }
   function consumerAppFirstBody(r){
-    const fn=firstName(r.contact)||firstName(r.account);
+    const fn=firstName(r.contact,r.account)||firstName(r.account,'');
     const hi=fn?('Hi '+fn+','):'Hi there,';
-    return hi+'\n\nThanks again for being part of the homestead — dropping the kids games for you (play + prize wheel). If they hit a high score they can text HIGH SCORE to 914-263-1311.\n\nPlay: https://onchainoffgrid-hub.github.io/critters-play/\nWheel: https://onchainoffgrid-hub.github.io/critters-on-call/wheel.html\nServices: https://www.sheehanhomestead.com/services\n';
+    return hi+'\n\nThanks again for being part of the homestead — dropping the kids games for you (play + prize wheel). If they hit a high score they can text HIGH SCORE to 914-263-1311.\n\nPlay: https://onchainoffgrid-hub.github.io/critters-play/\nWheel: https://onchainoffgrid-hub.github.io/critters-on-call/wheel.html\n';
   }
   function consumerNextDateBody(r){
-    const fn=firstName(r.contact)||firstName(r.account);
+    const fn=firstName(r.contact,r.account)||firstName(r.account,'');
     const hi=fn?('Hi '+fn+','):'Hi there,';
     return hi+'\n\nQuick one from Sheehan Homestead — soft check whether you want another date on the books this fall. Happy to hold a Saturday or weekday if something\'s brewing.\n\nKids games if useful:\nPlay: https://onchainoffgrid-hub.github.io/critters-play/\nWheel: https://onchainoffgrid-hub.github.io/critters-on-call/wheel.html\n';
   }
   function consumerWarmBody(r){
-    const fn=firstName(r.contact)||firstName(r.account);
+    const fn=firstName(r.contact,r.account)||firstName(r.account,'');
     const hi=fn?('Hi '+fn+','):'Hi there,';
-    return hi+'\n\nFollowing up from your interest in the animals / homestead visit. We do mobile petting zoos and on-farm visits around metro Jacksonville — happy to share open weekend dates or the services page.\n\nServices: https://www.sheehanhomestead.com/services\nPlay (kids): https://onchainoffgrid-hub.github.io/critters-play/\n';
+    return hi+'\n\nFollowing up from your interest in the animals / homestead visit. We do mobile petting zoos and on-farm visits around metro Jacksonville — happy to share open weekend dates.\n\nPlay (kids): https://onchainoffgrid-hub.github.io/critters-play/\n';
   }
   function composeBody(r){
     if(r.quick_body) return stripGmailSig(r.quick_body);
@@ -205,7 +239,7 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
       // bought + no_review_seen OR unknown: soft next-date (APP-FIRST is for reviewed; unknown buyers get next-date not fake Reviewed)
       return consumerNextDateBody(r);
     }
-    const fn=firstName(r.contact);
+    const fn=firstName(r.contact,r.account);
     const hi=fn?('Hi '+fn+','):'Hi there,';
     const phrases={
       school:['dozens of schools in metro Jacksonville','fall festivals or trunk-or-treat dates'],
@@ -413,7 +447,7 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
       const isOwe=sec==='owe'||r.lane==='owe';
       const isPrem=!!r.premium||sec==='premium';
       const pers=inferPersona(r);
-      const fn=firstName(r.contact);
+      const fn=firstName(r.contact,r.account);
       const nk=noteKey(r);
       const saved=(notes[nk]&&notes[nk].text)||'';
       html+=`<article class="card${isDone?' done':''}${isOwe?' owe':''}${isPrem?' premium':''}" data-id="${esc(r.id)}">`;
@@ -538,7 +572,7 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
     var el=document.getElementById('dedupe');
     if(el){
       var counts=d.counts||{}; var v28=d.v28||{}; var cs=(v28.consumer)||{};
-      el.innerHTML='<b>v2.9</b> · Friday '+(counts.friday||0)+' · Uni '+(counts.university_unique||counts.university||0)+' · Church fri '+(counts.friday_church||0)+' · CDD amenity '+(counts.friday_cdd_amenity||0)+' · Apt '+(counts.friday_apartment||0)+' · Corp/dist '+(counts.friday_corporate||0)+'/'+(counts.friday_district||0)+' · RCSA '+(counts.rcsa||v28.rcsa_rows||0)+' · Fancy '+(counts.fancy||0)+' · Consumer '+(counts.consumer||0)+' · left <b>'+(counts.mailto_total||0)+' mailto</b> · Gmail today '+(sc.gmail_sent_today||0);
+      el.innerHTML='<b>v2.9.2</b> · Friday '+(counts.friday||0)+' · Uni '+(counts.university_unique||counts.university||0)+' · Church fri '+(counts.friday_church||0)+' · CDD amenity '+(counts.friday_cdd_amenity||0)+' · Apt '+(counts.friday_apartment||0)+' · Corp/dist '+(counts.friday_corporate||0)+'/'+(counts.friday_district||0)+' · RCSA '+(counts.rcsa||v28.rcsa_rows||0)+' · Fancy '+(counts.fancy||0)+' · Consumer '+(counts.consumer||0)+' · left <b>'+(counts.mailto_total||0)+' mailto</b> · Gmail today '+(sc.gmail_sent_today||0);
     }
     render();
   }).catch(()=>{

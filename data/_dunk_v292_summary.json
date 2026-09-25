@@ -1,0 +1,29 @@
+{
+  "stats": {
+    "b2b_reclassified": 88,
+    "qb_mobile_rewritten": 5,
+    "qb_cleaned": 59,
+    "qb_soft_with_review": 20,
+    "mcd_removed": 1,
+    "greeting_fixed": 5
+  },
+  "sku_remaining": 0,
+  "services_in_soft_bodies": 0,
+  "bad_hi_remaining": [
+    [
+      "cons-cust-marieljaster-gmail-com",
+      "marieljaster"
+    ]
+  ],
+  "mcd_rows": [
+    [
+      "enterprise",
+      "comments-mcdjax-com-dcc-lee-friday-corporate",
+      "enterprise",
+      false
+    ]
+  ],
+  "consumer_rows": 174,
+  "b2b_reclassified": 88,
+  "mailto_total": 635
+}
