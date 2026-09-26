@@ -1,0 +1,87 @@
+{
+  "board_version": "Board v2.9.6 \u00b7 Sep 25 \u00b7 PM territory / Ross-type clusters",
+  "as_of": "2026-09-25 9:01 PM ET",
+  "annotated_rows": 101,
+  "added_seats": [
+    {
+      "id": "wwheeler-vesta-ne-amenity-ops",
+      "email": "wwheeler@vestapropertyservices.com",
+      "account": "Vesta Property Services (NE Amenity Ops)"
+    },
+    {
+      "id": "service-firstcoastcms-tony-shiver",
+      "email": "service@firstcoastcms.com",
+      "account": "First Coast CMS (Tony Shiver / owner)"
+    },
+    {
+      "id": "customerservice-maymgt-lifestyle-ross-ask",
+      "email": "customerservice@maymgt.com",
+      "account": "MAY Management (portfolio Lifestyle ask)"
+    }
+  ],
+  "by_management_company": {
+    "Nocatee": 11,
+    "Wildlight": 5,
+    "First Coast CMS": 11,
+    "Independent": 1,
+    "FSR": 12,
+    "Vesta": 41,
+    "GMS": 17,
+    "MAY": 3
+  },
+  "mailto_total": 642,
+  "touched_sample": [
+    "owe-starling-nocatee-slam",
+    "cons-cust-ebricknell-ccmcnet-com",
+    "cons-cust-liz-firstcoastcms-com",
+    "cons-cust-ei-aexplorers-com",
+    "cons-cust-jmorgan-jaxgcc-com",
+    "cons-cust-jenna-brut-fsresidential-com",
+    "cons-cust-nocatee-starlingliving-com",
+    "cons-cust-recharge-etownjax-com",
+    "cons-cust-dkincaid-jcpcdd-org",
+    "cons-cust-campheritage-heritagelanding-comcastbiz-net",
+    "cons-cust-mdorsey-jcpcdd-org",
+    "cons-cust-hila-stalcup-marshallcreekcdd-com",
+    "cons-cust-wynnfieldlakesmanager-gmail-com",
+    "joliver-gmsnf-com-bartram-park-cdd-district-manager",
+    "mbiagetti-gmsnf-com-bartram-springs-cdd-district-manager",
+    "ddemarco-gmsnf-com-bartram-springs-cdd-gms-amenity-manager",
+    "jarias-vestapropertyservices-com-bartram-springs-hoa-community-association-manag",
+    "canopyclub-fsresidential-com-del-webb-nocatee-del-webb-ponte-vedra-firstservice-",
+    "klsmith-durbin-crossing-cdd-vesta-lifestyle-director",
+    "jamorrow-durbin-crossing-cdd-vesta-amenity-manager",
+    "info-east-nassau-stewardship-district-wildlight-district-manager-amenity",
+    "recharge-etown-cypress-bluff-cdd-vesta-community-manager-lifestyle-recha",
+    "ghamilton-johns-creek-brandy-creek-cdd-vesta-office-staff-amenity",
+    "dmcinnes-marshall-creek-cdd-palencia-vesta-district-district-manager",
+    "dpowers-marshall-creek-cdd-palencia-amenities-vesta-assistant-general-ma",
+    "jmoore-marshall-creek-cdd-palencia-amenities-vesta-general-manager",
+    "help-nocatee-com-nocatee-tolomato-cdd-the-parc-group-event-communications-commun",
+    "welcomecenter-nocatee-com-nocatee-welcome-center-the-parc-group-manager-welcome-",
+    "risenocatee-greystar-com-rise-at-nocatee-greystar-rise-lifestyle-coordinator",
+    "kfatuch-rivertown-rivers-edge-cdd-vesta-assistant-general-manager-events",
+    "kcouncil-rivertown-rivers-edge-cdd-vesta-amenity-manager",
+    "staylor-sampson-creek-cdd-st-johns-golf-cc-amenities-vesta-general-manag",
+    "oingram-tamaya-beach-cdd-vesta-amenity-manager",
+    "kfitzhugh-tamaya-beach-cdd-vesta-assistant-amenity-manager-events",
+    "howard-trout-creek-cdd-shearwater-sweetwater-creek-palencia-north-distri",
+    "jessica-knutelsky-trout-creek-cdd-shearwater-firstservice-residential-as",
+    "belynda-tharpe-trout-creek-cdd-shearwater-firstservice-residential-gener",
+    "rruben-vesta-property-services-ne-fl-amenity-network-director-of-lifesty",
+    "wes-hinton-wildlight-com-wildlight-east-nassau-stewardship-distri-community-developer-lifestyle",
+    "caregiving-coasjc-org-coa-center-at-uf-health-nocatee-x"
+  ],
+  "ui": [
+    "territory-help strip (6 bullets)",
+    "management_company chips (Vesta / First Coast CMS / MAY / GMS / FSR / Nocatee / Wildlight / Independent)",
+    "ross_type chips (Ross-type / Site booker / CAM / Ops phone / Own tree / Ross-gap / \u2026)",
+    "board_note Cluster line on annotated cards",
+    "wallet_class W-A/B/C chips + spend_hint one-liner"
+  ],
+  "live_urls": [
+    "https://onchainoffgrid-hub.github.io/sheehan-exec-suite/principal-dunk.html?v=296",
+    "https://onchainoffgrid-hub.github.io/critters-on-call/exec/principal-dunk.html?v=296"
+  ],
+  "mindy": "Mindy DeAngelis covered in territory help strip (HQ L&L/pizza door). Map lists mdeangelis@vestapropertyservices.com \u00b7 904-747-0181 x625 \u2014 no new dunk mailto added (account-vesta caution: verify before compose)."
+}

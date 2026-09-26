@@ -1,6 +1,6 @@
 {
-  "as_of": "2026-09-25 8:28 PM ET",
-  "board_version": "Board v2.9.5 \u00b7 Sep 25 \u00b7 screened FORM seats (CAPTCHA-ok)",
+  "as_of": "2026-09-25 9:01 PM ET",
+  "board_version": "Board v2.9.6 \u00b7 Sep 25 \u00b7 PM territory / Ross-type clusters",
   "label": "Principal dunk board v2.9 \u2014 Friday weekend programmers + Jax universities + Corporate Friday",
   "rule": "Compose-only. Friday filter = weekend programmers (church / CDD amenity / apartments / corporate-district) + secondary consumer rebook. University = separate filter, NOT Friday default. Published emails only. Done key sheehan_principal_dunk_done_v2 \u00b7 Notes sheehan_dunk_notes_v1.",
   "compose_authuser": "sheehanhomestead@gmail.com",
@@ -9,12 +9,12 @@
     "directors": 107,
     "pto_pta_presidents": 35,
     "other_decision_makers": 2,
-    "cdd_hoa": 74,
+    "cdd_hoa": 77,
     "university": 73,
     "enterprise": 20,
     "owe_followup": 13,
     "local_forms_optional": 19,
-    "mailto_total": 636,
+    "mailto_total": 642,
     "by_persona": {
       "senior": 49,
       "other": 60,
@@ -39,7 +39,7 @@
       "other": 3
     },
     "quick_emails": 1,
-    "premium": 29,
+    "premium": 32,
     "premium_map_gaps": 5,
     "rcsa": 13,
     "consumer": 174,
@@ -79,7 +79,18 @@
     "friday_consumer_rebook": 112,
     "consumer_warm_inbound": 55,
     "form_seats": 19,
-    "form_only_rows": 22
+    "form_only_rows": 22,
+    "territory_annotated": 101,
+    "by_management_company": {
+      "Nocatee": 11,
+      "Wildlight": 5,
+      "First Coast CMS": 11,
+      "Independent": 1,
+      "FSR": 12,
+      "Vesta": 41,
+      "GMS": 17,
+      "MAY": 3
+    }
   },
   "dedupe": {
     "deduped_as_of": "2026-09-25 15:35 ET",
@@ -234,7 +245,11 @@
           "quick_body": "Hi there,\n\nFollowing up \u2014 any open weekday morning for a resident animal visit at Nocatee, or should I close the loop this quarter?\n",
           "quick_email": true,
           "legacy_tier": 1,
-          "area": "St. Johns \u00b7 Nocatee"
+          "area": "St. Johns \u00b7 Nocatee",
+          "management_company": "Nocatee",
+          "chip_tags": [
+            "Nocatee"
+          ]
         },
         {
           "phone": "",
@@ -1265,7 +1280,8 @@
             "PayPal invoice \u00b7 Oct 24 \u00b7 $868.41",
             "Consumer",
             "Prior mobile",
-            "Friday"
+            "Friday",
+            "Wildlight"
           ],
           "quick_email": true,
           "purchase_status": "bought",
@@ -1304,7 +1320,8 @@
               "subject": "Sheehan Homestead / Critters follow-up",
               "source": "consumer_inbound"
             }
-          ]
+          ],
+          "management_company": "Wildlight"
         },
         {
           "phone": "",
@@ -1999,14 +2016,16 @@
           "owe_reason": "MONEY \u00b7 soft next-date (+ optional review)",
           "form_url": "",
           "area": "Metro Jax \u00b7 Consumer",
-          "role_chip": "Enterprise",
+          "role_chip": "Ross-peer",
           "fancy": false,
           "rcsa": false,
           "chip_tags": [
             "GoDaddy chat \u00b7 Dec 8",
             "Consumer",
             "Booked, no review",
-            "Friday"
+            "Friday",
+            "First Coast CMS",
+            "Ross-peer"
           ],
           "quick_email": true,
           "purchase_status": "bought",
@@ -2047,7 +2066,12 @@
               "amount": 848.0,
               "source": "annmarie_2025"
             }
-          ]
+          ],
+          "management_company": "First Coast CMS",
+          "ross_type": "Ross-peer",
+          "wallet_class": "A",
+          "board_note": "Liz Giacobbi \u00b7 SilverLeaf / FCCMS \u2014 engagement win-back (same tree as desk@).",
+          "spend_hint": "Wallet A \u2014 big amenity (~$1\u20133k+ multi-date possible)"
         },
         {
           "phone": "(904) 766-4993",
@@ -2621,7 +2645,8 @@
           "chip_tags": [
             "Consumer",
             "Booked, no review",
-            "Friday"
+            "Friday",
+            "First Coast CMS"
           ],
           "quick_email": true,
           "purchase_status": "bought",
@@ -2638,7 +2663,8 @@
           "lead_source_type": "prior",
           "lead_source_detail": null,
           "lead_source_date": null,
-          "lead_events": []
+          "lead_events": [],
+          "management_company": "First Coast CMS"
         },
         {
           "phone": "",
@@ -3953,13 +3979,15 @@
           "owe_reason": "MONEY \u00b7 soft next-date (+ optional review)",
           "form_url": "",
           "area": "Metro Jax \u00b7 Consumer",
-          "role_chip": "Enterprise",
+          "role_chip": "Club wallet",
           "fancy": false,
           "rcsa": false,
           "chip_tags": [
             "Consumer",
             "Booked, no review",
-            "Friday"
+            "Friday",
+            "Independent",
+            "Club wallet"
           ],
           "quick_email": true,
           "purchase_status": "bought",
@@ -3976,7 +4004,12 @@
           "lead_source_type": "prior",
           "lead_source_detail": null,
           "lead_source_date": null,
-          "lead_events": []
+          "lead_events": [],
+          "management_company": "Independent",
+          "ross_type": "Club wallet",
+          "wallet_class": "Club",
+          "board_note": "Jax GCC Director of Fun \u2014 independent club wallet (Ross warm-intro possible).",
+          "spend_hint": "Club / independent \u2014 one-off wallet, not a cluster"
         },
         {
           "phone": "(904) 665-5500",
@@ -4046,7 +4079,8 @@
             "PayPal invoice \u00b7 Jan 4 \u00b7 $550",
             "Consumer",
             "Booked, no review",
-            "Friday"
+            "Friday",
+            "FSR"
           ],
           "quick_email": true,
           "purchase_status": "bought",
@@ -4071,7 +4105,8 @@
               "amount": 550.0,
               "source": "annmarie_2025"
             }
-          ]
+          ],
+          "management_company": "FSR"
         },
         {
           "phone": "",
@@ -5321,7 +5356,8 @@
           "chip_tags": [
             "Consumer",
             "Booked, no review",
-            "Friday"
+            "Friday",
+            "Nocatee"
           ],
           "quick_email": true,
           "purchase_status": "bought",
@@ -5338,7 +5374,8 @@
           "lead_source_type": "prior",
           "lead_source_detail": null,
           "lead_source_date": null,
-          "lead_events": []
+          "lead_events": [],
+          "management_company": "Nocatee"
         },
         {
           "phone": "",
@@ -5809,7 +5846,9 @@
             "PayPal invoice \u00b7 Mar 28 \u00b7 $500",
             "Consumer",
             "Prior mobile",
-            "Friday"
+            "Friday",
+            "Vesta",
+            "Site booker"
           ],
           "quick_email": true,
           "purchase_status": "bought",
@@ -5840,7 +5879,12 @@
               "date": "2026-03-28",
               "source": "calendar_attendees"
             }
-          ]
+          ],
+          "management_company": "Vesta",
+          "ross_type": "Site booker",
+          "wallet_class": "B",
+          "board_note": "eTown / Cypress Bluff Vesta lifestyle inbox \u2014 site desk.",
+          "spend_hint": "Wallet B \u2014 mid amenity (~$1\u20132k)"
         },
         {
           "phone": "(904) 438-2464",
@@ -5866,7 +5910,9 @@
           "chip_tags": [
             "Consumer",
             "Booked, no review",
-            "Friday"
+            "Friday",
+            "Vesta",
+            "Site booker"
           ],
           "quick_email": true,
           "purchase_status": "bought",
@@ -5883,7 +5929,12 @@
           "lead_source_type": "prior",
           "lead_source_detail": null,
           "lead_source_date": null,
-          "lead_events": []
+          "lead_events": [],
+          "management_company": "Vesta",
+          "ross_type": "Site booker",
+          "wallet_class": "A",
+          "board_note": "JCP CDD (Vesta) \u2014 site / district path.",
+          "spend_hint": "Wallet A \u2014 big amenity (~$1\u20133k+ multi-date possible)"
         },
         {
           "phone": "(904) 436-6270",
@@ -5909,7 +5960,9 @@
           "chip_tags": [
             "Consumer",
             "Booked, no review",
-            "Friday"
+            "Friday",
+            "Vesta",
+            "Site booker"
           ],
           "quick_email": true,
           "purchase_status": "bought",
@@ -5926,7 +5979,12 @@
           "lead_source_type": "prior",
           "lead_source_detail": null,
           "lead_source_date": null,
-          "lead_events": []
+          "lead_events": [],
+          "management_company": "Vesta",
+          "ross_type": "Site booker",
+          "wallet_class": "B",
+          "board_note": "Heritage Landing Vesta camp / amenity \u2014 site desk.",
+          "spend_hint": "Wallet B \u2014 mid amenity (~$1\u20132k)"
         },
         {
           "phone": "(904) 438-2530",
@@ -5952,7 +6010,9 @@
           "chip_tags": [
             "Consumer",
             "Booked, no review",
-            "Friday"
+            "Friday",
+            "Vesta",
+            "Site booker"
           ],
           "quick_email": true,
           "purchase_status": "bought",
@@ -5969,7 +6029,12 @@
           "lead_source_type": "prior",
           "lead_source_detail": null,
           "lead_source_date": null,
-          "lead_events": []
+          "lead_events": [],
+          "management_company": "Vesta",
+          "ross_type": "Site booker",
+          "wallet_class": "A",
+          "board_note": "JCP / Vesta site path \u2014 CDD amenity desk books money.",
+          "spend_hint": "Wallet A \u2014 big amenity (~$1\u20133k+ multi-date possible)"
         },
         {
           "phone": "",
@@ -5996,7 +6061,9 @@
             "PayPal invoice \u00b7 Mar 28 \u00b7 $1135.25",
             "Consumer",
             "Prior mobile",
-            "Friday"
+            "Friday",
+            "Vesta",
+            "Site booker"
           ],
           "quick_email": true,
           "purchase_status": "bought",
@@ -6027,7 +6094,12 @@
               "date": "2026-03-28",
               "source": "calendar_attendees"
             }
-          ]
+          ],
+          "management_company": "Vesta",
+          "ross_type": "Site booker",
+          "wallet_class": "B",
+          "board_note": "Marshall Creek / Palencia Vesta path \u2014 site desk.",
+          "spend_hint": "Wallet B \u2014 mid amenity (~$1\u20132k)"
         },
         {
           "phone": "(904) 565-9385",
@@ -6053,7 +6125,9 @@
           "chip_tags": [
             "Consumer",
             "Booked, no review",
-            "Friday"
+            "Friday",
+            "Vesta",
+            "Site booker"
           ],
           "quick_email": true,
           "purchase_status": "bought",
@@ -6070,7 +6144,12 @@
           "lead_source_type": "prior",
           "lead_source_detail": null,
           "lead_source_date": null,
-          "lead_events": []
+          "lead_events": [],
+          "management_company": "Vesta",
+          "ross_type": "Site booker",
+          "wallet_class": "C",
+          "board_note": "Wynnfield Lakes (Vesta) \u2014 C/light asks only.",
+          "spend_hint": "Wallet C \u2014 small / thin (light asks only)"
         },
         {
           "phone": "",
@@ -10350,6 +10429,104 @@
       "hint": "Big CDD/HOA/master-planned amenity budgets ($20k\u2013$100k+ class per Ross/operator intel). Operator often sells ~$1k package; Sampson-class regulars ~$2\u20133k. Compose only \u2014 animals + open weeks.",
       "rows": [
         {
+          "id": "customerservice-maymgt-lifestyle-ross-ask",
+          "account": "MAY Management (portfolio Lifestyle ask)",
+          "contact": "MAY Customer Service",
+          "title": "Ask for Lifestyle / Resident Experience Ross",
+          "email": "customerservice@maymgt.com",
+          "phone": "904-461-9708",
+          "city": "St. Augustine",
+          "area": "St. Augustine / PVB / WGV / JC / Palm Coast",
+          "segment": "CDD / HOA",
+          "persona": "cdd",
+          "kind": "mailto",
+          "lane": "premium",
+          "tier": "A",
+          "premium": true,
+          "friday": true,
+          "friday_class": "cdd_amenity",
+          "website": "https://www.maymgt.com/",
+          "subject": "Who owns Lifestyle across MAY? \u2014 Critters on Call",
+          "why": "Friday priority \u2014 named portfolio Lifestyle Ross is a gap. Jane/Kelly are CAMs. Ask customerservice who owns Lifestyle.",
+          "spend_hint": "Wallet B \u2014 portfolio Lifestyle path (Ross gap)",
+          "management_company": "MAY",
+          "ross_type": "Ross-gap",
+          "wallet_class": "B",
+          "board_note": "Ask for named portfolio Lifestyle / Resident Experience Ross across MAY HOAs. Jane/Kelly = CAMs only.",
+          "chip_tags": [
+            "Friday",
+            "MAY",
+            "Ross-gap"
+          ],
+          "role_chip": "Ross-gap",
+          "quick_body": "Hi MAY team,\n\nMichael Sheehan with Sheehan Homestead / Critters on Call (Callahan / Jax metro). We bring a small mobile petting zoo for HOA/amenity family days.\n\nWho on your side owns Lifestyle / Resident Experience across the MAY portfolio (the person who can intro amenity desks the way a Ross-type would)? Happy to keep it short \u2014 just looking for the right name.\n\nMichael \u00b7 914-263-1311 \u00b7 Callahan, FL"
+        },
+        {
+          "id": "service-firstcoastcms-tony-shiver",
+          "account": "First Coast CMS (Tony Shiver / owner)",
+          "contact": "Tony Shiver",
+          "title": "Owner / President",
+          "email": "service@firstcoastcms.com",
+          "phone": "904-537-9034",
+          "city": "St. Augustine",
+          "area": "St. Johns \u00b7 SilverLeaf / FCCMS portfolio",
+          "segment": "CDD / HOA",
+          "persona": "cdd",
+          "kind": "mailto",
+          "lane": "premium",
+          "tier": "S",
+          "premium": true,
+          "friday": true,
+          "friday_class": "cdd_amenity",
+          "website": "https://www.firstcoastcms.com/",
+          "form_url": "https://www.firstcoastcms.com/contact",
+          "subject": "Lifestyle / amenity programming \u2014 Critters on Call",
+          "why": "Friday priority \u2014 THE Ross outside Vesta. Owner inbox opens lifestyle/amenity managers (SilverLeaf + FCCMS portfolio).",
+          "spend_hint": "Wallet A \u2014 second Vesta (FCCMS / SilverLeaf)",
+          "management_company": "First Coast CMS",
+          "ross_type": "Ross-type",
+          "wallet_class": "A",
+          "board_note": "Tony Shiver owner inbox \u2014 THE Ross outside Vesta. Opens lifestyle/amenity managers across FCCMS.",
+          "chip_tags": [
+            "Friday",
+            "First Coast CMS",
+            "Ross-type"
+          ],
+          "role_chip": "Ross-type"
+        },
+        {
+          "id": "wwheeler-vesta-ne-amenity-ops",
+          "account": "Vesta Property Services (NE Amenity Ops)",
+          "contact": "Winslow Wheeler",
+          "title": "Dir. Amenity Operations, N.E. Region",
+          "email": "wwheeler@vestapropertyservices.com",
+          "phone": "904-318-0796",
+          "city": "Jacksonville",
+          "area": "Metro Jax \u00b7 Vesta HQ / NE region",
+          "segment": "CDD / HOA",
+          "persona": "cdd",
+          "kind": "mailto",
+          "lane": "premium",
+          "tier": "S",
+          "premium": true,
+          "friday": true,
+          "friday_class": "cdd_amenity",
+          "website": "https://www.vestapropertyservices.com/",
+          "subject": "NE amenity programming \u2014 Critters on Call",
+          "why": "Friday priority \u2014 regional amenity ops boss. Vesta NE Amenity Ops above Glen St. Johns-class. Ross-type regional, not Saturday booker.",
+          "spend_hint": "Wallet A \u2014 regional amenity boss (opens site desks)",
+          "management_company": "Vesta",
+          "ross_type": "Ross-type",
+          "wallet_class": "A",
+          "board_note": "NE Region Amenity Ops boss \u2014 above Glen St. Johns-class. Regional, not a Saturday booker.",
+          "chip_tags": [
+            "Friday",
+            "Vesta",
+            "Ross-type"
+          ],
+          "role_chip": "Ross-type"
+        },
+        {
           "account": "Bartram Park CDD",
           "contact": "Jim Oliver",
           "title": "District Manager",
@@ -10365,14 +10542,21 @@
           "tier": "S",
           "id": "joliver-gmsnf-com-bartram-park-cdd-district-manager",
           "premium": true,
-          "spend_hint": "premium wallet / $20k\u2013$100k+ amenity budget class (operator intel)",
+          "spend_hint": "Wallet A \u2014 big amenity (~$1\u20133k+ multi-date possible)",
           "legacy_tier": 1,
           "area": "Metro Jax \u00b7 Bartram",
           "friday": true,
           "friday_class": "district",
           "chip_tags": [
-            "Friday"
-          ]
+            "Friday",
+            "GMS",
+            "Ops / district"
+          ],
+          "management_company": "GMS",
+          "ross_type": "Ops / district",
+          "wallet_class": "A",
+          "board_note": "GMS district \u2014 infrastructure-heavy; amenity events may sit with HOA/amenity phones.",
+          "role_chip": "Ops / district"
         },
         {
           "account": "Bartram Springs CDD",
@@ -10390,14 +10574,21 @@
           "tier": "S",
           "id": "mbiagetti-gmsnf-com-bartram-springs-cdd-district-manager",
           "premium": true,
-          "spend_hint": "premium wallet / $20k\u2013$100k+ amenity budget class (operator intel)",
+          "spend_hint": "Wallet A \u2014 big amenity (~$1\u20133k+ multi-date possible)",
           "legacy_tier": 1,
           "area": "Metro Jax \u00b7 Bartram",
           "friday": true,
           "friday_class": "district",
           "chip_tags": [
-            "Friday"
-          ]
+            "Friday",
+            "GMS",
+            "Ops / district"
+          ],
+          "management_company": "GMS",
+          "ross_type": "Ops / district",
+          "wallet_class": "A",
+          "board_note": "GMS district \u00b7 amenity phones 904-880-5156 cluster \u2014 multi-CDD, not one Ross lunch.",
+          "role_chip": "Ops / district"
         },
         {
           "account": "Bartram Springs CDD (GMS)",
@@ -10415,14 +10606,21 @@
           "tier": "S",
           "id": "ddemarco-gmsnf-com-bartram-springs-cdd-gms-amenity-manager",
           "premium": true,
-          "spend_hint": "premium wallet / $20k\u2013$100k+ amenity budget class (operator intel)",
+          "spend_hint": "Wallet A \u2014 big amenity (~$1\u20133k+ multi-date possible)",
           "legacy_tier": 1,
           "area": "Metro Jax \u00b7 Bartram",
           "friday": true,
           "friday_class": "cdd_amenity",
           "chip_tags": [
-            "Friday"
-          ]
+            "Friday",
+            "GMS",
+            "Ops phone"
+          ],
+          "management_company": "GMS",
+          "ross_type": "Ops phone",
+          "wallet_class": "A",
+          "board_note": "GMS amenity phone cluster \u2014 dial by CDD, not one pizza day. Bartram Springs amenity.",
+          "role_chip": "Ops phone"
         },
         {
           "account": "Bartram Springs HOA",
@@ -10440,14 +10638,21 @@
           "tier": "S",
           "id": "jarias-vestapropertyservices-com-bartram-springs-hoa-community-association-manag",
           "premium": true,
-          "spend_hint": "premium wallet / $20k\u2013$100k+ amenity budget class (operator intel)",
+          "spend_hint": "Wallet B \u2014 mid amenity (~$1\u20132k)",
           "legacy_tier": 1,
           "area": "Metro Jax \u00b7 Bartram",
           "friday": true,
           "friday_class": "cdd_amenity",
           "chip_tags": [
-            "Friday"
-          ]
+            "Friday",
+            "Vesta",
+            "CAM"
+          ],
+          "management_company": "Vesta",
+          "ross_type": "CAM",
+          "wallet_class": "B",
+          "board_note": "Bartram Springs HOA CAM (Vesta) \u2014 HOA path; amenity may sit with GMS phones.",
+          "role_chip": "CAM"
         },
         {
           "account": "Del Webb Nocatee / Del Webb Ponte Vedra (FirstService Residential)",
@@ -10465,14 +10670,21 @@
           "tier": "S",
           "id": "canopyclub-fsresidential-com-del-webb-nocatee-del-webb-ponte-vedra-firstservice-",
           "premium": true,
-          "spend_hint": "premium wallet / $20k\u2013$100k+ amenity budget class (operator intel)",
+          "spend_hint": "Wallet A \u2014 big amenity (~$1\u20133k+ multi-date possible)",
           "legacy_tier": 1,
           "area": "St. Johns \u00b7 Nocatee",
           "friday": true,
           "friday_class": "cdd_amenity",
           "chip_tags": [
-            "Friday"
-          ]
+            "Friday",
+            "FSR",
+            "Site booker"
+          ],
+          "management_company": "FSR",
+          "ross_type": "Site booker",
+          "wallet_class": "A",
+          "board_note": "Del Webb Nocatee Lifestyle (FSR) \u2014 own canopy, not Vesta.",
+          "role_chip": "Site booker"
         },
         {
           "account": "Durbin Crossing CDD (Vesta)",
@@ -10489,7 +10701,7 @@
           "lane": "cdd",
           "tier": "S",
           "premium": true,
-          "spend_hint": "EXISTING Durbin proof ~$2400/2 zoos \u00b7 premium wallet / $20k\u2013$100k+ amenity budget class (operator intel)",
+          "spend_hint": "Wallet A \u2014 big amenity (~$1\u20133k+ multi-date possible)",
           "id": "klsmith-durbin-crossing-cdd-vesta-lifestyle-director",
           "legacy_tier": 1,
           "area": "St. Johns \u00b7 Durbin Crossing",
@@ -10497,7 +10709,9 @@
           "friday_class": "cdd_amenity",
           "chip_tags": [
             "PayPal invoice \u00b7 Apr 24 \u00b7 $1256.66",
-            "Friday"
+            "Friday",
+            "Vesta",
+            "Site booker"
           ],
           "lead_source": "PayPal invoice \u00b7 Apr 24 \u00b7 $1256.66",
           "lead_source_type": "invoice",
@@ -10525,7 +10739,12 @@
               "amount": 750.0,
               "source": "annmarie_2026"
             }
-          ]
+          ],
+          "management_company": "Vesta",
+          "ross_type": "Site booker",
+          "wallet_class": "A",
+          "board_note": "Durbin site booker \u2014 money lands here; converts without Ross/Mindy on thread.",
+          "role_chip": "Site booker"
         },
         {
           "account": "Durbin Crossing CDD (Vesta)",
@@ -10542,15 +10761,22 @@
           "lane": "cdd",
           "tier": "S",
           "premium": true,
-          "spend_hint": "premium wallet / $20k\u2013$100k+ amenity budget class (operator intel)",
+          "spend_hint": "Wallet A \u2014 big amenity (~$1\u20133k+ multi-date possible)",
           "id": "jamorrow-durbin-crossing-cdd-vesta-amenity-manager",
           "legacy_tier": 1,
           "area": "St. Johns \u00b7 Durbin Crossing",
           "friday": true,
           "friday_class": "cdd_amenity",
           "chip_tags": [
-            "Friday"
-          ]
+            "Friday",
+            "Vesta",
+            "Site booker"
+          ],
+          "management_company": "Vesta",
+          "ross_type": "Site booker",
+          "wallet_class": "A",
+          "board_note": "Durbin amenity manager \u2014 site desk next to Kate.",
+          "role_chip": "Site booker"
         },
         {
           "account": "East Nassau Stewardship District (Wildlight)",
@@ -10567,15 +10793,22 @@
           "lane": "cdd",
           "tier": "S",
           "premium": true,
-          "spend_hint": "premium wallet / $20k\u2013$100k+ amenity budget class (operator intel)",
+          "spend_hint": "Wallet B \u2014 mid amenity (~$1\u20132k)",
           "id": "info-east-nassau-stewardship-district-wildlight-district-manager-amenity",
           "legacy_tier": 1,
           "area": "Nassau \u00b7 Wildlight",
           "friday": true,
           "friday_class": "cdd_amenity",
           "chip_tags": [
-            "Friday"
-          ]
+            "Friday",
+            "Wildlight",
+            "Own tree"
+          ],
+          "management_company": "Wildlight",
+          "ross_type": "Own tree",
+          "wallet_class": "B",
+          "board_note": "ENSD / Wildlight district inbox \u2014 pair Wes; own tree.",
+          "role_chip": "Own tree"
         },
         {
           "account": "eTown / Cypress Bluff CDD (Vesta)",
@@ -10592,7 +10825,7 @@
           "lane": "cdd",
           "tier": "S",
           "premium": true,
-          "spend_hint": "premium wallet / $20k\u2013$100k+ amenity budget class (operator intel)",
+          "spend_hint": "Wallet B \u2014 mid amenity (~$1\u20132k)",
           "id": "recharge-etown-cypress-bluff-cdd-vesta-community-manager-lifestyle-recha",
           "legacy_tier": 1,
           "area": "Metro Jax \u00b7 eTown",
@@ -10600,7 +10833,9 @@
           "friday_class": "cdd_amenity",
           "chip_tags": [
             "PayPal invoice \u00b7 Mar 28 \u00b7 $500",
-            "Friday"
+            "Friday",
+            "Vesta",
+            "Site booker"
           ],
           "lead_source": "PayPal invoice \u00b7 Mar 28 \u00b7 $500",
           "lead_source_type": "invoice",
@@ -10620,7 +10855,12 @@
               "date": "2026-03-28",
               "source": "calendar_attendees"
             }
-          ]
+          ],
+          "management_company": "Vesta",
+          "ross_type": "Site booker",
+          "wallet_class": "B",
+          "board_note": "eTown / Cypress Bluff Vesta lifestyle inbox \u2014 site desk.",
+          "role_chip": "Site booker"
         },
         {
           "account": "Johns Creek / Brandy Creek CDD (Vesta)",
@@ -10645,7 +10885,9 @@
           "friday_class": "cdd_amenity",
           "chip_tags": [
             "PayPal invoice \u00b7 Mar 28 \u00b7 $406.25",
-            "Friday"
+            "Friday",
+            "Vesta",
+            "Site booker"
           ],
           "lead_source": "PayPal invoice \u00b7 Mar 28 \u00b7 $406.25",
           "lead_source_type": "invoice",
@@ -10665,7 +10907,12 @@
               "date": "2026-03-28",
               "source": "calendar_attendees"
             }
-          ]
+          ],
+          "management_company": "Vesta",
+          "ross_type": "Site booker",
+          "wallet_class": "C",
+          "board_note": "Johns Creek \u2014 light/C-class site desk.",
+          "role_chip": "Site booker"
         },
         {
           "account": "Marshall Creek CDD (Palencia) \u2014 Vesta District",
@@ -10682,15 +10929,22 @@
           "lane": "cdd",
           "tier": "S",
           "premium": true,
-          "spend_hint": "premium wallet / $20k\u2013$100k+ amenity budget class (operator intel)",
+          "spend_hint": "Wallet B \u2014 mid amenity (~$1\u20132k)",
           "id": "dmcinnes-marshall-creek-cdd-palencia-vesta-district-district-manager",
           "legacy_tier": 1,
           "area": "St. Johns \u00b7 Palencia",
           "friday": true,
           "friday_class": "district",
           "chip_tags": [
-            "Friday"
-          ]
+            "Friday",
+            "Vesta",
+            "Ops / district"
+          ],
+          "management_company": "Vesta",
+          "ross_type": "Ops / district",
+          "wallet_class": "B",
+          "board_note": "Palencia district (Vesta) \u2014 map amenity desk; rarely the entertainment buyer.",
+          "role_chip": "Ops / district"
         },
         {
           "account": "Marshall Creek CDD / Palencia amenities (Vesta)",
@@ -10707,10 +10961,19 @@
           "lane": "cdd",
           "tier": "S",
           "premium": true,
-          "spend_hint": "premium wallet / $20k\u2013$100k+ amenity budget class (operator intel)",
+          "spend_hint": "Wallet B \u2014 mid amenity (~$1\u20132k)",
           "id": "dpowers-marshall-creek-cdd-palencia-amenities-vesta-assistant-general-ma",
           "legacy_tier": 1,
-          "area": "St. Johns \u00b7 Palencia"
+          "area": "St. Johns \u00b7 Palencia",
+          "management_company": "Vesta",
+          "ross_type": "Site booker",
+          "wallet_class": "B",
+          "board_note": "Palencia amenities \u2014 site booker (B-class).",
+          "chip_tags": [
+            "Vesta",
+            "Site booker"
+          ],
+          "role_chip": "Site booker"
         },
         {
           "account": "Marshall Creek CDD / Palencia amenities (Vesta)",
@@ -10727,10 +10990,19 @@
           "lane": "cdd",
           "tier": "S",
           "premium": true,
-          "spend_hint": "premium wallet / $20k\u2013$100k+ amenity budget class (operator intel)",
+          "spend_hint": "Wallet B \u2014 mid amenity (~$1\u20132k)",
           "id": "jmoore-marshall-creek-cdd-palencia-amenities-vesta-general-manager",
           "legacy_tier": 1,
-          "area": "St. Johns \u00b7 Palencia"
+          "area": "St. Johns \u00b7 Palencia",
+          "management_company": "Vesta",
+          "ross_type": "Site booker",
+          "wallet_class": "B",
+          "board_note": "Palencia GM \u2014 site desk, not Ross.",
+          "chip_tags": [
+            "Vesta",
+            "Site booker"
+          ],
+          "role_chip": "Site booker"
         },
         {
           "account": "Nocatee / Tolomato CDD (The PARC Group)",
@@ -10748,14 +11020,21 @@
           "tier": "S",
           "id": "help-nocatee-com-nocatee-tolomato-cdd-the-parc-group-event-communications-commun",
           "premium": true,
-          "spend_hint": "premium wallet / $20k\u2013$100k+ amenity budget class (operator intel)",
+          "spend_hint": "Wallet A \u2014 big amenity (~$1\u20133k+ multi-date possible)",
           "legacy_tier": 1,
           "area": "St. Johns \u00b7 Nocatee",
           "friday": true,
           "friday_class": "cdd_amenity",
           "chip_tags": [
-            "Friday"
-          ]
+            "Friday",
+            "Nocatee",
+            "Own tree"
+          ],
+          "management_company": "Nocatee",
+          "ross_type": "Own tree",
+          "wallet_class": "A",
+          "board_note": "Nocatee / Tolomato mega-community \u2014 own ecosystem, not Vesta.",
+          "role_chip": "Own tree"
         },
         {
           "account": "Nocatee Welcome Center (The PARC Group)",
@@ -10773,9 +11052,18 @@
           "tier": "S",
           "id": "welcomecenter-nocatee-com-nocatee-welcome-center-the-parc-group-manager-welcome-",
           "premium": true,
-          "spend_hint": "premium wallet / $20k\u2013$100k+ amenity budget class (operator intel)",
+          "spend_hint": "Wallet A \u2014 big amenity (~$1\u20133k+ multi-date possible)",
           "legacy_tier": 1,
-          "area": "St. Johns \u00b7 Nocatee"
+          "area": "St. Johns \u00b7 Nocatee",
+          "management_company": "Nocatee",
+          "ross_type": "Own tree",
+          "wallet_class": "A",
+          "board_note": "Nocatee Welcome Center \u2014 own tree.",
+          "chip_tags": [
+            "Nocatee",
+            "Own tree"
+          ],
+          "role_chip": "Own tree"
         },
         {
           "id": "tom-salmon-marshallcreekcdd-com-palencia-tennis-center-director-of-tennis",
@@ -10824,8 +11112,10 @@
           "friday_class": "apartment",
           "chip_tags": [
             "Friday",
-            "Apartment"
-          ]
+            "Apartment",
+            "Nocatee"
+          ],
+          "management_company": "Nocatee"
         },
         {
           "account": "RiverTown / Rivers Edge CDD (Vesta)",
@@ -10842,7 +11132,7 @@
           "lane": "cdd",
           "tier": "S",
           "premium": true,
-          "spend_hint": "premium wallet / $20k\u2013$100k+ amenity budget class (operator intel)",
+          "spend_hint": "Wallet A \u2014 big amenity (~$1\u20133k+ multi-date possible)",
           "id": "kfatuch-rivertown-rivers-edge-cdd-vesta-assistant-general-manager-events",
           "legacy_tier": 1,
           "area": "St. Johns \u00b7 RiverTown",
@@ -10850,7 +11140,9 @@
           "friday_class": "cdd_amenity",
           "chip_tags": [
             "PayPal invoice \u00b7 Mar 28 \u00b7 $874.25",
-            "Friday"
+            "Friday",
+            "Vesta",
+            "Site booker"
           ],
           "lead_source": "PayPal invoice \u00b7 Mar 28 \u00b7 $874.25",
           "lead_source_type": "invoice",
@@ -10870,7 +11162,12 @@
               "date": "2026-03-28",
               "source": "calendar_attendees"
             }
-          ]
+          ],
+          "management_company": "Vesta",
+          "ross_type": "Site booker",
+          "wallet_class": "A",
+          "board_note": "RiverTown events / AGM \u2014 site money, not Ross.",
+          "role_chip": "Site booker"
         },
         {
           "account": "RiverTown / Rivers Edge CDD (Vesta)",
@@ -10887,15 +11184,22 @@
           "lane": "cdd",
           "tier": "S",
           "premium": true,
-          "spend_hint": "premium wallet / $20k\u2013$100k+ amenity budget class (operator intel)",
+          "spend_hint": "Wallet A \u2014 big amenity (~$1\u20133k+ multi-date possible)",
           "id": "kcouncil-rivertown-rivers-edge-cdd-vesta-amenity-manager",
           "legacy_tier": 1,
           "area": "St. Johns \u00b7 RiverTown",
           "friday": true,
           "friday_class": "cdd_amenity",
           "chip_tags": [
-            "Friday"
-          ]
+            "Friday",
+            "Vesta",
+            "Site booker"
+          ],
+          "management_company": "Vesta",
+          "ross_type": "Site booker",
+          "wallet_class": "A",
+          "board_note": "RiverTown amenity manager \u2014 site desk.",
+          "role_chip": "Site booker"
         },
         {
           "account": "Sampson Creek CDD / St. Johns Golf & CC amenities (Vesta)",
@@ -10915,7 +11219,16 @@
           "spend_hint": "~$2\u20133k regular package (operator intel) \u00b7 books often",
           "id": "staylor-sampson-creek-cdd-st-johns-golf-cc-amenities-vesta-general-manag",
           "legacy_tier": 1,
-          "area": "St. Johns \u00b7 Sampson Creek"
+          "area": "St. Johns \u00b7 Sampson Creek",
+          "management_company": "Vesta",
+          "ross_type": "Site booker",
+          "wallet_class": "A",
+          "board_note": "Sampson / SJG amenities GM \u2014 site booker.",
+          "chip_tags": [
+            "Vesta",
+            "Site booker"
+          ],
+          "role_chip": "Site booker"
         },
         {
           "account": "St. Johns Golf & Country Club",
@@ -10957,15 +11270,22 @@
           "lane": "cdd",
           "tier": "S",
           "premium": true,
-          "spend_hint": "premium wallet / $20k\u2013$100k+ amenity budget class (operator intel)",
+          "spend_hint": "Wallet A \u2014 big amenity (~$1\u20133k+ multi-date possible)",
           "id": "oingram-tamaya-beach-cdd-vesta-amenity-manager",
           "legacy_tier": 1,
           "area": "Metro Jax \u00b7 Jacksonville",
           "friday": true,
           "friday_class": "cdd_amenity",
           "chip_tags": [
-            "Friday"
-          ]
+            "Friday",
+            "Vesta",
+            "Site booker"
+          ],
+          "management_company": "Vesta",
+          "ross_type": "Site booker",
+          "wallet_class": "A",
+          "board_note": "Tamaya amenity manager \u2014 site desk.",
+          "role_chip": "Site booker"
         },
         {
           "account": "Tamaya / Beach CDD (Vesta)",
@@ -10982,7 +11302,7 @@
           "lane": "cdd",
           "tier": "S",
           "premium": true,
-          "spend_hint": "premium wallet / $20k\u2013$100k+ amenity budget class (operator intel)",
+          "spend_hint": "Wallet A \u2014 big amenity (~$1\u20133k+ multi-date possible)",
           "id": "kfitzhugh-tamaya-beach-cdd-vesta-assistant-amenity-manager-events",
           "legacy_tier": 1,
           "area": "Metro Jax \u00b7 Jacksonville",
@@ -10990,7 +11310,9 @@
           "friday_class": "cdd_amenity",
           "chip_tags": [
             "PayPal invoice \u00b7 Oct 17 \u00b7 $1181.91",
-            "Friday"
+            "Friday",
+            "Vesta",
+            "Site booker"
           ],
           "lead_source": "PayPal invoice \u00b7 Oct 17 \u00b7 $1181.91",
           "lead_source_type": "invoice",
@@ -11011,7 +11333,12 @@
               "amount": 660.5,
               "source": "annmarie_2026"
             }
-          ]
+          ],
+          "management_company": "Vesta",
+          "ross_type": "Site booker",
+          "wallet_class": "A",
+          "board_note": "Tamaya events / AA \u2014 site booker.",
+          "role_chip": "Site booker"
         },
         {
           "account": "Tamaya HOA",
@@ -11060,8 +11387,10 @@
           "friday": true,
           "friday_class": "district",
           "chip_tags": [
-            "Friday"
-          ]
+            "Friday",
+            "FSR"
+          ],
+          "management_company": "FSR"
         },
         {
           "account": "Trout Creek CDD / Shearwater (FirstService Residential)",
@@ -11078,10 +11407,19 @@
           "lane": "cdd",
           "tier": "S",
           "premium": true,
-          "spend_hint": "premium wallet / $20k\u2013$100k+ amenity budget class (operator intel)",
+          "spend_hint": "Wallet A \u2014 big amenity (~$1\u20133k+ multi-date possible)",
           "id": "jessica-knutelsky-trout-creek-cdd-shearwater-firstservice-residential-as",
           "legacy_tier": 1,
-          "area": "St. Johns \u00b7 St. Augustine"
+          "area": "St. Johns \u00b7 St. Augustine",
+          "management_company": "FSR",
+          "ross_type": "Site booker",
+          "wallet_class": "A",
+          "board_note": "Shearwater FSR amenity path \u2014 own tree.",
+          "chip_tags": [
+            "FSR",
+            "Site booker"
+          ],
+          "role_chip": "Site booker"
         },
         {
           "account": "Trout Creek CDD / Shearwater (FirstService Residential)",
@@ -11098,10 +11436,19 @@
           "lane": "cdd",
           "tier": "S",
           "premium": true,
-          "spend_hint": "premium wallet / $20k\u2013$100k+ amenity budget class (operator intel)",
+          "spend_hint": "Wallet A \u2014 big amenity (~$1\u20133k+ multi-date possible)",
           "id": "belynda-tharpe-trout-creek-cdd-shearwater-firstservice-residential-gener",
           "legacy_tier": 1,
-          "area": "St. Johns \u00b7 St. Augustine"
+          "area": "St. Johns \u00b7 St. Augustine",
+          "management_company": "FSR",
+          "ross_type": "Site + brand",
+          "wallet_class": "A",
+          "board_note": "Shearwater / Trout Creek FSR GM \u2014 own tree, not Vesta. Pair Marcia/Lifestyle if needed.",
+          "chip_tags": [
+            "FSR",
+            "Site + brand"
+          ],
+          "role_chip": "Site + brand"
         },
         {
           "account": "Vesta Property Services (NE FL amenity network)",
@@ -11118,15 +11465,22 @@
           "lane": "cdd",
           "tier": "S",
           "premium": true,
-          "spend_hint": "premium wallet / $20k\u2013$100k+ amenity budget class (operator intel)",
+          "spend_hint": "Wallet A \u2014 big amenity (~$1\u20133k+ multi-date possible)",
           "id": "rruben-vesta-property-services-ne-fl-amenity-network-director-of-lifesty",
           "legacy_tier": 1,
           "area": "Metro Jax \u00b7 Jacksonville",
           "friday": true,
           "friday_class": "cdd_amenity",
           "chip_tags": [
-            "Friday"
-          ]
+            "Friday",
+            "Vesta",
+            "Ross-type"
+          ],
+          "management_company": "Vesta",
+          "ross_type": "Ross-type",
+          "wallet_class": "A",
+          "board_note": "List intro \u2014 not every Vesta buy. Pair with site bookers for money. Mindy = HQ L&L/pizza door; Winslow = NE Amenity Ops.",
+          "role_chip": "Ross-type"
         },
         {
           "id": "wes-hinton-wildlight-com-wildlight-east-nassau-stewardship-distri-community-developer-lifestyle",
@@ -11146,14 +11500,21 @@
           "kind": "mailto",
           "why": "Friday priority \u2014 amenity / lifestyle / community managers program weekends. Org whitespace DM email",
           "premium": true,
-          "spend_hint": "premium wallet / $20k\u2013$100k+ amenity budget class (operator intel)",
+          "spend_hint": "Wallet B \u2014 mid amenity (~$1\u20132k)",
           "legacy_tier": 2,
           "area": "Nassau \u00b7 Wildlight",
           "friday": true,
           "friday_class": "cdd_amenity",
           "chip_tags": [
-            "Friday"
-          ]
+            "Friday",
+            "Wildlight",
+            "Own tree"
+          ],
+          "management_company": "Wildlight",
+          "ross_type": "Own tree",
+          "wallet_class": "B",
+          "board_note": "Wildlight developer lifestyle \u2014 own tree (Nassau), not Vesta.",
+          "role_chip": "Own tree"
         }
       ]
     },
@@ -11622,7 +11983,11 @@
           "kind": "mailto",
           "why": "Org whitespace DM email",
           "legacy_tier": 2,
-          "area": "St. Johns \u00b7 Nocatee"
+          "area": "St. Johns \u00b7 Nocatee",
+          "management_company": "Nocatee",
+          "chip_tags": [
+            "Nocatee"
+          ]
         },
         {
           "account": "Aberdeen CDD",
@@ -11644,8 +12009,10 @@
           "friday": true,
           "friday_class": "cdd_amenity",
           "chip_tags": [
-            "Friday"
-          ]
+            "Friday",
+            "FSR"
+          ],
+          "management_company": "FSR"
         },
         {
           "account": "Aberdeen Stonehaven Townhomes (MAY)",
@@ -11667,8 +12034,16 @@
           "friday": true,
           "friday_class": "cdd_amenity",
           "chip_tags": [
-            "Friday"
-          ]
+            "Friday",
+            "MAY",
+            "CAM"
+          ],
+          "management_company": "MAY",
+          "ross_type": "CAM",
+          "wallet_class": "C",
+          "board_note": "Jane = CAM (Stonehaven-class) \u2014 not full Ross. Ask customerservice for portfolio Lifestyle Ross.",
+          "role_chip": "CAM",
+          "spend_hint": "Wallet C \u2014 small / thin (light asks only)"
         },
         {
           "account": "Amelia Concourse CDD / Heron Isles CDD (GMS)",
@@ -11690,8 +12065,16 @@
           "friday": true,
           "friday_class": "cdd_amenity",
           "chip_tags": [
-            "Friday"
-          ]
+            "Friday",
+            "GMS",
+            "Ops phone"
+          ],
+          "management_company": "GMS",
+          "ross_type": "Ops phone",
+          "wallet_class": "B",
+          "board_note": "GMS amenity/ops \u2014 dial this CDD phone; no single pizza Ross.",
+          "role_chip": "Ops phone",
+          "spend_hint": "Wallet B \u2014 mid amenity (~$1\u20132k)"
         },
         {
           "account": "Amelia National CDD",
@@ -11736,8 +12119,16 @@
           "friday": true,
           "friday_class": "cdd_amenity",
           "chip_tags": [
-            "Friday"
-          ]
+            "Friday",
+            "GMS",
+            "Ops phone"
+          ],
+          "management_company": "GMS",
+          "ross_type": "Ops phone",
+          "wallet_class": "B",
+          "board_note": "GMS amenity phone (Chip) \u2014 multi-CDD cluster.",
+          "role_chip": "Ops phone",
+          "spend_hint": "Wallet B \u2014 mid amenity (~$1\u20132k)"
         },
         {
           "account": "Armstrong CDD / Greyhawk (GMS)",
@@ -11759,8 +12150,16 @@
           "friday": true,
           "friday_class": "cdd_amenity",
           "chip_tags": [
-            "Friday"
-          ]
+            "Friday",
+            "GMS",
+            "Ops phone"
+          ],
+          "management_company": "GMS",
+          "ross_type": "Ops phone",
+          "wallet_class": "B",
+          "board_note": "GMS Greyhawk amenity \u2014 dial by CDD.",
+          "role_chip": "Ops phone",
+          "spend_hint": "Wallet B \u2014 mid amenity (~$1\u20132k)"
         },
         {
           "account": "Bellarmine University",
@@ -11921,8 +12320,10 @@
           "friday_class": "apartment",
           "chip_tags": [
             "Friday",
-            "Apartment"
-          ]
+            "Apartment",
+            "First Coast CMS"
+          ],
+          "management_company": "First Coast CMS"
         },
         {
           "account": "Cimarrone Golf Club",
@@ -14093,7 +14494,11 @@
           "kind": "mailto",
           "why": "Org whitespace DM email",
           "legacy_tier": 2,
-          "area": "St. Johns \u00b7 Nocatee"
+          "area": "St. Johns \u00b7 Nocatee",
+          "management_company": "Nocatee",
+          "chip_tags": [
+            "Nocatee"
+          ]
         },
         {
           "id": "ksperanza-canopyway-com-canopy-way-adult-day-care-x",
@@ -14482,8 +14887,10 @@
           "friday_class": "apartment",
           "chip_tags": [
             "Friday",
-            "Apartment"
-          ]
+            "Apartment",
+            "Nocatee"
+          ],
+          "management_company": "Nocatee"
         },
         {
           "id": "tharris-coasjc-org-river-house-x",
@@ -14783,14 +15190,21 @@
           "kind": "mailto",
           "why": "Friday priority \u2014 amenity / lifestyle / community managers program weekends. Org whitespace DM email",
           "premium": true,
-          "spend_hint": "premium wallet / $20k\u2013$100k+ amenity budget class (operator intel)",
+          "spend_hint": "Wallet B \u2014 mid amenity (~$1\u20132k)",
           "legacy_tier": 2,
           "area": "Nassau \u00b7 Wildlight",
           "friday": true,
           "friday_class": "cdd_amenity",
           "chip_tags": [
-            "Friday"
-          ]
+            "Friday",
+            "Wildlight",
+            "Own tree"
+          ],
+          "management_company": "Wildlight",
+          "ross_type": "Own tree",
+          "wallet_class": "B",
+          "board_note": "Wildlight developer lifestyle \u2014 own tree (Nassau), not Vesta.",
+          "role_chip": "Own tree"
         },
         {
           "id": "taylorh-fbcjax-com-first-baptist-church-of-jacksonville-dow-family-ministry-trunk-of-treat",
@@ -14855,7 +15269,11 @@
           "kind": "mailto",
           "why": "Decision-maker seat with public email",
           "legacy_tier": 2,
-          "area": "St. Johns \u00b7 Nocatee"
+          "area": "St. Johns \u00b7 Nocatee",
+          "management_company": "Nocatee",
+          "chip_tags": [
+            "Nocatee"
+          ]
         },
         {
           "id": "stjohns-tlechildcare-com-the-learning-experience-st-johns-assistant-director",
@@ -16681,6 +17099,104 @@
       "hint": "Community / amenity / fall festival \u2014 allow list. Friday = amenity + district/ops.",
       "rows": [
         {
+          "id": "customerservice-maymgt-lifestyle-ross-ask",
+          "account": "MAY Management (portfolio Lifestyle ask)",
+          "contact": "MAY Customer Service",
+          "title": "Ask for Lifestyle / Resident Experience Ross",
+          "email": "customerservice@maymgt.com",
+          "phone": "904-461-9708",
+          "city": "St. Augustine",
+          "area": "St. Augustine / PVB / WGV / JC / Palm Coast",
+          "segment": "CDD / HOA",
+          "persona": "cdd",
+          "kind": "mailto",
+          "lane": "premium",
+          "tier": "A",
+          "premium": true,
+          "friday": true,
+          "friday_class": "cdd_amenity",
+          "website": "https://www.maymgt.com/",
+          "subject": "Who owns Lifestyle across MAY? \u2014 Critters on Call",
+          "why": "Friday priority \u2014 named portfolio Lifestyle Ross is a gap. Jane/Kelly are CAMs. Ask customerservice who owns Lifestyle.",
+          "spend_hint": "Wallet B \u2014 portfolio Lifestyle path (Ross gap)",
+          "management_company": "MAY",
+          "ross_type": "Ross-gap",
+          "wallet_class": "B",
+          "board_note": "Ask for named portfolio Lifestyle / Resident Experience Ross across MAY HOAs. Jane/Kelly = CAMs only.",
+          "chip_tags": [
+            "Friday",
+            "MAY",
+            "Ross-gap"
+          ],
+          "role_chip": "Ross-gap",
+          "quick_body": "Hi MAY team,\n\nMichael Sheehan with Sheehan Homestead / Critters on Call (Callahan / Jax metro). We bring a small mobile petting zoo for HOA/amenity family days.\n\nWho on your side owns Lifestyle / Resident Experience across the MAY portfolio (the person who can intro amenity desks the way a Ross-type would)? Happy to keep it short \u2014 just looking for the right name.\n\nMichael \u00b7 914-263-1311 \u00b7 Callahan, FL"
+        },
+        {
+          "id": "service-firstcoastcms-tony-shiver",
+          "account": "First Coast CMS (Tony Shiver / owner)",
+          "contact": "Tony Shiver",
+          "title": "Owner / President",
+          "email": "service@firstcoastcms.com",
+          "phone": "904-537-9034",
+          "city": "St. Augustine",
+          "area": "St. Johns \u00b7 SilverLeaf / FCCMS portfolio",
+          "segment": "CDD / HOA",
+          "persona": "cdd",
+          "kind": "mailto",
+          "lane": "premium",
+          "tier": "S",
+          "premium": true,
+          "friday": true,
+          "friday_class": "cdd_amenity",
+          "website": "https://www.firstcoastcms.com/",
+          "form_url": "https://www.firstcoastcms.com/contact",
+          "subject": "Lifestyle / amenity programming \u2014 Critters on Call",
+          "why": "Friday priority \u2014 THE Ross outside Vesta. Owner inbox opens lifestyle/amenity managers (SilverLeaf + FCCMS portfolio).",
+          "spend_hint": "Wallet A \u2014 second Vesta (FCCMS / SilverLeaf)",
+          "management_company": "First Coast CMS",
+          "ross_type": "Ross-type",
+          "wallet_class": "A",
+          "board_note": "Tony Shiver owner inbox \u2014 THE Ross outside Vesta. Opens lifestyle/amenity managers across FCCMS.",
+          "chip_tags": [
+            "Friday",
+            "First Coast CMS",
+            "Ross-type"
+          ],
+          "role_chip": "Ross-type"
+        },
+        {
+          "id": "wwheeler-vesta-ne-amenity-ops",
+          "account": "Vesta Property Services (NE Amenity Ops)",
+          "contact": "Winslow Wheeler",
+          "title": "Dir. Amenity Operations, N.E. Region",
+          "email": "wwheeler@vestapropertyservices.com",
+          "phone": "904-318-0796",
+          "city": "Jacksonville",
+          "area": "Metro Jax \u00b7 Vesta HQ / NE region",
+          "segment": "CDD / HOA",
+          "persona": "cdd",
+          "kind": "mailto",
+          "lane": "premium",
+          "tier": "S",
+          "premium": true,
+          "friday": true,
+          "friday_class": "cdd_amenity",
+          "website": "https://www.vestapropertyservices.com/",
+          "subject": "NE amenity programming \u2014 Critters on Call",
+          "why": "Friday priority \u2014 regional amenity ops boss. Vesta NE Amenity Ops above Glen St. Johns-class. Ross-type regional, not Saturday booker.",
+          "spend_hint": "Wallet A \u2014 regional amenity boss (opens site desks)",
+          "management_company": "Vesta",
+          "ross_type": "Ross-type",
+          "wallet_class": "A",
+          "board_note": "NE Region Amenity Ops boss \u2014 above Glen St. Johns-class. Regional, not a Saturday booker.",
+          "chip_tags": [
+            "Friday",
+            "Vesta",
+            "Ross-type"
+          ],
+          "role_chip": "Ross-type"
+        },
+        {
           "account": "Aberdeen CDD",
           "contact": "Kate Trivelpiece",
           "title": "Lifestyle Director",
@@ -16700,8 +17216,10 @@
           "friday": true,
           "friday_class": "cdd_amenity",
           "chip_tags": [
-            "Friday"
-          ]
+            "Friday",
+            "FSR"
+          ],
+          "management_company": "FSR"
         },
         {
           "account": "Aberdeen Stonehaven Townhomes (MAY)",
@@ -16723,8 +17241,16 @@
           "friday": true,
           "friday_class": "cdd_amenity",
           "chip_tags": [
-            "Friday"
-          ]
+            "Friday",
+            "MAY",
+            "CAM"
+          ],
+          "management_company": "MAY",
+          "ross_type": "CAM",
+          "wallet_class": "C",
+          "board_note": "Jane = CAM (Stonehaven-class) \u2014 not full Ross. Ask customerservice for portfolio Lifestyle Ross.",
+          "role_chip": "CAM",
+          "spend_hint": "Wallet C \u2014 small / thin (light asks only)"
         },
         {
           "account": "Amelia Concourse CDD / Heron Isles CDD (GMS)",
@@ -16746,8 +17272,16 @@
           "friday": true,
           "friday_class": "cdd_amenity",
           "chip_tags": [
-            "Friday"
-          ]
+            "Friday",
+            "GMS",
+            "Ops phone"
+          ],
+          "management_company": "GMS",
+          "ross_type": "Ops phone",
+          "wallet_class": "B",
+          "board_note": "GMS amenity/ops \u2014 dial this CDD phone; no single pizza Ross.",
+          "role_chip": "Ops phone",
+          "spend_hint": "Wallet B \u2014 mid amenity (~$1\u20132k)"
         },
         {
           "account": "Amelia National CDD",
@@ -16792,8 +17326,16 @@
           "friday": true,
           "friday_class": "cdd_amenity",
           "chip_tags": [
-            "Friday"
-          ]
+            "Friday",
+            "GMS",
+            "Ops phone"
+          ],
+          "management_company": "GMS",
+          "ross_type": "Ops phone",
+          "wallet_class": "B",
+          "board_note": "GMS amenity phone (Chip) \u2014 multi-CDD cluster.",
+          "role_chip": "Ops phone",
+          "spend_hint": "Wallet B \u2014 mid amenity (~$1\u20132k)"
         },
         {
           "account": "Armstrong CDD / Greyhawk (GMS)",
@@ -16815,8 +17357,16 @@
           "friday": true,
           "friday_class": "cdd_amenity",
           "chip_tags": [
-            "Friday"
-          ]
+            "Friday",
+            "GMS",
+            "Ops phone"
+          ],
+          "management_company": "GMS",
+          "ross_type": "Ops phone",
+          "wallet_class": "B",
+          "board_note": "GMS Greyhawk amenity \u2014 dial by CDD.",
+          "role_chip": "Ops phone",
+          "spend_hint": "Wallet B \u2014 mid amenity (~$1\u20132k)"
         },
         {
           "account": "Bainebridge CDD",
@@ -16857,14 +17407,21 @@
           "tier": "S",
           "id": "joliver-gmsnf-com-bartram-park-cdd-district-manager",
           "premium": true,
-          "spend_hint": "premium wallet / $20k\u2013$100k+ amenity budget class (operator intel)",
+          "spend_hint": "Wallet A \u2014 big amenity (~$1\u20133k+ multi-date possible)",
           "legacy_tier": 1,
           "area": "Metro Jax \u00b7 Bartram",
           "friday": true,
           "friday_class": "district",
           "chip_tags": [
-            "Friday"
-          ]
+            "Friday",
+            "GMS",
+            "Ops / district"
+          ],
+          "management_company": "GMS",
+          "ross_type": "Ops / district",
+          "wallet_class": "A",
+          "board_note": "GMS district \u2014 infrastructure-heavy; amenity events may sit with HOA/amenity phones.",
+          "role_chip": "Ops / district"
         },
         {
           "account": "Bartram Springs CDD",
@@ -16882,14 +17439,21 @@
           "tier": "S",
           "id": "mbiagetti-gmsnf-com-bartram-springs-cdd-district-manager",
           "premium": true,
-          "spend_hint": "premium wallet / $20k\u2013$100k+ amenity budget class (operator intel)",
+          "spend_hint": "Wallet A \u2014 big amenity (~$1\u20133k+ multi-date possible)",
           "legacy_tier": 1,
           "area": "Metro Jax \u00b7 Bartram",
           "friday": true,
           "friday_class": "district",
           "chip_tags": [
-            "Friday"
-          ]
+            "Friday",
+            "GMS",
+            "Ops / district"
+          ],
+          "management_company": "GMS",
+          "ross_type": "Ops / district",
+          "wallet_class": "A",
+          "board_note": "GMS district \u00b7 amenity phones 904-880-5156 cluster \u2014 multi-CDD, not one Ross lunch.",
+          "role_chip": "Ops / district"
         },
         {
           "account": "Bartram Springs CDD (GMS)",
@@ -16907,14 +17471,21 @@
           "tier": "S",
           "id": "ddemarco-gmsnf-com-bartram-springs-cdd-gms-amenity-manager",
           "premium": true,
-          "spend_hint": "premium wallet / $20k\u2013$100k+ amenity budget class (operator intel)",
+          "spend_hint": "Wallet A \u2014 big amenity (~$1\u20133k+ multi-date possible)",
           "legacy_tier": 1,
           "area": "Metro Jax \u00b7 Bartram",
           "friday": true,
           "friday_class": "cdd_amenity",
           "chip_tags": [
-            "Friday"
-          ]
+            "Friday",
+            "GMS",
+            "Ops phone"
+          ],
+          "management_company": "GMS",
+          "ross_type": "Ops phone",
+          "wallet_class": "A",
+          "board_note": "GMS amenity phone cluster \u2014 dial by CDD, not one pizza day. Bartram Springs amenity.",
+          "role_chip": "Ops phone"
         },
         {
           "account": "Bartram Springs HOA",
@@ -16932,14 +17503,21 @@
           "tier": "S",
           "id": "jarias-vestapropertyservices-com-bartram-springs-hoa-community-association-manag",
           "premium": true,
-          "spend_hint": "premium wallet / $20k\u2013$100k+ amenity budget class (operator intel)",
+          "spend_hint": "Wallet B \u2014 mid amenity (~$1\u20132k)",
           "legacy_tier": 1,
           "area": "Metro Jax \u00b7 Bartram",
           "friday": true,
           "friday_class": "cdd_amenity",
           "chip_tags": [
-            "Friday"
-          ]
+            "Friday",
+            "Vesta",
+            "CAM"
+          ],
+          "management_company": "Vesta",
+          "ross_type": "CAM",
+          "wallet_class": "B",
+          "board_note": "Bartram Springs HOA CAM (Vesta) \u2014 HOA path; amenity may sit with GMS phones.",
+          "role_chip": "CAM"
         },
         {
           "account": "Bridgewater North HOA (Sovereign-Jacobs)",
@@ -17053,8 +17631,13 @@
           "friday": true,
           "friday_class": "district",
           "chip_tags": [
-            "Friday"
-          ]
+            "Friday",
+            "GMS",
+            "Ops phone"
+          ],
+          "management_company": "GMS",
+          "ross_type": "Ops phone",
+          "role_chip": "Ops phone"
         },
         {
           "account": "Del Webb Nocatee / Del Webb Ponte Vedra (FirstService Residential)",
@@ -17072,14 +17655,21 @@
           "tier": "S",
           "id": "canopyclub-fsresidential-com-del-webb-nocatee-del-webb-ponte-vedra-firstservice-",
           "premium": true,
-          "spend_hint": "premium wallet / $20k\u2013$100k+ amenity budget class (operator intel)",
+          "spend_hint": "Wallet A \u2014 big amenity (~$1\u20133k+ multi-date possible)",
           "legacy_tier": 1,
           "area": "St. Johns \u00b7 Nocatee",
           "friday": true,
           "friday_class": "cdd_amenity",
           "chip_tags": [
-            "Friday"
-          ]
+            "Friday",
+            "FSR",
+            "Site booker"
+          ],
+          "management_company": "FSR",
+          "ross_type": "Site booker",
+          "wallet_class": "A",
+          "board_note": "Del Webb Nocatee Lifestyle (FSR) \u2014 own canopy, not Vesta.",
+          "role_chip": "Site booker"
         },
         {
           "account": "First Coast CMS / SilverLeaf amenities",
@@ -17097,7 +17687,17 @@
           "tier": "A",
           "id": "desk-silverleafamenities-com-first-coast-cms-silverleaf-amenities-director-of-en",
           "legacy_tier": 1,
-          "area": "St. Johns \u00b7 St. Johns"
+          "area": "St. Johns \u00b7 St. Johns",
+          "management_company": "First Coast CMS",
+          "ross_type": "Ross-peer",
+          "wallet_class": "A",
+          "board_note": "Liz \u00b7 Engagement win-back for SilverLeaf. Closest Ross-peer booker under Tony/FCCMS.",
+          "chip_tags": [
+            "First Coast CMS",
+            "Ross-peer"
+          ],
+          "role_chip": "Ross-peer",
+          "spend_hint": "Wallet A \u2014 big amenity (~$1\u20133k+ multi-date possible)"
         },
         {
           "account": "Glen St. Johns HOA",
@@ -17160,8 +17760,10 @@
           "friday": true,
           "friday_class": "cdd_amenity",
           "chip_tags": [
-            "Friday"
-          ]
+            "Friday",
+            "First Coast CMS"
+          ],
+          "management_company": "First Coast CMS"
         },
         {
           "account": "Meadow View at Twin Creeks CDD / Beacon Lake (RMS)",
@@ -17202,14 +17804,21 @@
           "tier": "S",
           "id": "help-nocatee-com-nocatee-tolomato-cdd-the-parc-group-event-communications-commun",
           "premium": true,
-          "spend_hint": "premium wallet / $20k\u2013$100k+ amenity budget class (operator intel)",
+          "spend_hint": "Wallet A \u2014 big amenity (~$1\u20133k+ multi-date possible)",
           "legacy_tier": 1,
           "area": "St. Johns \u00b7 Nocatee",
           "friday": true,
           "friday_class": "cdd_amenity",
           "chip_tags": [
-            "Friday"
-          ]
+            "Friday",
+            "Nocatee",
+            "Own tree"
+          ],
+          "management_company": "Nocatee",
+          "ross_type": "Own tree",
+          "wallet_class": "A",
+          "board_note": "Nocatee / Tolomato mega-community \u2014 own ecosystem, not Vesta.",
+          "role_chip": "Own tree"
         },
         {
           "account": "Nocatee Welcome Center (The PARC Group)",
@@ -17227,9 +17836,18 @@
           "tier": "S",
           "id": "welcomecenter-nocatee-com-nocatee-welcome-center-the-parc-group-manager-welcome-",
           "premium": true,
-          "spend_hint": "premium wallet / $20k\u2013$100k+ amenity budget class (operator intel)",
+          "spend_hint": "Wallet A \u2014 big amenity (~$1\u20133k+ multi-date possible)",
           "legacy_tier": 1,
-          "area": "St. Johns \u00b7 Nocatee"
+          "area": "St. Johns \u00b7 Nocatee",
+          "management_company": "Nocatee",
+          "ross_type": "Own tree",
+          "wallet_class": "A",
+          "board_note": "Nocatee Welcome Center \u2014 own tree.",
+          "chip_tags": [
+            "Nocatee",
+            "Own tree"
+          ],
+          "role_chip": "Own tree"
         },
         {
           "account": "Oakleaf Plantation",
@@ -17292,8 +17910,13 @@
           "friday": true,
           "friday_class": "cdd_amenity",
           "chip_tags": [
-            "Friday"
-          ]
+            "Friday",
+            "GMS",
+            "Ops phone"
+          ],
+          "management_company": "GMS",
+          "ross_type": "Ops phone",
+          "role_chip": "Ops phone"
         },
         {
           "account": "River Glen CDD",
@@ -17311,7 +17934,11 @@
           "tier": "A",
           "id": "ron-firstcoastcms-com-river-glen-cdd-facility-manager",
           "legacy_tier": 1,
-          "area": "Nassau \u00b7 Yulee"
+          "area": "Nassau \u00b7 Yulee",
+          "management_company": "First Coast CMS",
+          "chip_tags": [
+            "First Coast CMS"
+          ]
         },
         {
           "account": "Six Mile Creek CDD / TrailMark (GMS)",
@@ -17333,8 +17960,13 @@
           "friday": true,
           "friday_class": "cdd_amenity",
           "chip_tags": [
-            "Friday"
-          ]
+            "Friday",
+            "GMS",
+            "Ops phone"
+          ],
+          "management_company": "GMS",
+          "ross_type": "Ops phone",
+          "role_chip": "Ops phone"
         },
         {
           "account": "Tamaya HOA",
@@ -17464,7 +18096,11 @@
           "tier": "A",
           "id": "marty-firstcoastcms-com-two-creeks-cdd-facility-manager",
           "legacy_tier": 1,
-          "area": "Clay \u00b7 Middleburg"
+          "area": "Clay \u00b7 Middleburg",
+          "management_company": "First Coast CMS",
+          "chip_tags": [
+            "First Coast CMS"
+          ]
         },
         {
           "account": "Villages of Westport CDD",
@@ -17586,7 +18222,7 @@
           "lane": "cdd",
           "tier": "S",
           "premium": true,
-          "spend_hint": "premium wallet / $20k\u2013$100k+ amenity budget class (operator intel)",
+          "spend_hint": "Wallet A \u2014 big amenity (~$1\u20133k+ multi-date possible)",
           "id": "kfatuch-rivertown-rivers-edge-cdd-vesta-assistant-general-manager-events",
           "legacy_tier": 1,
           "area": "St. Johns \u00b7 RiverTown",
@@ -17594,7 +18230,9 @@
           "friday_class": "cdd_amenity",
           "chip_tags": [
             "PayPal invoice \u00b7 Mar 28 \u00b7 $874.25",
-            "Friday"
+            "Friday",
+            "Vesta",
+            "Site booker"
           ],
           "lead_source": "PayPal invoice \u00b7 Mar 28 \u00b7 $874.25",
           "lead_source_type": "invoice",
@@ -17614,7 +18252,12 @@
               "date": "2026-03-28",
               "source": "calendar_attendees"
             }
-          ]
+          ],
+          "management_company": "Vesta",
+          "ross_type": "Site booker",
+          "wallet_class": "A",
+          "board_note": "RiverTown events / AGM \u2014 site money, not Ross.",
+          "role_chip": "Site booker"
         },
         {
           "account": "RiverTown / Rivers Edge CDD (Vesta)",
@@ -17631,15 +18274,22 @@
           "lane": "cdd",
           "tier": "S",
           "premium": true,
-          "spend_hint": "premium wallet / $20k\u2013$100k+ amenity budget class (operator intel)",
+          "spend_hint": "Wallet A \u2014 big amenity (~$1\u20133k+ multi-date possible)",
           "id": "kcouncil-rivertown-rivers-edge-cdd-vesta-amenity-manager",
           "legacy_tier": 1,
           "area": "St. Johns \u00b7 RiverTown",
           "friday": true,
           "friday_class": "cdd_amenity",
           "chip_tags": [
-            "Friday"
-          ]
+            "Friday",
+            "Vesta",
+            "Site booker"
+          ],
+          "management_company": "Vesta",
+          "ross_type": "Site booker",
+          "wallet_class": "A",
+          "board_note": "RiverTown amenity manager \u2014 site desk.",
+          "role_chip": "Site booker"
         },
         {
           "account": "Durbin Crossing CDD (Vesta)",
@@ -17656,7 +18306,7 @@
           "lane": "cdd",
           "tier": "S",
           "premium": true,
-          "spend_hint": "EXISTING Durbin proof ~$2400/2 zoos \u00b7 premium wallet / $20k\u2013$100k+ amenity budget class (operator intel)",
+          "spend_hint": "Wallet A \u2014 big amenity (~$1\u20133k+ multi-date possible)",
           "id": "klsmith-durbin-crossing-cdd-vesta-lifestyle-director",
           "legacy_tier": 1,
           "area": "St. Johns \u00b7 Durbin Crossing",
@@ -17664,7 +18314,9 @@
           "friday_class": "cdd_amenity",
           "chip_tags": [
             "PayPal invoice \u00b7 Apr 24 \u00b7 $1256.66",
-            "Friday"
+            "Friday",
+            "Vesta",
+            "Site booker"
           ],
           "lead_source": "PayPal invoice \u00b7 Apr 24 \u00b7 $1256.66",
           "lead_source_type": "invoice",
@@ -17692,7 +18344,12 @@
               "amount": 750.0,
               "source": "annmarie_2026"
             }
-          ]
+          ],
+          "management_company": "Vesta",
+          "ross_type": "Site booker",
+          "wallet_class": "A",
+          "board_note": "Durbin site booker \u2014 money lands here; converts without Ross/Mindy on thread.",
+          "role_chip": "Site booker"
         },
         {
           "account": "Durbin Crossing CDD (Vesta)",
@@ -17709,15 +18366,22 @@
           "lane": "cdd",
           "tier": "S",
           "premium": true,
-          "spend_hint": "premium wallet / $20k\u2013$100k+ amenity budget class (operator intel)",
+          "spend_hint": "Wallet A \u2014 big amenity (~$1\u20133k+ multi-date possible)",
           "id": "jamorrow-durbin-crossing-cdd-vesta-amenity-manager",
           "legacy_tier": 1,
           "area": "St. Johns \u00b7 Durbin Crossing",
           "friday": true,
           "friday_class": "cdd_amenity",
           "chip_tags": [
-            "Friday"
-          ]
+            "Friday",
+            "Vesta",
+            "Site booker"
+          ],
+          "management_company": "Vesta",
+          "ross_type": "Site booker",
+          "wallet_class": "A",
+          "board_note": "Durbin amenity manager \u2014 site desk next to Kate.",
+          "role_chip": "Site booker"
         },
         {
           "account": "Tamaya / Beach CDD (Vesta)",
@@ -17734,15 +18398,22 @@
           "lane": "cdd",
           "tier": "S",
           "premium": true,
-          "spend_hint": "premium wallet / $20k\u2013$100k+ amenity budget class (operator intel)",
+          "spend_hint": "Wallet A \u2014 big amenity (~$1\u20133k+ multi-date possible)",
           "id": "oingram-tamaya-beach-cdd-vesta-amenity-manager",
           "legacy_tier": 1,
           "area": "Metro Jax \u00b7 Jacksonville",
           "friday": true,
           "friday_class": "cdd_amenity",
           "chip_tags": [
-            "Friday"
-          ]
+            "Friday",
+            "Vesta",
+            "Site booker"
+          ],
+          "management_company": "Vesta",
+          "ross_type": "Site booker",
+          "wallet_class": "A",
+          "board_note": "Tamaya amenity manager \u2014 site desk.",
+          "role_chip": "Site booker"
         },
         {
           "account": "Tamaya / Beach CDD (Vesta)",
@@ -17759,7 +18430,7 @@
           "lane": "cdd",
           "tier": "S",
           "premium": true,
-          "spend_hint": "premium wallet / $20k\u2013$100k+ amenity budget class (operator intel)",
+          "spend_hint": "Wallet A \u2014 big amenity (~$1\u20133k+ multi-date possible)",
           "id": "kfitzhugh-tamaya-beach-cdd-vesta-assistant-amenity-manager-events",
           "legacy_tier": 1,
           "area": "Metro Jax \u00b7 Jacksonville",
@@ -17767,7 +18438,9 @@
           "friday_class": "cdd_amenity",
           "chip_tags": [
             "PayPal invoice \u00b7 Oct 17 \u00b7 $1181.91",
-            "Friday"
+            "Friday",
+            "Vesta",
+            "Site booker"
           ],
           "lead_source": "PayPal invoice \u00b7 Oct 17 \u00b7 $1181.91",
           "lead_source_type": "invoice",
@@ -17788,7 +18461,12 @@
               "amount": 660.5,
               "source": "annmarie_2026"
             }
-          ]
+          ],
+          "management_company": "Vesta",
+          "ross_type": "Site booker",
+          "wallet_class": "A",
+          "board_note": "Tamaya events / AA \u2014 site booker.",
+          "role_chip": "Site booker"
         },
         {
           "account": "Sampson Creek CDD / St. Johns Golf & CC amenities (Vesta)",
@@ -17808,7 +18486,16 @@
           "spend_hint": "~$2\u20133k regular package (operator intel) \u00b7 books often",
           "id": "staylor-sampson-creek-cdd-st-johns-golf-cc-amenities-vesta-general-manag",
           "legacy_tier": 1,
-          "area": "St. Johns \u00b7 Sampson Creek"
+          "area": "St. Johns \u00b7 Sampson Creek",
+          "management_company": "Vesta",
+          "ross_type": "Site booker",
+          "wallet_class": "A",
+          "board_note": "Sampson / SJG amenities GM \u2014 site booker.",
+          "chip_tags": [
+            "Vesta",
+            "Site booker"
+          ],
+          "role_chip": "Site booker"
         },
         {
           "account": "Marshall Creek CDD / Palencia amenities (Vesta)",
@@ -17825,10 +18512,19 @@
           "lane": "cdd",
           "tier": "S",
           "premium": true,
-          "spend_hint": "premium wallet / $20k\u2013$100k+ amenity budget class (operator intel)",
+          "spend_hint": "Wallet B \u2014 mid amenity (~$1\u20132k)",
           "id": "dpowers-marshall-creek-cdd-palencia-amenities-vesta-assistant-general-ma",
           "legacy_tier": 1,
-          "area": "St. Johns \u00b7 Palencia"
+          "area": "St. Johns \u00b7 Palencia",
+          "management_company": "Vesta",
+          "ross_type": "Site booker",
+          "wallet_class": "B",
+          "board_note": "Palencia amenities \u2014 site booker (B-class).",
+          "chip_tags": [
+            "Vesta",
+            "Site booker"
+          ],
+          "role_chip": "Site booker"
         },
         {
           "account": "Marshall Creek CDD / Palencia amenities (Vesta)",
@@ -17845,10 +18541,19 @@
           "lane": "cdd",
           "tier": "S",
           "premium": true,
-          "spend_hint": "premium wallet / $20k\u2013$100k+ amenity budget class (operator intel)",
+          "spend_hint": "Wallet B \u2014 mid amenity (~$1\u20132k)",
           "id": "jmoore-marshall-creek-cdd-palencia-amenities-vesta-general-manager",
           "legacy_tier": 1,
-          "area": "St. Johns \u00b7 Palencia"
+          "area": "St. Johns \u00b7 Palencia",
+          "management_company": "Vesta",
+          "ross_type": "Site booker",
+          "wallet_class": "B",
+          "board_note": "Palencia GM \u2014 site desk, not Ross.",
+          "chip_tags": [
+            "Vesta",
+            "Site booker"
+          ],
+          "role_chip": "Site booker"
         },
         {
           "account": "Marshall Creek CDD (Palencia) \u2014 Vesta District",
@@ -17865,15 +18570,22 @@
           "lane": "cdd",
           "tier": "S",
           "premium": true,
-          "spend_hint": "premium wallet / $20k\u2013$100k+ amenity budget class (operator intel)",
+          "spend_hint": "Wallet B \u2014 mid amenity (~$1\u20132k)",
           "id": "dmcinnes-marshall-creek-cdd-palencia-vesta-district-district-manager",
           "legacy_tier": 1,
           "area": "St. Johns \u00b7 Palencia",
           "friday": true,
           "friday_class": "district",
           "chip_tags": [
-            "Friday"
-          ]
+            "Friday",
+            "Vesta",
+            "Ops / district"
+          ],
+          "management_company": "Vesta",
+          "ross_type": "Ops / district",
+          "wallet_class": "B",
+          "board_note": "Palencia district (Vesta) \u2014 map amenity desk; rarely the entertainment buyer.",
+          "role_chip": "Ops / district"
         },
         {
           "account": "Trout Creek CDD / Shearwater (FirstService Residential)",
@@ -17890,10 +18602,19 @@
           "lane": "cdd",
           "tier": "S",
           "premium": true,
-          "spend_hint": "premium wallet / $20k\u2013$100k+ amenity budget class (operator intel)",
+          "spend_hint": "Wallet A \u2014 big amenity (~$1\u20133k+ multi-date possible)",
           "id": "jessica-knutelsky-trout-creek-cdd-shearwater-firstservice-residential-as",
           "legacy_tier": 1,
-          "area": "St. Johns \u00b7 St. Augustine"
+          "area": "St. Johns \u00b7 St. Augustine",
+          "management_company": "FSR",
+          "ross_type": "Site booker",
+          "wallet_class": "A",
+          "board_note": "Shearwater FSR amenity path \u2014 own tree.",
+          "chip_tags": [
+            "FSR",
+            "Site booker"
+          ],
+          "role_chip": "Site booker"
         },
         {
           "account": "Trout Creek CDD / Shearwater (FirstService Residential)",
@@ -17910,10 +18631,19 @@
           "lane": "cdd",
           "tier": "S",
           "premium": true,
-          "spend_hint": "premium wallet / $20k\u2013$100k+ amenity budget class (operator intel)",
+          "spend_hint": "Wallet A \u2014 big amenity (~$1\u20133k+ multi-date possible)",
           "id": "belynda-tharpe-trout-creek-cdd-shearwater-firstservice-residential-gener",
           "legacy_tier": 1,
-          "area": "St. Johns \u00b7 St. Augustine"
+          "area": "St. Johns \u00b7 St. Augustine",
+          "management_company": "FSR",
+          "ross_type": "Site + brand",
+          "wallet_class": "A",
+          "board_note": "Shearwater / Trout Creek FSR GM \u2014 own tree, not Vesta. Pair Marcia/Lifestyle if needed.",
+          "chip_tags": [
+            "FSR",
+            "Site + brand"
+          ],
+          "role_chip": "Site + brand"
         },
         {
           "account": "Trout Creek CDD (Shearwater) / Sweetwater Creek (Palencia North)",
@@ -17937,8 +18667,10 @@
           "friday": true,
           "friday_class": "district",
           "chip_tags": [
-            "Friday"
-          ]
+            "Friday",
+            "FSR"
+          ],
+          "management_company": "FSR"
         },
         {
           "account": "Johns Creek / Brandy Creek CDD (Vesta)",
@@ -17963,7 +18695,9 @@
           "friday_class": "cdd_amenity",
           "chip_tags": [
             "PayPal invoice \u00b7 Mar 28 \u00b7 $406.25",
-            "Friday"
+            "Friday",
+            "Vesta",
+            "Site booker"
           ],
           "lead_source": "PayPal invoice \u00b7 Mar 28 \u00b7 $406.25",
           "lead_source_type": "invoice",
@@ -17983,7 +18717,12 @@
               "date": "2026-03-28",
               "source": "calendar_attendees"
             }
-          ]
+          ],
+          "management_company": "Vesta",
+          "ross_type": "Site booker",
+          "wallet_class": "C",
+          "board_note": "Johns Creek \u2014 light/C-class site desk.",
+          "role_chip": "Site booker"
         },
         {
           "account": "Vesta Property Services (NE FL amenity network)",
@@ -18000,15 +18739,22 @@
           "lane": "cdd",
           "tier": "S",
           "premium": true,
-          "spend_hint": "premium wallet / $20k\u2013$100k+ amenity budget class (operator intel)",
+          "spend_hint": "Wallet A \u2014 big amenity (~$1\u20133k+ multi-date possible)",
           "id": "rruben-vesta-property-services-ne-fl-amenity-network-director-of-lifesty",
           "legacy_tier": 1,
           "area": "Metro Jax \u00b7 Jacksonville",
           "friday": true,
           "friday_class": "cdd_amenity",
           "chip_tags": [
-            "Friday"
-          ]
+            "Friday",
+            "Vesta",
+            "Ross-type"
+          ],
+          "management_company": "Vesta",
+          "ross_type": "Ross-type",
+          "wallet_class": "A",
+          "board_note": "List intro \u2014 not every Vesta buy. Pair with site bookers for money. Mindy = HQ L&L/pizza door; Winslow = NE Amenity Ops.",
+          "role_chip": "Ross-type"
         },
         {
           "account": "eTown / Cypress Bluff CDD (Vesta)",
@@ -18025,7 +18771,7 @@
           "lane": "cdd",
           "tier": "S",
           "premium": true,
-          "spend_hint": "premium wallet / $20k\u2013$100k+ amenity budget class (operator intel)",
+          "spend_hint": "Wallet B \u2014 mid amenity (~$1\u20132k)",
           "id": "recharge-etown-cypress-bluff-cdd-vesta-community-manager-lifestyle-recha",
           "legacy_tier": 1,
           "area": "Metro Jax \u00b7 eTown",
@@ -18033,7 +18779,9 @@
           "friday_class": "cdd_amenity",
           "chip_tags": [
             "PayPal invoice \u00b7 Mar 28 \u00b7 $500",
-            "Friday"
+            "Friday",
+            "Vesta",
+            "Site booker"
           ],
           "lead_source": "PayPal invoice \u00b7 Mar 28 \u00b7 $500",
           "lead_source_type": "invoice",
@@ -18053,7 +18801,12 @@
               "date": "2026-03-28",
               "source": "calendar_attendees"
             }
-          ]
+          ],
+          "management_company": "Vesta",
+          "ross_type": "Site booker",
+          "wallet_class": "B",
+          "board_note": "eTown / Cypress Bluff Vesta lifestyle inbox \u2014 site desk.",
+          "role_chip": "Site booker"
         },
         {
           "account": "East Nassau Stewardship District (Wildlight)",
@@ -18070,15 +18823,22 @@
           "lane": "cdd",
           "tier": "S",
           "premium": true,
-          "spend_hint": "premium wallet / $20k\u2013$100k+ amenity budget class (operator intel)",
+          "spend_hint": "Wallet B \u2014 mid amenity (~$1\u20132k)",
           "id": "info-east-nassau-stewardship-district-wildlight-district-manager-amenity",
           "legacy_tier": 1,
           "area": "Nassau \u00b7 Wildlight",
           "friday": true,
           "friday_class": "cdd_amenity",
           "chip_tags": [
-            "Friday"
-          ]
+            "Friday",
+            "Wildlight",
+            "Own tree"
+          ],
+          "management_company": "Wildlight",
+          "ross_type": "Own tree",
+          "wallet_class": "B",
+          "board_note": "ENSD / Wildlight district inbox \u2014 pair Wes; own tree.",
+          "role_chip": "Own tree"
         },
         {
           "phone": "904-217-3052",
@@ -18131,10 +18891,12 @@
           "fancy": false,
           "rcsa": false,
           "chip_tags": [
-            "Friday"
+            "Friday",
+            "Vesta"
           ],
           "friday": true,
-          "friday_class": "cdd_amenity"
+          "friday_class": "cdd_amenity",
+          "management_company": "Vesta"
         },
         {
           "phone": "904-940-5850",
@@ -18159,10 +18921,14 @@
           "fancy": false,
           "rcsa": false,
           "chip_tags": [
-            "Friday"
+            "Friday",
+            "GMS",
+            "Ops phone"
           ],
           "friday": true,
-          "friday_class": "district"
+          "friday_class": "district",
+          "management_company": "GMS",
+          "ross_type": "Ops phone"
         },
         {
           "phone": "904-436-6270",
@@ -18243,10 +19009,12 @@
           "fancy": false,
           "rcsa": false,
           "chip_tags": [
-            "Friday"
+            "Friday",
+            "Vesta"
           ],
           "friday": true,
-          "friday_class": "district"
+          "friday_class": "district",
+          "management_company": "Vesta"
         },
         {
           "phone": "904-679-5523",
@@ -18271,10 +19039,12 @@
           "fancy": false,
           "rcsa": false,
           "chip_tags": [
-            "Friday"
+            "Friday",
+            "Vesta"
           ],
           "friday": true,
-          "friday_class": "cdd_amenity"
+          "friday_class": "cdd_amenity",
+          "management_company": "Vesta"
         },
         {
           "phone": "904-627-9271",
@@ -18299,10 +19069,12 @@
           "fancy": false,
           "rcsa": false,
           "chip_tags": [
-            "Friday"
+            "Friday",
+            "FSR"
           ],
           "friday": true,
-          "friday_class": "cdd_amenity"
+          "friday_class": "cdd_amenity",
+          "management_company": "FSR"
         },
         {
           "phone": "561-571-0010",
@@ -18411,10 +19183,14 @@
           "fancy": false,
           "rcsa": false,
           "chip_tags": [
-            "Friday"
+            "Friday",
+            "GMS",
+            "Ops phone"
           ],
           "friday": true,
-          "friday_class": "cdd_amenity"
+          "friday_class": "cdd_amenity",
+          "management_company": "GMS",
+          "ross_type": "Ops phone"
         },
         {
           "phone": "904-612-6668",
@@ -18439,10 +19215,12 @@
           "fancy": false,
           "rcsa": false,
           "chip_tags": [
-            "Friday"
+            "Friday",
+            "Vesta"
           ],
           "friday": true,
-          "friday_class": "cdd_amenity"
+          "friday_class": "cdd_amenity",
+          "management_company": "Vesta"
         },
         {
           "phone": "904-940-5850",
@@ -18495,10 +19273,12 @@
           "fancy": false,
           "rcsa": false,
           "chip_tags": [
-            "Friday"
+            "Friday",
+            "Vesta"
           ],
           "friday": true,
-          "friday_class": "cdd_amenity"
+          "friday_class": "cdd_amenity",
+          "management_company": "Vesta"
         },
         {
           "phone": "904-342-1441",
@@ -18551,10 +19331,12 @@
           "fancy": false,
           "rcsa": false,
           "chip_tags": [
-            "Friday"
+            "Friday",
+            "Vesta"
           ],
           "friday": true,
-          "friday_class": "cdd_amenity"
+          "friday_class": "cdd_amenity",
+          "management_company": "Vesta"
         }
       ]
     },
@@ -20379,8 +21161,10 @@
           "friday_class": "apartment",
           "chip_tags": [
             "Friday",
-            "Apartment"
-          ]
+            "Apartment",
+            "First Coast CMS"
+          ],
+          "management_company": "First Coast CMS"
         },
         {
           "account": "Cimarrone Golf Club",
@@ -21100,16 +21884,23 @@
           "persona": "cdd",
           "area": "St. Johns \u00b7 SilverLeaf peers",
           "chip_tags": [
-            "FORM"
+            "FORM",
+            "First Coast CMS",
+            "Ross-type"
           ],
           "form_labeled": true,
           "quick_email": false,
           "quick_body": "Hi \u2014 Michael Sheehan with Sheehan Homestead / Critters on Call (Callahan / Jax metro). We bring a small mobile petting zoo, goat yoga, and farm STEM visits for family days, fall festivals, and member or resident events.\n\nIf your activities / events team still has October\u2013December windows open, happy to share dates and a simple one-pager. No pressure \u2014 just a local option.\n\nMichael \u00b7 914-263-1311 \u00b7 Callahan, FL",
           "subject": "",
           "owe_reason": "",
-          "role_chip": "FORM",
+          "role_chip": "Ross-type",
           "icp_note": "HOA / amenity programming (non-Vesta)",
-          "screened_as_of": "2026-09-25"
+          "screened_as_of": "2026-09-25",
+          "management_company": "First Coast CMS",
+          "ross_type": "Ross-type",
+          "wallet_class": "A",
+          "board_note": "FCCMS portfolio form \u00b7 ask who owns Lifestyle / amenity events (Tony tree). Second Vesta.",
+          "spend_hint": "Wallet A \u2014 big amenity (~$1\u20133k+ multi-date possible)"
         },
         {
           "id": "form-goddard-jax-baymeadows",
@@ -21220,7 +22011,8 @@
           "persona": "daycare",
           "area": "St. Johns \u00b7 Silverleaf",
           "chip_tags": [
-            "FORM"
+            "FORM",
+            "First Coast CMS"
           ],
           "form_labeled": true,
           "quick_email": false,
@@ -21229,7 +22021,8 @@
           "owe_reason": "",
           "role_chip": "FORM",
           "icp_note": "Premium daycare St. Johns",
-          "screened_as_of": "2026-09-25"
+          "screened_as_of": "2026-09-25",
+          "management_company": "First Coast CMS"
         },
         {
           "id": "form-goddard-cr210",
@@ -21485,7 +22278,7 @@
       "church": 38
     }
   },
-  "compose_note": "Mailto bodies omit signature \u2014 Gmail auto-signature only. | v2.9.2: clean copy; org greetings\u2192Hi there; McD consumer removed; B2B misfiles cleared of consumer_lane/quick_body | v2.9.3: lead_source chips from Gmail+inbound+PayPal+calendar; never invent | v2.9.4: Beatrix apology / partner reconnect card; mailto beatrix@malwashington.com; no auto-send | v2.9.5: local_forms rebuilt \u2014 19 screened FORM URLs with paste draft; dropped homepage/directory junk; exclude Primrose/Laura/Ross-only/Palagio-suppress.",
+  "compose_note": "Mailto bodies omit signature \u2014 Gmail auto-signature only. | v2.9.2: clean copy; org greetings\u2192Hi there; McD consumer removed; B2B misfiles cleared of consumer_lane/quick_body | v2.9.3: lead_source chips from Gmail+inbound+PayPal+calendar; never invent | v2.9.4: Beatrix apology / partner reconnect card; mailto beatrix@malwashington.com; no auto-send | v2.9.5: local_forms rebuilt \u2014 19 screened FORM URLs with paste draft; dropped homepage/directory junk; exclude Primrose/Laura/Ross-only/Palagio-suppress. | v2.9.6: PM territory help strip + management_company/ross_type/board_note chips (Vesta\u2260all Ross; FCCMS=second Vesta; MAY Ross-gap; GMS phones; FSR/Nocatee/Wildlight own trees). No invented emails.",
   "v292": {
     "as_of": "2026-09-25 6:50 PM ET",
     "mcd_consumer_removed": true,
@@ -21624,5 +22417,52 @@
       "form-5239924208",
       "form-1293472929"
     ]
+  },
+  "territory_help": {
+    "title": "PM territory \u00b7 Ross vs site booker",
+    "source": "PM_TERRITORY_MAP_2026-09-25.md (Talk-Deputy lock)",
+    "bullets": [
+      "Vesta \u2260 all Ross: Mindy DeAngelis = HQ Lunch&Learn / pizza door \u00b7 Ross Ruben = list intro \u00b7 Winslow Wheeler = NE Amenity Ops boss \u00b7 site bookers (Kate / Kaylie / Kimberly\u2026) book the money separately.",
+      "First Coast CMS / SilverLeaf = second Vesta: Tony Shiver (owner / Ross via service@) + Liz Giacobbi (engagement win-back).",
+      "MAY = ask customerservice@maymgt.com for portfolio Lifestyle Ross (Jane / Kelly are CAMs, not full Ross).",
+      "GMS = multi-CDD amenity phones (Bartram / Greyhawk / Amelia\u2026), not one pizza day.",
+      "FSR Shearwater / Nocatee / Wildlight = own trees \u2014 do not file under Vesta.",
+      "Wallet: A big amenity (~$1\u20133k+) \u00b7 B mid (~$1\u20132k) \u00b7 C small/light \u00b7 Club/independent = one-off."
+    ]
+  },
+  "v296": {
+    "as_of": "2026-09-25 9:01 PM ET",
+    "change": "PM territory / Ross-type cluster notes + chips; published Winslow/Tony/MAY seats if missing",
+    "annotated_rows": 101,
+    "added_seats": [
+      {
+        "id": "wwheeler-vesta-ne-amenity-ops",
+        "email": "wwheeler@vestapropertyservices.com",
+        "account": "Vesta Property Services (NE Amenity Ops)"
+      },
+      {
+        "id": "service-firstcoastcms-tony-shiver",
+        "email": "service@firstcoastcms.com",
+        "account": "First Coast CMS (Tony Shiver / owner)"
+      },
+      {
+        "id": "customerservice-maymgt-lifestyle-ross-ask",
+        "email": "customerservice@maymgt.com",
+        "account": "MAY Management (portfolio Lifestyle ask)"
+      }
+    ],
+    "by_management_company": {
+      "Nocatee": 11,
+      "Wildlight": 5,
+      "First Coast CMS": 11,
+      "Independent": 1,
+      "FSR": 12,
+      "Vesta": 41,
+      "GMS": 17,
+      "MAY": 3
+    },
+    "source": "assets/PM_TERRITORY_MAP_2026-09-25.md",
+    "no_fake_emails": true,
+    "mindy_note": "Mindy DeAngelis covered in territory help strip (HQ L&L/pizza door). Map lists mdeangelis@vestapropertyservices.com \u00b7 904-747-0181 x625 \u2014 no new dunk mailto added (account-vesta caution: verify before compose)."
   }
 }

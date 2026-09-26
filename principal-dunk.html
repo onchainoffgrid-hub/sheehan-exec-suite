@@ -81,6 +81,20 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
 .premium-map .gap{margin:0 0 8px;padding-bottom:8px;border-bottom:1px solid #2a2444}
 .premium-map .gap:last-child{margin:0;padding:0;border:0}
 .premium-map b{color:#e8eefc}
+
+.territory-help{margin:0 0 12px;padding:12px 14px;border:1px solid #67e8f966;border-radius:14px;background:#0c1f2a;font-size:.78rem;color:#c5d0e6}
+.territory-help h4{margin:0 0 8px;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:#67e8f9}
+.territory-help ul{margin:0;padding:0 0 0 1.1em}
+.territory-help li{margin:0 0 5px}
+.territory-help .src{font-size:.68rem;color:#93a0b8;margin-top:8px}
+.chip.mgmt{border-color:#67e8f988;color:#a5f3fc;font-weight:700}
+.chip.ross{border-color:#fbbf2488;color:#fde68a;font-weight:700}
+.chip.ross-gap{border-color:#fb923c88;color:#fdba74}
+.chip.site-booker{border-color:#86efac88;color:#bbf7d0}
+.board-note{font-size:.74rem;color:#a5f3fc;grid-column:1/-1;padding:6px 8px;border-radius:8px;background:#0c1f2a88;border:1px solid #67e8f944;margin-top:2px}
+.board-note b{color:#e8eefc}
+.filters button.cluster-btn.on{border-color:#67e8f988;background:#0c1f2a;color:#a5f3fc}
+
 .note-box{grid-column:1/-1;margin-top:4px}
 .note-box textarea{width:100%;min-height:52px;padding:8px 10px;border-radius:10px;border:1px solid var(--line);background:var(--panel);color:var(--text);font-size:.78rem;font-family:inherit;resize:vertical}
 .note-preview{font-size:.72rem;color:#9dffc5;margin:4px 0 0;white-space:pre-wrap}
@@ -93,7 +107,8 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
 <p class="crumb"><a href="index.html">Operator</a> · <a href="growth-simple.html">Growth</a> · <a href="doer-crm.html">Doer CRM</a> → <b>Principal dunks</b></p>
 <h1>Principal dunk board</h1>
 <p class="sub">One-click Gmail / mailto — B2B school/CDD keeps v2.7 Michael voice. Consumer: Reviewed → APP-FIRST (no review ask); else soft next-date / warm visit. RCSA + Fancy filters. Area + S/A/B + role chip. Done sticks (v2). Compose only.</p>
-<div class="banner"><span class="ver" id="verstamp">Board v2.9.5 · Sep 25 · screened FORM seats</span><b>Compose only — never auto-send.</b> Board v2.9.5: <b>FORM</b> seats screened (open URL · paste draft · CAPTCHA yourself) · v2.9.4: lead-source chips (GoDaddy/form/invoice/calendar/prior) · never invent · Unknown only on consumer. Board v2.9: <b>Friday</b> weekend programmers (church · CDD amenity · apartments · corporate/district) · <b>University</b> Jax-first (JU/UNF/FSCJ) — not Friday default · Bartram notes live. </div>
+<div class="banner"><span class="ver" id="verstamp">Board v2.9.6 · Sep 25 · PM territory / Ross clusters</span><b>Compose only — never auto-send.</b> Board v2.9.6: <b>PM territory</b> strip + management/Ross chips · v2.9.5: <b>FORM</b> seats screened (open URL · paste draft · CAPTCHA yourself) · v2.9.4: lead-source chips (GoDaddy/form/invoice/calendar/prior) · never invent · Unknown only on consumer. Board v2.9: <b>Friday</b> weekend programmers (church · CDD amenity · apartments · corporate/district) · <b>University</b> Jax-first (JU/UNF/FSCJ) — not Friday default · Bartram notes live. </div>
+<div class="territory-help" id="territory-help" hidden></div>
 <div class="banner" id="dedupe" style="border-color:#3dd68c66;color:#9dffc5">Scrubbing vs sent + customers…</div>
 <div class="kpis" id="kpis"></div>
 <div class="filters">
@@ -134,10 +149,10 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
   <button type="button" class="tier-btn" data-tier="S">S</button>
   <button type="button" class="tier-btn" data-tier="A">A</button>
   <button type="button" class="tier-btn" data-tier="B">B</button>
-  <input id="q" type="search" placeholder="Filter email / city / area / note…" autocomplete="off"/>
+  <input id="q" type="search" placeholder="Filter email / city / Vesta / GMS / Ross / note…" autocomplete="off"/>
 </div>
 <div id="board"></div>
-<p class="note">Source: TAM + Jax universities (JU/UNF/FSCJ) + Friday weekend programmers + RCSA/Fancy + Consumer · CAPTCHA HQ stripped · Done key <code>sheehan_principal_dunk_done_v2</code> · Notes key <code>sheehan_dunk_notes_v1</code> · Hard-refresh (?v=295)</p>
+<p class="note">Source: TAM + Jax universities (JU/UNF/FSCJ) + Friday weekend programmers + RCSA/Fancy + Consumer · CAPTCHA HQ stripped · Done key <code>sheehan_principal_dunk_done_v2</code> · Notes key <code>sheehan_dunk_notes_v1</code> · Hard-refresh (?v=296)</p>
 </div>
 <script>
 (function(){
@@ -323,6 +338,18 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
     );
     return 'mailto:'+encodeURIComponent(AUTH)+'?subject='+su+'&body='+body;
   }
+
+  function renderTerritoryHelp(d){
+    const el=document.getElementById('territory-help');
+    if(!el) return;
+    const th=d.territory_help;
+    if(!th || !(th.bullets||[]).length){ el.hidden=true; return; }
+    let h='<h4>'+esc(th.title||'PM territory')+'</h4><ul>';
+    (th.bullets||[]).forEach(b=>{ h+='<li>'+esc(b)+'</li>'; });
+    h+='</ul>';
+    if(th.source) h+='<div class="src">Source: '+esc(th.source)+'</div>';
+    el.innerHTML=h; el.hidden=false;
+  }
   let data=null, done=loadDone(), notes=loadNotes(), sec='next40', openOnly=true, personaFilter='', tierFilter='', historyLaneFilter='';
   const qEl=document.getElementById('q');
   document.querySelectorAll('.filters button').forEach(b=>{
@@ -441,7 +468,7 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
       if(!q)return true;
       const nk=noteKey(r);
       const noteTxt=(notes[nk]&&notes[nk].text)||'';
-      const blob=[r.account,r.contact,r.title,r.email,r.city,r.area,r.region,r.county,r.segment,r.persona,r.tier,r.owe_reason,r.why,r.spend_hint,r.history_lane,r.history_lane_label,r.north_star,r.lead_source,r.lead_source_detail,r.premium?'premium':'',noteTxt].join(' ').toLowerCase();
+      const blob=[r.account,r.contact,r.title,r.email,r.city,r.area,r.region,r.county,r.segment,r.persona,r.tier,r.owe_reason,r.why,r.spend_hint,r.history_lane,r.history_lane_label,r.north_star,r.lead_source,r.lead_source_detail,r.management_company,r.ross_type,r.wallet_class,r.board_note,r.premium?'premium':'',noteTxt].join(' ').toLowerCase();
       return blob.includes(q);
     });
     const board=document.getElementById('board');
@@ -468,6 +495,13 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
       if(r.friday || (r.chip_tags||[]).includes('Friday')) html+=`<span class="chip friday">Friday</span> `;
       if((r.chip_tags||[]).includes('Corporate Friday') || r.friday_class==='corporate') html+=`<span class="chip corp-fri">Corp Fri</span> `;
       html+=`<span class="chip pri">${esc(pers)}</span> `;
+      if(r.management_company) html+=`<span class="chip mgmt" title="Management / cluster">${esc(r.management_company)}</span> `;
+      if(r.ross_type){
+        const rt=String(r.ross_type);
+        const cls=/gap/i.test(rt)?'ross-gap':(/site booker|club wallet|own tree|ops/i.test(rt)?'site-booker':'ross');
+        html+=`<span class="chip ${cls}" title="Ross-type vs site booker">${esc(rt)}</span> `;
+      }
+      if(r.wallet_class) html+=`<span class="chip" title="Wallet class">W-${esc(r.wallet_class)}</span> `;
       if(r.role_chip) html+=`<span class="chip role">${esc(r.role_chip)}</span> `;
       if(r.history_lane_label) html+=`<span class="chip hlane">${esc(r.history_lane_label)}</span> `;
       if(r.north_star_label) html+=`<span class="chip north">${esc(r.north_star)}</span> `;
@@ -517,6 +551,9 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
         }
       }else{
         html+=`<div class="why">Template says <b>${esc(pers)}</b>${fn?' · Hi '+esc(fn):' · Hi there'}. Tap Open email → Send.</div>`;
+      }
+      if(r.board_note){
+        html+=`<div class="board-note"><b>Cluster:</b> ${esc(r.board_note)}</div>`;
       }
       if(r.spend_hint){
         html+=`<div class="spend"><b>Wallet:</b> ${esc(r.spend_hint)}</div>`;
@@ -595,11 +632,12 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
     data=d;
     const ver=document.getElementById('verstamp');
     if(ver)ver.textContent=d.board_version||'Board v2';
+    renderTerritoryHelp(d);
     var dd=d.dedupe||{};var sc=dd.suppress_counts||{};
     var el=document.getElementById('dedupe');
     if(el){
       var counts=d.counts||{}; var v28=d.v28||{}; var cs=(v28.consumer)||{};
-      el.innerHTML='<b>v2.9.5</b> · FORM '+(counts.form_seats||counts.local_forms_optional||0)+' · Friday '+(counts.friday||0)+' · Uni '+(counts.university_unique||counts.university||0)+' · Church fri '+(counts.friday_church||0)+' · CDD amenity '+(counts.friday_cdd_amenity||0)+' · Apt '+(counts.friday_apartment||0)+' · Corp/dist '+(counts.friday_corporate||0)+'/'+(counts.friday_district||0)+' · RCSA '+(counts.rcsa||v28.rcsa_rows||0)+' · Fancy '+(counts.fancy||0)+' · Consumer '+(counts.consumer||0)+' · left <b>'+(counts.mailto_total||0)+' mailto</b> · Gmail today '+(sc.gmail_sent_today||0);
+      el.innerHTML='<b>v2.9.6</b> · PM clusters · FORM '+(counts.form_seats||counts.local_forms_optional||0)+' · Friday '+(counts.friday||0)+' · Uni '+(counts.university_unique||counts.university||0)+' · Church fri '+(counts.friday_church||0)+' · CDD amenity '+(counts.friday_cdd_amenity||0)+' · Apt '+(counts.friday_apartment||0)+' · Corp/dist '+(counts.friday_corporate||0)+'/'+(counts.friday_district||0)+' · RCSA '+(counts.rcsa||v28.rcsa_rows||0)+' · Fancy '+(counts.fancy||0)+' · Consumer '+(counts.consumer||0)+' · left <b>'+(counts.mailto_total||0)+' mailto</b> · Gmail today '+(sc.gmail_sent_today||0);
     }
     render();
   }).catch(()=>{
