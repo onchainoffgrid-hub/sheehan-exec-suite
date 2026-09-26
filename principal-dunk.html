@@ -53,6 +53,7 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
 .chip.role{border-color:#60a5fa88;color:#93c5fd}
 .chip.rcsa{border-color:#38bdf888;color:#7dd3fc}
 .chip.fancy{border-color:#f0abfc88;color:#f5d0fe}
+.chip.form{border-color:#3dd68caa;color:#9dffc5;background:#13281d;font-weight:800}
 .chip.reviewed{border-color:#3dd68c88;color:#9dffc5;font-weight:700}
 .chip.ask-review{border-color:#ffb02088;color:#fde68a}
 .chip.review-unknown{border-color:#93a0b888;color:#93a0b8}
@@ -92,7 +93,7 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
 <p class="crumb"><a href="index.html">Operator</a> · <a href="growth-simple.html">Growth</a> · <a href="doer-crm.html">Doer CRM</a> → <b>Principal dunks</b></p>
 <h1>Principal dunk board</h1>
 <p class="sub">One-click Gmail / mailto — B2B school/CDD keeps v2.7 Michael voice. Consumer: Reviewed → APP-FIRST (no review ask); else soft next-date / warm visit. RCSA + Fancy filters. Area + S/A/B + role chip. Done sticks (v2). Compose only.</p>
-<div class="banner"><span class="ver" id="verstamp">Board v2.9.4 · Sep 25 · lead-source chips (dated provenance)</span><b>Compose only — never auto-send.</b> Board v2.9.4: lead-source chips (GoDaddy/form/invoice/calendar/prior) · never invent · Unknown only on consumer. Board v2.9: <b>Friday</b> weekend programmers (church · CDD amenity · apartments · corporate/district) · <b>University</b> Jax-first (JU/UNF/FSCJ) — not Friday default · Bartram notes live. </div>
+<div class="banner"><span class="ver" id="verstamp">Board v2.9.5 · Sep 25 · screened FORM seats</span><b>Compose only — never auto-send.</b> Board v2.9.5: <b>FORM</b> seats screened (open URL · paste draft · CAPTCHA yourself) · v2.9.4: lead-source chips (GoDaddy/form/invoice/calendar/prior) · never invent · Unknown only on consumer. Board v2.9: <b>Friday</b> weekend programmers (church · CDD amenity · apartments · corporate/district) · <b>University</b> Jax-first (JU/UNF/FSCJ) — not Friday default · Bartram notes live. </div>
 <div class="banner" id="dedupe" style="border-color:#3dd68c66;color:#9dffc5">Scrubbing vs sent + customers…</div>
 <div class="kpis" id="kpis"></div>
 <div class="filters">
@@ -120,7 +121,7 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
   <button type="button" data-sec="university">University</button>
   <button type="button" data-sec="enterprise">Enterprise</button>
   <button type="button" data-sec="other">Other email</button>
-  <button type="button" data-sec="local_forms">Local forms</button>
+  <button type="button" data-sec="local_forms">FORM seats</button>
   <button type="button" class="on" data-sec="open">Open only</button>
   <button type="button" data-persona="school">School</button>
   <button type="button" data-persona="church">Church</button>
@@ -136,7 +137,7 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
   <input id="q" type="search" placeholder="Filter email / city / area / note…" autocomplete="off"/>
 </div>
 <div id="board"></div>
-<p class="note">Source: TAM + Jax universities (JU/UNF/FSCJ) + Friday weekend programmers + RCSA/Fancy + Consumer · CAPTCHA HQ stripped · Done key <code>sheehan_principal_dunk_done_v2</code> · Notes key <code>sheehan_dunk_notes_v1</code> · Hard-refresh (?v=294)</p>
+<p class="note">Source: TAM + Jax universities (JU/UNF/FSCJ) + Friday weekend programmers + RCSA/Fancy + Consumer · CAPTCHA HQ stripped · Done key <code>sheehan_principal_dunk_done_v2</code> · Notes key <code>sheehan_dunk_notes_v1</code> · Hard-refresh (?v=295)</p>
 </div>
 <script>
 (function(){
@@ -463,6 +464,7 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
       if(isPrem)html+=`<span class="chip premium">premium</span> `;
       if(r.rcsa || (r.chip_tags||[]).includes('RCSA') || /river city science|rcsa/i.test(r.account||'')) html+=`<span class="chip rcsa">RCSA</span> `;
       if(r.fancy || (r.chip_tags||[]).includes('Fancy')) html+=`<span class="chip fancy">Fancy</span> `;
+      if(r.form_labeled || r.kind==='form' || (r.chip_tags||[]).includes('FORM') || (r.form_url && !r.email)) html+=`<span class="chip form">FORM</span> `;
       if(r.friday || (r.chip_tags||[]).includes('Friday')) html+=`<span class="chip friday">Friday</span> `;
       if((r.chip_tags||[]).includes('Corporate Friday') || r.friday_class==='corporate') html+=`<span class="chip corp-fri">Corp Fri</span> `;
       html+=`<span class="chip pri">${esc(pers)}</span> `;
@@ -508,6 +510,11 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
         const rs=String(r.review_status||'unknown');
         const mode=rs==='likely_reviewed'?'APP-FIRST (no review ask)':(r.consumer_lane==='warm_inbound'?'warm visit/animals':'soft next-date');
         html+=`<div class="why"><b>Consumer:</b> ${esc(mode)} · review=${esc(rs)}. ${esc(r.why||'')}</div>`;
+      }else if(r.form_url && !r.email){
+        html+=`<div class="why"><b>FORM</b> · open URL · paste draft below · CAPTCHA yourself · never auto-submit. ${esc(r.why||'')}</div>`;
+        if(r.quick_body){
+          html+=`<div class="owe-why" style="margin-top:6px;white-space:pre-wrap"><b>Paste into form:</b>\n${esc(r.quick_body)}</div>`;
+        }
       }else{
         html+=`<div class="why">Template says <b>${esc(pers)}</b>${fn?' · Hi '+esc(fn):' · Hi there'}. Tap Open email → Send.</div>`;
       }
@@ -527,7 +534,7 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
         html+=`<a class="btn sec" target="_blank" rel="noopener" href="${gmail(r)}">Browser Gmail</a>`;
       }
       if(r.form_url){
-        const formLabel=r.quick_email?(r.email?'Open form':'Open form / ticket'):'Open local form';
+        const formLabel=r.email?'Open form (secondary)':(r.quick_email?'Open form / ticket':'FORM · open URL');
         html+=`<a class="btn${r.email?' sec':''}" target="_blank" rel="noopener" href="${esc(r.form_url)}">${formLabel}</a>`;
       }
       if(r.website)html+=`<a class="btn sec" target="_blank" rel="noopener" href="${esc(r.website)}">Website</a>`;
@@ -592,7 +599,7 @@ button.save-note{appearance:none;min-height:32px;border-radius:8px;border:1px so
     var el=document.getElementById('dedupe');
     if(el){
       var counts=d.counts||{}; var v28=d.v28||{}; var cs=(v28.consumer)||{};
-      el.innerHTML='<b>v2.9.4</b> · Friday '+(counts.friday||0)+' · Uni '+(counts.university_unique||counts.university||0)+' · Church fri '+(counts.friday_church||0)+' · CDD amenity '+(counts.friday_cdd_amenity||0)+' · Apt '+(counts.friday_apartment||0)+' · Corp/dist '+(counts.friday_corporate||0)+'/'+(counts.friday_district||0)+' · RCSA '+(counts.rcsa||v28.rcsa_rows||0)+' · Fancy '+(counts.fancy||0)+' · Consumer '+(counts.consumer||0)+' · left <b>'+(counts.mailto_total||0)+' mailto</b> · Gmail today '+(sc.gmail_sent_today||0);
+      el.innerHTML='<b>v2.9.5</b> · FORM '+(counts.form_seats||counts.local_forms_optional||0)+' · Friday '+(counts.friday||0)+' · Uni '+(counts.university_unique||counts.university||0)+' · Church fri '+(counts.friday_church||0)+' · CDD amenity '+(counts.friday_cdd_amenity||0)+' · Apt '+(counts.friday_apartment||0)+' · Corp/dist '+(counts.friday_corporate||0)+'/'+(counts.friday_district||0)+' · RCSA '+(counts.rcsa||v28.rcsa_rows||0)+' · Fancy '+(counts.fancy||0)+' · Consumer '+(counts.consumer||0)+' · left <b>'+(counts.mailto_total||0)+' mailto</b> · Gmail today '+(sc.gmail_sent_today||0);
     }
     render();
   }).catch(()=>{

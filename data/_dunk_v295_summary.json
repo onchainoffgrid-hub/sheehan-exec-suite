@@ -1,0 +1,215 @@
+{
+  "board_version": "Board v2.9.5 \u00b7 Sep 25 \u00b7 screened FORM seats (CAPTCHA-ok)",
+  "as_of": "2026-09-25 8:28 PM ET",
+  "form_seats": 19,
+  "mailto_total": 636,
+  "form_only_rows": 22,
+  "forms_kept_or_added": [
+    {
+      "account": "Queen's Harbour Yacht & Country Club (Invited)",
+      "url": "https://www.invitedclubs.com/clubs/queen-s-harbour-yacht-country-club/contact-us",
+      "icp": "Private club event programming (family / member events)",
+      "persona": "other"
+    },
+    {
+      "account": "San Jose Country Club",
+      "url": "https://www.sjccjax.com/membership",
+      "icp": "Country club family / kids programming",
+      "persona": "other"
+    },
+    {
+      "account": "Deerwood Country Club",
+      "url": "https://www.deerwoodclub.com/contact",
+      "icp": "Country club member events",
+      "persona": "other"
+    },
+    {
+      "account": "Marsh Landing Country Club",
+      "url": "https://www.marshlandingcc.com/Membership",
+      "icp": "PVB country club family events",
+      "persona": "other"
+    },
+    {
+      "account": "Jacksonville Golf & Country Club",
+      "url": "https://www.jaxgcc.com/Membership-Information-Request",
+      "icp": "Country club private events / kids activities",
+      "persona": "other"
+    },
+    {
+      "account": "Dune House Hotel & Spa (ex\u2013One Ocean)",
+      "url": "https://www.dunehousehotelandspa.com/events-groups/rfp/",
+      "icp": "Beach resort group / guest entertainment",
+      "persona": "other"
+    },
+    {
+      "account": "Ponte Vedra Beach Resorts (Inn & Club / Lodge & Club)",
+      "url": "https://www.pontevedra.com/events/rfp",
+      "icp": "Resort special-events sales",
+      "persona": "other"
+    },
+    {
+      "account": "Cypress Village",
+      "url": "https://cypressvillageretirement.com/contact/",
+      "icp": "Senior life enrichment",
+      "persona": "senior"
+    },
+    {
+      "account": "Anthem Lakes Senior Living",
+      "url": "https://anthemlakes.com/contact-us/",
+      "icp": "Senior vendor / life enrichment",
+      "persona": "senior"
+    },
+    {
+      "account": "First Coast CMS",
+      "url": "https://www.firstcoastcms.com/contact",
+      "icp": "HOA / amenity programming (non-Vesta)",
+      "persona": "cdd"
+    },
+    {
+      "account": "The Goddard School Jacksonville \u2014 Baymeadows/Gate Pkwy",
+      "url": "https://www.goddardschool.com/schools/fl/jacksonville/jacksonville-baymeadows/our-school/goddard-form",
+      "icp": "Premium daycare family event",
+      "persona": "daycare"
+    },
+    {
+      "account": "The Goddard School Jacksonville \u2014 Spartina Ct",
+      "url": "https://www.goddardschool.com/schools/fl/jacksonville/jacksonville/our-school/goddard-form",
+      "icp": "Premium daycare family event",
+      "persona": "daycare"
+    },
+    {
+      "account": "The Goddard School Orange Park \u2014 OakLeaf",
+      "url": "https://www.goddardschool.com/schools/fl/orange-park/orange-park/our-school/goddard-form",
+      "icp": "Premium daycare Clay",
+      "persona": "daycare"
+    },
+    {
+      "account": "The Goddard School Silverleaf",
+      "url": "https://www.goddardschool.com/schools/fl/st-augustine/silverleaf/our-school/goddard-form",
+      "icp": "Premium daycare St. Johns",
+      "persona": "daycare"
+    },
+    {
+      "account": "The Goddard School St. Augustine \u2014 CR 210",
+      "url": "https://www.goddardschool.com/schools/fl/st-augustine/st-augustine-county-road-210/our-school/goddard-form",
+      "icp": "Premium daycare St. Johns",
+      "persona": "daycare"
+    },
+    {
+      "account": "Blessed Trinity Catholic School",
+      "url": "https://www.blessedtrinitycatholicschool.org/contact",
+      "icp": "Faith school festival / field visit",
+      "persona": "school"
+    },
+    {
+      "account": "Cathedral Parish School",
+      "url": "https://www.thecathedralparishschool.org/contact",
+      "icp": "Faith school festival / field visit",
+      "persona": "school"
+    },
+    {
+      "account": "Beach House Senior Living",
+      "url": "https://www.beachhouseseniorliving.com/contact-us/",
+      "icp": "Senior life enrichment / beaches",
+      "persona": "senior"
+    },
+    {
+      "account": "Aging True",
+      "url": "https://agingtrue.org/contact/",
+      "icp": "Senior services / adult day network",
+      "persona": "senior"
+    }
+  ],
+  "skipped_bad_screen": [
+    {
+      "org": "Palagio Senior Living",
+      "url": "https://palagioseniorliving.com/contact-us/",
+      "why": "Form works but email already sent/suppress + Owe card \u2014 skip form dunk"
+    },
+    {
+      "org": "Primrose (any)",
+      "url": "",
+      "why": "Explicit exclude"
+    },
+    {
+      "org": "Atlantic Beach Country Club / Laura",
+      "url": "",
+      "why": "Explicit exclude"
+    },
+    {
+      "org": "Atlantic Beach Elementary PTA",
+      "url": "http://www.duvalschools.org/abe",
+      "why": "School homepage / bot wall \u2014 not a contact form"
+    },
+    {
+      "org": "Callahan Elementary School PTA",
+      "url": "https://www.nassau.k12.fl.us/",
+      "why": "District homepage \u2014 not a contact form"
+    },
+    {
+      "org": "Chimney Lakes Elementary School PTA",
+      "url": "http://www.duvalschools.org/cle",
+      "why": "School homepage / bot wall \u2014 not a contact form"
+    },
+    {
+      "org": "Amelia Island Montessori faculty-staff",
+      "url": "https://www.ameliaislandmontessori.com/faculty-staff",
+      "why": "Directory page \u2014 not a working contact form"
+    },
+    {
+      "org": "Bolles whom-to-call (3 seats)",
+      "url": "https://www.bolles.org/about-us/whom-to-call",
+      "why": "Staff directory \u2014 not a contact form"
+    },
+    {
+      "org": "Almost Home DayBreak",
+      "url": "https://almosthomeseniorservices.com/contact/",
+      "why": "HTTP 406 \u2014 form not usable this pass"
+    },
+    {
+      "org": "Spark Pediatrics",
+      "url": "https://www.sparkpediatrics.com/contact",
+      "why": "No submit form fields in fetch"
+    },
+    {
+      "org": "Bright Horizons Harvin Rd",
+      "url": "enterprise center page",
+      "why": "Enterprise schedule-visit path \u2014 weaker vendor ICP vs screened clubs/seniors/Goddard"
+    },
+    {
+      "org": "Kiddie Academy / Learning Experience chain pages",
+      "url": "",
+      "why": "Tour/marketing pages \u2014 prefer screened Goddard + schools"
+    },
+    {
+      "org": "Ross / Vesta email-only amenity paths",
+      "url": "",
+      "why": "Explicit exclude from FORM list (mailto lanes already cover peers)"
+    }
+  ],
+  "prior_local_forms_accounts": [
+    "Amelia Island Montessori",
+    "Bolles \u00b7 Auxiliary / Campus Services",
+    "Bolles Ponte Vedra Beach Lower School",
+    "Bolles Whitehurst Lower School",
+    "Bright Horizons \u2014 Memorial Children's Center (Harvin Rd)",
+    "Kiddie Academy of Jacksonville",
+    "Kiddie Academy of St. Johns",
+    "The Goddard School Jacksonville \u2014 Baymeadows",
+    "The Goddard School Orange Park \u2014 OakLeaf",
+    "The Goddard School Silverleaf",
+    "The Goddard School St. Augustine \u2014 CR 210",
+    "The Learning Experience \u2014 Flagler Center",
+    "The Learning Experience \u2014 Mandarin",
+    "The Learning Experience \u2014 Southside",
+    "Atlantic Beach Elementary School PTA",
+    "Blessed Trinity Catholic School",
+    "Callahan Elementary School PTA",
+    "Cathedral Parish School",
+    "Chimney Lakes Elementary School PTA"
+  ],
+  "live_urls": [
+    "https://onchainoffgrid-hub.github.io/sheehan-exec-suite/principal-dunk.html?v=295",
+    "https://onchainoffgrid-hub.github.io/critters-on-call/exec/principal-dunk.html?v=295"
+  ]
+}
